@@ -1,0 +1,271 @@
+#ifndef ADMISSIONREGISTRATIONDIALOG_H
+#define ADMISSIONREGISTRATIONDIALOG_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hoang Van Hay, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+class CAdmissionRegistrationDialog : public CGuiView{
+protected:
+public:
+	CGuiGroupBox	m_wndPatientInformation;
+	CGuiLabel		m_wndDocNoLabel;
+	CGuiNumberCtrl	m_wndDocNo;
+	CGuiLabel		m_wndNumInwardLabel;
+	CGuiTextCtrl	m_wndNumInward;
+	CGuiLabel		m_wndInwardDateLabel;
+	CGuiDateTimeCtrl	m_wndInwardDate;
+	CGuiLabel		m_wndInwardTimeLabel;
+	CGuiNumberCtrl	m_wndInwardTime;
+	CGuiLabel		m_wndTreatmentDeptLabel;
+	CGuiTextCtrl	m_wndTreatmentDept;
+	CGuiLabel		m_wndExamDateLabel;
+	CGuiDateTimeCtrl	m_wndExamDate;
+	CGuiLabel		m_wndRoomIDLabel;
+	CGuiNumberCtrl	m_wndRoomID;
+	CGuiLabel		m_wndPatientNameLabel;
+	CGuiTextCtrl	m_wndPatientName;
+	CGuiLabel		m_wndBirthDateLabel;
+	CGuiDateCtrl	m_wndBirthDate;
+	CGuiLabel		m_wndSexLabel;
+	CGuiComboBox	m_wndSex;
+	CGuiLabel		m_wndEthnicLabel;
+	CGuiComboBox	m_wndEthnic;
+	CGuiLabel		m_wndOccupationLabel;
+	CGuiComboBox	m_wndOccupation;
+	CGuiLabel		m_wndProvinceLabel;
+	CGuiComboBox	m_wndProvince;
+	CGuiLabel		m_wndDistrictLabel;
+	CGuiComboBox	m_wndDistrict;
+	CGuiLabel		m_wndVillageLabel;
+	CGuiComboBox	m_wndVillage;
+	CGuiLabel		m_wndDetailAddressLabel;
+	CGuiTextCtrl	m_wndDetailAddress;
+	CGuiLabel		m_wndWorkplaceLabel;
+	CGuiTextCtrl	m_wndWorkplace;
+	CGuiLabel		m_wndRankLabel;
+	CGuiComboBox	m_wndRank;
+	CGuiLabel		m_wndPositionLabel;
+	CGuiComboBox	m_wndPosition;
+	CGuiLabel		m_wndRelativeLabel;
+	CGuiTextCtrl	m_wndRelative;
+	CGuiLabel		m_wndRelationLabel;
+	CGuiComboBox	m_wndRelation;
+	CGuiLabel		m_wndRelPhoneLabel;
+	CGuiTextCtrl	m_wndRelPhone;
+	CGuiLabel		m_wndRelAddressLabel;
+	CGuiTextCtrl	m_wndRelAddress;
+	CGuiLabel		m_wndTranferHospitalLabel;
+	CGuiTextCtrl	m_wndTransferHospital;
+	CGuiLabel		m_wndTransferDiagnosticLabel;
+	CGuiTextCtrl	m_wndTransferDiagnostic;
+	CGuiLabel		m_wndICDDiagnosticLabel;
+	CGuiTextCtrl	m_wndICDDiagnostic;
+	CGuiLabel		m_wndConclusionLabel;
+	CGuiTextCtrl	m_wndConclusion;
+	CGuiButton		m_wndUpdate;
+	CGuiButton		m_wndSave;
+	CGuiButton		m_wndCancel;
+	CGuiButton		m_wndPrintExmSheet;
+	CGuiButton		m_wndPrintFiles;
+	CGuiButton		m_wndPrintFoodSheet;
+	long	m_nDocNo;
+	CString	m_szNumInward;
+	CString	m_szInwardDate;
+	long	m_nInwardTime;
+	CString	m_szTreatmentDept;
+	CString	m_szExamDate;
+	long	m_nRoomID;
+	CString	m_szPatientName;
+	CString	m_szBirthDate;
+	CString	m_szSexKey;
+	CString	m_szEthnicKey;
+	CString	m_szOccupationKey;
+	CString	m_szProvinceKey;
+	CString	m_szDistrictKey;
+	CString	m_szVillageKey;
+	CString	m_szDetailAddress;
+	CString	m_szWorkplace;
+	CString	m_szRankKey;
+	CString	m_szPositionKey;
+	CString	m_szRelative;
+	CString	m_szRelationKey;
+	CString	m_szRelPhone;
+	CString	m_szRelAddress;
+	CString	m_szTransferHospital;
+	CString	m_szTransferDiagnostic;
+	CString	m_szICDDiagnostic;
+	CString	m_szConclusion;
+	//void			OnDocNoChange(); 
+	//void			OnDocNoSetfocus(); 
+	//void			OnDocNoKillfocus(); 
+	int			OnDocNoCheckValue(); 
+	//void			OnNumInwardChange(); 
+	//void			OnNumInwardSetfocus(); 
+	//void			OnNumInwardKillfocus(); 
+	int			OnNumInwardCheckValue(); 
+	//void			OnInwardDateChange(); 
+	//void			OnInwardDateSetfocus(); 
+	//void			OnInwardDateKillfocus(); 
+	int			OnInwardDateCheckValue(); 
+	//void			OnInwardTimeChange(); 
+	//void			OnInwardTimeSetfocus(); 
+	//void			OnInwardTimeKillfocus(); 
+	int			OnInwardTimeCheckValue(); 
+	//void			OnTreatmentDeptChange(); 
+	//void			OnTreatmentDeptSetfocus(); 
+	//void			OnTreatmentDeptKillfocus(); 
+	int			OnTreatmentDeptCheckValue(); 
+	//void			OnExamDateChange(); 
+	//void			OnExamDateSetfocus(); 
+	//void			OnExamDateKillfocus(); 
+	int			OnExamDateCheckValue(); 
+	//void			OnRoomIDChange(); 
+	//void			OnRoomIDSetfocus(); 
+	//void			OnRoomIDKillfocus(); 
+	int			OnRoomIDCheckValue(); 
+	//void			OnPatientNameChange(); 
+	//void			OnPatientNameSetfocus(); 
+	//void			OnPatientNameKillfocus(); 
+	int			OnPatientNameCheckValue(); 
+	//void			OnBirthDateChange(); 
+	//void			OnBirthDateSetfocus(); 
+	//void			OnBirthDateKillfocus(); 
+	int			OnBirthDateCheckValue(); 
+	void			OnSexSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnSexSelendok(); 
+	//void			OnSexSetfocus(); 
+	//void			OnSexKillfocus(); 
+	long			OnSexLoadData(); 
+	//void			OnSexAddNew(); 
+	void			OnEthnicSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnEthnicSelendok(); 
+	//void			OnEthnicSetfocus(); 
+	//void			OnEthnicKillfocus(); 
+	long			OnEthnicLoadData(); 
+	//void			OnEthnicAddNew(); 
+	void			OnOccupationSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnOccupationSelendok(); 
+	//void			OnOccupationSetfocus(); 
+	//void			OnOccupationKillfocus(); 
+	long			OnOccupationLoadData(); 
+	//void			OnOccupationAddNew(); 
+	void			OnProvinceSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnProvinceSelendok(); 
+	//void			OnProvinceSetfocus(); 
+	//void			OnProvinceKillfocus(); 
+	long			OnProvinceLoadData(); 
+	//void			OnProvinceAddNew(); 
+	void			OnDistrictSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnDistrictSelendok(); 
+	//void			OnDistrictSetfocus(); 
+	//void			OnDistrictKillfocus(); 
+	long			OnDistrictLoadData(); 
+	//void			OnDistrictAddNew(); 
+	void			OnVillageSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnVillageSelendok(); 
+	//void			OnVillageSetfocus(); 
+	//void			OnVillageKillfocus(); 
+	long			OnVillageLoadData(); 
+	//void			OnVillageAddNew(); 
+	//void			OnDetailAddressChange(); 
+	//void			OnDetailAddressSetfocus(); 
+	//void			OnDetailAddressKillfocus(); 
+	int			OnDetailAddressCheckValue(); 
+	//void			OnWorkplaceChange(); 
+	//void			OnWorkplaceSetfocus(); 
+	//void			OnWorkplaceKillfocus(); 
+	int			OnWorkplaceCheckValue(); 
+	void			OnRankSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnRankSelendok(); 
+	//void			OnRankSetfocus(); 
+	//void			OnRankKillfocus(); 
+	long			OnRankLoadData(); 
+	//void			OnRankAddNew(); 
+	void			OnPositionSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnPositionSelendok(); 
+	//void			OnPositionSetfocus(); 
+	//void			OnPositionKillfocus(); 
+	long			OnPositionLoadData(); 
+	//void			OnPositionAddNew(); 
+	//void			OnRelativeChange(); 
+	//void			OnRelativeSetfocus(); 
+	//void			OnRelativeKillfocus(); 
+	int			OnRelativeCheckValue(); 
+	void			OnRelationSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnRelationSelendok(); 
+	//void			OnRelationSetfocus(); 
+	//void			OnRelationKillfocus(); 
+	long			OnRelationLoadData(); 
+	//void			OnRelationAddNew(); 
+	//void			OnRelPhoneChange(); 
+	//void			OnRelPhoneSetfocus(); 
+	//void			OnRelPhoneKillfocus(); 
+	int			OnRelPhoneCheckValue(); 
+	//void			OnRelAddressChange(); 
+	//void			OnRelAddressSetfocus(); 
+	//void			OnRelAddressKillfocus(); 
+	int			OnRelAddressCheckValue(); 
+	//void			OnTransferHospitalChange(); 
+	//void			OnTransferHospitalSetfocus(); 
+	//void			OnTransferHospitalKillfocus(); 
+	int			OnTransferHospitalCheckValue(); 
+	//void			OnTransferDiagnosticChange(); 
+	//void			OnTransferDiagnosticSetfocus(); 
+	//void			OnTransferDiagnosticKillfocus(); 
+	int			OnTransferDiagnosticCheckValue(); 
+	//void			OnICDDiagnosticChange(); 
+	//void			OnICDDiagnosticSetfocus(); 
+	//void			OnICDDiagnosticKillfocus(); 
+	int			OnICDDiagnosticCheckValue(); 
+	//void			OnConclusionChange(); 
+	//void			OnConclusionSetfocus(); 
+	//void			OnConclusionKillfocus(); 
+	int			OnConclusionCheckValue(); 
+	void			OnUpdateSelect(); 
+	void			OnSaveSelect(); 
+	void			OnCancelSelect(); 
+	void			OnPrintExmSheetSelect(); 
+	void			OnPrintFilesSelect(); 
+	void			OnPrintFoodSheetSelect(); 
+	CAdmissionRegistrationDialog();
+	~CAdmissionRegistrationDialog();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void UpdateJson(BOOL bSaveAndValidate);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddAdmissionRegistrationDialog(); 
+	int OnEditAdmissionRegistrationDialog(); 
+	int OnDeleteAdmissionRegistrationDialog(); 
+	int OnSaveAdmissionRegistrationDialog(); 
+	int OnCancelAdmissionRegistrationDialog(); 
+	int OnAdmissionRegistrationDialogListLoadData(); 
+};
+#endif

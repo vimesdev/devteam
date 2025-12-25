@@ -1,0 +1,115 @@
+#ifndef PACSIMAGECAPTURE_H
+#define PACSIMAGECAPTURE_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright(C) Viet Nam Medical Software Join Stock Company. 2005-2010. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hay Hoang Van, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2010.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+#include "ListImage.h"
+#include "ThumbnailImage.h"
+#include "VIMESCaptureVideo.h"
+#include "GuiPictureCtrl.h"
+
+
+class CPACSImageCapture : public CGuiView{
+protected:
+	bool	m_bCaptured;
+	int		m_nDeviceID;	
+	bool	m_bStop;
+	
+	CRectTracker	m_tracker;
+	BYTE*	m_pBuffer;
+	long	m_nSize;
+public:
+	long	m_nDocumentNo;
+	long	m_nOrderID;
+	long	m_nOrderLine;
+
+	CString	m_szItemID;
+	CString	m_szPatientName;
+	CString m_szSex;
+	CString	m_szBirthDate;
+	CString m_szAddress;
+	
+
+	bool	m_bMarkAll;
+	CThumbnailImage		m_wndThumb;
+
+	
+	CVIMESCaptureVideo	m_wndVideo;
+	CGuiPictureCtrl	m_wndImage;
+	CGuiButton		m_wndEdit;
+	CGuiButton		m_wndDelete;
+	CGuiButton		m_wndMarkAll;
+	CGuiButton		m_wndCapture;
+	CGuiButton		m_wndStart;
+	CGuiButton		m_wndStop;
+	CGuiButton		m_wndSave;
+	CGuiButton		m_wndSetupVideo;
+
+	long			OnImageCaptureLoadData(); 
+	void			OnImageCaptureSelectChange(int nOldItem, int nNewItem); 
+	void			OnImageCaptureDblClick(); 
+	int			OnImageCaptureDeleteItem(); 
+	void			OnImageSelectChange(int nOld, int nNew); 
+	void			OnEditSelect(); 
+	void			OnDeleteSelect(); 
+	void			OnMarkAllSelect(); 
+	void			OnCaptureSelect(); 
+	void			OnSaveSelect(); 
+	void		StartCapture();
+	void		StopCapture();
+
+	void			OnSetupVideo();
+
+	void			OnLoadThumb();
+	void		SetReference(LPCTSTR lpszDir, long nDocumentNo, long nOrderID, CString szItemID);
+
+	CPACSImageCapture();
+	~CPACSImageCapture();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddPACSImageCapture(); 
+	int OnEditPACSImageCapture(); 
+	int OnDeletePACSImageCapture(); 
+	int OnSavePACSImageCapture(); 
+	int OnCancelPACSImageCapture(); 
+	int OnPACSImageCaptureListLoadData(); 
+	virtual BOOL PreTranslateMessage(MSG *pMsg);	
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnPaint();
+	DECLARE_MESSAGE_MAP()
+
+	afx_msg void OnTimer(UINT nIDEvent);
+protected:
+	virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam);
+};
+#endif

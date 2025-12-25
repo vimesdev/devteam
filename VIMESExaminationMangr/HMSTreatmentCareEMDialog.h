@@ -1,0 +1,108 @@
+#ifndef HMSTreatmentCareEMDialog_H
+#define HMSTreatmentCareEMDialog_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hoang Van Hay, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiDialog.h"
+#include "DbField.h"
+#include "GridListView.h"
+
+class CHMSTreatmentCareEMDialog : public CGuiDialog
+{
+protected:
+	long		m_nDocumentNo;
+	long		m_nUID;
+	CString		m_szDate;
+
+public:
+	CGuiGroupBox	m_wndTreatmentInformation;
+	CGuiLabel		m_wndMonthLabel;
+	CGuiComboBox	m_wndMonth;
+	CGuiTabCtrl		m_wndTab;
+	CGridListView	m_wndTreatList;
+	CGridListView	m_wndDateList;
+	CGuiButton		m_wndCare;
+	CGuiButton		m_wndBeforeOpt;
+	CGuiButton		m_wndCareAfterOpt;
+	CGuiButton		m_wndCareOfNurse;
+	CGuiButton		m_wndParaclinic;
+	CGuiButton		m_wndSurgeryOpt;
+	CGuiButton		m_wndPrint;
+	CGuiButton		m_wndClose;
+	CGuiButton		m_wndLock;
+	CGuiButton		m_wndUnLock;
+
+
+	CString			m_szMonthKey;
+	void			OnMonthSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnMonthSelendok(); 
+	//void			OnMonthSetfocus(); 
+	//void			OnMonthKillfocus(); 
+	long			OnMonthLoadData(); 
+	//void			OnMonthAddNew(); 
+	long			OnTreatListLoadData(); 
+	void			OnTreatListSelectChange(int nOldItem, int nNewItem); 
+	void			OnTreatListDblClick(); 
+	int			OnTreatListDeleteItem(); 
+	int			OnTreatListDrugOrderCopyItem();
+	int			OnTreatListDrugOrderAdviceItem();
+	long			OnDateListLoadData(); 
+	void			OnDateListSelectChange(int nOldItem, int nNewItem); 
+	void			OnDateListDblClick(); 
+	int			OnDateListDeleteItem(); 
+	void			OnCareSelect(); 
+	void			OnBeforeOptSelect(); 
+	void			OnCareAfterOptSelect();
+	void			OnCareOfNurseSelect();
+	void			OnPrintSelect(); 
+	void			OnCloseSelect(); 
+
+	void			OnLockSelect(); 
+	void			OnUnLockSelect(); 
+	bool			IsLocked();
+
+	CHMSTreatmentCareEMDialog(CWnd *pParent, int nMode, long nDocumentNo);
+	~CHMSTreatmentCareEMDialog();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddHMSTreatmentCareDialog(); 
+	int OnEditHMSTreatmentCareDialog(); 
+	int OnDeleteHMSTreatmentCareDialog(); 
+	int OnSaveHMSTreatmentCareDialog(); 
+	int OnCancelHMSTreatmentCareDialog(); 
+	int OnHMSTreatmentCareDialogListLoadData(); 
+	long OnShowHistory();
+protected:
+	virtual BOOL OnCommand(WPARAM wParam, LPARAM lParam);
+public:
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+};
+#endif

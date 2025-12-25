@@ -1,0 +1,92 @@
+#ifndef EMSUDUNGDVKT_THEOPHONG_THEOGOIKSK_H
+#define EMSUDUNGDVKT_THEOPHONG_THEOGOIKSK_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hoang Van Hay, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+class CEMSuDungDVKT_Theophong_TheogoiKSK : public CGuiView
+{
+protected:
+public:
+	CGuiGroupBox	m_wndReportCondition;
+	CGuiCheckBox	m_wndChuaVaoPhim;
+	CGuiLabel		m_wndFromDateLabel;
+	CGuiDateTimeCtrl	m_wndFromDate;
+	CGuiLabel		m_wndToDateLabel;
+	CGuiDateTimeCtrl	m_wndToDate;
+	CGuiLabel		m_wndRoomLabel;
+	CGuiListCtrl	m_wndRoom;
+	CGuiLabel		m_wndNameLabel;
+	CGuiTextCtrl	m_wndName;
+	CGuiListCtrl	m_wndGoiKSKList;
+	CGuiButton		m_wndExport;
+	BOOL	m_bChuaVaoPhim;
+	CString	m_szFromDate;
+	CString	m_szToDate;
+	CString	m_szName;
+	CString GetQueryString();
+	void			OnChuaVaoPhimSelect(); 
+	//void			OnFromDateChange(); 
+	//void			OnFromDateSetfocus(); 
+	//void			OnFromDateKillfocus(); 
+	int			OnFromDateCheckValue(); 
+	//void			OnToDateChange(); 
+	//void			OnToDateSetfocus(); 
+	//void			OnToDateKillfocus(); 
+	int			OnToDateCheckValue(); 
+	long			OnRoomLoadData(); 
+	void			OnRoomSelectChange(int nOldItem, int nNewItem); 
+	void			OnRoomDblClick(); 
+	int			OnRoomDeleteItem(); 
+	//void			OnNameChange(); 
+	//void			OnNameSetfocus(); 
+	//void			OnNameKillfocus(); 
+	int			OnNameCheckValue(); 
+	long			OnGoiKSKListLoadData(); 
+	void			OnGoiKSKListSelectChange(int nOldItem, int nNewItem); 
+	void			OnGoiKSKListDblClick(); 
+	int			OnGoiKSKListDeleteItem();
+	int			OnRoomSearchItem();
+	void			OnExportSelect(); 
+	CEMSuDungDVKT_Theophong_TheogoiKSK(CWnd *pWnd);
+	~CEMSuDungDVKT_Theophong_TheogoiKSK();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void UpdateJson(BOOL bSaveAndValidate);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddCEMSuDungDVKT_Theophong_TheogoiKSK(); 
+	int OnEditCEMSuDungDVKT_Theophong_TheogoiKSK(); 
+	int OnDeleteCEMSuDungDVKT_Theophong_TheogoiKSK(); 
+	int OnSaveCEMSuDungDVKT_Theophong_TheogoiKSK(); 
+	int OnCancelCEMSuDungDVKT_Theophong_TheogoiKSK(); 
+	int OnCEMSuDungDVKT_Theophong_TheogoiKSKListLoadData(); 
+};
+#endif

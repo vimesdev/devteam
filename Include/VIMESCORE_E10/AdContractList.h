@@ -1,0 +1,122 @@
+#ifndef AdContractList_H
+#define AdContractList_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hoang Van Hay, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+#include "AdContractInfoView.h"
+#include "AdContractAppendixView.h"
+
+class AFX_EXT_CLASS CAdContractList : public CGuiView{
+protected:
+	CStringArray	m_arFilters;
+	long	m_nPackageId;
+	long	m_nContractId;	
+	CString	m_szAppendixID;
+	CString		m_szPartnerID;
+	int				m_nSearchID;
+	CString			m_szSearchCode;
+public:
+	CGuiGroupBox	m_wndContractInformation;
+	CGuiLabel		m_wndFromDateLabel;
+	CGuiDateCtrl	m_wndFromDate;
+	CGuiLabel		m_wndToDateLabel;
+	CGuiDateCtrl	m_wndToDate;
+	CGuiLabel		m_wndSearchLabel;
+	CGuiTextCtrl	m_wndSearch;
+	CGuiButton		m_wndRefresh;
+	CGuiListCtrl	m_wndList;
+	
+	CGuiListCtrl	m_wndInvoices;
+	CGuiListCtrl	m_wndItems;
+	CAdContractAppendixView m_wndAppendixView;
+
+	CGuiTabCtrl		m_wndTab;
+	CGuiButton		m_wndAdd;
+	CGuiButton		m_wndEdit;
+	CGuiButton		m_wndDelete;
+	CString	m_szFromDate;
+	CString	m_szToDate;
+	CString	m_szSearch;
+	//void			OnFromDateChange(); 
+	//void			OnFromDateSetfocus(); 
+	//void			OnFromDateKillfocus(); 
+	int			OnFromDateCheckValue(); 
+	//void			OnToDateChange(); 
+	//void			OnToDateSetfocus(); 
+	//void			OnToDateKillfocus(); 
+	int			OnToDateCheckValue(); 
+	//void			OnSearchChange(); 
+	//void			OnSearchSetfocus(); 
+	//void			OnSearchKillfocus(); 
+	int			OnSearchCheckValue(); 
+	void			OnRefreshSelect(); 
+	
+	long			OnListLoadData(); 
+	void			OnListSelectChange(int nOldItem, int nNewItem); 
+	void			OnListDblClick(); 
+	int			OnListAddItem();
+	int			OnListEditItem();
+	int			OnListDeleteItem(); 
+	int			OnImportItems();
+
+	void			OnItemsSelectChange(int nOldItem, int nNewItem);
+	void			OnItemsDblClick();
+	int			OnItemsAddItem();
+	int			OnItemsEditItem();
+	int			OnItemsDeleteItem();
+
+	long			OnInvoicesLoadData(); 
+	long			OnItemsLoadData();
+	void			OnAddSelect(); 
+	void			OnEditSelect(); 
+	void			OnDeleteSelect(); 
+	void		OnListCreateLiquidation();
+	
+	CAdContractList();
+	~CAdContractList();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void UpdateJson(BOOL bSaveAndValidate);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddAdContractList(); 
+	int OnEditAdContractList(); 
+	int OnDeleteAdContractList(); 
+	int OnSaveAdContractList(); 
+	int OnCancelAdContractList(); 
+	int OnAdContractListListLoadData(); 
+	DECLARE_MESSAGE_MAP()
+	afx_msg void OnSetFocus(CWnd* pOldWnd);
+	void OnResizeLayout();
+	virtual BOOL OnCommand(WPARAM wParam, LPARAM lParam);
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+};
+#endif

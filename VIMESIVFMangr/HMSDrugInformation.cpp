@@ -1,0 +1,1353 @@
+﻿#include "stdafx.h"
+#include "HMSDrugInformation.h"
+#include "MainFrm.h"
+#include "HMSDrugLogsDialog.h"
+#include "HMSInpatientPrescriptionDlg.h"
+#include "ReportDocument.h"
+#include "HMSReportForms/PrintForms.h"
+#include "HMSReturnDrugDialog.h"
+#include "HMSItemDailyTrackbyDept.h"
+
+/*static void _OnFromDateChangeFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnFromDateChange();
+} */
+/*static void _OnFromDateSetfocusFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnFromDateSetfocus();} */ 
+/*static void _OnFromDateKillfocusFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnFromDateKillfocus();
+} */
+static int _OnFromDateCheckValueFnc(CWnd *pWnd){
+	return ((CHMSDrugInformation *)pWnd)->OnFromDateCheckValue();
+} 
+/*static void _OnToDateChangeFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnToDateChange();
+} */
+/*static void _OnToDateSetfocusFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnToDateSetfocus();} */ 
+/*static void _OnToDateKillfocusFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnToDateKillfocus();
+} */
+static int _OnToDateCheckValueFnc(CWnd *pWnd){
+	return ((CHMSDrugInformation *)pWnd)->OnToDateCheckValue();
+} 
+/*static void _OnSearchNameChangeFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnSearchNameChange();
+} */
+/*static void _OnSearchNameSetfocusFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnSearchNameSetfocus();} */ 
+/*static void _OnSearchNameKillfocusFnc(CWnd *pWnd){
+	((CHMSDrugInformation *)pWnd)->OnSearchNameKillfocus();
+} */
+static int _OnSearchNameCheckValueFnc(CWnd *pWnd){
+	return ((CHMSDrugInformation *)pWnd)->OnSearchNameCheckValue();
+} 
+
+static long _OnListLoadDataFnc(CWnd *pWnd){
+	return ((CHMSDrugInformation*)pWnd)->OnListLoadData();
+} 
+static void _OnListDblClickFnc(CWnd *pWnd){
+	((CHMSDrugInformation*)pWnd)->OnListDblClick();
+} 
+static void _OnListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CHMSDrugInformation*)pWnd)->OnListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnListRefreshItemFnc(CWnd *pWnd){
+	 return ((CHMSDrugInformation*)pWnd)->OnListLoadData();
+} 
+static void _OnDepartmentDetailSelectFnc(CWnd *pWnd){
+	 ((CHMSDrugInformation*)pWnd)->OnDepartmentDetailSelect();
+}
+static void _OnReturnedDrugsSelectFnc(CWnd *pWnd){
+	 ((CHMSDrugInformation*)pWnd)->OnReturnedDrugsSelect();
+}
+
+static void _OnDrugLogSelectFnc(CWnd *pWnd){
+	CHMSDrugInformation *pVw = (CHMSDrugInformation *)pWnd;
+	pVw->OnDrugLogSelect();
+}
+
+static void _OnPrescriptionSelectFnc(CWnd *pWnd){
+	CHMSDrugInformation *pVw = (CHMSDrugInformation *)pWnd;
+	pVw->OnPrescriptionSelect();
+} 
+static int _OnAddHMSDrugInformationFnc(CWnd *pWnd){
+	 return ((CHMSDrugInformation*)pWnd)->OnAddHMSDrugInformation();
+} 
+static int _OnEditHMSDrugInformationFnc(CWnd *pWnd){
+	 return ((CHMSDrugInformation*)pWnd)->OnEditHMSDrugInformation();
+} 
+static int _OnDeleteHMSDrugInformationFnc(CWnd *pWnd){
+	 return ((CHMSDrugInformation*)pWnd)->OnDeleteHMSDrugInformation();
+} 
+static int _OnSaveHMSDrugInformationFnc(CWnd *pWnd){
+	 return ((CHMSDrugInformation*)pWnd)->OnSaveHMSDrugInformation();
+} 
+static int _OnCancelHMSDrugInformationFnc(CWnd *pWnd){
+	 return ((CHMSDrugInformation*)pWnd)->OnCancelHMSDrugInformation();
+} 
+
+static int _OnConfirmIssueDrugFnc(CWnd *pWnd){
+	 ((CHMSDrugInformation*)pWnd)->OnConfirmIssueDrug();
+	 return 0;
+}
+static int _OnSetPayRateDrugFnc(CWnd *pWnd){
+	 ((CHMSDrugInformation*)pWnd)->OnSetPayRateDrug();
+	 return 0;
+} 
+static int _OnPrintDrugDailyItemFnc(CWnd *pWnd){
+	((CHMSDrugInformation*)pWnd)->OnPrintDrugdailySelect();
+	return 0;
+}
+static int _OnPrintMaterialDetailFnc(CWnd *pWnd){
+	return ((CHMSDrugInformation*)pWnd)->OnPrintMaterialDetail();
+}
+static int _OnPreviewItembyDeptFnc(CWnd *pWnd){
+	((CHMSDrugInformation*)pWnd)->OnPreviewItembyDept();
+	return 0;
+}
+
+CHMSDrugInformation::CHMSDrugInformation(){
+
+	m_nDlgWidth = 605;
+	m_nDlgHeight = 585;
+	SetDefaultValues();
+}
+CHMSDrugInformation::~CHMSDrugInformation(){
+}
+void CHMSDrugInformation::OnCreateComponents(){
+	m_wndDrugInformation.Create(this, _T("Drug Information"), 5, 5, 615, 545);
+	m_wndFromDateLabel.Create(this, _T("From Date"), 10, 30, 90, 55);
+	m_wndFromDate.Create(this,95, 30, 175, 55); 
+	m_wndToDateLabel.Create(this, _T("To Date"), 180, 30, 260, 55);
+	m_wndToDate.Create(this,265, 30, 345, 55); 
+	m_wndSearchNameLabel.Create(this, _T("Search Name"), 350, 30, 450, 55);
+	m_wndSearchName.Create(this,455, 30, 609, 55); 
+	m_wndList.Create(this,10, 60, 610, 540); 
+	m_wndDepartmentDetail.Create(this, _T("Detail For Departments"), 10, 550, 190, 575);
+	m_wndReturnedDrugs.Create(this, _T("Filter for returned drugs"), 195, 550, 375, 575);
+//	m_wndDrugLog.Create(this, _T("&Drug Logs"), 400, 550, 510, 575);
+//	m_wndPrescription.Create(this, _T("&Prescription"), 515, 550, 610, 575);
+
+}
+void CHMSDrugInformation::OnInitializeComponents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+
+//	m_wndFromDate.SetCheckValue(true);
+//	m_wndToDate.SetCheckValue(true);
+	
+	m_wndSearchName.SetLimitText(128);
+	m_wndSearchName.SetCheckValue(true);
+	m_wndSearchName.SetNotEmpty(false);
+	m_wndSearchName.SetButtonMode(BUTTON_FIND);
+
+	m_wndList.InsertColumn(0, _T(""), CFMT_NUMBER, 0);	//orderid
+	m_wndList.InsertColumn(1, _T(""), CFMT_NUMBER, 0);	//Product_id
+	m_wndList.InsertColumn(2, _T("Index"), CFMT_TEXT, 30);
+	m_wndList.InsertColumn(3, _T("Name /Cnt"), CFMT_TEXT, 230);
+	m_wndList.InsertColumn(4, _T("Unit"), CFMT_TEXT, 50);
+	m_wndList.InsertColumn(5, _T("Quantity"), CFMT_MONEY|CFMT_FIXSIZE, 50);
+	m_wndList.InsertColumn(6, _T("Issue Qty"), CFMT_MONEY|CFMT_FIXSIZE, 50);
+	m_wndList.InsertColumn(7, _T("Unit Price"), CFMT_MONEY|CFMT_FIXSIZE, 80);
+	m_wndList.InsertColumn(8, _T("Amount"), CFMT_MONEY|CFMT_FIXSIZE, 90);
+	m_wndList.InsertColumn(9, _T("Stock"), CFMT_TEXT, 0);
+	m_wndList.InsertColumn(10, _T("Sheet ID"), CFMT_TEXT, 100);
+	m_wndList.InsertColumn(11, _T("Created By"), CFMT_TEXT, 0);	
+	m_wndList.InsertColumn(12, _T("OrderlineID"), CFMT_TEXT, 0);
+	m_wndList.InsertColumn(13, _T("Sheet return"), CFMT_TEXT, 100);
+	//m_wndList.EnableAutoIndex(TRUE);
+	//m_wndList.ModifyStyle(0, LVS_NOSORTHEADER);
+//	m_wndList.GetHeaderControl()->SetItemHeight(2);
+//	m_wndList.EnableAutoIndex(true);
+
+	
+}
+void CHMSDrugInformation::OnSetWindowEvents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	//m_wndFromDate.SetEvent(WE_CHANGE, _OnFromDateChangeFnc);
+	//m_wndFromDate.SetEvent(WE_SETFOCUS, _OnFromDateSetfocusFnc);
+	//m_wndFromDate.SetEvent(WE_KILLFOCUS, _OnFromDateKillfocusFnc);
+	m_wndFromDate.SetEvent(WE_CHECKVALUE, _OnFromDateCheckValueFnc);
+	//m_wndToDate.SetEvent(WE_CHANGE, _OnToDateChangeFnc);
+	//m_wndToDate.SetEvent(WE_SETFOCUS, _OnToDateSetfocusFnc);
+	//m_wndToDate.SetEvent(WE_KILLFOCUS, _OnToDateKillfocusFnc);
+	m_wndToDate.SetEvent(WE_CHECKVALUE, _OnToDateCheckValueFnc);
+	//m_wndSearchName.SetEvent(WE_CHANGE, _OnSearchNameChangeFnc);
+	//m_wndSearchName.SetEvent(WE_SETFOCUS, _OnSearchNameSetfocusFnc);
+	//m_wndSearchName.SetEvent(WE_KILLFOCUS, _OnSearchNameKillfocusFnc);
+	m_wndSearchName.SetEvent(WE_CHECKVALUE, _OnSearchNameCheckValueFnc);
+	m_wndSearchName.SetEvent(WE_CLICK, _OnSearchNameCheckValueFnc);
+
+	m_wndList.SetEvent(WE_SELCHANGE, _OnListSelectChangeFnc);
+	m_wndList.SetEvent(WE_LOADDATA, _OnListLoadDataFnc);
+	m_wndList.SetEvent(WE_DBLCLICK, _OnListDblClickFnc);
+	m_wndList.SetWindowText(_T("Drug List"));
+	m_wndList.AddEvent(1, _T("Print drug daily"), _OnPrintDrugDailyItemFnc);
+	m_wndList.AddEvent(2, _T("Print Material Detail"), _OnPrintMaterialDetailFnc);
+	m_wndList.AddEvent(5, _T("Preview item daily by dept"), _OnPreviewItembyDeptFnc);
+	m_wndList.AddEvent(0, _T("-"), NULL);
+	m_wndList.AddEvent(3, _T("Return drug"), _OnConfirmIssueDrugFnc);
+	m_wndList.AddEvent(0, _T("-"), NULL);
+	m_wndList.AddEvent(4, _T("Set Payrate Drug"), _OnSetPayRateDrugFnc);
+	m_wndList.AddEvent(0, _T("-"), NULL);
+	m_wndList.AddEvent(6, _T("Refresh"), _OnListRefreshItemFnc, 0, VK_F5);
+	
+
+	m_wndDepartmentDetail.SetEvent(WE_CLICK, _OnDepartmentDetailSelectFnc);
+	m_wndReturnedDrugs.SetEvent(WE_CLICK, _OnReturnedDrugsSelectFnc);
+	
+//	m_wndDrugLog.SetEvent(WE_CLICK, _OnDrugLogSelectFnc);
+	m_wndPrescription.SetEvent(WE_CLICK, _OnPrescriptionSelectFnc);
+	
+/*
+	AddEvent(1, _T("Add	Ctrl+A"), _OnAddHMSDrugInformationFnc, 0, 'A', VK_CONTROL);
+	AddEvent(2, _T("Edit	Ctrl+E"), _OnEditHMSDrugInformationFnc, 0, 'E', VK_CONTROL);
+	AddEvent(3, _T("Delete	Ctrl+D"), _OnDeleteHMSDrugInformationFnc, 0, 'D', VK_CONTROL);
+	AddEvent(4, _T("Save	Ctrl+S"), _OnSaveHMSDrugInformationFnc, 0, 'S', VK_CONTROL);
+	AddEvent(0, _T("-"));
+	AddEvent(5, _T("Cancel	Ctrl+T"), _OnCancelHMSDrugInformationFnc, 0, 'T', VK_CONTROL);
+*/
+}
+void CHMSDrugInformation::OnDoDataExchange(CDataExchange* pDX){
+	DDX_TextEx(pDX, m_wndFromDate.GetDlgCtrlID(), m_szFromDate);
+	DDX_TextEx(pDX, m_wndToDate.GetDlgCtrlID(), m_szToDate);
+	DDX_Text(pDX, m_wndSearchName.GetDlgCtrlID(), m_szSearchName);
+	DDX_Check(pDX, m_wndDepartmentDetail.GetDlgCtrlID(), m_bDepartmentDetail);
+	DDX_Check(pDX, m_wndReturnedDrugs.GetDlgCtrlID(), m_bReturnedDrugs);
+
+}
+void CHMSDrugInformation::GetDataToScreen(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+
+}
+void CHMSDrugInformation::GetScreenToData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+
+}
+void CHMSDrugInformation::SetDefaultValues(){
+	m_szSearchName.Empty();
+
+	m_bDepartmentDetail=FALSE;
+	m_bReturnedDrugs=FALSE;
+
+}
+int CHMSDrugInformation::SetMode(int nMode){
+ 		int nOldMode = GetMode(); 
+ 		CGuiView::SetMode(nMode); 
+ 		CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 		CString szSQL; 
+ 		CRecord rs(&pMF->m_db); 
+  		switch(nMode){ 
+ 		case VM_ADD: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			break; 
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(FALSE, 3, 4, -1); 
+ 			break; 
+ 		case VM_NONE: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(TRUE, 0, 6, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		}; 
+ 		UpdateData(FALSE); 
+ 		return nOldMode; 
+}
+/*void CHMSDrugInformation::OnFromDateChange(){
+	
+} */
+/*void CHMSDrugInformation::OnFromDateSetfocus(){
+	
+} */
+/*void CHMSDrugInformation::OnFromDateKillfocus(){
+	
+} */
+int CHMSDrugInformation::OnFromDateCheckValue(){
+	return 0;
+} 
+/*void CHMSDrugInformation::OnToDateChange(){
+	
+} */
+/*void CHMSDrugInformation::OnToDateSetfocus(){
+	
+} */
+/*void CHMSDrugInformation::OnToDateKillfocus(){
+	
+} */
+int CHMSDrugInformation::OnToDateCheckValue(){
+	return 0;
+} 
+/*void CHMSDrugInformation::OnSearchNameChange(){
+	
+} */
+/*void CHMSDrugInformation::OnSearchNameSetfocus(){
+	
+} */
+/*void CHMSDrugInformation::OnSearchNameKillfocus(){
+	
+} */
+int CHMSDrugInformation::OnSearchNameCheckValue(){
+	OnListLoadData();
+	return 1;
+} 
+void CHMSDrugInformation::OnListDblClick(){
+	int nSel = m_wndList.GetCurSel();
+	if(nSel < 0) return;
+	CString szBatchID = m_wndList.GetItemText(nSel, 10);
+	if(!szBatchID.IsEmpty()){
+		CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+		pMF->m_wndDailyDrugOrder.m_szOrderNo = szBatchID;
+		pMF->m_wndDailyDrugOrder.OnOrderNoCheckValue();
+		pMF->SetActivePane(2);
+
+	}
+} 
+void CHMSDrugInformation::OnListSelectChange(int nOldItem, int nNewItem){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CHMSDrugInformation::OnListRefreshItem(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	OnListLoadData();
+	 return 0;
+} 
+long CHMSDrugInformation::OnListLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CRecord rs1(&pMF->m_db);
+	CRecord rs2(&pMF->m_db);
+	CString szSQL, szOldDate, szOldDept, szStorageName;
+	CString	szDept, szIssueDate, tmpStr, szDrugName, szWhere;
+	CString szModuleID;
+	CString szFilter;
+	szFilter.Empty();
+
+	UpdateData(TRUE);
+
+	szModuleID = pMF->GetModuleID();
+	if(pMF->IsOutPatient())
+		szModuleID = _T("EM");
+//	szSQL.Format(_T("hms_inpatient_fee_create(%ld,'DM', '%s') "), pMF->m_nDocumentNo, szModuleID);
+//	pMF->ExecDML(szSQL);
+
+	
+	m_wndList.BeginLoad(); 
+	long nCount = 0, nTransactionID =0, nNewTransactionID=0;
+	if(!m_bDepartmentDetail)
+		szWhere.Format(_T(" AND hpo_deptid='%s' "), pMF->m_szDept);
+
+
+	//szWhere.AppendFormat(_T(" and (hpo_treattime=%d or hpo_treattime=0) "), pMF->GetTreatTime());
+
+	szFilter.Format(_T(" and trunc(hpo_orderdate) between TO_DATE('%s','YYYY-MM-DD') and TO_DATE('%s', 'YYYY-MM-DD') "),
+		m_szFromDate, m_szToDate);
+	if(!m_szSearchName.IsEmpty())
+	{
+		szFilter.AppendFormat(_T(" and lower(product_name) like(chr(37)||lower('%s')||chr(37)) "), m_szSearchName);
+	}
+
+	if(m_bReturnedDrugs)
+	{
+		szFilter.AppendFormat(_T(" and hpol_qtyorder <> hpol_qtyissue "));
+	}
+
+	szSQL.Format(_T(" SELECT ") \
+		_T("hpo_transaction_id, ") \
+_T(" hpo_orderid as orderid, ") \
+_T(" '' as sheetidx, ") \
+_T("   hpo_storage_id                       AS stockid,") \
+_T("   hpo_deptid                        AS deptid,") \
+_T("   trunc_date(hpo_orderdate)              AS issuedate,") \
+_T("   product_id                       AS itemid,") \
+_T("   product_name                         AS drugname,") \
+_T("   product_uomname                         AS unit,") \
+_T("   SUM(hpol_qtyorder)                AS orderqty,") \
+_T("   SUM(hpol_qtyissue)                AS issueqty,") \
+_T("   hpol_unitprice                    AS price,") \
+_T("   SUM(hpol_qtyissue*hpol_unitprice) AS money,") \
+_T("   Get_StorageName(hpo_storage_id) AS stockname") \
+_T(" FROM hms_pharmaorder") \
+_T(" INNER JOIN hms_pharmaorderline") \
+_T(" ON(hpol_docno=hpo_docno and hpol_orderid=hpo_orderid)") \
+_T(" INNER JOIN m_productitem_view") \
+_T(" ON(product_item_id      =hpol_product_item_id)") \
+_T(" WHERE hpo_docno =%ld %s %s ") \
+_T(" AND (hpo_orderstatus IN('I','A') )") \
+_T(" GROUP BY ") \
+_T(" hpo_transaction_id, ") \
+_T(" hpo_orderid, ") \
+_T("   hpo_storage_id,") \
+_T("   hpo_deptid,") \
+_T("   trunc_date(hpo_orderdate),") \
+_T("   product_id,") \
+_T("   product_name,") \
+_T("   product_uomname,") \
+_T("   hpol_unitprice") \
+_T(" ORDER BY deptid,") \
+_T("   issuedate,") \
+_T(" hpo_storage_id, ") \
+_T("   drugname,") \
+_T("   unit,") \
+_T("   price "), pMF->m_nDocumentNo, szWhere, szFilter);
+
+//_msg(_T("%s"), szSQL);
+	szOldDate.Empty();
+
+	nCount = rs.ExecSQL(szSQL);
+	_tprintf(_T("\n1\n"));
+	int nIdx =0;
+	int nOldStorageID=0, nNewStorageID=0;
+
+	while(!rs.IsEOF()){ 
+		rs.GetValue(_T("deptid"), szDept);
+		rs.GetValue(_T("issuedate"), szIssueDate);
+		rs.GetValue(_T("sheetidx"), nNewTransactionID);
+		rs.GetValue(_T("stockname"), szStorageName);
+		rs.GetValue(_T("stockid"), nNewStorageID);
+		if(szOldDept != szDept){
+			tmpStr.Format(_T("%s"), pMF->GetDepartmentName(szDept));
+			int nItem = m_wndList.AddItems(_T(""), _T(""), _T(""), tmpStr, NULL);
+			m_wndList.SetItemBkColor(nItem, RGB(0, 64, 128), FALSE);
+			m_wndList.SetItemTextColor(nItem, COLOR_WHITE, FALSE);
+			m_wndList.MergeCell(nItem, 2, nItem, 7, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, true);
+			szOldDept = szDept;
+			szOldDate.Empty();
+		}
+
+		if(szOldDate != szIssueDate || nNewStorageID != nOldStorageID){
+			nTransactionID = nNewTransactionID;
+			CString szSheetIdx;
+			tmpStr.Format(_T(" [%s]"), CDate::Convert(szIssueDate, yyyymmdd, ddmmyyyy));
+			nIdx =0;
+			nOldStorageID = nNewStorageID;
+			_tprintf(_T("\r\n%s"), szStorageName);
+			int nItem = m_wndList.AddItems(_T(""), _T(""), _T(""), tmpStr, _T(""),_T(""), szStorageName, NULL);
+			m_wndList.SetItemBkColor(nItem, RGB(0, 129, 192), FALSE);
+			m_wndList.SetItemTextColor(nItem, COLOR_WHITE, FALSE);
+			m_wndList.MergeCell(nItem, 2, nItem, 2, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, false);
+			m_wndList.MergeCell(nItem, 3, nItem, 4, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, false);
+			m_wndList.MergeCell(nItem, 6, nItem, 7, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, false);
+			
+			szOldDate = szIssueDate;
+		}
+		CString szIssueQty, szOrderQty;
+		rs.GetValue(_T("issueqty"), szIssueQty);
+		rs.GetValue(_T("orderqty"), szOrderQty);
+		if(str2float(szIssueQty) <=0){
+			szIssueQty = _T("0");
+		}
+		nIdx ++;
+		szDrugName.Format(_T("%s"), rs.GetValue(_T("drugname")));
+		CString szIndex;
+		szIndex.Format(_T("%d"), nIdx);
+		int nItem = m_wndList.AddItems(
+			rs.GetValue(_T("orderid")),
+			rs.GetValue(_T("itemid")),
+			szIndex,
+			szDrugName, 
+			rs.GetValue(_T("unit")), 
+			szOrderQty,
+			szIssueQty, 
+			rs.GetValue(_T("price")), 
+			rs.GetValue(_T("money")), 
+			szStorageName,			
+			rs.GetValue(_T("sheetidx")),
+			rs.GetValue(_T("createdname")),
+			rs.GetValue(_T("orderlineid")),
+			_T(""),
+			NULL);
+		if(str2float(szIssueQty) != str2float(szOrderQty)){
+			m_wndList.SetSubItemBkColor(nItem, 5, RGB(200, 128, 0));
+			m_wndList.SetSubItemTextColor(nItem, 5, COLOR_WHITE);
+			
+		}
+		rs.MoveNext();
+	}
+	
+	
+
+	if(pMF->IsOutPatient() || pMF->IsCancerPatient())
+		szWhere.AppendFormat(_T(" and (hpo_treattime=%d or hpo_treattime=0) "), pMF->GetTreatTime());
+
+	szSQL.Format(_T(" SELECT ") \
+_T("hpo_transaction_id, ") \
+_T(" hpo_orderid as orderid, ") \
+_T(" case when hpo_transaction_id > 0 then ") \
+_T("   (select distinct mt_orderno from m_transaction where mt_transaction_id=hpo_transaction_id ) ") \
+_T(" else cast('' as nvarchar2(1)) ") \
+_T("   end as sheetidx, ") \
+_T("   hpo_storage_id                       AS stockid,") \
+_T("   hpo_deptid                        AS deptid,") \
+_T("   trunc_date(hpo_orderdate)              AS issuedate,") \
+_T("   product_id                       AS itemid,") \
+_T("   product_name                         AS drugname,") \
+_T("   product_uomname                         AS unit,") \
+_T("   SUM(hpol_qtyorder)                AS orderqty,") \
+_T("   SUM(hpol_qtyissue)                AS issueqty,") \
+_T("   hpol_unitprice                    AS price,") \
+_T("   SUM(hpol_qtyissue*hpol_unitprice) AS money,") \
+_T("   Get_StorageName(hpo_storage_id) AS stockname ") \
+_T(" FROM hms_ipharmaorder") \
+_T(" INNER JOIN hms_ipharmaorderline") \
+_T(" ON(hpol_docno=hpo_docno and hpol_orderid=hpo_orderid)") \
+_T(" INNER JOIN m_productitem_view") \
+_T(" ON(product_item_id      =hpol_product_item_id)") \
+_T(" WHERE hpo_docno =%ld %s %s ") \
+_T(" AND (hpo_orderstatus IN('I','A') )") \
+_T(" GROUP BY ") \
+_T(" hpo_transaction_id, ") \
+_T(" hpo_orderid, ") \
+_T("   hpo_storage_id,") \
+_T("   hpo_deptid,") \
+_T("   trunc_date(hpo_orderdate),") \
+_T("   product_id,") \
+_T("   product_name,") \
+_T("   product_uomname,") \
+_T("   hpol_unitprice,hpol_product_id ") \
+_T(" ORDER BY deptid,") \
+_T("   issuedate,") \
+_T(" hpo_storage_id, ") \
+_T("   drugname,") \
+_T("   unit,") \
+_T("   price "), pMF->m_nDocumentNo, szWhere, szFilter);
+
+_fmsg(_T("%s"), szSQL);
+	szOldDate.Empty();
+
+	nCount = rs.ExecSQL(szSQL);
+_tprintf(_T("\n2\n"));
+	nOldStorageID=0;
+	nNewStorageID=0;
+	
+	nIdx =0;
+	long nOrderId = 0;
+	while(!rs.IsEOF()){ 
+		rs.GetValue(_T("deptid"), szDept);
+		rs.GetValue(_T("issuedate"), szIssueDate);
+		rs.GetValue(_T("sheetidx"), nNewTransactionID);
+		rs.GetValue(_T("stockname"), szStorageName);
+		rs.GetValue(_T("stockid"), nNewStorageID);
+		rs.GetValue(_T("orderid"), nOrderId);
+		if(szOldDept != szDept){
+			tmpStr.Format(_T("%s"), pMF->GetDepartmentName(szDept));
+			int nItem = m_wndList.AddItems(_T(""), _T(""), _T(""), tmpStr, NULL);
+			m_wndList.SetItemBkColor(nItem, RGB(0, 64, 128), FALSE);
+			m_wndList.SetItemTextColor(nItem, COLOR_WHITE, FALSE);
+			m_wndList.MergeCell(nItem, 2, nItem, 7, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, true);
+			szOldDept = szDept;
+			szOldDate.Empty();
+		}
+
+		if(szOldDate != szIssueDate || nNewStorageID != nOldStorageID){
+			nTransactionID = nNewTransactionID;
+			CString szSheetIdx;
+			//tmpStr.Format(_T("Số phiếu [%ld] - Ngày [%s]- Kho [%s]"), nOrderId, CDate::Convert(szIssueDate, yyyymmdd, ddmmyyyy), szStorageName);
+			tmpStr.Format(_T("Ngày [%s]- Kho [%s]"), CDate::Convert(szIssueDate, yyyymmdd, ddmmyyyy), szStorageName);
+			nIdx =0;
+			nOldStorageID = nNewStorageID;
+
+			int nItem = m_wndList.AddItems(_T("*"),_T(""),  tmpStr, NULL);
+			m_wndList.SetItemBkColor(nItem, RGB(0, 129, 192), FALSE);
+			m_wndList.SetItemTextColor(nItem, COLOR_WHITE, FALSE);
+			m_wndList.MergeCell(nItem, 2, nItem, 10, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, false);
+			//m_wndList.MergeCell(nItem, 3, nItem, 4, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, false);
+			//m_wndList.MergeCell(nItem, 6, nItem, 7, DT_LEFT|DT_VCENTER|DT_SINGLELINE, true, false);
+			
+			szOldDate = szIssueDate;
+		}
+		CString szIssueQty, szOrderQty;
+		rs.GetValue(_T("issueqty"), szIssueQty);
+		rs.GetValue(_T("orderqty"), szOrderQty);
+		if(str2float(szIssueQty) <=0){
+			szIssueQty = _T("0");
+		}
+		CString szSheetReturn;
+		szSheetReturn.Empty();
+		if( szIssueQty != szOrderQty)
+		{
+			_tprintf(_T("\n3.1\n"));
+			szSQL.Format(_T(" select  LISTAGG( cast(mt_orderno as varchar(2000)),',')  WITHIN GROUP (ORDER BY mt_orderno)  as nt ") \
+						_T("	from hms_ipharmaorderline_r  ") \
+						_T("	left join m_transaction on (mt_transaction_id=hpolr_retorder_id) ") \
+						_T("	where hpolr_orderid= %ld  and mt_doctype  in ('DRO','CRO')   ") \
+						_T("	and hpolr_product_id= %ld  "),nOrderId ,ToLong(rs.GetValue(_T("itemid"))));
+		
+			rs2.ExecSQL(szSQL);
+			if(!rs2.IsEOF())
+			{
+				szSheetReturn = rs2.GetValue(_T("nt"));
+				//_msg(_T("%s, %s"),szSQL,szSheetReturn);
+			}
+			_tprintf(_T("\n3\n"));
+		}
+
+		nIdx ++;
+		szDrugName.Format(_T("%s"), rs.GetValue(_T("drugname")));
+		CString szIndex;
+		szIndex.Format(_T("%d"), nIdx);
+		int nItem = m_wndList.AddItems(
+			rs.GetValue(_T("orderid")),
+			rs.GetValue(_T("itemid")),
+			szIndex,
+			szDrugName, 
+			rs.GetValue(_T("unit")), 
+			szOrderQty,
+			szIssueQty, 
+			rs.GetValue(_T("price")), 
+			rs.GetValue(_T("money")), 
+			szStorageName,			
+			rs.GetValue(_T("sheetidx")),
+			rs.GetValue(_T("createdname")),
+			rs.GetValue(_T("orderlineid")),
+			szSheetReturn,
+			NULL);
+		if(str2float(szIssueQty) != str2float(szOrderQty)){
+			m_wndList.SetSubItemBkColor(nItem, 5, RGB(200, 128, 0), false);
+			m_wndList.SetSubItemTextColor(nItem, 5, COLOR_WHITE, false);
+		}
+		rs.MoveNext();
+	}
+	
+	m_wndList.EndLoad(); 
+	
+	if(m_nItem > 0){		
+		m_wndList.EnsureVisible(m_nItem, false);
+	}
+	
+	
+	return nCount;
+
+}
+void CHMSDrugInformation::OnDepartmentDetailSelect(){
+	UpdateData(true);
+	OnListLoadData();
+	
+}
+
+void CHMSDrugInformation::OnPrescriptionSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	if(pMF->IsDocumentReadOnly())
+	{
+		ShowMessageBox(_T("Cannot process with current status"));
+		return;
+
+	}
+
+	CHMSInpatientPrescriptionDlg dlg(this);
+	if(dlg.DoModal() == IDOK){
+	
+	}
+	
+	OnListLoadData();
+	
+}
+
+
+void CHMSDrugInformation::OnDrugLogSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	if(pMF->m_nDocumentNo <= 0)
+		return;
+	CHMSDrugLogsDialog dlg(pMF);
+	dlg.m_szDeptID = pMF->m_szDept;
+	dlg.m_nPatientNo = pMF->m_nPatientNo;
+	dlg.m_nDocumentNo = pMF->m_nDocumentNo;
+	dlg.m_szDoctor = pMF->m_szDoctor;
+
+	if(dlg.DoModal() == IDOK){
+	
+	}
+}
+
+
+int CHMSDrugInformation::OnAddHMSDrugInformation(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)  
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_ADD);
+	return 0; 
+}
+int CHMSDrugInformation::OnEditHMSDrugInformation(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CHMSDrugInformation::OnDeleteHMSDrugInformation(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO) 
+ 		return -1; 
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") ); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret >= 0){ 
+ 		SetMode(VM_NONE); 
+ 		OnCancelHMSDrugInformation(); 
+ 	}
+	return 0;
+}
+int CHMSDrugInformation::OnSaveHMSDrugInformation(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT) 
+ 		return -1; 
+ 	if(!IsValidateData()) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(GetMode() == VM_ADD){ 
+ 		//szSQL = m_tblTbl.GetInsertSQL(); 
+ 	} 
+ 	else if(GetMode() == VM_EDIT){ 
+ 		CString szWhere; 
+ 		szWhere.Format(_T(" WHERE")); 
+ 		//szSQL = m_tblTbl.GetUpdateSQL(_T("createdby,createddate")); 
+ 		szSQL += szWhere; 
+ 	} 
+ //_fmsg(_T("%s"), szSQL); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret > 0) 
+ 	{ 
+ 		//OnHMSDrugInformationListLoadData(); 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 	} 
+ 	return ret; 
+ 	return 0; 
+}
+int CHMSDrugInformation::OnCancelHMSDrugInformation(){
+ 	if(GetMode() == VM_EDIT) 
+ 	{ 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 		SetMode(VM_NONE); 
+ 	} 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	return 0;
+} 
+int CHMSDrugInformation::OnHMSDrugInformationListLoadData(){
+	return 0;
+}
+
+
+void CHMSDrugInformation::RefreshData()
+{
+	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT TO_CHAR(hd_admitdate, 'YYYY-MM-DD') as AdmitDate FROM hms_doc WHERE hd_docno=%ld "), pMF->m_nDocumentNo);
+	rs.ExecSQL(szSQL);
+	rs.GetValue(_T("AdmitDate"), m_szFromDate);
+
+	CDate dte;
+	dte.ParseDate(pMF->GetSysDate());
+	dte+= 15;
+	m_szToDate = dte.GetDate();
+	UpdateData(FALSE);
+
+
+	OnListLoadData();
+}
+
+
+
+void CHMSDrugInformation::OnConfirmIssueDrug(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	int nSel = m_wndList.GetCurSel();
+	if(nSel < 0) return;
+	
+	m_nItem = nSel;
+
+	if(!pMF->CheckPermission(_T("07.06")))
+	{
+		ShowMessageBox(_T("Permission Denined."), 0);
+		return;
+	}
+
+	if(pMF->IsDocumentReadOnly())
+	{
+		ShowMessageBox(_T("Cannot process with current status"));
+		return;
+
+	}
+
+	CString szSQL, szStatus, szSuggestion;
+	CRecord rs(&pMF->m_db);
+	szSQL.Format(_T("SELECT htr_status, htr_suggestion FROM hms_treatment_record WHERE htr_docno=%ld AND htr_idx=%d"), 
+		pMF->m_nDocumentNo, pMF->m_nRefIndex);
+	rs.ExecSQL(szSQL);
+	rs.GetValue(_T("htr_status"), szStatus);
+	rs.GetValue(_T("htr_suggestion"), szSuggestion);
+
+	if(szStatus == _T("T") && szSuggestion != _T("M")){
+		ShowMessageBox(_T("This patient profile is terminated. Do not allow."), 0);
+		return;
+	}
+
+	
+	CString orderdept, tmpStr, szDose, szReturn;
+	long nOrderID;
+	nOrderID = ToLong(m_wndList.GetItemText(nSel, 0));
+
+
+	szSQL.Format(_T("SELECT hpo_deptid, hpo_ordertype FROM hms_ipharmaorder WHERE hpo_orderid=%ld"), nOrderID);
+	rs.ExecSQL(szSQL);
+
+	if(rs.IsEOF()) return;
+	rs.GetValue(_T("hpo_deptid"), orderdept);
+	rs.GetValue(_T("hpo_ordertype"), tmpStr);
+	if(pMF->m_szDept != orderdept)
+		return;
+
+	int nOrderlineID = str2int(m_wndList.GetItemText(nSel, 12));		
+	//double nUnitPrice = str2double(m_wndList.GetItemText(nSel, 2));
+
+	//
+	/*szSQL.Format(_T("SELECT hpol_retorder_id FROM hms_ipharmaorderline WHERE hpol_orderid=%ld and hpol_orderlineid=%d "), nOrderID, nOrderlineID);
+	rs.ExecSQL(szSQL);
+	if(rs.GetIntValue())
+	{
+		ShowMessageBox(_T("Thu\x1ED1\x63 tr\x1EA3 l\x1EA1i \x111\x1B0\x1EE3\x63 t\x1EA1o phi\x1EBFu. Kh\xF4ng th\x1EC3 ho\xE0n tr\x1EA3 ti\x1EBFp!"));
+		return;
+	}	*/
+	
+
+	nOrderID  = str2long(m_wndList.GetItemText(nSel, 0));
+	long nProduct_ID = str2long(m_wndList.GetItemText(nSel, 1));
+	szSQL.Format(_T("HMS_IPHARMAORDER_CHECKBFRETURN(%ld, %ld) "), nOrderID, nProduct_ID);
+	int ret = str2int(pMF->ExecDML(szSQL));
+	if(ret <= 0)
+	{
+		switch(ret)
+		{
+		case -1:
+			ShowMessageBox(_T("Thu\x1ED1\x63-v\x1EADt t\x1B0 \x63h\x1B0\x61 \x111\x1B0\x1EE3\x63 \x62\x1ED5 sung. \x42\x1EA1n s\x61ng t\xE1\x63 v\x1EE5 thu\x1ED1\x63 t\x1EE7 tr\x1EF1\x63 \x111\x1EC3 \x78\xF3\x61"));
+			break;
+			break;
+		default:
+			ShowMessageBox(_T("Cannot process with current status"));
+		}
+			
+		return;
+	}
+	ret = ShowMessageBox(_T("Tá\x63 v\x1EE5 tr\x1EA3 thu\x1ED1\x63 \x63h\x1EC9 \x111\x1B0\x1EE3\x63 th\x1EF1\x63 hi\x1EC7n m\x1ED9t l\x1EA7n.\r\n \x42\x1EA1n ph\x1EA3i ki\x1EC3m tr\x61 s\x1ED1 l\x1B0\x1EE3ng tr\x1B0\x1EDB\x63 khi tr\x1EA3."), MB_YESNO);
+	if(ret == IDNO)
+		return;
+	
+	CHMSReturnDrugDialog dlg(this);
+	dlg.m_nOrderID = nOrderID;
+	dlg.m_nProduct_ID = nProduct_ID;
+	dlg.m_nOrderQuantity = str2float(m_wndList.GetItemText(nSel, 5));
+	dlg.m_nIssueQuantity = str2float(m_wndList.GetItemText(nSel, 6));
+	dlg.m_nUnitPrice = str2float(m_wndList.GetItemText(nSel, 7));
+
+	if(dlg.DoModal() == IDOK){
+//		OnDrugListLoadData();
+	//	OnListLoadData();
+		tmpStr.Format(_T("%.2f"), dlg.m_nIssueQuantity);
+		m_wndList.SetItemText(nSel, 6, tmpStr);
+	}
+}
+#include "TMSetPayRateForDrug.h"
+void CHMSDrugInformation::OnSetPayRateDrug(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	int nSel = m_wndList.GetCurSel();
+	if(nSel < 0) return;
+	
+	m_nItem = nSel;
+
+	if(!pMF->CheckPermission(_T("07.07")))
+	{
+	//	ShowMessageBox(_T("Permission Denined."), 0);
+	//	return;
+	}
+
+	if(pMF->IsDocumentReadOnly())
+	{
+		ShowMessageBox(_T("Cannot process with current status"));
+		return;
+	}
+	if(!pMF->IsActiveDocument())
+	{
+		ShowMessageBox(_T("Hồ sơ đã đóng. Không cho phép sửa đổi dữ liệu"));
+		return;
+	}
+
+	CString szObjectType = pMF->GetObjectType();
+	if(szObjectType != _T("I") && szObjectType != _T("C"))
+	{
+		ShowMessageBox(_T("Chức năng này chỉ áp dụng đối với bệnh nhân BHYT"));
+		return;
+	}
+
+	CString szSQL, szStatus, szSuggestion;
+	CRecord rs(&pMF->m_db);
+	szSQL.Format(_T("SELECT htr_status, htr_suggestion FROM hms_treatment_record WHERE htr_docno=%ld AND htr_idx=%d"), 
+		pMF->m_nDocumentNo, pMF->m_nRefIndex);
+	rs.ExecSQL(szSQL);
+	rs.GetValue(_T("htr_status"), szStatus);
+	rs.GetValue(_T("htr_suggestion"), szSuggestion);
+
+	if(szStatus == _T("T") && szSuggestion != _T("M")){
+		ShowMessageBox(_T("This patient profile is terminated. Do not allow."), 0);
+		return;
+	}
+
+	
+	CString orderdept, tmpStr, szDose, szReturn;
+	long nOrderID;
+	nOrderID = ToLong(m_wndList.GetItemText(nSel, 0));
+
+
+	szSQL.Format(_T("SELECT hpo_deptid, hpo_ordertype FROM hms_ipharmaorder WHERE hpo_orderid=%ld"), nOrderID);
+	rs.ExecSQL(szSQL);
+
+	if(rs.IsEOF()) return;
+	rs.GetValue(_T("hpo_deptid"), orderdept);
+	rs.GetValue(_T("hpo_ordertype"), tmpStr);
+	if(pMF->m_szDept != orderdept)
+		return;
+
+	int nOrderlineID = str2int(m_wndList.GetItemText(nSel, 12));		
+	//double nUnitPrice = str2double(m_wndList.GetItemText(nSel, 2));
+
+	//
+	/*szSQL.Format(_T("SELECT hpol_retorder_id FROM hms_ipharmaorderline WHERE hpol_orderid=%ld and hpol_orderlineid=%d "), nOrderID, nOrderlineID);
+	rs.ExecSQL(szSQL);
+	if(rs.GetIntValue())
+	{
+		ShowMessageBox(_T("Thu\x1ED1\x63 tr\x1EA3 l\x1EA1i \x111\x1B0\x1EE3\x63 t\x1EA1o phi\x1EBFu. Kh\xF4ng th\x1EC3 ho\xE0n tr\x1EA3 ti\x1EBFp!"));
+		return;
+	}	*/
+	
+
+	nOrderID  = str2long(m_wndList.GetItemText(nSel, 0));
+	long nProduct_ID = str2long(m_wndList.GetItemText(nSel, 1));
+	szSQL.Format(_T("select nvl(mp_isset_payrate,'N') as hasSet from m_product where mp_product_id=%ld ") ,nProduct_ID);
+	rs.ExecSQL(szSQL);
+	if( rs.GetValue(_T("hasSet")) == _T("N"))
+	{
+	//	ShowMessageBox(_T("Thuốc chưa được thiết lập chế độ cho phép sửa đổi"));
+	//	return;
+	}
+	szSQL.Format(_T("SELECT count(*) FROM m_drug_cancer WHERE mdc_product_id=%ld and mdc_isactive='Y' "), nProduct_ID);
+	rs.ExecSQL(szSQL);
+	if(rs.GetIntValue() <= 0)
+	{
+		ShowMessageBox(_T("Thuốc không có trong danh mục thuốc ung thư. Không cho phép thiết lập tỷ lệ thanh toán"));
+		return;
+	}
+
+	CTMSetPayRateForDrug dlg(this);
+	dlg.m_nProduct_ID = nProduct_ID;
+	dlg.m_nDocumentNo= pMF->m_nDocumentNo;
+	dlg.m_szDrugName = m_wndList.GetItemText(nSel, 3);
+	if(dlg.DoModal() == IDOK){
+//		OnDrugListLoadData();
+	//	OnListLoadData();
+
+	}
+}
+
+int CHMSDrugInformation::OnPrintMaterialDetail(){
+	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd();	
+//	pMF->OnPrintMaterialDetailOperation(pMF->m_nDocumentNo, m_bDepartmentDetail);
+	return 0;
+}
+
+void CHMSDrugInformation::OnPreviewItembyDept(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CHMSItemDailyTrackbyDept dlg(this, pMF->m_nDocumentNo);
+	dlg.DoModal();
+}
+
+
+void CHMSDrugInformation::OnPrintDrugdailySelect(){
+	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd();
+//	OnPrintDrugdaily(1);
+	CPrintForms printer;
+	printer.PM_PrintDailyMaterialAndDrugsOfPatient(pMF->m_nDocumentNo, _T("GL"));
+	
+}
+void CHMSDrugInformation::OnPrintDrugdaily(int nType)
+{
+	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd();
+	CReport rpt;
+	CRecord rsl(&pMF->m_db);
+	CRecord rs(&pMF->m_db);
+	CRecord rs1(&pMF->m_db);
+	CRecord rsd(&pMF->m_db);
+	CString tmpStr, szSQL, szWhere, szSysDate, szReportTitle;
+	UpdateData(true);
+	
+	if(!rpt.Init(_T("Reports/HMS/TM_NHATTRINHVACONGKHAITHUOC.RPT"),true) )
+	{
+		return;
+	}
+	
+
+
+	if(!m_bDepartmentDetail)
+		szWhere.AppendFormat(_T(" and hpo_deptid ='%s' "), pMF->m_szDept);	
+
+	szSQL.Format(_T(" SELECT hcr_docno as docno,") \
+				_T("    trim(hp_surname||' '||hp_midname||' '||hp_firstname) as pname,") \
+				_T("    hms_getage( trunc_date(hd_admitdate), hp_birthdate) as age,") \
+				_T(" 	extract(year from hp_birthdate) as yearofbirth,") \
+				_T("    sys_sel_getname('sys_sex', hp_sex) as sex,") \
+				_T("	hms_getobjectname(hd_object)                       AS object, ") \
+				_T("    hcr_maindisease as diagnostic,") \
+				_T("    trunc_date(hcr_admitdate) as admitdate,") \
+				_T("    trunc_date(hcr_dischargedate) as dischargedate,") \
+				_T("    htr_deptid,") \
+				_T("    hb_roomid,") \
+				_T("    hb_bedid,") \
+				_T("    (SELECT sd_name FROM sys_dept WHERE htr_deptid=sd_id AND ROWNUM < 2) as deptname,") \
+				_T("    hrl_name as roomname,") \
+				_T("    hbl_name as bedname") \
+				_T(" FROM hms_patient") \
+				_T(" LEFT JOIN hms_doc ON(hd_patientno=hp_patientno)") \
+				_T(" LEFT JOIN hms_clinical_record ON(hd_docno=hcr_docno)") \
+				_T(" LEFT JOIN hms_treatment_record ON(htr_docno=hcr_docno AND htr_idx=hcr_refidx)") \
+				_T(" LEFT JOIN hms_bed ON(hb_docno=hcr_docno AND hb_deptid=htr_deptid AND hb_refidx=hcr_refidx)") \
+				_T(" LEFT JOIN hms_roomlist ON(hrl_deptid=htr_deptid and hrl_id=hb_roomid)") \
+				_T(" LEFT JOIN hms_bedlist ON(hbl_deptid=htr_deptid and hbl_roomid=hb_roomid and hbl_id=hb_bedid)") \
+				_T(" WHERE hd_docno=%ld"), pMF->m_nDocumentNo);
+
+	rs1.ExecSQL(szSQL);
+
+//_fmsg(_T("%s"), szSQL);
+		
+	szSQL.Format(_T(" SELECT trunc_date(hpo_orderdate) as orderdate,") \
+				_T("        hpol_product_id as itemid") \
+				_T(" FROM hms_patient") \
+				_T(" LEFT JOIN hms_doc ON(hd_patientno=hp_patientno)") \
+				_T(" LEFT JOIN hms_ipharmaorder ON(hpo_docno=hd_docno)") \
+				_T(" LEFT JOIN hms_ipharmaorderline ON(hpol_docno=hpo_docno and hpol_orderid=hpo_orderid)") \
+				_T(" LEFT JOIN hms_treatment_record ON(htr_docno=hpo_docno AND htr_idx=hpo_refidx)") \
+				_T(" LEFT JOIN m_productitem_view ON(product_item_id=hpol_product_item_id)") \
+				_T(" WHERE hpo_docno=%ld and hpo_orderstatus in('I','A') AND hpol_qtyissue > 0") \
+				_T(" and hpo_ordertype<>'M' %s") \
+				_T(" GROUP BY trunc_date(hpo_orderdate), hpol_product_id") \
+				_T(" ORDER BY orderdate, itemid"), pMF->m_nDocumentNo, szWhere);
+	rsl.ExecSQL(szSQL);
+
+//_fmsg(_T("%s"), szSQL);
+	if(rsl.IsEOF())
+	{			
+		return;
+	}
+		
+	rpt.GetReportHeader()->SetValue(_T("HEALTHSERVICE"), pMF->m_CompanyInfo.sc_pname);
+	rpt.GetReportHeader()->SetValue(_T("HOSPITALNAME"), pMF->m_CompanyInfo.sc_name);
+	rpt.GetReportHeader()->SetValue(_T("ReportTitle"), szReportTitle);
+
+	rs1.GetValue(_T("deptname"), tmpStr);
+	rpt.GetReportHeader()->SetValue(_T("DEPARTMENT"), tmpStr);
+
+	rs1.GetValue(_T("pname"), tmpStr);
+	rpt.GetPageHeader()->SetValue(_T("PatientName"), tmpStr);
+
+	rs1.GetValue(_T("age"), tmpStr);
+	rpt.GetPageHeader()->SetValue(_T("Age"), tmpStr);
+
+	rs1.GetValue(_T("sex"), tmpStr);
+	rpt.GetPageHeader()->SetValue(_T("Sex"), tmpStr);
+
+	rs1.GetValue(_T("bedname"), tmpStr);
+	rpt.GetPageHeader()->SetValue(_T("Bednumber"), tmpStr);
+
+	rs1.GetValue(_T("roomname"), tmpStr);
+	rpt.GetPageHeader()->SetValue(_T("Room"), tmpStr);
+
+	rpt.GetPageHeader()->SetValue(_T("object"), rs1.GetValue(_T("object")));
+	rpt.GetPageHeader()->SetValue(_T("yearofbirth"), rs1.GetValue(_T("yearofbirth")));
+
+	tmpStr = CDate::Convert(rs1.GetValue(_T("Admitdate")), yyyymmdd, ddmmyyyy);
+	rpt.GetPageHeader()->SetValue(_T("AdmitDate"), tmpStr);
+
+	rs1.GetValue(_T("diagnostic"), tmpStr);
+	rpt.GetPageHeader()->SetValue(_T("Diagnostic"), tmpStr);
+
+	tmpStr = CDate::Convert(rs1.GetValue(_T("Dischargedate")), yyyymmdd, ddmmyyyy);
+	rpt.GetPageHeader()->SetValue(_T("DischargeDate"), tmpStr);
+	
+
+	CReportSection* rptDetail;
+
+	double grpCost=0;
+	//long cost = 0;
+	int nItem;
+	
+	
+	int nIndex=0;
+	CString szTemp, szString, szConvert, szDate;
+	int nCount = 0, i = 0;
+	DAYCOLUMN dc_cotngay;
+	DRUGITEM drugItem;
+	int y = 1;
+	int nMaxDay = 15;
+	CString szOld;
+	CArray<DAYCOLUMN,DAYCOLUMN&> m_array;
+	CArray<DRUGITEM, DRUGITEM&> arrDrug;
+	CString szStartDay, szEndDay, szItemID;
+	bool bCheck = false;
+
+	m_array.RemoveAll();
+	arrDrug.RemoveAll();
+
+	while(!rsl.IsEOF())
+	{
+		if (szDate.IsEmpty() || CompareDate(szDate, rsl.GetValue(_T("orderdate"))) != 0)
+		{
+			rsl.GetValue(_T("orderdate"), szDate);
+			dc_cotngay.szDate = szDate;
+			dc_cotngay.nIndex = y;
+			m_array.Add(dc_cotngay);
+			y++;
+		}
+
+		rsl.GetValue(_T("itemid"), szItemID);
+
+		for (int j = 0; j < arrDrug.GetSize(); j++)
+		{
+			drugItem = arrDrug[j];
+			if (drugItem.szItemID == szItemID)
+			{
+				if (drugItem.nMaxIdx < (y - 1))
+				{
+					drugItem.nMaxIdx = y - 1;
+					arrDrug.SetAt(j, drugItem);
+				}
+				bCheck = true;
+				break;
+			}
+		}
+
+		if (!bCheck)
+		{
+			drugItem.szItemID = szItemID;
+			drugItem.nMaxIdx = y - 1;
+			drugItem.nTotal = 0;
+			arrDrug.Add(drugItem);
+		}
+		else
+			bCheck = false;
+
+		rsl.MoveNext();
+	}
+
+	szDate.Empty();
+	szItemID.Empty();
+
+	int nColIdx = 1;
+	int nPage = 0;
+	int ktra;
+
+	for(int x = 1; x <= (m_array.GetSize()/nMaxDay)+1; x++)
+	{
+
+		if(nPage > 0)
+		{
+			if (rptDetail)
+			{
+				//MessageBox(_T("OK"));
+				rptDetail->SetPageBreak(true);
+			}
+			//rs.MoveFirst();
+		}
+
+		if(m_array.GetSize() < (nPage+1)*nMaxDay)
+		{
+			ktra = (int)m_array.GetSize();
+		}
+		else 
+		{
+			ktra = (nPage + 1)*nMaxDay;
+		}
+
+		rptDetail = rpt.AddDetail(rpt.GetGroupHeader(1));
+		CString szDay;
+		for (int i = nPage*nMaxDay; i < ktra; i++)
+		{
+			dc_cotngay = m_array[i];
+			szTemp.Format(_T("l%d"), nColIdx);
+			szDay.Format(_T("%s"), CDate::Convert(dc_cotngay.szDate,yyyymmdd,ddmmyyyy));
+			rptDetail->SetValue(szTemp, szDay.Left(5));
+			if (i == nPage * nMaxDay)
+				szStartDay = dc_cotngay.szDate;
+			if (i == ktra - 1)
+				szEndDay = dc_cotngay.szDate;
+			nColIdx++;
+		}
+
+		nColIdx = 1;
+		nItem = 1;
+		szOld.Empty();
+
+		szSQL.Format(_T(" SELECT distinct product_name as drugname,") \
+			        _T("    product_uomname as unit,") \
+					_T(" 	hpol_product_id as itemid, ") \
+					_T("	product_producttype as producttype") \
+					_T(" FROM hms_doc  ") \
+					_T(" LEFT JOIN hms_ipharmaorder ON(hpo_docno=hd_docno)") \
+					_T(" LEFT JOIN hms_ipharmaorderline ON(hpol_docno=hpo_docno and hpol_orderid=hpo_orderid)") \
+					_T(" LEFT JOIN hms_treatment_record ON(htr_docno=hpo_docno AND htr_idx=hpo_refidx) ") \
+					_T(" LEFT JOIN m_productitem_view ON(product_item_id=hpol_product_item_id) ") \
+					_T(" LEFT JOIN hms_fee_group ON(hfg_id=product_producttype) ") \
+					_T(" WHERE hpo_docno=%ld and hpo_orderstatus in('I','A') AND hpol_qtyissue > 0 ") \
+					_T(" 	and hpo_ordertype<>'M'") \
+					_T(" 	%s ") \
+					_T("    and trunc_date(hpo_orderdate) between to_date('%s', 'yyyy/mm/dd hh24:mi:ss') and to_date('%s', 'yyyy/mm/dd hh24:mi:ss')") \
+					_T(" ORDER BY producttype,drugname"),
+					pMF->m_nDocumentNo, szWhere, szStartDay, szEndDay);
+
+		rsd.ExecSQL(szSQL);		
+
+		while (!rsd.IsEOF())
+		{
+			rsd.GetValue(_T("itemid"), szItemID);
+
+			szSQL.Format(_T(" SELECT sum(hpol_qtyissue) as issueqty, ") \
+						_T(" 	trunc_date(hpo_orderdate) as orderdate, ") \
+						_T("	product_producttype as producttype") \
+						_T(" FROM hms_doc  ") \
+						_T(" LEFT JOIN hms_ipharmaorder ON(hpo_docno=hd_docno)") \
+						_T(" LEFT JOIN hms_ipharmaorderline ON(hpol_docno=hpo_docno and hpol_orderid=hpo_orderid)") \
+						_T(" LEFT JOIN hms_treatment_record ON(htr_docno=hpo_docno AND htr_idx=hpo_refidx) ") \
+						_T(" LEFT JOIN m_productitem_view ON(product_item_id=hpol_product_item_id) ") \
+						_T(" LEFT JOIN hms_fee_group ON(hfg_id=product_producttype) ") \
+						_T(" WHERE hpo_docno=%ld and hpo_orderstatus in('I','A') AND hpol_qtyissue > 0") \
+						_T(" 	and hpo_ordertype<>'M'") \
+						_T(" 	%s ") \
+						_T("    and trunc_date(hpo_orderdate) between to_date('%s', 'yyyy/mm/dd hh24:mi:ss') and to_date('%s', 'yyyy/mm/dd hh24:mi:ss')") \
+						_T("    and hpol_product_id='%s'") \
+						_T(" GROUP BY product_producttype,trunc_date(hpo_orderdate)") \
+						_T(" ORDER BY producttype,trunc_date(hpo_orderdate)"),
+						pMF->m_nDocumentNo, szWhere, szStartDay, szEndDay, szItemID);
+
+			/*if (x == 1 && nItem == 1)
+				_fmsg(_T("%s"), szSQL);*/
+
+			//_msg(_T("%s"), szSQL);
+
+			rs.ExecSQL(szSQL);
+
+			rptDetail = rpt.AddDetail();
+			tmpStr.Format(_T("%d"), nItem++);
+			rptDetail->SetValue(_T("Index"), tmpStr);	
+
+			rsd.GetValue(_T("drugname"), tmpStr);
+			rptDetail->SetValue(_T("DrugName"), tmpStr);
+
+			rsd.GetValue(_T("unit"), tmpStr);
+			rptDetail->SetValue(_T("Unit"), tmpStr);
+
+			while(!rs.IsEOF())
+			{
+				rs.GetValue(_T("orderdate"), tmpStr);
+
+				for (int z = 0; z < m_array.GetSize(); z++)
+				{
+					dc_cotngay = m_array[z];					
+					if(tmpStr == dc_cotngay.szDate)
+					{
+						nIndex = dc_cotngay.nIndex;
+						break;
+					}
+
+				}
+
+				if(nIndex > (nPage+1) * nMaxDay)
+				{
+					rs.MoveNext();
+					continue;
+				}
+
+				//Neu bn qua nMaxDay ngay thi tinh lai chi so cot
+				if (nPage > 0)
+				{
+					nIndex = nIndex - (nPage * nMaxDay);
+				}
+
+				rs.GetValue(_T("issueqty"), tmpStr);
+				grpCost += ToDouble(tmpStr);
+				szTemp.Format(_T("%d"), nIndex);
+				rptDetail->SetValue(szTemp, tmpStr);
+			
+				rs.MoveNext();
+			}
+
+			if(grpCost > 0)
+			{
+				for (int j = 0; j < arrDrug.GetSize(); j++)
+				{
+					drugItem = arrDrug[j];
+					if (drugItem.szItemID == szItemID)
+					{
+						drugItem.nTotal += grpCost;
+
+						if ((drugItem.nMaxIdx <= (nPage + 1) * nMaxDay) &&
+							(drugItem.nMaxIdx > nPage * nMaxDay))
+						{
+							/*if ((drugItem.nTotal - (drugItem.nTotal)) > 0)
+							{
+								tmpStr.Format(_T("%.3f"), drugItem.nTotal);
+							}
+							else
+								tmpStr.Format(_T("%.0f"), drugItem.nTotal);*/
+							tmpStr.Format(_T("%.3f"), drugItem.nTotal);
+							rptDetail->SetValue(_T("32"), tmpStr);
+						}
+
+						arrDrug.SetAt(j, drugItem);
+						break;
+					}
+				}
+				grpCost = 0;
+			}
+
+			rsd.MoveNext();
+		}
+		nPage++;
+	}
+
+	/*if(grpCost>0)
+	{
+		tmpStr.Format(_T("%d"),grpCost);
+		rptDetail->SetValue(_T("32"), tmpStr);
+		grpCost =0;
+	}*/
+
+	szSysDate = pMF->GetSysDate(); 
+	szDate.Format(rpt.GetReportFooter()->GetValue(_T("PrintDate")),szSysDate.Mid(8,2),szSysDate.Mid(5,2),szSysDate.Left(4));
+	rpt.GetReportFooter()->SetValue(_T("PrintDate"), szDate);
+
+	rpt.PrintPreview();
+}
+
+void CHMSDrugInformation::OnResizeLayout()
+{
+//	AddLayoutControls(WS_REPOSX|WS_REPOSY, 100, 100, 0, 0,&m_wndDrugLog,&m_wndPrescription,NULL);
+	AddLayoutControls(WS_RESIZEX|WS_RESIZEY, 0, 0, 100, 100,&m_wndDrugInformation,&m_wndList,NULL);
+	AddLayoutControls(WS_REPOSY, 0, 100, 0, 0,&m_wndDepartmentDetail,&m_wndReturnedDrugs,NULL);
+
+}
+void CHMSDrugInformation::OnReturnedDrugsSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	OnListLoadData();
+}

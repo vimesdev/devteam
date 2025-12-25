@@ -1,0 +1,53 @@
+// ChildView.cpp : implementation of the CIVFStorageView class
+//
+
+#include "stdafx.h"
+#include "VIMESIVFMangr.h"
+#include "IVFStorageView.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
+
+// CIVFStorageView
+
+CIVFStorageView::CIVFStorageView()
+{
+}
+
+CIVFStorageView::~CIVFStorageView()
+{
+}
+
+
+BEGIN_MESSAGE_MAP(CIVFStorageView, CScrollView)
+	ON_WM_PAINT()
+END_MESSAGE_MAP()
+
+
+
+// CIVFStorageView message handlers
+
+BOOL CIVFStorageView::PreCreateWindow(CREATESTRUCT& cs) 
+{
+	if (!CScrollView::PreCreateWindow(cs))
+		return FALSE;
+
+	cs.dwExStyle |= WS_EX_CLIENTEDGE;
+	cs.style &= ~WS_BORDER;
+	cs.lpszClass = AfxRegisterWndClass(CS_HREDRAW|CS_VREDRAW|CS_DBLCLKS, 
+		::LoadCursor(NULL, IDC_ARROW), reinterpret_cast<HBRUSH>(COLOR_WINDOW+1), NULL);
+
+	return TRUE;
+}
+
+void CIVFStorageView::OnPaint() 
+{
+	CPaintDC dc(this); // device context for painting
+	
+	// TODO: Add your message handler code here
+	
+	// Do not call CWnd::OnPaint() for painting messages
+}
+

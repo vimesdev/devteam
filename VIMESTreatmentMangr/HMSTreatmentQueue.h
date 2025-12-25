@@ -1,0 +1,228 @@
+#ifndef HMSTREATMENTQUEUE_H
+#define HMSTREATMENTQUEUE_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright(C) Viet Nam Medical Software Join Stock Company. 2005-2010. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hay Hoang Van, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2010.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+///////////////////////////////////////////
+//DANH SACH BENH NHAN
+///////////////////////////////////////////
+
+class CHMSTreatmentQueue : public CGuiView
+{
+
+
+protected:
+public:
+	CGuiCheckBox	m_wndCancer;
+	BOOL			m_bCancer;
+	void			OnCancerSelect();
+	CGuiGroupBox	m_wndStatus;
+	CGuiGroupBox	m_wndSearchInformation;
+	CGuiGroupBox	m_wndPatientListGroupBox;
+	CGuiRadioButton	m_wndAdmission;
+	CGuiRadioButton	m_wndTreating;
+	CGuiRadioButton	m_wndTransfer;
+	CGuiRadioButton	m_wndDischarged;
+	CGuiLabel		m_wndFromDateLabel;
+	CGuiLabel		m_wndToDateLabel;
+	CGuiDateCtrl	m_wndFromDate;
+	CGuiDateCtrl	m_wndToDate;
+	CGuiLabel		m_wndObjectLabel;
+	CGuiComboBox	m_wndObject;
+
+	CGuiCheckBox	m_wndOutpatient;
+	CGuiCheckBox	m_wndWaitingForPayment;
+	CGuiCheckBox	m_wndCombinedTreatment;
+	CGuiCheckBox	m_wndSendingTreatment;
+	CGuiCheckBox	m_wndExaminationSurgery;
+
+	CGuiLabel		m_wndRecordNoLabel;
+	CGuiTextCtrl	m_wndRecordNo;
+	CGuiLabel		m_wndDocumentNoLabel;
+	CGuiNumberCtrl	m_wndDocumentNo;
+	CGuiLabel		m_wndPatientNameLabel;
+	CGuiTextCtrl	m_wndPatientName;
+	CGuiButton		m_wndRefreh;
+	CGuiListCtrl	m_wndPatientList;
+	CGuiLabel		m_wndDepartmentLabel;
+	CGuiComboBox	m_wndDepartment;
+	CGuiCheckBox	m_wndDachidinhxn;
+	CGuiCheckBox	m_wndChuachidinhxn;
+	CGuiComboBox	m_wndPhanloaiUngthu;
+
+	CGuiLabel		m_wndTongluotdieutrilabel;
+	CGuiNumberCtrl	m_wndn_total_Index;
+	CGuiLabel		m_wndTongtienlabel;
+	CGuiNumberCtrl	m_wndn_total_tongtien;
+	CGuiLabel		m_wndTongtamguilabel;
+	CGuiNumberCtrl	m_wndn_total_tongtamgui;
+	CGuiLabel		m_wndTongtien_datt_label;
+	CGuiNumberCtrl	m_wndn_total_tongtien_datt;
+	CGuiLabel		m_wndTongtien_chuatt_label;
+	CGuiNumberCtrl	m_wndn_total_tongtien_chuatt;
+
+	CGuiLabel		m_wndLoaidieutriLabel;
+	CGuiComboBox	m_wndLoaidieutri;
+	CGuiCheckBox	m_wndDuketqua;
+	CGuiCheckBox	m_wndDu1phanketqua;
+	CGuiNumberCtrl	m_wndTotalNumber;
+	CGuiLabel		m_wndCICLabel;
+	CGuiTextCtrl	m_wndCIC;
+
+	long	m_nTotalNumber;
+	int		OnTotalNumberCheckValue();
+	BOOL	m_bDuketqua;
+	BOOL	m_bDu1phanketqua;
+
+	int		m_nStatus;
+	CString	m_szFromDate;
+	CString	m_szToDate;
+	CString	m_szObjectKey;
+	CString	m_szDepartmentKey;
+	CString	m_szLoaidieutriKey;
+
+	BOOL	m_bOutpatient;
+	BOOL	m_bWaitingForPayment;
+	BOOL	m_bCombinedTreatment;
+	BOOL	m_bSendingTreatment;
+	BOOL	m_bExaminationSurgery;
+
+	CString	m_szRecordNo;
+	long	m_nDocumentNo;
+	CString	m_szPatientName;
+	CString m_szDischargeDate;
+	CString m_szSex;
+	CString m_szTreatNo;
+	CString	m_szPhanloaiUngthuKey;
+	CString	m_szCIC;
+
+	void			OnAdmissionSelect();
+	void			OnTreatingSelect();
+	void			OnTransferSelect();
+	void			OnDischargedSelect();
+	int			OnPatientListAdmission();
+	int			OnDeleteMistakeTransferDept();
+	BOOL	m_bDachidinhxn;
+	BOOL	m_bChuachidinhxn;
+
+	long	m_nn_total_Index;
+	double	m_nn_total_tongtien;
+	double	m_nn_total_tongtamgui;
+	double	m_nn_total_tongtien_datt;
+	double	m_nn_total_tongtien_chuatt;
+
+	int			Onn_total_IndexCheckValue();
+	int			Onn_total_tongtienCheckValue();
+	int			Onn_total_tongtamguiCheckValue();
+	int			Onn_total_tongtien_dattCheckValue();
+	int			Onn_total_tongtien_chuattCheckValue();
+	int			OnCurrentZoneCheckValue();
+	long			OnPhanloaiUngthuLoadData();
+	void			OnPhanloaiUngthuSelendok();
+	void			OnDuketquaSelect();
+	void			OnDu1phanketquaSelect();
+
+	void OnPhanloaiUngthuSelectChange(int nOldItemSel, int nNewItemSel);
+
+	//void			OnFromDateChange(); 
+	//void			OnFromDateSetfocus(); 
+	//void			OnFromDateKillfocus(); 
+	int			OnFromDateCheckValue();
+	//void			OnToDateChange(); 
+	//void			OnToDateSetfocus(); 
+	//void			OnToDateKillfocus(); 
+	int			OnToDateCheckValue();
+	void			OnObjectSelectChange(int nOldItemSel, int nNewItemSel);
+	void			OnObjectSelendok();
+	//void			OnObjectSetfocus(); 
+	//void			OnObjectKillfocus(); 
+	long			OnObjectLoadData();
+	//void			OnObjectAddNew(); 
+
+
+	void			OnDepartmentSelectChange(int nOldItemSel, int nNewItemSel);
+	void			OnDepartmentSelendok();
+	//void			OnDepartmentSetfocus(); 
+	//void			OnDepartmentKillfocus(); 
+	long			OnDepartmentLoadData();
+
+	long			OnLoaidieutriLoadData();
+	void			OnLoaidieutriSelendok();
+
+	void			OnOutpatientSelect();
+	void			OnWaitingForPaymentSelect();
+	void			OnCombinedTreatmentSelect();
+	void			OnSendingTreatmentSelect();
+	void			OnExaminationSurgerySelect();
+	//void			OnRecordNoChange(); 
+	//void			OnRecordNoSetfocus(); 
+	//void			OnRecordNoKillfocus(); 
+	int			OnRecordNoCheckValue();
+	//void			OnDocumentNoChange(); 
+	//void			OnDocumentNoSetfocus(); 
+	//void			OnDocumentNoKillfocus(); 
+	int			OnDocumentNoCheckValue();
+	//void			OnPatientNameChange(); 
+	//void			OnPatientNameSetfocus(); 
+	//void			OnPatientNameKillfocus(); 
+	int			OnPatientNameCheckValue();
+	void			OnRefrehSelect();
+	long			OnPatientListLoadData();
+	void			OnPatientListSelectChange(int nOldItem, int nNewItem);
+	void			OnPatientListDblClick();
+	int			OnPatientListDeleteItem();
+	int			OnDebriefingDischarge();
+	int			OnUpdateRelativeInfo();
+	void			OnDachidinhxnSelect();
+	void			OnChuachidinhxnSelect();
+	void			OnDeptNameRefresh(CString szDeptName);
+	CHMSTreatmentQueue();
+	~CHMSTreatmentQueue();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddHMSTreatmentQueue();
+	int OnEditHMSTreatmentQueue();
+	int OnDeleteHMSTreatmentQueue();
+	int OnSaveHMSTreatmentQueue();
+	int OnCancelHMSTreatmentQueue();
+	int OnHMSTreatmentQueueListLoadData();
+	int OnAdmissionRegistration();
+	int OnCancelClinicalRecord();
+	int OnCombinedTreatMovement();
+	int	OnCreateOutpatientRecord();
+	void OnGiveBirth();
+	void OnResizeLayout();
+	int			OnCICCheckValue(); 
+
+};
+#endif

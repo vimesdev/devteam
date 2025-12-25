@@ -1,0 +1,841 @@
+#include "HMSHFPatientFee.h"
+#include "MainFrm.h"
+/*static void _OnDocumentNoChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnDocumentNoChange();
+} */
+/*static void _OnDocumentNoSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnDocumentNoSetfocus();} */ 
+/*static void _OnDocumentNoKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnDocumentNoKillfocus();
+} */
+static int _OnDocumentNoCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnDocumentNoCheckValue();
+} 
+/*static void _OnPIDChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnPIDChange();
+} */
+/*static void _OnPIDSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnPIDSetfocus();} */ 
+/*static void _OnPIDKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnPIDKillfocus();
+} */
+static int _OnPIDCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnPIDCheckValue();
+} 
+/*static void _OnPatientNameChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnPatientNameChange();
+} */
+/*static void _OnPatientNameSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnPatientNameSetfocus();} */ 
+/*static void _OnPatientNameKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnPatientNameKillfocus();
+} */
+static int _OnPatientNameCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnPatientNameCheckValue();
+} 
+/*static void _OnAgeChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnAgeChange();
+} */
+/*static void _OnAgeSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnAgeSetfocus();} */ 
+/*static void _OnAgeKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnAgeKillfocus();
+} */
+static int _OnAgeCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnAgeCheckValue();
+} 
+/*static void _OnSexChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnSexChange();
+} */
+/*static void _OnSexSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnSexSetfocus();} */ 
+/*static void _OnSexKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnSexKillfocus();
+} */
+static int _OnSexCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnSexCheckValue();
+} 
+/*static void _OnAddressChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnAddressChange();
+} */
+/*static void _OnAddressSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnAddressSetfocus();} */ 
+/*static void _OnAddressKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnAddressKillfocus();
+} */
+static int _OnAddressCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnAddressCheckValue();
+} 
+/*static void _OnWorkingPlaceChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnWorkingPlaceChange();
+} */
+/*static void _OnWorkingPlaceSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnWorkingPlaceSetfocus();} */ 
+/*static void _OnWorkingPlaceKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnWorkingPlaceKillfocus();
+} */
+static int _OnWorkingPlaceCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnWorkingPlaceCheckValue();
+} 
+/*static void _OnObjectChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnObjectChange();
+} */
+/*static void _OnObjectSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnObjectSetfocus();} */ 
+/*static void _OnObjectKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnObjectKillfocus();
+} */
+static int _OnObjectCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnObjectCheckValue();
+} 
+/*static void _OnCardNoChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardNoChange();
+} */
+/*static void _OnCardNoSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardNoSetfocus();} */ 
+/*static void _OnCardNoKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardNoKillfocus();
+} */
+static int _OnCardNoCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnCardNoCheckValue();
+} 
+/*static void _OnCardCodeChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardCodeChange();
+} */
+/*static void _OnCardCodeSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardCodeSetfocus();} */ 
+/*static void _OnCardCodeKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardCodeKillfocus();
+} */
+static int _OnCardCodeCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnCardCodeCheckValue();
+} 
+/*static void _OnCardDiscountChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardDiscountChange();
+} */
+/*static void _OnCardDiscountSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardDiscountSetfocus();} */ 
+/*static void _OnCardDiscountKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnCardDiscountKillfocus();
+} */
+static int _OnCardDiscountCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnCardDiscountCheckValue();
+} 
+/*static void _OnRegistrationDateChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnRegistrationDateChange();
+} */
+/*static void _OnRegistrationDateSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnRegistrationDateSetfocus();} */ 
+/*static void _OnRegistrationDateKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnRegistrationDateKillfocus();
+} */
+static int _OnRegistrationDateCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnRegistrationDateCheckValue();
+} 
+/*static void _OnExpiryDateChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnExpiryDateChange();
+} */
+/*static void _OnExpiryDateSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnExpiryDateSetfocus();} */ 
+/*static void _OnExpiryDateKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnExpiryDateKillfocus();
+} */
+static int _OnExpiryDateCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnExpiryDateCheckValue();
+} 
+/*static void _OnRegistrationPlaceChangeFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnRegistrationPlaceChange();
+} */
+/*static void _OnRegistrationPlaceSetfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnRegistrationPlaceSetfocus();} */ 
+/*static void _OnRegistrationPlaceKillfocusFnc(CWnd *pWnd){
+	((CHMSHFPatientFee *)pWnd)->OnRegistrationPlaceKillfocus();
+} */
+static int _OnRegistrationPlaceCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee *)pWnd)->OnRegistrationPlaceCheckValue();
+} 
+static long _OnTreatmentListLoadDataFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee*)pWnd)->OnTreatmentListLoadData();
+} 
+static void _OnTreatmentListDblClickFnc(CWnd *pWnd){
+	((CHMSHFPatientFee*)pWnd)->OnTreatmentListDblClick();
+} 
+static void _OnTreatmentListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CHMSHFPatientFee*)pWnd)->OnTreatmentListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnTreatmentListDeleteItemFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnTreatmentListDeleteItem();
+} 
+static long _OnInvoiceListLoadDataFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee*)pWnd)->OnInvoiceListLoadData();
+} 
+static void _OnInvoiceListDblClickFnc(CWnd *pWnd){
+	((CHMSHFPatientFee*)pWnd)->OnInvoiceListDblClick();
+} 
+static void _OnInvoiceListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CHMSHFPatientFee*)pWnd)->OnInvoiceListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnInvoiceListDeleteItemFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnInvoiceListDeleteItem();
+} 
+static long _OnFeeListLoadDataFnc(CWnd *pWnd){
+	return ((CHMSHFPatientFee*)pWnd)->OnFeeListLoadData();
+} 
+static void _OnFeeListDblClickFnc(CWnd *pWnd){
+	((CHMSHFPatientFee*)pWnd)->OnFeeListDblClick();
+} 
+static void _OnFeeListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CHMSHFPatientFee*)pWnd)->OnFeeListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnFeeListDeleteItemFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnFeeListDeleteItem();
+} 
+static void _OnBillingSelectFnc(CWnd *pWnd){
+	CHMSHFPatientFee *pVw = (CHMSHFPatientFee *)pWnd;
+	pVw->OnBillingSelect();
+} 
+static void _OnApprovalSelectFnc(CWnd *pWnd){
+	CHMSHFPatientFee *pVw = (CHMSHFPatientFee *)pWnd;
+	pVw->OnApprovalSelect();
+} 
+static void _OnPrintSelectFnc(CWnd *pWnd){
+	CHMSHFPatientFee *pVw = (CHMSHFPatientFee *)pWnd;
+	pVw->OnPrintSelect();
+} 
+static int _OnAddHMSHFPatientFeeFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnAddHMSHFPatientFee();
+} 
+static int _OnEditHMSHFPatientFeeFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnEditHMSHFPatientFee();
+} 
+static int _OnDeleteHMSHFPatientFeeFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnDeleteHMSHFPatientFee();
+} 
+static int _OnSaveHMSHFPatientFeeFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnSaveHMSHFPatientFee();
+} 
+static int _OnCancelHMSHFPatientFeeFnc(CWnd *pWnd){
+	 return ((CHMSHFPatientFee*)pWnd)->OnCancelHMSHFPatientFee();
+} 
+CHMSHFPatientFee::CHMSHFPatientFee(){
+
+	m_nDlgWidth = 1025;
+	m_nDlgHeight = 635;
+	SetDefaultValues();
+}
+CHMSHFPatientFee::~CHMSHFPatientFee(){
+}
+void CHMSHFPatientFee::OnCreateComponents(){
+	m_wndPatientInformation.Create(this, _T("Patient Information"), 5, 5, 375, 300);
+	m_wndBillingInformation.Create(this, _T("Billing Information"), 5, 435, 375, 595);
+	m_wndTreatmentInformation.Create(this, _T("Treatment Information"), 5, 305, 375, 430);
+	m_wndGeneralCost.Create(this, _T("General Cost"), 380, 5, 1015, 625);
+	m_wndDocumentNoLabel.Create(this, _T("Document No"), 10, 30, 110, 55);
+	m_wndDocumentNo.Create(this,115, 30, 200, 55); 
+	m_wndPIDLabel.Create(this, _T("PID"), 205, 30, 285, 55);
+	m_wndPID.Create(this,290, 30, 370, 55); 
+	m_wndPatientNameLabel.Create(this, _T("Patient Name"), 10, 60, 110, 85);
+	m_wndPatientName.Create(this,115, 60, 370, 85); 
+	m_wndAgeLabel.Create(this, _T("Age"), 10, 90, 110, 115);
+	m_wndAge.Create(this,115, 90, 200, 115); 
+	m_wndSexLabel.Create(this, _T("Sex"), 205, 90, 285, 115);
+	m_wndSex.Create(this,290, 90, 370, 115); 
+	m_wndAddressLabel.Create(this, _T("Address"), 10, 120, 110, 145);
+	m_wndAddress.Create(this,115, 120, 370, 145); 
+	m_wndWorkingPlaceLabel.Create(this, _T("Working Place"), 10, 150, 110, 175);
+	m_wndWorkingPlace.Create(this,115, 150, 370, 175); 
+	m_wndObjectLabel.Create(this, _T("Object"), 10, 180, 110, 205);
+	m_wndObject.Create(this,115, 180, 370, 205); 
+	m_wndCardNoLabel.Create(this, _T("Card No"), 10, 210, 110, 235);
+	m_wndCardNo.Create(this,115, 210, 285, 235); 
+	m_wndCardCode.Create(this,290, 210, 330, 235); 
+	m_wndCardDiscount.Create(this,335, 210, 370, 235); 
+	m_wndRegistrationDateLabel.Create(this, _T("Reg.Date"), 10, 240, 110, 265);
+	m_wndRegistrationDate.Create(this,115, 240, 200, 265); 
+	m_wndExpiryDateLabel.Create(this, _T("Exp.Date"), 205, 240, 285, 265);
+	m_wndExpiryDate.Create(this,290, 240, 370, 265); 
+	m_wndRegistrationPlaceLabel.Create(this, _T("Reg.Place"), 10, 270, 110, 295);
+	m_wndRegistrationPlace.Create(this,115, 270, 370, 295); 
+	m_wndTreatmentList.Create(this,10, 330, 370, 425); 
+	m_wndInvoiceList.Create(this,10, 460, 370, 590); 
+	m_wndFeeList.Create(this,385, 29, 1010, 619); 
+	m_wndBilling.Create(this, _T("&Billing"), 65, 600, 165, 625);
+	m_wndApproval.Create(this, _T("&Approval"), 170, 600, 270, 625);
+	m_wndPrint.Create(this, _T("&Print"), 275, 600, 375, 625);
+
+}
+void CHMSHFPatientFee::OnInitializeComponents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	m_wndDocumentNo.SetLimitText(16);
+	m_wndDocumentNo.SetCheckValue(true);
+	m_wndPID.SetLimitText(16);
+	m_wndPID.SetCheckValue(true);
+	m_wndPatientName.SetLimitText(35);
+	m_wndPatientName.SetCheckValue(true);
+	m_wndAge.SetLimitText(35);
+	m_wndAge.SetCheckValue(true);
+	m_wndSex.SetLimitText(35);
+	m_wndSex.SetCheckValue(true);
+	m_wndAddress.SetLimitText(254);
+	m_wndAddress.SetCheckValue(true);
+	m_wndWorkingPlace.SetLimitText(35);
+	m_wndWorkingPlace.SetCheckValue(true);
+	m_wndObject.SetLimitText(35);
+	m_wndObject.SetCheckValue(true);
+	m_wndCardNo.SetLimitText(20);
+	m_wndCardNo.SetCheckValue(true);
+	m_wndCardCode.SetLimitText(35);
+	m_wndCardCode.SetCheckValue(true);
+	m_wndCardDiscount.SetLimitText(35);
+	m_wndCardDiscount.SetCheckValue(true);
+	m_wndRegistrationDate.SetMax(CDate(pMF->GetSysDate()));
+	m_wndRegistrationDate.SetCheckValue(true);
+	m_wndExpiryDate.SetMax(CDate(pMF->GetSysDate()));
+	m_wndExpiryDate.SetCheckValue(true);
+	m_wndRegistrationPlace.SetLimitText(35);
+	m_wndRegistrationPlace.SetCheckValue(true);
+
+
+	m_wndTreatmentList.InsertColumn(0, _T("Dept No"), CFMT_TEXT, 50);
+	m_wndTreatmentList.InsertColumn(1, _T("From Date"), CFMT_DATE, 80);
+	m_wndTreatmentList.InsertColumn(2, _T("To Date"), CFMT_DATE, 80);
+	m_wndTreatmentList.InsertColumn(3, _T("Status"), CFMT_TEXT, 120);
+
+
+	m_wndInvoiceList.InsertColumn(0, _T("Invoice No"), CFMT_TEXT, 100);
+	m_wndInvoiceList.InsertColumn(1, _T("Invoice Date"), CFMT_DATETIME, 120);
+	m_wndInvoiceList.InsertColumn(2, _T("Description"), CFMT_TEXT, 170);
+	m_wndInvoiceList.InsertColumn(3, _T("Clerk"), CFMT_TEXT, 50);
+
+
+	m_wndFeeList.InsertColumn(0, _T("Idx"), CFMT_TEXT, 30);
+	m_wndFeeList.InsertColumn(1, _T("Description"), CFMT_TEXT, 200);
+	m_wndFeeList.InsertColumn(2, _T("Cost"), CFMT_NUMBER, 70);
+	m_wndFeeList.InsertColumn(3, _T("Discount"), CFMT_NUMBER, 70);
+	m_wndFeeList.InsertColumn(4, _T("Insurance"), CFMT_NUMBER, 70);
+	m_wndFeeList.InsertColumn(5, _T("Paid"), CFMT_NUMBER, 70);
+	m_wndFeeList.InsertColumn(6, _T("Unpaid"), CFMT_NUMBER, 70);
+
+}
+void CHMSHFPatientFee::OnSetWindowEvents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	//m_wndDocumentNo.SetEvent(WE_CHANGE, _OnDocumentNoChangeFnc);
+	//m_wndDocumentNo.SetEvent(WE_SETFOCUS, _OnDocumentNoSetfocusFnc);
+	//m_wndDocumentNo.SetEvent(WE_KILLFOCUS, _OnDocumentNoKillfocusFnc);
+	m_wndDocumentNo.SetEvent(WE_CHECKVALUE, _OnDocumentNoCheckValueFnc);
+	//m_wndPID.SetEvent(WE_CHANGE, _OnPIDChangeFnc);
+	//m_wndPID.SetEvent(WE_SETFOCUS, _OnPIDSetfocusFnc);
+	//m_wndPID.SetEvent(WE_KILLFOCUS, _OnPIDKillfocusFnc);
+	m_wndPID.SetEvent(WE_CHECKVALUE, _OnPIDCheckValueFnc);
+	//m_wndPatientName.SetEvent(WE_CHANGE, _OnPatientNameChangeFnc);
+	//m_wndPatientName.SetEvent(WE_SETFOCUS, _OnPatientNameSetfocusFnc);
+	//m_wndPatientName.SetEvent(WE_KILLFOCUS, _OnPatientNameKillfocusFnc);
+	m_wndPatientName.SetEvent(WE_CHECKVALUE, _OnPatientNameCheckValueFnc);
+	//m_wndAge.SetEvent(WE_CHANGE, _OnAgeChangeFnc);
+	//m_wndAge.SetEvent(WE_SETFOCUS, _OnAgeSetfocusFnc);
+	//m_wndAge.SetEvent(WE_KILLFOCUS, _OnAgeKillfocusFnc);
+	m_wndAge.SetEvent(WE_CHECKVALUE, _OnAgeCheckValueFnc);
+	//m_wndSex.SetEvent(WE_CHANGE, _OnSexChangeFnc);
+	//m_wndSex.SetEvent(WE_SETFOCUS, _OnSexSetfocusFnc);
+	//m_wndSex.SetEvent(WE_KILLFOCUS, _OnSexKillfocusFnc);
+	m_wndSex.SetEvent(WE_CHECKVALUE, _OnSexCheckValueFnc);
+	//m_wndAddress.SetEvent(WE_CHANGE, _OnAddressChangeFnc);
+	//m_wndAddress.SetEvent(WE_SETFOCUS, _OnAddressSetfocusFnc);
+	//m_wndAddress.SetEvent(WE_KILLFOCUS, _OnAddressKillfocusFnc);
+	m_wndAddress.SetEvent(WE_CHECKVALUE, _OnAddressCheckValueFnc);
+	//m_wndWorkingPlace.SetEvent(WE_CHANGE, _OnWorkingPlaceChangeFnc);
+	//m_wndWorkingPlace.SetEvent(WE_SETFOCUS, _OnWorkingPlaceSetfocusFnc);
+	//m_wndWorkingPlace.SetEvent(WE_KILLFOCUS, _OnWorkingPlaceKillfocusFnc);
+	m_wndWorkingPlace.SetEvent(WE_CHECKVALUE, _OnWorkingPlaceCheckValueFnc);
+	//m_wndObject.SetEvent(WE_CHANGE, _OnObjectChangeFnc);
+	//m_wndObject.SetEvent(WE_SETFOCUS, _OnObjectSetfocusFnc);
+	//m_wndObject.SetEvent(WE_KILLFOCUS, _OnObjectKillfocusFnc);
+	m_wndObject.SetEvent(WE_CHECKVALUE, _OnObjectCheckValueFnc);
+	//m_wndCardNo.SetEvent(WE_CHANGE, _OnCardNoChangeFnc);
+	//m_wndCardNo.SetEvent(WE_SETFOCUS, _OnCardNoSetfocusFnc);
+	//m_wndCardNo.SetEvent(WE_KILLFOCUS, _OnCardNoKillfocusFnc);
+	m_wndCardNo.SetEvent(WE_CHECKVALUE, _OnCardNoCheckValueFnc);
+	//m_wndCardCode.SetEvent(WE_CHANGE, _OnCardCodeChangeFnc);
+	//m_wndCardCode.SetEvent(WE_SETFOCUS, _OnCardCodeSetfocusFnc);
+	//m_wndCardCode.SetEvent(WE_KILLFOCUS, _OnCardCodeKillfocusFnc);
+	m_wndCardCode.SetEvent(WE_CHECKVALUE, _OnCardCodeCheckValueFnc);
+	//m_wndCardDiscount.SetEvent(WE_CHANGE, _OnCardDiscountChangeFnc);
+	//m_wndCardDiscount.SetEvent(WE_SETFOCUS, _OnCardDiscountSetfocusFnc);
+	//m_wndCardDiscount.SetEvent(WE_KILLFOCUS, _OnCardDiscountKillfocusFnc);
+	m_wndCardDiscount.SetEvent(WE_CHECKVALUE, _OnCardDiscountCheckValueFnc);
+	//m_wndRegistrationDate.SetEvent(WE_CHANGE, _OnRegistrationDateChangeFnc);
+	//m_wndRegistrationDate.SetEvent(WE_SETFOCUS, _OnRegistrationDateSetfocusFnc);
+	//m_wndRegistrationDate.SetEvent(WE_KILLFOCUS, _OnRegistrationDateKillfocusFnc);
+	m_wndRegistrationDate.SetEvent(WE_CHECKVALUE, _OnRegistrationDateCheckValueFnc);
+	//m_wndExpiryDate.SetEvent(WE_CHANGE, _OnExpiryDateChangeFnc);
+	//m_wndExpiryDate.SetEvent(WE_SETFOCUS, _OnExpiryDateSetfocusFnc);
+	//m_wndExpiryDate.SetEvent(WE_KILLFOCUS, _OnExpiryDateKillfocusFnc);
+	m_wndExpiryDate.SetEvent(WE_CHECKVALUE, _OnExpiryDateCheckValueFnc);
+	//m_wndRegistrationPlace.SetEvent(WE_CHANGE, _OnRegistrationPlaceChangeFnc);
+	//m_wndRegistrationPlace.SetEvent(WE_SETFOCUS, _OnRegistrationPlaceSetfocusFnc);
+	//m_wndRegistrationPlace.SetEvent(WE_KILLFOCUS, _OnRegistrationPlaceKillfocusFnc);
+	m_wndRegistrationPlace.SetEvent(WE_CHECKVALUE, _OnRegistrationPlaceCheckValueFnc);
+	m_wndTreatmentList.SetEvent(WE_SELCHANGE, _OnTreatmentListSelectChangeFnc);
+	m_wndTreatmentList.SetEvent(WE_LOADDATA, _OnTreatmentListLoadDataFnc);
+	m_wndTreatmentList.SetEvent(WE_DBLCLICK, _OnTreatmentListDblClickFnc);
+	m_wndTreatmentList.AddEvent(1, _T("Delete"), _OnTreatmentListDeleteItemFnc, 0, VK_DELETE, 0);
+	m_wndInvoiceList.SetEvent(WE_SELCHANGE, _OnInvoiceListSelectChangeFnc);
+	m_wndInvoiceList.SetEvent(WE_LOADDATA, _OnInvoiceListLoadDataFnc);
+	m_wndInvoiceList.SetEvent(WE_DBLCLICK, _OnInvoiceListDblClickFnc);
+	m_wndInvoiceList.AddEvent(1, _T("Delete"), _OnInvoiceListDeleteItemFnc, 0, VK_DELETE, 0);
+	m_wndFeeList.SetEvent(WE_SELCHANGE, _OnFeeListSelectChangeFnc);
+	m_wndFeeList.SetEvent(WE_LOADDATA, _OnFeeListLoadDataFnc);
+	m_wndFeeList.SetEvent(WE_DBLCLICK, _OnFeeListDblClickFnc);
+	m_wndFeeList.AddEvent(1, _T("Delete"), _OnFeeListDeleteItemFnc, 0, VK_DELETE, 0);
+	m_wndBilling.SetEvent(WE_CLICK, _OnBillingSelectFnc);
+	m_wndApproval.SetEvent(WE_CLICK, _OnApprovalSelectFnc);
+	m_wndPrint.SetEvent(WE_CLICK, _OnPrintSelectFnc);
+	AddLayoutControl(&m_wndBillingInformation, WS_REPOSY|WS_RESIZEY, 100, 50, 100, 50);
+	AddLayoutControl(&m_wndTreatmentInformation, WS_RESIZEY, 100, 100, 100, 50);
+	AddLayoutControl(&m_wndGeneralCost, WS_RESIZEX|WS_RESIZEY, 100, 100, 100, 100);
+	AddLayoutControl(&m_wndTreatmentList, WS_RESIZEY, 100, 100, 100, 50);
+	AddLayoutControl(&m_wndInvoiceList, WS_REPOSY|WS_RESIZEY, 100, 50, 100, 50);
+	AddLayoutControl(&m_wndFeeList, WS_RESIZEX|WS_RESIZEY, 100, 100, 100, 100);
+	AddLayoutControl(&m_wndBilling, WS_REPOSY, 100, 100, 100, 100);
+	AddLayoutControl(&m_wndApproval, WS_REPOSY, 100, 100, 100, 100);
+	AddLayoutControl(&m_wndPrint, WS_REPOSY, 100, 100, 100, 100);
+	AddEvent(1, _T("Add	Ctrl+A"), _OnAddHMSHFPatientFeeFnc, 0, 'A', VK_CONTROL);
+	AddEvent(2, _T("Edit	Ctrl+E"), _OnEditHMSHFPatientFeeFnc, 0, 'E', VK_CONTROL);
+	AddEvent(3, _T("Delete	Ctrl+D"), _OnDeleteHMSHFPatientFeeFnc, 0, 'D', VK_CONTROL);
+	AddEvent(4, _T("Save	Ctrl+S"), _OnSaveHMSHFPatientFeeFnc, 0, 'S', VK_CONTROL);
+	AddEvent(0, _T("-"));
+	AddEvent(5, _T("Cancel	Ctrl+T"), _OnCancelHMSHFPatientFeeFnc, 0, 'T', VK_CONTROL);
+	SetMode(VM_NONE)
+
+}
+void CHMSHFPatientFee::OnDoDataExchange(CDataExchange* pDX){
+	DDX_Text(pDX, m_wndDocumentNo.GetDlgCtrlID(), m_nDocumentNo);
+	DDX_Text(pDX, m_wndPID.GetDlgCtrlID(), m_nPID);
+	DDX_Text(pDX, m_wndPatientName.GetDlgCtrlID(), m_szPatientName);
+	DDX_Text(pDX, m_wndAge.GetDlgCtrlID(), m_szAge);
+	DDX_Text(pDX, m_wndSex.GetDlgCtrlID(), m_szSex);
+	DDX_Text(pDX, m_wndAddress.GetDlgCtrlID(), m_szAddress);
+	DDX_Text(pDX, m_wndWorkingPlace.GetDlgCtrlID(), m_szWorkingPlace);
+	DDX_Text(pDX, m_wndObject.GetDlgCtrlID(), m_szObject);
+	DDX_Text(pDX, m_wndCardNo.GetDlgCtrlID(), m_szCardNo);
+	DDX_Text(pDX, m_wndCardCode.GetDlgCtrlID(), m_szCardCode);
+	DDX_Text(pDX, m_wndCardDiscount.GetDlgCtrlID(), m_szCardDiscount);
+	DDX_TextEx(pDX, m_wndRegistrationDate.GetDlgCtrlID(), m_szRegistrationDate);
+	DDX_TextEx(pDX, m_wndExpiryDate.GetDlgCtrlID(), m_szExpiryDate);
+	DDX_Text(pDX, m_wndRegistrationPlace.GetDlgCtrlID(), m_szRegistrationPlace);
+
+}
+void CHMSHFPatientFee::GetDataToScreen(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+
+}
+void CHMSHFPatientFee::GetScreenToData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+
+}
+void CHMSHFPatientFee::SetDefaultValues(){
+
+	m_nDocumentNo=0;
+	m_nPID=0;
+	m_szPatientName.Empty();
+	m_szAge.Empty();
+	m_szSex.Empty();
+	m_szAddress.Empty();
+	m_szWorkingPlace.Empty();
+	m_szObject.Empty();
+	m_szCardNo.Empty();
+	m_szCardCode.Empty();
+	m_szCardDiscount.Empty();
+	m_szRegistrationDate.Empty();
+	m_szExpiryDate.Empty();
+	m_szRegistrationPlace.Empty();
+
+}
+int CHMSHFPatientFee::SetMode(int nMode){
+ 		int nOldMode = GetMode(); 
+ 		CGuiView::SetMode(nMode); 
+ 		CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 		CString szSQL; 
+ 		CRecord rs(&pMF->m_db); 
+  		switch(nMode){ 
+ 		case VM_ADD: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			break; 
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(FALSE, 3, 4, -1); 
+ 			break; 
+ 		case VM_NONE: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(TRUE, 0, 6, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		}; 
+ 		UpdateData(FALSE); 
+ 		return nOldMode; 
+}
+/*void CHMSHFPatientFee::OnDocumentNoChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnDocumentNoSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnDocumentNoKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnDocumentNoCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnPIDChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnPIDSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnPIDKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnPIDCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnPatientNameChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnPatientNameSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnPatientNameKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnPatientNameCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnAgeChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnAgeSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnAgeKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnAgeCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnSexChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnSexSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnSexKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnSexCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnAddressChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnAddressSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnAddressKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnAddressCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnWorkingPlaceChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnWorkingPlaceSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnWorkingPlaceKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnWorkingPlaceCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnObjectChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnObjectSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnObjectKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnObjectCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnCardNoChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnCardNoSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnCardNoKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnCardNoCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnCardCodeChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnCardCodeSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnCardCodeKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnCardCodeCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnCardDiscountChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnCardDiscountSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnCardDiscountKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnCardDiscountCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnRegistrationDateChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnRegistrationDateSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnRegistrationDateKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnRegistrationDateCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnExpiryDateChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnExpiryDateSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnExpiryDateKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnExpiryDateCheckValue(){
+	return 0;
+} 
+/*void CHMSHFPatientFee::OnRegistrationPlaceChange(){
+	
+} */
+/*void CHMSHFPatientFee::OnRegistrationPlaceSetfocus(){
+	
+} */
+/*void CHMSHFPatientFee::OnRegistrationPlaceKillfocus(){
+	
+} */
+int CHMSHFPatientFee::OnRegistrationPlaceCheckValue(){
+	return 0;
+} 
+void CHMSHFPatientFee::OnTreatmentListDblClick(){
+	
+} 
+void CHMSHFPatientFee::OnTreatmentListSelectChange(int nOldItem, int nNewItem){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CHMSHFPatientFee::OnTreatmentListDeleteItem(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CHMSHFPatientFee::OnTreatmentListLoadData(){
+/*
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	m_wndTreatmentList.BeginLoad(); 
+	m_wndTreatmentList.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndTreatmentList.AddItems(
+			rs.GetValue(_T("DeptNo")), 
+			rs.GetValue(_T("FromDate")), 
+			rs.GetValue(_T("ToDate")), 
+			rs.GetValue(_T("Status")), NULL);
+		rs.MoveNext();
+	}
+	m_wndTreatmentList.EndLoad(); 
+	return nCount;
+*/
+	return 0;
+}
+void CHMSHFPatientFee::OnInvoiceListDblClick(){
+	
+} 
+void CHMSHFPatientFee::OnInvoiceListSelectChange(int nOldItem, int nNewItem){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CHMSHFPatientFee::OnInvoiceListDeleteItem(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CHMSHFPatientFee::OnInvoiceListLoadData(){
+/*
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	m_wndInvoiceList.BeginLoad(); 
+	m_wndInvoiceList.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndInvoiceList.AddItems(
+			rs.GetValue(_T("InvoiceNo")), 
+			rs.GetValue(_T("InvoiceDate")), 
+			rs.GetValue(_T("Description")), 
+			rs.GetValue(_T("Clerk")), NULL);
+		rs.MoveNext();
+	}
+	m_wndInvoiceList.EndLoad(); 
+	return nCount;
+*/
+	return 0;
+}
+void CHMSHFPatientFee::OnFeeListDblClick(){
+	
+} 
+void CHMSHFPatientFee::OnFeeListSelectChange(int nOldItem, int nNewItem){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CHMSHFPatientFee::OnFeeListDeleteItem(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CHMSHFPatientFee::OnFeeListLoadData(){
+/*
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	m_wndFeeList.BeginLoad(); 
+	m_wndFeeList.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndFeeList.AddItems(
+			rs.GetValue(_T("Idx")), 
+			rs.GetValue(_T("Description")), 
+			rs.GetValue(_T("Cost")), 
+			rs.GetValue(_T("Discount")), 
+			rs.GetValue(_T("Insurance")), 
+			rs.GetValue(_T("Paid")), 
+			rs.GetValue(_T("Unpaid")), NULL);
+		rs.MoveNext();
+	}
+	m_wndFeeList.EndLoad(); 
+	return nCount;
+*/
+	return 0;
+}
+void CHMSHFPatientFee::OnBillingSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CHMSHFPatientFee::OnApprovalSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CHMSHFPatientFee::OnPrintSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CHMSHFPatientFee::OnAddHMSHFPatientFee(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)  
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_ADD);
+	return 0; 
+}
+int CHMSHFPatientFee::OnEditHMSHFPatientFee(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CHMSHFPatientFee::OnDeleteHMSHFPatientFee(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO) 
+ 		return -1; 
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") ); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret >= 0){ 
+ 		SetMode(VM_NONE); 
+ 		OnCancelHMSHFPatientFee(); 
+ 	}
+	return 0;
+}
+int CHMSHFPatientFee::OnSaveHMSHFPatientFee(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT) 
+ 		return -1; 
+ 	if(!IsValidateData()) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(GetMode() == VM_ADD){ 
+ 		//szSQL = m_tblTbl.GetInsertSQL(); 
+ 	} 
+ 	else if(GetMode() == VM_EDIT){ 
+ 		CString szWhere; 
+ 		szWhere.Format(_T(" WHERE")); 
+ 		//szSQL = m_tblTbl.GetUpdateSQL(_T("createdby,createddate")); 
+ 		szSQL += szWhere; 
+ 	} 
+ _fmsg(_T("%s"), szSQL); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret > 0) 
+ 	{ 
+ 		//OnHMSHFPatientFeeListLoadData(); 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 	} 
+ 	return ret; 
+ 	return 0; 
+}
+int CHMSHFPatientFee::OnCancelHMSHFPatientFee(){
+ 	if(GetMode() == VM_EDIT) 
+ 	{ 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 		SetMode(VM_NONE); 
+ 	} 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	return 0;
+} 
+int CHMSHFPatientFee::OnHMSHFPatientFeeListLoadData(){
+	return 0;
+}

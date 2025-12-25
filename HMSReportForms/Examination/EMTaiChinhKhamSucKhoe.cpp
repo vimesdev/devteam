@@ -1,0 +1,802 @@
+﻿#include "stdafx.h"
+#include "EMTaiChinhKhamSucKhoe.h"
+#include "MainFrame_E10.h"
+#include "Excel.h"
+#include "ReportDocument.h"
+#include "StringToken.h"
+#include "HMSListSearchDialog.h"
+
+static long _OnStatusLoadDataFnc(CWnd* pWnd)
+{
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnStatusLoadData();
+}
+static long _OnResultLoadDataFnc(CWnd* pWnd) {
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnResultLoadData();
+}
+
+/*static void _OnYearChangeFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnYearChange();
+} */
+/*static void _OnYearSetfocusFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnYearSetfocus();} */
+	/*static void _OnYearKillfocusFnc(CWnd *pWnd){
+		((CEMTaiChinhKhamSucKhoe *)pWnd)->OnYearKillfocus();
+	} */
+static int _OnYearCheckValueFnc(CWnd* pWnd)
+{
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnYearCheckValue();
+}
+static void _OnReportPeriodSelectChangeFnc(CWnd* pWnd, int nOldItemSel, int nNewItemSel) {
+	((CEMTaiChinhKhamSucKhoe*)pWnd)->OnReportPeriodSelectChange(nOldItemSel, nNewItemSel);
+}
+static void _OnReportPeriodSelendokFnc(CWnd* pWnd) {
+	((CEMTaiChinhKhamSucKhoe*)pWnd)->OnReportPeriodSelendok();
+}
+/*static void _OnReportPeriodSetfocusFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnReportPeriodKillfocus();
+}*/
+/*static void _OnReportPeriodKillfocusFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnReportPeriodKillfocus();
+}*/
+static long _OnReportPeriodLoadDataFnc(CWnd* pWnd) {
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnReportPeriodLoadData();
+}
+/*static void _OnReportPeriodAddNewFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnReportPeriodAddNew();
+}*/
+/*static void _OnFromDateChangeFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnFromDateChange();
+} */
+/*static void _OnFromDateSetfocusFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnFromDateSetfocus();} */
+	/*static void _OnFromDateKillfocusFnc(CWnd *pWnd){
+		((CEMTaiChinhKhamSucKhoe *)pWnd)->OnFromDateKillfocus();
+	} */
+static int _OnFromDateCheckValueFnc(CWnd* pWnd) {
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnFromDateCheckValue();
+}
+/*static void _OnToDateChangeFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnToDateChange();
+} */
+/*static void _OnToDateSetfocusFnc(CWnd *pWnd){
+	((CEMTaiChinhKhamSucKhoe *)pWnd)->OnToDateSetfocus();} */
+	/*static void _OnToDateKillfocusFnc(CWnd *pWnd){
+		((CEMTaiChinhKhamSucKhoe *)pWnd)->OnToDateKillfocus();
+	} */
+static int _OnToDateCheckValueFnc(CWnd* pWnd) {
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnToDateCheckValue();
+}
+static long _OnCompanyLoadDataFnc(CWnd* pWnd) {
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnCompanyLoadData();
+}
+static void _OnCompanyDblClickFnc(CWnd* pWnd) {
+	((CEMTaiChinhKhamSucKhoe*)pWnd)->OnCompanyDblClick();
+}
+static void _OnCompanySelectChangeFnc(CWnd* pWnd, int nOldItem, int nNewItem) {
+	((CEMTaiChinhKhamSucKhoe*)pWnd)->OnCompanySelectChange(nOldItem, nNewItem);
+}
+static int _OnCompanyDeleteItemFnc(CWnd* pWnd) {
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnCompanyDeleteItem();
+}
+static void _OnPrintPreviewSelectFnc(CWnd* pWnd) {
+	CEMTaiChinhKhamSucKhoe* pVw = (CEMTaiChinhKhamSucKhoe*)pWnd;
+	pVw->OnPrintPreviewSelect();
+}
+static void _OnExportSelectFnc(CWnd* pWnd) {
+	CEMTaiChinhKhamSucKhoe* pVw = (CEMTaiChinhKhamSucKhoe*)pWnd;
+	pVw->OnExportSelect();
+}
+static int _OnCompanySearchItemFnc(CWnd* pWnd)
+{
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnCompanySearchItem();
+}
+static int _OnCompanyCheckAllFnc(CWnd* pWnd)
+{
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnCompanyCheckAll();
+}
+static int _OnCompanyUncheckAllFnc(CWnd* pWnd)
+{
+	return ((CEMTaiChinhKhamSucKhoe*)pWnd)->OnCompanyUncheckAll();
+}
+
+CEMTaiChinhKhamSucKhoe::CEMTaiChinhKhamSucKhoe(CWnd* pParent) {
+
+	m_nDlgWidth = 500;
+	m_nDlgHeight = 130;
+	SetDefaultValues();
+}
+CEMTaiChinhKhamSucKhoe::~CEMTaiChinhKhamSucKhoe() {
+}
+void CEMTaiChinhKhamSucKhoe::OnCreateComponents() {
+	m_wndReportCondition.Create(this, _T("Report Condition"), 5, 5, 490, 395);
+	m_wndYearLabel.Create(this, _T("Year"), 10, 30, 90, 55);
+	m_wndYear.Create(this, 95, 30, 245, 55);
+	m_wndReportPeriodLabel.Create(this, _T("Report Period"), 250, 30, 330, 55);
+	m_wndReportPeriod.Create(this, 335, 30, 485, 55);
+	m_wndFromDateLabel.Create(this, _T("From Date"), 10, 60, 90, 85);
+	m_wndFromDate.Create(this, 95, 60, 245, 85);
+	m_wndToDateLabel.Create(this, _T("To Date"), 250, 60, 330, 85);
+	m_wndToDate.Create(this, 335, 60, 485, 85);
+	m_wndStatusLabel.Create(this, _T("Status"), 10, 90, 90, 115);
+	m_wndStatus.Create(this, 95, 90, 245, 115);
+	m_wndResultLabel.Create(this, _T("Result"), 250, 90, 330, 115);
+	m_wndResult.Create(this, 335, 90, 485, 115);
+	m_wndCompany.Create(this, 10, 120, 485, 390);
+	m_wndCompany.SetCheckBox(TRUE);
+	//m_wndPrintPreview.Create(this, _T("Print Pre&view"), 300, 400, 410, 425);
+	m_wndExport.Create(this, _T("&Export"), 415, 400, 490, 425);
+}
+void CEMTaiChinhKhamSucKhoe::OnInitializeComponents() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	m_wndYear.SetCheckValue(true);
+	m_wndReportPeriod.SetCheckValue(true);
+	m_wndReportPeriod.LimitText(1024);
+	//m_wndFromDate.SetMax(CDateTime(pMF->GetSysDateTime()));
+	m_wndFromDate.SetCheckValue(true);
+	//m_wndToDate.SetMax(CDateTime(pMF->GetSysDateTime()));
+	m_wndToDate.SetCheckValue(true);
+
+	m_wndReportPeriod.InsertColumn(0, _T("ID"), FMT_INTEGER, 30);
+	m_wndReportPeriod.InsertColumn(1, _T("Name"), FMT_TEXT, 80);
+
+	m_wndStatus.InsertColumn(0, _T("ID"), FMT_INTEGER, 30);
+	m_wndStatus.InsertColumn(1, _T("Name"), FMT_TEXT, 180);
+
+	m_wndResult.InsertColumn(0, _T("ID"), FMT_INTEGER, 30);
+	m_wndResult.InsertColumn(1, _T("Name"), FMT_TEXT, 150);
+
+	m_wndCompany.InsertColumn(0, _T("Id"), CFMT_NUMBER, 100);
+	m_wndCompany.InsertColumn(1, _T("Contract No"), CFMT_TEXT, 100);
+	m_wndCompany.InsertColumn(2, _T("Description"), CFMT_TEXT, 150);
+	m_wndCompany.InsertColumn(3, _T("Exam Date"), CFMT_DATE, 80);
+	m_wndCompany.InsertColumn(4, _T("Type"), CFMT_TEXT | CFMT_CENTER, 50);
+	m_wndCompany.InsertColumn(5, _T(""), CFMT_TEXT, 0);	//companyid
+	m_wndCompany.InsertColumn(6, _T(""), CFMT_TEXT, 0);	//object
+
+}
+void CEMTaiChinhKhamSucKhoe::OnSetWindowEvents() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	//m_wndYear.SetEvent(WE_CHANGE, _OnYearChangeFnc);
+	//m_wndYear.SetEvent(WE_SETFOCUS, _OnYearSetfocusFnc);
+	//m_wndYear.SetEvent(WE_KILLFOCUS, _OnYearKillfocusFnc);
+	m_wndYear.SetEvent(WE_CHECKVALUE, _OnYearCheckValueFnc);
+	m_wndReportPeriod.SetEvent(WE_SELENDOK, _OnReportPeriodSelendokFnc);
+	//m_wndReportPeriod.SetEvent(WE_SETFOCUS, _OnReportPeriodSetfocusFnc);
+	//m_wndReportPeriod.SetEvent(WE_KILLFOCUS, _OnReportPeriodKillfocusFnc);
+	m_wndReportPeriod.SetEvent(WE_SELCHANGE, _OnReportPeriodSelectChangeFnc);
+	m_wndReportPeriod.SetEvent(WE_LOADDATA, _OnReportPeriodLoadDataFnc);
+	//m_wndReportPeriod.SetEvent(WE_ADDNEW, _OnReportPeriodAddNewFnc);
+	//m_wndFromDate.SetEvent(WE_CHANGE, _OnFromDateChangeFnc);
+	//m_wndFromDate.SetEvent(WE_SETFOCUS, _OnFromDateSetfocusFnc);
+	//m_wndFromDate.SetEvent(WE_KILLFOCUS, _OnFromDateKillfocusFnc);
+	m_wndFromDate.SetEvent(WE_CHECKVALUE, _OnFromDateCheckValueFnc);
+	//m_wndToDate.SetEvent(WE_CHANGE, _OnToDateChangeFnc);
+	//m_wndToDate.SetEvent(WE_SETFOCUS, _OnToDateSetfocusFnc);
+	//m_wndToDate.SetEvent(WE_KILLFOCUS, _OnToDateKillfocusFnc);
+	m_wndToDate.SetEvent(WE_CHECKVALUE, _OnToDateCheckValueFnc);
+	m_wndStatus.SetEvent(WE_LOADDATA, _OnStatusLoadDataFnc);
+	m_wndResult.SetEvent(WE_LOADDATA, _OnResultLoadDataFnc);
+	m_wndCompany.SetEvent(WE_SELCHANGE, _OnCompanySelectChangeFnc);
+	m_wndCompany.SetEvent(WE_LOADDATA, _OnCompanyLoadDataFnc);
+	m_wndCompany.SetEvent(WE_DBLCLICK, _OnCompanyDblClickFnc);
+	m_wndCompany.AddEvent(1, _T("Search"), _OnCompanySearchItemFnc);
+	m_wndCompany.AddEvent(0, _T("-"));
+	m_wndCompany.AddEvent(2, _T("Check All"), _OnCompanyCheckAllFnc);
+	m_wndCompany.AddEvent(0, _T("-"));
+	m_wndCompany.AddEvent(3, _T("Uncheck All"), _OnCompanyUncheckAllFnc);
+	m_wndPrintPreview.SetEvent(WE_CLICK, _OnPrintPreviewSelectFnc);
+	m_wndExport.SetEvent(WE_CLICK, _OnExportSelectFnc);
+	CDate dte;
+	dte.ParseDate(pMF->GetSysDate());
+	m_szFromDate = m_szToDate = pMF->GetSysDate();
+	m_szFromDate += _T("00:00");
+	m_szToDate += _T("23:59");
+	m_nYear = dte.GetYear();
+	m_szReportPeriodKey.Format(_T("%d"), dte.GetMonth());
+	UpdateData(false);
+	OnCompanyLoadData();
+
+}
+void CEMTaiChinhKhamSucKhoe::OnDoDataExchange(CDataExchange* pDX)
+{
+	DDX_Text(pDX, m_wndYear.GetDlgCtrlID(), m_nYear);
+	DDX_TextEx(pDX, m_wndReportPeriod.GetDlgCtrlID(), m_szReportPeriodKey);
+	DDX_TextEx(pDX, m_wndFromDate.GetDlgCtrlID(), m_szFromDate);
+	DDX_TextEx(pDX, m_wndToDate.GetDlgCtrlID(), m_szToDate);
+	DDX_TextEx(pDX, m_wndStatus.GetDlgCtrlID(), m_szStatusKey);
+	DDX_TextEx(pDX, m_wndResult.GetDlgCtrlID(), m_szResultKey);
+}
+void CEMTaiChinhKhamSucKhoe::SetDefaultValues() {
+
+	m_nYear = 0;
+	m_szReportPeriodKey.Empty();
+	m_szFromDate.Empty();
+	m_szToDate.Empty();
+	m_szStatusKey.Empty();
+	m_szResultKey.Empty();
+}
+int CEMTaiChinhKhamSucKhoe::SetMode(int nMode) {
+	int nOldMode = GetMode();
+	CGuiView::SetMode(nMode);
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	CString szSQL;
+	CRecord rs(&pMF->m_db);
+	switch (nMode) {
+	case VM_ADD:
+		EnableControls(TRUE);
+		EnableButtons(TRUE, 3, 4, -1);
+		SetDefaultValues();
+		break;
+	case VM_EDIT:
+		EnableControls(TRUE);
+		EnableButtons(TRUE, 3, 4, -1);
+		break;
+	case VM_VIEW:
+		EnableControls(FALSE);
+		EnableButtons(FALSE, 3, 4, -1);
+		break;
+	case VM_NONE:
+		EnableControls(FALSE);
+		EnableButtons(TRUE, 0, 6, -1);
+		SetDefaultValues();
+		break;
+	};
+	UpdateData(FALSE);
+	return nOldMode;
+}
+/*void CEMTaiChinhKhamSucKhoe::OnYearChange(){
+
+} */
+/*void CEMTaiChinhKhamSucKhoe::OnYearSetfocus(){
+
+} */
+/*void CEMTaiChinhKhamSucKhoe::OnYearKillfocus(){
+
+} */
+int CEMTaiChinhKhamSucKhoe::OnYearCheckValue() {
+	return 0;
+}
+void CEMTaiChinhKhamSucKhoe::OnReportPeriodSelectChange(int nOldItemSel, int nNewItemSel) {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+
+}
+void CEMTaiChinhKhamSucKhoe::OnReportPeriodSelendok() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	UpdateData(true);
+	pMF->OnReportPeriodSelendok(&m_szFromDate, &m_szToDate, m_szReportPeriodKey);
+	UpdateData(false);
+}
+/*void CEMTaiChinhKhamSucKhoe::OnReportPeriodSetfocus(){
+
+}*/
+/*void CEMTaiChinhKhamSucKhoe::OnReportPeriodKillfocus(){
+
+}*/
+long CEMTaiChinhKhamSucKhoe::OnReportPeriodLoadData() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	return pMF->LoadReportPeriodList(&m_wndReportPeriod, m_szReportPeriodKey);
+	/*
+		CRecord rs(&pMF->m_db);
+		CString szSQL, szWhere;
+		if(m_wndReportPeriod.IsSearchKey() && !m_szReportPeriodKey.IsEmpty()){
+		 szWhere.Format(_T(" and id='%s' "), m_szReportPeriodKey
+	};
+		m_wndReportPeriod.DeleteAllItems();
+		int nCount = 0;
+		szSQL.Format(_T("SELECT fld1 as id, fld2 as name FROM tbl WHERE 1=1 %s ORDER BY id "), szWhere
+		nCount = rs.ExecSQL(szSQL);
+		while(!rs.IsEOF()){
+			m_wndReportPeriod.AddItems(
+			rs.MoveNext();
+		}
+		return nCount;
+	*/
+	return 0;
+}
+/*void CEMTaiChinhKhamSucKhoe::OnReportPeriodAddNew(){
+	CMainFrame_E10 *pMF = (CMainFrame_E10*) AfxGetMainWnd();
+
+} */
+/*void CEMTaiChinhKhamSucKhoe::OnFromDateChange(){
+
+} */
+/*void CEMTaiChinhKhamSucKhoe::OnFromDateSetfocus(){
+
+} */
+/*void CEMTaiChinhKhamSucKhoe::OnFromDateKillfocus(){
+
+} */
+int CEMTaiChinhKhamSucKhoe::OnFromDateCheckValue() {
+	OnCompanyLoadData();
+	return 0;
+}
+/*void CEMTaiChinhKhamSucKhoe::OnToDateChange(){
+
+} */
+/*void CEMTaiChinhKhamSucKhoe::OnToDateSetfocus(){
+
+} */
+/*void CEMTaiChinhKhamSucKhoe::OnToDateKillfocus(){
+
+} */
+int CEMTaiChinhKhamSucKhoe::OnToDateCheckValue() {
+	OnCompanyLoadData();
+	return 0;
+}
+void CEMTaiChinhKhamSucKhoe::OnCompanyDblClick() {
+
+}
+void CEMTaiChinhKhamSucKhoe::OnCompanySelectChange(int nOldItem, int nNewItem) {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+
+}
+int CEMTaiChinhKhamSucKhoe::OnCompanyDeleteItem() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	return 0;
+}
+long CEMTaiChinhKhamSucKhoe::OnCompanyLoadData() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	UpdateData(TRUE);
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	m_wndCompany.BeginLoad();
+	int nCount = 0;
+
+	szSQL.Format(_T(" SELECT DISTINCT hec_contract_id,") \
+		_T("   hec_no,") \
+		_T("   hec_company_id,") \
+		_T("   hwp_name                            AS hec_company,") \
+		_T("   TO_CHAR(hec_examdate, 'DD/MM/YYYY') AS exmdate,") \
+		_T("   hec_description,") \
+		_T("   hec_type,") \
+		_T("   hec_object") \
+		_T(" FROM hms_exm_employee") \
+		_T(" LEFT JOIN hms_exm_contract") \
+		_T(" ON(hec_contract_id = hee_contract_id)") \
+		_T(" LEFT JOIN hms_workplace") \
+		_T(" ON(hec_company_id = TO_CHAR(hwp_idx))") \
+		_T(" WHERE hec_examdate between to_timestamp('%s','YYYY-MM-DD') and to_timestamp('%s','YYYY-MM-DD') ") \
+		_T(" ORDER BY hec_contract_id"), m_szFromDate.Left(10), m_szToDate.Left(10));
+	_fmsg(_T("%s"), szSQL);
+	nCount = rs.ExecSQL(szSQL);
+	while (!rs.IsEOF()) {
+		m_wndCompany.AddItems(
+			rs.GetValue(_T("hec_contract_id")),
+			rs.GetValue(_T("hec_no")),
+			rs.GetValue(_T("hec_company")),
+			rs.GetValue(_T("exmdate")),
+			rs.GetValue(_T("hec_type")),
+			rs.GetValue(_T("hec_company_id")),
+			rs.GetValue(_T("hec_object")), NULL);
+		rs.MoveNext();
+	}
+	m_wndCompany.EndLoad();
+	UpdateData(FALSE);
+	return nCount;
+
+}
+void CEMTaiChinhKhamSucKhoe::OnPrintPreviewSelect() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+
+}
+void CEMTaiChinhKhamSucKhoe::OnExportSelect() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	UpdateData(true);
+	BeginWaitCursor();
+	OnInitDataString();
+	CRecord rs(&pMF->m_db), crs(&pMF->m_db);
+	CExcel xls;
+	CString szSQL, tmpStr, tmpStr2, szOldVendor, szNewVendor, szTemp;
+	CStringToken token(m_szProductIDStr);
+	double nTmp = 0;
+	int nIdx = 2, nCol = 0, nRow = 0, i = 0, nOldCol = 0;
+	long double nTotalAmt = 0, nKhamAmt = 0, nThuoc = 0;
+	CArray<float, float> nTotal;
+	for (int j = 0; j < token.GetSize(); j++)
+	{
+		nTotal.Add(0);
+	}
+	szSQL = GetQueryString();
+	_fmsg(_T("%s"), szSQL);
+	int nRet = rs.ExecSQL(szSQL);
+
+	if (rs.IsEOF())
+	{
+		AfxMessageBox(_T("No Data."));
+		return;
+	}
+	xls.CreateSheet(1);
+	xls.SetWorksheet(0);
+	xls.SetCellMergedColumns(0, 0, 2);
+	xls.SetCellMergedColumns(0, 1, 2);
+	xls.SetCellMergedColumns(0, 2, 6);
+	xls.SetCellMergedColumns(0, 3, 6);
+	xls.SetCellText(0, 0, pMF->m_szHealthService, FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	xls.SetCellText(0, 1, pMF->m_szHospitalName, FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	//TODO: Write Excel Name
+	tmpStr = _T("MẪU ĐỐI CHIẾU TÀI CHÍNH VỚI DOANH NGHIỆP");
+	xls.SetCellText(0, 2, tmpStr, FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	tmpStr.Format(_T("Từ ngày %s đến ngày %s"), CDate::Convert(m_szFromDate, yyyymmdd, ddmmyyyy), CDate::Convert(m_szToDate, yyyymmdd, ddmmyyyy));
+	xls.SetCellText(0, 3, tmpStr, FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	//TODO: Write Column Header
+	nRow = 4;
+	//Fixed col
+	xls.SetColumnWidth(0, 8);
+	xls.SetColumnWidth(1, 12);
+	xls.SetColumnWidth(2, 12);
+	xls.SetColumnWidth(3, 25);
+	xls.SetColumnWidth(4, 10);
+	xls.SetColumnWidth(5, 10);
+
+	xls.SetCellText(0, nRow, _T("STT"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	xls.SetCellText(1, nRow, _T("Phòng ban"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	xls.SetCellText(2, nRow, _T("Số hồ sơ"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	xls.SetCellText(3, nRow, _T("Họ tên"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	xls.SetCellText(4, nRow, _T("Năm sinh"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	xls.SetCellText(5, nRow, _T("Giới tính"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	xls.SetCellText(6, nRow, _T("Cấp bậc"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+
+	//Dynamic Col Material
+	nCol = 7;
+	szSQL = GetQueryString1();
+	crs.ExecSQL(szSQL);
+	i = 0;
+	CString szOutIntNew, szOutIntOld;
+	while (!crs.IsEOF())
+	{
+		crs.GetValue(_T("outint"), szOutIntNew);
+		if (szOutIntOld.IsEmpty() && !szOutIntNew.IsEmpty())
+		{
+			nOldCol = nCol;
+			i = 1;
+		}
+		if (szOutIntNew != szOutIntOld && !szOutIntOld.IsEmpty())
+		{
+			if (szOutIntOld == _T("0"))
+				tmpStr.Format(_T("Trong gói"));
+			else
+				tmpStr.Format(_T("Ngoài gói"));
+			xls.SetCellMergedColumns(nOldCol, nRow, i - 1);
+			xls.SetCellText(nOldCol, nRow, tmpStr, FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+			nOldCol = nCol;
+			i = 1;
+		}
+		crs.GetValue(_T("hfl_feeid"), szNewVendor);
+		xls.SetCellText(nCol, nRow + 1, int2str(i++), FMT_INTEGER | FMT_CENTER | FMT_WRAPING, true);
+		xls.SetCellText(nCol++, nRow + 2, crs.GetValue(_T("hfl_name")), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+
+
+		szOldVendor = szNewVendor;
+		szOutIntOld = szOutIntNew;
+		crs.MoveNext();
+	}
+	xls.SetCellText(nCol++, nRow + 2, _T("Tiền thuốc"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+	if (i > 1)
+	{
+		if (szOutIntOld == _T("0"))
+			tmpStr.Format(_T("Trong gói"));
+		else
+			tmpStr.Format(_T("Ngoài gói"));
+		xls.SetCellMergedColumns(nOldCol, nRow, i - 1);
+		xls.SetCellText(nOldCol, nRow, tmpStr, FMT_TEXT | FMT_CENTER | FMT_WRAPING, true);
+		nOldCol = nCol;
+	}
+
+	nCol = 0;
+	nRow = 8;
+	nIdx = 1;
+	while (!rs.IsEOF())
+	{
+		xls.SetCellText(0, nRow, int2str(nIdx++), FMT_INTEGER | FMT_RIGHT);
+		xls.SetCellText(1, nRow, rs.GetValue(_T("hee_dept")), FMT_TEXT);
+		xls.SetCellText(2, nRow, rs.GetValue(_T("hee_docno")), FMT_INTEGER);
+		xls.SetCellText(3, nRow, rs.GetValue(_T("pname")), FMT_TEXT);
+		xls.SetCellText(4, nRow, rs.GetValue(_T("hee_birthdate")), FMT_TEXT);
+		xls.SetCellText(5, nRow, rs.GetValue(_T("sex")), FMT_TEXT);
+		xls.SetCellText(6, nRow, rs.GetValue(_T("prank")), FMT_TEXT);
+		nCol = 7;
+		for (int i = 0; i < token.GetSize(); i++)
+		{
+			token.GetAt(i, szTemp);
+			tmpStr.Format(_T("PID_%s"), szTemp);
+			rs.GetValue(tmpStr, nTmp);
+			nTotal[i] += nTmp;
+			xls.SetCellText(nCol++, nRow, double2str(nTmp), FMT_NUMBER1);
+		}
+		rs.GetValue(_T("t_thuoc"), nTmp);
+		xls.SetCellText(nCol++, nRow, double2str(nTmp), FMT_NUMBER1);
+		nThuoc += nTmp;
+		rs.GetValue(_T("total"), nTmp);
+		nTotalAmt += nTmp;
+		xls.SetCellText(nCol, nRow, double2str(nTmp), FMT_NUMBER1);
+		nRow++;
+		rs.MoveNext();
+	}
+
+	xls.SetCellText(nCol, 4, _T("Tổng tiền"), FMT_TEXT | FMT_CENTER, true);
+	if (nTotalAmt > 0)
+	{
+		xls.SetCellText(1, nRow, _T("Tổng cộng"), FMT_TEXT | FMT_CENTER, true);
+		tmpStr.Format(_T("%.2f"), nThuoc);
+		xls.SetCellText(nCol, nRow, tmpStr, FMT_NUMBER1);
+		tmpStr.Format(_T("%.2f"), nTotalAmt);
+		xls.SetCellText(nCol, nRow, tmpStr, FMT_NUMBER1);
+		for (int i = 0; i < token.GetSize(); i++)
+		{
+			nCol = 6;
+			tmpStr.Format(_T("%f"), nTotal[i]);
+			xls.SetCellText(nCol + i, nRow, tmpStr, FMT_NUMBER1);
+		}
+	}
+	EndWaitCursor();
+	xls.Save(_T("Exports\\MauDoiChieuTaiChinhVoiDoanhNghiep.xls"));
+}
+
+CString CEMTaiChinhKhamSucKhoe::GetQueryString() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	CString szSQL, szWhere, szCompanys, szWhere2;
+
+	for (int i = 0; i < m_wndCompany.GetItemCount(); i++)
+	{
+		if (m_wndCompany.GetCheck(i))
+		{
+			m_wndCompany.SetCurSel(i);
+			if (!szCompanys.IsEmpty())
+				szCompanys += _T(",");
+			szCompanys.AppendFormat(_T("%s"), m_wndCompany.GetItemText(i, 0));
+		}
+	}
+	if (!szCompanys.IsEmpty())
+		szWhere.AppendFormat(_T("AND hec_contract_id IN(%s)"), szCompanys);
+
+	CString szField, szSumField, tmpStr, szTemp;
+	CStringToken token(m_szProductIDStr);
+	for (int i = 0; i < token.GetSize(); i++)
+	{
+		token.GetAt(i, szTemp);
+		tmpStr.Format(_T("PID_%s"), szTemp);
+		if (!szSumField.IsEmpty())
+			szSumField += _T(", ");
+		szSumField.AppendFormat(_T("SUM(%s) %s"), tmpStr, tmpStr);
+		if (!szField.IsEmpty())
+			szField += _T(", ");
+		szField.AppendFormat(
+			_T(" CASE WHEN item_id = '%s' ") \
+			_T(" THEN total ELSE 0 END AS %s"), szTemp, tmpStr);
+	}
+	/*
+	if((m_bUnpayment && m_bApproved && m_bPayment) || (!m_bUnpayment && !m_bApproved && !m_bPayment) )
+	{
+		szWhere.AppendFormat(_T(" and hfe_category <>'Y' "));
+	}
+	else
+	{
+		if(m_bUnpayment)
+			szWhere.AppendFormat(_T(" and hfe_category <>'Y' and hfe_invoiceno =0 "));
+		else if (m_bPayment)
+		{
+			szWhere.AppendFormat(_T(" and nvl(hfe_category,'N')  not in ('Y','P') and hfe_invoiceno >0 and hfe_insinvoice=0  "));
+		}
+		else if (m_bApproved)
+		{
+			szWhere.AppendFormat(_T(" and hfe_category <>'Y' and hfe_invoiceno >0 and hfe_insinvoice >0 "));
+		}
+	}
+	*/
+	szWhere.AppendFormat(_T(" and nvl(e.hfe_category,'N')  not in ('Y')"));
+	if (m_szStatusKey == _T("1"))
+	{
+		szWhere.AppendFormat(_T(" and e.hfe_status in ('O', 'A')"));
+	}
+	if (m_szStatusKey == _T("2"))
+	{
+		szWhere.AppendFormat(_T(" and e.hfe_status = 'P' and nvl(i.hfe_locked, 'N') <> 'Y'"));
+	}
+	if (m_szStatusKey == _T("3"))
+	{
+		szWhere.AppendFormat(_T(" and i.hfe_locked = 'Y'"));
+	}
+	szWhere2 = szWhere;
+	if (m_szResultKey == _T("1"))
+	{
+		szWhere2.AppendFormat(_T(" and nvl(hpcl_status, 'O') IN ('I', 'T')"));
+	}
+	if (m_szResultKey == _T("2"))
+	{
+		szWhere2.AppendFormat(_T(" and (nvl(hpcl_status, 'O') NOT IN ('I', 'T'))"));
+	}
+	szSQL.Format(_T(" SELECT") \
+		_T("	hee_dept,") \
+		_T("	hee_docno, prank,") \
+		_T("	pname,") \
+		_T("	hee_birthdate, ") \
+		_T("	sex,") \
+		_T("	%s,") \
+		_T("	sum(t_thuoc) as t_thuoc, ") \
+		_T("	SUM(total) AS total") \
+		_T(" FROM") \
+		_T(" (SELECT %s, tbl.* FROM ") \
+		_T("	(") \
+		_T("	SELECT e.hfe_itemid||'_'||") \
+		_T("		(case when e.hfe_type ='E' then 0 ") \
+		_T("		when  hesp_itemid is not null then 0 else 1 end) as item_id,") \
+		_T("		hee_dept,") \
+		_T("		hee_docno, (select ss_desc from sys_sel where ss_id = 'hms_rank' and ss_code = hp_rank) as prank,") \
+		_T("		TRIM(hee_surname || ' ' || hee_midname || ' ' || hee_firstname) AS pname,") \
+		_T("		to_char(hee_birthdate,'DD/MM/YYYY') AS hee_birthdate, ") \
+		_T("		hms_getsex(hee_sex) AS sex,") \
+		_T("		case when e.hfe_type='D' then e.hfe_cost else 0 end as t_thuoc, ") \
+		_T("		e.hfe_cost AS total,") \
+		_T("		hee_employee_id as empl_id") \
+		_T("	FROM hms_exm_contract") \
+		_T("	LEFT JOIN hms_exm_employee ") \
+		_T("	ON(hec_contract_id = hee_contract_id)") \
+		_T("	LEFT JOIN hms_workplace") \
+		_T("	ON(hec_company_id = TO_CHAR(hwp_idx))") \
+		_T("	LEFT JOIN hms_doc") \
+		_T("	ON(hee_docno = hd_docno)") \
+		_T("	LEFT JOIN hms_patient ON(hp_patientno = hd_patientno)") \
+		_T("	LEFT JOIN hms_fee e") \
+		_T("	ON(hd_docno = e.hfe_docno)") \
+		_T("	LEFT JOIN hms_exm_servicepackage ON (hesp_contract_id=hec_contract_id and e.hfe_itemid=hesp_itemid)") \
+		_T("	LEFT JOIN hms_fee_invoice i ON (i.hfe_docno = e.hfe_docno and i.hfe_invoiceno = e.hfe_invoiceno)") \
+		_T("	WHERE hee_status = 'T' and (SUBSTR(e.hfe_itemid, 0, 1) IN('O', 'D') or e.hfe_type='D')%s") \
+		_T("	UNION ALL")
+		_T("	SELECT e.hfe_itemid||'_'||") \
+		_T("		(case when e.hfe_type ='E' then 0 ") \
+		_T("		when  hesp_itemid is not null then 0 else 1 end) as item_id,") \
+		_T("		hee_dept,") \
+		_T("		hee_docno, (select ss_desc from sys_sel where ss_id = 'hms_rank' and ss_code = hp_rank)as prank,") \
+		_T("		TRIM(hee_surname || ' ' || hee_midname || ' ' || hee_firstname) AS pname,") \
+		_T("		to_char(hee_birthdate,'DD/MM/YYYY') AS hee_birthdate, ") \
+		_T("		hms_getsex(hee_sex) AS sex,") \
+		_T("		0 as t_thuoc, ") \
+		_T("		e.hfe_cost AS total,") \
+		_T("		hee_employee_id as empl_id") \
+		_T("	FROM hms_exm_contract") \
+		_T("	LEFT JOIN hms_exm_employee ") \
+		_T("	ON(hec_contract_id = hee_contract_id)") \
+		_T("	LEFT JOIN hms_workplace") \
+		_T("	ON(hec_company_id = TO_CHAR(hwp_idx))") \
+		_T("	LEFT JOIN hms_doc") \
+		_T("	ON(hee_docno = hd_docno)") \
+		_T("	LEFT JOIN hms_patient ON(hp_patientno = hd_patientno)") \
+		_T("	LEFT JOIN hms_fee e") \
+		_T("	ON(hd_docno = e.hfe_docno)") \
+		_T("	LEFT JOIN hms_exm_servicepackage ON (hesp_contract_id=hec_contract_id and e.hfe_itemid=hesp_itemid)") \
+		_T("	LEFT JOIN HMS_PACS_TEST_LINE_VIEW ON (hpc_docno = hd_docno AND hpcl_orderlineid = hfe_orderline)") \
+		_T("	LEFT JOIN hms_fee_invoice i ON (i.hfe_docno = e.hfe_docno and i.hfe_invoiceno = e.hfe_invoiceno)") \
+		_T("	WHERE hee_status = 'T' and SUBSTR(e.hfe_itemid, 0, 1) IN('B') %s") \
+		_T("	) tbl") \
+		_T(" ) main_tbl") \
+		_T(" GROUP BY empl_id,") \
+		_T("	hee_dept,") \
+		_T("	hee_docno, prank,") \
+		_T("	pname,") \
+		_T("	hee_birthdate, ") \
+		_T("	sex") \
+		_T(" ORDER BY empl_id,") \
+		_T("	hee_dept,") \
+		_T("	hee_docno,") \
+		_T("	pname"), szSumField, szField, szWhere, szWhere2);
+	/*
+	//_T("	AND e.hfe_cost        > 0 and e.hfe_status = 'P' ") \
+	//_T("	AND (( SUBSTR(e.hfe_itemid, 0, 1) IN('B', 'D') %s )  ") \
+	//_T("		or (hfe_type='D' and hfe_status='P' and hfe_category <>'Y'  AND hec_contract_id IN(%s) ))" \
+	*/
+	_fmsg(_T("%s"), szSQL);
+	//_msg(_T("%s"), szSQL);
+	return szSQL;
+}
+CString CEMTaiChinhKhamSucKhoe::GetQueryString1() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	CString szSQL, szWhere, szCompanys;
+
+	for (int i = 0; i < m_wndCompany.GetItemCount(); i++)
+	{
+		if (m_wndCompany.GetCheck(i))
+		{
+			m_wndCompany.SetCurSel(i);
+			if (!szCompanys.IsEmpty())
+				szCompanys += _T(",");
+			szCompanys.AppendFormat(_T("'%s'"), m_wndCompany.GetItemText(i, 0));
+		}
+	}
+	if (!szCompanys.IsEmpty())
+		szWhere.AppendFormat(_T("AND hec_contract_id IN(%s)"), szCompanys);
+
+	szSQL.Format(_T(" select distinct hfl_feeid||'_'||outint as hfl_feeid,hfl_name, outint,nIndex") \
+		_T(" FROM (") \
+		_T(" SELECT hfl_feeid,") \
+		_T(" 		   hfl_name,e.hfe_type,") \
+		_T("        case when e.hfe_type ='E' then 0 when  hesp_itemid is not null then 0 else 1 end as outint,") \
+		_T("        case when e.hfe_type='E' then 0 else 1 end as nIndex") \
+		_T(" 		 FROM hms_exm_contract ") \
+		_T(" 		 LEFT JOIN hms_exm_employee") \
+		_T(" 		 ON(hec_contract_id = hee_contract_id)") \
+		_T(" 		 LEFT JOIN hms_workplace") \
+		_T(" 		 ON(hec_company_id = TO_CHAR(hwp_idx))") \
+		_T(" 		 LEFT JOIN hms_doc") \
+		_T(" 		 ON(hee_docno = hd_docno)") \
+		_T(" 		 LEFT JOIN hms_fee e") \
+		_T(" 		 ON(hd_docno = e.hfe_docno)") \
+		_T(" 		 LEFT JOIN hms_fee_list") \
+		_T(" 		 ON(e.hfe_itemid                = hfl_feeid)") \
+		_T("      LEFT JOIN hms_exm_servicepackage ON ( hesp_contract_id= hec_contract_id and hfl_feeid= hesp_itemid)") \
+		_T(" 		 WHERE 1=1 %s") \
+		_T(" 		 AND e.hfe_cost                 > 0") \
+		_T(" 		 AND e.hfe_category <>'Y' and e.hfe_type <>'D' and e.hfe_status <>'C' ") \
+		_T("      order by e.hfe_type,hfl_feeid,hesp_itemid") \
+		_T("      ) tbl") \
+		_T("      order by outint,nIndex,hfl_feeid"), szWhere);
+	_fmsg(_T("%s"), szSQL);
+	return szSQL;
+}
+void CEMTaiChinhKhamSucKhoe::OnInitDataString() {
+	CMainFrame_E10* pMF = (CMainFrame_E10*)AfxGetMainWnd();
+	CString szSQL;
+	CRecord rs(&pMF->m_db);
+	szSQL = GetQueryString1();
+	rs.ExecSQL(szSQL);
+	m_szProductIDStr.Empty();
+	m_szProductNameStr.Empty();
+	while (!rs.IsEOF())
+	{
+		if (!m_szProductIDStr.IsEmpty())
+			m_szProductIDStr += _T(",");
+		m_szProductIDStr += rs.GetValue(_T("hfl_feeid"));
+		if (!m_szProductNameStr.IsEmpty())
+			m_szProductNameStr += _T(",");
+		m_szProductNameStr += rs.GetValue(_T("hfl_name"));
+		rs.MoveNext();
+	}
+
+}
+
+int CEMTaiChinhKhamSucKhoe::OnCompanySearchItem()
+{
+	int nSubSel = m_wndCompany.GetSubItemSel();
+	_tprintf(_T("\nSubSel: %d\n"), nSubSel);
+	if (nSubSel < 0)
+	{
+		nSubSel = 0;
+	}
+	CHMSListSearchDialog dlg(&m_wndCompany, nSubSel);
+	dlg.DoModal();
+	return 0;
+}
+
+int CEMTaiChinhKhamSucKhoe::OnCompanyCheckAll()
+{
+	for (int i = 0; i < m_wndCompany.GetItemCount(); i++)
+	{
+		m_wndCompany.SetCheck(i);
+	}
+	return 0;
+}
+
+int CEMTaiChinhKhamSucKhoe::OnCompanyUncheckAll()
+{
+	for (int i = 0; i < m_wndCompany.GetItemCount(); i++)
+	{
+		m_wndCompany.SetCheck(i, FALSE);
+	}
+	return 0;
+}
+
+int CEMTaiChinhKhamSucKhoe::OnResultLoadData()
+{
+	m_wndResult.DeleteAllItems();
+	m_wndResult.AddItems(_T("1"), _T("Đã có kết quả"), NULL);
+	m_wndResult.AddItems(_T("2"), _T("Chưa có kết quả"), NULL);
+	return 0;
+}
+
+int CEMTaiChinhKhamSucKhoe::OnStatusLoadData()
+{
+	m_wndStatus.DeleteAllItems();
+	m_wndStatus.AddItems(_T("1"), _T("Chưa thanh toán"), NULL);
+	m_wndStatus.AddItems(_T("2"), _T("Đã thanh toán, chưa khóa sổ"), NULL);
+	m_wndStatus.AddItems(_T("3"), _T("Đã khóa sổ"), NULL);
+	return 0;
+}

@@ -1,0 +1,296 @@
+#include "HMSFEEPermissionDialog.h"
+#include "MainFrm.h"
+static long _Oncontrol_0LoadDataFnc(CWnd *pWnd){
+	return ((CHMSFEEPermissionDialog*)pWnd)->Oncontrol_0LoadData();
+} 
+static void _Oncontrol_0DblClickFnc(CWnd *pWnd){
+	((CHMSFEEPermissionDialog*)pWnd)->Oncontrol_0DblClick();
+} 
+static void _Oncontrol_0SelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CHMSFEEPermissionDialog*)pWnd)->Oncontrol_0SelectChange(nOldItem, nNewItem);
+} 
+static int _Oncontrol_0DeleteItemFnc(CWnd *pWnd){
+	 return ((CHMSFEEPermissionDialog*)pWnd)->Oncontrol_0DeleteItem();
+} 
+static void _OnExaminationFeeSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnExaminationFeeSelect();
+}
+static void _OnParaclinicalFeeSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnParaclinicalFeeSelect();
+}
+static void _OnDrugFeeSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnDrugFeeSelect();
+}
+static void _OnAdvanceFeeSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnAdvanceFeeSelect();
+}
+static void _OnRefundFeeSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnRefundFeeSelect();
+}
+static void _OnRemissionFeeSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnRemissionFeeSelect();
+}
+static void _OnInpatientSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnInpatientSelect();
+}
+static void _OnOutPatientSelectFnc(CWnd *pWnd){
+	 ((CHMSFEEPermissionDialog*)pWnd)->OnOutPatientSelect();
+}
+static int _OnAddHMSFEEPermissionDialogFnc(CWnd *pWnd){
+	 return ((CHMSFEEPermissionDialog*)pWnd)->OnAddHMSFEEPermissionDialog();
+} 
+static int _OnEditHMSFEEPermissionDialogFnc(CWnd *pWnd){
+	 return ((CHMSFEEPermissionDialog*)pWnd)->OnEditHMSFEEPermissionDialog();
+} 
+static int _OnDeleteHMSFEEPermissionDialogFnc(CWnd *pWnd){
+	 return ((CHMSFEEPermissionDialog*)pWnd)->OnDeleteHMSFEEPermissionDialog();
+} 
+static int _OnSaveHMSFEEPermissionDialogFnc(CWnd *pWnd){
+	 return ((CHMSFEEPermissionDialog*)pWnd)->OnSaveHMSFEEPermissionDialog();
+} 
+static int _OnCancelHMSFEEPermissionDialogFnc(CWnd *pWnd){
+	 return ((CHMSFEEPermissionDialog*)pWnd)->OnCancelHMSFEEPermissionDialog();
+} 
+CHMSFEEPermissionDialog::CHMSFEEPermissionDialog(CWnd *pParent):
+	CGuiDialog(pParent){
+
+	m_nDlgWidth = 475;
+	m_nDlgHeight = 280;
+	SetDefaultValues();
+}
+CHMSFEEPermissionDialog::~CHMSFEEPermissionDialog(){
+}
+void CHMSFEEPermissionDialog::OnCreateComponents(){
+	m_wndPermissionGroup.Create(this, _T("Permission Group"), 5, 5, 465, 270);
+	m_wndcontrol_0.Create(this,10, 30, 310, 265); 
+	m_wndExaminationFee.Create(this, _T("Examination Fee"), 315, 30, 455, 55);
+	m_wndParaclinicalFee.Create(this, _T("Paraclinical Fee"), 315, 60, 455, 85);
+	m_wndDrugFee.Create(this, _T("Drug Fee"), 315, 90, 455, 115);
+	m_wndAdvanceFee.Create(this, _T("Advance Fee"), 315, 120, 455, 145);
+	m_wndRefundFee.Create(this, _T("Refund Fee"), 315, 150, 455, 175);
+	m_wndRemissionFee.Create(this, _T("Remission Fee"), 315, 180, 455, 205);
+	m_wndInpatient.Create(this, _T("Inpatient"), 315, 210, 455, 235);
+	m_wndOutPatient.Create(this, _T("Out Patient "), 315, 240, 455, 265);
+
+}
+void CHMSFEEPermissionDialog::OnInitializeComponents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	EnableControls(FALSE);
+	//EnableButtons(TRUE, 0, -1);
+
+
+
+}
+void CHMSFEEPermissionDialog::OnSetWindowEvents(){
+	m_wndcontrol_0.SetEvent(WE_SELCHANGE, _Oncontrol_0SelectChangeFnc);
+	m_wndcontrol_0.SetEvent(WE_LOADDATA, _Oncontrol_0LoadDataFnc);
+	m_wndcontrol_0.SetEvent(WE_DBLCLICK, _Oncontrol_0DblClickFnc);
+	m_wndcontrol_0.AddEvent(1, _T("Delete"), _Oncontrol_0DeleteItemFnc, 0, VK_DELETE, 0);
+	m_wndExaminationFee.SetEvent(WE_CLICK, _OnExaminationFeeSelectFnc);
+	m_wndParaclinicalFee.SetEvent(WE_CLICK, _OnParaclinicalFeeSelectFnc);
+	m_wndDrugFee.SetEvent(WE_CLICK, _OnDrugFeeSelectFnc);
+	m_wndAdvanceFee.SetEvent(WE_CLICK, _OnAdvanceFeeSelectFnc);
+	m_wndRefundFee.SetEvent(WE_CLICK, _OnRefundFeeSelectFnc);
+	m_wndRemissionFee.SetEvent(WE_CLICK, _OnRemissionFeeSelectFnc);
+	m_wndInpatient.SetEvent(WE_CLICK, _OnInpatientSelectFnc);
+	m_wndOutPatient.SetEvent(WE_CLICK, _OnOutPatientSelectFnc);
+
+}
+void CHMSFEEPermissionDialog::OnDoDataExchange(CDataExchange* pDX){
+	DDX_Check(pDX, m_wndExaminationFee.GetDlgCtrlID(), m_bExaminationFee);
+	DDX_Check(pDX, m_wndParaclinicalFee.GetDlgCtrlID(), m_bParaclinicalFee);
+	DDX_Check(pDX, m_wndDrugFee.GetDlgCtrlID(), m_bDrugFee);
+	DDX_Check(pDX, m_wndAdvanceFee.GetDlgCtrlID(), m_bAdvanceFee);
+	DDX_Check(pDX, m_wndRefundFee.GetDlgCtrlID(), m_bRefundFee);
+	DDX_Check(pDX, m_wndRemissionFee.GetDlgCtrlID(), m_bRemissionFee);
+	DDX_Check(pDX, m_wndInpatient.GetDlgCtrlID(), m_bInpatient);
+	DDX_Check(pDX, m_wndOutPatient.GetDlgCtrlID(), m_bOutPatient);
+
+}
+void CHMSFEEPermissionDialog::GetDataToScreen(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+
+}
+void CHMSFEEPermissionDialog::GetScreenToData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+
+}
+void CHMSFEEPermissionDialog::SetDefaultValues(){
+
+	m_bExaminationFee=FALSE;
+	m_bParaclinicalFee=FALSE;
+	m_bDrugFee=FALSE;
+	m_bAdvanceFee=FALSE;
+	m_bRefundFee=FALSE;
+	m_bRemissionFee=FALSE;
+	m_bInpatient=FALSE;
+	m_bOutPatient=FALSE;
+
+}
+int CHMSFEEPermissionDialog::SetMode(int nMode){
+ 		int nOldMode = GetMode(); 
+ 		CGuiDialog::SetMode(nMode); 
+ 		CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 		CString szSQL; 
+ 		CRecord rs(&pMF->m_db); 
+  		switch(nMode){ 
+ 		case VM_ADD: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			break; 
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(FALSE, 3, 4, -1); 
+ 			break; 
+ 		case VM_NONE: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(TRUE, 0, 6, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		}; 
+ 		UpdateData(FALSE); 
+ 		return nOldMode; 
+}
+void CHMSFEEPermissionDialog::Oncontrol_0DblClick(){
+	
+} 
+void CHMSFEEPermissionDialog::Oncontrol_0SelectChange(int nOldItem, int nNewItem){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CHMSFEEPermissionDialog::Oncontrol_0DeleteItem(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CHMSFEEPermissionDialog::Oncontrol_0LoadData(){
+/*
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	m_wndcontrol_0.BeginLoad(); 
+	m_wndcontrol_0.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndcontrol_0.AddItems(
+		rs.MoveNext();
+	}
+	m_wndcontrol_0.EndLoad(); 
+	return nCount;
+*/
+	return 0;
+}
+	void CHMSFEEPermissionDialog::OnExaminationFeeSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+	void CHMSFEEPermissionDialog::OnParaclinicalFeeSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+	void CHMSFEEPermissionDialog::OnDrugFeeSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+	void CHMSFEEPermissionDialog::OnAdvanceFeeSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+	void CHMSFEEPermissionDialog::OnRefundFeeSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+	void CHMSFEEPermissionDialog::OnRemissionFeeSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+	void CHMSFEEPermissionDialog::OnInpatientSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+	void CHMSFEEPermissionDialog::OnOutPatientSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+int CHMSFEEPermissionDialog::OnAddHMSFEEPermissionDialog(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)  
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_ADD);
+	return 0; 
+}
+int CHMSFEEPermissionDialog::OnEditHMSFEEPermissionDialog(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CHMSFEEPermissionDialog::OnDeleteHMSFEEPermissionDialog(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO) 
+ 		return -1; 
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") ); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret >= 0){ 
+ 		SetMode(VM_NONE); 
+ 		OnCancelHMSFEEPermissionDialog(); 
+ 	}
+	return 0;
+}
+int CHMSFEEPermissionDialog::OnSaveHMSFEEPermissionDialog(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT) 
+ 		return -1; 
+ 	if(!IsValidateData()) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(GetMode() == VM_ADD){ 
+ 		//szSQL = m_tblTbl.GetInsertSQL(); 
+ 	} 
+ 	else if(GetMode() == VM_EDIT){ 
+ 		CString szWhere; 
+ 		szWhere.Format(_T(" WHERE")); 
+ 		//szSQL = m_tblTbl.GetUpdateSQL(_T("createdby,createddate")); 
+ 		szSQL += szWhere; 
+ 	} 
+ _fmsg(_T("%s"), szSQL); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret > 0) 
+ 	{ 
+ 		//OnHMSFEEPermissionDialogListLoadData(); 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 	} 
+ 	return ret; 
+ 	return 0; 
+}
+int CHMSFEEPermissionDialog::OnCancelHMSFEEPermissionDialog(){
+ 	if(GetMode() == VM_EDIT) 
+ 	{ 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 		SetMode(VM_NONE); 
+ 	} 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	return 0;
+} 
+int CHMSFEEPermissionDialog::OnHMSFEEPermissionDialogListLoadData(){
+	return 0;
+}

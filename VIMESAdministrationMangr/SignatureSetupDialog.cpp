@@ -1,0 +1,635 @@
+﻿#include "SignatureSetupDialog.h"
+#include "MainFrm.h"
+static void _OnDeptSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CSignatureSetupDialog* )pWnd)->OnDeptSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnDeptSelendokFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnDeptSelendok();
+}
+/*static void _OnDeptSetfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnDeptKillfocus();
+}*/
+/*static void _OnDeptKillfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnDeptKillfocus();
+}*/
+static long _OnDeptLoadDataFnc(CWnd *pWnd){
+	return ((CSignatureSetupDialog *)pWnd)->OnDeptLoadData();
+}
+/*static void _OnDeptAddNewFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnDeptAddNew();
+}*/
+static void _OnUserSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CSignatureSetupDialog* )pWnd)->OnUserSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnUserSelendokFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnUserSelendok();
+}
+/*static void _OnUserSetfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnUserKillfocus();
+}*/
+/*static void _OnUserKillfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnUserKillfocus();
+}*/
+static long _OnUserLoadDataFnc(CWnd *pWnd){
+	return ((CSignatureSetupDialog *)pWnd)->OnUserLoadData();
+}
+/*static void _OnUserAddNewFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnUserAddNew();
+}*/
+/*static void _OnSignIDChangeFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignIDChange();
+} */
+/*static void _OnSignIDSetfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignIDSetfocus();} */ 
+/*static void _OnSignIDKillfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignIDKillfocus();
+} */
+static int _OnSignIDCheckValueFnc(CWnd *pWnd){
+	return ((CSignatureSetupDialog *)pWnd)->OnSignIDCheckValue();
+} 
+static void _OnSignFileSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CSignatureSetupDialog* )pWnd)->OnSignFileSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnSignFileSelendokFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFileSelendok();
+}
+/*static void _OnSignFileSetfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFileKillfocus();
+}*/
+/*static void _OnSignFileKillfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFileKillfocus();
+}*/
+static long _OnSignFileLoadDataFnc(CWnd *pWnd){
+	return ((CSignatureSetupDialog *)pWnd)->OnSignFileLoadData();
+}
+/*static void _OnSignFileAddNewFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFileAddNew();
+}*/
+static void _OnSignFile2SelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CSignatureSetupDialog* )pWnd)->OnSignFile2SelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnSignFile2SelendokFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFile2Selendok();
+}
+/*static void _OnSignFile2SetfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFile2Killfocus();
+}*/
+/*static void _OnSignFile2KillfocusFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFile2Killfocus();
+}*/
+static long _OnSignFile2LoadDataFnc(CWnd *pWnd){
+	return ((CSignatureSetupDialog *)pWnd)->OnSignFile2LoadData();
+}
+/*static void _OnSignFile2AddNewFnc(CWnd *pWnd){
+	((CSignatureSetupDialog *)pWnd)->OnSignFile2AddNew();
+}*/
+static void _OnApplySelectFnc(CWnd *pWnd){
+	CSignatureSetupDialog *pVw = (CSignatureSetupDialog *)pWnd;
+	pVw->OnApplySelect();
+} 
+static void _OnCloseSelectFnc(CWnd *pWnd){
+	CSignatureSetupDialog *pVw = (CSignatureSetupDialog *)pWnd;
+	pVw->OnCloseSelect();
+} 
+static int _OnAddSignatureSetupDialogFnc(CWnd *pWnd){
+	 return ((CSignatureSetupDialog*)pWnd)->OnAddSignatureSetupDialog();
+} 
+static int _OnEditSignatureSetupDialogFnc(CWnd *pWnd){
+	 return ((CSignatureSetupDialog*)pWnd)->OnEditSignatureSetupDialog();
+} 
+static int _OnDeleteSignatureSetupDialogFnc(CWnd *pWnd){
+	 return ((CSignatureSetupDialog*)pWnd)->OnDeleteSignatureSetupDialog();
+} 
+static int _OnSaveSignatureSetupDialogFnc(CWnd *pWnd){
+	 return ((CSignatureSetupDialog*)pWnd)->OnSaveSignatureSetupDialog();
+} 
+static int _OnCancelSignatureSetupDialogFnc(CWnd *pWnd){
+	 return ((CSignatureSetupDialog*)pWnd)->OnCancelSignatureSetupDialog();
+} 
+CSignatureSetupDialog::CSignatureSetupDialog(CWnd *pParent):
+	CGuiDialog(pParent){
+
+	m_nDlgWidth = 325;
+	m_nDlgHeight = 295;
+	SetDefaultValues();
+}
+CSignatureSetupDialog::~CSignatureSetupDialog(){
+}
+void CSignatureSetupDialog::OnCreateComponents(){
+	m_wndDeptLabel.Create(this, _T("Dept"), 5, 5, 105, 30);
+	m_wndDept.Create(this,110, 5, 310, 30); 
+	m_wndUserLabel.Create(this, _T("User"), 5, 35, 105, 60);
+	m_wndUser.Create(this,110, 35, 310, 60); 
+	m_wndSignIDLabel.Create(this, _T("Sign ID"), 5, 65, 105, 90);
+	m_wndSignID.Create(this,110, 65, 310, 90); 
+	m_wndSignFileLabel.Create(this, _T("Sign file"), 5, 95, 105, 120);
+	m_wndSignFile.Create(this,110, 95, 310, 120); 
+	m_wndSignImage.Create(this,  110, 125, 310, 189);
+	m_wndSignFile2Label.Create(this, _T("Sign file2"), 5, 194, 105, 219);
+	m_wndSignFile2.Create(this,110, 194, 310, 219); 
+	m_wndSignImage2.Create(this, 110, 224, 310, 288);
+	m_wndApply.Create(this, _T("&Apply"), 145, 293, 225, 318);
+	m_wndClose.Create(this, _T("&Close"), 230, 293, 310, 318);
+
+}
+void CSignatureSetupDialog::OnInitializeComponents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	m_wndDept.SetCheckValue(true);
+	m_wndDept.LimitText(35);
+	m_wndUser.SetCheckValue(true);
+	m_wndUser.LimitText(35);
+	m_wndSignID.SetLimitText(35);
+	m_wndSignID.SetCheckValue(true);
+	m_wndSignFile.SetCheckValue(false);
+	m_wndSignFile.LimitText(35);
+	m_wndSignFile2.SetCheckValue(false);
+	m_wndSignFile2.LimitText(35);
+
+
+	m_wndDept.InsertColumn(0, _T("ID"), CFMT_TEXT, 50);
+	m_wndDept.InsertColumn(1, _T("Alias"), CFMT_TEXT, 100);
+	m_wndDept.InsertColumn(2, _T("Name"), CFMT_TEXT, 250);
+
+
+	m_wndUser.InsertColumn(0, _T("ID"), CFMT_TEXT, 50);
+	m_wndUser.InsertColumn(1, _T("Name"), CFMT_TEXT, 150);
+	m_wndUser.InsertColumn(2, _T("Sign ID"), CFMT_TEXT, 150);
+	m_wndUser.Format(3, 1);
+
+	m_wndSignFile.InsertColumn(0, _T("File Name"), CFMT_TEXT, 200);
+	//m_wndSignFile.InsertColumn(1, _T("Name"), CFMT_TEXT, 150);
+
+
+	m_wndSignFile2.InsertColumn(0, _T("File Name"), CFMT_TEXT, 200);
+	//m_wndSignFile2.InsertColumn(1, _T("Name"), CFMT_TEXT, 150);
+
+	CString szFilter = L"Picture Files (*.png)|*.PNG";
+	m_wndSignImage.SetFilter(szFilter);
+	m_wndSignImage2.SetFilter(szFilter);
+}
+void CSignatureSetupDialog::OnSetWindowEvents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	m_wndDept.SetEvent(WE_SELENDOK, _OnDeptSelendokFnc);
+	//m_wndDept.SetEvent(WE_SETFOCUS, _OnDeptSetfocusFnc);
+	//m_wndDept.SetEvent(WE_KILLFOCUS, _OnDeptKillfocusFnc);
+	m_wndDept.SetEvent(WE_SELCHANGE, _OnDeptSelectChangeFnc);
+	m_wndDept.SetEvent(WE_LOADDATA, _OnDeptLoadDataFnc);
+	//m_wndDept.SetEvent(WE_ADDNEW, _OnDeptAddNewFnc);
+	m_wndUser.SetEvent(WE_SELENDOK, _OnUserSelendokFnc);
+	//m_wndUser.SetEvent(WE_SETFOCUS, _OnUserSetfocusFnc);
+	//m_wndUser.SetEvent(WE_KILLFOCUS, _OnUserKillfocusFnc);
+	m_wndUser.SetEvent(WE_SELCHANGE, _OnUserSelectChangeFnc);
+	m_wndUser.SetEvent(WE_LOADDATA, _OnUserLoadDataFnc);
+	//m_wndUser.SetEvent(WE_ADDNEW, _OnUserAddNewFnc);
+	//m_wndSignID.SetEvent(WE_CHANGE, _OnSignIDChangeFnc);
+	//m_wndSignID.SetEvent(WE_SETFOCUS, _OnSignIDSetfocusFnc);
+	//m_wndSignID.SetEvent(WE_KILLFOCUS, _OnSignIDKillfocusFnc);
+	m_wndSignID.SetEvent(WE_CHECKVALUE, _OnSignIDCheckValueFnc);
+	m_wndSignFile.SetEvent(WE_SELENDOK, _OnSignFileSelendokFnc);
+	//m_wndSignFile.SetEvent(WE_SETFOCUS, _OnSignFileSetfocusFnc);
+	//m_wndSignFile.SetEvent(WE_KILLFOCUS, _OnSignFileKillfocusFnc);
+	m_wndSignFile.SetEvent(WE_SELCHANGE, _OnSignFileSelectChangeFnc);
+	m_wndSignFile.SetEvent(WE_LOADDATA, _OnSignFileLoadDataFnc);
+	//m_wndSignFile.SetEvent(WE_ADDNEW, _OnSignFileAddNewFnc);
+	m_wndSignFile2.SetEvent(WE_SELENDOK, _OnSignFile2SelendokFnc);
+	//m_wndSignFile2.SetEvent(WE_SETFOCUS, _OnSignFile2SetfocusFnc);
+	//m_wndSignFile2.SetEvent(WE_KILLFOCUS, _OnSignFile2KillfocusFnc);
+	m_wndSignFile2.SetEvent(WE_SELCHANGE, _OnSignFile2SelectChangeFnc);
+	m_wndSignFile2.SetEvent(WE_LOADDATA, _OnSignFile2LoadDataFnc);
+	//m_wndSignFile2.SetEvent(WE_ADDNEW, _OnSignFile2AddNewFnc);
+	m_wndApply.SetEvent(WE_CLICK, _OnApplySelectFnc);
+	m_wndClose.SetEvent(WE_CLICK, _OnCloseSelectFnc);
+	SetMode(VM_EDIT);
+
+}
+void CSignatureSetupDialog::OnDoDataExchange(CDataExchange* pDX){
+	DDX_TextEx(pDX, m_wndDept.GetDlgCtrlID(), m_szDeptKey);
+	DDX_TextEx(pDX, m_wndUser.GetDlgCtrlID(), m_szUserKey);
+	DDX_Text(pDX, m_wndSignID.GetDlgCtrlID(), m_szSignID);
+	DDX_TextEx(pDX, m_wndSignFile.GetDlgCtrlID(), m_szSignFileKey);
+	DDX_TextEx(pDX, m_wndSignFile2.GetDlgCtrlID(), m_szSignFile2Key);
+
+}
+void CSignatureSetupDialog::UpdateJson(BOOL bSave){
+	if(bSave)
+	{
+			
+	m_jData[_T("Dept")] =  m_szDeptKey;
+	m_jData[_T("User")] =  m_szUserKey;
+	m_jData[_T("SignID")] =  m_szSignID;
+	m_jData[_T("SignFile")] =  m_szSignFileKey;
+	m_jData[_T("SignFile2")] =  m_szSignFile2Key;
+	}
+	else
+	{
+			
+	m_jData[_T("Dept")].GetValue(m_szDeptKey);
+	m_jData[_T("User")].GetValue(m_szUserKey);
+	m_jData[_T("SignID")].GetValue(m_szSignID);
+	m_jData[_T("SignFile")].GetValue(m_szSignFileKey);
+	m_jData[_T("SignFile2")].GetValue(m_szSignFile2Key);
+	}
+
+}
+void CSignatureSetupDialog::GetDataToScreen(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+
+}
+void CSignatureSetupDialog::GetScreenToData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+
+}
+void CSignatureSetupDialog::SetDefaultValues(){
+
+	m_szDeptKey.Empty();
+	m_szUserKey.Empty();
+	m_szSignID.Empty();
+	m_szSignFileKey.Empty();
+	m_szSignFile2Key.Empty();
+
+}
+int CSignatureSetupDialog::SetMode(int nMode){
+ 		int nOldMode = GetMode();
+ 		CGuiDialog::SetMode(nMode);
+ 		CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd();
+ 		CString szSQL;
+ 		CRecord rs(&pMF->m_db);
+  		switch(nMode){
+ 		case VM_ADD: 
+ 			EnableControls(TRUE);
+ 			EnableButtons(TRUE, 0, 1, -1);
+ 			SetDefaultValues();
+			m_wndDept.SetFocus();
+ 			break;
+		case VM_ADDCHILD:
+		{
+			CString curDept = m_szDeptKey;
+			EnableControls(TRUE);
+			EnableButtons(TRUE, 0, 1, -1);
+			SetDefaultValues();
+			m_szDeptKey = curDept;
+			m_wndSignImage.Release();
+			m_wndSignImage2.Release();
+			m_wndSignImage.Invalidate();
+			m_wndSignImage2.Invalidate();
+			m_wndUser.SetFocus();
+		}
+			break;
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE);
+ 			EnableButtons(TRUE, 0, 1, -1);
+ 			break;
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE);
+ 			EnableButtons(FALSE, 3, 4, -1);
+ 			break;
+ 		case VM_NONE: 
+ 			EnableControls(FALSE);
+ 			EnableButtons(TRUE, 0, 6, -1);
+ 			SetDefaultValues();
+ 			break;
+ 		};
+ 		UpdateData(FALSE);
+ 		return nOldMode;
+}
+void CSignatureSetupDialog::OnDeptSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CSignatureSetupDialog::OnDeptSelendok(){
+	 
+}
+/*void CSignatureSetupDialog::OnDeptSetfocus(){
+	
+}*/
+/*void CSignatureSetupDialog::OnDeptKillfocus(){
+	
+}*/
+long CSignatureSetupDialog::OnDeptLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	return pMF->LoadDepartment(&m_wndDept, m_szDeptKey);
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndDept.IsSearchKey() && !m_szDeptKey.IsEmpty()){
+	 szWhere.Format(_T(" and id='%s' "), m_szDeptKey
+};
+	m_wndDept.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT fld1 as id, fld2 as name FROM tbl WHERE 1=1 %s ORDER BY id "), szWhere
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndDept.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CSignatureSetupDialog::OnDeptAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+void CSignatureSetupDialog::OnUserSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CSignatureSetupDialog::OnUserSelendok(){
+	 
+}
+/*void CSignatureSetupDialog::OnUserSetfocus(){
+	
+}*/
+/*void CSignatureSetupDialog::OnUserKillfocus(){
+	
+}*/
+long CSignatureSetupDialog::OnUserLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndUser.IsSearchKey() && !m_szUserKey.IsEmpty()){
+		szWhere.Format(_T(" and su_userid='%s' "), m_szUserKey);
+	};
+	szWhere.AppendFormat(L" and su_deptid='%s' and nvl(su_sign_userid,'XX') = 'XX' ", m_szDeptKey);
+	m_wndUser.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT su_userid as id, su_name as name, su_sign_userid as sign_id FROM sys_user WHERE su_isactive='Y' %s ORDER BY su_userid "), szWhere);
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndUser.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), 
+			rs.GetValue(_T("sign_id")),
+			NULL);
+		rs.MoveNext();
+	}
+
+	return nCount;
+
+	return 0;
+}
+/*void CSignatureSetupDialog::OnUserAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+/*void CSignatureSetupDialog::OnSignIDChange(){
+	
+} */
+/*void CSignatureSetupDialog::OnSignIDSetfocus(){
+	
+} */
+/*void CSignatureSetupDialog::OnSignIDKillfocus(){
+	
+} */
+int CSignatureSetupDialog::OnSignIDCheckValue(){
+	CMainFrame* pMF = (CMainFrame*)AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+/*
+	szSQL.Format(L"SELECT count(*) FROM sys_user WHERE su_signature_id='%s' and su_userid <> '%s'", m_szSignID, m_szUserKey);
+	rs.ExecSQL(szSQL);
+	int count = str2int(rs.GetStringValue()));
+	if (count > 0)
+	{
+	}
+*/
+	return 0;
+} 
+void CSignatureSetupDialog::OnSignFileSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CSignatureSetupDialog::OnSignFileSelendok(){
+	CMainFrame* pMF = (CMainFrame*)AfxGetMainWnd();
+	UpdateData(true);
+	CString szFile;
+	szFile.Format(_T("%s\\images\\%s"), pMF->GetCurrentDirectory(), m_szSignFileKey);
+	m_wndSignImage.SetFileName(szFile);
+	m_wndSignImage.RedrawWindow();
+	UpdateData(FALSE);
+}
+/*void CSignatureSetupDialog::OnSignFileSetfocus(){
+	
+}*/
+/*void CSignatureSetupDialog::OnSignFileKillfocus(){
+	
+}*/
+long CSignatureSetupDialog::OnSignFileLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndSignFile.IsSearchKey() && !m_szSignFileKey.IsEmpty()){
+	 szWhere.Format(_T(" and id='%s' "), m_szSignFileKey
+};
+	m_wndSignFile.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT fld1 as id, fld2 as name FROM tbl WHERE 1=1 %s ORDER BY id "), szWhere
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndSignFile.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+
+
+	
+	CFileFind finder;
+	m_wndSignFile.DeleteAllItems();
+
+	if (m_wndSignFile.IsSearchKey() && !m_szSignFileKey.IsEmpty()) {
+		
+		m_wndSignFile.AddItems(m_szSignFileKey, NULL);
+		return 1;
+		
+	};
+	CString tmpStr;
+	tmpStr.Format(_T("%s\\images\\*.png"), pMF->GetCurrentDirectory());
+	BOOL bWorking = finder.FindFile(tmpStr);
+
+	while (bWorking)
+	{
+		bWorking = finder.FindNextFile();
+		m_wndSignFile.AddItems(finder.GetFileName(), NULL);
+	}
+	finder.Close();
+	return 0;
+}
+/*void CSignatureSetupDialog::OnSignFileAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+void CSignatureSetupDialog::OnSignFile2SelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CSignatureSetupDialog::OnSignFile2Selendok(){
+	CMainFrame* pMF = (CMainFrame*)AfxGetMainWnd();
+	UpdateData(true);
+	CString szFile;
+	szFile.Format(_T("%s\\images\\%s"), pMF->GetCurrentDirectory(), m_szSignFile2Key);
+	m_wndSignImage2.SetFileName(szFile);
+	m_wndSignImage2.RedrawWindow();
+	UpdateData(FALSE);
+	 
+}
+/*void CSignatureSetupDialog::OnSignFile2Setfocus(){
+	
+}*/
+/*void CSignatureSetupDialog::OnSignFile2Killfocus(){
+	
+}*/
+long CSignatureSetupDialog::OnSignFile2LoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndSignFile2.IsSearchKey() && !m_szSignFile2Key.IsEmpty()){
+	 szWhere.Format(_T(" and id='%s' "), m_szSignFile2Key
+};
+	m_wndSignFile2.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT fld1 as id, fld2 as name FROM tbl WHERE 1=1 %s ORDER BY id "), szWhere
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndSignFile2.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+
+	CFileFind finder;
+	m_wndSignFile2.DeleteAllItems();
+
+	if (m_wndSignFile2.IsSearchKey() && !m_szSignFile2Key.IsEmpty()) {
+
+		m_wndSignFile2.AddItems(m_szSignFile2Key, NULL);
+		return 1;
+
+	};
+
+	CString tmpStr;
+	tmpStr.Format(_T("%s\\images\\*.png"), pMF->GetCurrentDirectory());
+	BOOL bWorking = finder.FindFile(tmpStr);
+
+	while (bWorking)
+	{
+		bWorking = finder.FindNextFile();
+		m_wndSignFile2.AddItems(finder.GetFileName(), NULL);
+	}
+	finder.Close();
+
+	return 0;
+}
+/*void CSignatureSetupDialog::OnSignFile2AddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+void CSignatureSetupDialog::OnApplySelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+	OnSaveSignatureSetupDialog();
+
+} 
+void CSignatureSetupDialog::OnCloseSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CGuiDialog::OnCancel();
+} 
+int CSignatureSetupDialog::OnAddSignatureSetupDialog(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)
+ 		return -1;
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd();
+ 	SetMode(VM_ADD);
+	return 0;
+}
+int CSignatureSetupDialog::OnEditSignatureSetupDialog(){
+ 	if(GetMode() != VM_VIEW)
+ 		return -1;
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd();
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CSignatureSetupDialog::OnDeleteSignatureSetupDialog(){
+ 	if(GetMode() != VM_VIEW)
+ 		return -1;
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd();
+ 	CString szSQL;
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO)
+ 		return -1;
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") );
+ 	int ret = pMF->ExecSQL(szSQL);
+ 	if(ret >= 0){
+ 		SetMode(VM_NONE);
+ 		OnCancelSignatureSetupDialog();
+ 	}
+	return 0;
+}
+int CSignatureSetupDialog::OnSaveSignatureSetupDialog(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT)
+ 		return -1;
+ 	if(!IsValidateData())
+ 		return -1;
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd();
+ 	CString szSQL;
+	if (m_szSignFileKey.IsEmpty())
+	{
+		ShowMessageBox(L"Yêu cầu chọn file chữ ký");
+		return -1;
+	}
+	szSQL.Format(_T("UPDATE sys_user SET su_sign_userid='%s' WHERE su_userid='%s'"), m_szSignID, m_szUserKey);
+ 	int ret = pMF->ExecSQL(szSQL);
+
+ 	if(ret > 0)
+ 	{
+		CString szFileName;
+		szFileName.Format(_T("HMS_%s.jpg"), m_szUserKey);
+		bool res = false;
+		if (!m_wndSignImage.GetFileName().IsEmpty())
+			res = pMF->lo_import(szFileName, m_wndSignImage.GetFileName());
+		else
+			pMF->lo_unlink(szFileName);
+		if (res)
+		{
+			szFileName.Format(_T("HMS_%s_s.jpg"), m_szUserKey);
+			if(!m_wndSignImage2.GetFileName().IsEmpty())
+				res = pMF->lo_import(szFileName, m_wndSignImage2.GetFileName());
+			else
+				pMF->lo_unlink(szFileName);
+		}
+ 		SetMode(VM_ADDCHILD);
+		//CGuiDialog::OnOK();
+ 	}
+ 	else
+ 	{
+		ShowMessageBox(L"Lỗi không thể cập nhật chứng thư số");
+ 	}
+ 	return ret;
+ 	return 0;
+}
+int CSignatureSetupDialog::OnCancelSignatureSetupDialog(){
+ 	if(GetMode() == VM_EDIT)
+ 	{
+ 		SetMode(VM_VIEW);
+ 	} 
+ 	else 
+ 	{
+ 		SetMode(VM_NONE);
+ 	} 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd();
+ 	return 0;
+} 
+int CSignatureSetupDialog::OnSignatureSetupDialogListLoadData(){
+	return 0;
+}

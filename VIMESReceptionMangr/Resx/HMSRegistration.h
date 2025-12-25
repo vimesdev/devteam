@@ -1,0 +1,341 @@
+#ifndef HMSREGISTRATION_H
+#define HMSREGISTRATION_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hoang Van Hay, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+class CHMSRegistration : public CGuiView{
+protected:
+public:
+	CGuiGroupBox	m_wndProfiles;
+	CGuiGroupBox	m_wndPatientObject;
+	CGuiGroupBox	m_wndExaminationInformation;
+	CGuiGroupBox	m_wndTransferInformation;
+	CGuiGroupBox	m_wndRoomsInformation;
+	CGuiGroupBox	m_wndExaminationList;
+	CGuiListCtrl	m_wndRoomList;
+	CGuiListCtrl	m_wndExamList;
+	CGuiLabel		m_wndPatientNoLabel;
+	CGuiNumberCtrl	m_wndPatientNo;
+	CGuiLabel		m_wndDocumentNoLabel;
+	CGuiNumberCtrl	m_wndDocumentNo;
+	CGuiLabel		m_wndCardNoFindLabel;
+	CGuiTextCtrl	m_wndCardNoFind;
+	CGuiLabel		m_wndPatientNameLabel;
+	CGuiTextCtrl	m_wndPatientName;
+	CGuiLabel		m_wndAgeLabel;
+	CGuiTextCtrl	m_wndAge;
+	CGuiDateCtrl	m_wndBirthDate;
+	CGuiLabel		m_wndSexLabel;
+	CGuiComboBox	m_wndSex;
+	CGuiLabel		m_wndEthnicLabel;
+	CGuiComboBox	m_wndEthnic;
+	CGuiLabel		m_wndOccupationLabel;
+	CGuiComboBox	m_wndOccupation;
+	CGuiLabel		m_wndProvillLabel;
+	CGuiComboBox	m_wndProvill;
+	CGuiLabel		m_wndDistrictLabel;
+	CGuiComboBox	m_wndDistrict;
+	CGuiLabel		m_wndVillageLabel;
+	CGuiComboBox	m_wndVillage;
+	CGuiTextCtrl	m_wndDetailAddress;
+	CGuiLabel		m_wndIDNoLabel;
+	CGuiTextCtrl	m_wndIDNo;
+	CGuiLabel		m_wndWorkingPlaceLabel;
+	CGuiTextCtrl	m_wndWorkingPlace;
+	CGuiLabel		m_wndPhoneLabel;
+	CGuiTextCtrl	m_wndPhone;
+	CGuiLabel		m_wndRankLabel;
+	CGuiComboBox	m_wndRank;
+	CGuiTextCtrl	m_wndRelative;
+	CGuiLabel		m_wndPositionLabel;
+	CGuiComboBox	m_wndPosition;
+	CGuiLabel		m_wndContactAddressLabel;
+	CGuiTextCtrl	m_wndContactAddress;
+	CGuiButton		m_wndWorkPlaceButton;
+	CGuiLabel		m_wndObjectLabel;
+	CGuiComboBox	m_wndObject;
+	CGuiLabel		m_wndCardNoLabel;
+	CGuiMaskCtrl	m_wndCardNo;
+	CGuiButton		m_wndCardNoButton;
+	CGuiLabel		m_wndPatientStateLabel;
+	CGuiComboBox	m_wndPatientState;
+	CGuiLabel		m_wndExamDateLabel;
+	CGuiDateTimeCtrl	m_wndExamDate;
+	CGuiLabel		m_wndSheetNoLabel;
+	CGuiTextCtrl	m_wndSheetNo;
+	CGuiLabel		m_wndExamTypeLabel;
+	CGuiComboBox	m_wndExamType;
+	CGuiLabel		m_wndRoomLabel;
+	CGuiComboBox	m_wndRoom;
+	CGuiLabel		m_wndHospitalLabel;
+	CGuiCheckBox	m_wndTransfer;
+	CGuiComboBox	m_wndHospital;
+	CGuiLabel		m_wndDiseaseLabel;
+	CGuiTextCtrl	m_wndDisease;
+	CGuiLabel		m_wndExaminePerWeekLabel;
+	CGuiNumberCtrl	m_wndExaminePerWeek;
+	CGuiLabel		m_wndExaminePerMonthLabel;
+	CGuiNumberCtrl	m_wndExaminePerMonth;
+	CGuiCheckBox	m_wndAppointReexamine;
+	CGuiDateCtrl	m_wndAppointReexamineDate;
+	CGuiLabel		m_wndAmountDepositLabel;
+	CGuiNumberCtrl	m_wndAmountDeposit;
+	CGuiButton		m_wndAddNew;
+	CGuiButton		m_wndEdit;
+	CGuiButton		m_wndDelete;
+	CGuiButton		m_wndSave;
+	CGuiButton		m_wndCancel;
+	CGuiButton		m_wndPrint;
+	long	m_nPatientNo;
+	long	m_nDocumentNo;
+	CString	m_szCardNoFind;
+	CString	m_szPatientName;
+	CString	m_szAge;
+	CString	m_szBirthDate;
+	CString	m_szSexKey;
+	CString	m_szEthnicKey;
+	CString	m_szOccupationKey;
+	CString	m_szProvillKey;
+	CString	m_szDistrictKey;
+	CString	m_szVillageKey;
+	CString	m_szDetailAddress;
+	CString	m_szIDNo;
+	CString	m_szWorkingPlace;
+	CString	m_szPhone;
+	CString	m_szRankKey;
+	CString	m_szRelative;
+	CString	m_szPositionKey;
+	CString	m_szContactAddress;
+	CString	m_szObjectKey;
+	CString	m_szCardNo;
+	CString	m_szPatientStateKey;
+	CString	m_szExamDate;
+	CString	m_szSheetNo;
+	CString	m_szExamTypeKey;
+	CString	m_szRoomKey;
+	BOOL	m_bTransfer;
+	CString	m_szHospitalKey;
+	CString	m_szDisease;
+	long	m_nExaminePerWeek;
+	long	m_nExaminePerMonth;
+	BOOL	m_bAppointReexamine;
+	CString	m_szAppointReexamineDate;
+	long	m_nAmountDeposit;
+	long			OnRoomListLoadData(); 
+	void			OnRoomListSelectChange(int nOldItem, int nNewItem); 
+	void			OnRoomListDblClick(); 
+	int			OnRoomListDeleteItem(); 
+	long			OnExamListLoadData(); 
+	void			OnExamListSelectChange(int nOldItem, int nNewItem); 
+	void			OnExamListDblClick(); 
+	int			OnExamListDeleteItem(); 
+	//void			OnPatientNoChange(); 
+	//void			OnPatientNoSetfocus(); 
+	//void			OnPatientNoKillfocus(); 
+	int			OnPatientNoCheckValue(); 
+	//void			OnDocumentNoChange(); 
+	//void			OnDocumentNoSetfocus(); 
+	//void			OnDocumentNoKillfocus(); 
+	int			OnDocumentNoCheckValue(); 
+	//void			OnCardNoFindChange(); 
+	//void			OnCardNoFindSetfocus(); 
+	//void			OnCardNoFindKillfocus(); 
+	int			OnCardNoFindCheckValue(); 
+	//void			OnPatientNameChange(); 
+	//void			OnPatientNameSetfocus(); 
+	//void			OnPatientNameKillfocus(); 
+	int			OnPatientNameCheckValue(); 
+	//void			OnAgeChange(); 
+	//void			OnAgeSetfocus(); 
+	//void			OnAgeKillfocus(); 
+	int			OnAgeCheckValue(); 
+	//void			OnBirthDateChange(); 
+	//void			OnBirthDateSetfocus(); 
+	//void			OnBirthDateKillfocus(); 
+	int			OnBirthDateCheckValue(); 
+	void			OnSexSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnSexSelendok(); 
+	//void			OnSexSetfocus(); 
+	//void			OnSexKillfocus(); 
+	long			OnSexLoadData(); 
+	//void			OnSexAddNew(); 
+	void			OnEthnicSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnEthnicSelendok(); 
+	//void			OnEthnicSetfocus(); 
+	//void			OnEthnicKillfocus(); 
+	long			OnEthnicLoadData(); 
+	//void			OnEthnicAddNew(); 
+	void			OnOccupationSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnOccupationSelendok(); 
+	//void			OnOccupationSetfocus(); 
+	//void			OnOccupationKillfocus(); 
+	long			OnOccupationLoadData(); 
+	//void			OnOccupationAddNew(); 
+	void			OnProvillSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnProvillSelendok(); 
+	//void			OnProvillSetfocus(); 
+	//void			OnProvillKillfocus(); 
+	long			OnProvillLoadData(); 
+	//void			OnProvillAddNew(); 
+	void			OnDistrictSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnDistrictSelendok(); 
+	//void			OnDistrictSetfocus(); 
+	//void			OnDistrictKillfocus(); 
+	long			OnDistrictLoadData(); 
+	//void			OnDistrictAddNew(); 
+	void			OnVillageSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnVillageSelendok(); 
+	//void			OnVillageSetfocus(); 
+	//void			OnVillageKillfocus(); 
+	long			OnVillageLoadData(); 
+	//void			OnVillageAddNew(); 
+	//void			OnDetailAddressChange(); 
+	//void			OnDetailAddressSetfocus(); 
+	//void			OnDetailAddressKillfocus(); 
+	int			OnDetailAddressCheckValue(); 
+	//void			OnIDNoChange(); 
+	//void			OnIDNoSetfocus(); 
+	//void			OnIDNoKillfocus(); 
+	int			OnIDNoCheckValue(); 
+	//void			OnWorkingPlaceChange(); 
+	//void			OnWorkingPlaceSetfocus(); 
+	//void			OnWorkingPlaceKillfocus(); 
+	int			OnWorkingPlaceCheckValue(); 
+	//void			OnPhoneChange(); 
+	//void			OnPhoneSetfocus(); 
+	//void			OnPhoneKillfocus(); 
+	int			OnPhoneCheckValue(); 
+	void			OnRankSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnRankSelendok(); 
+	//void			OnRankSetfocus(); 
+	//void			OnRankKillfocus(); 
+	long			OnRankLoadData(); 
+	//void			OnRankAddNew(); 
+	//void			OnRelativeChange(); 
+	//void			OnRelativeSetfocus(); 
+	//void			OnRelativeKillfocus(); 
+	int			OnRelativeCheckValue(); 
+	void			OnPositionSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnPositionSelendok(); 
+	//void			OnPositionSetfocus(); 
+	//void			OnPositionKillfocus(); 
+	long			OnPositionLoadData(); 
+	//void			OnPositionAddNew(); 
+	//void			OnContactAddressChange(); 
+	//void			OnContactAddressSetfocus(); 
+	//void			OnContactAddressKillfocus(); 
+	int			OnContactAddressCheckValue(); 
+	void			OnWorkPlaceButtonSelect(); 
+	void			OnObjectSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnObjectSelendok(); 
+	//void			OnObjectSetfocus(); 
+	//void			OnObjectKillfocus(); 
+	long			OnObjectLoadData(); 
+	//void			OnObjectAddNew(); 
+	//void			OnCardNoChange(); 
+	//void			OnCardNoSetfocus(); 
+	//void			OnCardNoKillfocus(); 
+	int			OnCardNoCheckValue(); 
+	void			OnCardNoButtonSelect(); 
+	void			OnPatientStateSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnPatientStateSelendok(); 
+	//void			OnPatientStateSetfocus(); 
+	//void			OnPatientStateKillfocus(); 
+	long			OnPatientStateLoadData(); 
+	//void			OnPatientStateAddNew(); 
+	//void			OnExamDateChange(); 
+	//void			OnExamDateSetfocus(); 
+	//void			OnExamDateKillfocus(); 
+	int			OnExamDateCheckValue(); 
+	//void			OnSheetNoChange(); 
+	//void			OnSheetNoSetfocus(); 
+	//void			OnSheetNoKillfocus(); 
+	int			OnSheetNoCheckValue(); 
+	void			OnExamTypeSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnExamTypeSelendok(); 
+	//void			OnExamTypeSetfocus(); 
+	//void			OnExamTypeKillfocus(); 
+	long			OnExamTypeLoadData(); 
+	//void			OnExamTypeAddNew(); 
+	void			OnRoomSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnRoomSelendok(); 
+	//void			OnRoomSetfocus(); 
+	//void			OnRoomKillfocus(); 
+	long			OnRoomLoadData(); 
+	//void			OnRoomAddNew(); 
+	void			OnTransferSelect(); 
+	void			OnHospitalSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnHospitalSelendok(); 
+	//void			OnHospitalSetfocus(); 
+	//void			OnHospitalKillfocus(); 
+	long			OnHospitalLoadData(); 
+	//void			OnHospitalAddNew(); 
+	//void			OnDiseaseChange(); 
+	//void			OnDiseaseSetfocus(); 
+	//void			OnDiseaseKillfocus(); 
+	int			OnDiseaseCheckValue(); 
+	//void			OnExaminePerWeekChange(); 
+	//void			OnExaminePerWeekSetfocus(); 
+	//void			OnExaminePerWeekKillfocus(); 
+	int			OnExaminePerWeekCheckValue(); 
+	//void			OnExaminePerMonthChange(); 
+	//void			OnExaminePerMonthSetfocus(); 
+	//void			OnExaminePerMonthKillfocus(); 
+	int			OnExaminePerMonthCheckValue(); 
+	void			OnAppointReexamineSelect(); 
+	//void			OnAppointReexamineDateChange(); 
+	//void			OnAppointReexamineDateSetfocus(); 
+	//void			OnAppointReexamineDateKillfocus(); 
+	int			OnAppointReexamineDateCheckValue(); 
+	//void			OnAmountDepositChange(); 
+	//void			OnAmountDepositSetfocus(); 
+	//void			OnAmountDepositKillfocus(); 
+	int			OnAmountDepositCheckValue(); 
+	void			OnAddNewSelect(); 
+	void			OnEditSelect(); 
+	void			OnDeleteSelect(); 
+	void			OnSaveSelect(); 
+	void			OnCancelSelect(); 
+	void			OnPrintSelect(); 
+	CHMSRegistration();
+	~CHMSRegistration();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddHMSRegistration(); 
+	int OnEditHMSRegistration(); 
+	int OnDeleteHMSRegistration(); 
+	int OnSaveHMSRegistration(); 
+	int OnCancelHMSRegistration(); 
+	int OnHMSRegistrationListLoadData(); 
+};
+#endif

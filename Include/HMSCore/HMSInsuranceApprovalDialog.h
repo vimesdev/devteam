@@ -1,0 +1,202 @@
+#ifndef HMSINSURANCEAPPROVALDIALOG_H
+#define HMSINSURANCEAPPROVALDIALOG_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright(C) Viet Nam Medical Software Join Stock Company. 2005-2010. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hay Hoang Van, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2010.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiDialog.h"
+#include "DbField.h"
+
+class CHMSInsuranceApprovalDialog : public CGuiDialog{
+protected:
+public:
+	
+
+	long	m_nDocumentNo;
+	long	m_nInvoiceNo;
+	int		m_nInsRate;
+	
+	CString		m_szDepartments;
+	CString		m_szStatus;
+
+	CGuiGroupBox	m_wndGeneralCost;
+	CGuiListCtrl	m_wndList;
+	CGuiLabel		m_wndReceiptDateLabel;
+	CGuiDateCtrl	m_wndReceiptDate;
+	CGuiLabel		m_wndStaffLabel;
+	CGuiTextCtrl	m_wndStaff;
+	CGuiLabel		m_wndSerialNoLabel;
+	CGuiTextCtrl	m_wndSerialNo;
+	CGuiLabel		m_wndReceiptNoLabel;
+	CGuiNumberCtrl	m_wndReceiptNo;
+	CGuiLabel		m_wndDepartmentLabel;
+	CGuiComboBox	m_wndDepartment;
+
+	CGuiLabel		m_wndTotalPolicyLabel;
+	CGuiNumberCtrl	m_wndTotalPolicy;
+	
+	CGuiLabel		m_wndTotalCostLabel;
+	CGuiNumberCtrl	m_wndTotalCost;
+	CGuiLabel		m_wndTotalInsCostLabel;
+	CGuiNumberCtrl	m_wndTotalInsCost;
+	CGuiLabel		m_wndTotalInsPaidLabel;
+	CGuiNumberCtrl	m_wndTotalInsPaid;
+
+	CGuiLabel		m_wndTotalPatPaidLabel;
+	CGuiNumberCtrl	m_wndTotalPatPaid;
+	CGuiLabel		m_wndTotalDiffPaidLabel;
+	CGuiNumberCtrl	m_wndTotalDiffPaid;
+	CGuiLabel		m_wndTotalPayableLabel;
+	CGuiNumberCtrl	m_wndTotalPayable;
+
+	CGuiLabel		m_wndTotalDepositLabel;
+	CGuiNumberCtrl	m_wndTotalDeposit;
+	CGuiLabel		m_wndTotalDiscountLabel;
+	CGuiNumberCtrl	m_wndTotalDiscount;
+	CGuiLabel		m_wndSumABLabel;
+	CGuiNumberCtrl	m_wndSumAB;
+
+	CGuiLabel		m_wndTotalPaymentLabel;
+	CGuiNumberCtrl	m_wndTotalPayment;
+
+
+
+	
+	CGuiButton		m_wndApproval;
+	CGuiButton		m_wndCancel;
+	CGuiButton		m_wndPrintReceipt;
+	CGuiButton		m_wndClose;
+
+
+	CString	m_szReceiptDate;
+	CString	m_szStaff;
+	CString	m_szSerialNo;
+	long	m_nReceiptNo;
+	CString	m_szDepartmentKey;
+
+	double	m_nTotalCost;
+	double	m_nTotalInsCost;
+	double	m_nTotalInsPaid;
+	double	m_nTotalDiffPaid;
+	double	m_nTotalPatPaid;
+	double	m_nTotalDeposit;
+	double	m_nTotalPayable;
+	double	m_nSumAB;
+	double	m_nTotalDiscount;
+	double	m_nTotalPolicy;
+	double	m_nTotalPayment;
+
+	BOOL	m_bDifferenceChargeFlag;
+	BOOL	m_bPatientChargeFlag;
+
+	long			OnListLoadData(); 
+	void			OnListSelectChange(int nOldItem, int nNewItem); 
+	void			OnListDblClick(); 
+	int			OnListDeleteItem(); 
+	//void			OnReceiptDateChange(); 
+	//void			OnReceiptDateSetfocus(); 
+	//void			OnReceiptDateKillfocus(); 
+	int			OnReceiptDateCheckValue(); 
+	//void			OnStaffChange(); 
+	//void			OnStaffSetfocus(); 
+	//void			OnStaffKillfocus(); 
+	int			OnStaffCheckValue(); 
+	//void			OnSerialNoChange(); 
+	//void			OnSerialNoSetfocus(); 
+	//void			OnSerialNoKillfocus(); 
+	int			OnSerialNoCheckValue(); 
+	//void			OnReceiptNoChange(); 
+	//void			OnReceiptNoSetfocus(); 
+	//void			OnReceiptNoKillfocus(); 
+	int			OnReceiptNoCheckValue(); 
+	void			OnDepartmentSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnDepartmentSelendok(); 
+	//void			OnDepartmentSetfocus(); 
+	//void			OnDepartmentKillfocus(); 
+	long			OnDepartmentLoadData(); 
+	void			OnDepartmentAddNew();
+	//void			OnTotalPolicyChange(); 
+	//void			OnTotalPolicySetfocus(); 
+	//void			OnTotalPolicyKillfocus(); 
+	int			OnTotalPolicyCheckValue(); 
+	void			OnAddPolicySelect();
+	//void			OnTotalCostChange(); 
+	//void			OnTotalCostSetfocus(); 
+	//void			OnTotalCostKillfocus(); 
+	int			OnTotalCostCheckValue(); 
+	//void			OnTotalDepositChange(); 
+	//void			OnTotalDepositSetfocus(); 
+	//void			OnTotalDepositKillfocus(); 
+	int			OnTotalDepositCheckValue(); 
+	//void			OnTotalDiscountChange(); 
+	//void			OnTotalDiscountSetfocus(); 
+	//void			OnTotalDiscountKillfocus(); 
+	int			OnTotalDiscountCheckValue(); 
+	//void			OnInsPaidChange(); 
+	//void			OnInsPaidSetfocus(); 
+	//void			OnInsPaidKillfocus(); 
+	int			OnInsPaidCheckValue(); 
+	//void			OnTotalPatPaidChange(); 
+	//void			OnTotalPatPaidSetfocus(); 
+	//void			OnTotalPatPaidKillfocus(); 
+	int			OnTotalPatPaidCheckValue(); 
+	//void			OnTotalPayableChange(); 
+	//void			OnTotalPayableSetfocus(); 
+	//void			OnTotalPayableKillfocus(); 
+	int			OnTotalPayableCheckValue(); 
+	void			OnDifferenceChargeSelect(); 
+	void			OnApprovalSelect(); 
+	void			OnCancelSelect(); 
+	void			OnPrintReceiptSelect(); 
+	void			OnCloseSelect(); 
+	CHMSInsuranceApprovalDialog(CWnd *pParent);
+	~CHMSInsuranceApprovalDialog();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddHMSInsuranceApprovalDialog(); 
+	int OnEditHMSInsuranceApprovalDialog(); 
+	int OnDeleteHMSInsuranceApprovalDialog(); 
+	int OnSaveHMSInsuranceApprovalDialog(); 
+	int OnCancelHMSInsuranceApprovalDialog(); 
+	int OnHMSInsuranceApprovalDialogListLoadData(); 
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
+
+	int OnViewDrugMaterial();
+	void	LoadFeeList(CGuiListCtrl* pList, long nDocumentNo, long nInvoiceNo,
+		double& nTotalCost, double&  nTotalInsCost, double& nTotalInsPaid, 
+		double& nTotalDiffCost, double& nTotalPatPaid, double& nTotalPayable, CString szFilter=_T(""), long nInsInvoice=0);
+	
+	void		PrintServiceDischargeReceiptFromInvoice(long nInvoiceNo);
+	void		PrintInsuranceDischargeReceiptFromInvoice(long nInvoiceNo);
+	void		PrintPolicyDischargeReceiptFromInvoice(long nInvoiceNo);
+	void		PrintDischargeReceiptFromInvoice(long nInvoiceNo, bool bDetailForCost=true, bool bInsObject=false);
+
+};
+#endif

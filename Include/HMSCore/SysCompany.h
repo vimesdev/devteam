@@ -1,0 +1,104 @@
+#ifndef SYSCOMPANY_H
+#define SYSCOMPANY_H
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+class AFX_EXT_CLASS CSysCompanySetup : public CGuiView{
+protected:
+public:
+	CGuiGroupBox	m_wndCompanyInformations;
+	CGuiLabel		m_wndIDLabel;
+	CGuiTextCtrl	m_wndID;
+	CGuiLabel		m_wndTypeLabel;
+	CGuiComboBox	m_wndType;
+	CGuiLabel		m_wndNameLabel;
+	CGuiTextCtrl	m_wndName;
+	CGuiLabel		m_wndProvillLabel;
+	CGuiComboBox	m_wndProvill;
+	CGuiLabel		m_wndDistrictLabel;
+	CGuiComboBox	m_wndDistrict;
+	CGuiLabel		m_wndAddressLabel;
+	CGuiTextCtrl	m_wndAddress;
+	CGuiLabel		m_wndPhoneLabel;
+	CGuiTextCtrl	m_wndPhone;
+	CGuiLabel		m_wndWebsiteLabel;
+	CGuiTextCtrl	m_wndWebsite;
+	CGuiLabel		m_wndEmailLabel;
+	CGuiTextCtrl	m_wndEmail;
+	CGuiButton		m_wndUpdate;
+	CGuiButton		m_wndSave;
+	CGuiButton		m_wndCancel;
+	CString	m_szID;
+	CString	m_szTypeKey;
+	CString	m_szName;
+	CString	m_szProvillKey;
+	CString	m_szDistrictKey;
+	CString	m_szAddress;
+	CString	m_szPhone;
+	CString	m_szWebsite;
+	CString	m_szEmail;
+	CDbfMap	m_sys_companyTbl;
+	//int			OnIDChange(); 
+	//int			OnIDSetfocus(); 
+	//int			OnIDKillfocus(); 
+	int			OnIDCheckValue(); 
+	int			OnTypeSelectChange(int nOldItemSel, int nNewItemSel); 
+	int			OnTypeSelendok(); 
+	//int			OnTypeSetfocus(); 
+	//int			OnTypeKillfocus(); 
+	int			OnTypeLoadData(); 
+	int			OnTypeAddNew(); 
+	//int			OnNameChange(); 
+	//int			OnNameSetfocus(); 
+	//int			OnNameKillfocus(); 
+	int			OnNameCheckValue(); 
+	int			OnProvillSelectChange(int nOldItemSel, int nNewItemSel); 
+	int			OnProvillSelendok(); 
+	//int			OnProvillSetfocus(); 
+	//int			OnProvillKillfocus(); 
+	int			OnProvillLoadData(); 
+	int			OnProvillAddNew(); 
+	int			OnDistrictSelectChange(int nOldItemSel, int nNewItemSel); 
+	int			OnDistrictSelendok(); 
+	//int			OnDistrictSetfocus(); 
+	//int			OnDistrictKillfocus(); 
+	int			OnDistrictLoadData(); 
+	int			OnDistrictAddNew(); 
+	//int			OnAddressChange(); 
+	//int			OnAddressSetfocus(); 
+	//int			OnAddressKillfocus(); 
+	int			OnAddressCheckValue(); 
+	//int			OnPhoneChange(); 
+	//int			OnPhoneSetfocus(); 
+	//int			OnPhoneKillfocus(); 
+	int			OnPhoneCheckValue(); 
+	//int			OnWebsiteChange(); 
+	//int			OnWebsiteSetfocus(); 
+	//int			OnWebsiteKillfocus(); 
+	int			OnWebsiteCheckValue(); 
+	//int			OnEmailChange(); 
+	//int			OnEmailSetfocus(); 
+	//int			OnEmailKillfocus(); 
+	int			OnEmailCheckValue(); 
+	int			OnUpdateSelect(); 
+	int			OnSaveSelect(); 
+	int			OnCancelSelect(); 
+	CSysCompanySetup();
+	~CSysCompanySetup();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddVIMESCompany(); 
+	int OnEditVIMESCompany(); 
+	int OnDeleteVIMESCompany(); 
+	int OnSaveVIMESCompany(); 
+	int OnCancelVIMESCompany(); 
+	int OnVIMESCompanyListLoadData(); 
+	void Refresh();
+};
+#endif

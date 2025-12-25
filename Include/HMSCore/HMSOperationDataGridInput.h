@@ -1,0 +1,111 @@
+#ifndef HMSOPERATIONDATAGRIDINPUT_H
+#define HMSOPERATIONDATAGRIDINPUT_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012.
+//	All rights reserved.
+//	This program is protected by Viet nam and international treaties.
+//	Unauthorized reproduction or distribution of this program,
+//	or any portion of it, may result in severe civil and criminal penalties,
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hoang Van Hay, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan
+//men nay se 	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi
+//da dung theo Luat qui dinh. 	File nay la mot phan cua thu vien lap trinh(GUI).
+//Ban quyen cua Hoang Van Hay. 2006-2008 	THONG TIN LIEN HE: 	Email  :
+//hayhv@vimes.com.vn hoac hayhv@yahoo.com 	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "DbField.h"
+#include "GuiDialog.h"
+#include "GuiUtils.h"
+
+typedef struct sColInfo
+{
+    CString szID;
+    CString szName;
+    int nType;
+    CString szIsKey;
+    int nIndex;
+    int nWidth;
+} SColInfo;
+
+typedef struct sHeaderInfo
+{
+    CString szTitle;
+    int nFromCol;
+    int nToCol;
+} SHeaderInfo;
+
+class AFX_EXT_CLASS CHMSOperationDataGridInput : public CGuiDialog
+{
+protected:
+    bool m_bLoadToday;
+public:
+    bool m_bInitEditControl;
+    bool m_bListEndPoint;
+
+    CArray<SColInfo, SColInfo> m_arCols;
+    CArray<SHeaderInfo, SHeaderInfo> m_arColGroups;
+    CString m_szFormID;
+    CString m_szDatablockID;
+    long m_nOrderID;
+    long m_nTemplateID;
+
+    CGuiGroupBox m_wndDataGrid;
+    CGuiListCtrlEx m_wndList;
+    CGuiButton m_wndAdd;
+    CGuiButton m_wndConfirm;
+    CGuiButton m_wndClose;
+    long OnListLoadData();
+    void OnListSelectChange(int nOldItem, int nNewItem);
+    void OnListDblClick();
+    int OnListDeleteItem();
+    void OnAddSelect();
+    void OnConfirmSelect();
+    void OnCloseSelect();
+    CHMSOperationDataGridInput(CWnd *pParent);
+    ~CHMSOperationDataGridInput();
+    void OnCreateComponents();
+    void OnInitializeComponents();
+    void OnSetWindowEvents();
+    void OnDoDataExchange(CDataExchange *pDX);
+    void UpdateJson(BOOL bSaveAndValidate);
+    void GetDataToScreen();
+    void GetScreenToData();
+    void SetDefaultValues();
+    int SetMode(int nMode);
+    void SetDefaultNewLine(int nItem);
+
+    void InitCols();
+    void OnInitEditControl();
+    long OnListComboLoadData();
+    void OnListComboSelendok();
+    void OnListTextSetFocus();
+    void OnListComboSetFocus();
+    void OnListTextKillFocus();
+    void OnListComboKillFocus();
+    int OnListTextCheckValue();
+    void OnListComboCheckValue();
+
+    bool CheckListEndPoint();
+    void SendListEndSignal();
+    void AutoHScroll();
+    void InitHeader();
+
+    int OnAddHMSOperationDataGridInput();
+    int OnEditHMSOperationDataGridInput();
+    int OnDeleteHMSOperationDataGridInput();
+    int OnSaveHMSOperationDataGridInput();
+    int OnCancelHMSOperationDataGridInput();
+    int OnHMSOperationDataGridInputListLoadData();
+    virtual BOOL PreTranslateMessage(MSG *pMsg);
+};
+#endif

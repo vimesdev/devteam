@@ -1,0 +1,163 @@
+#ifndef HMSSURGERYOPERATIONORDER_H
+#define HMSSURGERYOPERATIONORDER_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright(C) Medical Informatics Technology and Equipment Join Stock Company. 2008-2010. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hay Hoang Van, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@miteco.com.vn or hayhv@yahoo.com
+//	Website: http://www.miteco.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Thiet Bi va Cong Nghe Tin Hoc Y Te MITECO 2008-2010.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@miteco.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.miteco.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiView.h"
+#include "DbField.h"
+class CHMSSurgeryOperationOrder : public CGuiView{
+protected:
+public:
+	CGuiGroupBox	m_wndSurgery_OperationInformation;
+	CGuiListCtrl	m_wndOrderList;
+	CGuiLabel		m_wndRoomLabel;
+	CGuiTextCtrl	m_wndRoom;
+	CGuiLabel		m_wndOrderDateLabel;
+	CGuiDateTimeCtrl	m_wndOrderDate;
+	CGuiLabel		m_wndPerformDeptLabel;
+	CGuiComboBox	m_wndPerformDept;
+	CGuiLabel		m_wndPerformDateLabel;
+	CGuiDateTimeCtrl	m_wndPerformDate;
+	CGuiLabel		m_wndNameLabel;
+	CGuiComboBox	m_wndName;
+	CGuiLabel		m_wndInsensibleMethodLabel;
+	CGuiTextCtrl	m_wndInsensibleMethod;
+	CGuiLabel		m_wndAfterSOLabel;
+	CGuiTextCtrl	m_wndBeforeSO;
+	CGuiLabel		m_wndBeforeSOLabel;
+	CGuiTextCtrl	m_wndAfterSO;
+	CGuiLabel		m_wndSurgeonLabel;
+	CGuiComboBox	m_wndPractitioner;
+	CGuiLabel		m_wndAnesthetistLabel;
+	CGuiComboBox	m_wndAnesthetist;
+	CGuiLabel		m_wndAssistantLabel;
+	CGuiComboBox	m_wndAssistant;
+	CGuiLabel		m_wndNoteLabel;
+	CGuiTextCtrl	m_wndNote;
+	CGuiButton		m_wndAdd;
+	CGuiButton		m_wndDelete;
+	CGuiButton		m_wndSave;
+	CGuiButton		m_wndCancel;
+	CGuiButton		m_wndConfirm;
+	CGuiButton		m_wndPrint;
+	CString	m_szRoom;
+	CString	m_szOrderDate;
+	CString	m_szPerformDeptKey;
+	CString	m_szPerformDate;
+	CString	m_szNameKey;
+	CString	m_szInsensibleMethod;
+	CString	m_szBeforeSO;
+	CString	m_szAfterSO;
+	CString	m_szPractitionerKey;
+	CString	m_szAnesthetistKey;
+	CString	m_szAssistantKey;
+	CString	m_szNote;
+	CDbfMap	m_hms_soperationTbl;
+	long			OnOrderListLoadData(); 
+	void			OnOrderListSelectChange(int nOldItem, int nNewItem); 
+	void			OnOrderListDblClick(); 
+	int			OnOrderListDeleteItem(); 
+	//void			OnRoomChange(); 
+	//void			OnRoomSetfocus(); 
+	//void			OnRoomKillfocus(); 
+	int			OnRoomCheckValue(); 
+	//void			OnOrderDateChange(); 
+	//void			OnOrderDateSetfocus(); 
+	//void			OnOrderDateKillfocus(); 
+	int			OnOrderDateCheckValue(); 
+	void			OnPerformDeptSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnPerformDeptSelendok(); 
+	//void			OnPerformDeptSetfocus(); 
+	//void			OnPerformDeptKillfocus(); 
+	long			OnPerformDeptLoadData(); 
+	void			OnPerformDeptAddNew(); 
+	//void			OnPerformDateChange(); 
+	//void			OnPerformDateSetfocus(); 
+	//void			OnPerformDateKillfocus(); 
+	int			OnPerformDateCheckValue(); 
+	void			OnNameSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnNameSelendok(); 
+	//void			OnNameSetfocus(); 
+	//void			OnNameKillfocus(); 
+	long			OnNameLoadData(); 
+	void			OnNameAddNew(); 
+	//void			OnInsensibleMethodChange(); 
+	//void			OnInsensibleMethodSetfocus(); 
+	//void			OnInsensibleMethodKillfocus(); 
+	int			OnInsensibleMethodCheckValue(); 
+	//void			OnBeforeSOChange(); 
+	//void			OnBeforeSOSetfocus(); 
+	//void			OnBeforeSOKillfocus(); 
+	int			OnBeforeSOCheckValue(); 
+	//void			OnAfterSOChange(); 
+	//void			OnAfterSOSetfocus(); 
+	//void			OnAfterSOKillfocus(); 
+	int			OnAfterSOCheckValue(); 
+	void			OnPractitionerSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnPractitionerSelendok(); 
+	//void			OnPractitionerSetfocus(); 
+	//void			OnPractitionerKillfocus(); 
+	long			OnPractitionerLoadData(); 
+	void			OnPractitionerAddNew(); 
+	void			OnAnesthetistSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnAnesthetistSelendok(); 
+	//void			OnAnesthetistSetfocus(); 
+	//void			OnAnesthetistKillfocus(); 
+	long			OnAnesthetistLoadData(); 
+	void			OnAnesthetistAddNew(); 
+	void			OnAssistantSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnAssistantSelendok(); 
+	//void			OnAssistantSetfocus(); 
+	//void			OnAssistantKillfocus(); 
+	long			OnAssistantLoadData(); 
+	void			OnAssistantAddNew(); 
+	//void			OnNoteChange(); 
+	//void			OnNoteSetfocus(); 
+	//void			OnNoteKillfocus(); 
+	int			OnNoteCheckValue(); 
+	void			OnAddSelect(); 
+	void			OnDeleteSelect(); 
+	void			OnSaveSelect(); 
+	void			OnCancelSelect(); 
+	void			OnConfirmSelect(); 
+	void			OnPrintSelect(); 
+	CHMSSurgeryOperationOrder();
+	~CHMSSurgeryOperationOrder();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddHMSSurgeryOperationOrder(); 
+	int OnEditHMSSurgeryOperationOrder(); 
+	int OnDeleteHMSSurgeryOperationOrder(); 
+	int OnSaveHMSSurgeryOperationOrder(); 
+	int OnCancelHMSSurgeryOperationOrder(); 
+	int OnHMSSurgeryOperationOrderListLoadData(); 
+};
+#endif

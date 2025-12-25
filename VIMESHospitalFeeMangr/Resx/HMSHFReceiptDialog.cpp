@@ -1,0 +1,475 @@
+#include "HMSHFReceiptDialog.h"
+#include "MainFrm.h"
+static void _OnSerialNoSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CHMSHFReceiptDialog* )pWnd)->OnSerialNoSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnSerialNoSelendokFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnSerialNoSelendok();
+}
+/*static void _OnSerialNoSetfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnSerialNoKillfocus();
+}*/
+/*static void _OnSerialNoKillfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnSerialNoKillfocus();
+}*/
+static long _OnSerialNoLoadDataFnc(CWnd *pWnd){
+	return ((CHMSHFReceiptDialog *)pWnd)->OnSerialNoLoadData();
+}
+/*static void _OnSerialNoAddNewFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnSerialNoAddNew();
+}*/
+/*static void _OnInvoiceNoChangeFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnInvoiceNoChange();
+} */
+/*static void _OnInvoiceNoSetfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnInvoiceNoSetfocus();} */ 
+/*static void _OnInvoiceNoKillfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnInvoiceNoKillfocus();
+} */
+static int _OnInvoiceNoCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFReceiptDialog *)pWnd)->OnInvoiceNoCheckValue();
+} 
+/*static void _OnInvoiceDateChangeFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnInvoiceDateChange();
+} */
+/*static void _OnInvoiceDateSetfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnInvoiceDateSetfocus();} */ 
+/*static void _OnInvoiceDateKillfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnInvoiceDateKillfocus();
+} */
+static int _OnInvoiceDateCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFReceiptDialog *)pWnd)->OnInvoiceDateCheckValue();
+} 
+/*static void _OnAmountChangeFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnAmountChange();
+} */
+/*static void _OnAmountSetfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnAmountSetfocus();} */ 
+/*static void _OnAmountKillfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnAmountKillfocus();
+} */
+static int _OnAmountCheckValueFnc(CWnd *pWnd){
+	return ((CHMSHFReceiptDialog *)pWnd)->OnAmountCheckValue();
+} 
+static void _OnDescriptionSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CHMSHFReceiptDialog* )pWnd)->OnDescriptionSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnDescriptionSelendokFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnDescriptionSelendok();
+}
+/*static void _OnDescriptionSetfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnDescriptionKillfocus();
+}*/
+/*static void _OnDescriptionKillfocusFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnDescriptionKillfocus();
+}*/
+static long _OnDescriptionLoadDataFnc(CWnd *pWnd){
+	return ((CHMSHFReceiptDialog *)pWnd)->OnDescriptionLoadData();
+}
+/*static void _OnDescriptionAddNewFnc(CWnd *pWnd){
+	((CHMSHFReceiptDialog *)pWnd)->OnDescriptionAddNew();
+}*/
+static void _OnPrintReceiptSelectFnc(CWnd *pWnd){
+	 ((CHMSHFReceiptDialog*)pWnd)->OnPrintReceiptSelect();
+}
+static void _OnOKSelectFnc(CWnd *pWnd){
+	CHMSHFReceiptDialog *pVw = (CHMSHFReceiptDialog *)pWnd;
+	pVw->OnOKSelect();
+} 
+static void _OnCancelSelectFnc(CWnd *pWnd){
+	CHMSHFReceiptDialog *pVw = (CHMSHFReceiptDialog *)pWnd;
+	pVw->OnCancelSelect();
+} 
+static int _OnAddHMSHFReceiptDialogFnc(CWnd *pWnd){
+	 return ((CHMSHFReceiptDialog*)pWnd)->OnAddHMSHFReceiptDialog();
+} 
+static int _OnEditHMSHFReceiptDialogFnc(CWnd *pWnd){
+	 return ((CHMSHFReceiptDialog*)pWnd)->OnEditHMSHFReceiptDialog();
+} 
+static int _OnDeleteHMSHFReceiptDialogFnc(CWnd *pWnd){
+	 return ((CHMSHFReceiptDialog*)pWnd)->OnDeleteHMSHFReceiptDialog();
+} 
+static int _OnSaveHMSHFReceiptDialogFnc(CWnd *pWnd){
+	 return ((CHMSHFReceiptDialog*)pWnd)->OnSaveHMSHFReceiptDialog();
+} 
+static int _OnCancelHMSHFReceiptDialogFnc(CWnd *pWnd){
+	 return ((CHMSHFReceiptDialog*)pWnd)->OnCancelHMSHFReceiptDialog();
+} 
+CHMSHFReceiptDialog::CHMSHFReceiptDialog(CWnd *pParent):
+	CGuiDialog(pParent){
+
+	m_nDlgWidth = 405;
+	m_nDlgHeight = 160;
+	SetDefaultValues();
+}
+CHMSHFReceiptDialog::~CHMSHFReceiptDialog(){
+}
+void CHMSHFReceiptDialog::OnCreateComponents(){
+	m_wndReceiptInformation.Create(this, _T("Receipt Information"), 5, 5, 400, 120);
+	m_wndSerialNoLabel.Create(this, _T("Serial No"), 10, 30, 110, 55);
+	m_wndSerialNo.Create(this,115, 30, 205, 55); 
+	m_wndInvoiceNoLabel.Create(this, _T("Invoice No"), 210, 30, 300, 55);
+	m_wndInvoiceNo.Create(this,305, 30, 395, 55); 
+	m_wndInvoiceDateLabel.Create(this, _T("Invoice Date"), 10, 60, 110, 85);
+	m_wndInvoiceDate.Create(this,115, 60, 205, 85); 
+	m_wndAmountLabel.Create(this, _T("Amount"), 210, 60, 300, 85);
+	m_wndAmount.Create(this,305, 60, 395, 85); 
+	m_wndDescriptionLabel.Create(this, _T("Description"), 10, 90, 110, 115);
+	m_wndDescription.Create(this,115, 90, 395, 115); 
+	m_wndPrintReceipt.Create(this, _T("&Print Receipt"), 10, 125, 110, 150);
+	m_wndOK.Create(this, _T("&OK"), 235, 125, 315, 150);
+	m_wndCancel.Create(this, _T("&Cancel"), 320, 125, 400, 150);
+
+}
+void CHMSHFReceiptDialog::OnInitializeComponents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	EnableControls(FALSE);
+	//EnableButtons(TRUE, 0, -1);
+	m_wndSerialNo.SetCheckValue(true);
+	m_wndSerialNo.LimitText(35);
+	m_wndInvoiceNo.SetCheckValue(true);
+	m_wndInvoiceDate.SetMax(CDate(pMF->GetSysDate()));
+	m_wndInvoiceDate.SetCheckValue(true);
+	m_wndAmount.SetLimitText(655362);
+	m_wndAmount.SetCheckValue(true);
+	m_wndDescription.SetCheckValue(true);
+	m_wndDescription.LimitText(254);
+
+
+	m_wndSerialNo.InsertColumn(0, _T("ID"), CFMT_NUMBER, 50);
+	m_wndSerialNo.InsertColumn(1, _T("Name"), CFMT_TEXT, 200);
+
+
+	m_wndDescription.InsertColumn(0, _T("ID"), CFMT_NUMBER, 50);
+	m_wndDescription.InsertColumn(1, _T("Description"), CFMT_TEXT, 220);
+	m_hms_xfeeTbl.SetTableName(_T("hms_xfee"));
+	m_hms_xfeeTbl.AddField(_T("haf_deptid"), dfText, 7); 
+	m_hms_xfeeTbl.AddField(_T("haf_roomid"), dfLong); 
+	m_hms_xfeeTbl.AddField(_T("haf_bedid"), dfLong); 
+	m_hms_xfeeTbl.AddField(_T("haf_invoiceno"), dfLong); 
+	m_hms_xfeeTbl.AddField(_T("haf_amount"), dfDouble); 
+	m_hms_xfeeTbl.AddField(_T("haf_desc"), dfText, 254); 
+	m_hms_invfeeTbl.SetTableName(_T("hms_invfee"));
+	m_hms_invfeeTbl.AddField(_T("hif_createdby"), dfText, 15); 
+	m_hms_invfeeTbl.AddField(_T("hif_createddate"), dfDateTime); 
+	m_hms_invfeeTbl.AddField(_T("hif_updatedby"), dfText, 15); 
+	m_hms_invfeeTbl.AddField(_T("hif_updateddate"), dfDateTime); 
+	m_hms_invfeeTbl.AddField(_T("hif_patientno"), dfLong); 
+	m_hms_invfeeTbl.AddField(_T("hif_docno"), dfLong); 
+	m_hms_invfeeTbl.AddField(_T("hif_invoiceno"), dfLong); 
+	m_hms_invfeeTbl.AddField(_T("hif_type"), dfText, 1); 
+	m_hms_invfeeTbl.AddField(_T("hif_class"), dfText, 1); 
+	m_hms_invfeeTbl.AddField(_T("hif_category"), dfText, 1); 
+	m_hms_invfeeTbl.AddField(_T("hf_object"), dfText, 1); 
+	m_hms_invfeeTbl.AddField(_T("hf_cardidx"), dfLong); 
+	m_hms_invfeeTbl.AddField(_T("hif_status"), dfText, 1); 
+	m_hms_invfeeTbl.AddField(_T("hif_deskno"), dfLong); 
+	m_hms_invfeeTbl.AddField(_T("hif_bookno"), dfText, 7); 
+	m_hms_invfeeTbl.AddField(_T("hif_serialno"), dfText, 7); 
+	m_hms_invfeeTbl.AddField(_T("hif_recvno"), dfLong); 
+	m_hms_invfeeTbl.AddField(_T("hif_recvdate"), dfDateTime); 
+	m_hms_invfeeTbl.AddField(_T("hif_recveiver"), dfText, 15); 
+	m_hms_invfeeTbl.AddField(_T("hif_locked"), dfText, 1); 
+	m_hms_invfeeTbl.AddField(_T("hif_lockeddate"), dfDateTime); 
+	m_hms_invfeeTbl.AddField(_T("hif_locker"), dfText, 15); 
+	m_hms_invfeeTbl.AddField(_T("hif_posted"), dfText, 1); 
+	m_hms_invfeeTbl.AddField(_T("hif_posteddate"), dfDateTime); 
+	m_hms_invfeeTbl.AddField(_T("hif_poster"), dfText, 15); 
+	m_hms_invfeeTbl.AddField(_T("hif_desc"), dfText, 254); 
+
+}
+void CHMSHFReceiptDialog::OnSetWindowEvents(){
+	m_wndSerialNo.SetEvent(WE_SELENDOK, _OnSerialNoSelendokFnc);
+	//m_wndSerialNo.SetEvent(WE_SETFOCUS, _OnSerialNoSetfocusFnc);
+	//m_wndSerialNo.SetEvent(WE_KILLFOCUS, _OnSerialNoKillfocusFnc);
+	m_wndSerialNo.SetEvent(WE_SELCHANGE, _OnSerialNoSelectChangeFnc);
+	m_wndSerialNo.SetEvent(WE_LOADDATA, _OnSerialNoLoadDataFnc);
+	//m_wndSerialNo.SetEvent(WE_ADDNEW, _OnSerialNoAddNewFnc);
+	//m_wndInvoiceNo.SetEvent(WE_CHANGE, _OnInvoiceNoChangeFnc);
+	//m_wndInvoiceNo.SetEvent(WE_SETFOCUS, _OnInvoiceNoSetfocusFnc);
+	//m_wndInvoiceNo.SetEvent(WE_KILLFOCUS, _OnInvoiceNoKillfocusFnc);
+	m_wndInvoiceNo.SetEvent(WE_CHECKVALUE, _OnInvoiceNoCheckValueFnc);
+	//m_wndInvoiceDate.SetEvent(WE_CHANGE, _OnInvoiceDateChangeFnc);
+	//m_wndInvoiceDate.SetEvent(WE_SETFOCUS, _OnInvoiceDateSetfocusFnc);
+	//m_wndInvoiceDate.SetEvent(WE_KILLFOCUS, _OnInvoiceDateKillfocusFnc);
+	m_wndInvoiceDate.SetEvent(WE_CHECKVALUE, _OnInvoiceDateCheckValueFnc);
+	//m_wndAmount.SetEvent(WE_CHANGE, _OnAmountChangeFnc);
+	//m_wndAmount.SetEvent(WE_SETFOCUS, _OnAmountSetfocusFnc);
+	//m_wndAmount.SetEvent(WE_KILLFOCUS, _OnAmountKillfocusFnc);
+	m_wndAmount.SetEvent(WE_CHECKVALUE, _OnAmountCheckValueFnc);
+	m_wndDescription.SetEvent(WE_SELENDOK, _OnDescriptionSelendokFnc);
+	//m_wndDescription.SetEvent(WE_SETFOCUS, _OnDescriptionSetfocusFnc);
+	//m_wndDescription.SetEvent(WE_KILLFOCUS, _OnDescriptionKillfocusFnc);
+	m_wndDescription.SetEvent(WE_SELCHANGE, _OnDescriptionSelectChangeFnc);
+	m_wndDescription.SetEvent(WE_LOADDATA, _OnDescriptionLoadDataFnc);
+	//m_wndDescription.SetEvent(WE_ADDNEW, _OnDescriptionAddNewFnc);
+	m_wndPrintReceipt.SetEvent(WE_CLICK, _OnPrintReceiptSelectFnc);
+	m_wndOK.SetEvent(WE_CLICK, _OnOKSelectFnc);
+	m_wndCancel.SetEvent(WE_CLICK, _OnCancelSelectFnc);
+
+}
+void CHMSHFReceiptDialog::OnDoDataExchange(CDataExchange* pDX){
+	DDX_TextEx(pDX, m_wndSerialNo.GetDlgCtrlID(), m_szSerialNoKey);
+	DDX_Text(pDX, m_wndInvoiceNo.GetDlgCtrlID(), m_nInvoiceNo);
+	DDX_TextEx(pDX, m_wndInvoiceDate.GetDlgCtrlID(), m_szInvoiceDate);
+	DDX_Text(pDX, m_wndAmount.GetDlgCtrlID(), m_nAmount);
+	DDX_TextEx(pDX, m_wndDescription.GetDlgCtrlID(), m_szDescriptionKey);
+	DDX_Check(pDX, m_wndPrintReceipt.GetDlgCtrlID(), m_bPrintReceipt);
+
+}
+void CHMSHFReceiptDialog::GetDataToScreen(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+	rs.GetValue(_T("haf_invoiceno"), m_nInvoiceNo);
+	rs.GetValue(_T("haf_amount"), m_nAmount);
+	rs.GetValue(_T("haf_desc"), m_szDescriptionKey);
+
+}
+void CHMSHFReceiptDialog::GetScreenToData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	m_hms_xfeeTbl.SetValue(_T("haf_invoiceno"), m_nInvoiceNo);
+	m_hms_xfeeTbl.SetValue(_T("haf_amount"), m_nAmount);
+	m_hms_xfeeTbl.SetValue(_T("haf_desc"), m_szDescriptionKey);
+	m_hms_invfeeTbl.SetValue(_T("hif_createdby"), pMF->GetCurrentUser());
+	m_hms_invfeeTbl.SetValue(_T("hif_createddate"), pMF->GetSysDateTime());
+	m_hms_invfeeTbl.SetValue(_T("hif_updatedby"), pMF->GetCurrentUser());
+	m_hms_invfeeTbl.SetValue(_T("hif_updateddate"), pMF->GetSysDateTime());
+
+}
+void CHMSHFReceiptDialog::SetDefaultValues(){
+
+	m_szSerialNoKey.Empty();
+	m_nInvoiceNo=0;
+	m_szInvoiceDate.Empty();
+	m_nAmount=0;
+	m_szDescriptionKey.Empty();
+	m_bPrintReceipt=FALSE;
+
+}
+int CHMSHFReceiptDialog::SetMode(int nMode){
+ 		int nOldMode = GetMode(); 
+ 		CGuiDialog::SetMode(nMode); 
+ 		CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 		CString szSQL; 
+ 		CRecord rs(&pMF->m_db); 
+  		switch(nMode){ 
+ 		case VM_ADD: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			break; 
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(FALSE, 3, 4, -1); 
+ 			break; 
+ 		case VM_NONE: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(TRUE, 0, 6, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		}; 
+ 		UpdateData(FALSE); 
+ 		return nOldMode; 
+}
+void CHMSHFReceiptDialog::OnSerialNoSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CHMSHFReceiptDialog::OnSerialNoSelendok(){
+	 
+}
+/*void CHMSHFReceiptDialog::OnSerialNoSetfocus(){
+	
+}*/
+/*void CHMSHFReceiptDialog::OnSerialNoKillfocus(){
+	
+}*/
+long CHMSHFReceiptDialog::OnSerialNoLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndSerialNo.IsSearchKey() && !m_szSerialNoKey.IsEmpty()){
+	};
+	m_wndSerialNo.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndSerialNo.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CHMSHFReceiptDialog::OnSerialNoAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+/*void CHMSHFReceiptDialog::OnInvoiceNoChange(){
+	
+} */
+/*void CHMSHFReceiptDialog::OnInvoiceNoSetfocus(){
+	
+} */
+/*void CHMSHFReceiptDialog::OnInvoiceNoKillfocus(){
+	
+} */
+int CHMSHFReceiptDialog::OnInvoiceNoCheckValue(){
+	return 0;
+} 
+/*void CHMSHFReceiptDialog::OnInvoiceDateChange(){
+	
+} */
+/*void CHMSHFReceiptDialog::OnInvoiceDateSetfocus(){
+	
+} */
+/*void CHMSHFReceiptDialog::OnInvoiceDateKillfocus(){
+	
+} */
+int CHMSHFReceiptDialog::OnInvoiceDateCheckValue(){
+	return 0;
+} 
+/*void CHMSHFReceiptDialog::OnAmountChange(){
+	
+} */
+/*void CHMSHFReceiptDialog::OnAmountSetfocus(){
+	
+} */
+/*void CHMSHFReceiptDialog::OnAmountKillfocus(){
+	
+} */
+int CHMSHFReceiptDialog::OnAmountCheckValue(){
+	return 0;
+} 
+void CHMSHFReceiptDialog::OnDescriptionSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CHMSHFReceiptDialog::OnDescriptionSelendok(){
+	 
+}
+/*void CHMSHFReceiptDialog::OnDescriptionSetfocus(){
+	
+}*/
+/*void CHMSHFReceiptDialog::OnDescriptionKillfocus(){
+	
+}*/
+long CHMSHFReceiptDialog::OnDescriptionLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndDescription.IsSearchKey() && !m_szDescriptionKey.IsEmpty()){
+	};
+	m_wndDescription.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndDescription.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("description")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CHMSHFReceiptDialog::OnDescriptionAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+	void CHMSHFReceiptDialog::OnPrintReceiptSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+void CHMSHFReceiptDialog::OnOKSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CHMSHFReceiptDialog::OnCancelSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CHMSHFReceiptDialog::OnAddHMSHFReceiptDialog(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)  
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_ADD);
+	return 0; 
+}
+int CHMSHFReceiptDialog::OnEditHMSHFReceiptDialog(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CHMSHFReceiptDialog::OnDeleteHMSHFReceiptDialog(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO) 
+ 		return -1; 
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") ); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret >= 0){ 
+ 		SetMode(VM_NONE); 
+ 		OnCancelHMSHFReceiptDialog(); 
+ 	}
+	return 0;
+}
+int CHMSHFReceiptDialog::OnSaveHMSHFReceiptDialog(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT) 
+ 		return -1; 
+ 	if(!IsValidateData()) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(GetMode() == VM_ADD){ 
+ 		//szSQL = m_hms_xfeeTbl.GetInsertSQL(); 
+ 	} 
+ 	else if(GetMode() == VM_EDIT){ 
+ 		CString szWhere; 
+ 		szWhere.Format(_T(" WHERE")); 
+ 		//szSQL = m_hms_xfeeTbl.GetUpdateSQL(_T("createdby,createddate")); 
+ 		szSQL += szWhere; 
+ 	} 
+ _fmsg(_T("%s"), szSQL); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret > 0) 
+ 	{ 
+ 		//OnHMSHFReceiptDialogListLoadData(); 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 	} 
+ 	return ret; 
+ 	return 0; 
+}
+int CHMSHFReceiptDialog::OnCancelHMSHFReceiptDialog(){
+ 	if(GetMode() == VM_EDIT) 
+ 	{ 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 		SetMode(VM_NONE); 
+ 	} 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	return 0;
+} 
+int CHMSHFReceiptDialog::OnHMSHFReceiptDialogListLoadData(){
+	return 0;
+}

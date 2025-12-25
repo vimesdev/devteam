@@ -1,0 +1,1138 @@
+#include "PCMSPatientProfile.h"
+#include "MainFrm.h"
+/*static void _OnDocumentNoChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDocumentNoChange();
+} */
+/*static void _OnDocumentNoSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDocumentNoSetfocus();} */ 
+/*static void _OnDocumentNoKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDocumentNoKillfocus();
+} */
+static int _OnDocumentNoCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnDocumentNoCheckValue();
+} 
+/*static void _OnBarcodeChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnBarcodeChange();
+} */
+/*static void _OnBarcodeSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnBarcodeSetfocus();} */ 
+/*static void _OnBarcodeKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnBarcodeKillfocus();
+} */
+static int _OnBarcodeCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnBarcodeCheckValue();
+} 
+/*static void _OnPatientNameChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPatientNameChange();
+} */
+/*static void _OnPatientNameSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPatientNameSetfocus();} */ 
+/*static void _OnPatientNameKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPatientNameKillfocus();
+} */
+static int _OnPatientNameCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnPatientNameCheckValue();
+} 
+/*static void _OnAgeChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnAgeChange();
+} */
+/*static void _OnAgeSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnAgeSetfocus();} */ 
+/*static void _OnAgeKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnAgeKillfocus();
+} */
+static int _OnAgeCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnAgeCheckValue();
+} 
+static void _OnSexSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CPCMSPatientProfile* )pWnd)->OnSexSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnSexSelendokFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnSexSelendok();
+}
+/*static void _OnSexSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnSexKillfocus();
+}*/
+/*static void _OnSexKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnSexKillfocus();
+}*/
+static long _OnSexLoadDataFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnSexLoadData();
+}
+/*static void _OnSexAddNewFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnSexAddNew();
+}*/
+/*static void _OnAddressChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnAddressChange();
+} */
+/*static void _OnAddressSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnAddressSetfocus();} */ 
+/*static void _OnAddressKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnAddressKillfocus();
+} */
+static int _OnAddressCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnAddressCheckValue();
+} 
+/*static void _OnDiagnosticChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDiagnosticChange();
+} */
+/*static void _OnDiagnosticSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDiagnosticSetfocus();} */ 
+/*static void _OnDiagnosticKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDiagnosticKillfocus();
+} */
+static int _OnDiagnosticCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnDiagnosticCheckValue();
+} 
+/*static void _OnOrderDateChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnOrderDateChange();
+} */
+/*static void _OnOrderDateSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnOrderDateSetfocus();} */ 
+/*static void _OnOrderDateKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnOrderDateKillfocus();
+} */
+static int _OnOrderDateCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnOrderDateCheckValue();
+} 
+static void _OnDoctorSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CPCMSPatientProfile* )pWnd)->OnDoctorSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnDoctorSelendokFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDoctorSelendok();
+}
+/*static void _OnDoctorSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDoctorKillfocus();
+}*/
+/*static void _OnDoctorKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDoctorKillfocus();
+}*/
+static long _OnDoctorLoadDataFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnDoctorLoadData();
+}
+/*static void _OnDoctorAddNewFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDoctorAddNew();
+}*/
+static void _OnDepartmentSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CPCMSPatientProfile* )pWnd)->OnDepartmentSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnDepartmentSelendokFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDepartmentSelendok();
+}
+/*static void _OnDepartmentSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDepartmentKillfocus();
+}*/
+/*static void _OnDepartmentKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDepartmentKillfocus();
+}*/
+static long _OnDepartmentLoadDataFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnDepartmentLoadData();
+}
+/*static void _OnDepartmentAddNewFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDepartmentAddNew();
+}*/
+static void _OnRoomSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CPCMSPatientProfile* )pWnd)->OnRoomSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnRoomSelendokFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnRoomSelendok();
+}
+/*static void _OnRoomSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnRoomKillfocus();
+}*/
+/*static void _OnRoomKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnRoomKillfocus();
+}*/
+static long _OnRoomLoadDataFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnRoomLoadData();
+}
+/*static void _OnRoomAddNewFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnRoomAddNew();
+}*/
+/*static void _OnPerformDateChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPerformDateChange();
+} */
+/*static void _OnPerformDateSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPerformDateSetfocus();} */ 
+/*static void _OnPerformDateKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPerformDateKillfocus();
+} */
+static int _OnPerformDateCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnPerformDateCheckValue();
+} 
+/*static void _OnPerformByChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPerformByChange();
+} */
+/*static void _OnPerformBySetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPerformBySetfocus();} */ 
+/*static void _OnPerformByKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnPerformByKillfocus();
+} */
+static int _OnPerformByCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnPerformByCheckValue();
+} 
+static void _OnObjectSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CPCMSPatientProfile* )pWnd)->OnObjectSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnObjectSelendokFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnObjectSelendok();
+}
+/*static void _OnObjectSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnObjectKillfocus();
+}*/
+/*static void _OnObjectKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnObjectKillfocus();
+}*/
+static long _OnObjectLoadDataFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnObjectLoadData();
+}
+/*static void _OnObjectAddNewFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnObjectAddNew();
+}*/
+static void _OnEmergecySelectFnc(CWnd *pWnd){
+	 ((CPCMSPatientProfile*)pWnd)->OnEmergecySelect();
+}
+static void _OnAddSelectFnc(CWnd *pWnd){
+	CPCMSPatientProfile *pVw = (CPCMSPatientProfile *)pWnd;
+	pVw->OnAddSelect();
+} 
+static void _OnEditSelectFnc(CWnd *pWnd){
+	CPCMSPatientProfile *pVw = (CPCMSPatientProfile *)pWnd;
+	pVw->OnEditSelect();
+} 
+static void _OnDeleteSelectFnc(CWnd *pWnd){
+	CPCMSPatientProfile *pVw = (CPCMSPatientProfile *)pWnd;
+	pVw->OnDeleteSelect();
+} 
+static void _OnSaveSelectFnc(CWnd *pWnd){
+	CPCMSPatientProfile *pVw = (CPCMSPatientProfile *)pWnd;
+	pVw->OnSaveSelect();
+} 
+static void _OnCancelSelectFnc(CWnd *pWnd){
+	CPCMSPatientProfile *pVw = (CPCMSPatientProfile *)pWnd;
+	pVw->OnCancelSelect();
+} 
+static void _OnAddEntrySelectFnc(CWnd *pWnd){
+	CPCMSPatientProfile *pVw = (CPCMSPatientProfile *)pWnd;
+	pVw->OnAddEntrySelect();
+} 
+/*static void _OnDateChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDateChange();
+} */
+/*static void _OnDateSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDateSetfocus();} */ 
+/*static void _OnDateKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnDateKillfocus();
+} */
+static int _OnDateCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnDateCheckValue();
+} 
+/*static void _OnSearchNameChangeFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnSearchNameChange();
+} */
+/*static void _OnSearchNameSetfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnSearchNameSetfocus();} */ 
+/*static void _OnSearchNameKillfocusFnc(CWnd *pWnd){
+	((CPCMSPatientProfile *)pWnd)->OnSearchNameKillfocus();
+} */
+static int _OnSearchNameCheckValueFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile *)pWnd)->OnSearchNameCheckValue();
+} 
+static long _OnPatientListLoadDataFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile*)pWnd)->OnPatientListLoadData();
+} 
+static void _OnPatientListDblClickFnc(CWnd *pWnd){
+	((CPCMSPatientProfile*)pWnd)->OnPatientListDblClick();
+} 
+static void _OnPatientListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CPCMSPatientProfile*)pWnd)->OnPatientListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnPatientListDeleteItemFnc(CWnd *pWnd){
+	 return ((CPCMSPatientProfile*)pWnd)->OnPatientListDeleteItem();
+} 
+static long _OnOrderListLoadDataFnc(CWnd *pWnd){
+	return ((CPCMSPatientProfile*)pWnd)->OnOrderListLoadData();
+} 
+static void _OnOrderListDblClickFnc(CWnd *pWnd){
+	((CPCMSPatientProfile*)pWnd)->OnOrderListDblClick();
+} 
+static void _OnOrderListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CPCMSPatientProfile*)pWnd)->OnOrderListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnOrderListDeleteItemFnc(CWnd *pWnd){
+	 return ((CPCMSPatientProfile*)pWnd)->OnOrderListDeleteItem();
+} 
+static int _OnAddPCMSPatientProfileFnc(CWnd *pWnd){
+	 return ((CPCMSPatientProfile*)pWnd)->OnAddPCMSPatientProfile();
+} 
+static int _OnEditPCMSPatientProfileFnc(CWnd *pWnd){
+	 return ((CPCMSPatientProfile*)pWnd)->OnEditPCMSPatientProfile();
+} 
+static int _OnDeletePCMSPatientProfileFnc(CWnd *pWnd){
+	 return ((CPCMSPatientProfile*)pWnd)->OnDeletePCMSPatientProfile();
+} 
+static int _OnSavePCMSPatientProfileFnc(CWnd *pWnd){
+	 return ((CPCMSPatientProfile*)pWnd)->OnSavePCMSPatientProfile();
+} 
+static int _OnCancelPCMSPatientProfileFnc(CWnd *pWnd){
+	 return ((CPCMSPatientProfile*)pWnd)->OnCancelPCMSPatientProfile();
+} 
+CPCMSPatientProfile::CPCMSPatientProfile(){
+
+	m_nDlgWidth = 1029;
+	m_nDlgHeight = 665;
+	SetDefaultValues();
+}
+CPCMSPatientProfile::~CPCMSPatientProfile(){
+}
+void CPCMSPatientProfile::OnCreateComponents(){
+	m_wndPatientProfile.Create(this, _T("Patient Profile"), 5, 5, 1020, 660);
+	m_wndSearchInformation.Create(this, _T("Search Information"), 10, 595, 415, 650);
+	m_wndDocumentNoLabel.Create(this, _T("DocumentNo"), 10, 30, 110, 55);
+	m_wndDocumentNo.Create(this,115, 30, 200, 55); 
+	m_wndBarcodeLabel.Create(this, _T("Barcode"), 205, 30, 290, 55);
+	m_wndBarcode.Create(this,295, 30, 415, 55); 
+	m_wndPatientNameLabel.Create(this, _T("Patient Name"), 10, 60, 110, 85);
+	m_wndPatientName.Create(this,115, 60, 415, 85); 
+	m_wndAgeLabel.Create(this, _T("Age"), 10, 90, 110, 115);
+	m_wndAge.Create(this,115, 90, 200, 115); 
+	m_wndSexLabel.Create(this, _T("Sex"), 205, 90, 290, 115);
+	m_wndSex.Create(this,295, 90, 415, 115); 
+	m_wndAddressLabel.Create(this, _T("Address"), 10, 120, 110, 145);
+	m_wndAddress.Create(this,115, 120, 415, 145); 
+	m_wndDiagnosticLabel.Create(this, _T("Diagnostic"), 10, 150, 110, 175);
+	m_wndDiagnostic.Create(this,115, 150, 415, 175); 
+	m_wndOrderDateLabel.Create(this, _T("Order Date"), 10, 180, 110, 205);
+	m_wndOrderDate.Create(this,115, 180, 200, 205); 
+	m_wndDoctorLabel.Create(this, _T("Doctor"), 205, 180, 290, 205);
+	m_wndDoctor.Create(this,296, 180, 416, 205); 
+	m_wndDepartmentLabel.Create(this, _T("Department"), 10, 210, 110, 235);
+	m_wndDepartment.Create(this,115, 210, 415, 235); 
+	m_wndRoomLabel.Create(this, _T("Room"), 10, 240, 110, 265);
+	m_wndRoom.Create(this,115, 240, 415, 265); 
+	m_wndPerformDateLabel.Create(this, _T("Perform Date"), 10, 270, 110, 295);
+	m_wndPerformDate.Create(this,115, 270, 200, 295); 
+	m_wndPerformByLabel.Create(this, _T("Perform By"), 205, 270, 290, 295);
+	m_wndPerformBy.Create(this,295, 270, 416, 295); 
+	m_wndObjectLabel.Create(this, _T("Object"), 10, 300, 110, 325);
+	m_wndObject.Create(this,115, 300, 200, 325); 
+	m_wndEmergecy.Create(this, _T("Emergecy"), 205, 300, 290, 325);
+	m_wndAdd.Create(this, _T("&Add"), 20, 330, 95, 355);
+	m_wndEdit.Create(this, _T("&Edit"), 100, 330, 175, 355);
+	m_wndDelete.Create(this, _T("&Delete"), 180, 330, 255, 355);
+	m_wndSave.Create(this, _T("&Save"), 260, 330, 335, 355);
+	m_wndCancel.Create(this, _T("&Cancel"), 340, 330, 415, 355);
+	m_wndAddEntry.Create(this, _T("&Add Entry"), 295, 300, 416, 325);
+	m_wndDateLabel.Create(this, _T("Date"), 15, 620, 95, 645);
+	m_wndDate.Create(this,100, 620, 185, 645); 
+	m_wndSearchNameLabel.Create(this, _T("Search Name"), 190, 620, 280, 645);
+	m_wndSearchName.Create(this,285, 620, 412, 645); 
+	m_wndPatientList.Create(this,10, 360, 415, 590); 
+	m_wndOrderList.Create(this,420, 30, 1015, 650); 
+
+}
+void CPCMSPatientProfile::OnInitializeComponents(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	EnableControls(FALSE);
+	//EnableButtons(TRUE, 0, -1);
+	m_wndDocumentNo.SetCheckValue(true);
+	m_wndBarcode.SetLimitText(35);
+	m_wndBarcode.SetCheckValue(true);
+	m_wndPatientName.SetLimitText(65);
+	m_wndPatientName.SetCheckValue(true);
+	m_wndAge.SetLimitText(15);
+	m_wndAge.SetCheckValue(true);
+	m_wndSex.SetCheckValue(true);
+	m_wndSex.LimitText(1);
+	m_wndAddress.SetLimitText(254);
+	m_wndAddress.SetCheckValue(true);
+	m_wndDiagnostic.SetLimitText(254);
+	m_wndDiagnostic.SetCheckValue(true);
+	m_wndOrderDate.SetMax(CDate(pMF->GetSysDate()));
+	m_wndOrderDate.SetCheckValue(true);
+	m_wndDoctor.SetCheckValue(true);
+	m_wndDoctor.LimitText(15);
+	m_wndDepartment.SetCheckValue(true);
+	m_wndDepartment.LimitText(7);
+	m_wndRoom.SetCheckValue(true);
+	m_wndPerformDate.SetMax(CDate(pMF->GetSysDate()));
+	m_wndPerformDate.SetCheckValue(true);
+	m_wndPerformBy.SetLimitText(15);
+	m_wndPerformBy.SetCheckValue(true);
+	m_wndObject.SetCheckValue(true);
+	m_wndDate.SetMax(CDate(pMF->GetSysDate()));
+	m_wndDate.SetCheckValue(true);
+	m_wndSearchName.SetLimitText(35);
+	m_wndSearchName.SetCheckValue(true);
+
+
+	m_wndSex.InsertColumn(0, _T("ID"), CFMT_NUMBER, 50);
+	m_wndSex.InsertColumn(1, _T("Description"), CFMT_TEXT, 150);
+
+
+	m_wndDoctor.InsertColumn(0, _T("ID"), CFMT_NUMBER, 50);
+	m_wndDoctor.InsertColumn(1, _T("Description"), CFMT_TEXT, 150);
+
+
+	m_wndDepartment.InsertColumn(0, _T("ID"), CFMT_NUMBER, 50);
+	m_wndDepartment.InsertColumn(1, _T("Description"), CFMT_TEXT, 150);
+
+
+	m_wndRoom.InsertColumn(0, _T("ID"), CFMT_NUMBER, 50);
+	m_wndRoom.InsertColumn(1, _T("Description"), CFMT_TEXT, 150);
+
+
+	m_wndObject.InsertColumn(0, _T("ID"), CFMT_NUMBER, 50);
+	m_wndObject.InsertColumn(1, _T("Description"), CFMT_TEXT, 150);
+
+
+	m_wndPatientList.InsertColumn(0, _T("SID"), CFMT_NUMBER, 70);
+	m_wndPatientList.InsertColumn(1, _T("Patient Name"), CFMT_TEXT, 200);
+	m_wndPatientList.InsertColumn(2, _T("Age"), CFMT_TEXT, 70);
+	m_wndPatientList.InsertColumn(3, _T("Sex"), CFMT_TEXT, 40);
+
+
+	m_wndOrderList.InsertColumn(0, _T("Index"), CFMT_NUMBER, 50);
+	m_wndOrderList.InsertColumn(1, _T("Test Name"), CFMT_TEXT, 200);
+	m_wndOrderList.InsertColumn(2, _T("Unit"), CFMT_TEXT, 65);
+	m_wndOrderList.InsertColumn(3, _T("Norm Index"), CFMT_TEXT, 120);
+	m_wndOrderList.InsertColumn(4, _T("Result"), CFMT_TEXT, 70);
+	m_wndOrderList.InsertColumn(5, _T("Note"), CFMT_TEXT, 70);
+	m_lims_orderTbl.SetTableName(_T("lims_order"));
+	m_lims_orderTbl.AddField(_T("limso_createdby"), dfText, 15); 
+	m_lims_orderTbl.AddField(_T("limso_createddate"), dfDateTime); 
+	m_lims_orderTbl.AddField(_T("limso_updatedby"), dfText, 15); 
+	m_lims_orderTbl.AddField(_T("limso_updateddate"), dfDateTime); 
+	m_lims_orderTbl.AddField(_T("limso_instid"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_machine"), dfText, 35); 
+	m_lims_orderTbl.AddField(_T("limso_oid"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_docno"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_refid"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_object"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_emergcy"), dfText, 1); 
+	m_lims_orderTbl.AddField(_T("limso_barcode"), dfText, 35); 
+	m_lims_orderTbl.AddField(_T("limso_tray"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_cup"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_rack"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_typeid"), dfText, 7); 
+	m_lims_orderTbl.AddField(_T("limso_groupid"), dfText, 3); 
+	m_lims_orderTbl.AddField(_T("limso_status"), dfText, 1); 
+	m_lims_orderTbl.AddField(_T("limso_pid"), dfText, 15); 
+	m_lims_orderTbl.AddField(_T("limso_pname"), dfText, 65); 
+	m_lims_orderTbl.AddField(_T("limso_birthdate"), dfDate); 
+	m_lims_orderTbl.AddField(_T("limso_age"), dfText, 15); 
+	m_lims_orderTbl.AddField(_T("limso_sex"), dfText, 1); 
+	m_lims_orderTbl.AddField(_T("limso_address"), dfText, 254); 
+	m_lims_orderTbl.AddField(_T("limso_phone"), dfText, 13); 
+	m_lims_orderTbl.AddField(_T("limso_occupation"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_diagnostic"), dfText, 254); 
+	m_lims_orderTbl.AddField(_T("limso_icd10"), dfText, 13); 
+	m_lims_orderTbl.AddField(_T("limso_doctorid"), dfText, 15); 
+	m_lims_orderTbl.AddField(_T("limso_orderdate"), dfDateTime); 
+	m_lims_orderTbl.AddField(_T("limso_orderdept"), dfText, 7); 
+	m_lims_orderTbl.AddField(_T("limso_orderroom"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_performdate"), dfDateTime); 
+	m_lims_orderTbl.AddField(_T("limso_performdept"), dfText, 7); 
+	m_lims_orderTbl.AddField(_T("limso_performroom"), dfLong); 
+	m_lims_orderTbl.AddField(_T("limso_performerid"), dfText, 15); 
+	m_lims_orderTbl.AddField(_T("limso_acceptby"), dfText, 15); 
+
+}
+void CPCMSPatientProfile::OnSetWindowEvents(){
+	//m_wndDocumentNo.SetEvent(WE_CHANGE, _OnDocumentNoChangeFnc);
+	//m_wndDocumentNo.SetEvent(WE_SETFOCUS, _OnDocumentNoSetfocusFnc);
+	//m_wndDocumentNo.SetEvent(WE_KILLFOCUS, _OnDocumentNoKillfocusFnc);
+	m_wndDocumentNo.SetEvent(WE_CHECKVALUE, _OnDocumentNoCheckValueFnc);
+	//m_wndBarcode.SetEvent(WE_CHANGE, _OnBarcodeChangeFnc);
+	//m_wndBarcode.SetEvent(WE_SETFOCUS, _OnBarcodeSetfocusFnc);
+	//m_wndBarcode.SetEvent(WE_KILLFOCUS, _OnBarcodeKillfocusFnc);
+	m_wndBarcode.SetEvent(WE_CHECKVALUE, _OnBarcodeCheckValueFnc);
+	//m_wndPatientName.SetEvent(WE_CHANGE, _OnPatientNameChangeFnc);
+	//m_wndPatientName.SetEvent(WE_SETFOCUS, _OnPatientNameSetfocusFnc);
+	//m_wndPatientName.SetEvent(WE_KILLFOCUS, _OnPatientNameKillfocusFnc);
+	m_wndPatientName.SetEvent(WE_CHECKVALUE, _OnPatientNameCheckValueFnc);
+	//m_wndAge.SetEvent(WE_CHANGE, _OnAgeChangeFnc);
+	//m_wndAge.SetEvent(WE_SETFOCUS, _OnAgeSetfocusFnc);
+	//m_wndAge.SetEvent(WE_KILLFOCUS, _OnAgeKillfocusFnc);
+	m_wndAge.SetEvent(WE_CHECKVALUE, _OnAgeCheckValueFnc);
+	m_wndSex.SetEvent(WE_SELENDOK, _OnSexSelendokFnc);
+	//m_wndSex.SetEvent(WE_SETFOCUS, _OnSexSetfocusFnc);
+	//m_wndSex.SetEvent(WE_KILLFOCUS, _OnSexKillfocusFnc);
+	m_wndSex.SetEvent(WE_SELCHANGE, _OnSexSelectChangeFnc);
+	m_wndSex.SetEvent(WE_LOADDATA, _OnSexLoadDataFnc);
+	//m_wndSex.SetEvent(WE_ADDNEW, _OnSexAddNewFnc);
+	//m_wndAddress.SetEvent(WE_CHANGE, _OnAddressChangeFnc);
+	//m_wndAddress.SetEvent(WE_SETFOCUS, _OnAddressSetfocusFnc);
+	//m_wndAddress.SetEvent(WE_KILLFOCUS, _OnAddressKillfocusFnc);
+	m_wndAddress.SetEvent(WE_CHECKVALUE, _OnAddressCheckValueFnc);
+	//m_wndDiagnostic.SetEvent(WE_CHANGE, _OnDiagnosticChangeFnc);
+	//m_wndDiagnostic.SetEvent(WE_SETFOCUS, _OnDiagnosticSetfocusFnc);
+	//m_wndDiagnostic.SetEvent(WE_KILLFOCUS, _OnDiagnosticKillfocusFnc);
+	m_wndDiagnostic.SetEvent(WE_CHECKVALUE, _OnDiagnosticCheckValueFnc);
+	//m_wndOrderDate.SetEvent(WE_CHANGE, _OnOrderDateChangeFnc);
+	//m_wndOrderDate.SetEvent(WE_SETFOCUS, _OnOrderDateSetfocusFnc);
+	//m_wndOrderDate.SetEvent(WE_KILLFOCUS, _OnOrderDateKillfocusFnc);
+	m_wndOrderDate.SetEvent(WE_CHECKVALUE, _OnOrderDateCheckValueFnc);
+	m_wndDoctor.SetEvent(WE_SELENDOK, _OnDoctorSelendokFnc);
+	//m_wndDoctor.SetEvent(WE_SETFOCUS, _OnDoctorSetfocusFnc);
+	//m_wndDoctor.SetEvent(WE_KILLFOCUS, _OnDoctorKillfocusFnc);
+	m_wndDoctor.SetEvent(WE_SELCHANGE, _OnDoctorSelectChangeFnc);
+	m_wndDoctor.SetEvent(WE_LOADDATA, _OnDoctorLoadDataFnc);
+	//m_wndDoctor.SetEvent(WE_ADDNEW, _OnDoctorAddNewFnc);
+	m_wndDepartment.SetEvent(WE_SELENDOK, _OnDepartmentSelendokFnc);
+	//m_wndDepartment.SetEvent(WE_SETFOCUS, _OnDepartmentSetfocusFnc);
+	//m_wndDepartment.SetEvent(WE_KILLFOCUS, _OnDepartmentKillfocusFnc);
+	m_wndDepartment.SetEvent(WE_SELCHANGE, _OnDepartmentSelectChangeFnc);
+	m_wndDepartment.SetEvent(WE_LOADDATA, _OnDepartmentLoadDataFnc);
+	//m_wndDepartment.SetEvent(WE_ADDNEW, _OnDepartmentAddNewFnc);
+	m_wndRoom.SetEvent(WE_SELENDOK, _OnRoomSelendokFnc);
+	//m_wndRoom.SetEvent(WE_SETFOCUS, _OnRoomSetfocusFnc);
+	//m_wndRoom.SetEvent(WE_KILLFOCUS, _OnRoomKillfocusFnc);
+	m_wndRoom.SetEvent(WE_SELCHANGE, _OnRoomSelectChangeFnc);
+	m_wndRoom.SetEvent(WE_LOADDATA, _OnRoomLoadDataFnc);
+	//m_wndRoom.SetEvent(WE_ADDNEW, _OnRoomAddNewFnc);
+	//m_wndPerformDate.SetEvent(WE_CHANGE, _OnPerformDateChangeFnc);
+	//m_wndPerformDate.SetEvent(WE_SETFOCUS, _OnPerformDateSetfocusFnc);
+	//m_wndPerformDate.SetEvent(WE_KILLFOCUS, _OnPerformDateKillfocusFnc);
+	m_wndPerformDate.SetEvent(WE_CHECKVALUE, _OnPerformDateCheckValueFnc);
+	//m_wndPerformBy.SetEvent(WE_CHANGE, _OnPerformByChangeFnc);
+	//m_wndPerformBy.SetEvent(WE_SETFOCUS, _OnPerformBySetfocusFnc);
+	//m_wndPerformBy.SetEvent(WE_KILLFOCUS, _OnPerformByKillfocusFnc);
+	m_wndPerformBy.SetEvent(WE_CHECKVALUE, _OnPerformByCheckValueFnc);
+	m_wndObject.SetEvent(WE_SELENDOK, _OnObjectSelendokFnc);
+	//m_wndObject.SetEvent(WE_SETFOCUS, _OnObjectSetfocusFnc);
+	//m_wndObject.SetEvent(WE_KILLFOCUS, _OnObjectKillfocusFnc);
+	m_wndObject.SetEvent(WE_SELCHANGE, _OnObjectSelectChangeFnc);
+	m_wndObject.SetEvent(WE_LOADDATA, _OnObjectLoadDataFnc);
+	//m_wndObject.SetEvent(WE_ADDNEW, _OnObjectAddNewFnc);
+	m_wndEmergecy.SetEvent(WE_CLICK, _OnEmergecySelectFnc);
+	m_wndAdd.SetEvent(WE_CLICK, _OnAddSelectFnc);
+	m_wndEdit.SetEvent(WE_CLICK, _OnEditSelectFnc);
+	m_wndDelete.SetEvent(WE_CLICK, _OnDeleteSelectFnc);
+	m_wndSave.SetEvent(WE_CLICK, _OnSaveSelectFnc);
+	m_wndCancel.SetEvent(WE_CLICK, _OnCancelSelectFnc);
+	m_wndAddEntry.SetEvent(WE_CLICK, _OnAddEntrySelectFnc);
+	//m_wndDate.SetEvent(WE_CHANGE, _OnDateChangeFnc);
+	//m_wndDate.SetEvent(WE_SETFOCUS, _OnDateSetfocusFnc);
+	//m_wndDate.SetEvent(WE_KILLFOCUS, _OnDateKillfocusFnc);
+	m_wndDate.SetEvent(WE_CHECKVALUE, _OnDateCheckValueFnc);
+	//m_wndSearchName.SetEvent(WE_CHANGE, _OnSearchNameChangeFnc);
+	//m_wndSearchName.SetEvent(WE_SETFOCUS, _OnSearchNameSetfocusFnc);
+	//m_wndSearchName.SetEvent(WE_KILLFOCUS, _OnSearchNameKillfocusFnc);
+	m_wndSearchName.SetEvent(WE_CHECKVALUE, _OnSearchNameCheckValueFnc);
+	m_wndPatientList.SetEvent(WE_SELCHANGE, _OnPatientListSelectChangeFnc);
+	m_wndPatientList.SetEvent(WE_LOADDATA, _OnPatientListLoadDataFnc);
+	m_wndPatientList.SetEvent(WE_DBLCLICK, _OnPatientListDblClickFnc);
+	m_wndPatientList.AddEvent(1, _T("Delete"), _OnPatientListDeleteItemFnc, 0, VK_DELETE, 0);
+	m_wndOrderList.SetEvent(WE_SELCHANGE, _OnOrderListSelectChangeFnc);
+	m_wndOrderList.SetEvent(WE_LOADDATA, _OnOrderListLoadDataFnc);
+	m_wndOrderList.SetEvent(WE_DBLCLICK, _OnOrderListDblClickFnc);
+	m_wndOrderList.AddEvent(1, _T("Delete"), _OnOrderListDeleteItemFnc, 0, VK_DELETE, 0);
+	AddEvent(1, _T("Add	Ctrl+A"), _OnAddPCMSPatientProfileFnc, 0, 'A', VK_CONTROL);
+	AddEvent(2, _T("Edit	Ctrl+E"), _OnEditPCMSPatientProfileFnc, 0, 'E', VK_CONTROL);
+	AddEvent(3, _T("Delete	Ctrl+D"), _OnDeletePCMSPatientProfileFnc, 0, 'D', VK_CONTROL);
+	AddEvent(4, _T("Save	Ctrl+S"), _OnSavePCMSPatientProfileFnc, 0, 'S', VK_CONTROL);
+	AddEvent(0, _T("-"));
+	AddEvent(5, _T("Cancel	Ctrl+T"), _OnCancelPCMSPatientProfileFnc, 0, 'T', VK_CONTROL);
+
+}
+void CPCMSPatientProfile::OnDoDataExchange(CDataExchange* pDX){
+	DDX_Text(pDX, m_wndDocumentNo.GetDlgCtrlID(), m_nDocumentNo);
+	DDX_Text(pDX, m_wndBarcode.GetDlgCtrlID(), m_szBarcode);
+	DDX_Text(pDX, m_wndPatientName.GetDlgCtrlID(), m_szPatientName);
+	DDX_Text(pDX, m_wndAge.GetDlgCtrlID(), m_szAge);
+	DDX_TextEx(pDX, m_wndSex.GetDlgCtrlID(), m_szSexKey);
+	DDX_Text(pDX, m_wndAddress.GetDlgCtrlID(), m_szAddress);
+	DDX_Text(pDX, m_wndDiagnostic.GetDlgCtrlID(), m_szDiagnostic);
+	DDX_TextEx(pDX, m_wndOrderDate.GetDlgCtrlID(), m_szOrderDate);
+	DDX_TextEx(pDX, m_wndDoctor.GetDlgCtrlID(), m_szDoctorKey);
+	DDX_TextEx(pDX, m_wndDepartment.GetDlgCtrlID(), m_szDepartmentKey);
+	DDX_TextEx(pDX, m_wndRoom.GetDlgCtrlID(), m_szRoomKey);
+	DDX_TextEx(pDX, m_wndPerformDate.GetDlgCtrlID(), m_szPerformDate);
+	DDX_Text(pDX, m_wndPerformBy.GetDlgCtrlID(), m_szPerformBy);
+	DDX_TextEx(pDX, m_wndObject.GetDlgCtrlID(), m_szObjectKey);
+	DDX_Check(pDX, m_wndEmergecy.GetDlgCtrlID(), m_bEmergecy);
+	DDX_TextEx(pDX, m_wndDate.GetDlgCtrlID(), m_szDate);
+	DDX_Text(pDX, m_wndSearchName.GetDlgCtrlID(), m_szSearchName);
+
+}
+void CPCMSPatientProfile::GetDataToScreen(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+	rs.GetValue(_T("limso_oid"), m_nDocumentNo);
+	rs.GetValue(_T("limso_object"), m_szObjectKey);
+	rs.GetValue(_T("limso_emergcy"), m_bEmergecy);
+	rs.GetValue(_T("limso_pname"), m_szPatientName);
+	rs.GetValue(_T("limso_age"), m_szAge);
+	rs.GetValue(_T("limso_sex"), m_szSexKey);
+	rs.GetValue(_T("limso_address"), m_szAddress);
+	rs.GetValue(_T("limso_diagnostic"), m_szDiagnostic);
+	rs.GetValue(_T("limso_doctorid"), m_szDoctorKey);
+	rs.GetValue(_T("limso_orderdate"), m_szOrderDate);
+	rs.GetValue(_T("limso_orderdept"), m_szDepartmentKey);
+	rs.GetValue(_T("limso_orderroom"), m_szRoomKey);
+	rs.GetValue(_T("limso_performdate"), m_szPerformDate);
+	rs.GetValue(_T("limso_performerid"), m_szPerformBy);
+
+}
+void CPCMSPatientProfile::GetScreenToData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	m_lims_orderTbl.SetValue(_T("limso_createdby"), pMF->GetCurrentUser());
+	m_lims_orderTbl.SetValue(_T("limso_createddate"), pMF->GetSysDateTime());
+	m_lims_orderTbl.SetValue(_T("limso_updatedby"), pMF->GetCurrentUser());
+	m_lims_orderTbl.SetValue(_T("limso_updateddate"), pMF->GetSysDateTime());
+	m_lims_orderTbl.SetValue(_T("limso_oid"), m_nDocumentNo);
+	m_lims_orderTbl.SetValue(_T("limso_object"), m_szObjectKey);
+	m_lims_orderTbl.SetValue(_T("limso_emergcy"), m_bEmergecy);
+	m_lims_orderTbl.SetValue(_T("limso_pname"), m_szPatientName);
+	m_lims_orderTbl.SetValue(_T("limso_age"), m_szAge);
+	m_lims_orderTbl.SetValue(_T("limso_sex"), m_szSexKey);
+	m_lims_orderTbl.SetValue(_T("limso_address"), m_szAddress);
+	m_lims_orderTbl.SetValue(_T("limso_diagnostic"), m_szDiagnostic);
+	m_lims_orderTbl.SetValue(_T("limso_doctorid"), m_szDoctorKey);
+	m_lims_orderTbl.SetValue(_T("limso_orderdate"), m_szOrderDate);
+	m_lims_orderTbl.SetValue(_T("limso_orderdept"), m_szDepartmentKey);
+	m_lims_orderTbl.SetValue(_T("limso_orderroom"), m_szRoomKey);
+	m_lims_orderTbl.SetValue(_T("limso_performdate"), m_szPerformDate);
+	m_lims_orderTbl.SetValue(_T("limso_performerid"), m_szPerformBy);
+
+}
+void CPCMSPatientProfile::SetDefaultValues(){
+
+	m_nDocumentNo=0;
+	m_szBarcode.Empty();
+	m_szPatientName.Empty();
+	m_szAge.Empty();
+	m_szSexKey.Empty();
+	m_szAddress.Empty();
+	m_szDiagnostic.Empty();
+	m_szOrderDate.Empty();
+	m_szDoctorKey.Empty();
+	m_szDepartmentKey.Empty();
+	m_szRoomKey.Empty();
+	m_szPerformDate.Empty();
+	m_szPerformBy.Empty();
+	m_szObjectKey.Empty();
+	m_bEmergecy=FALSE;
+	m_szDate.Empty();
+	m_szSearchName.Empty();
+
+}
+int CPCMSPatientProfile::SetMode(int nMode){
+ 		int nOldMode = GetMode(); 
+ 		CGuiView::SetMode(nMode); 
+ 		CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 		CString szSQL; 
+ 		CRecord rs(&pMF->m_db); 
+  		switch(nMode){ 
+ 		case VM_ADD: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			break; 
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(FALSE, 3, 4, -1); 
+ 			break; 
+ 		case VM_NONE: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(TRUE, 0, 6, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		}; 
+ 		UpdateData(FALSE); 
+ 		return nOldMode; 
+}
+/*void CPCMSPatientProfile::OnDocumentNoChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnDocumentNoSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnDocumentNoKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnDocumentNoCheckValue(){
+	return 0;
+} 
+/*void CPCMSPatientProfile::OnBarcodeChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnBarcodeSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnBarcodeKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnBarcodeCheckValue(){
+	return 0;
+} 
+/*void CPCMSPatientProfile::OnPatientNameChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnPatientNameSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnPatientNameKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnPatientNameCheckValue(){
+	return 0;
+} 
+/*void CPCMSPatientProfile::OnAgeChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnAgeSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnAgeKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnAgeCheckValue(){
+	return 0;
+} 
+void CPCMSPatientProfile::OnSexSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnSexSelendok(){
+	 
+}
+/*void CPCMSPatientProfile::OnSexSetfocus(){
+	
+}*/
+/*void CPCMSPatientProfile::OnSexKillfocus(){
+	
+}*/
+long CPCMSPatientProfile::OnSexLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndSex.IsSearchKey() && !m_szSexKey.IsEmpty()){
+	};
+	m_wndSex.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndSex.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("description")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CPCMSPatientProfile::OnSexAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+/*void CPCMSPatientProfile::OnAddressChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnAddressSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnAddressKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnAddressCheckValue(){
+	return 0;
+} 
+/*void CPCMSPatientProfile::OnDiagnosticChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnDiagnosticSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnDiagnosticKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnDiagnosticCheckValue(){
+	return 0;
+} 
+/*void CPCMSPatientProfile::OnOrderDateChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnOrderDateSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnOrderDateKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnOrderDateCheckValue(){
+	return 0;
+} 
+void CPCMSPatientProfile::OnDoctorSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnDoctorSelendok(){
+	 
+}
+/*void CPCMSPatientProfile::OnDoctorSetfocus(){
+	
+}*/
+/*void CPCMSPatientProfile::OnDoctorKillfocus(){
+	
+}*/
+long CPCMSPatientProfile::OnDoctorLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndDoctor.IsSearchKey() && !m_szDoctorKey.IsEmpty()){
+	};
+	m_wndDoctor.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndDoctor.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("description")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CPCMSPatientProfile::OnDoctorAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+void CPCMSPatientProfile::OnDepartmentSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnDepartmentSelendok(){
+	 
+}
+/*void CPCMSPatientProfile::OnDepartmentSetfocus(){
+	
+}*/
+/*void CPCMSPatientProfile::OnDepartmentKillfocus(){
+	
+}*/
+long CPCMSPatientProfile::OnDepartmentLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndDepartment.IsSearchKey() && !m_szDepartmentKey.IsEmpty()){
+	};
+	m_wndDepartment.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndDepartment.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("description")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CPCMSPatientProfile::OnDepartmentAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+void CPCMSPatientProfile::OnRoomSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnRoomSelendok(){
+	 
+}
+/*void CPCMSPatientProfile::OnRoomSetfocus(){
+	
+}*/
+/*void CPCMSPatientProfile::OnRoomKillfocus(){
+	
+}*/
+long CPCMSPatientProfile::OnRoomLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndRoom.IsSearchKey() && !m_szRoomKey.IsEmpty()){
+	};
+	m_wndRoom.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndRoom.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("description")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CPCMSPatientProfile::OnRoomAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+/*void CPCMSPatientProfile::OnPerformDateChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnPerformDateSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnPerformDateKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnPerformDateCheckValue(){
+	return 0;
+} 
+/*void CPCMSPatientProfile::OnPerformByChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnPerformBySetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnPerformByKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnPerformByCheckValue(){
+	return 0;
+} 
+void CPCMSPatientProfile::OnObjectSelectChange(int nOldItemSel, int nNewItemSel){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnObjectSelendok(){
+	 
+}
+/*void CPCMSPatientProfile::OnObjectSetfocus(){
+	
+}*/
+/*void CPCMSPatientProfile::OnObjectKillfocus(){
+	
+}*/
+long CPCMSPatientProfile::OnObjectLoadData(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndObject.IsSearchKey() && !m_szObjectKey.IsEmpty()){
+	};
+	m_wndObject.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndObject.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("description")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CPCMSPatientProfile::OnObjectAddNew(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} */
+	void CPCMSPatientProfile::OnEmergecySelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+}
+void CPCMSPatientProfile::OnAddSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnEditSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnDeleteSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnSaveSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnCancelSelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+void CPCMSPatientProfile::OnAddEntrySelect(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+/*void CPCMSPatientProfile::OnDateChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnDateSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnDateKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnDateCheckValue(){
+	return 0;
+} 
+/*void CPCMSPatientProfile::OnSearchNameChange(){
+	
+} */
+/*void CPCMSPatientProfile::OnSearchNameSetfocus(){
+	
+} */
+/*void CPCMSPatientProfile::OnSearchNameKillfocus(){
+	
+} */
+int CPCMSPatientProfile::OnSearchNameCheckValue(){
+	return 0;
+} 
+void CPCMSPatientProfile::OnPatientListDblClick(){
+	
+} 
+void CPCMSPatientProfile::OnPatientListSelectChange(int nOldItem, int nNewItem){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CPCMSPatientProfile::OnPatientListDeleteItem(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CPCMSPatientProfile::OnPatientListLoadData(){
+/*
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	m_wndPatientList.BeginLoad(); 
+	m_wndPatientList.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndPatientList.AddItems(
+			rs.GetValue(_T("SID")), 
+			rs.GetValue(_T("PatientName")), 
+			rs.GetValue(_T("Age")), 
+			rs.GetValue(_T("Sex")), NULL);
+		rs.MoveNext();
+	}
+	m_wndPatientList.EndLoad(); 
+	return nCount;
+*/
+	return 0;
+}
+void CPCMSPatientProfile::OnOrderListDblClick(){
+	
+} 
+void CPCMSPatientProfile::OnOrderListSelectChange(int nOldItem, int nNewItem){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	
+} 
+int CPCMSPatientProfile::OnOrderListDeleteItem(){
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CPCMSPatientProfile::OnOrderListLoadData(){
+/*
+	CMainFrame *pMF = (CMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	m_wndOrderList.BeginLoad(); 
+	m_wndOrderList.DeleteAllItems(); 
+	int nCount = 0;
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndOrderList.AddItems(
+			rs.GetValue(_T("Index")), 
+			rs.GetValue(_T("TestName")), 
+			rs.GetValue(_T("Unit")), 
+			rs.GetValue(_T("NormIndex")), 
+			rs.GetValue(_T("Result")), 
+			rs.GetValue(_T("Note")), NULL);
+		rs.MoveNext();
+	}
+	m_wndOrderList.EndLoad(); 
+	return nCount;
+*/
+	return 0;
+}
+int CPCMSPatientProfile::OnAddPCMSPatientProfile(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)  
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_ADD);
+	return 0; 
+}
+int CPCMSPatientProfile::OnEditPCMSPatientProfile(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CPCMSPatientProfile::OnDeletePCMSPatientProfile(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO) 
+ 		return -1; 
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") ); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret >= 0){ 
+ 		SetMode(VM_NONE); 
+ 		OnCancelPCMSPatientProfile(); 
+ 	}
+	return 0;
+}
+int CPCMSPatientProfile::OnSavePCMSPatientProfile(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT) 
+ 		return -1; 
+ 	if(!IsValidateData()) 
+ 		return -1; 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(GetMode() == VM_ADD){ 
+ 		//szSQL = m_lims_orderTbl.GetInsertSQL(); 
+ 	} 
+ 	else if(GetMode() == VM_EDIT){ 
+ 		CString szWhere; 
+ 		szWhere.Format(_T(" WHERE")); 
+ 		//szSQL = m_lims_orderTbl.GetUpdateSQL(_T("createdby,createddate")); 
+ 		szSQL += szWhere; 
+ 	} 
+ _fmsg(_T("%s"), szSQL); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret > 0) 
+ 	{ 
+ 		//OnPCMSPatientProfileListLoadData(); 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 	} 
+ 	return ret; 
+ 	return 0; 
+}
+int CPCMSPatientProfile::OnCancelPCMSPatientProfile(){
+ 	if(GetMode() == VM_EDIT) 
+ 	{ 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 		SetMode(VM_NONE); 
+ 	} 
+ 	CMainFrame *pMF = (CMainFrame *)AfxGetMainWnd(); 
+ 	return 0;
+} 
+int CPCMSPatientProfile::OnPCMSPatientProfileListLoadData(){
+	return 0;
+}

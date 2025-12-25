@@ -1,0 +1,100 @@
+head	1.1;
+branch	1.1.1;
+access;
+symbols
+	arelease_01022010:1.1.1.1
+	avendor:1.1.1;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.02.01.15.16.43;	author hayhv;	state Exp;
+branches
+	1.1.1.1;
+next	;
+deltatype	text;
+permissions	644;
+
+1.1.1.1
+date	2010.02.01.15.16.43;	author hayhv;	state Exp;
+branches;
+next	;
+deltatype	text;
+permissions	644;
+
+
+desc
+@@
+
+
+
+1.1
+log
+@Initial revision
+@
+text
+@-- Function: hms_fee_generation()
+
+--DROP FUNCTION hms_fee_generation(integer, varchar(1));
+
+CREATE OR REPLACE FUNCTION hms_fee_generation(
+userid varchar(15),
+docno integer,
+feetype varchar(1)  --E; Examination, P: Paraclinical, O: operation, D: Drug
+)
+  RETURNS integer AS
+$BODY$
+DECLARE
+  tmpInt	INTEGER;
+  tmpRec	RECORD;
+  docRec   RECORD;
+BEGIN
+
+SELECT INTO docRec * 
+FROM hms_patient
+LEFT JOIN hms_doc ON(hd_patientno=hp_patientno)
+LEFT JOIN hms_card ON(hd_patientno=hc_patientno AND hd_cardidx=hc_idx)
+WHERE hd_docno=docno;
+IF(NOT FOUND) THEN
+RETURN -1;
+END IF;
+
+
+FOR tmpRec IN
+SELECT * FROM hms_exam
+LEFT JOIN hms_examtype ON(he_examtype=het_id)
+WHERE 
+he_docno=docno AND 
+he_hasfee='Y' AND
+he_payment<>'Y'
+ORDER BY he_examdate
+LOOP
+raise notice '%: %', tmpRec.het_name, tmpRec.het_servprice;
+INSERT INTO hms_fee(
+            hf_createdby, hf_createddate, hf_updatedby, hf_updateddate, hf_patientno, 
+            hf_docno, hf_status, hf_invoiceno, hf_advanceno, hf_refundno, 
+            hf_deptid, hf_roomid, hf_bedid, hf_receptidx, hf_category, hf_class, 
+            hf_type, hf_groupid, hf_subgroup, hf_feeid, hf_desc, hf_unit, 
+            hf_qty, hf_orderno, hf_orderln, hf_feetype, hf_cost, hf_discount, 
+            hf_patdept, hf_patpaid, hf_unpaid, hf_advpaid)
+    VALUES (userid, current_timestamp, userid, current_timestamp, docRec.hd_patientno, 
+            docRec.hd_docno,  'O', 0, 0, 0, 
+            tmpRec.he_deptid, tmpRec.he_roomid, 0, tmpRec.he_receptidx, '', 'A', 
+            'E', '', '', tmpRec.he_examtype, tmpRec.het_name, '', 
+            1, tmpRec.he_receptidx, 0, 'E', tmpRec.het_servprice, tmpRec.het_insprice, 
+            0, 0, 0, 0);
+
+END LOOP;
+    RETURN 0;
+END;
+$BODY$
+  LANGUAGE 'plpgsql' VOLATILE;@
+
+
+1.1.1.1
+log
+@no message
+@
+text
+@@

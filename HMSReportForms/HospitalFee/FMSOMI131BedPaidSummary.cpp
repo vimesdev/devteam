@@ -1,0 +1,1733 @@
+﻿#include "stdafx.h"
+#include "FMSOMI131BedPaidSummary.h"
+#include "HMSMainFrame.h"
+#include "SearchPopup.h"
+#include "StringToken.h"
+/*static void _OnYearChangeFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnYearChange();
+} */
+/*static void _OnYearSetfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnYearSetfocus();} */ 
+/*static void _OnYearKillfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnYearKillfocus();
+} */
+static void _OnCreateDataSelectFnc(CWnd *pWnd)
+{
+	CFMSOMI131BedPaidSummary *pVw = (CFMSOMI131BedPaidSummary *)pWnd;
+	pVw->OnCreateDataSelect();
+} 
+
+static void _OnObjectTypeSelendokFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnObjectTypeSelendok();
+}
+
+static int _OnYearCheckValueFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnYearCheckValue();
+} 
+static void _OnReportPeriodSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CFMSOMI131BedPaidSummary* )pWnd)->OnReportPeriodSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnReportPeriodSelendokFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnReportPeriodSelendok();
+}
+static int _OnListCheckAllInvoiceFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListCheckAllInvoice();
+	return 0;
+}
+static int _OnListCheckAllRefundFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListCheckAllRefund();
+	return 0;
+}
+
+/*static void _OnReportPeriodSetfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnReportPeriodKillfocus();
+}*/
+/*static void _OnReportPeriodKillfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnReportPeriodKillfocus();
+}*/
+static long _OnReportPeriodLoadDataFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnReportPeriodLoadData();
+}
+/*static void _OnReportPeriodAddNewFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnReportPeriodAddNew();
+}*/
+/*static void _OnFromDateChangeFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnFromDateChange();
+} */
+/*static void _OnFromDateSetfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnFromDateSetfocus();} */ 
+/*static void _OnFromDateKillfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnFromDateKillfocus();
+} */
+static int _OnFromDateCheckValueFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnFromDateCheckValue();
+} 
+/*static void _OnToDateChangeFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnToDateChange();
+} */
+/*static void _OnToDateSetfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnToDateSetfocus();} */ 
+/*static void _OnToDateKillfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnToDateKillfocus();
+} */
+static int _OnToDateCheckValueFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnToDateCheckValue();
+} 
+static void _OnClerkSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CFMSOMI131BedPaidSummary* )pWnd)->OnClerkSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnClerkSelendokFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnClerkSelendok();
+}
+/*static void _OnClerkSetfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnClerkKillfocus();
+}*/
+/*static void _OnClerkKillfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnClerkKillfocus();
+}*/
+static long _OnClerkLoadDataFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnClerkLoadData();
+}
+/*static void _OnClerkAddNewFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnClerkAddNew();
+}*/
+static void _OnStatusSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CFMSOMI131BedPaidSummary* )pWnd)->OnStatusSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnStatusSelendokFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnStatusSelendok();
+}
+/*static void _OnStatusSetfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnStatusKillfocus();
+}*/
+/*static void _OnStatusKillfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnStatusKillfocus();
+}*/
+static long _OnStatusLoadDataFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnStatusLoadData();
+}
+/*static void _OnStatusAddNewFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnStatusAddNew();
+}*/
+static void _OnOrderBySelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CFMSOMI131BedPaidSummary* )pWnd)->OnOrderBySelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnOrderBySelendokFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnOrderBySelendok();
+}
+/*static void _OnOrderBySetfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnOrderByKillfocus();
+}*/
+/*static void _OnOrderByKillfocusFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnOrderByKillfocus();
+}*/
+static long _OnOrderByLoadDataFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnOrderByLoadData();
+}
+/*static void _OnOrderByAddNewFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary *)pWnd)->OnOrderByAddNew();
+}*/
+static long _OnDeptLoadDataFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary*) pWnd)->OnDeptLoadData();
+}
+static void _OnWithoutGeneralSelectFnc(CWnd *pWnd){
+	 ((CFMSOMI131BedPaidSummary*)pWnd)->OnWithoutGeneralSelect();
+}
+static long _OnListLoadDataFnc(CWnd *pWnd){
+	return ((CFMSOMI131BedPaidSummary*)pWnd)->OnListLoadData();
+} 
+static void _OnListDblClickFnc(CWnd *pWnd){
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListDblClick();
+} 
+static void _OnListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnListDeleteItemFnc(CWnd *pWnd){
+	 return ((CFMSOMI131BedPaidSummary*)pWnd)->OnListDeleteItem();
+} 
+static void _OnMarkAllSelectFnc(CWnd *pWnd){
+	CFMSOMI131BedPaidSummary *pVw = (CFMSOMI131BedPaidSummary *)pWnd;
+	pVw->OnMarkAllSelect();
+} 
+static void _OnUnMarkSelectFnc(CWnd *pWnd){
+	CFMSOMI131BedPaidSummary *pVw = (CFMSOMI131BedPaidSummary *)pWnd;
+	pVw->OnUnMarkSelect();
+} 
+
+static void _OnExportSelectFnc(CWnd *pWnd){
+	CFMSOMI131BedPaidSummary *pVw = (CFMSOMI131BedPaidSummary *)pWnd;
+	pVw->OnExportSelect();
+} 
+static void _OnInpatientSelectFnc(CWnd *pWnd){
+	  ((CFMSOMI131BedPaidSummary*)pWnd)->OnInpatientSelect();
+}
+static void _OnOutpatientSelectFnc(CWnd *pWnd){
+	  ((CFMSOMI131BedPaidSummary*)pWnd)->OnOutpatientSelect();
+}
+static void _OnDepositSelectFnc(CWnd *pWnd){
+	  ((CFMSOMI131BedPaidSummary*)pWnd)->OnDepositSelect();
+}
+static void _OnAllSelectFnc(CWnd *pWnd){
+	  ((CFMSOMI131BedPaidSummary*)pWnd)->OnAllSelect();
+}
+static int _OnAddFMSOMI131PaidSummaryFnc(CWnd *pWnd){
+	 return ((CFMSOMI131BedPaidSummary*)pWnd)->OnAddFMSOMI131PaidSummary();
+} 
+static int _OnEditFMSOMI131PaidSummaryFnc(CWnd *pWnd){
+	 return ((CFMSOMI131BedPaidSummary*)pWnd)->OnEditFMSOMI131PaidSummary();
+} 
+static int _OnDeleteFMSOMI131PaidSummaryFnc(CWnd *pWnd){
+	 return ((CFMSOMI131BedPaidSummary*)pWnd)->OnDeleteFMSOMI131PaidSummary();
+} 
+static int _OnSaveFMSOMI131PaidSummaryFnc(CWnd *pWnd){
+	 return ((CFMSOMI131BedPaidSummary*)pWnd)->OnSaveFMSOMI131PaidSummary();
+} 
+static int _OnCancelFMSOMI131PaidSummaryFnc(CWnd *pWnd){
+	 return ((CFMSOMI131BedPaidSummary*)pWnd)->OnCancelFMSOMI131PaidSummary();
+}
+static int _OnListSearchItemFnc(CWnd *pWnd){
+	 ((CFMSOMI131BedPaidSummary*)pWnd)->OnListSearchItem();
+	 return 0;
+} 
+static int _OnListCheckAllPTTYCFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListCheckAllPTTYC();
+	return 0;
+}
+
+static int _OnListCheckAllTYCFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListCheckAllTYC();
+	return 0;
+}
+static void _OnSODSelectFnc(CWnd *pWnd){
+	  ((CFMSOMI131BedPaidSummary*)pWnd)->OnSODSelect();
+}
+
+static int _OnListCheckAllInsInvoiceFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListCheckAllIns();
+	return 0;
+}
+static int _OnListUnCheckAllInsInvoiceFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListUnCheckAllIns();
+	return 0;
+}
+
+static int _OnListCheckAllSolderFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListCheckAllSolder();
+	return 0;
+}
+static int _OnListUnCheckAllSolderFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListUnCheckAllSolder();
+	return 0;
+}
+static int _OnListCheckAllInsSolderFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListCheckAllInsSolder();
+	return 0;
+}
+static int _OnListUnCheckAllInsSolderFnc(CWnd *pWnd)
+{
+	((CFMSOMI131BedPaidSummary*)pWnd)->OnListUnCheckAllInsSolder();
+	return 0;
+}
+static void _OnSoldierWCardSelectFnc(CWnd *pWnd)
+{
+	 ((CFMSOMI131BedPaidSummary*)pWnd)->OnSoldierWCardSelect();
+}
+
+static long _OnObjectTypeLoadDataFnc(CWnd *pWnd)
+{
+	return ((CFMSOMI131BedPaidSummary *)pWnd)->OnObjectTypeLoadData();
+}
+static void _OnABZoneSelectFnc(CWnd *pWnd)
+{
+	 ((CFMSOMI131BedPaidSummary*)pWnd)->OnABZoneSelect();
+}
+
+
+CFMSOMI131BedPaidSummary::CFMSOMI131BedPaidSummary(CWnd *pParent)
+{
+	m_nDlgWidth = 435;
+	m_nDlgHeight = 570;
+	SetDefaultValues();
+}
+CFMSOMI131BedPaidSummary::~CFMSOMI131BedPaidSummary(){
+}
+void CFMSOMI131BedPaidSummary::OnCreateComponents()
+{
+	/*m_wndReportCondition.Create(this, _T("Report Condition"), 6, 5, 480, 535);
+	m_wndYearLabel.Create(this, _T("Year"), 10, 30, 90, 55);
+	m_wndYear.Create(this,95, 30, 225, 55); 
+	m_wndReportPeriodLabel.Create(this, _T("Report Period"), 240, 30, 331, 55);
+	m_wndReportPeriod.Create(this,346, 30, 476, 55); 
+	m_wndFromDateLabel.Create(this, _T("From Date"), 10, 60, 90, 85);
+	m_wndFromDate.Create(this,95, 60, 225, 85); 
+	m_wndToDate.Create(this,346, 60, 476, 85); 
+	m_wndToDateLabel.Create(this, _T("To Date"), 240, 60, 331, 85);
+	m_wndClerkLabel.Create(this, _T("Clerk"), 10, 90, 90, 115);
+	m_wndClerk.Create(this,95, 90, 225, 115); 
+	m_wndOrderByLabel.Create(this, _T("Order By"), 10, 120, 90, 145);
+	m_wndOrderBy.Create(this,95, 120, 225, 145); 
+	m_wndDeptLabel.Create(this, _T("Dept"), 240, 120, 331, 145);
+	m_wndDept.Create(this,346, 120, 476, 145); 
+	m_wndStatusLabel.Create(this, _T("Status"), 240, 90, 331, 115);
+	m_wndStatus.Create(this,346, 90, 476, 115); 
+	m_wndList.Create(this,10, 181, 476, 467); 
+	m_wndWithoutGeneral.Create(this, _T("Without General"), 37, 42, 37, 42);
+	m_wndMarkAll.Create(this, _T("Mark All"), 5, 540, 85, 565);
+	m_wndUnMark.Create(this, _T("UnMark"), 90, 540, 170, 565);
+	m_wndPrint.Create(this, _T("&Print"), 230, 540, 310, 565);
+	m_wndExport.Create(this, _T("Export XLS"), 315, 540, 395, 565);
+	m_wndInpatient.Create(this, _T("Inpatient"), 10, 505, 115, 530);
+	m_wndOutpatient.Create(this, _T("Outpatient"), 120, 505, 225, 530);
+	m_wndDeposit.Create(this, _T("Deposit"), 37, 42, 37, 42);
+	m_wndAll.Create(this, _T("All"), 231, 505, 336, 530);
+	m_wndSOD.Create(this, _T("SOD"), 10, 473, 115, 498);
+	m_wndObjectTypeLabel.Create(this, _T("Object Type"), 10, 150, 90, 175);
+	m_wndObjectType.Create(this,95, 150, 225, 175); 
+	m_wndSoldierWCard.Create(this, _T("Soldier w Card"), 120, 473, 225, 498);
+	m_wndCreateData.Create(this, _T("Create Data"), 400, 540, 480, 565);
+	m_wndCreateData.EnableWindow(FALSE);*/
+	m_wndReportCondition.Create(this, _T("Report Condition"), 6, 5, 480, 535);
+	m_wndYearLabel.Create(this, _T("Year"), 10, 30, 90, 55);
+	m_wndYear.Create(this,95, 30, 225, 55); 
+	m_wndReportPeriodLabel.Create(this, _T("Report Period"), 240, 30, 331, 55);
+	m_wndReportPeriod.Create(this,346, 30, 476, 55); 
+	m_wndFromDateLabel.Create(this, _T("From Date"), 10, 60, 90, 85);
+	m_wndFromDate.Create(this,95, 60, 225, 85); 
+	m_wndToDate.Create(this,346, 60, 476, 85); 
+	m_wndToDateLabel.Create(this, _T("To Date"), 240, 60, 331, 85);
+	m_wndClerkLabel.Create(this, _T("Clerk"), 10, 90, 90, 115);
+	m_wndClerk.Create(this,95, 90, 225, 115); 
+	m_wndOrderByLabel.Create(this, _T("Order By"), 10, 120, 90, 145);
+	m_wndOrderBy.Create(this,95, 120, 225, 145); 
+	m_wndDeptLabel.Create(this, _T("Dept"), 240, 120, 331, 145);
+	m_wndDept.Create(this,346, 120, 476, 145); 
+	m_wndStatusLabel.Create(this, _T("Status"), 240, 90, 331, 115);
+	m_wndStatus.Create(this,346, 90, 476, 115); 
+	m_wndList.Create(this,10, 181, 476, 467); 
+	m_wndWithoutGeneral.Create(this, _T("Without General"), 37, 42, 37, 42);
+	m_wndMarkAll.Create(this, _T("Mark All"), 5, 540, 85, 565);
+	m_wndUnMark.Create(this, _T("UnMark"), 90, 540, 170, 565);
+	m_wndPrint.Create(this, _T("&Print"), 230, 540, 310, 565);
+	m_wndExport.Create(this, _T("Export XLS"), 315, 540, 395, 565);
+	m_wndInpatient.Create(this, _T("Inpatient"), 10, 505, 115, 530);
+	m_wndOutpatient.Create(this, _T("Outpatient"), 120, 505, 225, 530);
+	m_wndDeposit.Create(this, _T("Deposit"), 37, 42, 37, 42);
+	m_wndAll.Create(this, _T("All"), 231, 505, 336, 530);
+	m_wndSOD.Create(this, _T("SOD"), 10, 473, 115, 498);
+	m_wndObjectTypeLabel.Create(this, _T("Object Type"), 10, 150, 90, 175);
+	m_wndObjectType.Create(this,95, 150, 225, 175); 
+	m_wndSoldierWCard.Create(this, _T("Soldier w Card"), 120, 473, 225, 498);
+	m_wndCreateData.Create(this, _T("Create Data"), 400, 540, 480, 565);
+	m_wndABZone.Create(this, _T("AB Zone"), 240, 150, 331, 175);
+	m_wndCreateData.EnableWindow(FALSE);
+}
+void CFMSOMI131BedPaidSummary::OnInitializeComponents(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	m_wndYear.SetLimitText(16);
+	//m_wndYear.SetCheckValue(true);
+
+	//m_wndReportPeriod.SetCheckValue(true);
+	m_wndReportPeriod.LimitText(35);
+	//m_wndFromDate.SetMax(CDateTime(pMF->GetSysDateTime()));
+	m_wndFromDate.SetCheckValue(true);
+	//m_wndToDate.SetMax(CDateTime(pMF->GetSysDateTime()));
+	m_wndToDate.SetCheckValue(true);
+	m_wndClerk.SetCheckValue(true);
+	m_wndClerk.LimitText(1024);
+	m_wndStatus.SetCheckValue(true);
+	m_wndStatus.LimitText(1024);
+	m_wndOrderBy.SetCheckValue(true);
+	m_wndOrderBy.LimitText(1024);
+	m_wndObjectType.SetCheckValue(true);
+
+	m_wndReportPeriod.InsertColumn(0, _T("ID"), CFMT_TEXT, 50);
+	m_wndReportPeriod.InsertColumn(1, _T("Description"), CFMT_TEXT, 150);
+	
+	m_wndObjectType.InsertColumn(0, _T("ID"), CFMT_TEXT, 150);
+	m_wndObjectType.InsertColumn(1, _T("Name"), CFMT_TEXT, 250);
+
+
+	m_wndList.InsertColumn(0, _T("ID"), CFMT_TEXT, 80);
+	m_wndList.InsertColumn(1, _T("Receipt No"), CFMT_TEXT, 130);
+	m_wndList.InsertColumn(2, _T("Posted"), CFMT_TEXT, 40);
+	m_wndList.InsertColumn(3, _T("Date"), CFMT_DATETIME, 120);
+	m_wndList.InsertColumn(4, _T("Staff"), CFMT_TEXT, 150);
+	m_wndList.SetCheckBox(true);
+
+	m_wndClerk.InsertColumn(0, _T("ID"), CFMT_TEXT, 80);
+	m_wndClerk.InsertColumn(1, _T("Name"), CFMT_TEXT, 200);
+
+
+	m_wndOrderBy.InsertColumn(0, _T("ID"), CFMT_TEXT, 80);
+	m_wndOrderBy.InsertColumn(1, _T("Name"), CFMT_TEXT, 200);
+
+	m_wndDept.InsertColumn(0, _T("ID"), CFMT_TEXT, 80);
+	m_wndDept.InsertColumn(1, _T("Name"), CFMT_TEXT, 200);
+
+	m_wndStatus.InsertColumn(0, _T("ID"), CFMT_TEXT, 80);
+	m_wndStatus.InsertColumn(1, _T("Name"), CFMT_TEXT, 200);
+
+
+	m_wndMarkAll.ModifyStyle(WS_TABSTOP, 0);
+	m_wndUnMark.ModifyStyle(WS_TABSTOP, 0);
+}
+
+void CFMSOMI131BedPaidSummary::OnSetWindowEvents(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	//m_wndYear.SetEvent(WE_CHANGE, _OnYearChangeFnc);
+	//m_wndYear.SetEvent(WE_SETFOCUS, _OnYearSetfocusFnc);
+	//m_wndYear.SetEvent(WE_KILLFOCUS, _OnYearKillfocusFnc);
+	m_wndYear.SetEvent(WE_CHECKVALUE, _OnYearCheckValueFnc);
+	m_wndReportPeriod.SetEvent(WE_SELENDOK, _OnReportPeriodSelendokFnc);
+	//m_wndReportPeriod.SetEvent(WE_SETFOCUS, _OnReportPeriodSetfocusFnc);
+	//m_wndReportPeriod.SetEvent(WE_KILLFOCUS, _OnReportPeriodKillfocusFnc);
+	m_wndReportPeriod.SetEvent(WE_SELCHANGE, _OnReportPeriodSelectChangeFnc);
+	m_wndReportPeriod.SetEvent(WE_LOADDATA, _OnReportPeriodLoadDataFnc);
+	//m_wndReportPeriod.SetEvent(WE_ADDNEW, _OnReportPeriodAddNewFnc);
+	//m_wndFromDate.SetEvent(WE_CHANGE, _OnFromDateChangeFnc);
+	//m_wndFromDate.SetEvent(WE_SETFOCUS, _OnFromDateSetfocusFnc);
+	//m_wndFromDate.SetEvent(WE_KILLFOCUS, _OnFromDateKillfocusFnc);
+	m_wndFromDate.SetEvent(WE_CHECKVALUE, _OnFromDateCheckValueFnc);
+	//m_wndToDate.SetEvent(WE_CHANGE, _OnToDateChangeFnc);
+	//m_wndToDate.SetEvent(WE_SETFOCUS, _OnToDateSetfocusFnc);
+	//m_wndToDate.SetEvent(WE_KILLFOCUS, _OnToDateKillfocusFnc);
+	m_wndToDate.SetEvent(WE_CHECKVALUE, _OnToDateCheckValueFnc);
+	m_wndClerk.SetEvent(WE_SELENDOK, _OnClerkSelendokFnc);
+	//m_wndClerk.SetEvent(WE_SETFOCUS, _OnClerkSetfocusFnc);
+	//m_wndClerk.SetEvent(WE_KILLFOCUS, _OnClerkKillfocusFnc);
+	m_wndClerk.SetEvent(WE_SELCHANGE, _OnClerkSelectChangeFnc);
+	m_wndClerk.SetEvent(WE_LOADDATA, _OnClerkLoadDataFnc);
+	//m_wndClerk.SetEvent(WE_ADDNEW, _OnClerkAddNewFnc);
+	m_wndStatus.SetEvent(WE_SELENDOK, _OnStatusSelendokFnc);
+	//m_wndStatus.SetEvent(WE_SETFOCUS, _OnStatusSetfocusFnc);
+	//m_wndStatus.SetEvent(WE_KILLFOCUS, _OnStatusKillfocusFnc);
+	m_wndStatus.SetEvent(WE_SELCHANGE, _OnStatusSelectChangeFnc);
+	m_wndStatus.SetEvent(WE_LOADDATA, _OnStatusLoadDataFnc);
+	//m_wndStatus.SetEvent(WE_ADDNEW, _OnStatusAddNewFnc);
+	m_wndOrderBy.SetEvent(WE_SELENDOK, _OnOrderBySelendokFnc);
+	//m_wndOrderBy.SetEvent(WE_SETFOCUS, _OnOrderBySetfocusFnc);
+	//m_wndOrderBy.SetEvent(WE_KILLFOCUS, _OnOrderByKillfocusFnc);
+	m_wndOrderBy.SetEvent(WE_SELCHANGE, _OnOrderBySelectChangeFnc);
+	m_wndOrderBy.SetEvent(WE_LOADDATA, _OnOrderByLoadDataFnc);
+	//m_wndOrderBy.SetEvent(WE_ADDNEW, _OnOrderByAddNewFnc);
+	m_wndDept.SetEvent(WE_LOADDATA, _OnDeptLoadDataFnc);
+	m_wndWithoutGeneral.SetEvent(WE_CLICK, _OnWithoutGeneralSelectFnc);
+	m_wndList.SetEvent(WE_SELCHANGE, _OnListSelectChangeFnc);
+	m_wndList.SetEvent(WE_LOADDATA, _OnListLoadDataFnc);
+	m_wndList.SetEvent(WE_DBLCLICK, _OnListDblClickFnc);
+//	m_wndList.AddEvent(1, _T("Delete"), _OnListDeleteItemFnc, 0, VK_DELETE, 0);
+	m_wndList.AddEvent(1, _T("Check All TYC"), _OnListCheckAllTYCFnc);
+	m_wndList.AddEvent(2, _T("Check All PTTYC"), _OnListCheckAllPTTYCFnc);
+	m_wndList.AddEvent(3, _T("Check All Fee Invoice"), _OnListCheckAllInvoiceFnc);
+	m_wndList.AddEvent(4, _T("Check All Fee Refund"), _OnListCheckAllRefundFnc);
+
+	m_wndList.AddEvent(5, _T("Chọn phiếu thu/chi BH"), _OnListCheckAllInsInvoiceFnc);
+	m_wndList.AddEvent(6, _T("Bỏ Chọn phiếu thu/chi BH"), _OnListUnCheckAllInsInvoiceFnc);	
+	m_wndList.AddEvent(7, _T("Chọn phiếu thu/chi Quân"), _OnListCheckAllSolderFnc);
+	m_wndList.AddEvent(8, _T("Bỏ Chọn phiếu thu/chi Quân"), _OnListUnCheckAllSolderFnc);
+	m_wndList.AddEvent(9, _T("Chọn phiếu thu/chi BH Quân"), _OnListCheckAllInsSolderFnc);
+	m_wndList.AddEvent(10, _T("Bỏ Chọn phiếu thu/chi BH Quân"), _OnListUnCheckAllInsSolderFnc);
+
+	m_wndList.AddEvent(11, _T("Search"), _OnListSearchItemFnc);
+	m_wndMarkAll.SetEvent(WE_CLICK, _OnMarkAllSelectFnc);
+	m_wndUnMark.SetEvent(WE_CLICK, _OnUnMarkSelectFnc);
+	
+	m_wndExport.SetEvent(WE_CLICK, _OnExportSelectFnc);
+	m_wndInpatient.SetEvent(WE_CLICK, _OnInpatientSelectFnc);
+	m_wndOutpatient.SetEvent(WE_CLICK, _OnOutpatientSelectFnc);
+	m_wndDeposit.SetEvent(WE_CLICK, _OnDepositSelectFnc);
+	m_wndAll.SetEvent(WE_CLICK, _OnAllSelectFnc);
+	m_wndSOD.SetEvent(WE_CLICK, _OnSODSelectFnc);
+	m_wndABZone.SetEvent(WE_CLICK, _OnABZoneSelectFnc);
+
+	m_wndSoldierWCard.SetEvent(WE_CLICK, _OnSoldierWCardSelectFnc);
+	m_wndObjectType.SetEvent(WE_LOADDATA, _OnObjectTypeLoadDataFnc);
+	m_wndObjectType.SetEvent(WE_SELENDOK, _OnObjectTypeSelendokFnc);
+	m_wndCreateData.SetEvent(WE_CLICK, _OnCreateDataSelectFnc);
+	/*
+	AddEvent(1, _T("Add	Ctrl+A"), _OnAddFMSOMI131PaidSummaryFnc, 0, 'A', VK_CONTROL);
+	AddEvent(2, _T("Edit	Ctrl+E"), _OnEditFMSOMI131PaidSummaryFnc, 0, 'E', VK_CONTROL);
+	AddEvent(3, _T("Delete	Ctrl+D"), _OnDeleteFMSOMI131PaidSummaryFnc, 0, 'D', VK_CONTROL);
+	AddEvent(4, _T("Save	Ctrl+S"), _OnSaveFMSOMI131PaidSummaryFnc, 0, 'S', VK_CONTROL);
+	AddEvent(0, _T("-"));
+	AddEvent(5, _T("Cancel	Ctrl+T"), _OnCancelFMSOMI131PaidSummaryFnc, 0, 'T', VK_CONTROL);
+	*/
+
+	CString szSysDate = pMF->GetSysDate();
+	m_nYear = ToInt(szSysDate.Left(4));
+	m_szReportPeriodKey.Format(_T("%d"), ToInt(szSysDate.Mid(5, 2)));
+	m_szFromDate = m_szToDate = pMF->GetSysDate();
+	m_szFromDate += _T("00:00");
+	m_szToDate += _T("23:59");
+	UpdateData(FALSE);
+	//SetMode(VM_EDIT);
+
+
+}
+void CFMSOMI131BedPaidSummary::OnDoDataExchange(CDataExchange* pDX){
+	DDX_Text(pDX, m_wndYear.GetDlgCtrlID(), m_nYear);
+	DDX_TextEx(pDX, m_wndReportPeriod.GetDlgCtrlID(), m_szReportPeriodKey);
+	DDX_TextEx(pDX, m_wndFromDate.GetDlgCtrlID(), m_szFromDate);
+	DDX_TextEx(pDX, m_wndToDate.GetDlgCtrlID(), m_szToDate);
+	DDX_TextEx(pDX, m_wndClerk.GetDlgCtrlID(), m_szClerkKey);
+	DDX_TextEx(pDX, m_wndStatus.GetDlgCtrlID(), m_szStatusKey);
+	DDX_TextEx(pDX, m_wndOrderBy.GetDlgCtrlID(), m_szOrderByKey);
+	DDX_TextEx(pDX, m_wndDept.GetDlgCtrlID(), m_szDeptKey);
+	DDX_Check(pDX, m_wndWithoutGeneral.GetDlgCtrlID(), m_bWithoutGeneral);
+	DDX_Radio(pDX, m_wndInpatient.GetDlgCtrlID(), m_nPatientType);
+	DDX_Check(pDX, m_wndSOD.GetDlgCtrlID(), m_bSOD);
+	DDX_TextEx(pDX, m_wndObjectType.GetDlgCtrlID(), m_szObjectTypeKey);
+	DDX_Check(pDX, m_wndSoldierWCard.GetDlgCtrlID(), m_bSoldierWCard);
+	DDX_Check(pDX, m_wndABZone.GetDlgCtrlID(), m_bABZone);
+
+}
+void CFMSOMI131BedPaidSummary::GetDataToScreen(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+
+}
+void CFMSOMI131BedPaidSummary::GetScreenToData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+
+}
+void CFMSOMI131BedPaidSummary::SetDefaultValues(){
+
+	m_nYear=0;
+	m_szReportPeriodKey.Empty();
+	m_szFromDate.Empty();
+	m_szToDate.Empty();
+	m_bWithoutGeneral = FALSE;
+	m_szStatusKey = _T("03");
+	m_szOrderByKey = _T("04");
+	m_nPatientType = 3;
+	m_bSOD = FALSE;
+	m_szObjectTypeKey.Empty();
+	m_bSoldierWCard=FALSE;
+	m_bABZone=FALSE;
+}
+
+int CFMSOMI131BedPaidSummary::SetMode(int nMode){
+ 		int nOldMode = GetMode();
+ 		CGuiView::SetMode(nMode);
+ 		CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd();
+ 		CString szSQL;
+ 		CRecord rs(&pMF->m_db);
+  		switch(nMode){
+ 		case VM_ADD: 
+ 			EnableControls(TRUE);
+ 			EnableButtons(TRUE, 3, 4, -1);
+ 			SetDefaultValues();
+ 			break;
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE);
+ 			EnableButtons(TRUE, 0, 1, -1);
+ 			break;
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE);
+ 			EnableButtons(FALSE, 3, 4, -1);
+ 			break;
+ 		case VM_NONE: 
+ 			EnableControls(FALSE);
+ 			EnableButtons(TRUE, 0, 6, -1);
+ 			SetDefaultValues();
+ 			break;
+ 		};
+ 		UpdateData(FALSE);
+ 		return nOldMode;
+}
+
+/*void CFMSOMI131BedPaidSummary::OnYearChange(){
+	
+} */
+/*void CFMSOMI131BedPaidSummary::OnYearSetfocus(){
+	
+} */
+/*void CFMSOMI131BedPaidSummary::OnYearKillfocus(){
+	
+} */
+int CFMSOMI131BedPaidSummary::OnYearCheckValue(){
+	UpdateData(TRUE);
+	if (m_nYear > 0)
+	{
+		CDateTime dt;
+		CDate date;
+		CString szTemp;
+
+		dt.ParseDateTime(m_szFromDate);
+		date = dt.GetDate();
+		if (date.GetYear() != 1752)
+		{
+			dt.SetDate(m_nYear, date.GetMonth(), date.GetDay());
+			m_szFromDate = dt.GetDateTime();
+			szTemp.Format(_T("%.2d/2d/4d %.2d:%.2d"), dt.GetDate().GetDay(), dt.GetDate().GetMonth(), 
+						  dt.GetDate().GetYear(), dt.GetTime().GetHour(), dt.GetTime().GetMinute());
+			m_wndFromDate.SetWindowText(szTemp);
+		}
+		dt.ParseDateTime(m_szToDate);
+		date = dt.GetDate();
+		if (date.GetYear() != 1752)
+		{
+			dt.SetDate(m_nYear, date.GetMonth(), date.GetDay());
+			m_szToDate = dt.GetDateTime();
+			szTemp.Format(_T("%.2d/2d/4d %.2d:%.2d"), dt.GetDate().GetDay(), dt.GetDate().GetMonth(), 
+						  dt.GetDate().GetYear(), dt.GetTime().GetHour(), dt.GetTime().GetMinute());
+			m_wndToDate.SetWindowText(szTemp);
+		}
+	}
+	UpdateData(FALSE);
+	return 0;
+}
+ 
+void CFMSOMI131BedPaidSummary::OnReportPeriodSelectChange(int nOldItemSel, int nNewItemSel){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();	
+}
+void CFMSOMI131BedPaidSummary::OnCreateDataSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+	CRecord rs(&pMF->m_db);
+	CString szSQL,szSQL1, szSQL2, szWhere, szWhere4, szObjectID, szReceiptStr;	
+
+	szWhere4.Format(_T(" and FAC_LOCKED='Y' "));
+
+	if(m_szStatusKey == _T("01"))
+	{
+		szWhere4.AppendFormat(_T(" AND fac_invoicedate BETWEEN TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') "),m_szFromDate, m_szToDate);
+		if(!m_szClerkKey.IsEmpty())
+		{
+			szWhere4.AppendFormat(_T(" and fac_user_id='%s' "), m_szClerkKey);
+		}
+	}
+	else if(m_szStatusKey == _T("02"))
+	{
+		szWhere4.AppendFormat(_T(" and FAC_APPROVEDDATE between TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') "),m_szFromDate, m_szToDate);
+		szWhere4.AppendFormat(_T(" and FAC_APPROVED ='Y' "));
+		if(!m_szClerkKey.IsEmpty())
+		{
+			szWhere4.AppendFormat(_T(" and fac_user_id='%s' "), m_szClerkKey);
+		}
+	} 
+	else if(m_szStatusKey == _T("03") || m_szStatusKey.IsEmpty())
+	{
+		szWhere4.AppendFormat(_T(" and FAC_POSTEDDATE between TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') "),m_szFromDate, m_szToDate);
+		szWhere4.AppendFormat(_T(" and FAC_POSTED ='Y' "));
+		if(!m_szClerkKey.IsEmpty())
+		{
+			szWhere4.AppendFormat(_T(" and fac_user_id='%s' "), m_szClerkKey);
+		}
+	}	
+	if (m_bSOD)
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BHYC','BH-PTTYC')"));
+	else if (m_szObjectTypeKey == _T("BH"))		
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT','BH-NG','BHQUAN-NT', 'BHQUAN-NG')"));
+
+	else if (m_szObjectTypeKey == _T("BH-NT+BH-NG"))		
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT','BH-NG')"));
+
+	else if (m_szObjectTypeKey == _T("BH-NT"))
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT')"));
+
+	else if (m_szObjectTypeKey == _T("BH-NG"))
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NG')"));
+
+	else if (m_szObjectTypeKey == _T("BHQUAN-NT+BHQUAN-NG"))
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NT','BHQUAN-NG')"));
+
+	else if (m_szObjectTypeKey == _T("BHQUAN-NT"))
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NT')"));
+
+	else if (m_szObjectTypeKey == _T("BHQUAN-NG"))
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NG')"));
+
+	else if (m_bSoldierWCard)
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NT', 'BHQUAN-NG','QUAN-NT', 'QUAN-NG')"));
+	else 
+		szWhere4.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT','BH-NG','BHQUAN-NT', 'BHQUAN-NG','QUAN-NT', 'QUAN-NG')"));
+
+	szSQL.Format(_T("SELECT fac_cash_id as idx, fac_invoiceno descr, fac_user_id as user_id, fac_posted as  stt, fac_invoicedate, fac_approveddate, fac_posteddate ") \
+		_T("FROM fa_cash WHERE fac_invoicetype IN ('P', 'R') %s ORDER BY fac_cash_id"), szWhere4);
+	rs.ExecSQL(szSQL);	
+	OnDeleteDataBeforeInsert();
+
+	szSQL2.Format(_T("Insert into tmp_fa_cash_D10 (SELECT fac_cash_id as idx, '%s' as userid FROM fa_cash WHERE fac_invoicetype IN ('P', 'R') %s)"), pMF->m_szUser, szWhere4);	
+	int ret = pMF->ExecSQL(szSQL2);
+	_msg(_T("Đã thực hiện insert %ld bản tin"), ret);	
+} 
+
+ 
+void CFMSOMI131BedPaidSummary::OnReportPeriodSelendok(){
+	CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd();
+	CString tmpStr;
+	CDate dte, date;
+
+	UpdateData(true);
+
+	date.ParseDate(pMF->GetSysDate());
+	int nYear = date.GetYear();
+	int nMonth = ToInt(m_szReportPeriodKey);
+
+	if (nMonth > 0 && nMonth <= 12)
+	{
+		m_szFromDate.Format(_T("%.4d/%.2d/1 00:00"), nYear, nMonth);
+		dte.ParseDate(m_szFromDate);
+		m_szToDate.Format(_T("%.4d/%.2d/%.2d 23:59"), nYear, nMonth, dte.GetMonthLastDay());
+	}
+
+	if (nMonth == 13)
+	{
+		m_szFromDate.Format(_T("%.4d/1/1 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/3/1"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/3/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 14)
+	{
+		m_szFromDate.Format(_T("%.4d/4/1 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/6/1"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/6/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 15)
+	{
+		m_szFromDate.Format(_T("%.4d/7/1 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/9/1"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/9/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 16)
+	{
+		m_szFromDate.Format(_T("%.4d/10/1 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/10/1"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/12/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 17)
+	{
+		m_szFromDate.Format(_T("%.4d/1/1 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/12/1"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/12/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+
+	UpdateData(false); 
+	OnListLoadData();
+
+}
+
+/*void CFMSOMI131BedPaidSummary::OnReportPeriodSetfocus(){
+	
+}*/
+/*void CFMSOMI131BedPaidSummary::OnReportPeriodKillfocus(){
+	
+}*/
+long CFMSOMI131BedPaidSummary::OnReportPeriodLoadData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	szWhere.Empty();
+
+	if(m_wndReportPeriod.IsSearchKey() && ToInt(m_szReportPeriodKey) > 0)
+	{
+		szWhere.Format(_T(" WHERE hpr_idx=%d "), ToInt(m_szReportPeriodKey));
+	}
+	m_wndReportPeriod.DeleteAllItems();
+	int nCount = 0;
+	szSQL.Format(_T("SELECT * FROM hms_period_report %s ORDER BY hpr_idx "), szWhere);
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndReportPeriod.AddItems(
+			rs.GetValue(_T("hpr_idx")), 
+			rs.GetValue(_T("hpr_name")),			
+			NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+}
+
+/*void CFMSOMI131BedPaidSummary::OnReportPeriodAddNew(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} */
+/*void CFMSOMI131BedPaidSummary::OnFromDateChange(){
+	
+} */
+/*void CFMSOMI131BedPaidSummary::OnFromDateSetfocus(){
+	
+} */
+/*void CFMSOMI131BedPaidSummary::OnFromDateKillfocus(){
+	
+} */
+int CFMSOMI131BedPaidSummary::OnFromDateCheckValue(){
+	OnListLoadData();
+	return 0;
+}
+ 
+/*void CFMSOMI131BedPaidSummary::OnToDateChange(){
+	
+} */
+/*void CFMSOMI131BedPaidSummary::OnToDateSetfocus(){
+	
+} */
+/*void CFMSOMI131BedPaidSummary::OnToDateKillfocus(){
+	
+} */
+int CFMSOMI131BedPaidSummary::OnToDateCheckValue(){
+	OnListLoadData();
+	return 0;
+}
+ 
+void CFMSOMI131BedPaidSummary::OnClerkSelectChange(int nOldItemSel, int nNewItemSel){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();	
+}
+
+long CFMSOMI131BedPaidSummary::OnObjectTypeLoadData()
+{
+	//m_wndObjectType.AddItems(_T("01"), _T("\x44\x1ECB\x63h v\x1EE5"), NULL);
+	//m_wndObjectType.AddItems(_T("02"), _T("Bảo hiểm"), NULL);
+	
+	m_wndObjectType.AddItems(_T("BH"), _T("Tất cả đối tượng Bảo hiểm"), NULL);
+	m_wndObjectType.AddItems(_T("BH-NT+BH-NG"), _T("Bảo hiểm khác nội trú, ngoại trú"), NULL);
+	m_wndObjectType.AddItems(_T("BH-NT"), _T("Bảo hiểm khác nội trú"), NULL);
+	m_wndObjectType.AddItems(_T("BH-NG"), _T("Bảo hiểm khác ngoại trú"), NULL);
+	m_wndObjectType.AddItems(_T("BHQUAN-NT+BHQUAN-NG"), _T("Bảo hiểm quân nội trú, ngoại trú"), NULL);
+	m_wndObjectType.AddItems(_T("BHQUAN-NT"), _T("Bảo hiểm quân nội trú"), NULL);
+	m_wndObjectType.AddItems(_T("BHQUAN-NG"), _T("Bảo hiểm quân ngoại trú"), NULL);
+	//OnListLoadData();
+	return 0;	
+}
+void CFMSOMI131BedPaidSummary::OnObjectTypeSelendok()
+{
+	OnListLoadData();
+}
+void CFMSOMI131BedPaidSummary::OnABZoneSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	OnListLoadData();
+}
+
+
+void CFMSOMI131BedPaidSummary::OnSoldierWCardSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();	
+}
+
+void CFMSOMI131BedPaidSummary::OnClerkSelendok(){
+	 
+}
+int CFMSOMI131BedPaidSummary::OnListCheckAllTYC()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("DVYC"))==szItemText.Right(4))
+	{
+		m_wndList.SetCheck(i, true);
+	}
+	else m_wndList.SetCheck(i, false);
+	}
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnListCheckAllPTTYC()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("PTTYC"))==szItemText.Right(5))
+	{
+		m_wndList.SetCheck(i, true);
+	}
+	else m_wndList.SetCheck(i, false);
+	}
+	return 0;
+}
+
+void CFMSOMI131BedPaidSummary::OnListSearchItem(){
+	CSearchPopup *newPopup = new CSearchPopup(&m_wndList);
+	newPopup->ShowPopup(&m_wndList);
+}
+void CFMSOMI131BedPaidSummary::OnSODSelect(){
+	OnListLoadData();
+}
+/*void CFMSOMI131BedPaidSummary::OnClerkSetfocus(){
+	
+}*/
+/*void CFMSOMI131BedPaidSummary::OnClerkKillfocus(){
+	
+}*/
+long CFMSOMI131BedPaidSummary::OnClerkLoadData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szFilter;
+	szFilter.Format(_T(" AND su_deptid = 'PTC'"));
+	return pMF->LoadUserList(&m_wndClerk, m_szClerkKey, szFilter);
+}
+
+/*void CFMSOMI131BedPaidSummary::OnClerkAddNew(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} */
+void CFMSOMI131BedPaidSummary::OnStatusSelectChange(int nOldItemSel, int nNewItemSel){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} 
+void CFMSOMI131BedPaidSummary::OnStatusSelendok(){
+	 OnListLoadData();
+}
+/*void CFMSOMI131BedPaidSummary::OnStatusSetfocus(){
+	
+}*/
+/*void CFMSOMI131BedPaidSummary::OnStatusKillfocus(){
+	
+}*/
+long CFMSOMI131BedPaidSummary::OnStatusLoadData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	m_wndStatus.AddItems(_T("01"), _T("Ng\xE0y kh\xF3\x61 s\x1ED5"), NULL);
+	m_wndStatus.AddItems(_T("02"), _T("Ng\xE0y \x78\xE1\x63 nh\x1EADn"), NULL);
+	m_wndStatus.AddItems(_T("03"), _T("Ng\xE0y ghi s\x1ED5(n\x1ED9p qu\x1EF9)"), NULL);
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndStatus.IsSearchKey() && !m_szStatusKey.IsEmpty()){
+	 szWhere.Format(_T(" and id='%s' "), m_szStatusKey
+};
+	m_wndStatus.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT fld1 as id, fld2 as name FROM tbl WHERE 1=1 %s ORDER BY id "), szWhere
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndStatus.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CFMSOMI131BedPaidSummary::OnStatusAddNew(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} */
+void CFMSOMI131BedPaidSummary::OnOrderBySelectChange(int nOldItemSel, int nNewItemSel){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} 
+void CFMSOMI131BedPaidSummary::OnOrderBySelendok(){
+	 
+}
+/*void CFMSOMI131BedPaidSummary::OnOrderBySetfocus(){
+	
+}*/
+/*void CFMSOMI131BedPaidSummary::OnOrderByKillfocus(){
+	
+}*/
+long CFMSOMI131BedPaidSummary::OnOrderByLoadData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	//m_wndOrderBy.AddItems(_T("01"), _T("S\x1EAFp \x78\x1EBFp th\x65o t\xEAn \x62\x1EC7nh nh\xE2n"), NULL);
+	m_wndOrderBy.AddItems(_T("02"), _T("Sắp xếp theo số hồ sơ"), NULL);
+	//m_wndOrderBy.AddItems(_T("03"), _T("S\x1EAFp \x78\x1EBFp th\x65o ng\xE0y th\x61nh to\xE1n"), NULL);
+	m_wndOrderBy.AddItems(_T("03"), _T("Sắp xếp theo ngày"), NULL);
+	m_wndOrderBy.AddItems(_T("04"), _T("Sắp xếp theo khoa thực hiện"), NULL);
+	//m_wndOrderBy.AddItems(_T("05"), _T("S\x1EAFp \x78\x1EBFp th\x65o phi\x1EBFu thu"), NULL);
+/*
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndOrderBy.IsSearchKey() && !m_szOrderByKey.IsEmpty()){
+	 szWhere.Format(_T(" and id='%s' "), m_szOrderByKey
+};
+	m_wndOrderBy.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT fld1 as id, fld2 as name FROM tbl WHERE 1=1 %s ORDER BY id "), szWhere
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndOrderBy.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+*/
+	return 0;
+}
+/*void CFMSOMI131BedPaidSummary::OnOrderByAddNew(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} */
+
+long CFMSOMI131BedPaidSummary::OnDeptLoadData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndDept.IsSearchKey() && !m_szDeptKey.IsEmpty()){
+		szWhere.Format(_T(" and SD_DEPT_REPORT='%s' "), m_szDeptKey);
+	}
+	m_wndDept.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT SD_DEPT_REPORT as id, sd_name as name FROM sys_dept_report %s ORDER BY sd_id "), szWhere);
+
+	nCount = rs.ExecSQL(szSQL);
+	//_msg(_T("%s"), szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndDept.AddItems(
+			rs.GetValue(_T("id")), 
+			rs.GetValue(_T("name")), NULL);
+		rs.MoveNext();
+	}
+	return nCount;	
+}
+
+void CFMSOMI131BedPaidSummary::OnWithoutGeneralSelect(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+}
+void CFMSOMI131BedPaidSummary::OnListDblClick(){
+	int nSel = m_wndList.GetCurSel();
+	if(nSel < 0) return;
+	BOOL bCheck = m_wndList.GetCheck(nSel);
+	m_wndList.SetCheck(nSel, bCheck);
+} 
+void CFMSOMI131BedPaidSummary::OnListSelectChange(int nOldItem, int nNewItem){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} 
+int CFMSOMI131BedPaidSummary::OnListDeleteItem(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CFMSOMI131BedPaidSummary::OnListLoadData()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+
+	szWhere.Format(_T(" and FAC_LOCKED='Y' "));
+
+	if(m_szStatusKey == _T("01"))
+	{
+		szWhere.AppendFormat(_T(" AND fac_invoicedate BETWEEN TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') "),m_szFromDate, m_szToDate);
+		if(!m_szClerkKey.IsEmpty())
+		{
+			szWhere.AppendFormat(_T(" and fac_user_id='%s' "), m_szClerkKey);
+		}
+
+	}
+	else if(m_szStatusKey == _T("02"))
+	{
+		szWhere.AppendFormat(_T(" and FAC_APPROVEDDATE between TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') "),m_szFromDate, m_szToDate);
+		szWhere.AppendFormat(_T(" and FAC_APPROVED ='Y' "));
+		if(!m_szClerkKey.IsEmpty())
+		{
+			szWhere.AppendFormat(_T(" and fac_user_id='%s' "), m_szClerkKey);
+		}
+	} 
+	else if(m_szStatusKey == _T("03") || m_szStatusKey.IsEmpty())
+	{
+		szWhere.AppendFormat(_T(" and FAC_POSTEDDATE between TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') "),m_szFromDate, m_szToDate);
+		szWhere.AppendFormat(_T(" and FAC_POSTED ='Y' "));
+		if(!m_szClerkKey.IsEmpty())
+		{
+			szWhere.AppendFormat(_T(" and fac_user_id='%s' "), m_szClerkKey);
+		}
+	}
+	if (m_bSOD)
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BHYC','BH-PTTYC', 'DVYC', 'DV-PTTYC','THE-BH-PTTYC','THE-DV-PTTYC','THE-DV-YC','THE-BH-YC' )"));
+	else if (m_bABZone)
+	{
+		//szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NGAB','BH-NTAB')"));
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NGAB','BH-NTAB') OR (fac_cashbook_id in ('BHQUAN-NT', 'BHQUAN-NG') and FAC_POSTED ='Y' AND fac_invoicetype IN('P','R') AND fac_user_id in (select su_userid from sys_user where su_deptid='AB' and su_groupid='F'))"));
+		szWhere.AppendFormat(_T(" and FAC_POSTEDDATE between TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP('%s', 'YYYY-MM-DD HH24:MI:SS') "),m_szFromDate, m_szToDate);
+	}
+	else if (m_szObjectTypeKey == _T("BH"))
+		//szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT','BH-NG')"));
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT','BH-NG','BHQUAN-NT', 'BHQUAN-NG', 'THE-BH', 'BH-NGAB','BH-NTAB')"));
+
+	else if (m_szObjectTypeKey == _T("BH-NT+BH-NG"))		
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT','BH-NG')"));
+
+	else if (m_szObjectTypeKey == _T("BH-NT"))
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT')"));
+
+	else if (m_szObjectTypeKey == _T("BH-NG"))
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NG')"));
+
+	else if (m_szObjectTypeKey == _T("BHQUAN-NT+BHQUAN-NG"))
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NT','BHQUAN-NG')"));
+
+	else if (m_szObjectTypeKey == _T("BHQUAN-NT"))
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NT')"));
+
+	else if (m_szObjectTypeKey == _T("BHQUAN-NG"))
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NG')"));
+
+	else if (m_bSoldierWCard)
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BHQUAN-NT', 'BHQUAN-NG','QUAN-NT', 'QUAN-NG')"));
+
+	else 
+		szWhere.AppendFormat(_T(" AND fac_cashbook_id in ('BH-NT','BH-NG','BHQUAN-NT', 'BHQUAN-NG','QUAN-NT', 'QUAN-NG','THE-BH')"));
+
+	szSQL.Format(_T("SELECT fac_cash_id as idx, fac_invoiceno descr, fac_user_id as user_id, fac_posted as  stt, fac_invoicedate, fac_approveddate, fac_posteddate ") \
+		_T("FROM fa_cash WHERE fac_invoicetype IN ('P', 'R') %s ORDER BY fac_cash_id"), szWhere);	
+	long nCount = rs.ExecSQL(szSQL);	
+	_msg(_T("%ld"), nCount);
+	//_msg(_T("%s"), szSQL);
+	m_wndList.BeginLoad();
+	CString szDate;
+	while (!rs.IsEOF())
+	{
+		if(m_szStatusKey == _T("01"))
+			rs.GetValue(_T("fac_invoicedate"), szDate);
+		else if(m_szStatusKey == _T("02"))
+		{
+			rs.GetValue(_T("fac_approveddate"), szDate);
+		}
+		else
+		{
+			rs.GetValue(_T("fac_posteddate"), szDate);
+
+		}
+
+		m_wndList.AddItems(
+			rs.GetValue(_T("idx")),
+			rs.GetValue(_T("descr")),
+			rs.GetValue(_T("stt")),
+			szDate,
+			rs.GetValue(_T("user_id")),
+			NULL);
+		rs.MoveNext();
+	}
+	m_wndList.EndLoad();
+	return nCount;	
+}
+
+void CFMSOMI131BedPaidSummary::OnMarkAllSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	int i = 0;
+	for(i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		m_wndList.SetCheck(i, TRUE);
+	}
+	_msg(_T("Tổng số phiếu thu chi = %d"), i);
+	
+} 
+void CFMSOMI131BedPaidSummary::OnUnMarkSelect(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	for(int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		m_wndList.SetCheck(i, FALSE);
+	}
+}
+
+void CFMSOMI131BedPaidSummary::OnInpatientSelect(){
+	
+}
+void CFMSOMI131BedPaidSummary::OnOutpatientSelect(){
+	
+}
+void CFMSOMI131BedPaidSummary::OnDepositSelect(){
+	
+}
+void CFMSOMI131BedPaidSummary::OnAllSelect(){
+	
+}
+ 
+ 
+int CFMSOMI131BedPaidSummary::OnAddFMSOMI131PaidSummary(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)
+ 		return -1;
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd();
+ 	SetMode(VM_ADD);
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnEditFMSOMI131PaidSummary(){
+ 	if(GetMode() != VM_VIEW)
+ 		return -1;
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd();
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CFMSOMI131BedPaidSummary::OnDeleteFMSOMI131PaidSummary(){
+ 	if(GetMode() != VM_VIEW)
+ 		return -1;
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+ 	CString szSQL;
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO)
+ 		return -1;
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") );
+ 	int ret = pMF->ExecSQL(szSQL);
+ 	if(ret >= 0){
+ 		SetMode(VM_NONE);
+ 		OnCancelFMSOMI131PaidSummary();
+ 	}
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnSaveFMSOMI131PaidSummary(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT)
+ 		return -1;
+ 	if(!IsValidateData())
+ 		return -1;
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+ 	CString szSQL;
+ 	if(GetMode() == VM_ADD){
+ 		//szSQL = m_tblTbl.GetInsertSQL();
+ 	}
+ 	else if(GetMode() == VM_EDIT){
+ 		CString szWhere;
+ 		szWhere.Format(_T(" WHERE"));
+ 		//szSQL = m_tblTbl.GetUpdateSQL(_T("createdby,createddate"));
+ 		szSQL += szWhere;
+ 	}
+ //_fmsg(_T("%s"), szSQL);
+ 	int ret = pMF->ExecSQL(szSQL);
+ 	if(ret > 0)
+ 	{
+ 		//OnFMSOMI131PaidSummaryListLoadData();
+ 		SetMode(VM_VIEW);
+ 	}
+ 	else
+ 	{
+ 	}
+ 	return ret;
+ 	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnCancelFMSOMI131PaidSummary(){
+ 	if(GetMode() == VM_EDIT)
+ 	{
+ 		SetMode(VM_VIEW);
+ 	} 
+ 	else 
+ 	{
+ 		SetMode(VM_NONE);
+ 	} 
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+ 	return 0;
+} 
+int CFMSOMI131BedPaidSummary::OnFMSOMI131PaidSummaryListLoadData(){
+	return 0;
+}
+
+
+#include "FMInsurancePostedReceiptVoucherList.h"
+
+void CFMSOMI131BedPaidSummary::OnExportSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(TRUE);
+	CGuiMenu menu(this);
+	CString tmpStr;
+	CRect rect;
+	int nPos = 0;
+	m_wndExport.GetWindowRect(&rect);
+	_debug(_T("right: %d|top: %d"), rect.right, rect.top);
+	menu.CreatePopupMenu();
+	//TranslateString(_T("Xuất ra Excel theo mẫu in"), tmpStr);
+	//menu.AppendMenu(MF_BYPOSITION, 1, tmpStr);
+	//TranslateString(_T("Xuất danh sách BN tính doanh thu"), tmpStr);
+	//menu.AppendMenu(MF_BYPOSITION, 2, tmpStr);	
+	TranslateString(_T("Xuất Excel doanh thu"), tmpStr);
+	menu.AppendMenu(MF_BYPOSITION, 1, tmpStr);
+	//TranslateString(_T("Xuất TH theo khoa (BN không phát sinh tiền mặt)"), tmpStr);
+	//menu.AppendMenu(MF_BYPOSITION, 4, tmpStr);	
+	nPos = menu.TrackPopupMenu(TPM_RETURNCMD | TPM_BOTTOMALIGN | TPM_RIGHTALIGN, rect.right, rect.top, this);
+	switch (nPos)
+	{
+		
+		case 1:
+			OnExportTotalList();
+			break;
+			
+	}
+}
+void CFMSOMI131BedPaidSummary::OnExportTotalList()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL, tmpStr, szTemp, szWhere, szOldDept, szNewDept;
+	UpdateData(TRUE);
+	BeginWaitCursor();
+	szWhere.Empty();
+	int nRow = 0, nCol = 0, nIdx = 1;
+	double nTemp = 0, nTemp1=0;
+	double nTotal[30], nGroupTotal[30];
+	for(int i = 0; i < 30; i++)
+	{
+		nTotal[i] = 0;
+		nGroupTotal[i] = 0;
+	}
+	CExcel xls;
+	if (!xls.Load(_T("Exports\\BAO_CAO_I131_BED_ORG.xls"))) AfxMessageBox(_T("Load fail!"));	
+	xls.SetWorksheet(0);
+	xls.SetCellText(0, 0, pMF->m_szHealthService, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(0, 1, pMF->m_szHospitalName, FMT_TEXT | FMT_CENTER, true, 10);
+
+	tmpStr.Format(_T("T\x1EEB %s \x110\x1EBFn %s"), CDateTime::Convert(m_szFromDate, yyyymmdd|hhmmss, ddmmyyyy|hhmmss), CDateTime::Convert(m_szToDate, yyyymmdd|hhmmss, ddmmyyyy|hhmmss));
+	xls.SetCellText(0, 5, tmpStr, FMT_TEXT | FMT_CENTER, true, 11);
+
+	szSQL = GetQueryString2();
+	rs.ExecSQL(szSQL);
+	//_msg(_T("%s"), szSQL);
+
+	nRow = 8;
+	nCol = 0;
+	while(!rs.IsEOF())
+	{
+		xls.SetCellText(nCol+0, nRow, int2str(nIdx++), FMT_INTEGER);
+
+		rs.GetValue(_T("PatientName"), tmpStr);
+		xls.SetCellText(nCol+1, nRow, tmpStr, FMT_TEXT);
+
+		rs.GetValue(_T("Docno"), tmpStr);
+		xls.SetCellText(nCol+2, nRow, tmpStr, FMT_INTEGER);
+
+		rs.GetValue(_T("OrderDept"), tmpStr);
+		xls.SetCellText(nCol+3, nRow, tmpStr, FMT_TEXT);
+
+		rs.GetValue(_T("OrderRoom"), tmpStr);
+		xls.SetCellText(nCol+4, nRow, tmpStr, FMT_TEXT);
+
+		rs.GetValue(_T("NoiNgoai"), tmpStr);
+		xls.SetCellText(nCol+5, nRow, tmpStr, FMT_TEXT);
+
+		rs.GetValue(_T("NGAY_VAO"), tmpStr);		
+		xls.SetCellText(nCol+6,nRow,CDateTime::Convert(tmpStr,yyyymmdd|hhmmss, ddmmyyyy|hhmmss), FMT_TEXT);
+
+		rs.GetValue(_T("NGAY_RA"), tmpStr);		
+		xls.SetCellText(nCol+7,nRow,CDateTime::Convert(tmpStr,yyyymmdd|hhmmss, ddmmyyyy|hhmmss), FMT_TEXT);
+
+		rs.GetValue(_T("Posted_date"), tmpStr);		
+		xls.SetCellText(nCol+8,nRow,CDateTime::Convert(tmpStr,yyyymmdd|hhmmss, ddmmyyyy|hhmmss), FMT_TEXT);
+
+		rs.GetValue(_T("Ten"), tmpStr);
+		xls.SetCellText(nCol+9, nRow, tmpStr, FMT_TEXT);		
+
+		rs.GetValue(_T("Soluong"), tmpStr);
+		xls.SetCellText(nCol+10, nRow, tmpStr, FMT_INTEGER);
+
+		rs.GetValue(_T("Dongia"), nTemp);
+		nGroupTotal[11] += nTemp;
+		xls.SetCellText(nCol+11, nRow, double2str(nTemp), FMT_NUMBER1);
+
+		rs.GetValue(_T("TTGiagoc"), nTemp);
+		nGroupTotal[12] += nTemp;
+		xls.SetCellText(nCol+12, nRow, double2str(nTemp), FMT_NUMBER1);
+
+		rs.GetValue(_T("GiaBH"), nTemp);
+		nGroupTotal[13] += nTemp;
+		xls.SetCellText(nCol+13, nRow, double2str(nTemp), FMT_NUMBER1);	
+
+		rs.GetValue(_T("TTBaohiem"), nTemp);
+		nGroupTotal[14] += nTemp;
+		xls.SetCellText(nCol+14, nRow, double2str(nTemp), FMT_NUMBER1);	
+
+		rs.GetValue(_T("Status"), tmpStr);
+		xls.SetCellText(nCol+15, nRow, tmpStr, FMT_TEXT);		
+
+		nRow++;
+		rs.MoveNext();
+	}
+
+	if (nGroupTotal[12] > 0)
+	{
+		xls.SetCellText(1, nRow, _T("Tổng Cộng"), FMT_TEXT, true);
+		for(int i = 10; i < 18; i++)
+		{
+			xls.SetCellText(i, nRow, double2str(nGroupTotal[i]), FMT_NUMBER1, true);
+		}
+		nRow++;
+	}
+
+	EndWaitCursor();
+	xls.Save(_T("Exports\\BAO_CAO_I131_BED_ORG_1.xls"));
+}
+
+
+CString CFMSOMI131BedPaidSummary::GetQueryString2()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL,szSQL1,szSQL2,szSQL3,szSQL4,szSQL5,szSQL6,szSQL7,szSQL8,szSQL9,szSQL10,szSQL11,szSQL12,szSQL13,szSQL14,szSQL15,szSQL16,szSQL17,szSQL18,szSQL19, szSQL20, szWhere, szWhere1, szWhere2;
+	CString szOrderBy, szReceiptStr;
+	int nCount = 0;
+	CRecord rs(&pMF->m_db);	
+	szReceiptStr = _T("-1");
+	UpdateData(true);
+	for (int i =0; i < m_wndList.GetItemCount(); i++)
+	{
+		if(m_wndList.GetCheck(i))
+		{
+			if(!szReceiptStr.IsEmpty())
+				szReceiptStr.AppendFormat(_T(","));
+			szReceiptStr.AppendFormat(_T("%ld"), str2long(m_wndList.GetItemText(i,0)));
+			nCount++;
+		}
+	}
+
+	m_szCashIDS = szReceiptStr;
+	m_szCashIDS.Replace(_T("-1,"), _T(""));
+	if (nCount <1000)
+		szWhere.Format(_T(" i.hfe_cash_id in(%s) "), szReceiptStr);
+	else
+	{
+		CStringToken tok_id(szReceiptStr);
+		int nCount = 0;
+		long nTemp = 0;
+		CString szIds, tmpStr;
+		bool bBreak = false;
+		szIds.Empty();
+		tmpStr.Empty();
+		for (int i = 0; i < tok_id.GetSize(); i++)
+		{
+			if (nCount > 999)
+			{
+				bBreak = true;
+			}
+			if (bBreak)
+			{
+				if (!szIds.IsEmpty())
+				{
+					szIds += _T(" OR ");
+				}
+				szIds.AppendFormat(_T(" i.hfe_cash_id IN (%s) "), tmpStr);
+				_tprintf(_T("\nszIds: %s\n"), szIds);
+				tmpStr.Empty();
+				nCount = 0;
+				bBreak = false;
+			}
+			if (!tmpStr.IsEmpty())
+			{
+				tmpStr += _T(",");
+			}
+			tok_id.GetAt(i, nTemp);
+			tmpStr.AppendFormat(_T("%ld"), nTemp);
+			nCount++;
+		}
+		if (!szIds.IsEmpty())
+		{
+			szIds += _T(" OR ");
+		}
+		szIds.AppendFormat(_T(" i.hfe_cash_id IN (%s) "), tmpStr);
+		szWhere.Format(_T(" (%s)"), szIds);
+	}
+					/*szSQL.Format(_T(" SELECT PatientName,") \
+							_T("   Docno,") \
+							_T("   OrderDept,") \
+							_T("   OrderRoom,") \
+							_T("   NoiNgoai,") \
+							_T("   NGAY_VAO,") \
+							_T("   NGAY_RA,") \
+							_T("   Posted_date,") \
+							_T("   Ten,") \
+							_T("   Soluong,") \
+							_T("   Dongia,") \
+							_T("   GiaBH,") \
+							_T("   Soluong*Dongia as TTGiagoc,") \
+							_T("   Soluong*GiaBH as TTBaohiem,") \
+							_T("   Status") \
+							_T(" FROM") \
+							_T("   (SELECT get_patientname(f.hfe_docno) AS PatientName,") \
+							_T("     f.hfe_docno                        AS Docno,") \
+							_T("     f.hfe_deptid                         AS OrderDept,") \
+							_T("     htr_ward                             AS OrderRoom,") \
+							_T("     i.hfe_class                        AS NoiNgoai,") \
+							_T("     CASE") \
+							_T("       WHEN I.HFE_CLASS = 'I'") \
+							_T("       THEN HCR_ADMITDATE") \
+							_T("       ELSE HD_ADMITDATE") \
+							_T("     END NGAY_VAO,") \
+							_T("     CASE") \
+							_T("       WHEN I.HFE_CLASS = 'I'") \
+							_T("       THEN HCR_DISCHARGEDATE") \
+							_T("       ELSE HD_ENDDATE") \
+							_T("     END NGAY_RA,") \
+							_T("     TRUNC(i.HFE_POSTEDDATE) Posted_date,") \
+							_T("     f.hfe_desc      AS Ten,") \
+							_T("	 f.HFE_QUANTITY  AS Soluong,") \
+							_T("     f.hfe_unitprice AS Dongia,") \
+							_T("     f.hfe_insprice  AS GiaBH,") \
+							_T("     f.hfe_status    AS Status") \
+							_T("   FROM hms_fee f") \
+							_T("   LEFT JOIN HMS_FEE_INVOICE_VIEW_V2 i") \
+							_T("   ON (f.hfe_docno     =i.hfe_docno") \
+							_T("   AND f.hfe_invoiceno =i.hfe_invoiceno) ") \
+							_T("   LEFT JOIN hms_doc") \
+							_T("   ON (f.hfe_docno=hd_docno)") \
+							_T("   LEFT JOIN hms_clinical_record") \
+							_T("   ON (f.hfe_docno                   =hcr_docno)") \
+							_T("   LEFT JOIN HMS_TREATMENT_RECORD ON (hcr_docno=htr_docno and htr_ward='A20')") \
+							_T("   AND f.HFE_STATUS                 IN( 'P', 'R' )") \
+							_T("   AND f.hfe_type                   IN ('B')") \
+							_T("   AND NVL(f.hfe_category, 'N') NOT IN( 'Y', 'BQP', 'BBV')") \
+							_T("   WHERE %s") \
+							_T("   AND f.hfe_type   IN ('B') and htr_ward='A20' ") \
+							_T("   GROUP BY f.hfe_deptid, htr_ward,") \
+							_T("     i.hfe_class,") \
+							_T("     HCR_ADMITDATE,") \
+							_T("     hd_admitdate,") \
+							_T("     HCR_DISCHARGEDATE,") \
+							_T("     hd_enddate,") \
+							_T("     f.hfe_desc,") \
+							_T("     f.HFE_QUANTITY,") \
+							_T("     f.hfe_unitprice,") \
+							_T("     f.hfe_insprice,") \
+							_T("     f.hfe_type,") \
+							_T("     f.hfe_itemid,") \
+							_T("     TRUNC(i.HFE_POSTEDDATE),") \
+							_T("     f.hfe_docno,") \
+							_T("     f.hfe_status") \
+							_T("   ORDER BY TRUNC(i.HFE_POSTEDDATE),") \
+							_T("     f.hfe_deptid") \
+							_T("   )") \
+							_T(" WHERE Dongia   >0") \
+							_T(" AND OrderDept IN ('TYC', 'PTTYC')"), szWhere);*/
+
+				szSQL.Format(_T(" SELECT PatientName,") \
+							_T("   Docno,") \
+							_T("   OrderDept,") \
+							_T("   OrderRoom,") \
+							_T("   NoiNgoai,") \
+							_T("   NGAY_VAO,") \
+							_T("   NGAY_RA,") \
+							_T("   Posted_date,") \
+							_T("   Ten,") \
+							_T("   Soluong,") \
+							_T("   Dongia,") \
+							_T("   GiaBH,") \
+							_T("   Soluong*Dongia as TTGiagoc,") \
+							_T("   Soluong*GiaBH as TTBaohiem,") \
+							_T("   Status") \
+							_T(" FROM") \
+							_T("   (SELECT get_patientname(f.hfe_docno) AS PatientName,") \
+							_T("     f.hfe_docno                        AS Docno,") \
+							_T("     f.hfe_deptid                         AS OrderDept,") \
+							_T("     htr_ward                             AS OrderRoom,") \
+							_T("     i.hfe_class                        AS NoiNgoai,") \
+							_T("     CASE") \
+							_T("       WHEN I.HFE_CLASS = 'I'") \
+							_T("       THEN HCR_ADMITDATE") \
+							_T("       ELSE HD_ADMITDATE") \
+							_T("     END NGAY_VAO,") \
+							_T("     CASE") \
+							_T("       WHEN I.HFE_CLASS = 'I'") \
+							_T("       THEN HCR_DISCHARGEDATE") \
+							_T("       ELSE HD_ENDDATE") \
+							_T("     END NGAY_RA,") \
+							_T("     TRUNC(i.HFE_POSTEDDATE) Posted_date,") \
+							_T("     f.hfe_desc      AS Ten,") \
+							_T("	 f.HFE_QUANTITY  AS Soluong,") \
+							_T("     f.hfe_unitprice AS Dongia,") \
+							_T("     f.hfe_insprice  AS GiaBH,") \
+							_T("     f.hfe_status    AS Status") \
+							_T("   FROM hms_fee f") \
+							_T("   LEFT JOIN HMS_FEE_INVOICE_VIEW_V2 i") \
+							_T("   ON (f.hfe_docno     =i.hfe_docno") \
+							_T("   AND f.hfe_invoiceno =i.hfe_invoiceno) ") \
+							_T("   LEFT JOIN hms_doc") \
+							_T("   ON (f.hfe_docno=hd_docno)") \
+							_T("   LEFT JOIN hms_clinical_record") \
+							_T("   ON (f.hfe_docno                   =hcr_docno)") \
+							_T("   LEFT JOIN HMS_TREATMENT_RECORD ON (hcr_docno=htr_docno and htr_ward='A20')") \
+							_T("   AND f.HFE_STATUS                 IN( 'P', 'R' )") \
+							_T("   AND f.hfe_type                   IN ('B')") \
+							_T("   AND NVL(f.hfe_category, 'N') NOT IN( 'Y', 'BQP', 'BBV')") \
+							_T("   WHERE %s") \
+							_T("   AND f.hfe_type   IN ('B') and htr_ward='A20' ") \
+							_T("   GROUP BY f.hfe_deptid, htr_ward,") \
+							_T("     i.hfe_class,") \
+							_T("     HCR_ADMITDATE,") \
+							_T("     hd_admitdate,") \
+							_T("     HCR_DISCHARGEDATE,") \
+							_T("     hd_enddate,") \
+							_T("     f.hfe_desc,") \
+							_T("     f.HFE_QUANTITY,") \
+							_T("     f.hfe_unitprice,") \
+							_T("     f.hfe_insprice,") \
+							_T("     f.hfe_type,") \
+							_T("     f.hfe_itemid,") \
+							_T("     TRUNC(i.HFE_POSTEDDATE),") \
+							_T("     f.hfe_docno,") \
+							_T("     f.hfe_status") \
+							_T("  UNION ALL") \
+							_T("   SELECT get_patientname(f.hfe_docno) AS PatientName,") \
+							_T("     f.hfe_docno                        AS Docno,") \
+							_T("     f.hfe_deptid                       AS OrderDept,") \
+							_T("     NULL                               AS OrderRoom,") \
+							_T("     i.hfe_class                        AS NoiNgoai,   ") \
+							_T("     HD_ADMITDATE                       AS NGAY_VAO,    ") \
+							_T("     HD_ENDDATE                         AS NGAY_RA,") \
+							_T("     TRUNC(i.HFE_POSTEDDATE) Posted_date,") \
+							_T("     f.hfe_desc      AS Ten,") \
+							_T("     f.HFE_QUANTITY  AS Soluong,") \
+							_T("     f.hfe_unitprice AS Dongia,") \
+							_T("     f.hfe_insprice  AS GiaBH,") \
+							_T("     f.hfe_status    AS Status") \
+							_T("   FROM hms_fee f") \
+							_T("   LEFT JOIN HMS_FEE_INVOICE_VIEW_V2 i") \
+							_T("   ON (f.hfe_docno     =i.hfe_docno") \
+							_T("   AND f.hfe_invoiceno =i.hfe_invoiceno)") \
+							_T("   LEFT JOIN hms_doc") \
+							_T("   ON (f.hfe_docno=hd_docno)  ") \
+							_T("   AND f.HFE_STATUS                 IN( 'P', 'R' )  ") \
+							_T("   AND NVL(f.hfe_category, 'N') NOT IN( 'Y', 'BQP', 'BBV')  ") \
+							_T("   WHERE %s") \
+							_T("   AND f.hfe_type IN ('X') AND hfe_group='F0000' AND f.hfe_itemid IN (select ss_code from sys_sel where ss_id ='GIUONG_PTTYC')") \
+							_T("   AND f.hfe_deptid in ('TYC', 'PTTYC')") \
+							_T("   GROUP BY f.hfe_deptid,    ") \
+							_T("     i.hfe_class, ") \
+							_T("     hd_admitdate,   ") \
+							_T("     hd_enddate,") \
+							_T("     f.hfe_desc,") \
+							_T("     f.HFE_QUANTITY,") \
+							_T("     f.hfe_unitprice,") \
+							_T("     f.hfe_insprice,") \
+							_T("     f.hfe_type,") \
+							_T("     f.hfe_itemid,") \
+							_T("     TRUNC(i.HFE_POSTEDDATE),") \
+							_T("     f.hfe_docno,") \
+							_T("     f.hfe_status ") \
+							_T("   )") \
+							_T(" WHERE Dongia   >0") \
+							_T(" AND OrderDept IN ('TYC', 'PTTYC') ORDER BY Posted_date, OrderDept"), szWhere, szWhere);
+
+			    return szSQL;
+}
+int CFMSOMI131BedPaidSummary::OnListCheckAllInvoice()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("PT"))==szItemText.Left(2))
+	{
+		m_wndList.SetCheck(i, true);
+	}
+	else m_wndList.SetCheck(i, false);
+	}
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnListCheckAllRefund()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("PC"))==szItemText.Left(2))
+	{
+		m_wndList.SetCheck(i, true);
+	}
+	else m_wndList.SetCheck(i, false);
+	}
+	return 0;
+}
+
+int CFMSOMI131BedPaidSummary::OnListCheckAllIns()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("BH"))==szItemText.Right(2))
+	{
+		m_wndList.SetCheck(i, true);
+	}	
+	}
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnListUnCheckAllIns()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("BH"))==szItemText.Right(2))
+	{
+		m_wndList.SetCheck(i, false);
+	}	
+	}
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnListCheckAllSolder()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("QUAN"))==szItemText.Right(4) && (_T("BHQUAN"))!= szItemText.Right(6)  )
+	{
+		m_wndList.SetCheck(i, true);
+	}	
+	}
+	return 0;
+}
+
+int CFMSOMI131BedPaidSummary::OnListUnCheckAllSolder()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("QUAN"))==szItemText.Right(4) && (_T("BHQUAN"))!= szItemText.Right(6)  )
+	{
+		m_wndList.SetCheck(i, false);
+	}	
+	}
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnListCheckAllInsSolder()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("BHQUAN"))==szItemText.Right(6))
+	{
+		m_wndList.SetCheck(i, true);
+	}	
+	}
+	return 0;
+}
+
+int CFMSOMI131BedPaidSummary::OnListUnCheckAllInsSolder()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+	CString szItemText;	
+	for (int i=0; i<m_wndList.GetItemCount(); i++)	
+	{
+		szItemText=m_wndList.GetItemText(i,1);
+	if ((_T("BHQUAN"))==szItemText.Right(6))
+	{
+		m_wndList.SetCheck(i, false);
+	}	
+	}
+	return 0;
+}
+int CFMSOMI131BedPaidSummary::OnDeleteDataBeforeInsert()
+{
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd();
+ 	CString szSQL; 	
+	szSQL.Format(_T("Delete from tmp_fa_cash_D10 where userid='%s'"), pMF->m_szUser);
+ 	int ret = pMF->ExecSQL(szSQL);
+	_msg(_T("Đã xóa %ld bản ghi"), ret);
+	return 0;
+}

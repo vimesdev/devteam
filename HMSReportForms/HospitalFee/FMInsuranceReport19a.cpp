@@ -1,0 +1,3943 @@
+﻿#include "stdafx.h"
+#include "FMInsuranceReport19a.h"
+#include "HMSMainFrame.h"
+#include "ReportDocument.h"
+#include "Excel.h"
+/*static void _OnYearChangeFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnYearChange();
+} */
+/*static void _OnYearSetfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnYearSetfocus();} */ 
+/*static void _OnYearKillfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnYearKillfocus();
+} */
+static int _OnYearCheckValueFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a *)pWnd)->OnYearCheckValue();
+} 
+static void _OnReportPeriodSelectChangeFnc(CWnd *pWnd, int nOldItemSel, int nNewItemSel){
+	((CFMInsuranceReport19a* )pWnd)->OnReportPeriodSelectChange(nOldItemSel, nNewItemSel);
+} 
+static void _OnReportPeriodSelendokFnc(CWnd *pWnd)
+{
+	((CFMInsuranceReport19a *)pWnd)->OnReportPeriodSelendok();
+}
+/*static void _OnReportPeriodSetfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnReportPeriodKillfocus();
+}*/
+/*static void _OnReportPeriodKillfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnReportPeriodKillfocus();
+}*/
+static long _OnReportPeriodLoadDataFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a *)pWnd)->OnReportPeriodLoadData();
+}
+/*static void _OnReportPeriodAddNewFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnReportPeriodAddNew();
+}*/
+static long _OnPatientLineLoadDataFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a *)pWnd)->OnPatientLineLoadData();
+}
+/*static void _OnFromDateChangeFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnFromDateChange();
+} */
+/*static void _OnFromDateSetfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnFromDateSetfocus();} */ 
+/*static void _OnFromDateKillfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnFromDateKillfocus();
+} */
+static int _OnFromDateCheckValueFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a *)pWnd)->OnFromDateCheckValue();
+} 
+/*static void _OnToDateChangeFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnToDateChange();
+} */
+/*static void _OnToDateSetfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnToDateSetfocus();} */ 
+/*static void _OnToDateKillfocusFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a *)pWnd)->OnToDateKillfocus();
+} */
+static int _OnToDateCheckValueFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a *)pWnd)->OnToDateCheckValue();
+} 
+static void _OnDrugPTTTSelectFnc(CWnd *pWnd){
+	 ((CFMInsuranceReport19a*)pWnd)->OnDrugPTTTSelect();
+}
+static void _OnOutPatientSelectFnc(CWnd *pWnd){
+	 ((CFMInsuranceReport19a*)pWnd)->OnOutPatientSelect();
+}
+static void _OnInPatientSelectFnc(CWnd *pWnd){
+	 ((CFMInsuranceReport19a*)pWnd)->OnInPatientSelect();
+}
+
+static void _OnPrintPreviewSelectFnc(CWnd *pWnd){
+	CFMInsuranceReport19a *pVw = (CFMInsuranceReport19a *)pWnd;
+	pVw->OnPrintPreviewSelect();
+} 
+static void _OnExportSelectFnc(CWnd *pWnd){
+	CFMInsuranceReport19a *pVw = (CFMInsuranceReport19a *)pWnd;
+	pVw->OnExportSelect();
+}
+static long _OnListLoadDataFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a*)pWnd)->OnListLoadData();
+} 
+static void _OnListDblClickFnc(CWnd *pWnd){
+	((CFMInsuranceReport19a*)pWnd)->OnListDblClick();
+} 
+static void _OnListSelectChangeFnc(CWnd *pWnd, int nOldItem, int nNewItem){
+	((CFMInsuranceReport19a*)pWnd)->OnListSelectChange(nOldItem, nNewItem);
+} 
+static int _OnListDeleteItemFnc(CWnd *pWnd){
+	 return ((CFMInsuranceReport19a*)pWnd)->OnListDeleteItem();
+}
+static int _OnAddFMInsuranceReport21aFnc(CWnd *pWnd){
+	 return ((CFMInsuranceReport19a*)pWnd)->OnAddFMInsuranceReport21a();
+} 
+static int _OnEditFMInsuranceReport21aFnc(CWnd *pWnd){
+	 return ((CFMInsuranceReport19a*)pWnd)->OnEditFMInsuranceReport21a();
+} 
+static int _OnDeleteFMInsuranceReport21aFnc(CWnd *pWnd){
+	 return ((CFMInsuranceReport19a*)pWnd)->OnDeleteFMInsuranceReport21a();
+} 
+static int _OnSaveFMInsuranceReport21aFnc(CWnd *pWnd){
+	 return ((CFMInsuranceReport19a*)pWnd)->OnSaveFMInsuranceReport21a();
+} 
+static int _OnCancelFMInsuranceReport21aFnc(CWnd *pWnd){
+	 return ((CFMInsuranceReport19a*)pWnd)->OnCancelFMInsuranceReport21a();
+}
+
+static int _OnListCheckAllFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a*)pWnd)->OnListCheckAll();
+}
+static int _OnListUnCheckAllFnc(CWnd *pWnd){
+	return ((CFMInsuranceReport19a*)pWnd)->OnListUnCheckAll();
+}
+static void _OnSoldierPatientSelectFnc(CWnd *pWnd)
+{
+	 ((CFMInsuranceReport19a*)pWnd)->OnSoldierPatientSelect();
+}
+static void _OnByPaymentDateSelectFnc(CWnd *pWnd){
+	 ((CFMInsuranceReport19a*)pWnd)->OnByPaymentDateSelect();
+}
+static void _OnNotinSoldierPatientSelectFnc(CWnd *pWnd){
+	 ((CFMInsuranceReport19a*)pWnd)->OnNotinSoldierPatientSelect();
+}
+  static long _OnphanloaibhLoadDataFnc(CWnd *pWnd)
+{
+	return ((CFMInsuranceReport19a *)pWnd)->OnphanloaibhLoadData();
+}
+
+CFMInsuranceReport19a::CFMInsuranceReport19a(CWnd *pParent)
+{
+	m_nDlgWidth = 755;
+	m_nDlgHeight = 725;
+	SetDefaultValues();
+}
+CFMInsuranceReport19a::~CFMInsuranceReport19a()
+{
+}
+void CFMInsuranceReport19a::OnCreateComponents()
+{
+	/*m_wndReportFilter.Create(this, _T("Report Parameters"), 5, 5, 485, 550);
+	m_wndDeptInfo.Create(this, _T("Dept"), 10, 120, 485, 485);
+	m_wndYearLabel.Create(this, _T("Year"), 10, 30, 90, 55);
+	m_wndYear.Create(this,95, 30, 240, 55); 
+	m_wndReportPeriodLabel.Create(this, _T("Report Month"), 245, 30, 335, 55);
+	m_wndReportPeriod.Create(this,340, 30, 485, 55); 
+	m_wndFromDateLabel.Create(this, _T("From Date"), 10, 60, 90, 85);
+	m_wndFromDate.Create(this,95, 60, 240, 85); 
+	m_wndToDateLabel.Create(this, _T("To Date"), 245, 60, 335, 85);
+	m_wndToDate.Create(this,340, 60, 485, 85); 
+	m_wndPatientLineLabel.Create(this, _T("Patient Line"), 10, 90, 90, 115);
+	m_wndPatientLine.Create(this,95, 90, 485, 115); 
+	m_wndDrugPTTT.Create(this, _T("Without Operation Material"), 325, 490, 474, 515);
+	m_wndOutPatient.Create(this, _T("OutPatient"), 135, 490, 236, 515);
+	m_wndInPatient.Create(this, _T("InPatient"), 242, 490, 320, 515);
+	m_wndByDischargedDate.Create(this, _T("By Discharged Date"), 10, 520, 129, 545);
+	m_wndOnlyCommander.Create(this, _T("Only Commander"), 135, 520, 236, 545);
+	m_wndSoldierPatient.Create(this, _T("SoldierPatient"), 241, 520, 319, 545);
+	m_wndPrintPreview.Create(this, _T("&Print Preview"), 280, 555, 380, 580);
+	m_wndExport.Create(this, _T("&Export"), 385, 555, 485, 580);
+	m_wndList.Create(this,15, 145, 485, 480); 
+	m_wndByPaymentDate.Create(this, _T("By PaymentDate"), 10, 490, 129, 515);
+	m_wndNotinSoldierPatient.Create(this, _T("NotinSoldierPatient"), 325, 520, 474, 545);*/
+	m_wndReportFilter.Create(this, _T("Report Parameters"), 5, 5, 485, 550);
+	m_wndDeptInfo.Create(this, _T("Dept"), 10, 120, 485, 485);
+	m_wndYearLabel.Create(this, _T("Year"), 10, 30, 90, 55);
+	m_wndYear.Create(this,95, 30, 240, 55); 
+	m_wndReportPeriodLabel.Create(this, _T("Report Month"), 245, 30, 335, 55);
+	m_wndReportPeriod.Create(this,340, 30, 485, 55); 
+	m_wndFromDateLabel.Create(this, _T("From Date"), 10, 60, 90, 85);
+	m_wndFromDate.Create(this,95, 60, 240, 85); 
+	m_wndToDateLabel.Create(this, _T("To Date"), 245, 60, 335, 85);
+	m_wndToDate.Create(this,340, 60, 485, 85); 
+	m_wndPatientLineLabel.Create(this, _T("Patient Line"), 10, 90, 90, 115);
+	m_wndPatientLine.Create(this,95, 90, 485, 115); 
+	m_wndDrugPTTT.Create(this, _T("Without Operation Material"), 325, 490, 474, 515);
+	m_wndOutPatient.Create(this, _T("OutPatient"), 135, 490, 236, 515);
+	m_wndInPatient.Create(this, _T("InPatient"), 242, 490, 320, 515);
+	m_wndByDischargedDate.Create(this, _T("By Discharged Date"), 10, 520, 129, 545);
+	m_wndOnlyCommander.Create(this, _T("Only Commander"), 135, 520, 236, 545);
+	m_wndSoldierPatient.Create(this, _T("SoldierPatient"), 241, 520, 319, 545);
+	m_wndPrintPreview.Create(this, _T("&Print Preview"), 280, 554, 380, 579);
+	m_wndExport.Create(this, _T("&Export"), 385, 554, 485, 579);
+	m_wndList.Create(this,15, 145, 485, 480); 
+	m_wndByPaymentDate.Create(this, _T("By PaymentDate"), 10, 490, 129, 515);
+	m_wndNotinSoldierPatient.Create(this, _T("NotinSoldierPatient"), 325, 520, 474, 545);
+	m_wndFilterLabel.Create(this, _T("Bộ lọc"), 10, 554, 58, 579);
+	m_wndphanloaibh.Create(this,63, 554, 236, 579); 
+
+}
+void CFMInsuranceReport19a::OnInitializeComponents()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	//EnableControls(TRUE);
+	//EnableButtons(TRUE, 0, -1);
+	m_wndYear.SetLimitText(16);
+	//m_wndYear.SetCheckValue(true);
+	//m_wndReportPeriod.SetCheckValue(true);
+
+	m_wndReportPeriod.LimitText(35);
+	//m_wndFromDate.SetMax(CDateTime(pMF->GetSysDateTime()));
+	m_wndFromDate.SetCheckValue(true);
+	//m_wndToDate.SetMax(CDateTime(pMF->GetSysDateTime()));
+	m_wndToDate.SetCheckValue(true);
+
+
+	m_wndReportPeriod.InsertColumn(0, _T("ID"), CFMT_TEXT, 50);
+	m_wndReportPeriod.InsertColumn(1, _T("Description"), CFMT_TEXT, 180);
+
+	m_wndPatientLine.InsertColumn(0, _T("ID"), CFMT_TEXT, 50);
+	m_wndPatientLine.InsertColumn(1, _T("Description"), CFMT_TEXT, 250);
+
+	m_wndList.InsertColumn(0, _T("ID"), CFMT_TEXT, 100);
+	m_wndList.InsertColumn(1, _T("Name"), CFMT_TEXT, 350);
+	m_wndList.SetCheckBox(TRUE);
+
+	m_wndphanloaibh.InsertColumn(0, _T("ID"), CFMT_TEXT, 50);
+	m_wndphanloaibh.InsertColumn(1, _T("Name"), CFMT_TEXT, 150);
+}
+void CFMInsuranceReport19a::OnSetWindowEvents()
+{
+	//m_wndYear.SetEvent(WE_CHANGE, _OnYearChangeFnc);
+	//m_wndYear.SetEvent(WE_SETFOCUS, _OnYearSetfocusFnc);
+	//m_wndYear.SetEvent(WE_KILLFOCUS, _OnYearKillfocusFnc);
+	m_wndYear.SetEvent(WE_CHECKVALUE, _OnYearCheckValueFnc);
+	m_wndReportPeriod.SetEvent(WE_SELENDOK, _OnReportPeriodSelendokFnc);
+	//m_wndReportPeriod.SetEvent(WE_SETFOCUS, _OnReportPeriodSetfocusFnc);
+	//m_wndReportPeriod.SetEvent(WE_KILLFOCUS, _OnReportPeriodKillfocusFnc);
+	m_wndReportPeriod.SetEvent(WE_SELCHANGE, _OnReportPeriodSelectChangeFnc);
+	m_wndReportPeriod.SetEvent(WE_LOADDATA, _OnReportPeriodLoadDataFnc);
+	//m_wndReportPeriod.SetEvent(WE_ADDNEW, _OnReportPeriodAddNewFnc);
+	m_wndPatientLine.SetEvent(WE_LOADDATA, _OnPatientLineLoadDataFnc);
+	//m_wndFromDate.SetEvent(WE_CHANGE, _OnFromDateChangeFnc);
+	//m_wndFromDate.SetEvent(WE_SETFOCUS, _OnFromDateSetfocusFnc);
+	//m_wndFromDate.SetEvent(WE_KILLFOCUS, _OnFromDateKillfocusFnc);
+	m_wndFromDate.SetEvent(WE_CHECKVALUE, _OnFromDateCheckValueFnc);
+	//m_wndToDate.SetEvent(WE_CHANGE, _OnToDateChangeFnc);
+	//m_wndToDate.SetEvent(WE_SETFOCUS, _OnToDateSetfocusFnc);
+	//m_wndToDate.SetEvent(WE_KILLFOCUS, _OnToDateKillfocusFnc);
+	m_wndToDate.SetEvent(WE_CHECKVALUE, _OnToDateCheckValueFnc);
+	m_wndDrugPTTT.SetEvent(WE_CLICK, _OnDrugPTTTSelectFnc);
+	m_wndOutPatient.SetEvent(WE_CLICK, _OnOutPatientSelectFnc);
+	m_wndInPatient.SetEvent(WE_CLICK, _OnInPatientSelectFnc);
+	m_wndSoldierPatient.SetEvent(WE_CLICK, _OnSoldierPatientSelectFnc);
+	m_wndPrintPreview.SetEvent(WE_CLICK, _OnPrintPreviewSelectFnc);
+	m_wndExport.SetEvent(WE_CLICK, _OnExportSelectFnc);
+	m_wndList.SetEvent(WE_SELCHANGE, _OnListSelectChangeFnc);
+	m_wndList.SetEvent(WE_LOADDATA, _OnListLoadDataFnc);
+	m_wndList.SetEvent(WE_DBLCLICK, _OnListDblClickFnc);
+	m_wndByPaymentDate.SetEvent(WE_CLICK, _OnByPaymentDateSelectFnc);
+	m_wndNotinSoldierPatient.SetEvent(WE_CLICK, _OnNotinSoldierPatientSelectFnc);
+	m_wndList.SetWindowText(_T("Dept"));
+	m_wndList.AddEvent(1, _T("Check All"), _OnListCheckAllFnc);
+	m_wndList.AddEvent(2, _T("UnCheck All"), _OnListUnCheckAllFnc);
+	m_wndphanloaibh.SetEvent(WE_LOADDATA, _OnphanloaibhLoadDataFnc);
+	
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSysDate = pMF->GetSysDate();
+	m_nYear = ToInt(szSysDate.Left(4));
+	m_szReportPeriodKey.Format(_T("%d"), ToInt(szSysDate.Mid(5, 2)));
+	m_szFromDate = m_szToDate = pMF->GetSysDate();
+	m_szFromDate += _T("00:00");
+	m_szToDate += _T("23:59");
+	m_mapChapter[_T("A")] = _T("\x58\xE9t nghi\x1EC7m");
+	m_mapChapter[_T("B")] = _T("\x43h\x1EA9n \x111o\xE1n h\xECnh \x1EA3nh");
+	m_mapChapter[_T("C")] = _T("Th\x103m \x64\xF2 \x63h\x1EE9\x63 n\x103ng");
+	m_mapChapter[_T("D")] = _T("Ph\x1EABu thu\xE2t- th\x1EE7 thu\x1EADt");
+	m_mapChapter[_T("E")] = _T("V\x1EADt t\x1B0 ti\xEAu h\x61o");
+	m_mapChapter[_T("F")] = _T("\x44V k\x1EF9 thu\x1EADt \x63\x61o");
+
+	m_mapLine[_T("I")] = _T("\x110\xFAng tuy\x1EBFn \x111\x103ng k\xFD t\x1EA1i \x62\x1EC7nh vi\x1EC7n");
+	m_mapLine[_T("II")] = _T("\x110\xFAng tuy\x1EBFn \x111\x103ng k\xFD t\x1EA1i ngo\x1EA1i t\x1EC9nh");
+	m_mapLine[_T("III")] = _T("\x42\x1EC7nh nh\xE2n tr\xE1i tuy\x1EBFn");
+	UpdateData(false);
+	OnListLoadData();
+}
+void CFMInsuranceReport19a::OnDoDataExchange(CDataExchange* pDX){
+	DDX_Text(pDX, m_wndYear.GetDlgCtrlID(), m_nYear);
+	DDX_TextEx(pDX, m_wndReportPeriod.GetDlgCtrlID(), m_szReportPeriodKey);
+	DDX_TextEx(pDX, m_wndPatientLine.GetDlgCtrlID(), m_szPatientLineKey);
+	DDX_TextEx(pDX, m_wndFromDate.GetDlgCtrlID(), m_szFromDate);
+	DDX_TextEx(pDX, m_wndToDate.GetDlgCtrlID(), m_szToDate);
+	DDX_Check(pDX, m_wndDrugPTTT.GetDlgCtrlID(), m_bCheckDrug);
+	DDX_Check(pDX, m_wndOutPatient.GetDlgCtrlID(), m_bOutPatient);
+	DDX_Check(pDX, m_wndInPatient.GetDlgCtrlID(), m_bInPatient);
+	DDX_Check(pDX, m_wndByDischargedDate.GetDlgCtrlID(), m_bByDischargedDate);
+	DDX_Check(pDX, m_wndOnlyCommander.GetDlgCtrlID(), m_bOnlyCommander);
+	DDX_Check(pDX, m_wndSoldierPatient.GetDlgCtrlID(), m_bSoldierPatient);
+	DDX_Check(pDX, m_wndByPaymentDate.GetDlgCtrlID(), m_bByPaymentDate);
+	DDX_Check(pDX, m_wndNotinSoldierPatient.GetDlgCtrlID(), m_bNotinSoldierPatient);
+	DDX_TextEx(pDX, m_wndphanloaibh.GetDlgCtrlID(), m_szphanloaibhKey);
+}
+void CFMInsuranceReport19a::GetDataToScreen(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL;
+	szSQL.Format(_T("SELECT * FROM "));
+	rs.ExecSQL(szSQL);
+
+}
+void CFMInsuranceReport19a::GetScreenToData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+
+}
+void CFMInsuranceReport19a::SetDefaultValues(){
+
+	m_nYear = 0;
+	m_szReportPeriodKey.Empty();
+	m_szPatientLineKey.Empty();
+	m_szFromDate.Empty();
+	m_szToDate.Empty();
+	m_bCheckDrug=FALSE;
+	m_bOutPatient=FALSE;
+	m_bInPatient=FALSE;
+	m_bByDischargedDate = FALSE;
+	m_bOnlyCommander = FALSE;
+	m_bSoldierPatient = FALSE;
+	m_bByPaymentDate = FALSE;
+	m_bNotinSoldierPatient=FALSE;
+
+}
+int CFMInsuranceReport19a::SetMode(int nMode){
+ 		int nOldMode = GetMode(); 
+ 		CGuiView::SetMode(nMode); 
+ 		CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd(); 
+ 		CString szSQL; 
+ 		CRecord rs(&pMF->m_db); 
+  		switch(nMode){ 
+ 		case VM_ADD: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		case VM_EDIT: 
+ 			EnableControls(TRUE); 
+ 			EnableButtons(TRUE, 3, 4, -1); 
+ 			break; 
+ 		case VM_VIEW: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(FALSE, 3, 4, -1); 
+ 			break; 
+ 		case VM_NONE: 
+ 			EnableControls(FALSE); 
+ 			EnableButtons(TRUE, 0, 6, -1); 
+ 			SetDefaultValues(); 
+ 			break; 
+ 		}; 
+ 		UpdateData(FALSE); 
+ 		return nOldMode; 
+}
+/*void CFMInsuranceReport19a::OnYearChange(){
+	
+} */
+/*void CFMInsuranceReport19a::OnYearSetfocus(){
+	
+} */
+/*void CFMInsuranceReport19a::OnYearKillfocus(){
+	
+} */
+int CFMInsuranceReport19a::OnYearCheckValue()
+{
+	UpdateData(TRUE);
+	if (m_nYear > 0)
+	{
+		CDateTime dt;
+		CDate date;
+		CString szTemp;
+
+		dt.ParseDateTime(m_szFromDate);
+		date = dt.GetDate();
+		if (date.GetYear() != 1752)
+		{
+			dt.SetDate(m_nYear, date.GetMonth(), date.GetDay());
+			m_szFromDate = dt.GetDateTime();
+			szTemp.Format(_T("%.2d/%.2d/%.4d %.2d:%.2d"), dt.GetDate().GetDay(), dt.GetDate().GetMonth(), 
+						  dt.GetDate().GetYear(), dt.GetTime().GetHour(), dt.GetTime().GetMinute());
+			m_wndFromDate.SetWindowText(szTemp);
+		}
+		dt.ParseDateTime(m_szToDate);
+		date = dt.GetDate();
+		if (date.GetYear() != 1752)
+		{
+			dt.SetDate(m_nYear, date.GetMonth(), date.GetDay());
+			m_szToDate = dt.GetDateTime();
+			szTemp.Format(_T("%.2d/%.2d/%.4d %.2d:%.2d"), dt.GetDate().GetDay(), dt.GetDate().GetMonth(), 
+						  dt.GetDate().GetYear(), dt.GetTime().GetHour(), dt.GetTime().GetMinute());
+			m_wndToDate.SetWindowText(szTemp);
+		}
+	}
+
+	UpdateData(FALSE);
+
+	return 0;
+} 
+void CFMInsuranceReport19a::OnReportPeriodSelectChange(int nOldItemSel, int nNewItemSel){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} 
+void CFMInsuranceReport19a::OnReportPeriodSelendok()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd();
+	CString tmpStr;
+	CDate dte, date;
+
+	UpdateData(true);
+
+	date.ParseDate(pMF->GetSysDate());
+	int nYear = date.GetYear();
+	int nMonth = ToInt(m_szReportPeriodKey);
+
+	if (nMonth > 0 && nMonth <= 12)
+	{
+		m_szFromDate.Format(_T("%.4d/%.2d/01 00:00"), nYear, nMonth);
+		dte.ParseDate(m_szFromDate);
+		m_szToDate.Format(_T("%.4d/%.2d/%.2d 23:59"), nYear, nMonth, dte.GetMonthLastDay());
+	}
+	if (nMonth == 13)
+	{
+		m_szFromDate.Format(_T("%.4d/01/01 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/03/01"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/03/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 14)
+	{
+		m_szFromDate.Format(_T("%.4d/04/01 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/06/01"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/06/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 15)
+	{
+		m_szFromDate.Format(_T("%.4d/07/01 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/09/01"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/09/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 16)
+	{
+		m_szFromDate.Format(_T("%.4d/10/01 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/10/01"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/12/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	if (nMonth == 17)
+	{
+		m_szFromDate.Format(_T("%.4d/01/01 00:00"), nYear);
+		tmpStr.Format(_T("%.4d/12/01"), nYear);
+		dte.ParseDate(tmpStr);
+		m_szToDate.Format(_T("%.4d/12/%.2d 23:59"), nYear, dte.GetMonthLastDay());
+	}
+	UpdateData(false);	 
+}
+/*void CFMInsuranceReport19a::OnReportPeriodSetfocus(){
+	
+}*/
+/*void CFMInsuranceReport19a::OnReportPeriodKillfocus(){
+	
+}*/
+long CFMInsuranceReport19a::OnReportPeriodLoadData()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndReportPeriod.IsSearchKey() && ToInt(m_szReportPeriodKey) > 0)
+	{
+		szWhere.Format(_T(" WHERE hpr_idx = %ld"), ToInt(m_szReportPeriodKey));
+	}
+	m_wndReportPeriod.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT * FROM hms_period_report %s ORDER BY hpr_idx "), szWhere);
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndReportPeriod.AddItems(
+			rs.GetValue(_T("hpr_idx")), 
+			rs.GetValue(_T("hpr_name")),			
+			NULL);
+		rs.MoveNext();
+	}
+	return nCount;
+}
+/*void CFMInsuranceReport19a::OnReportPeriodAddNew(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} */
+
+long CFMInsuranceReport19a::OnphanloaibhLoadData()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	m_wndphanloaibh.AddItems(_T("BHBQP"), _T("Bảo hiểm BQP"), NULL);
+	m_wndphanloaibh.AddItems(_T("BHHN"), _T("Bảo hiểm Hà Nội"), NULL);
+	m_wndphanloaibh.AddItems(_T("ALL"), _T("Tất cả"), NULL);
+	return 0;
+}
+
+long CFMInsuranceReport19a::OnPatientLineLoadData(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	if(m_wndPatientLine.IsSearchKey() && ToInt(m_szPatientLineKey) > 0)
+	{
+		szWhere.Format(_T(" AND ss_code = %d"), ToInt(m_szPatientLineKey));
+	}
+	m_wndPatientLine.DeleteAllItems(); 
+	int nCount = 0;
+	szSQL.Format(_T("SELECT ss_code code, ss_desc descr FROM sys_sel WHERE ss_id = 'hms_patient_line' ORDER BY ss_code"), szWhere);
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF()){ 
+		m_wndPatientLine.AddItems(
+			rs.GetValue(_T("code")), 
+			rs.GetValue(_T("descr")),			
+			NULL);
+		rs.MoveNext();
+	}
+	return nCount;	
+}
+/*void CFMInsuranceReport19a::OnFromDateChange(){
+	
+} */
+/*void CFMInsuranceReport19a::OnFromDateSetfocus(){
+	
+} */
+/*void CFMInsuranceReport19a::OnFromDateKillfocus(){
+	
+} */
+int CFMInsuranceReport19a::OnFromDateCheckValue(){
+	return 0;
+} 
+/*void CFMInsuranceReport19a::OnToDateChange(){
+	
+} */
+/*void CFMInsuranceReport19a::OnToDateSetfocus(){
+	
+} */
+/*void CFMInsuranceReport19a::OnToDateKillfocus(){
+	
+} */
+int CFMInsuranceReport19a::OnToDateCheckValue()
+{
+	return 0;
+} 
+void CFMInsuranceReport19a::OnDrugPTTTSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+}
+void CFMInsuranceReport19a::OnOutPatientSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(TRUE);
+	m_bInPatient = FALSE;
+	OnListLoadData();
+	UpdateData(FALSE);
+}
+void CFMInsuranceReport19a::OnInPatientSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(TRUE);
+	m_bOutPatient = FALSE;
+	OnListLoadData();
+	UpdateData(FALSE);
+}
+	void CFMInsuranceReport19a::OnSoldierPatientSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();	
+}
+void CFMInsuranceReport19a::OnByPaymentDateSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+}
+void CFMInsuranceReport19a::OnNotinSoldierPatientSelect(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+}
+
+
+void CFMInsuranceReport19a::OnListDblClick()
+{
+	
+} 
+void CFMInsuranceReport19a::OnListSelectChange(int nOldItem, int nNewItem){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	
+} 
+int CFMInsuranceReport19a::OnListDeleteItem(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	 return 0;
+} 
+long CFMInsuranceReport19a::OnListLoadData()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szWhere;
+	m_wndList.BeginLoad(); 
+	m_wndList.DeleteAllItems(); 
+	int nCount = 0;
+
+	if (m_bOutPatient)
+		szWhere.Format(_T(" AND sd_type IN('KB') "));
+
+	if (m_bInPatient)
+		szWhere.Format(_T(" AND sd_type IN('DT') "));
+
+	if (m_bOutPatient && m_bInPatient)
+		szWhere.Format(_T(" AND sd_type IN('KB','DT') "));
+
+	if (!m_bOutPatient && !m_bInPatient)
+		szWhere.Format(_T(" AND 0=1 "));
+
+	szSQL.Format(_T("SELECT sd_id AS ID, sd_name AS Name ") \
+		         _T("FROM sys_dept ") \
+				 _T("WHERE 1=1 %s ") \
+				 _T("ORDER BY sd_id"), szWhere);
+	nCount = rs.ExecSQL(szSQL);
+	while(!rs.IsEOF())
+	{ 
+		m_wndList.AddItems(
+			rs.GetValue(_T("ID")), 
+			rs.GetValue(_T("Name")), NULL);
+		rs.MoveNext();
+	}
+	m_wndList.EndLoad(); 
+	return nCount;
+}
+void CFMInsuranceReport19a::OnPrintPreviewSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd(); 
+	UpdateData(true);
+	CReport rpt;
+	CRecord rs(&pMF->m_db);
+	CString tmpStr, szSQL, szDate, szMoney, szOldGroup, szNewGroup, szOldChap, szNewChap;
+	CString szTemp;
+
+	if (!rpt.Init(_T("Reports/HMS/HF_THONGKETONGHOPDICHVUKYTHUATTHEOQUY.RPT")) )	
+	{
+		return;
+	}
+	szSQL = GetQueryString();
+	rs.ExecSQL(szSQL);
+	if (rs.IsEOF())
+	{
+		AfxMessageBox(_T("No Data"));
+		return;
+	}
+	StringUpper(pMF->m_CompanyInfo.sc_pname, tmpStr);
+	rpt.GetReportHeader()->SetValue(_T("HEALTHSERVICE"), tmpStr);
+	StringUpper(pMF->m_CompanyInfo.sc_name, tmpStr);
+	rpt.GetReportHeader()->SetValue(_T("HOSPITALNAME"), tmpStr);
+
+	rpt.GetReportHeader()->SetValue(_T("ObjectGroup"), _T(""));
+	tmpStr.Format(rpt.GetReportHeader()->GetValue(_T("ReportDate")), 
+		          CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+				  CDate::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+
+	rpt.GetReportHeader()->SetValue(_T("ReportDate"), tmpStr);
+	//Page Header
+	//Report Detail
+	int nIdx = 1;
+	CString szOldLine, szNewLine, szAmount;
+	CReportSection* rptDetail = NULL, *rptGroup = NULL;
+
+	long double nGroupCost = 0, nChapCost = 0, nLineCost = 0, nTotalCost = 0;
+	double nCost = 0;
+	if (!m_bInPatient) 
+		m_mapChapter[_T("G")] = _T("Ph\xED kh\xE1m");
+	else
+		m_mapChapter[_T("G")] = _T("Ph\xED gi\x1B0\x1EDDng");
+	while (!rs.IsEOF())
+	{
+		rs.GetValue(_T("patient_line"), szNewLine);
+		rs.GetValue(_T("chapter"), szNewChap);
+		rs.GetValue(_T("group_id"), szNewGroup);
+		if (szOldLine != szNewLine)
+		{
+			if (nGroupCost > 0)
+			{
+				rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+				rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng nh\xF3m"));
+				tmpStr.Format(_T("%f"), nGroupCost);
+				rptGroup->SetValue(_T("s5"), tmpStr);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+			}
+			if (nChapCost > 0)
+			{
+				rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+				rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng ") + szOldChap);
+				tmpStr.Format(_T("%f"), nChapCost);
+				rptGroup->SetValue(_T("s5"), tmpStr);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+			}
+			if (nLineCost > 0)
+			{
+				rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+				rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng ") + szOldLine);
+				tmpStr.Format(_T("%f"), nLineCost);
+				rptGroup->SetValue(_T("s5"), tmpStr);
+				nTotalCost += nLineCost;
+				nLineCost = 0;
+			}
+			rptGroup = rpt.AddDetail(rpt.GetGroupHeader(0));
+			rptGroup->SetValue(_T("Group"), szNewLine);
+			m_mapLine.Lookup(szNewLine, tmpStr);
+			rptGroup->SetValue(_T("GroupName"), tmpStr);
+			szOldLine = szNewLine;
+			szOldChap.Empty();
+			szOldGroup.Empty();
+		}
+		if (szNewChap != szOldChap)
+		{
+			if (nGroupCost > 0)
+			{
+				rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+				rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng nh\xF3m"));
+				tmpStr.Format(_T("%f"), nGroupCost);
+				rptGroup->SetValue(_T("s5"), tmpStr);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+			}
+			if (nChapCost > 0)
+			{
+				rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+				rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng ") + szOldChap);
+				tmpStr.Format(_T("%f"), nChapCost);
+				rptGroup->SetValue(_T("s5"), tmpStr);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+			}
+			rptGroup = rpt.AddDetail(rpt.GetGroupHeader(0));
+			rptGroup->SetValue(_T("Group"), szNewChap);
+			m_mapChapter.Lookup(szNewChap, tmpStr);
+			rptGroup->SetValue(_T("GroupName"), tmpStr);
+			szOldChap = szNewChap;
+			szOldGroup.Empty();
+		}
+		if (szNewGroup != szOldGroup)
+		{
+			if (nGroupCost > 0)
+			{
+				rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+				rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng nh\xF3m"));
+				tmpStr.Format(_T("%f"), nGroupCost);
+				rptGroup->SetValue(_T("s5"), tmpStr);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+			}
+			rptGroup = rpt.AddDetail(rpt.GetGroupHeader(0));
+			rptGroup->SetValue(_T("GroupName"), rs.GetValue(_T("group_name")));
+			szOldGroup = szNewGroup;
+		}
+		rptDetail = rpt.AddDetail();
+		rptDetail->SetValue(_T("1"), int2str(nIdx++));
+		rptDetail->SetValue(_T("2"), rs.GetValue(_T("item_name")));
+		rptDetail->SetValue(_T("3"), rs.GetValue(_T("qty")));
+		rptDetail->SetValue(_T("4"), rs.GetValue(_T("unit_price")));
+		rs.GetValue(_T("amount"), nCost);
+		nGroupCost += nCost;
+		rptDetail->SetValue(_T("5"), double2str(nCost));
+		rs.MoveNext();
+	}
+	if (nGroupCost > 0)
+	{
+		rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+		rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng nh\xF3m"));
+		tmpStr.Format(_T("%f"), nGroupCost);
+		rptGroup->SetValue(_T("s5"), tmpStr);
+		nChapCost += nGroupCost;
+	}
+	if (nChapCost > 0)
+	{
+		rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+		rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng ") + szOldChap);
+		tmpStr.Format(_T("%f"), nChapCost);
+		rptGroup->SetValue(_T("s5"), tmpStr);
+		nLineCost += nChapCost;
+	}
+	if (nLineCost > 0)
+	{
+		rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+		rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng ") + szOldLine);
+		tmpStr.Format(_T("%f"), nLineCost);
+		rptGroup->SetValue(_T("s5"), tmpStr);
+		nTotalCost += nLineCost;
+	}
+	if (nTotalCost > 0)
+	{
+		rptGroup = rpt.AddDetail(rpt.GetGroupFooter(1));
+		rptGroup->SetValue(_T("TotalGroup"), _T("T\x1ED5ng \x63\x1ED9ng"));
+		tmpStr.Format(_T("%f"), nTotalCost);
+		rptGroup->SetValue(_T("s5"), tmpStr);
+	}
+	tmpStr = pMF->GetSysDateTime();
+	szDate.Format(rpt.GetReportFooter()->GetValue(_T("PrintDate")),
+		          tmpStr.Mid(8, 2), tmpStr.Mid(5, 2), tmpStr.Left(4));
+	rpt.GetReportFooter()->SetValue(_T("PrintDate"), szDate);		
+	MoneyToString(szMoney, tmpStr);
+	rpt.GetReportFooter()->SetValue(_T("SumInWord"), tmpStr);
+	EndWaitCursor();
+	rpt.PrintPreview();
+}
+
+void CFMInsuranceReport19a::OnExportSelect()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CGuiMenu menu(this);
+	HMENU hSubMenu = NULL;
+	CString tmpStr;
+	CRect rect;
+	CStringArray arrFeeType;
+	arrFeeType.Add(_T("\x58\xE9t ngi\x1EC7m"));
+	arrFeeType.Add(_T("\x43h\x1EA9n \x111o\xE1n H\x41"));
+	arrFeeType.Add(_T("PTTT"));
+	arrFeeType.Add(_T("VTTT"));
+	arrFeeType.Add(_T("\x44VKT\x43"));
+	arrFeeType.Add(_T("Ti\x1EC1n kh\xE1m/gi\x1B0\x1EDDng"));
+	menu.CreatePopupMenu();
+	m_wndExport.GetWindowRect(&rect);
+
+	TranslateString(_T("Export 19A Format (mới ***)"), tmpStr);
+	menu.AppendMenu(MF_BYPOSITION, 2, tmpStr);	
+
+	TranslateString(_T("Export 19A chuyển lên cổng BH"), tmpStr);
+	menu.AppendMenu(MF_BYPOSITION, 3, tmpStr);
+
+	TranslateString(_T("Export 19A_A11 Format (mới ***)"), tmpStr);
+	menu.AppendMenu(MF_BYPOSITION, 13, tmpStr);	
+
+	//menu.AppendMenu(MF_POPUP, 3, tmpStr);	
+	int nPos = menu.TrackPopupMenu(TPM_RETURNCMD|TPM_RIGHTALIGN|TPM_BOTTOMALIGN|TPM_NONOTIFY, rect.right, rect.top, this);
+	switch (nPos)
+	{
+		case 1:
+			OnExport();
+			break;
+		case 2:
+			OnExport_1();
+			break;
+		case 3:
+			OnExport_2();
+			break;
+		case 4:
+			OnExportDetailPatientListCompareWith80A();
+			break;
+		case 5:
+			OnExportInsUnPaid();
+			break;
+		case 6:
+			OnExportDetail();
+			break;
+		case 7:
+			m_szFeeType = _T("'A'");
+			OnExportDetailbyPatient();
+			break;
+		case 8:
+			m_szFeeType = _T("'B', 'C'");
+			OnExportDetailbyPatient();
+			break;
+		case 9:
+			m_szFeeType = _T("'D'");
+			OnExportDetailbyPatient();
+			break;
+		case 10:
+			m_szFeeType = _T("'E'");
+			OnExportDetailbyPatient();
+			break;
+		case 11:
+			m_szFeeType = _T("'F'");
+			OnExportDetailbyPatient();
+			break;
+		case 12:
+			m_szFeeType = _T("'G'");
+			OnExportDetailbyPatient();
+			break;
+		case 13:
+			OnExport_1_A11();
+			break;
+	}
+}
+void CFMInsuranceReport19a::OnExportDetailPatientListCompareWith80A()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);
+	CString szSQL, tmpStr, szTemp, szWhere, szOldDay, szNewDay;
+	UpdateData(TRUE);
+	BeginWaitCursor();
+	szWhere.Empty();
+	int nRow = 0, nCol = 0, nIdx = 1;
+	double nTemp = 0, nTemp1=0, ntotal=0;
+		
+	CExcel xls;
+	if (!xls.Load(_T("Exports\\DANHSACH_BENHNHAN_21A.xls"))) AfxMessageBox(_T("Chưa có file này trong thu mục Exports"));
+
+	xls.SetWorksheet(0);
+	xls.SetCellText(0, 0, pMF->m_szHealthService, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(0, 1, pMF->m_szHospitalName, FMT_TEXT | FMT_CENTER, true, 10);	
+
+	szSQL = GetQueryString_check();
+	rs.ExecSQL(szSQL);
+	//_msg(_T("%s"),szSQL);
+	
+	nRow = 8;
+	nCol = 0;
+	while(!rs.IsEOF())
+	{
+		xls.SetCellText(nCol+0, nRow, int2str(nIdx++), FMT_INTEGER);
+
+		rs.GetValue(_T("docno"), tmpStr);
+		xls.SetCellText(nCol+1, nRow, tmpStr, FMT_INTEGER);
+		
+		rs.GetValue(_T("pname"), tmpStr);
+		xls.SetCellText(nCol+2, nRow, tmpStr, FMT_TEXT);		
+
+		rs.GetValue(_T("totalamount"), nTemp);
+		ntotal += nTemp;
+		xls.SetCellText(nCol+3, nRow, double2str(nTemp), FMT_NUMBER1);			
+		nRow++;
+		rs.MoveNext();
+	}
+	if (ntotal > 0)
+	{
+		xls.SetCellText(2, nRow, _T("Tổng cộng"), FMT_TEXT, true);		
+		xls.SetCellText(3, nRow, double2str(ntotal), FMT_NUMBER1, true);					
+		nRow++;
+	}
+	
+	xls.Save(_T("Exports\\DANHSACH_BENHNHAN_21A2.xls"));
+}
+
+
+void CFMInsuranceReport19a::OnExport(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+
+	CExcel xls;
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szOldGroup, szNewGroup, szOldChap, szNewChap, szOldLine, szNewLine, szDate, szMoney;
+	CString tmpStr, szTemp;
+
+	int nCol = 0, nRow = 0, nIdx = 1;
+	double nCost = 0;
+	long double nGroupCost = 0, nChapCost = 0, nLineCost = 0, nTotalCost = 0;
+
+	BeginWaitCursor();
+	szSQL = GetQueryString();
+	rs.ExecSQL(szSQL);
+	//_msg(_T("%s"), szSQL);
+	if (rs.IsEOF())
+	{
+		AfxMessageBox(_T("No Data"));
+		return;
+	}
+
+	xls.CreateSheet(1);
+	xls.SetWorksheet(0);
+
+	xls.SetColumnWidth(0, 8);
+	xls.SetColumnWidth(1, 50);
+	xls.SetColumnWidth(2, 8);
+	xls.SetColumnWidth(3, 12);
+	xls.SetColumnWidth(4, 15);
+	xls.SetColumnWidth(5, 15);
+	
+	//Header
+	//xls.SetCellMergedColumns(nCol, nRow, 2);
+	//xls.SetCellMergedColumns(nCol, nRow + 1, 2);
+
+	//xls.SetCellMergedColumns(nCol + 2, nRow, 5);
+	//xls.SetCellMergedColumns(nCol + 2, nRow + 1, 5);
+
+	//xls.SetCellMergedColumns(nCol, nRow + 2, 5);
+	//xls.SetCellMergedColumns(nCol, nRow + 3, 5);
+
+	xls.SetCellText(nCol, nRow, pMF->m_CompanyInfo.sc_pname, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(nCol, nRow + 1, pMF->m_CompanyInfo.sc_name, FMT_TEXT | FMT_CENTER, true, 10);
+
+	xls.SetCellText(nCol + 2, nRow, _T("\x43\x1ED8NG H\xD2\x41 \x58\xC3 H\x1ED8I \x43H\x1EE6 NGH\x128\x41 VI\x1EC6T N\x41M"), FMT_TEXT | FMT_CENTER, true);
+	xls.SetCellText(nCol + 2, nRow + 1, _T("\x110\x1ED8\x43 L\x1EACP - T\x1EF0 \x44O - H\x1EA0NH PH\xDA\x43"), FMT_TEXT | FMT_CENTER, true);
+
+	TranslateString(_T("General statistics and technical services for patients using medical insurance"), szTemp);
+	StringUpper(szTemp, tmpStr);
+	xls.SetCellText(nCol, nRow + 2, tmpStr, FMT_TEXT | FMT_CENTER, true, 11);	
+	tmpStr.Format(_T("T\x1EEB ng\xE0y %s \x111\x1EBFn ng\xE0y %s"),
+		          CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+				  CDateTime::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+	xls.SetCellText(nCol, nRow + 3, tmpStr, FMT_TEXT | FMT_CENTER, false, 11);
+	
+	//Column Header
+	CStringArray arrCol, arrFeeGrp, arrTitle;
+	arrCol.Add(_T("STT"));
+	arrCol.Add(_T("T\xEAn \x64\x1ECB\x63h v\x1EE5 k\x1EF9 thu\x1EADt"));
+	arrCol.Add(_T("S\x1ED1 l\x1B0\x1EE3ng"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1"));
+	arrCol.Add(_T("Th\xE0nh ti\x1EC1n"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1 \x63\x169"));
+
+	for (int i = 0; i < arrCol.GetCount(); i++)
+	{
+		xls.SetCellText(nCol + i, nRow + 4, arrCol.GetAt(i), FMT_TEXT | FMT_CENTER, true, 10); 
+	}
+	if (!m_bInPatient) 
+		m_mapChapter[_T("G")] = _T("Ph\xED kh\xE1m");
+	else
+		m_mapChapter[_T("G")] = _T("Ph\xED gi\x1B0\x1EDDng");
+	nRow = 5;
+	while (!rs.IsEOF())
+	{
+		rs.GetValue(_T("patient_line"), szNewLine);
+		rs.GetValue(_T("chapter"), szNewChap);
+		rs.GetValue(_T("group_id"), szNewGroup);
+		if (szNewLine != szOldLine)
+		{
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			if (nChapCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+				tmpStr.Format(_T("%f"), nChapCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+				nRow++;
+			}
+			if (nLineCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldLine, 4098, true);
+				tmpStr.Format(_T("%f"), nLineCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+				nTotalCost += nLineCost;
+				nLineCost = 0;
+				nRow++;
+			}
+			m_mapLine.Lookup(szNewLine, szTemp);
+			//xls.SetCellMergedColumns(0, nRow, 5);
+			tmpStr.Format(_T("%s. %s"), szNewLine, szTemp);
+			xls.SetCellText(0, nRow, tmpStr, FMT_TEXT, true);
+			szOldLine = szNewLine;
+			szOldChap.Empty();
+			szOldGroup.Empty();
+			nRow++;
+
+		}
+		if (szNewChap != szOldChap)
+		{
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			if (nChapCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+				tmpStr.Format(_T("%f"), nChapCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+				nRow++;
+			}
+			m_mapChapter.Lookup(szNewChap, tmpStr);
+			//xls.SetCellMergedColumns(0, nRow, 5);
+			xls.SetCellText(0, nRow, tmpStr, FMT_TEXT, true);
+			szOldChap = szNewChap;
+			szOldGroup.Empty();
+			nRow++;
+		}
+		if (szNewGroup != szOldGroup)
+		{
+			if (nGroupCost > 0){
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			//xls.SetCellMergedColumns(1, nRow, 4);
+			xls.SetCellText(1, nRow, rs.GetValue(_T("group_name")), FMT_TEXT, true);
+			szOldGroup = szNewGroup;
+			nRow++;
+		}
+		xls.SetCellText(0, nRow, int2str(nIdx++), FMT_TEXT | FMT_RIGHT);
+		xls.SetCellText(1, nRow, rs.GetValue(_T("item_name")), FMT_TEXT);
+		xls.SetCellText(2, nRow, rs.GetValue(_T("qty")), FMT_NUMBER1);
+		xls.SetCellText(3, nRow, rs.GetValue(_T("unit_price")), FMT_NUMBER1);
+		rs.GetValue(_T("amount"), nCost);
+		nGroupCost += nCost;
+		xls.SetCellText(4, nRow, double2str(nCost), FMT_NUMBER1);
+		xls.SetCellText(5, nRow, rs.GetValue(_T("org_price")), FMT_NUMBER1);
+		nRow++;
+		rs.MoveNext();
+	}
+	if (nGroupCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+		tmpStr.Format(_T("%f"), nGroupCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+		nChapCost += nGroupCost;
+		nRow++;
+	}
+	if (nChapCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+		tmpStr.Format(_T("%f"), nChapCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+		nLineCost += nChapCost;
+		nRow++;
+	}
+	if (nLineCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldLine, 4098, true);
+		tmpStr.Format(_T("%f"), nLineCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+		nTotalCost += nLineCost;
+		nRow++;
+	}
+	if (nTotalCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng \x63\x1ED9ng"), 4098, true);
+		tmpStr.Format(_T("%f"), nTotalCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+		nRow++;		
+	}
+	szMoney.Format(_T("%.0f"), floor(nTotalCost + 0.5));
+	MoneyToString(szMoney, tmpStr);
+	xls.SetCellText(1, nRow, tmpStr, FMT_TEXT);
+	tmpStr = pMF->GetSysDateTime();
+	szDate.Format(_T("Ng\xE0y %s th\xE1ng %s n\x103m %s"),
+		          tmpStr.Mid(8, 2), tmpStr.Mid(5, 2), tmpStr.Left(4));
+	xls.SetCellText(3, nRow + 3, szDate, FMT_TEXT);
+
+	EndWaitCursor();
+	xls.Save(_T("Exports\\Thong Ke Dich Vu Ky Thuat Theo Quy.xls"));
+
+}
+
+void CFMInsuranceReport19a::OnExportInsUnPaid()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CRecord rs(&pMF->m_db);	CString szSQL, tmpStr, szTemp, szWhere, szOldGroup, szNewGroup;
+	double nQty = 0, nCost = 0, nQty2 = 0, nCost2 = 0;	UpdateData(TRUE);	BeginWaitCursor();	szWhere.Empty();	int nRow =0, nCol = 0, nIdx = 1;	CExcel xls;	xls.CreateSheet(1);	xls.SetWorksheet(0);	xls.SetColumnWidth(0, 4);	xls.SetColumnWidth(1, 10);	xls.SetColumnWidth(2, 20);	xls.SetColumnWidth(3, 16);	xls.SetColumnWidth(4, 25);	xls.SetColumnWidth(5, 10);	xls.SetColumnWidth(6, 6);	xls.SetColumnWidth(7, 12);	xls.SetColumnWidth(8, 12);	xls.SetColumnWidth(9, 25);	xls.SetColumnWidth(10, 10);	xls.SetColumnWidth(11, 10);	xls.SetColumnWidth(12, 12);	xls.SetColumnWidth(13, 6);	xls.SetCellText(nCol, nRow, pMF->m_CompanyInfo.sc_pname, FMT_TEXT | FMT_CENTER, true);
+	xls.SetCellText(nCol, nRow + 1, pMF->m_CompanyInfo.sc_name, FMT_TEXT | FMT_CENTER, true);
+	
+	tmpStr.Format(_T("T\x1EEB ng\xE0y %s \x111\x1EBFn ng\xE0y %s"),
+		CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+		CDateTime::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+	xls.SetCellText(nCol, nRow + 3, tmpStr, FMT_TEXT | FMT_CENTER, false, 11);	xls.SetCellText(0, 2, _T("\x44\x41NH M\x1EE4\x43 V\x1EACT T\x1AF \x42H KH\xD4NG TH\x41NH TO\xC1N"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 14);	xls.SetCellText(0, 4, _T("STT"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(1, 4, _T("S\x1ED1 HS"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(2, 4, _T("H\x1ECD t\xEAn"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(3, 4, _T("\x110\x1ED1i t\x1B0\x1EE3ng"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(4, 4, _T("S\x1ED1 th\x1EBB"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(5, 4, _T("\x43\x1EA5p \x62\x1EAD\x63"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(6, 4, _T("Kho\x61"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(7, 4, _T("Ng\xE0y v\xE0o"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(8, 4, _T("Ng\xE0y r\x61"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(0, 4, _T("T\xEAn v\x1EADt t\x1B0"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(10, 4, _T("S\x1ED1 l\x1B0\x1EE3ng"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(11, 4, _T("\x110\x1A1n gi\xE1"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(12, 4, _T("Th\xE0nh ti\x1EC1n"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetCellText(13, 4, _T("Kho"), FMT_TEXT | FMT_CENTER | FMT_WRAPING, true, 11);	xls.SetMerge(0, 0, 0, 2);	xls.SetMerge(1, 1, 0, 2);	xls.SetMerge(2, 2, 0, 12);	xls.SetMerge(3, 3, 0, 12);	szSQL = GetQueryStringinsunpaid();
+	int nCount = rs.ExecSQL(szSQL);
+	//_msg(_T("%s"), szSQL);
+	if (nCount <= 0)
+	{
+		ShowMessage(150, MB_ICONSTOP);
+		return;
+	}	nRow = 5;	nCol = 0;	while(!rs.IsEOF()){		rs.GetValue(_T("docno"), szNewGroup);		if (szNewGroup != szOldGroup)
+		{	
+			if(nCost > 0)
+				{
+					xls.SetCellText(nCol+2, nRow, _T("T\x1ED5ng v\x1EADt t\x1B0: "), FMT_TEXT, true);
+					xls.SetCellText(nCol+10, nRow, double2str(nQty), FMT_NUMBER1, true);
+					xls.SetCellText(nCol+12, nRow, double2str(nCost), FMT_NUMBER1, true);
+					nQty2 += nQty;
+					nCost2 += nCost;
+					nQty = 0;
+					nCost = 0;
+					nRow++;
+				}
+			szOldGroup = szNewGroup;
+			nIdx = 1;
+		}		xls.SetCellText(nCol+0, nRow, int2str(nIdx++), FMT_INTEGER);		xls.SetCellText(nCol+1, nRow, szNewGroup, FMT_INTEGER);		rs.GetValue(_T("pname"), tmpStr);		xls.SetCellText(nCol+2, nRow, tmpStr, FMT_TEXT);		rs.GetValue(_T("pobject"), tmpStr);		xls.SetCellText(nCol+3, nRow, tmpStr, FMT_TEXT);		rs.GetValue(_T("cardno"), tmpStr);		xls.SetCellText(nCol+4, nRow, tmpStr, FMT_TEXT);		rs.GetValue(_T("prank"), tmpStr);		xls.SetCellText(nCol+5, nRow, tmpStr, FMT_TEXT);		rs.GetValue(_T("deptid"), tmpStr);		xls.SetCellText(nCol+6, nRow, tmpStr, FMT_TEXT);		rs.GetValue(_T("admitdate"), tmpStr);		xls.SetCellText(nCol+7, nRow, CDate::Convert(tmpStr, yyyymmdd, ddmmyyyy), FMT_TEXT);		rs.GetValue(_T("enddate"), tmpStr);		xls.SetCellText(nCol+8, nRow, CDate::Convert(tmpStr, yyyymmdd, ddmmyyyy), FMT_TEXT);		rs.GetValue(_T("productname"), tmpStr);		xls.SetCellText(nCol+9, nRow, tmpStr, FMT_TEXT);		rs.GetValue(_T("qty"), tmpStr);		nQty += str2double(tmpStr);		xls.SetCellText(nCol+10, nRow, tmpStr, FMT_NUMBER1);		rs.GetValue(_T("price"), tmpStr);		xls.SetCellText(nCol+11, nRow, tmpStr, FMT_NUMBER1);		rs.GetValue(_T("amount"), tmpStr);		nCost += str2double(tmpStr);		xls.SetCellText(nCol+12, nRow, tmpStr, FMT_NUMBER1);		rs.GetValue(_T("storageid"), tmpStr);		xls.SetCellText(nCol+13, nRow, tmpStr, FMT_INTEGER);		nRow++;		rs.MoveNext();	}	if (nCost > 0)
+	{		xls.SetCellText(nCol+2, nRow, _T("T\x1ED5ng thu\x1ED1\x63: "), FMT_TEXT, true);
+		xls.SetCellText(nCol+10, nRow, double2str(nQty), FMT_NUMBER1, true);
+		xls.SetCellText(nCol+12, nRow, double2str(nCost), FMT_NUMBER1, true);
+		nQty2 += nQty;
+		nCost2 += nCost;		nRow++;	}	if (nCost2 > 0)
+	{									
+		TranslateString(_T("T\x1ED5ng \x63\x1ED9ng: "), tmpStr);
+		xls.SetCellText(nCol + 2, nRow, tmpStr, FMT_TEXT, true, 11, 0);
+		tmpStr.Format(_T("%.f"), nQty2);
+		xls.SetCellText(nCol + 10, nRow, tmpStr, FMT_NUMBER1, true, 11, 0);
+		tmpStr.Format(_T("%.f"), nCost2);
+		xls.SetCellText(nCol + 12, nRow, tmpStr, FMT_NUMBER1, true, 11, 0);							
+	}	EndWaitCursor();	xls.Save(_T("Exports\\Vat tu BHYT khong thanh toan.xls"));
+}
+
+void CFMInsuranceReport19a::OnExportDetail(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+
+	CExcel xls;
+	CellFormat xlsFormat(&xls);
+	xlsFormat.SetCellStyle(FMT_NUMBER1);
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szOldGroup, szNewGroup, szOldChap, szNewChap, szOldLine, szNewLine, szDate, szMoney;
+	CString tmpStr, szTemp;
+
+	int nCol = 0, nRow = 0, nIdx = 1, nIdx1 = 1, nSubIdx1 = 1, nOldLine = 0;
+	double nCost = 0;
+	long double nGroupCost = 0, nChapCost = 0, nLineCost = 0, nTotalCost = 0;
+
+	BeginWaitCursor();
+	szSQL = GetQueryString1();
+	rs.ExecSQL(szSQL);
+	if (rs.IsEOF())
+	{
+		AfxMessageBox(_T("No Data"));
+		return;
+	}
+
+	xls.CreateSheet(1);
+	xls.SetWorksheet(0);
+
+	xls.SetColumnWidth(0, 8);
+	xls.SetColumnWidth(1, 50);
+	xls.SetColumnWidth(2, 8);
+	xls.SetColumnWidth(3, 12);
+	xls.SetColumnWidth(4, 15);
+	
+	//Header
+	//xls.SetCellMergedColumns(nCol, nRow, 2);
+	//xls.SetCellMergedColumns(nCol, nRow + 1, 2);
+
+	//xls.SetCellMergedColumns(nCol + 2, nRow, 5);
+	//xls.SetCellMergedColumns(nCol + 2, nRow + 1, 5);
+
+	//xls.SetCellMergedColumns(nCol, nRow + 2, 5);
+	//xls.SetCellMergedColumns(nCol, nRow + 3, 5);
+
+	xls.SetCellText(nCol, nRow, pMF->m_CompanyInfo.sc_pname, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(nCol, nRow + 1, pMF->m_CompanyInfo.sc_name, FMT_TEXT | FMT_CENTER, true, 10);
+
+	xls.SetCellText(nCol + 2, nRow, _T("\x43\x1ED8NG H\xD2\x41 \x58\xC3 H\x1ED8I \x43H\x1EE6 NGH\x128\x41 VI\x1EC6T N\x41M"), FMT_TEXT | FMT_CENTER, true);
+	xls.SetCellText(nCol + 2, nRow + 1, _T("\x110\x1ED8\x43 L\x1EACP - T\x1EF0 \x44O - H\x1EA0NH PH\xDA\x43"), FMT_TEXT | FMT_CENTER, true);
+
+	TranslateString(_T("General statistics and technical services for patients using medical insurance"), szTemp);
+	StringUpper(szTemp, tmpStr);
+	xls.SetCellText(nCol, nRow + 2, tmpStr, FMT_TEXT | FMT_CENTER, true, 11);	
+	tmpStr.Format(_T("T\x1EEB ng\xE0y %s \x111\x1EBFn ng\xE0y %s"),
+		          CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+				  CDateTime::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+	xls.SetCellText(nCol, nRow + 3, tmpStr, FMT_TEXT | FMT_CENTER, false, 11);
+	
+	//Column Header
+	CStringArray arrCol, arrFeeGrp, arrTitle;
+	arrCol.Add(_T("STT"));
+	arrCol.Add(_T("T\xEAn \x64\x1ECB\x63h v\x1EE5 k\x1EF9 thu\x1EADt"));
+	arrCol.Add(_T("S\x1ED1 l\x1B0\x1EE3ng"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1"));
+	arrCol.Add(_T("Th\xE0nh ti\x1EC1n"));
+
+	for (int i = 0; i < arrCol.GetCount(); i++)
+	{
+		xls.SetCellText(nCol + i, nRow + 4, arrCol.GetAt(i), FMT_TEXT | FMT_CENTER, true, 10); 
+	}
+	if (!m_bInPatient) 
+		m_mapChapter[_T("G")] = _T("Ph\xED kh\xE1m");
+	else
+		m_mapChapter[_T("G")] = _T("Ph\xED gi\x1B0\x1EDDng");
+	nRow = 5;
+	while (!rs.IsEOF())
+	{
+		rs.GetValue(_T("chapter"), szNewChap);
+		rs.GetValue(_T("group_id"), szNewGroup);
+		rs.GetValue(_T("item_name"), szNewLine);
+		if (szNewChap != szOldChap)
+		{
+			if (nLineCost > 0)
+			{
+				tmpStr.Format(_T("%f"), nLineCost);
+				xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true);
+				//xls.WriteNumber(4, nOldLine, nLineCost, &xlsFormat);
+				nGroupCost += nLineCost;
+				nLineCost = 0;
+				nRow++;
+			}
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true, 11);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true, 11);
+				//xls.WriteNumber(4, nRow, nGroupCost, &xlsFormat);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			if (nChapCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true, 12);
+				tmpStr.Format(_T("%f"), nChapCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true, 12);
+				//xls.WriteNumber(4, nRow, nChapCost, &xlsFormat);
+				nTotalCost += nChapCost;
+				nChapCost = 0;
+				nRow++;
+			}
+			m_mapChapter.Lookup(szNewChap, tmpStr);
+			xls.SetCellText(0, nRow, szNewChap, FMT_TEXT | FMT_RIGHT, true, 12);
+			xls.SetCellText(1, nRow, tmpStr, FMT_TEXT, true, 12);
+			szOldChap = szNewChap;
+			szOldGroup.Empty();
+			szOldLine.Empty();
+			nIdx1 = 1;
+			nSubIdx1 = 1;
+			nRow++;
+
+		}
+		if (szNewGroup != szOldGroup)
+		{
+			if (nLineCost > 0)
+			{
+				tmpStr.Format(_T("%f"), nLineCost);
+				xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true);
+				//xls.WriteNumber(4, nOldLine, nLineCost, &xlsFormat);
+				nGroupCost += nLineCost;
+				nLineCost = 0;
+				nRow++;
+			}
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng  nh\xF3m"), 4098, true, 11);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true, 11);
+				//xls.WriteNumber(4, nRow, nGroupCost, &xlsFormat);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			xls.SetCellText(0, nRow, int2str(nIdx1++), FMT_TEXT | FMT_RIGHT, true, 11);
+			xls.SetCellText(1, nRow, rs.GetValue(_T("group_name")), FMT_TEXT, true, 11);
+			szOldGroup = szNewGroup;
+			szOldLine.Empty();
+			nSubIdx1 = 1;
+			nRow++;
+		}
+		if (szNewLine != szOldLine)
+		{
+			if (nLineCost > 0){
+				tmpStr.Format(_T("%f"), nLineCost);
+				xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true);
+				//xls.WriteNumber(4, nOldLine, nLineCost, &xlsFormat);
+				nGroupCost += nLineCost;
+				nLineCost = 0;
+				nRow++;
+			}
+			tmpStr.Format(_T("%d.%d"), nIdx1-1, nSubIdx1++);
+			xls.SetCellText(0, nRow, tmpStr, FMT_TEXT | FMT_RIGHT, true);
+			xls.SetCellText(1, nRow, rs.GetValue(_T("item_name")), FMT_TEXT, true);
+			szOldLine = szNewLine;
+			nOldLine = nRow;
+			nRow++;
+		}
+		xls.SetCellText(0, nRow, int2str(nIdx++), FMT_TEXT | FMT_RIGHT);
+		tmpStr.Format(_T("[%s] %s - %s | %s"), rs.GetValue(_T("doc_no")), rs.GetValue(_T("patient_name")), 
+			rs.GetValue(_T("patient_age")), rs.GetValue(_T("hd_cardno")));
+		xls.SetCellText(1, nRow, tmpStr, FMT_TEXT);
+		rs.GetValue(_T("qty"), nCost);
+		xls.SetCellText(2, nRow, rs.GetValue(_T("qty")), FMT_NUMBER1);
+		rs.GetValue(_T("unit_price"), nCost);
+		xls.SetCellText(3, nRow, rs.GetValue(_T("unit_price")), FMT_NUMBER1);
+		rs.GetValue(_T("amount"), nCost);
+		nLineCost += nCost;
+		xls.SetCellText(4, nRow, double2str(nCost) , FMT_NUMBER1);
+		nRow++;
+		rs.MoveNext();
+	}
+	if (nLineCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng"), 4098, true);
+		tmpStr.Format(_T("%f"), nLineCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+		nGroupCost += nLineCost;
+		nRow++;
+	}
+	if (nGroupCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng  nh\xF3m"), 4098, true, 11);
+		tmpStr.Format(_T("%f"), nGroupCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true, 11);
+		nChapCost += nGroupCost;
+		nRow++;
+	}
+	if (nChapCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true, 12);
+		tmpStr.Format(_T("%f"), nChapCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true, 12);
+		nTotalCost += nChapCost;
+		nRow++;
+	}
+	if (nTotalCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng \x63\x1ED9ng"), 4098, true, 12);
+		tmpStr.Format(_T("%f"), nTotalCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true, 12);
+		nRow++;		
+	}
+	szMoney.Format(_T("%.0f"), floor(nTotalCost + 0.5));
+	MoneyToString(szMoney, tmpStr);
+	xls.SetCellText(1, nRow, tmpStr, FMT_TEXT);
+	tmpStr = pMF->GetSysDateTime();
+	szDate.Format(_T("Ng\xE0y %s th\xE1ng %s n\x103m %s"),
+		          tmpStr.Mid(8, 2), tmpStr.Mid(5, 2), tmpStr.Left(4));
+	xls.SetCellText(3, nRow + 3, szDate, FMT_TEXT);
+
+	EndWaitCursor();
+	xls.Save(_T("Exports\\Chi Tiet Thong Ke Dich Vu Ky Thuat Theo Quy theo BN.xls"));
+}
+
+void CFMInsuranceReport19a::OnExportDetailbyPatient(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+
+	CExcel xls;
+	CellFormat xlsFormat(&xls);
+	xlsFormat.SetCellStyle(FMT_NUMBER1);
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szOldGroup, szNewGroup, szOldChap, szNewChap, szOldLine, szNewLine, szDate, szMoney;
+	CString tmpStr, szTemp;
+
+	int nCol = 0, nRow = 0, nIdx = 1, nIdx1 = 1, nSubIdx1 = 1, nOldLine = 0, nOldLine2 = 0;
+	double nCost = 0;
+	long double nGroupCost = 0, nChapCost = 0, nLineCost = 0, nTotalCost = 0;
+
+	BeginWaitCursor();
+	szSQL = GetQueryString_DtlbyPatient(m_szFeeType);
+	int nRet = rs.ExecSQL(szSQL);
+	if (rs.IsEOF())
+	{
+		if (nRet < 0)
+			_msg(_T("%s"), szSQL);
+		else
+			_fmsg(_T("%s"), szSQL);
+		AfxMessageBox(_T("No Data"));
+		return;
+	}
+
+	xls.CreateSheet(1);
+	xls.SetWorksheet(0);
+
+	xls.SetColumnWidth(0, 8);
+	xls.SetColumnWidth(1, 50);
+	xls.SetColumnWidth(2, 8);
+	xls.SetColumnWidth(3, 12);
+	xls.SetColumnWidth(4, 15);
+	
+	//Header
+	//xls.SetCellMergedColumns(nCol, nRow, 2);
+	//xls.SetCellMergedColumns(nCol, nRow + 1, 2);
+
+	//xls.SetCellMergedColumns(nCol + 2, nRow, 5);
+	//xls.SetCellMergedColumns(nCol + 2, nRow + 1, 5);
+
+	//xls.SetCellMergedColumns(nCol, nRow + 2, 5);
+	//xls.SetCellMergedColumns(nCol, nRow + 3, 5);
+
+	xls.SetCellText(nCol, nRow, pMF->m_CompanyInfo.sc_pname, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(nCol, nRow + 1, pMF->m_CompanyInfo.sc_name, FMT_TEXT | FMT_CENTER, true, 10);
+
+	xls.SetCellText(nCol + 2, nRow, _T("\x43\x1ED8NG H\xD2\x41 \x58\xC3 H\x1ED8I \x43H\x1EE6 NGH\x128\x41 VI\x1EC6T N\x41M"), FMT_TEXT | FMT_CENTER, true);
+	xls.SetCellText(nCol + 2, nRow + 1, _T("\x110\x1ED8\x43 L\x1EACP - T\x1EF0 \x44O - H\x1EA0NH PH\xDA\x43"), FMT_TEXT | FMT_CENTER, true);
+
+	TranslateString(_T("General statistics and technical services for patients using medical insurance"), szTemp);
+	StringUpper(szTemp, tmpStr);
+	xls.SetCellText(nCol, nRow + 2, tmpStr, FMT_TEXT | FMT_CENTER, true, 11);	
+	tmpStr.Format(_T("T\x1EEB ng\xE0y %s \x111\x1EBFn ng\xE0y %s"),
+		          CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+				  CDateTime::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+	xls.SetCellText(nCol, nRow + 3, tmpStr, FMT_TEXT | FMT_CENTER, false, 11);
+	
+	//Column Header
+	CStringArray arrCol, arrFeeGrp, arrTitle;
+	arrCol.Add(_T("STT"));
+	arrCol.Add(_T("T\xEAn \x64\x1ECB\x63h v\x1EE5 k\x1EF9 thu\x1EADt"));
+	arrCol.Add(_T("S\x1ED1 l\x1B0\x1EE3ng"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1"));
+	arrCol.Add(_T("Th\xE0nh ti\x1EC1n"));
+
+	for (int i = 0; i < arrCol.GetCount(); i++)
+	{
+		xls.SetCellText(nCol + i, nRow + 4, arrCol.GetAt(i), FMT_TEXT | FMT_CENTER, true, 10); 
+	}
+	if (!m_bInPatient) 
+		m_mapChapter[_T("G")] = _T("Ph\xED kh\xE1m");
+	else
+		m_mapChapter[_T("G")] = _T("Ph\xED gi\x1B0\x1EDDng");
+	nRow = 5;
+	while (!rs.IsEOF())
+	{
+		//rs.GetValue(_T("chapter"), szNewChap);
+		rs.GetValue(_T("doc_no"), szNewGroup);
+		//rs.GetValue(_T("group_id"), szNewLine);
+		//if (szNewChap != szOldChap)
+		//{
+		//	//if (nLineCost > 0)
+		//	//{
+		//	//	tmpStr.Format(_T("%f"), nLineCost);
+		//	//	xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true);
+		//	//	//xls.WriteNumber(4, nOldLine, nLineCost, &xlsFormat);
+		//	//	nGroupCost += nLineCost;
+		//	//	nLineCost = 0;
+		//	//	nRow++;
+		//	//}
+		//	if (nGroupCost > 0)
+		//	{
+		//		//xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true, 11);
+		//		tmpStr.Format(_T("%f"), nGroupCost);
+		//		xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true, 11);
+		//		//xls.WriteNumber(4, nRow, nGroupCost, &xlsFormat);
+		//		nChapCost += nGroupCost;
+		//		nGroupCost = 0;
+		//	}
+		//	if (nChapCost > 0)
+		//	{
+		//		//xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true, 12);
+		//		tmpStr.Format(_T("%f"), nChapCost);
+		//		xls.SetCellText(4, nOldLine2, tmpStr, FMT_NUMBER1, true, 12);
+		//		//xls.WriteNumber(4, nRow, nChapCost, &xlsFormat);
+		//		nTotalCost += nChapCost;
+		//		nChapCost = 0;
+		//	}
+		//	m_mapChapter.Lookup(szNewChap, tmpStr);
+		//	xls.SetCellText(0, nRow, szNewChap, FMT_TEXT | FMT_RIGHT, true, 12);
+		//	xls.SetCellText(1, nRow, tmpStr, FMT_TEXT, true, 12);
+		//	szOldChap = szNewChap;
+		//	szOldGroup.Empty();
+		//	szOldLine.Empty();
+		//	nIdx1 = 1;
+		//	nOldLine2 = nRow;
+		//	nSubIdx1 = 1;
+		//	nRow++;
+
+		//}
+		if (szNewGroup != szOldGroup)
+		{
+			//if (nLineCost > 0)
+			//{
+			//	tmpStr.Format(_T("%f"), nLineCost);
+			//	xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true);
+			//	//xls.WriteNumber(4, nOldLine, nLineCost, &xlsFormat);
+			//	nGroupCost += nLineCost;
+			//	nLineCost = 0;
+			//	nRow++;
+			//}
+			if (nGroupCost > 0)
+			{
+				//xls.SetCellText(1, nRow, _T("T\x1ED5ng  nh\xF3m"), 4098, true, 11);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true, 11);
+				//xls.WriteNumber(4, nRow, nGroupCost, &xlsFormat);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+			}
+			xls.SetCellText(0, nRow, int2str(nIdx1++), FMT_TEXT | FMT_RIGHT, true, 11);
+			tmpStr.Format(_T("[%s] %s"), rs.GetValue(_T("doc_no")), rs.GetValue(_T("patient_name")));
+			xls.SetCellText(1, nRow, tmpStr, FMT_TEXT, true, 11);
+			szOldGroup = szNewGroup;
+			szOldLine.Empty();
+			nOldLine = nRow;
+			nSubIdx1 = 1;
+			nRow++;
+		}
+		//if (szNewLine != szOldLine)
+		//{
+		//	if (nLineCost > 0){
+		//		tmpStr.Format(_T("%f"), nLineCost);
+		//		xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true);
+		//		//xls.WriteNumber(4, nOldLine, nLineCost, &xlsFormat);
+		//		nGroupCost += nLineCost;
+		//		nLineCost = 0;
+		//		nRow++;
+		//	}
+		//	tmpStr.Format(_T("%d.%d"), nIdx1-1, nSubIdx1++);
+		//	xls.SetCellText(0, nRow, tmpStr, FMT_TEXT | FMT_RIGHT, true);
+		//	xls.SetCellText(1, nRow, rs.GetValue(_T("group_id")), FMT_TEXT, true);
+		//	szOldLine = szNewLine;
+		//	nOldLine = nRow;
+		//	nRow++;
+		//}
+		//xls.SetCellText(0, nRow, int2str(nIdx++), FMT_TEXT | FMT_RIGHT);
+		//tmpStr.Format(_T("%s"), rs.GetValue(_T("item_name")));
+		//xls.SetCellText(1, nRow, tmpStr, FMT_TEXT);
+		//rs.GetValue(_T("qty"), nCost);
+		//xls.SetCellText(2, nRow, rs.GetValue(_T("qty")), FMT_NUMBER1);
+		//rs.GetValue(_T("unit_price"), nCost);
+		//xls.SetCellText(3, nRow, rs.GetValue(_T("unit_price")), FMT_NUMBER1);
+		rs.GetValue(_T("amount"), nCost);
+		nGroupCost += nCost;
+		//xls.SetCellText(4, nRow, double2str(nCost) , FMT_NUMBER1);
+		//nRow++;
+		rs.MoveNext();
+	}
+	//if (nLineCost > 0)
+	//{
+	//	xls.SetCellText(1, nRow, _T("T\x1ED5ng"), 4098, true);
+	//	tmpStr.Format(_T("%f"), nLineCost);
+	//	xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true);
+	//	nGroupCost += nLineCost;
+	//	nRow++;
+	//}
+	if (nGroupCost > 0)
+	{
+		//xls.SetCellText(1, nRow, _T("T\x1ED5ng  nh\xF3m"), 4098, true, 11);
+		tmpStr.Format(_T("%f"), nGroupCost);
+		xls.SetCellText(4, nOldLine, tmpStr, FMT_NUMBER1, true, 11);
+		nChapCost += nGroupCost;
+		nRow++;
+	}
+	//if (nChapCost > 0)
+	//{
+	//	//xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true, 12);
+	//	tmpStr.Format(_T("%f"), nChapCost);
+	//	xls.SetCellText(4, nOldLine2, tmpStr, FMT_NUMBER1, true, 12);
+	//	nTotalCost += nChapCost;
+	//	nRow++;
+	//}
+	if (nTotalCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng \x63\x1ED9ng"), 4098, true, 12);
+		tmpStr.Format(_T("%f"), nChapCost);
+		xls.SetCellText(4, nRow, tmpStr, FMT_NUMBER1, true, 12);
+		nRow++;		
+	}
+	szMoney.Format(_T("%.0f"), floor(nTotalCost + 0.5));
+	MoneyToString(szMoney, tmpStr);
+	xls.SetCellText(1, nRow, tmpStr, FMT_TEXT);
+	tmpStr = pMF->GetSysDateTime();
+	szDate.Format(_T("Ng\xE0y %s th\xE1ng %s n\x103m %s"),
+		          tmpStr.Mid(8, 2), tmpStr.Mid(5, 2), tmpStr.Left(4));
+	xls.SetCellText(3, nRow + 3, szDate, FMT_TEXT);
+
+	EndWaitCursor();
+	xls.Save(_T("Exports\\Chi Tiet Thong Ke Dich Vu Ky Thuat Theo Quy.xls"));
+}
+
+int CFMInsuranceReport19a::OnAddFMInsuranceReport21a(){
+ 	if(GetMode() == VM_ADD || GetMode() == VM_EDIT)  
+ 		return -1; 
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_ADD);
+	return 0; 
+}
+int CFMInsuranceReport19a::OnEditFMInsuranceReport21a(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *) AfxGetMainWnd(); 
+ 	SetMode(VM_EDIT);
+	return 0;  
+}
+int CFMInsuranceReport19a::OnDeleteFMInsuranceReport21a(){
+ 	if(GetMode() != VM_VIEW) 
+ 		return -1; 
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(ShowMessage(1, MB_YESNO|MB_ICONQUESTION|MB_DEFBUTTON2) == IDNO) 
+ 		return -1; 
+ 	szSQL.Format(_T("DELETE FROM  WHERE  AND") ); 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret >= 0){ 
+ 		SetMode(VM_NONE); 
+ 		OnCancelFMInsuranceReport21a(); 
+ 	}
+	return 0;
+}
+int CFMInsuranceReport19a::OnSaveFMInsuranceReport21a(){
+ 	if(GetMode() != VM_ADD && GetMode() != VM_EDIT) 
+ 		return -1; 
+ 	if(!IsValidateData()) 
+ 		return -1; 
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd(); 
+ 	CString szSQL; 
+ 	if(GetMode() == VM_ADD){ 
+ 		//szSQL = m_tblTbl.GetInsertSQL(); 
+ 	} 
+ 	else if(GetMode() == VM_EDIT){ 
+ 		CString szWhere; 
+ 		szWhere.Format(_T(" WHERE")); 
+ 		//szSQL = m_tblTbl.GetUpdateSQL(_T("createdby,createddate")); 
+ 		szSQL += szWhere; 
+ 	} 
+ 	int ret = pMF->ExecSQL(szSQL); 
+ 	if(ret > 0) 
+ 	{ 
+ 		//OnFMInsuranceReport21aListLoadData(); 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 	} 
+ 	return ret; 
+ 	return 0; 
+}
+int CFMInsuranceReport19a::OnCancelFMInsuranceReport21a()
+{
+ 	if(GetMode() == VM_EDIT) 
+ 	{ 
+ 		SetMode(VM_VIEW); 
+ 	} 
+ 	else 
+ 	{ 
+ 		SetMode(VM_NONE); 
+ 	} 
+ 	CHMSMainFrame *pMF = (CHMSMainFrame *)AfxGetMainWnd(); 
+ 	return 0;
+} 
+int CFMInsuranceReport19a::OnFMInsuranceReport21aListLoadData(){
+	return 0;
+}
+
+int CFMInsuranceReport19a::OnListCheckAll()
+{
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (!m_wndList.GetCheck(i))
+		{
+			m_wndList.SetCheck(i, TRUE);
+		}
+	}
+	return 0;
+}
+
+int CFMInsuranceReport19a::OnListUnCheckAll()
+{
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			m_wndList.SetCheck(i, FALSE);
+		}
+	}
+	return 0;
+}
+
+CString CFMInsuranceReport19a::GetQueryString()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szWhere1, szSubWhere, szHospitalID;
+	CString szLineWhere, szDept, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+		
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND i.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class IN ('A', 'I') AND NVL(htr_outpatient, 'X') <> 'Y'"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class = 'E'"));
+	if (m_bByDischargedDate)		
+	{
+		//szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND f.hfe_invoiceno = hcrf_invoicefee)") \//
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)"));
+		//szWhere.AppendFormat(_T(" AND nvl(htr_outpatient, 'X') <> 'Y'"));//
+	}
+	if (m_bByDischargedDate)	
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}	
+	if (m_bByPaymentDate)	
+	{
+		if (m_bInPatient)				
+		//szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND f.hfe_invoiceno = hcrf_invoicefee)") \//
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)"));		
+		szFeeCondition.Format(_T(" AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)		
+			szFeeCondition.Format(_T("AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	if (m_bSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) IN ('QN')"));
+	if (m_bNotinSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) NOT IN ('QN')"));
+
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND f.hfe_status <> 'C' AND f.hfe_discount > 0 AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	//1. Phi B1=Xet nghiem
+	szSubSQL.Format(_T("SELECT hms_getpatientline(hd_docno) patient_line,") \
+		_T("				   Cast ('A' AS NVARCHAR2(1))       chapter, ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity						qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     (f.hfe_type = 'T' OR (f.hfe_type = 'P' AND Substr(hfe_group, 1, 2) = 'B1'))") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		//2. Phi B2 = Chan doan hinh anh
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   Cast ('B' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B2' ") \
+		_T("               AND hfe_hitech = 'N' %s") \
+		//3. Phi = B3 = tham do chuc nang
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   Cast ('C' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B3' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		//4. Dich vu ky thuat thuong
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   Cast ('D' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'O' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		//5. Dich vu ky thuat cao
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno), ") \
+		_T("				   Cast ('F' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     hfe_hitech = 'Y' ") \
+		_T("		 %s"),szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere);
+	if (m_bCheckDrug)
+		szSubWhere = _T(" AND hpo_feetype <> 'PT'");
+	szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno) ,") \
+		_T("				   Cast ('E' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_insprice  unit_price, ") \
+		_T("                   0 org_price, ") \
+		_T("                   f.hfe_inspaid  amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno )") \
+		_T("         LEFT JOIN m_productitem_view ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("               AND (product_org_id = 'MA' OR product_org_id = 'BB' OR (product_org_id = 'PM' AND product_producttype IN ('A1500', 'A1600')))") \
+		_T("               AND hfe_category in ('N','BQP') ") \
+		_T("		 %s"), szTable, szSubWhere, szWhere);
+	if (!m_bInPatient)
+		//6. Phi kham
+		szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   Cast ('G' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'E' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s"), szTable, szWhere);
+	else
+	//7. Phi giuong benh
+	szSubSQL.AppendFormat(
+	_T("		   UNION ALL ") \
+	_T("         SELECT	hms_getpatientline(hd_docno) ,") \
+	_T("		   Cast ('G' AS NVARCHAR2(1)), ") \
+	_T("           hfe_group                        group_id, ") \
+	_T("           Get_feegroupname(hfe_group)      group_name, ") \
+	_T("           f.hfe_deptid ") \
+	_T("           ||' '||f.hfe_desc                item_name, ") \
+	_T("           hfe_quantity                qty, ") \
+	_T("           hfe_insprice                     unit_price, ") \
+	_T("           0			org_price, ") \
+	_T("           f.hfe_inspaid amount ") \
+	_T(" FROM      hms_fee f ") \
+	_T(" LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+	_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+	_T(" %s") \
+	_T(" LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+	_T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+	_T("                                  AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+	_T(" WHERE     f.hfe_type = 'B' ") \
+	_T("       AND hfe_hitech = 'N' ") \
+	_T(" %s"), szTable, szWhere);
+
+	szSQL.Format(_T(" SELECT patient_line, chapter, group_id, group_name, item_name, sum(qty) qty, unit_price, org_price, sum(amount) amount ") \
+				_T(" FROM   (") \
+				_T(" %s) ") \
+				_T(" GROUP BY patient_line, chapter, group_id, group_name, item_name, unit_price,org_price") \
+				_T(" ORDER  BY patient_line, chapter, ") \
+				_T("           group_id, ") \
+				_T("           item_name "), szSubSQL);
+//_msg(_T("%s"), szSQL);
+	return szSQL;	
+}
+CString CFMInsuranceReport19a::GetQueryStringinsunpaid()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szSubWhere, szHospitalID;
+	CString szLineWhere, szDept, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND fi.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND fi.hfe_class IN ('A', 'I')"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND fi.hfe_class = 'E'"));
+	if (m_bByDischargedDate)
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}
+	else
+		szFeeCondition.Format(_T(" AND fi.hfe_status = 'P'") \
+			_T(" AND fi.hfe_date BETWEEN to_timestamp('%s', 'yyyy/mm/dd hh24:mi:ss') AND to_timestamp('%s', 'yyyy/mm/dd hh24:mi:ss')")
+			, m_szFromDate, m_szToDate);
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	if (m_bSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) IN ('QN')"));
+
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	szSQL.Format(_T(" SELECT") \
+		_T(" fe.hfe_docno AS docno,") \
+		_T(" get_patientname(fe.hfe_docno) AS pname,") \
+		_T(" hms_getobjectname(hd_object) AS pobject,") \
+		_T(" hd_cardno AS cardno,") \
+		_T(" get_syssel_desc('hms_rank', hp_rank) AS prank,") \
+		_T(" fe.hfe_deptid AS deptid,") \
+		_T(" CASE WHEN fe.hfe_deptid IN('C1.1', 'C1.2', 'C1.3', 'TYC') THEN hd_admitdate ELSE hcr_admitdate END AS admitdate,") \
+		_T(" CASE WHEN fe.hfe_deptid IN('C1.1', 'C1.2', 'C1.3', 'TYC') THEN hd_enddate ELSE hcr_dischargedate END AS enddate,") \
+		_T(" product_name AS productname,") \
+		_T(" SUM(fe.hfe_quantity) AS qty,") \
+		_T(" fe.hfe_unitprice AS price,") \
+		_T(" SUM(CASE WHEN NVL(fe.hfe_diffpaid, 0) > 0 THEN fe.hfe_diffpaid ELSE fe.hfe_patdebt+fe.hfe_patpaid END) AS amount,") \
+		_T(" hpo_storage_id AS storageid") \
+		_T(" FROM hms_fee fe") \
+		_T(" LEFT JOIN hms_fee_invoice fi") \
+		_T(" ON(fi.hfe_docno = fe.hfe_docno") \
+		_T(" AND fi.hfe_invoiceno = fe.hfe_invoiceno)") \
+		_T(" LEFT JOIN m_productitem_view ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id )") \
+		_T(" LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = fe.hfe_orderid)")\
+		_T(" LEFT JOIN hms_patient") \
+		_T(" ON(hp_patientno = fe.hfe_patientno)") \
+		_T(" LEFT JOIN hms_doc") \
+		_T(" ON(hd_docno = fe.hfe_docno)") \
+		_T(" LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T(" LEFT JOIN hms_object ON ( fe.hfe_object = ho_id )") \
+		_T(" LEFT JOIN hms_clinical_record") \
+		_T(" ON(hcr_docno = fe.hfe_docno)") \
+		_T(" WHERE fe.hfe_status <> 'C'") \
+		_T(" AND (fe.hfe_cost - fe.hfe_inspaid) > 0") \
+		_T(" AND fe.hfe_type      IN('D')") \
+		_T(" AND fe.hfe_category in ('N','BQP')") \
+		_T(" AND (product_org_id = 'MA' OR product_org_id = 'BB' OR (product_org_id = 'PM' AND product_producttype IN ('A1500', 'A1600')))") \
+		_T(" %s") \
+		_T(" GROUP BY") \
+		_T(" fe.hfe_docno,") \
+		_T(" fe.hfe_deptid,") \
+		_T(" hcr_admitdate,") \
+		_T(" hcr_dischargedate,") \
+		_T(" hd_admitdate,") \
+		_T(" hd_enddate,") \
+		_T(" product_name,") \
+		_T(" fe.hfe_unitprice,") \
+		_T(" hpo_storage_id,") \
+		_T(" hd_object,") \
+		_T(" hd_cardno,")\
+		_T(" hp_rank") \
+		_T(" ORDER BY") \
+		_T(" hp_rank,") \
+		_T(" hd_object,") \
+		_T(" fe.hfe_docno,") \
+		_T(" fe.hfe_deptid,") \
+		_T(" product_name"), szWhere);
+	return szSQL;
+}
+
+CString CFMInsuranceReport19a::GetQueryString1(){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szSubWhere, szLineWhere, szDept, szHospitalID, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+		
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND i.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class IN ('A', 'I')"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class = 'E'"));
+	if (m_bByDischargedDate)
+	{
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND hcrf_invoicefee = f.hfe_invoiceno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)"));
+		szWhere.AppendFormat(_T(" AND nvl(htr_outpatient, 'X') <> 'Y'"));
+	}
+	if (m_bByDischargedDate)
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}		
+	else
+		szFeeCondition.Format(_T(" AND i.hfe_status = 'P'") \
+			_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'yyyy/mm/dd hh24:mi:ss') AND to_timestamp('%s', 'yyyy/mm/dd hh24:mi:ss')")
+			, m_szFromDate, m_szToDate);
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	if (m_bSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) IN ('QN')"));
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND f.hfe_discount > 0 AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	szSubSQL.Format(_T("SELECT hms_getpatientline(hd_docno) patient_line,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('A' AS NVARCHAR2(1))       chapter, ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     (f.hfe_type = 'T' OR (f.hfe_type = 'P' AND Substr(hfe_group, 1, 2) = 'B1'))") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('B' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B2' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('C' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B3' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('D' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'O' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno), ") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('F' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     hfe_hitech = 'Y' ") \
+		_T("		 %s"),szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere);
+	if (m_bCheckDrug)
+		szSubWhere = _T(" AND hpo_feetype <> 'PT'");
+	szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('E' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_insprice unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         LEFT JOIN m_productitem_view ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("               AND (product_org_id = 'MA' OR product_org_id = 'BB' OR (product_org_id = 'PM' AND product_producttype IN ('A1500', 'A1600')))") \
+		_T("               AND hfe_category in ('N','BQP') ") \
+		_T("		 %s"), szTable, szSubWhere, szWhere);
+
+	if (!m_bInPatient)
+		szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('G' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'E' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s"), szTable, szWhere);
+	else
+	szSubSQL.AppendFormat(
+	_T("		   UNION ALL ") \
+	_T("         SELECT	hms_getpatientline(hd_docno) ,") \
+	_T("		   hd_patientno,") \
+	_T("		   hd_cardno,") \
+	_T("		   i.hfe_date invoice_date,") \
+	_T("		   i.hfe_deptid dept_id,")
+	_T("		   Cast ('G' AS NVARCHAR2(1)), ") \
+	_T("           hfe_group                        group_id, ") \
+	_T("           Get_feegroupname(hfe_group)      group_name, ") \
+	_T("		   hd_docno doc_no,") \
+	_T("           f.hfe_deptid ") \
+	_T("           ||' '||f.hfe_desc                item_name, ") \
+	_T("           hfe_quantity                qty, ") \
+	_T("           hfe_insprice                     unit_price, ") \
+	_T("           f.hfe_inspaid amount ") \
+	_T(" FROM      hms_fee f ") \
+	_T(" LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+	_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+	_T(" %s") \
+	_T(" LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+	_T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+	_T("                                  AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+	_T(" WHERE     f.hfe_type = 'B' ") \
+	_T("       AND hfe_hitech = 'N' ") \
+	_T(" %s"), szTable, szWhere);
+
+	szSQL.Format(_T(" SELECT chapter, group_id, group_name, item_name, doc_no, ") \
+				_T(" hms_getagebydoc(doc_no) patient_age, hd_cardno, dept_id,") \
+				_T(" invoice_date, get_patientname(doc_no) patient_name, sum(qty) qty, unit_price, sum(amount) amount ") \
+				_T(" FROM   (") \
+				_T(" %s) ") \
+				_T(" LEFT JOIN hms_patient ON (hd_patientno = hp_patientno)") \
+				_T(" GROUP BY patient_line, chapter, group_id, group_name, item_name, doc_no, hd_cardno, invoice_date, unit_price, dept_id") \
+				_T(" ORDER  BY chapter, ") \
+				_T("           group_id, ") \
+				_T("           item_name, invoice_date, dept_id, doc_no"), szSubSQL);
+_fmsg(_T("%s"), szSQL);
+	return szSQL;		
+}
+
+CString CFMInsuranceReport19a::GetQueryString_DtlbyPatient(CString szFeeType){
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szSubWhere, szLineWhere, szDept, szHospitalID, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+		
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND i.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class IN ('A', 'I')"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class = 'E'"));
+	if (m_bByDischargedDate)
+	{
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND hcrf_invoicefee = f.hfe_invoiceno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)"));
+		szWhere.AppendFormat(_T(" AND nvl(htr_outpatient, 'X') <> 'Y'"));
+	}
+	if (m_bByDischargedDate)
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}		
+	else
+		szFeeCondition.Format(_T(" AND i.hfe_status = 'P'") \
+			_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'yyyy/mm/dd hh24:mi:ss') AND to_timestamp('%s', 'yyyy/mm/dd hh24:mi:ss')")
+			, m_szFromDate, m_szToDate);
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND f.hfe_discount > 0 AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	szSubSQL.Format(_T("SELECT hms_getpatientline(hd_docno) patient_line,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('A' AS NVARCHAR2(1))       chapter, ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     (f.hfe_type = 'T' OR (f.hfe_type = 'P' AND Substr(hfe_group, 1, 2) = 'B1'))") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('B' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B2' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('C' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B3' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('D' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'O' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno), ") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('F' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     hfe_hitech = 'Y' ") \
+		_T("		 %s"),szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere);
+	if (m_bCheckDrug)
+		szSubWhere = _T(" AND hpo_feetype <> 'PT'");
+	szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('E' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_insprice unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         LEFT JOIN m_productitem_view ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("               AND (product_org_id = 'MA' OR product_org_id = 'BB' OR (product_org_id = 'PM' AND product_producttype IN ('A1500', 'A1600')))") \
+		_T("               AND hfe_category in ('N','BQP') ") \
+		_T("		 %s"), szTable, szSubWhere, szWhere);
+
+	if (!m_bInPatient)
+		szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("				   hd_patientno,") \
+		_T("				   hd_cardno,") \
+		_T("				   i.hfe_date invoice_date,") \
+		_T("				   i.hfe_deptid dept_id,")
+		_T("				   Cast ('G' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("				   hd_docno doc_no,") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'E' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s"), szTable, szWhere);
+	else
+	szSubSQL.AppendFormat(
+	_T("		   UNION ALL ") \
+	_T("         SELECT	hms_getpatientline(hd_docno) ,") \
+	_T("		   hd_patientno,") \
+	_T("		   hd_cardno,") \
+	_T("		   i.hfe_date invoice_date,") \
+	_T("		   i.hfe_deptid dept_id,")
+	_T("		   Cast ('G' AS NVARCHAR2(1)), ") \
+	_T("           hfe_group                        group_id, ") \
+	_T("           Get_feegroupname(hfe_group)      group_name, ") \
+	_T("		   hd_docno doc_no,") \
+	_T("           f.hfe_deptid ") \
+	_T("           ||' '||f.hfe_desc                item_name, ") \
+	_T("           hfe_quantity                qty, ") \
+	_T("           hfe_insprice                     unit_price, ") \
+	_T("           f.hfe_inspaid amount ") \
+	_T(" FROM      hms_fee f ") \
+	_T(" LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+	_T(" LEFT JOIN hms_card ON(hc_patientno=hd_patientno AND hc_idx=hd_cardidx)") \
+	_T(" %s") \
+	_T(" LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+	_T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+	_T("                                  AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+	_T(" WHERE     f.hfe_type = 'B' ") \
+	_T("       AND hfe_hitech = 'N' ") \
+	_T(" %s"), szTable, szWhere);
+
+	szSQL.Format(_T(" SELECT doc_no, ") \
+				_T(" sum(amount) amount ") \
+				_T(" FROM   (") \
+				_T(" %s) ") \
+				_T(" WHERE chapter IN (%s)") \
+				_T(" GROUP BY doc_no") \
+				_T(" ORDER  BY doc_no"), szSubSQL, szFeeType);
+_fmsg(_T("%s"), szSQL);
+	return szSQL;		
+}
+
+CString CFMInsuranceReport19a::GetQueryString_check()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szWhere1, szSubWhere, szHospitalID;
+	CString szLineWhere, szDept, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+		
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND i.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class IN ('A', 'I') AND NVL(htr_outpatient, 'X') <> 'Y'"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class = 'E'"));
+	if (m_bByDischargedDate)		
+	{
+		//szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND f.hfe_invoiceno = hcrf_invoicefee)") \//
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)"));
+		//szWhere.AppendFormat(_T(" AND nvl(htr_outpatient, 'X') <> 'Y'"));//
+	}
+	if (m_bByDischargedDate)	
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}	
+	if (m_bByPaymentDate)	
+	{
+		if (m_bInPatient)				
+		//szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND f.hfe_invoiceno = hcrf_invoicefee)") \//
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)"));		
+		szFeeCondition.Format(_T("AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)		
+			szFeeCondition.Format(_T("AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	if (m_bSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) IN ('QN')"));
+	if (m_bNotinSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) NOT IN ('QN')"));
+
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND f.hfe_status <> 'C' AND f.hfe_discount > 0 AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	//1. Phi B1=Xet nghiem
+	szSubSQL.Format(_T("SELECT hms_getpatientline(hd_docno) patient_line,") \
+		_T("					hms_getpatientline(hd_docno) ,") \
+		_T("					hd_docno AS docno,") \
+		_T("					trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+		_T("				   Cast ('A' AS NVARCHAR2(1))       chapter, ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity						qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     (f.hfe_type = 'T' OR (f.hfe_type = 'P' AND Substr(hfe_group, 1, 2) = 'B1'))") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		//2. Phi B2 = Chan doan hinh anh
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("		 hms_getpatientline(hd_docno) ,") \
+		_T("		 hd_docno AS docno,") \
+		_T("		 trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+		_T("				   Cast ('B' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B2' ") \
+		_T("               AND hfe_hitech = 'N' %s") \
+		//3. Phi = B3 = tham do chuc nang
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("		 hms_getpatientline(hd_docno) ,") \
+		_T("		 hd_docno AS docno,") \
+		_T("		 trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+		_T("				   Cast ('C' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'P' ") \
+		_T("               AND Substr(hfe_group, 1, 2) = 'B3' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		//4. Dich vu ky thuat thuong
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("		 hms_getpatientline(hd_docno) ,") \
+		_T("		 hd_docno AS docno,") \
+		_T("		 trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+		_T("				   Cast ('D' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'O' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s") \
+		//5. Dich vu ky thuat cao
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno), ") \
+		_T("		 hms_getpatientline(hd_docno) ,") \
+		_T("		 hd_docno AS docno,") \
+		_T("		 trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+		_T("				   Cast ('F' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("         LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     hfe_hitech = 'Y' ") \
+		_T("		 %s"),szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere, szTable, szWhere);
+	if (m_bCheckDrug)
+		szSubWhere = _T(" AND hpo_feetype <> 'PT'");
+	szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT		hms_getpatientline(hd_docno) ,") \
+		_T("		 hms_getpatientline(hd_docno) ,") \
+		_T("		 hd_docno AS docno,") \
+		_T("		 trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+		_T("				   Cast ('E' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_insprice  unit_price, ") \
+		_T("                   0 org_price, ") \
+		_T("                   f.hfe_inspaid  amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno )") \
+		_T("         LEFT JOIN m_productitem_view ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N'") \
+		_T("               AND (product_org_id = 'MA' OR product_org_id = 'BB' OR (product_org_id = 'PM' AND product_producttype IN ('A1500', 'A1600')))") \
+		_T("               AND hfe_category in ('N','BQP') ") \
+		_T("		 %s"), szTable, szSubWhere, szWhere);
+	if (!m_bInPatient)
+		//6. Phi kham
+		szSubSQL.AppendFormat(
+		_T("         UNION ALL ") \
+		_T("         SELECT	   hms_getpatientline(hd_docno) ,") \
+		_T("		 hms_getpatientline(hd_docno) ,") \
+		_T("		 hd_docno AS docno,") \
+		_T("		 trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+		_T("				   Cast ('G' AS NVARCHAR2(1)), ") \
+		_T("                   hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(hfe_group)      group_name, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   hfe_insprice                     unit_price, ") \
+		_T("                   HFL_INSPRICE_PREV_ORG			org_price, ") \
+		_T("                   f.hfe_inspaid amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("         LEFT JOIN Hms_Fee_List ON (f.hfe_itemid=HFL_FEEID) ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+		_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+		_T("                                          AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+		_T("         WHERE     f.hfe_type = 'E' ") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("		 %s"), szTable, szWhere);
+	else
+	//7. Phi giuong benh
+	szSubSQL.AppendFormat(
+	_T("		   UNION ALL ") \
+	_T("         SELECT	hms_getpatientline(hd_docno) ,") \
+	_T("		 hms_getpatientline(hd_docno) ,") \
+	_T("		 hd_docno AS docno,") \
+	_T("		 trim(hp_surname ||' '  ||hp_midname  ||' '  ||hp_firstname) AS pname, ") \
+	_T("		   Cast ('G' AS NVARCHAR2(1)), ") \
+	_T("           hfe_group                        group_id, ") \
+	_T("           Get_feegroupname(hfe_group)      group_name, ") \
+	_T("           f.hfe_deptid ") \
+	_T("           ||' '||f.hfe_desc                item_name, ") \
+	_T("           hfe_quantity                qty, ") \
+	_T("           hfe_insprice                     unit_price, ") \
+	_T("           0			org_price, ") \
+	_T("           f.hfe_inspaid amount ") \
+	_T(" FROM      hms_fee f ") \
+	_T(" LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+	_T(" LEFT JOIN hms_patient  ON(hd_patientno=hp_patientno)") \
+	_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+	_T(" %s") \
+	_T(" LEFT JOIN hms_object ON ( hfe_object = ho_id ) ") \
+	_T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno ") \
+	_T("                                  AND f.hfe_invoiceno = i.hfe_invoiceno ) ") \
+	_T(" WHERE     f.hfe_type = 'B' ") \
+	_T("       AND hfe_hitech = 'N' ") \
+	_T(" %s"), szTable, szWhere);
+
+			szSQL.Format(_T(" SELECT distinct(docno) as docno, pname as pname, sum(amount) as totalamount") \
+				_T(" from") \
+				_T(" (") \
+		        _T(" SELECT docno, pname, sum(amount) amount ") \
+				_T(" FROM   (") \
+				_T(" %s) ") \
+				_T(" GROUP BY docno, pname, patient_line, chapter, group_id, group_name, item_name, unit_price,org_price") \
+				_T(" ORDER  BY patient_line, chapter, ") \
+				_T("           group_id, ") \
+				_T("           item_name ")
+				_T(" )tmp") \
+				_T("   group by docno, pname") \
+				_T("   order by docno, pname, totalamount "), szSubSQL);
+//_msg(_T("%s"), szSQL);
+	return szSQL;	
+}
+void CFMInsuranceReport19a::OnExport_1()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+
+	CExcel xls;
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szOldGroup, szNewGroup, szOldChap, szNewChap, szOldLine, szNewLine, szDate, szMoney;
+	CString tmpStr, szTemp;
+
+	int nCol = 0, nRow = 0, nIdx = 1;
+	double nCost = 0;
+	long double nGroupCost = 0, nChapCost = 0, nLineCost = 0, nTotalCost = 0;
+
+	BeginWaitCursor();
+	szSQL = GetQueryString2();
+	rs.ExecSQL(szSQL);
+	//_msg(_T("%s"), szSQL);
+	if (rs.IsEOF())
+	{
+		AfxMessageBox(_T("No Data"));
+		return;
+	}
+
+	xls.CreateSheet(1);
+	xls.SetWorksheet(0);
+
+	xls.SetColumnWidth(0, 8);
+	xls.SetColumnWidth(1, 10);
+	xls.SetColumnWidth(2, 50);
+	xls.SetColumnWidth(3, 8);
+	xls.SetColumnWidth(4, 12);
+	xls.SetColumnWidth(5, 15);
+	xls.SetColumnWidth(6, 15);
+	
+	xls.SetCellMergedColumns(nCol, nRow, 3);
+	xls.SetCellMergedColumns(nCol, nRow + 1, 3);
+
+	xls.SetCellMergedColumns(nCol + 5, nRow, 4);
+	xls.SetCellMergedColumns(nCol + 5, nRow + 1, 4);
+
+	xls.SetCellMergedColumns(nCol, nRow + 2, 10);
+	xls.SetCellMergedColumns(nCol, nRow + 3, 10);
+	xls.SetCellText(nCol, nRow, pMF->m_CompanyInfo.sc_pname, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(nCol, nRow + 1, pMF->m_CompanyInfo.sc_name, FMT_TEXT | FMT_CENTER, true, 10);
+
+	xls.SetCellText(nCol + 2, nRow, _T("\x43\x1ED8NG H\xD2\x41 \x58\xC3 H\x1ED8I \x43H\x1EE6 NGH\x128\x41 VI\x1EC6T N\x41M"), FMT_TEXT | FMT_CENTER, true);
+	xls.SetCellText(nCol + 2, nRow + 1, _T("\x110\x1ED8\x43 L\x1EACP - T\x1EF0 \x44O - H\x1EA0NH PH\xDA\x43"), FMT_TEXT | FMT_CENTER, true);
+
+	TranslateString(_T("Thống kê vật tư y tế 19A"), szTemp);
+	StringUpper(szTemp, tmpStr);
+	xls.SetCellText(nCol, nRow + 2, tmpStr, FMT_TEXT | FMT_CENTER, true, 11);	
+	tmpStr.Format(_T("T\x1EEB ng\xE0y %s \x111\x1EBFn ng\xE0y %s"),
+		          CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+				  CDateTime::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+	xls.SetCellText(nCol, nRow + 3, tmpStr, FMT_TEXT | FMT_CENTER, false, 11);
+	
+	//Column Header
+	CStringArray arrCol, arrFeeGrp, arrTitle;
+	arrCol.Add(_T("STT"));
+	arrCol.Add(_T("MÃ VẬT TƯ"));
+	arrCol.Add(_T("T\xEAn \x64\x1ECB\x63h v\x1EE5 k\x1EF9 thu\x1EADt"));
+	arrCol.Add(_T("S\x1ED1 l\x1B0\x1EE3ng"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1"));
+	arrCol.Add(_T("Th\xE0nh ti\x1EC1n"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1 \x63\x169"));
+
+	for (int i = 0; i < arrCol.GetCount(); i++)
+	{
+		xls.SetCellText(nCol + i, nRow + 4, arrCol.GetAt(i), FMT_TEXT | FMT_CENTER, true, 10); 
+	}
+	if (!m_bInPatient) 
+		m_mapChapter[_T("G")] = _T("Ph\xED kh\xE1m");
+	else
+		m_mapChapter[_T("G")] = _T("Ph\xED gi\x1B0\x1EDDng");
+	nRow = 5;
+	while (!rs.IsEOF())
+	{
+		rs.GetValue(_T("patient_line"), szNewLine);
+		rs.GetValue(_T("chapter"), szNewChap);
+		rs.GetValue(_T("group_id"), szNewGroup);
+		if (szNewLine != szOldLine)
+		{
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			if (nChapCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+				tmpStr.Format(_T("%f"), nChapCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+				nRow++;
+			}
+			if (nLineCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldLine, 4098, true);
+				tmpStr.Format(_T("%f"), nLineCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nTotalCost += nLineCost;
+				nLineCost = 0;
+				nRow++;
+			}
+			m_mapLine.Lookup(szNewLine, szTemp);
+			//xls.SetCellMergedColumns(0, nRow, 5);
+			tmpStr.Format(_T("%s. %s"), szNewLine, szTemp);
+			xls.SetCellText(0, nRow, tmpStr, FMT_TEXT, true);
+			szOldLine = szNewLine;
+			szOldChap.Empty();
+			szOldGroup.Empty();
+			nRow++;
+
+		}
+		if (szNewChap != szOldChap)
+		{
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			if (nChapCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+				tmpStr.Format(_T("%f"), nChapCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+				nRow++;
+			}
+			m_mapChapter.Lookup(szNewChap, tmpStr);
+			//xls.SetCellMergedColumns(0, nRow, 5);
+			xls.SetCellText(0, nRow, tmpStr, FMT_TEXT, true);
+			szOldChap = szNewChap;
+			szOldGroup.Empty();
+			nRow++;
+		}
+		if (szNewGroup != szOldGroup)
+		{
+			if (nGroupCost > 0){
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			//xls.SetCellMergedColumns(1, nRow, 4);
+			xls.SetCellText(1, nRow, rs.GetValue(_T("group_name")), FMT_TEXT, true);
+			szOldGroup = szNewGroup;
+			nRow++;
+		}
+		xls.SetCellText(0, nRow, int2str(nIdx++), FMT_TEXT | FMT_RIGHT);
+		xls.SetCellText(1, nRow, rs.GetValue(_T("mp_atccode")), FMT_TEXT);
+		xls.SetCellText(2, nRow, rs.GetValue(_T("item_name")), FMT_TEXT);
+		xls.SetCellText(3, nRow, rs.GetValue(_T("qty")), FMT_NUMBER1);
+		xls.SetCellText(4, nRow, rs.GetValue(_T("unit_price")), FMT_NUMBER1);
+		rs.GetValue(_T("amount"), nCost);
+		nGroupCost += nCost;
+		xls.SetCellText(5, nRow, double2str(nCost), FMT_NUMBER1);
+		xls.SetCellText(6, nRow, rs.GetValue(_T("org_price")), FMT_NUMBER1);
+		nRow++;
+		rs.MoveNext();
+	}
+	if (nGroupCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+		tmpStr.Format(_T("%f"), nGroupCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nChapCost += nGroupCost;
+		nRow++;
+	}
+	if (nChapCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+		tmpStr.Format(_T("%f"), nChapCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nLineCost += nChapCost;
+		nRow++;
+	}
+	if (nLineCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldLine, 4098, true);
+		tmpStr.Format(_T("%f"), nLineCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nTotalCost += nLineCost;
+		nRow++;
+	}
+	if (nTotalCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng \x63\x1ED9ng"), 4098, true);
+		tmpStr.Format(_T("%f"), nTotalCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nRow++;		
+	}
+	szMoney.Format(_T("%.0f"), floor(nTotalCost + 0.5));
+	MoneyToString(szMoney, tmpStr);
+	xls.SetCellText(1, nRow, tmpStr, FMT_TEXT);
+	tmpStr = pMF->GetSysDateTime();
+	szDate.Format(_T("Ng\xE0y %s th\xE1ng %s n\x103m %s"),
+		          tmpStr.Mid(8, 2), tmpStr.Mid(5, 2), tmpStr.Left(4));
+	xls.SetCellText(3, nRow + 3, szDate, FMT_TEXT);
+
+	EndWaitCursor();
+	xls.Save(_T("Exports\\Thong Ke Tien Vat Tu Theo Quy Moi.xls"));
+
+}
+CString CFMInsuranceReport19a::GetQueryString2()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szWhere1, szSubWhere, szHospitalID;
+	CString szLineWhere, szDept, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+		
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND i.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class IN ('A', 'I') AND NVL(htr_outpatient, 'X') <> 'Y'"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class = 'E'"));
+	if (m_bByDischargedDate)		
+	{
+		//szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND f.hfe_invoiceno = hcrf_invoicefee)") \//
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)")\
+					   _T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno )"));
+		//szWhere.AppendFormat(_T(" AND nvl(htr_outpatient, 'X') <> 'Y'"));//
+	}
+	if (m_bByDischargedDate)	
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}	
+	if (m_bByPaymentDate)	
+	{
+		if (m_bInPatient)		
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno)")\
+					   _T(" LEFT JOIN Hms_Fee_Approve fa ON (hcr_docno=fa.hfe_docno AND htr_idx=fa.Hfe_Refidx)")\
+					   _T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno AND i.HFE_INVOICENO=fa.HFE_INVOICENO)"));
+		szFeeCondition.Format(_T(" AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szTable.Format( _T("LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno)"));
+					   
+			szFeeCondition.Format(_T("AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	if (m_bSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) IN ('QN')"));
+	if (m_bNotinSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) NOT IN ('QN')"));
+
+	//Lọc đối tượng bảo hiểm BQP, bảo hiểm Hà Nội
+	if (m_szphanloaibhKey == _T("BHBQP"))
+		{
+			szWhere.AppendFormat(_T(" AND SUBSTR(hd_cardno, 4,2) = '97'"));
+		}
+	else if
+		(m_szphanloaibhKey == _T("BHHN"))
+		{
+			szWhere.AppendFormat(_T(" AND SUBSTR(hd_cardno, 4,2) <> '97'"));
+		}
+	else
+		{
+		
+		}
+
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND f.hfe_status <> 'C' AND f.hfe_discount > 0 AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	if (m_bCheckDrug)
+		szSubWhere = _T(" AND hpo_feetype <> 'PT'");
+	szSubSQL.AppendFormat(		
+		_T("         SELECT		hms_getpatientline(hd_docno) patient_line ,") \
+		_T("				   Cast ('E' AS NVARCHAR2(1)) chapter, ") \
+		_T("                   f.hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(f.hfe_group)      group_name,mp_atccode, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_insprice  unit_price, ") \
+		_T("                   0 org_price, ") \
+		_T("                   f.hfe_inspaid  amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( i.hfe_objectid = ho_id ) ") \
+		_T("         LEFT JOIN m_productitem_view_bh ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("               AND ((product_org_id           = 'MA') OR (product_org_id = 'PM' AND f.hfe_group='A1600'))") \
+		_T("               AND hfe_category not in ('Y', 'COV') ") \
+		_T("		 %s"), szTable, szSubWhere, szWhere);	
+
+	szSQL.Format(_T(" SELECT mp_atccode,patient_line, chapter, group_id, group_name, item_name, sum(qty) qty, unit_price, org_price, sum(amount) amount ") \
+				_T(" FROM   (") \
+				_T(" %s) ") \
+				_T(" GROUP BY mp_atccode,patient_line, chapter, group_id, group_name, item_name, unit_price,org_price") \
+				_T(" ORDER  BY patient_line, chapter, ") \
+				_T("           group_id, ") \
+				_T("           item_name "), szSubSQL);
+//_msg(_T("%s"), szSQL);
+	return szSQL;	
+}
+
+void CFMInsuranceReport19a::OnExport_2()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+
+	CExcel xls;
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szOldGroup, szNewGroup, szOldChap, szNewChap, szOldLine, szNewLine, szDate, szMoney;
+	CString tmpStr, szTemp;
+
+	int nCol = 0, nRow = 0, nIdx = 1;
+	double nCost = 0;
+	long double nGroupCost = 0, nChapCost = 0, nLineCost = 0, nTotalCost = 0;
+
+	BeginWaitCursor();
+	szSQL = GetQueryString3();
+	rs.ExecSQL(szSQL);
+	//_msg(_T("%s"), szSQL);
+	if (rs.IsEOF())
+	{
+		AfxMessageBox(_T("No Data"));
+		return;
+	}
+
+	xls.CreateSheet(1);
+	xls.SetWorksheet(0);
+
+	xls.SetColumnWidth(0, 8);
+	xls.SetColumnWidth(1, 20);
+	xls.SetColumnWidth(2, 50);
+	xls.SetColumnWidth(3, 50);
+	xls.SetColumnWidth(4, 20);
+	xls.SetColumnWidth(5, 20);
+	xls.SetColumnWidth(6, 8);
+	xls.SetColumnWidth(7, 12);
+	xls.SetColumnWidth(8, 15);
+	xls.SetColumnWidth(9, 15);
+	
+	xls.SetCellMergedColumns(nCol, nRow, 3);
+	xls.SetCellMergedColumns(nCol, nRow + 1, 3);
+
+	xls.SetCellMergedColumns(nCol + 5, nRow, 4);
+	xls.SetCellMergedColumns(nCol + 5, nRow + 1, 4);
+
+	xls.SetCellMergedColumns(nCol, nRow + 2, 10);
+	xls.SetCellMergedColumns(nCol, nRow + 3, 10);
+
+	xls.SetCellText(nCol, nRow, pMF->m_CompanyInfo.sc_pname, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(nCol, nRow + 1, pMF->m_CompanyInfo.sc_name, FMT_TEXT | FMT_CENTER, true, 10);
+
+	xls.SetCellText(nCol + 2, nRow, _T("\x43\x1ED8NG H\xD2\x41 \x58\xC3 H\x1ED8I \x43H\x1EE6 NGH\x128\x41 VI\x1EC6T N\x41M"), FMT_TEXT | FMT_CENTER, true);
+	xls.SetCellText(nCol + 2, nRow + 1, _T("\x110\x1ED8\x43 L\x1EACP - T\x1EF0 \x44O - H\x1EA0NH PH\xDA\x43"), FMT_TEXT | FMT_CENTER, true);
+
+	TranslateString(_T("Thống kê vật tư y tế 19A chuyển lên cổng bảo hiểm"), szTemp);
+	StringUpper(szTemp, tmpStr);
+	xls.SetCellText(nCol, nRow + 2, tmpStr, FMT_TEXT | FMT_CENTER, true, 11);	
+	tmpStr.Format(_T("T\x1EEB ng\xE0y %s \x111\x1EBFn ng\xE0y %s"),
+		          CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+				  CDateTime::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+	xls.SetCellText(nCol, nRow + 3, tmpStr, FMT_TEXT | FMT_CENTER, false, 11);
+	
+	//Column Header
+	CStringArray arrCol, arrFeeGrp, arrTitle;
+	arrCol.Add(_T("STT"));
+	arrCol.Add(_T("MÃ VTYT"));
+	arrCol.Add(_T("TÊN VTYT"));
+	arrCol.Add(_T("TÊN THƯƠNG MẠI"));
+	arrCol.Add(_T("QUY CÁCH"));
+	arrCol.Add(_T("ĐƠN VỊ"));
+	arrCol.Add(_T("S\x1ED1 l\x1B0\x1EE3ng"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1"));
+	arrCol.Add(_T("Th\xE0nh ti\x1EC1n"));	
+
+	for (int i = 0; i < arrCol.GetCount(); i++)
+	{
+		xls.SetCellText(nCol + i, nRow + 4, arrCol.GetAt(i), FMT_TEXT | FMT_CENTER, true, 10); 
+	}
+	if (!m_bInPatient) 
+		m_mapChapter[_T("G")] = _T("Ph\xED kh\xE1m");
+	else
+		m_mapChapter[_T("G")] = _T("Ph\xED gi\x1B0\x1EDDng");
+	nRow = 5;
+	while (!rs.IsEOF())
+	{
+		xls.SetCellText(0, nRow, int2str(nIdx++), FMT_TEXT | FMT_RIGHT);
+		xls.SetCellText(1, nRow, rs.GetValue(_T("mp_atccode")), FMT_TEXT);
+		xls.SetCellText(2, nRow, rs.GetValue(_T("ten_vattu")), FMT_TEXT);
+		xls.SetCellText(3, nRow, rs.GetValue(_T("item_name")), FMT_TEXT);
+		xls.SetCellText(4, nRow, rs.GetValue(_T("")), FMT_TEXT);
+		xls.SetCellText(5, nRow, rs.GetValue(_T("don_vi")), FMT_TEXT);
+		xls.SetCellText(6, nRow, rs.GetValue(_T("qty")), FMT_NUMBER1);
+		xls.SetCellText(7, nRow, rs.GetValue(_T("unit_price")), FMT_NUMBER1);
+		rs.GetValue(_T("amount"), nCost);
+		nGroupCost += nCost;
+		xls.SetCellText(8, nRow, double2str(nCost), FMT_NUMBER1);
+		xls.SetCellText(9, nRow, rs.GetValue(_T("org_price")), FMT_NUMBER1);
+		nRow++;
+		rs.MoveNext();
+	}
+	
+	if (nGroupCost > 0)
+	{
+		xls.SetCellText(7, nRow, _T("Tổng Cộng"), 4098, true);
+		tmpStr.Format(_T("%f"), nGroupCost);
+		xls.SetCellText(8, nRow, tmpStr, FMT_NUMBER1, true);
+		nRow++;		
+	}	
+	EndWaitCursor();
+	xls.Save(_T("Exports\\Thong Ke Tien Vat Tu Theo Quy chuyen len cong bao hiem.xls"));
+
+}
+CString CFMInsuranceReport19a::GetQueryString3()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szWhere1, szSubWhere, szHospitalID;
+	CString szLineWhere, szDept, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+		
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND i.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class IN ('A', 'I') AND NVL(htr_outpatient, 'X') <> 'Y'"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class = 'E'"));
+	if (m_bByDischargedDate)		
+	{
+		//szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND f.hfe_invoiceno = hcrf_invoicefee)") \//
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)")\
+					   _T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno )"));
+		//szWhere.AppendFormat(_T(" AND nvl(htr_outpatient, 'X') <> 'Y'"));//
+	}
+	if (m_bByDischargedDate)	
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}	
+	if (m_bByPaymentDate)	
+	{
+		if (m_bInPatient)		
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno)")\
+					   _T(" LEFT JOIN Hms_Fee_Approve fa ON (hcr_docno=fa.hfe_docno AND htr_idx=fa.Hfe_Refidx)")\
+					   _T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno AND i.HFE_INVOICENO=fa.HFE_INVOICENO)"));
+		szFeeCondition.Format(_T(" AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szTable.Format( _T("LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno)"));
+					   
+			szFeeCondition.Format(_T("AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	if (m_bSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) IN ('QN')"));
+	if (m_bNotinSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) NOT IN ('QN')"));
+
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND f.hfe_status <> 'C' AND f.hfe_discount > 0 AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	if (m_bCheckDrug)
+		szSubWhere = _T(" AND hpo_feetype <> 'PT'");
+	szSubSQL.AppendFormat(		
+		_T("         SELECT		hms_getpatientline(hd_docno) patient_line ,") \
+		_T("				   Cast ('E' AS NVARCHAR2(1)) chapter, ") \
+		_T("                   f.hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(f.hfe_group)      group_name, mp_atccode, ") \
+		_T("                   f.hfe_desc                       item_name, f.hfe_unit don_vi,") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_insprice  unit_price, ") \
+		_T("                   0 org_price, ") \
+		_T("                   f.hfe_inspaid  amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( i.hfe_objectid = ho_id ) ") \
+		//_T("         LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno AND i.HFE_INVOICENO=fa.HFE_INVOICENO)") \//
+		_T("         LEFT JOIN m_productitem_view_bh ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N' ") \
+		//_T("               AND (product_org_id = 'MA' OR product_org_id = 'BB' OR (product_org_id = 'PM' AND product_producttype IN ('A1500', 'A1600')))") \//
+		_T("               AND (product_org_id = 'MA')") \
+		_T("               AND hfe_category not in ('Y') ") \
+		_T("		 %s"), szTable, szSubWhere, szWhere);	
+
+	szSQL.Format(_T(" SELECT mp_atccode, item_name as ten_vattu, item_name, '' quy_cach, don_vi, sum(qty) qty, unit_price, org_price, sum(amount) amount ") \
+				_T(" FROM   (") \
+				_T(" %s) ") \
+				_T(" GROUP BY patient_line, chapter, group_id, group_name, mp_atccode, item_name, don_vi, unit_price,org_price") \
+				_T(" ORDER  BY patient_line, chapter, ") \
+				_T("           group_id, ") \
+				_T("           item_name "), szSubSQL);
+//_msg(_T("%s"), szSQL);
+	return szSQL;	
+}
+void CFMInsuranceReport19a::OnExport_1_A11()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	UpdateData(true);
+
+	CExcel xls;
+	CRecord rs(&pMF->m_db);
+	CString szSQL, szOldGroup, szNewGroup, szOldChap, szNewChap, szOldLine, szNewLine, szDate, szMoney;
+	CString tmpStr, szTemp;
+
+	int nCol = 0, nRow = 0, nIdx = 1;
+	double nCost = 0;
+	long double nGroupCost = 0, nChapCost = 0, nLineCost = 0, nTotalCost = 0;
+
+	BeginWaitCursor();
+	szSQL = GetQueryString2_A11();
+	rs.ExecSQL(szSQL);
+	//_msg(_T("%s"), szSQL);
+	if (rs.IsEOF())
+	{
+		AfxMessageBox(_T("No Data"));
+		return;
+	}
+
+	xls.CreateSheet(1);
+	xls.SetWorksheet(0);
+
+	xls.SetColumnWidth(0, 8);
+	xls.SetColumnWidth(1, 10);
+	xls.SetColumnWidth(2, 50);
+	xls.SetColumnWidth(3, 8);
+	xls.SetColumnWidth(4, 12);
+	xls.SetColumnWidth(5, 15);
+	xls.SetColumnWidth(6, 15);
+	xls.SetColumnWidth(7, 15);
+	
+	xls.SetCellMergedColumns(nCol, nRow, 3);
+	xls.SetCellMergedColumns(nCol, nRow + 1, 3);
+
+	xls.SetCellMergedColumns(nCol + 5, nRow, 4);
+	xls.SetCellMergedColumns(nCol + 5, nRow + 1, 4);
+
+	xls.SetCellMergedColumns(nCol, nRow + 2, 10);
+	xls.SetCellMergedColumns(nCol, nRow + 3, 10);
+	xls.SetCellText(nCol, nRow, pMF->m_CompanyInfo.sc_pname, FMT_TEXT | FMT_CENTER, true, 10);
+	xls.SetCellText(nCol, nRow + 1, pMF->m_CompanyInfo.sc_name, FMT_TEXT | FMT_CENTER, true, 10);
+
+	xls.SetCellText(nCol + 2, nRow, _T("\x43\x1ED8NG H\xD2\x41 \x58\xC3 H\x1ED8I \x43H\x1EE6 NGH\x128\x41 VI\x1EC6T N\x41M"), FMT_TEXT | FMT_CENTER, true);
+	xls.SetCellText(nCol + 2, nRow + 1, _T("\x110\x1ED8\x43 L\x1EACP - T\x1EF0 \x44O - H\x1EA0NH PH\xDA\x43"), FMT_TEXT | FMT_CENTER, true);
+
+	TranslateString(_T("Thống kê vật tư y tế 19A"), szTemp);
+	StringUpper(szTemp, tmpStr);
+	xls.SetCellText(nCol, nRow + 2, tmpStr, FMT_TEXT | FMT_CENTER, true, 11);	
+	tmpStr.Format(_T("T\x1EEB ng\xE0y %s \x111\x1EBFn ng\xE0y %s"),
+		          CDateTime::Convert(m_szFromDate, yyyymmdd | hhmm, ddmmyyyy | hhmm),
+				  CDateTime::Convert(m_szToDate, yyyymmdd | hhmm, ddmmyyyy | hhmm));
+	xls.SetCellText(nCol, nRow + 3, tmpStr, FMT_TEXT | FMT_CENTER, false, 11);
+	
+	//Column Header
+	CStringArray arrCol, arrFeeGrp, arrTitle;
+	arrCol.Add(_T("STT"));
+	arrCol.Add(_T("MÃ VẬT TƯ"));
+	arrCol.Add(_T("T\xEAn \x64\x1ECB\x63h v\x1EE5 k\x1EF9 thu\x1EADt"));
+	arrCol.Add(_T("S\x1ED1 l\x1B0\x1EE3ng"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1"));
+	arrCol.Add(_T("Th\xE0nh ti\x1EC1n"));
+	arrCol.Add(_T("\x110\x1A1n gi\xE1 \x63\x169"));
+	arrCol.Add(_T("Số hồ sơ"));
+
+	for (int i = 0; i < arrCol.GetCount(); i++)
+	{
+		xls.SetCellText(nCol + i, nRow + 4, arrCol.GetAt(i), FMT_TEXT | FMT_CENTER, true, 10); 
+	}
+	if (!m_bInPatient) 
+		m_mapChapter[_T("G")] = _T("Ph\xED kh\xE1m");
+	else
+		m_mapChapter[_T("G")] = _T("Ph\xED gi\x1B0\x1EDDng");
+	nRow = 5;
+	while (!rs.IsEOF())
+	{
+		int nSheet = 0;
+		if(nRow == 65000)
+		{
+			nSheet++;
+			tmpStr.Format(_T("Sheet %d"), nSheet+1);
+			xls.AddSheet(tmpStr);
+			xls.SetWorksheet(nSheet);
+			nRow = 1;
+		}
+		rs.GetValue(_T("patient_line"), szNewLine);
+		rs.GetValue(_T("chapter"), szNewChap);
+		rs.GetValue(_T("group_id"), szNewGroup);
+		if (szNewLine != szOldLine)
+		{
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			if (nChapCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+				tmpStr.Format(_T("%f"), nChapCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+				nRow++;
+			}
+			if (nLineCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldLine, 4098, true);
+				tmpStr.Format(_T("%f"), nLineCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nTotalCost += nLineCost;
+				nLineCost = 0;
+				nRow++;
+			}
+			m_mapLine.Lookup(szNewLine, szTemp);
+			//xls.SetCellMergedColumns(0, nRow, 5);
+			tmpStr.Format(_T("%s. %s"), szNewLine, szTemp);
+			xls.SetCellText(0, nRow, tmpStr, FMT_TEXT, true);
+			szOldLine = szNewLine;
+			szOldChap.Empty();
+			szOldGroup.Empty();
+			nRow++;
+
+		}
+		if (szNewChap != szOldChap)
+		{
+			if (nGroupCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			if (nChapCost > 0)
+			{
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+				tmpStr.Format(_T("%f"), nChapCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nLineCost += nChapCost;
+				nChapCost = 0;
+				nRow++;
+			}
+			m_mapChapter.Lookup(szNewChap, tmpStr);
+			//xls.SetCellMergedColumns(0, nRow, 5);
+			xls.SetCellText(0, nRow, tmpStr, FMT_TEXT, true);
+			szOldChap = szNewChap;
+			szOldGroup.Empty();
+			nRow++;
+		}
+		if (szNewGroup != szOldGroup)
+		{
+			if (nGroupCost > 0){
+				xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+				tmpStr.Format(_T("%f"), nGroupCost);
+				xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+				nChapCost += nGroupCost;
+				nGroupCost = 0;
+				nRow++;
+			}
+			//xls.SetCellMergedColumns(1, nRow, 4);
+			xls.SetCellText(1, nRow, rs.GetValue(_T("group_name")), FMT_TEXT, true);
+			szOldGroup = szNewGroup;
+			nRow++;
+		}
+		xls.SetCellText(0, nRow, int2str(nIdx++), FMT_TEXT | FMT_RIGHT);
+		xls.SetCellText(1, nRow, rs.GetValue(_T("mp_atccode")), FMT_TEXT);
+		xls.SetCellText(2, nRow, rs.GetValue(_T("item_name")), FMT_TEXT);
+		xls.SetCellText(3, nRow, rs.GetValue(_T("qty")), FMT_NUMBER1);
+		xls.SetCellText(4, nRow, rs.GetValue(_T("unit_price")), FMT_NUMBER1);
+		rs.GetValue(_T("amount"), nCost);
+		nGroupCost += nCost;
+		xls.SetCellText(5, nRow, double2str(nCost), FMT_NUMBER1);
+		xls.SetCellText(6, nRow, rs.GetValue(_T("org_price")), FMT_NUMBER1);
+		xls.SetCellText(7, nRow, rs.GetValue(_T("docno")), FMT_INTEGER);
+		nRow++;
+		rs.MoveNext();
+	}
+	if (nGroupCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng nh\xF3m"), 4098, true);
+		tmpStr.Format(_T("%f"), nGroupCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nChapCost += nGroupCost;
+		nRow++;
+	}
+	if (nChapCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldChap, 4098, true);
+		tmpStr.Format(_T("%f"), nChapCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nLineCost += nChapCost;
+		nRow++;
+	}
+	if (nLineCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng ") + szOldLine, 4098, true);
+		tmpStr.Format(_T("%f"), nLineCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nTotalCost += nLineCost;
+		nRow++;
+	}
+	if (nTotalCost > 0)
+	{
+		xls.SetCellText(1, nRow, _T("T\x1ED5ng \x63\x1ED9ng"), 4098, true);
+		tmpStr.Format(_T("%f"), nTotalCost);
+		xls.SetCellText(5, nRow, tmpStr, FMT_NUMBER1, true);
+		nRow++;		
+	}
+	szMoney.Format(_T("%.0f"), floor(nTotalCost + 0.5));
+	MoneyToString(szMoney, tmpStr);
+	xls.SetCellText(1, nRow, tmpStr, FMT_TEXT);
+	tmpStr = pMF->GetSysDateTime();
+	szDate.Format(_T("Ng\xE0y %s th\xE1ng %s n\x103m %s"),
+		          tmpStr.Mid(8, 2), tmpStr.Mid(5, 2), tmpStr.Left(4));
+	xls.SetCellText(3, nRow + 3, szDate, FMT_TEXT);
+
+	EndWaitCursor();
+	xls.Save(_T("Exports\\Thong Ke Tien Vat Tu Theo Quy Moi.xls"));
+
+}
+CString CFMInsuranceReport19a::GetQueryString2_A11()
+{
+	CHMSMainFrame *pMF = (CHMSMainFrame*) AfxGetMainWnd();
+	CString szSQL, szSubSQL, szWhere, szWhere1, szSubWhere, szHospitalID;
+	CString szLineWhere, szDept, szTable, szFeeCondition;
+	szHospitalID = pMF->m_CompanyInfo.sc_id;
+	if (!m_szPatientLineKey.IsEmpty())
+		if (m_szPatientLineKey == _T("3"))
+			szLineWhere.Format(_T(" AND (hd_insline = 'Y' OR hd_object = 12)"));
+		else
+		{
+			szLineWhere.Format(_T(" AND hd_insline = 'N' AND hd_object <> 12"));
+			if (m_szPatientLineKey == _T("2"))
+				szLineWhere.AppendFormat(_T(" AND substr(hd_cardno, 16, 20) <> '%s'"), szHospitalID);
+			else
+				szLineWhere.AppendFormat(_T(" AND instr(substr(hd_cardno, 16, 20), '%s') > 0"), szHospitalID);
+		}
+		
+	for (int i = 0; i < m_wndList.GetItemCount(); i++)
+	{
+		if (m_wndList.GetCheck(i))
+		{
+			if (!szDept.IsEmpty())
+				szDept += _T(",");
+			szDept.AppendFormat(_T("'%s'"), m_wndList.GetItemText(i, 0));
+		}
+	}
+	if (!szLineWhere.IsEmpty())
+		szWhere += szLineWhere;
+	if (!szDept.IsEmpty())
+		szWhere.AppendFormat(_T(" AND i.hfe_deptid in(%s) "), szDept);
+	if (m_bInPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class IN ('A', 'I') AND NVL(htr_outpatient, 'X') <> 'Y'"));
+	else if (m_bOutPatient)
+		szWhere.AppendFormat(_T(" AND i.hfe_class = 'E'"));
+	if (m_bByDischargedDate)		
+	{
+		//szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno AND f.hfe_invoiceno = hcrf_invoicefee)") \//
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno AND hcr_refidx = htr_idx)")\
+					   _T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno )"));
+		//szWhere.AppendFormat(_T(" AND nvl(htr_outpatient, 'X') <> 'Y'"));//
+	}
+	if (m_bByDischargedDate)	
+	{
+		if (m_bInPatient)
+			szFeeCondition.Format(_T(" AND hcrf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hcr_dischargedate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szFeeCondition.Format(_T(" AND hdf_acceptedfee IN ('Y', 'P')") \
+							_T(" AND hd_enddate BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}	
+	if (m_bByPaymentDate)	
+	{
+		if (m_bInPatient)		
+		szTable.Format(_T(" LEFT JOIN hms_clinical_record ON (hcr_docno = hd_docno)") \
+					   _T(" LEFT JOIN hms_treatment_record ON (hcr_docno = htr_docno)")\
+					   _T(" LEFT JOIN Hms_Fee_Approve fa ON (hcr_docno=fa.hfe_docno AND htr_idx=fa.Hfe_Refidx)")\
+					   _T(" LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno AND i.HFE_INVOICENO=fa.HFE_INVOICENO)"));
+		szFeeCondition.Format(_T(" AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+		if (m_bOutPatient)
+			szTable.Format( _T("LEFT JOIN hms_fee_invoice i ON ( f.hfe_docno = i.hfe_docno AND f.hfe_invoiceno = i.hfe_invoiceno)"));
+					   
+			szFeeCondition.Format(_T("AND i.hfe_status IN ('P')") \
+							_T(" AND i.hfe_date BETWEEN to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS') AND to_timestamp('%s', 'YYYY/MM/DD HH24:MI:SS')"),
+							m_szFromDate, m_szToDate);
+	}
+	if (m_bOnlyCommander)
+		szWhere.AppendFormat(_T(" AND hd_rank IN (15, 16, 17, 18, 21, 22, 23, 24)"));
+	if (m_bSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) IN ('QN')"));
+	if (m_bNotinSoldierPatient)
+		szWhere.AppendFormat(_T(" AND substr(hd_cardno,1,2) NOT IN ('QN')"));
+
+	//Lọc đối tượng bảo hiểm BQP, bảo hiểm Hà Nội
+	if (m_szphanloaibhKey == _T("BHBQP"))
+		{
+			szWhere.AppendFormat(_T(" AND SUBSTR(hd_cardno, 4,2) = '97'"));
+		}
+	else if
+		(m_szphanloaibhKey == _T("BHHN"))
+		{
+			szWhere.AppendFormat(_T(" AND SUBSTR(hd_cardno, 4,2) <> '97'"));
+		}
+	else
+		{
+		
+		}
+
+	szWhere.AppendFormat(_T(" AND ho_type IN ('I', 'C') AND f.hfe_status <> 'C' AND hd_status = 'T' AND length(hc_cardno) > 0 %s"), szFeeCondition);
+	if (m_bCheckDrug)
+		szSubWhere = _T(" AND hpo_feetype <> 'PT'");
+	szSubSQL.AppendFormat(		
+		_T("         SELECT		hms_getpatientline(hd_docno) patient_line , hd_docno as docno, ") \
+		_T("				   Cast ('E' AS NVARCHAR2(1)) chapter, ") \
+		_T("                   f.hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(f.hfe_group)      group_name,mp_atccode, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_insprice  unit_price, ") \
+		_T("                   0 org_price, ") \
+		_T("                   f.hfe_inspaid  amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( i.hfe_objectid = ho_id ) ") \
+		_T("         LEFT JOIN m_productitem_view_bh ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("               AND ((product_org_id           = 'MA') OR (product_org_id = 'PM' AND f.hfe_group='A1600'))") \
+		_T("               AND hfe_category not in ('Y', 'COV') AND f.hfe_discount > 0 ") \
+		_T("		 %s ")
+		//Lấy thêm phần bảo hiểm không thanh toán
+		_T("		 UNION ALL ")
+		_T("         SELECT		hms_getpatientline(hd_docno) patient_line , hd_docno as docno, ") \
+		_T("				   Cast ('E' AS NVARCHAR2(1)) chapter, ") \
+		_T("                   f.hfe_group                        group_id, ") \
+		_T("                   Get_feegroupname(f.hfe_group)      group_name,mp_atccode, ") \
+		_T("                   f.hfe_desc                       item_name, ") \
+		_T("                   hfe_quantity                qty, ") \
+		_T("                   f.hfe_unitprice  unit_price, ") \
+		_T("                   0 org_price, ") \
+		_T("                   f.hfe_cost  amount ") \
+		_T("         FROM      hms_fee f ") \
+		_T("		 LEFT JOIN hms_doc ON (hd_docno = hfe_docno) ") \
+		_T("		 LEFT JOIN hms_card ON (hc_patientno = hd_patientno AND hc_idx = hd_cardidx)") \
+		_T("		 %s") \
+		_T("         LEFT JOIN hms_object ON ( i.hfe_objectid = ho_id ) ") \
+		_T("         LEFT JOIN m_productitem_view_bh ON ( Cast(hfe_itemid AS NVARCHAR2(15)) = product_item_id ) ") \
+		_T("		 LEFT JOIN hms_pharmaorder_view ON (hpo_orderid = f.hfe_orderid)") \
+		_T("         WHERE     f.hfe_type IN ('D', 'M') ") \
+		_T("		 %s") \
+		_T("               AND hfe_hitech = 'N' ") \
+		_T("               AND ((product_org_id           = 'MA') OR (product_org_id = 'PM' AND f.hfe_group='A1600'))") \
+		_T("               AND hfe_category not in ('Y', 'COV') AND f.hfe_discount = 0 ") \
+		_T("		 %s"), szTable, szSubWhere, szWhere, szTable, szSubWhere, szWhere);	
+
+
+	szSQL.Format(_T(" SELECT mp_atccode,patient_line, docno, chapter, group_id, group_name, item_name, sum(qty) qty, unit_price, org_price, sum(amount) amount ") \
+				_T(" FROM   (") \
+				_T(" %s) ") \
+				_T(" GROUP BY mp_atccode,patient_line, docno, chapter, group_id, group_name, item_name, unit_price,org_price") \
+				_T(" ORDER  BY patient_line, docno, chapter, ") \
+				_T("           group_id, ") \
+				_T("           item_name "), szSubSQL);
+//_msg(_T("%s"), szSQL);
+	return szSQL;	
+}

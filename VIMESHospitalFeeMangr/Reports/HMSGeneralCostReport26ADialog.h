@@ -1,0 +1,109 @@
+#ifndef HMSGENERALCOSTREPORTDIALOG26A_H
+#define HMSGENERALCOSTREPORTDIALOG26A_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright(C) Viet Nam Medical Software Join Stock Company. 2005-2010. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hay Hoang Van, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2010.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "GuiUtils.h"
+#include "GuiDialog.h"
+#include "DbField.h"
+class CHMSGeneralCostReport26ADialog : public CGuiDialog{
+protected:
+public:	
+	CGuiGroupBox	m_wndReportFilter;
+	CGuiLabel		m_wndYearLabel;
+	CGuiNumberCtrl	m_wndYear;
+	CGuiLabel		m_wndReportPeriodLabel;
+	CGuiComboBox	m_wndReportPeriod;
+	CGuiLabel		m_wndFromDateLabel;
+	CGuiDateCtrl	m_wndFromDate;
+	CGuiLabel		m_wndToDateLabel;
+	CGuiDateCtrl	m_wndToDate;
+	CGuiLabel		m_wndClerkLabel;
+	CGuiComboBox	m_wndClerk;
+	CGuiLabel		m_wndDeptLabel;
+	CGuiComboBox	m_wndDept;
+	CGuiButton		m_wndPrintPreview;
+	CGuiButton		m_wndPrint;
+	CGuiButton		m_wndExport;
+	CGuiButton		m_wndClose;
+	long	m_nYear;
+	bool	m_bPreview;
+	bool	m_bExportToExcell;
+	int		m_nButtonID;
+	CString	m_szReportPeriodKey;
+	CString	m_szFromDate;
+	CString	m_szToDate;
+	CString	m_szClerkKey;
+	CString	m_szDeptKey;
+	//void			OnYearChange(); 
+	//void			OnYearSetfocus(); 
+	//void			OnYearKillfocus(); 
+	//tong hop chi phi dieu tri mau 26A	
+	void		PrintGeneralCost26AReport(CString szReportPeriod, CString szFromDate, CString szToDate,  bool bPreview=true);
+	void		ExportToExcell26AReport(CString szReportPeriod, CString szFromDate, CString szToDate, bool bPreview=true);
+	int			OnYearCheckValue(); 
+	void			OnReportPeriodSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnReportPeriodSelendok(); 
+	//void			OnReportPeriodSetfocus(); 
+	//void			OnReportPeriodKillfocus(); 
+	long			OnReportPeriodLoadData(); 
+	void			OnReportPeriodAddNew(); 
+	//void			OnFromDateChange(); 
+	//void			OnFromDateSetfocus(); 
+	//void			OnFromDateKillfocus(); 
+	int			OnFromDateCheckValue(); 
+	//void			OnToDateChange(); 
+	//void			OnToDateSetfocus(); 
+	//void			OnToDateKillfocus(); 
+	int			OnToDateCheckValue(); 
+	void			OnClerkSelectChange(int nOldItemSel, int nNewItemSel); 
+	void			OnClerkSelendok(); 
+	//void			OnClerkSetfocus(); 
+	//void			OnClerkKillfocus(); 
+	long			OnClerkLoadData();
+	void			OnClerkAddNew(); 
+
+	long			OnDeptLoadData(); 
+	void			OnPrintPreviewSelect(); 
+	void			OnPrintSelect(); 
+	void			OnExportSelect(); 
+	void			OnCloseSelect(); 
+	CHMSGeneralCostReport26ADialog(CWnd *pParent);
+	~CHMSGeneralCostReport26ADialog();
+	void OnCreateComponents();
+	void OnInitializeComponents();
+	void OnSetWindowEvents();
+	void OnDoDataExchange(CDataExchange* pDX);
+	void GetDataToScreen();
+	void GetScreenToData();
+	void SetDefaultValues();
+	int SetMode(int nMode);
+	int OnAddHMSGeneralCostReportDialog(); 
+	int OnEditHMSGeneralCostReportDialog(); 
+	int OnDeleteHMSGeneralCostReportDialog(); 
+	int OnSaveHMSGeneralCostReportDialog(); 
+	int OnCancelHMSGeneralCostReportDialog(); 
+	int OnHMSGeneralCostReportDialogListLoadData(); 
+};
+#endif

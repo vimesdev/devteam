@@ -1,0 +1,105 @@
+#ifndef HTTPCLIENT_H
+#define HTTPCLIENT_H
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Copyright(C) Viet Nam Medical Software Joint Stock Company. 2005-2010. 			
+//	All rights reserved. 
+//	This program is protected by Viet nam and international treaties.  
+//	Unauthorized reproduction or distribution of this program, 
+//	or any portion of it, may result in severe civil and criminal penalties, 
+//	and will be prosecuted to the maximum extent possible under the law.
+//	This file is a part of the GUI(Graphical User Interface) class library.
+//	(c) 2006-2008 Hay Hoang Van, All rights reserved.
+//	CONTACT INFORMATION:
+//	Email  : hayhv@vimes.com.vn or hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2010.
+//	Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.
+//	Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.
+//	San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se
+//	chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.
+//	File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008
+//	THONG TIN LIEN HE:
+//	Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com
+//	Website: http://www.vimes.com.vn
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <string>
+#include <iostream>
+#include "json.h"
+
+
+
+class AFX_EXT_CLASS CHttpClient {
+protected:
+public:
+	CString m_szUrl;
+	CString	m_szHeaderContent;
+	CString	m_szError;
+
+	CHttpClient(LPCTSTR lpszUrl=_T("localhost"));
+	~CHttpClient();
+	void	SetURL(CString szUrl, CString szContentType=_T("Content-Type: application/json; charset=utf-8"));
+	CString	GetUrl();
+
+	void	SetHeaderContent(CString szContent);
+	bool	Get(CString szParams, CString& szResponse, CString& szError);
+	bool	Post(std::string strParams, std::string strData, std::string& strResponse, std::string& strError);
+	bool	Post(CString szParams, CString szData, CString& szResponse, CString& szError);	
+	bool	Get(CString szParams, JSONVALUE* json);
+	bool	Post(CString szParams, std::string strData, JSONVALUE* json);
+	bool	Post(CString szParams, CString szData, JSONVALUE* json);
+	bool	Get(CString szParams);
+	virtual void OnGet(CFile* pFile){}
+	virtual bool OnPost(CFile* pFile){ return false; }
+};
+
+
+
+class AFX_EXT_CLASS CHttpDownload: public CHttpClient{
+	CString m_szFile;
+public:
+	CHttpDownload(LPCTSTR lpszUrl, LPCTSTR lpszFile): CHttpClient(lpszUrl), m_szFile(lpszFile) {}
+	~CHttpDownload(){}
+	//Only use with method: Get(CString szParams) ;
+	void OnGet(CFile* pFile){
+		SaveFile(pFile);
+	}
+
+	bool OnPost(CFile* pFile){
+		return SaveFile(pFile);
+	}
+
+	bool SaveFile(CFile* pFile)
+	{
+		try{
+		
+			CFile file;
+			
+			if(!file.Open(m_szFile, CFile::modeCreate|CFile::modeWrite))
+			{
+				_tprintf(L"\r\nHttpdownload::Cannot save file [%s]", m_szFile);
+				return false;
+			}
+
+			unsigned char szBuffer[1024+sizeof(unsigned char)];
+			UINT nRead = pFile->GetLength();
+			while (0 != nRead )
+			{
+				nRead = pFile->Read(szBuffer, 1024);
+				szBuffer[nRead] = '\0';
+				file.Write(szBuffer, nRead);
+			}
+			file.Close();
+		}
+		catch(std::exception ex)
+		{
+			std::cout << ex.what() << std::endl;
+		}
+		return true;
+
+	}
+};
+
+#endif
