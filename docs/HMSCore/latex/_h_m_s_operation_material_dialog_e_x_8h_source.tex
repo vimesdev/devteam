@@ -1,0 +1,171 @@
+\doxysection{HMSOperation\+Material\+Dialog\+EX.\+h}
+\hypertarget{_h_m_s_operation_material_dialog_e_x_8h_source}{}\label{_h_m_s_operation_material_dialog_e_x_8h_source}\index{Include/HMSCore/HMSOperationMaterialDialogEX.h@{Include/HMSCore/HMSOperationMaterialDialogEX.h}}
+\mbox{\hyperlink{_h_m_s_operation_material_dialog_e_x_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSOPERATIONMATERIALDIALOGEX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSOPERATIONMATERIALDIALOGEX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Storage\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@VIMES.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.VIMES.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@VIMES.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.VIMES.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ VM\_PREVIEW\ \ 0x010}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a2972dcfa32642eff69da578f45e6a92e}{CHMSOperationMaterialDialogEX}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_abb5b787da688c3c8660a859011b395c2}{m\_bAddOrder}};}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a77aa426e611577749104566d2546d1b1}{m\_szStatus}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ad44198ba1904e4b9a185e78a7c695910}{m\_bIsMedicalCabinet}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a8b1fdf0eb10749c71a8d9180330af585}{m\_nStorageID}};}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a31328781889064fd3c6338f5ec2a488c}{m\_bArmletOrder}};}
+\DoxyCodeLine{00041\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a0fde94cd5a37ed5f7d4b98de25f052f5}{m\_szCreatedBy}};}
+\DoxyCodeLine{00042\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a5ee282c37463d82e5856285b72021fda}{m\_szDoctor}};}
+\DoxyCodeLine{00043\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ad941489ec8c89621661620f087070d94}{m\_szFeeID}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a437a3ae04ddb1a951749c3ce6ffcf82e}{m\_nOrderID}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a0b538518c94fbc44f7f2c13743e2afbc}{m\_nRefIndex}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aabe97c595b2b62b5b132c0f6d6948a36}{m\_nRoomID}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_abf4b69a60c45e22eddbdd9bd78f8a22b}{m\_nOldRoomID}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ab31006523a0081a045e18cbe8c70d2b4}{m\_bOutPatient}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a6409b1c30a5cd21e333df74e3c032d36}{m\_bInpackage}};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a50e67ac7683238e4db6961c6542f9b94}{m\_bIsReq}};}
+\DoxyCodeLine{00051\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_afad3d2975c2d01dcc559d354822e2182}{m\_bServicePackage}};}
+\DoxyCodeLine{00052\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a07b983575ce30e465e3db69cecbe4f49}{m\_bViewMaterial}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a1d6f4cafd020379f9093e35a326d20da}{m\_szOrderDept}};}
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a36f69f7223da0f0325001d153d2efbb6}{m\_szType}};}
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a9938549ff807d665c66c0d0e6650c217}{m\_szDeptType}};}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a3dd3a44d59b8c935b7a5d95d7c035292}{m\_szProdCountry}};}
+\DoxyCodeLine{00058\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a6575fe276e93cb6457144da077c2bb5b}{m\_szOperationDate}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a989271d3a92b084a86fcb55a8c8a505c}{m\_wndOperationNameLabel}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aca78f4dc7dcfc26a5879daeccd01c17d}{m\_wndOperationName}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a543f8473735701155493469c3af229cc}{m\_wndDrugEntry}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a5c349ef78c6499ba6dec2238b6b3581c}{m\_wndList}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ae4d12f12104e05802f547094f7c5c378}{m\_wndStorageLabel}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a42351d484fd00e1ad69d3b41ef256cff}{m\_wndStorage}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a5c4c37ead544c59eec33ac4862db8b2d}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a3cfdca8f255730475c8575effdd01d58}{m\_wndOrderDate}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a493b11145bda12b89381e053265669df}{m\_wndNameLabel}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a3bc72bfc4e5beac08c0d4df8583e1510}{m\_wndName}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ab0df9ffb7e671b4b9743c48ff355a87d}{m\_wndQtyLabel}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a39ff09b46287711b659bbb00e64d1726}{m\_wndQty}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a55e2d58e6bf9ccc993d8e6021c82a5ad}{m\_wndMaxQuantity}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a7635628e641196a274056e9beb70ba66}{m\_wndNoteLabel}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_afad644cae6d7279df0592c2588878d27}{m\_wndNote}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aa2cf3906b07cb267ddfb8a9a6ca9b8b3}{m\_wndAdd}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a436eaebe071f76c5a70549a7b857006f}{m\_wndEdit}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a21ecc29c1bc2c88bef538ae3454d5cf8}{m\_wndDelete}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ade8a6b33793cb830c4db94f98a8e769e}{m\_wndSave}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aba87201980160066203be5a59852cb14}{m\_wndCancel}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a654c153c9511f646cd5abad004ce1248}{m\_wndPrint}};}
+\DoxyCodeLine{00081\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a72dd74b7d9b23f17f937fe7a7026defa}{m\_wndAccept}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a2e14e20c021325d26d3b414248e29944}{m\_szOperationName}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a19f204482521923007c227be37481e83}{m\_szStorageKey}};}
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a70bada9f5ea25779e254bf7544cdebc9}{m\_szOrderDate}};}
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a9a15c2741cb3651cc71041457ba13db3}{m\_szNameKey}};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aa63f04ea97d976bd289588a948a48182}{m\_nQty}};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a8c8ffb9e69e5d6751b007f0d396519f4}{m\_nMaxQuantity}};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a34d41f763acb40cf30d5d7694eb7e201}{m\_nDocumentNo}};}
+\DoxyCodeLine{00089\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a94153b18fe9eeb589994f43809d647d3}{m\_szNote}};}
+\DoxyCodeLine{00090\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ac847943ea3ff01743fed723b0eed134f}{m\_hms\_pharmaorderTbl}};}
+\DoxyCodeLine{00091\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a64e78957192826b0423c6547d0b5d599}{m\_hms\_pharmaorder\_lineTbl}};}
+\DoxyCodeLine{00092\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a6379d29f73aedb4c195260cb667c924b}{m\_hms\_ipharmaorderTbl}};}
+\DoxyCodeLine{00093\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ae6badedff879eed8c63365b39ebd3de9}{m\_hms\_ipharmaorder\_lineTbl}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationNameChange();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationNameSetfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationNameKillfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_acc2c1fdad3d20460d804f050dfd44e56}{OnOperationNameCheckValue}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a1bae22341ecad16369a9039916481cde}{OnListLoadData}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a8bb56a8fa82db8a2877d866a834c4829}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a378c83c8eed79a9125c1ef515e8469bc}{OnListDblClick}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a8a7d41b91bf3b912d9bb25317874bb66}{OnConfirmIssueDrug}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a7f622018d3c757b4117266cec1a261af}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a73e001b3bd57ed347832b959fb15bd9e}{OnAddSmartPrescription}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_afd04635d5a8abb0beedb3657d1ed7aa7}{OnAddSmartPrescriptionEX}}();}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a46fb2a6eaa1d411f5bc98a2acd9ad297}{OnAddHCTemplate}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ad05312cb46799b15cfadc5c1e27bd431}{OnOrderListRefresh}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a7961aa0364d02db15835099deca9613e}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a8e87fcb0ffbc9bbbcbaf4234e5dfaa29}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_afe7414a5190a92daf39286d36aca2fa0}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a765d5221cdbfb4dc65e77652e8c68eca}{OnStorageAddNew}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a68ca11e351a4cd2f37b5357b23374b22}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a6644e78c84230126363bd3464939c7b0}{OnNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a7056221d487678b664dfb82030e3284f}{OnNameSelendok}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a74b65bdaf0aab485baf9fe2111455883}{OnNameLoadData}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a870dc9e85d3e9022be78fba50b117fd2}{OnNameAddNew}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyChange();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtySetfocus();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyKillfocus();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a9ea092e38ae782903253cb33699dcd28}{OnQtyCheckValue}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantityChange();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantitySetfocus();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantityKillfocus();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a18b31cf2b324e07bc8eae3fe4af957d0}{OnMaxQuantityCheckValue}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNoteChange();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNoteSetfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNoteKillfocus();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a12c6afe957b817245d8b6a7a2638be78}{OnNoteCheckValue}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a007cd338234f89b7042c8b424c8d848d}{OnAddSelect}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ae61edb4f2a03ce10f592034b389035a8}{OnEditSelect}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a52a3ff6b39aa813f8410dd88e9a95f21}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a5bc8c466cb4270959a7a52da6ec4bedd}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a280423d9e4a7615a37972618640d7b0c}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aaad86a13c3ce7c97c256791816f50ffe}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ab7a2cff8c4d7a6ae2f07903943870725}{OnAcceptSelect}}();\ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a2972dcfa32642eff69da578f45e6a92e}{CHMSOperationMaterialDialogEX}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ x=0,\ \textcolor{keywordtype}{int}\ y=0);}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a4605d5edef6afc64c92bcff9633262ae}{\string~CHMSOperationMaterialDialogEX}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a810d8b7b640858548eb75c65014e04d2}{OnCreateComponents}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a414dfccf11b430ebaecae5a994d6b4d8}{OnInitializeComponents}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a5bafb3393f5571d158d421028e9445e0}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_af2deed638cdbdb80af069072866ff72f}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_ab642e7be1fd4004f4c9782c36ba440c7}{GetDataToScreen}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a007d1a1ad28c3e3e4433ce1c4ac6cc8c}{GetScreenToData}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a28cc0e964396e296d2be389f3ff16158}{SetDefaultValues}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a028a83f7b13da980f75f8df99979651e}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a9f1e1d3498035a2727834904098e0174}{OnAddHMSOperationMaterialDialog}}();\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a075b4cbefa7baa27fe2e42ad9dfed3b5}{OnEditHMSOperationMaterialDialog}}();\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a360071bfafc58adb5eed9df660b1dcba}{OnDeleteHMSOperationMaterialDialog}}();\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aff90b9c3e52c198cf3ec6e512c15223d}{OnSaveHMSOperationMaterialDialog}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a70fc7b92767dab6fbd1e255096365fe4}{OnCancelHMSOperationMaterialDialog}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a5daf0a3d029a30c7ffbb3a5e52d79320}{OnHMSOperationMaterialDialogListLoadData}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00162\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_acdd4f7b39703a37f397518229762d584}{OnClose}}();}
+\DoxyCodeLine{00163\ \ \ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_aff70c5f8ffac37fdf9bc70dd3b3a7d8e}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_dialog_e_x_a992ad79de89472d647c1345f67eec48b}{GetOrderStatus}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \};}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

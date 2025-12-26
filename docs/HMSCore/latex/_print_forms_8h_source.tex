@@ -1,0 +1,66 @@
+\doxysection{Print\+Forms.\+h}
+\hypertarget{_print_forms_8h_source}{}\label{_print_forms_8h_source}\index{Include/HMSCore/PrintForms.h@{Include/HMSCore/PrintForms.h}}
+\mbox{\hyperlink{_print_forms_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ACCPRINTFORMS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ACCPRINTFORMS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_print_forms_ae5225e50e37fe2b435c6f26b1aea4578}{CPrintForms}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//Query\ ID}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//Cash:\ Phieu\ phan\ he\ Quy}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//Bank:\ Phieu\ phan\ he\ Ngan\ hang}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//Cash\_Voucher:\ Chung\ ty\ Quy}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//Bank\_Voucher:\ Chung\ tu\ Ngan\ hang}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//Invoice\ Type}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//R:\ Thu}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//P:\ Chi}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//C:\ Co}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//D:\ No}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//T:\ Chuyen\ tien\ noi\ bo}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_print_forms_a66948660ee97ecbf4f0a734b3f164d09}{m\_szType}};}
+\DoxyCodeLine{00020\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_print_forms_af8ec44374a94b592025e5c1a67d2462a}{m\_szID}};}
+\DoxyCodeLine{00021\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_print_forms_ae6e58b04cd2879ce7e61e4009add924d}{m\_szFromDate}};}
+\DoxyCodeLine{00022\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_print_forms_a7b5551185fede34b7880fbede9adcadc}{m\_szToDate}};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_c_print_forms_ae5225e50e37fe2b435c6f26b1aea4578}{CPrintForms}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_c_print_forms_a3904cf8ad64c814ccb92ceac92530fb6}{\string~CPrintForms}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//Gop\ cac\ truy\ van:\ phieu\ thu\ chi\ quy,\ chung\ tu\ thu\ chi\ quy}}
+\DoxyCodeLine{00026\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_print_forms_a17d22b3c59c31eede08ba071563f53d3}{GetQueryString}}(LPCTSTR\ szQueryID,\ LPCTSTR\ szInvoiceID);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//In\ phieu\ thu,\ phieu\ chi}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_aa23a760e7c4e9bc43aced40e3666c7ac}{PrintCashSheet}}(CString\ szInvoiceNo,\ CString\ szInvoiceType);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a2c9775490de770a49a84adaa9ef4ac18}{PrintSheetList}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//void\ PrintCashReceipts\_15(CString\ szVoucherNo);}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//void\ PrintCashReceipts\_48(CString\ szVoucherNo);}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_aa475058e192ec700fc6c39c2f073e8f6}{PrintBankReceipts}}(CString\ szVoucherNo,\ CString\ szVoucherType);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//void\ PrintBankReceipts\_15(CString\ szVoucherNo);}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//void\ PrintBankReceipts\_48(CString\ szVoucherNo);}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//In\ chung\ tu\ cac\ loai}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a31d304e75ae15fccc367f090479d0d58}{PrintVoucher}}(CString\ szVoucherNo,\ CString\ szVoucherType);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_aaa4061188c748450edf1c980c82fc9c7}{PrintBankVoucher}}(CString\ szVoucherNo,\ CString\ szVoucherType);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_abe3e52249d606ea4efbb5652f3169a1f}{PrintPaymentOrder}}(CString\ szInvoiceNo);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_add5114c5f3a54d3901f73d377dbfdcee}{PrintCreditNote}}(CString\ szNoteID,\ CString\ szVoucherType);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_ab2661cfd6db5bb1cc105c437de246c65}{PrintIESheet}}(CString\ szOrderNo,\ CString\ szOrderType,\ CString\ szOrderDate);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a92b31d5587328007a39389e1243debd8}{PrintTestReport}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a385158f8a63012c7a404efbf66d107fa}{PrintPurchaseList}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_ae0ab51a612f859f19ed8cf05f104e11c}{PrintMaterialReport}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a11ee1536234498513d8fb488d0680022}{PrintMaterialRemain}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_abac90e5998713dd3fb29af715d1af4da}{PrintDistribution}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a0fd7f86edd1e6a49b66a90835c23ed7b}{PrintPurchaseOrder}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a037f53dae0ef4e095d2a1b054b8bc4df}{PrintCheckinPurchaseOrder}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a9f6bd43290ee48e6f00139625bd74abb}{PrintStorageMovementDialog}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_aca582afa485267c6b7f1b27574ea3c68}{PrintDeliveryOrder}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a849c9f6fa638c0a8f92426cad7167631}{PrintDDO}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_a4b6e632a474ac0c3ef590993b29bd0bb}{SetReference}}(CString\ szSheetType,\ CString\ szSheetID,\ CString\ szFromDate,\ CString\ szToDate);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//Cac\ ham\ in\ dung\ trong\ module\ duoc.}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_print_forms_ae454fd16948aab5b31cf086cb3bc9c34}{PMS\_PrintDrugDelivery}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false});}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

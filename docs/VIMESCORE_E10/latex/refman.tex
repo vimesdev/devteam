@@ -1,0 +1,1246 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  \RequirePackage{iftex}
+  \ifLuaTeX
+    \directlua{pdf.setminorversion(7)}
+  \fi
+  \ifXeTeX
+    \special{pdf:minorversion 7}
+  \fi
+  \ifPDFTeX
+    \pdfminorversion=7
+  \fi
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  % Packages required by doxygen
+  \makeatletter
+  \providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+  % suppress package identification of infwarerr as it contains the word "warning"
+  \let\@@protected@wlog\protected@wlog
+  \def\protected@wlog#1{\wlog{package info suppressed}}
+  \RequirePackage{infwarerr}
+  \let\protected@wlog\@@protected@wlog
+  \makeatother
+  \IfFormatAtLeastTF{2016/01/01}{}{\usepackage{fixltx2e}} % for \textsubscript
+  \ifPDFTeX
+    \IfFormatAtLeastTF{2015/01/01}{\pdfsuppresswarningpagegroup=1}{}
+  \fi
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \iftutex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Ligatures={TeX}}
+    \usepackage{unicode-math}
+  \else
+    \usepackage[utf8]{inputenc}
+  \fi
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage[vietnamese]{babel}
+  % Define default fonts
+  % Font selection
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \doxyallsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  \usepackage{changepage}
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Được biên soạn bởi Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Được biên soạn bởi Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage[numbers]{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \ifPDFTeX
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+\fi
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifPDFTeX
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifXeTeX
+        \usepackage[xetex,pagebackref=true]{hyperref}
+      \else
+        \ifLuaTeX
+          \usepackage[luatex,pagebackref=true]{hyperref}
+        \else
+          \usepackage[ps2pdf,pagebackref=true]{hyperref}
+        \fi
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={HMS EMR -\/ VIMESCORE\+\_\+\+E10 Documentation},%
+      pdfsubject={}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \IfFormatAtLeastTF{2023/05/01}{\usepackage[deeplevels]{etoc}}{\usepackage[deeplevels]{etoc_doxygen}}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  \etocsetlevel{subsubsubsection}{4}
+  \etocsetlevel{subsubsubsubsection}{5}
+  \etocsetlevel{subsubsubsubsubsection}{6}
+  \etocsetlevel{subsubsubsubsubsubsection}{7}
+  \etocsetlevel{paragraph}{8}
+  \etocsetlevel{subparagraph}{9}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large HMS EMR -\/ VIMESCORE\+\_\+\+E10 Documentation}\\
+  \vspace*{1cm}
+  {\large Được biên soạn bởi Doxygen 1.15.0}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{Cấu trúc thư mục}
+\input{dirs}
+\chapter{Hierarchical Index}
+\input{hierarchy}
+\chapter{Class Index}
+\input{annotated}
+\chapter{File Index}
+\input{files}
+\chapter{Thông tin về thư mục}
+\input{dir_856524284ebe840938865dc061f982fb}
+\input{dir_d4efcf94b8b6e71b0aeeb604318008b0}
+\input{dir_bf016c3c43d37998710d5d1e08bd38a2}
+\chapter{Thông tin về Class}
+\input{class_c_a11_order_dialog}
+\input{class_c_a11_order_list}
+\input{class_c_acc_bank_statement_dialog}
+\input{class_c_acc_bank_statement_input}
+\input{class_c_acc_bank_statement_list}
+\input{class_c_acc_cash_dialog}
+\input{class_c_acc_cash_input}
+\input{class_c_acc_cash_line_input_popup}
+\input{class_c_acc_cash_list}
+\input{class_c_acc_tax_calculations_dialog}
+\input{class_c_acc_tax_creation_dialog}
+\input{class_c_ad_account}
+\input{class_c_ad_account_popup}
+\input{class_c_ad_bank_account}
+\input{class_c_ad_bank_account_dialog}
+\input{class_c_ad_bank_account_popup}
+\input{class_c_ad_bank_dialog}
+\input{class_c_ad_bank_list}
+\input{class_c_ad_budget_item}
+\input{class_c_ad_budget_item_popup}
+\input{class_c_ad_business_partner_bank_account}
+\input{class_c_ad_business_partner_contact}
+\input{class_c_ad_business_partner_contact_input}
+\input{class_c_ad_business_partner_detail}
+\input{class_c_ad_business_partner_dialog}
+\input{class_c_ad_business_partner_list}
+\input{class_c_ad_business_partner_location_address}
+\input{class_c_ad_change_password_dialog}
+\input{class_c_ad_company_information}
+\input{class_c_ad_contact_input}
+\input{class_c_ad_contract_appendix_view}
+\input{class_c_ad_contract_dialog}
+\input{class_c_ad_contract_info_view}
+\input{class_c_ad_contract_liquidation_dlg}
+\input{class_c_ad_contract_liquidation_list}
+\input{class_c_ad_contract_list}
+\input{class_c_ad_contract_package_dialog}
+\input{class_c_ad_contract_package_list}
+\input{class_c_ad_contract_status}
+\input{class_c_ad_contract_status_popup}
+\input{class_c_ad_cost_accumulation}
+\input{class_c_ad_cost_accumulation_view}
+\input{class_c_ad_costing_rule}
+\input{class_c_ad_country}
+\input{class_c_ad_country_dialog}
+\input{class_c_ad_currency}
+\input{class_c_ad_currency_popup}
+\input{class_c_ad_delivery_method}
+\input{class_c_ad_delivery_method_dialog}
+\input{class_c_ad_delivery_term}
+\input{class_c_ad_delivery_term_dialog}
+\input{class_c_ad_dept_index_setup}
+\input{class_c_ad_dept_index_setup___h_c}
+\input{class_c_ad_expense_class}
+\input{class_c_ad_expense_popup}
+\input{class_c_ad_job}
+\input{class_c_ad_job_popup}
+\input{class_c_ad_manufacture_dialog}
+\input{class_c_ad_manufacture_list}
+\input{class_c_ad_office_dialog}
+\input{class_c_ad_partner_category}
+\input{class_c_ad_partner_category_dialog}
+\input{class_c_ad_partner_type}
+\input{class_c_ad_partner_type_dialog}
+\input{class_c_ad_payment_resource}
+\input{class_c_ad_payment_resource_dialog}
+\input{class_c_ad_payment_term}
+\input{class_c_ad_payment_term_dialog}
+\input{class_c_ad_perm_setup}
+\input{class_c_ad_price}
+\input{class_c_ad_price_input}
+\input{class_c_ad_price_list}
+\input{class_c_ad_price_list_popup}
+\input{class_c_ad_price_schema}
+\input{class_c_ad_price_schema_input}
+\input{class_c_ad_price_schema_line}
+\input{class_c_ad_price_schema_popup}
+\input{class_c_ad_product}
+\input{class_c_ad_product_account}
+\input{class_c_ad_product_category}
+\input{class_c_ad_product_category_popup}
+\input{class_c_ad_product_detail}
+\input{class_c_ad_product_dialog}
+\input{class_c_ad_product_popup}
+\input{class_c_ad_product_price}
+\input{class_c_ad_product_price_input}
+\input{class_c_ad_product_resource}
+\input{class_c_ad_product_resource_dialog}
+\input{class_c_ad_product_type}
+\input{class_c_ad_product_type_dialog}
+\input{class_c_ad_tax_rate}
+\input{class_c_ad_tax_rate_popup}
+\input{class_c_ad_transport_method}
+\input{class_c_ad_transport_method_dialog}
+\input{class_c_ad_transport_method_popup}
+\input{class_c_a_p_order_dialog}
+\input{class_c_approve_order_note_dialog}
+\input{class_c_a_p_purchase_order_list}
+\input{class_c_a_r_quote_dialog}
+\input{class_c_a_r_quote_list}
+\input{class_c_a_r_sale_order_list}
+\input{class_c_balance_import_dialog}
+\input{class_c_balance_import_line_input}
+\input{class_c_balance_import_lines}
+\input{class_c_balance_import_list}
+\input{class_c_cancer_prescription_line_edit_dlg}
+\input{class_c_cancer_prescription_order_i_n}
+\input{class_c_cancer_prescription_prepare}
+\input{class_c_cancer_storage_export_order_dialog}
+\input{class_c_cancer_storage_export_order_line_edit}
+\input{class_c_cancer_storage_export_order_line_input}
+\input{class_c_cancer_storage_export_order_lines}
+\input{class_c_cancer_storage_import_dialog}
+\input{class_c_cancer_storage_import_lines}
+\input{class_c_cancer_storage_transaction_dialog}
+\input{class_c_cancer_storage_transaction_lines}
+\input{class_c_cancer_storage_transaction_list}
+\input{class_c_chest_item_apply_dialog}
+\input{class_c_chest_pane_dialog}
+\input{class_c_chest_setup_dialog}
+\input{class_c_c_o_contract_dialog}
+\input{class_c_c_o_contract_list}
+\input{class_c_contract_payment_order_add_entry}
+\input{class_c_contract_payment_order_dialog}
+\input{class_c_contract_payment_order_list}
+\input{class_c_deposit_request_dlg}
+\input{class_c_duty_quantity_dialog}
+\input{class_c_edit_unit_price_dialog}
+\input{class_c_f_a_additional_info_view}
+\input{class_c_f_a_bank_list}
+\input{class_c_f_a_bank_statement_dialog}
+\input{class_c_f_a_bank_statement_general_view}
+\input{class_c_f_a_bank_statement_input_entry}
+\input{class_c_f_a_bank_statement_lines}
+\input{class_c_f_a_bank_statement_list}
+\input{class_c_f_a_cash_addition_view}
+\input{class_c_f_a_cash_dialog}
+\input{class_c_f_a_cash_general_view}
+\input{class_c_f_a_cash_input_entry}
+\input{class_c_f_a_cash_line_view}
+\input{class_c_f_a_cash_list}
+\input{class_c_f_a_invoice}
+\input{class_c_f_a_invoice_line}
+\input{class_c_filter_option}
+\input{class_c_form_footer_setup}
+\input{class_c_glass_product_dialog}
+\input{class_c_glass_sale_order_dialog}
+\input{class_c_g_l_s_sale_order_dialog}
+\input{class_c_grid_base}
+\input{class_c_group_setup_dialog}
+\input{class_c_h_m_s_cancer_prescription_prepare_dialog}
+\input{class_c_h_m_s_doc_approve}
+\input{class_c_h_m_s_doc_approve_a11}
+\input{class_c_h_m_s_doc_approve_entry_dialog}
+\input{class_c_h_m_s_drug_cancer_by_class_setup_dlg}
+\input{class_c_h_m_s_drug_cancer_by_item_setup_dlg}
+\input{class_c_h_m_s_drug_cancer_setup_dlg}
+\input{class_c_h_m_s_expense_dialog}
+\input{class_c_h_m_s_expense_setup_dialog}
+\input{class_c_h_m_s_fee_price_schema_line_setup_v3_dialog}
+\input{class_c_h_m_s_item_daily_trackby_dept}
+\input{class_c_h_m_s_machine_task_dialog}
+\input{class_c_h_m_s_patient_document_dialog}
+\input{class_c_h_m_s_patient_list}
+\input{class_c_h_m_s_patient_list_drug_daily_view}
+\input{class_c_h_m_s_patient_list_drug_medical_cabinet_view}
+\input{class_c_h_m_s_patient_profile}
+\input{class_c_h_m_s_patient_treat_info}
+\input{class_c_h_m_s_setting_dialog}
+\input{class_c_h_r_employee_list}
+\input{class_c_interaction_result_dialog}
+\input{class_c_item_interaction_dialog}
+\input{class_c_item_interaction_line_input}
+\input{class_c_item_interaction_popup}
+\input{class_c_list_notification}
+\input{class_c_machine_list}
+\input{class_c_m_a_contractor_list}
+\input{class_c_main_frame___e10}
+\input{class_c_material_replace_dialog}
+\input{class_c_material_replace_dialog__v2}
+\input{class_c_m_contract_appendix_dlg}
+\input{class_c_member_dialog}
+\input{class_c_m_f_c_pane}
+\input{class_c_number_field_dialog}
+\input{class_c_payment_order_add_dialog}
+\input{class_c_payment_order_dialog}
+\input{class_c_payment_order_list}
+\input{class_c_p_m_i_c_d10_class}
+\input{class_c_p_m_i_c_d10_class_line}
+\input{class_c_p_m_post_national_gate_dialog}
+\input{class_c_p_m_product_class_interaction_line}
+\input{class_c_p_m_purchase_order_line_input_ex}
+\input{class_c_p_m_refesh_map_i_d}
+\input{class_c_p_m_s_comet_operation}
+\input{class_c_p_m_s_contractor_list}
+\input{class_c_p_m_s_contractor_purcharge_list}
+\input{class_c_p_m_set_department_delivery_dialog}
+\input{class_c_p_m_s_payment_dlg}
+\input{class_c_p_m_s_prescription_clear_order}
+\input{class_c_p_m_s_prescription_edit_quantity_dialog}
+\input{class_c_p_m_s_prescription_order}
+\input{class_c_p_m_s_prescription_order_e_x}
+\input{class_c_p_m_s_prescription_order_i_n}
+\input{class_c_p_m_s_prescription_order_i_n_e_x}
+\input{class_c_p_m_s_prescription_return_dialog}
+\input{class_c_p_m_s_prescription_return_list}
+\input{class_c_p_m_s_sale_order}
+\input{class_c_p_m_s_uom_list}
+\input{class_c_p_m_s_uom_popup}
+\input{class_c_p_m_sys_purchase_to_duoc_q_g}
+\input{class_c_p_m_sys_select_user_drug_storage}
+\input{class_c_p_o_auto_create_item_dialog}
+\input{class_c_p_o_auto_create_item_dialog___h_c}
+\input{class_c_p_o_auto_create_item_dialog___v2}
+\input{class_c_p_o_auto_edit_quantity_dialog}
+\input{class_c_price_setup_dialog}
+\input{class_c_product_category_dialog}
+\input{class_c_product_category_list}
+\input{class_c_product_class_dialog}
+\input{class_c_product_class_dialog__v2}
+\input{class_c_product_class_group}
+\input{class_c_product_class_i_c_d10_dialog}
+\input{class_c_product_class_line_input}
+\input{class_c_product_class_list}
+\input{class_c_product_control}
+\input{class_c_product_control_input}
+\input{class_c_product_default}
+\input{class_c_product_dialog}
+\input{class_c_product_edit_price_dialog}
+\input{class_c_product_extra_info_dialog}
+\input{class_c_product_extra_info_m_a_map_dialog}
+\input{class_c_product_extra_info_map_dialog}
+\input{class_c_product_extra_info_setup}
+\input{class_c_product_information}
+\input{class_c_product_list}
+\input{class_c_product_map_insurance_group_dialog}
+\input{class_c_product_min_qty_setup}
+\input{class_c_product_price_list}
+\input{class_c_product_price_list_dialog}
+\input{class_c_product_price_setup_dialog}
+\input{class_c_product_resource_dialog}
+\input{class_c_product_sys_category}
+\input{class_c_product_tender_dialog}
+\input{class_c_product_tender_entry_dialog}
+\input{class_c_product_tender_list}
+\input{class_c_product_tender_list_dlg}
+\input{class_c_purchase_desktop}
+\input{class_c_purchase_invoice_extra}
+\input{class_c_purchase_invoice_lines}
+\input{class_c_purchase_order_batch_dialog}
+\input{class_c_purchase_order_batch_input}
+\input{class_c_purchase_order_batch_list}
+\input{class_c_purchase_order_delivery}
+\input{class_c_purchase_order_dialog}
+\input{class_c_purchase_order_dialog_ex}
+\input{class_c_purchase_order_dialog_ex___v2}
+\input{class_c_purchase_order_extra}
+\input{class_c_purchase_order_invoice}
+\input{class_c_purchase_order_invoice_payment_add_dialog}
+\input{class_c_purchase_order_invoice_payment_dialog}
+\input{class_c_purchase_order_invoice_payment_list}
+\input{class_c_purchase_order_line_input}
+\input{class_c_purchase_order_line_input_ex}
+\input{class_c_purchase_order_lines}
+\input{class_c_purchase_order_lines_ex}
+\input{class_c_purchase_order_list}
+\input{class_c_purchase_order_lock_dialog}
+\input{class_c_purchase_order_memo}
+\input{class_c_purchase_order_non_stock_dialog}
+\input{class_c_purchase_order_nonstock_dialog}
+\input{class_c_purchase_order_prepare_dialog}
+\input{class_c_purchase_order_v_a_t_totals}
+\input{class_c_purchase_payable_list}
+\input{class_c_purchase_return_order_dialog}
+\input{class_c_purchase_return_order_line_input}
+\input{class_c_purchase_return_order_lines}
+\input{class_c_purchase_return_order_list}
+\input{class_c_purchase_return_order_select_dialog}
+\input{class_c_quantity_adjustment_dialog}
+\input{class_c_reject_order_note_dialog}
+\input{class_c_search_popup___v2}
+\input{class_c_storage_adjustment_dialog}
+\input{class_c_storage_adjustment_list}
+\input{class_c_storage_delivery_order_dialog}
+\input{class_c_storage_delivery_order_line_input}
+\input{class_c_storage_delivery_order_lines}
+\input{class_c_storage_delivery_order_list}
+\input{class_c_storage_dialog}
+\input{class_c_storage_import_dialog}
+\input{class_c_storage_import_line_input}
+\input{class_c_storage_import_line_input2}
+\input{class_c_storage_import_lines}
+\input{class_c_storage_import_list}
+\input{class_c_storage_inventory}
+\input{class_c_storage_inventory_control_dialog}
+\input{class_c_storage_list}
+\input{class_c_storage_medical_cabinet_dialog}
+\input{class_c_storage_medical_cabinet_line_input}
+\input{class_c_storage_medical_cabinet_line_replate_dialog}
+\input{class_c_storage_medical_cabinet_lines}
+\input{class_c_storage_medical_cabinet_list}
+\input{class_c_storage_movement_dialog}
+\input{class_c_storage_movement_line_input}
+\input{class_c_storage_movement_lines}
+\input{class_c_storage_movement_list}
+\input{class_c_storage_preorder_dialog}
+\input{class_c_storage_return_order_dialog}
+\input{class_c_storage_return_order_line_input}
+\input{class_c_storage_return_order_line_input2}
+\input{class_c_storage_return_order_lines}
+\input{class_c_storage_return_order_list}
+\input{class_c_storage_transaction_dialog}
+\input{class_c_storage_transaction_line_input}
+\input{class_c_storage_transaction_line_input_ex}
+\input{class_c_storage_transaction_lines}
+\input{class_c_storage_transaction_list}
+\input{class_c_sys_user_setup___v2}
+\input{class_c_text_field_dialog}
+\input{class_c_t_m_operation_minutes}
+\input{class_c_t_m_preoperation_summarize}
+\input{class_c_t_m_record_summary}
+\input{class_c_tree_ctrl_ex}
+\input{class_c_ward_material_replace_dialog}
+\input{class_c_ward_patient_medical_debt_dialog}
+\input{class_c_w_m_export_list}
+\input{class_c_w_m_import_list}
+\input{class_product_update_dialog}
+\input{struct_c_tree_ctrl_ex_1_1s_tree_item_properties}
+\input{structtag_item_info}
+\input{struct_c_payment_order_add_dialog_1_1tag_order_info}
+\input{struct_c_purchase_order_invoice_payment_add_dialog_1_1tag_order_info}
+\chapter{Thông tin về File}
+\input{_a11_order_dialog_8h}
+\input{_a11_order_dialog_8h_source}
+\input{_a11_order_list_8h}
+\input{_a11_order_list_8h_source}
+\input{_acc_bank_statement_dialog_8h}
+\input{_acc_bank_statement_dialog_8h_source}
+\input{_acc_bank_statement_input_8h}
+\input{_acc_bank_statement_input_8h_source}
+\input{_acc_bank_statement_list_8h}
+\input{_acc_bank_statement_list_8h_source}
+\input{_acc_cash_dialog_8h}
+\input{_acc_cash_dialog_8h_source}
+\input{_acc_cash_input_8h}
+\input{_acc_cash_input_8h_source}
+\input{_acc_cash_line_input_popup_8h}
+\input{_acc_cash_line_input_popup_8h_source}
+\input{_acc_cash_list_8h}
+\input{_acc_cash_list_8h_source}
+\input{_acc_tax_calculations_dialog_8h}
+\input{_acc_tax_calculations_dialog_8h_source}
+\input{_acc_tax_creation_dialog_8h}
+\input{_acc_tax_creation_dialog_8h_source}
+\input{_ad_account_8h}
+\input{_ad_account_8h_source}
+\input{_ad_account_popup_8h}
+\input{_ad_account_popup_8h_source}
+\input{_ad_bank_account_8h}
+\input{_ad_bank_account_8h_source}
+\input{_ad_bank_account_dialog_8h}
+\input{_ad_bank_account_dialog_8h_source}
+\input{_ad_bank_account_popup_8h}
+\input{_ad_bank_account_popup_8h_source}
+\input{_ad_bank_dialog_8h}
+\input{_ad_bank_dialog_8h_source}
+\input{_ad_bank_list_8h}
+\input{_ad_bank_list_8h_source}
+\input{_ad_budget_item_8h}
+\input{_ad_budget_item_8h_source}
+\input{_ad_budget_item_popup_8h}
+\input{_ad_budget_item_popup_8h_source}
+\input{_ad_business_partner_bank_account_8h}
+\input{_ad_business_partner_bank_account_8h_source}
+\input{_ad_business_partner_contact_8h}
+\input{_ad_business_partner_contact_8h_source}
+\input{_ad_business_partner_contact_input_8h}
+\input{_ad_business_partner_contact_input_8h_source}
+\input{_ad_business_partner_detail_8h}
+\input{_ad_business_partner_detail_8h_source}
+\input{_ad_business_partner_dialog_8h}
+\input{_ad_business_partner_dialog_8h_source}
+\input{_ad_business_partner_list_8h}
+\input{_ad_business_partner_list_8h_source}
+\input{_ad_business_partner_location_address_8h}
+\input{_ad_business_partner_location_address_8h_source}
+\input{_ad_change_password_dialog_8h}
+\input{_ad_change_password_dialog_8h_source}
+\input{_ad_company_information_8h}
+\input{_ad_company_information_8h_source}
+\input{_ad_contact_input_8h}
+\input{_ad_contact_input_8h_source}
+\input{_ad_contract_appendix_view_8h}
+\input{_ad_contract_appendix_view_8h_source}
+\input{_ad_contract_dialog_8h}
+\input{_ad_contract_dialog_8h_source}
+\input{_ad_contract_info_view_8h}
+\input{_ad_contract_info_view_8h_source}
+\input{_ad_contract_liquidation_dlg_8h}
+\input{_ad_contract_liquidation_dlg_8h_source}
+\input{_ad_contract_liquidation_list_8h}
+\input{_ad_contract_liquidation_list_8h_source}
+\input{_ad_contract_list_8h}
+\input{_ad_contract_list_8h_source}
+\input{_ad_contract_package_dialog_8h}
+\input{_ad_contract_package_dialog_8h_source}
+\input{_ad_contract_package_list_8h}
+\input{_ad_contract_package_list_8h_source}
+\input{_ad_contract_status_8h}
+\input{_ad_contract_status_8h_source}
+\input{_ad_contract_status_popup_8h}
+\input{_ad_contract_status_popup_8h_source}
+\input{_ad_cost_accumulation_8h}
+\input{_ad_cost_accumulation_8h_source}
+\input{_ad_cost_accumulation_view_8h}
+\input{_ad_cost_accumulation_view_8h_source}
+\input{_ad_costing_rule_8h}
+\input{_ad_costing_rule_8h_source}
+\input{_ad_country_8h}
+\input{_ad_country_8h_source}
+\input{_ad_country_dialog_8h}
+\input{_ad_country_dialog_8h_source}
+\input{_ad_currency_8h}
+\input{_ad_currency_8h_source}
+\input{_ad_currency_popup_8h}
+\input{_ad_currency_popup_8h_source}
+\input{_ad_delivery_method_8h}
+\input{_ad_delivery_method_8h_source}
+\input{_ad_delivery_method_dialog_8h}
+\input{_ad_delivery_method_dialog_8h_source}
+\input{_ad_delivery_term_8h}
+\input{_ad_delivery_term_8h_source}
+\input{_ad_delivery_term_dialog_8h}
+\input{_ad_delivery_term_dialog_8h_source}
+\input{_ad_dept_index_setup_8h}
+\input{_ad_dept_index_setup_8h_source}
+\input{_ad_dept_index_setup___h_c_8h}
+\input{_ad_dept_index_setup___h_c_8h_source}
+\input{_ad_expense_class_8h}
+\input{_ad_expense_class_8h_source}
+\input{_ad_expense_popup_8h}
+\input{_ad_expense_popup_8h_source}
+\input{_ad_job_8h}
+\input{_ad_job_8h_source}
+\input{_ad_job_popup_8h}
+\input{_ad_job_popup_8h_source}
+\input{_ad_manufacture_dialog_8h}
+\input{_ad_manufacture_dialog_8h_source}
+\input{_ad_manufacture_list_8h}
+\input{_ad_manufacture_list_8h_source}
+\input{_ad_office_dialog_8h}
+\input{_ad_office_dialog_8h_source}
+\input{_ad_partner_category_8h}
+\input{_ad_partner_category_8h_source}
+\input{_ad_partner_category_dialog_8h}
+\input{_ad_partner_category_dialog_8h_source}
+\input{_ad_partner_type_8h}
+\input{_ad_partner_type_8h_source}
+\input{_ad_partner_type_dialog_8h}
+\input{_ad_partner_type_dialog_8h_source}
+\input{_ad_payment_resource_8h}
+\input{_ad_payment_resource_8h_source}
+\input{_ad_payment_resource_dialog_8h}
+\input{_ad_payment_resource_dialog_8h_source}
+\input{_ad_payment_term_8h}
+\input{_ad_payment_term_8h_source}
+\input{_ad_payment_term_dialog_8h}
+\input{_ad_payment_term_dialog_8h_source}
+\input{_ad_perm_setup_8h}
+\input{_ad_perm_setup_8h_source}
+\input{_ad_price_8h}
+\input{_ad_price_8h_source}
+\input{_ad_price_input_8h}
+\input{_ad_price_input_8h_source}
+\input{_ad_price_list_8h}
+\input{_ad_price_list_8h_source}
+\input{_ad_price_list_popup_8h}
+\input{_ad_price_list_popup_8h_source}
+\input{_ad_price_schema_8h}
+\input{_ad_price_schema_8h_source}
+\input{_ad_price_schema_input_8h}
+\input{_ad_price_schema_input_8h_source}
+\input{_ad_price_schema_line_8h}
+\input{_ad_price_schema_line_8h_source}
+\input{_ad_price_schema_popup_8h}
+\input{_ad_price_schema_popup_8h_source}
+\input{_ad_product_8h}
+\input{_ad_product_8h_source}
+\input{_ad_product_account_8h}
+\input{_ad_product_account_8h_source}
+\input{_ad_product_category_8h}
+\input{_ad_product_category_8h_source}
+\input{_ad_product_category_popup_8h}
+\input{_ad_product_category_popup_8h_source}
+\input{_ad_product_detail_8h}
+\input{_ad_product_detail_8h_source}
+\input{_ad_product_dialog_8h}
+\input{_ad_product_dialog_8h_source}
+\input{_ad_product_popup_8h}
+\input{_ad_product_popup_8h_source}
+\input{_ad_product_price_8h}
+\input{_ad_product_price_8h_source}
+\input{_ad_product_price_input_8h}
+\input{_ad_product_price_input_8h_source}
+\input{_ad_product_resource_8h}
+\input{_ad_product_resource_8h_source}
+\input{_ad_product_resource_dialog_8h}
+\input{_ad_product_resource_dialog_8h_source}
+\input{_ad_product_type_8h}
+\input{_ad_product_type_8h_source}
+\input{_ad_product_type_dialog_8h}
+\input{_ad_product_type_dialog_8h_source}
+\input{_ad_tax_rate_8h}
+\input{_ad_tax_rate_8h_source}
+\input{_ad_tax_rate_popup_8h}
+\input{_ad_tax_rate_popup_8h_source}
+\input{_ad_transport_method_8h}
+\input{_ad_transport_method_8h_source}
+\input{_ad_transport_method_dialog_8h}
+\input{_ad_transport_method_dialog_8h_source}
+\input{_ad_transport_method_popup_8h}
+\input{_ad_transport_method_popup_8h_source}
+\input{_a_p_order_dialog_8h}
+\input{_a_p_order_dialog_8h_source}
+\input{_approve_order_note_dialog_8h}
+\input{_approve_order_note_dialog_8h_source}
+\input{_a_p_puchase_order_list_8h}
+\input{_a_p_puchase_order_list_8h_source}
+\input{_a_r_quote_dialog_8h}
+\input{_a_r_quote_dialog_8h_source}
+\input{_a_r_quote_list_8h}
+\input{_a_r_quote_list_8h_source}
+\input{_a_r_sale_order_list_8h}
+\input{_a_r_sale_order_list_8h_source}
+\input{_balance_import_dialog_8h}
+\input{_balance_import_dialog_8h_source}
+\input{_balance_import_line_input_8h}
+\input{_balance_import_line_input_8h_source}
+\input{_balance_import_lines_8h}
+\input{_balance_import_lines_8h_source}
+\input{_balance_import_list_8h}
+\input{_balance_import_list_8h_source}
+\input{_cancer_prescription_line_edit_dlg_8h}
+\input{_cancer_prescription_line_edit_dlg_8h_source}
+\input{_cancer_prescription_order_i_n_8h}
+\input{_cancer_prescription_order_i_n_8h_source}
+\input{_cancer_prescription_prepare_8h}
+\input{_cancer_prescription_prepare_8h_source}
+\input{_cancer_prescription_prepare_dialog_8h}
+\input{_cancer_prescription_prepare_dialog_8h_source}
+\input{_cancer_storage_export_order_dialog_8h}
+\input{_cancer_storage_export_order_dialog_8h_source}
+\input{_cancer_storage_export_order_line_edit_8h}
+\input{_cancer_storage_export_order_line_edit_8h_source}
+\input{_cancer_storage_export_order_line_input_8h}
+\input{_cancer_storage_export_order_line_input_8h_source}
+\input{_cancer_storage_export_order_lines_8h}
+\input{_cancer_storage_export_order_lines_8h_source}
+\input{_cancer_storage_import_dialog_8h}
+\input{_cancer_storage_import_dialog_8h_source}
+\input{_cancer_storage_import_lines_8h}
+\input{_cancer_storage_import_lines_8h_source}
+\input{_cancer_storage_transaction_dialog_8h}
+\input{_cancer_storage_transaction_dialog_8h_source}
+\input{_cancer_storage_transaction_lines_8h}
+\input{_cancer_storage_transaction_lines_8h_source}
+\input{_cancer_storage_transaction_list_8h}
+\input{_cancer_storage_transaction_list_8h_source}
+\input{_chest_item_apply_dialog_8h}
+\input{_chest_item_apply_dialog_8h_source}
+\input{_chest_pane_dialog_8h}
+\input{_chest_pane_dialog_8h_source}
+\input{_chest_setup_dialog_8h}
+\input{_chest_setup_dialog_8h_source}
+\input{_c_o_contract_dialog_8h}
+\input{_c_o_contract_dialog_8h_source}
+\input{_c_o_contract_list_8h}
+\input{_c_o_contract_list_8h_source}
+\input{_contract_payment_order_add_entry_8h}
+\input{_contract_payment_order_add_entry_8h_source}
+\input{_contract_payment_order_dialog_8h}
+\input{_contract_payment_order_dialog_8h_source}
+\input{_contract_payment_order_list_8h}
+\input{_contract_payment_order_list_8h_source}
+\input{_deposit_request_dlg_8h}
+\input{_deposit_request_dlg_8h_source}
+\input{_duty_quantity_dialog_8h}
+\input{_duty_quantity_dialog_8h_source}
+\input{_edit_unit_price_dialog_8h}
+\input{_edit_unit_price_dialog_8h_source}
+\input{_f_a_additional_info_view_8h}
+\input{_f_a_additional_info_view_8h_source}
+\input{_f_a_bank_list_8h}
+\input{_f_a_bank_list_8h_source}
+\input{_f_a_bank_statement_dialog_8h}
+\input{_f_a_bank_statement_dialog_8h_source}
+\input{_f_a_bank_statement_general_view_8h}
+\input{_f_a_bank_statement_general_view_8h_source}
+\input{_f_a_bank_statement_input_entry_8h}
+\input{_f_a_bank_statement_input_entry_8h_source}
+\input{_f_a_bank_statement_lines_8h}
+\input{_f_a_bank_statement_lines_8h_source}
+\input{_f_a_bank_statement_list_8h}
+\input{_f_a_bank_statement_list_8h_source}
+\input{_f_a_cash_addition_view_8h}
+\input{_f_a_cash_addition_view_8h_source}
+\input{_f_a_cash_general_view_8h}
+\input{_f_a_cash_general_view_8h_source}
+\input{_f_a_cash_input_entry_8h}
+\input{_f_a_cash_input_entry_8h_source}
+\input{_f_a_cash_line_view_8h}
+\input{_f_a_cash_line_view_8h_source}
+\input{_f_a_cash_list_8h}
+\input{_f_a_cash_list_8h_source}
+\input{_f_a_cash_view_8h}
+\input{_f_a_cash_view_8h_source}
+\input{_f_a_invoice_8h}
+\input{_f_a_invoice_8h_source}
+\input{_f_a_invoice_line_8h}
+\input{_f_a_invoice_line_8h_source}
+\input{_filter_option_8h}
+\input{_filter_option_8h_source}
+\input{_form_footer_setup_8h}
+\input{_form_footer_setup_8h_source}
+\input{_glass_product_dialog_8h}
+\input{_glass_product_dialog_8h_source}
+\input{_glass_sale_order_dialog_8h}
+\input{_glass_sale_order_dialog_8h_source}
+\input{_g_l_s_sale_order_dialog_8h}
+\input{_g_l_s_sale_order_dialog_8h_source}
+\input{_grid_list_8h}
+\input{_grid_list_8h_source}
+\input{_group_setup_dialog_8h}
+\input{_group_setup_dialog_8h_source}
+\input{_h_m_s_doc_approve_8h}
+\input{_h_m_s_doc_approve_8h_source}
+\input{_h_m_s_doc_approve_a11_8h}
+\input{_h_m_s_doc_approve_a11_8h_source}
+\input{_h_m_s_doc_approve_entry_dialog_8h}
+\input{_h_m_s_doc_approve_entry_dialog_8h_source}
+\input{_h_m_s_drug_cancer_by_class_setup_dlg_8h}
+\input{_h_m_s_drug_cancer_by_class_setup_dlg_8h_source}
+\input{_h_m_s_drug_cancer_by_item_setup_dlg_8h}
+\input{_h_m_s_drug_cancer_by_item_setup_dlg_8h_source}
+\input{_h_m_s_drug_cancer_setup_dlg_8h}
+\input{_h_m_s_drug_cancer_setup_dlg_8h_source}
+\input{_h_m_s_fee_price_schema_line_setup_v3_dialog_8h}
+\input{_h_m_s_fee_price_schema_line_setup_v3_dialog_8h_source}
+\input{_h_m_s_item_daily_trackby_dept_8h}
+\input{_h_m_s_item_daily_trackby_dept_8h_source}
+\input{_h_m_s_machine_task_dialog_8h}
+\input{_h_m_s_machine_task_dialog_8h_source}
+\input{_h_m_s_patient_document_dialog_8h}
+\input{_h_m_s_patient_document_dialog_8h_source}
+\input{_h_m_s_patient_list_8h}
+\input{_h_m_s_patient_list_8h_source}
+\input{_h_m_s_patient_list_drug_daily_view_8h}
+\input{_h_m_s_patient_list_drug_daily_view_8h_source}
+\input{_h_m_s_patient_list_drug_medical_cabinet_view_8h}
+\input{_h_m_s_patient_list_drug_medical_cabinet_view_8h_source}
+\input{_h_m_s_patient_profile_8h}
+\input{_h_m_s_patient_profile_8h_source}
+\input{_h_m_s_patient_treat_info_8h}
+\input{_h_m_s_patient_treat_info_8h_source}
+\input{_h_m_s_setting_dialog_8h}
+\input{_h_m_s_setting_dialog_8h_source}
+\input{_h_r_employee_list_8h}
+\input{_h_r_employee_list_8h_source}
+\input{_interaction_result_dialog_8h}
+\input{_interaction_result_dialog_8h_source}
+\input{_item_interaction_dialog_8h}
+\input{_item_interaction_dialog_8h_source}
+\input{_item_interaction_line_input_8h}
+\input{_item_interaction_line_input_8h_source}
+\input{_item_interaction_popup_8h}
+\input{_item_interaction_popup_8h_source}
+\input{_list_control_8h}
+\input{_list_control_8h_source}
+\input{_list_notification_8h}
+\input{_list_notification_8h_source}
+\input{_machine_list_8h}
+\input{_machine_list_8h_source}
+\input{_m_a_contractor_list_8h}
+\input{_m_a_contractor_list_8h_source}
+\input{_main_frame___e10_8h}
+\input{_main_frame___e10_8h_source}
+\input{_material_replace_dialog_8h}
+\input{_material_replace_dialog_8h_source}
+\input{_material_replace_dialog__v2_8h}
+\input{_material_replace_dialog__v2_8h_source}
+\input{_m_contract_appendix_dlg_8h}
+\input{_m_contract_appendix_dlg_8h_source}
+\input{_member_dialog_8h}
+\input{_member_dialog_8h_source}
+\input{_m_f_c_pane_8h}
+\input{_m_f_c_pane_8h_source}
+\input{_number_field_dialog_8h}
+\input{_number_field_dialog_8h_source}
+\input{_payment_order_add_dialog_8h}
+\input{_payment_order_add_dialog_8h_source}
+\input{_payment_order_dialog_8h}
+\input{_payment_order_dialog_8h_source}
+\input{_payment_order_list_8h}
+\input{_payment_order_list_8h_source}
+\input{_p_m_i_c_d10_class_8h}
+\input{_p_m_i_c_d10_class_8h_source}
+\input{_p_m_i_c_d10_class_line_8h}
+\input{_p_m_i_c_d10_class_line_8h_source}
+\input{_p_m_post_national_gate_dialog_8h}
+\input{_p_m_post_national_gate_dialog_8h_source}
+\input{_p_m_product_class_interaction_line_8h}
+\input{_p_m_product_class_interaction_line_8h_source}
+\input{_p_m_purchase_order_line_input_ex_8h}
+\input{_p_m_purchase_order_line_input_ex_8h_source}
+\input{_p_m_refesh_map_i_d_8h}
+\input{_p_m_refesh_map_i_d_8h_source}
+\input{_p_m_s_comet_operation_8h}
+\input{_p_m_s_comet_operation_8h_source}
+\input{_p_m_s_contractor_list_8h}
+\input{_p_m_s_contractor_list_8h_source}
+\input{_p_m_s_contractor_purcharge_list_8h}
+\input{_p_m_s_contractor_purcharge_list_8h_source}
+\input{_p_m_set_department_delivery_dialog_8h}
+\input{_p_m_set_department_delivery_dialog_8h_source}
+\input{_p_m_s_payment_dlg_8h}
+\input{_p_m_s_payment_dlg_8h_source}
+\input{_p_m_s_prescription_clear_order_8h}
+\input{_p_m_s_prescription_clear_order_8h_source}
+\input{_p_m_s_prescription_edit_quantity_dialog_8h}
+\input{_p_m_s_prescription_edit_quantity_dialog_8h_source}
+\input{_p_m_s_prescription_order_8h}
+\input{_p_m_s_prescription_order_8h_source}
+\input{_p_m_s_prescription_order___e_x_8h}
+\input{_p_m_s_prescription_order___e_x_8h_source}
+\input{_p_m_s_prescription_order_i_n_8h}
+\input{_p_m_s_prescription_order_i_n_8h_source}
+\input{_p_m_s_prescription_order_i_n___e_x_8h}
+\input{_p_m_s_prescription_order_i_n___e_x_8h_source}
+\input{_p_m_s_prescription_return_dialog_8h}
+\input{_p_m_s_prescription_return_dialog_8h_source}
+\input{_p_m_s_prescription_return_list_8h}
+\input{_p_m_s_prescription_return_list_8h_source}
+\input{_p_m_s_sale_order_8h}
+\input{_p_m_s_sale_order_8h_source}
+\input{_p_m_sys_purchase_to_duoc_q_g_8h}
+\input{_p_m_sys_purchase_to_duoc_q_g_8h_source}
+\input{_p_m_sys_select_user_drug_storage_8h}
+\input{_p_m_sys_select_user_drug_storage_8h_source}
+\input{_p_o_auto_create_item_dialog_8h}
+\input{_p_o_auto_create_item_dialog_8h_source}
+\input{_p_o_auto_create_item_dialog___h_c_8h}
+\input{_p_o_auto_create_item_dialog___h_c_8h_source}
+\input{_p_o_auto_create_item_dialog___v2_8h}
+\input{_p_o_auto_create_item_dialog___v2_8h_source}
+\input{_p_o_auto_edit_quantity_dialog_8h}
+\input{_p_o_auto_edit_quantity_dialog_8h_source}
+\input{_h_m_s_expense_dialog_8h}
+\input{_h_m_s_expense_dialog_8h_source}
+\input{_h_m_s_expense_setup_dialog_8h}
+\input{_h_m_s_expense_setup_dialog_8h_source}
+\input{_price_setup_dialog_8h}
+\input{_price_setup_dialog_8h_source}
+\input{_product_category_dialog_8h}
+\input{_product_category_dialog_8h_source}
+\input{_product_category_list_8h}
+\input{_product_category_list_8h_source}
+\input{_product_class_dialog_8h}
+\input{_product_class_dialog_8h_source}
+\input{_product_class_dialog__v2_8h}
+\input{_product_class_dialog__v2_8h_source}
+\input{_product_class_group_8h}
+\input{_product_class_group_8h_source}
+\input{_product_class_i_c_d10_dialog_8h}
+\input{_product_class_i_c_d10_dialog_8h_source}
+\input{_product_class_line_input_8h}
+\input{_product_class_line_input_8h_source}
+\input{_product_class_list_8h}
+\input{_product_class_list_8h_source}
+\input{_product_control_8h}
+\input{_product_control_8h_source}
+\input{_product_control_input_8h}
+\input{_product_control_input_8h_source}
+\input{_product_default_8h}
+\input{_product_default_8h_source}
+\input{_product_dialog_8h}
+\input{_product_dialog_8h_source}
+\input{_product_edit_price_dialog_8h}
+\input{_product_edit_price_dialog_8h_source}
+\input{_product_extra_info_dialog_8h}
+\input{_product_extra_info_dialog_8h_source}
+\input{_product_extra_info_m_a_map_dialog_8h}
+\input{_product_extra_info_m_a_map_dialog_8h_source}
+\input{_product_extra_info_map_dialog_8h}
+\input{_product_extra_info_map_dialog_8h_source}
+\input{_product_extra_info_setup_8h}
+\input{_product_extra_info_setup_8h_source}
+\input{_product_extra_info_setup__old_8h}
+\input{_product_extra_info_setup__old_8h_source}
+\input{_product_information_8h}
+\input{_product_information_8h_source}
+\input{_product_list_8h}
+\input{_product_list_8h_source}
+\input{_product_map_insurance_group_dialog_8h}
+\input{_product_map_insurance_group_dialog_8h_source}
+\input{_product_min_qty_setup_8h}
+\input{_product_min_qty_setup_8h_source}
+\input{_product_price_list_8h}
+\input{_product_price_list_8h_source}
+\input{_product_price_list_dialog_8h}
+\input{_product_price_list_dialog_8h_source}
+\input{_product_price_setup_dialog_8h}
+\input{_product_price_setup_dialog_8h_source}
+\input{_product_resource_dialog2_8h}
+\input{_product_resource_dialog2_8h_source}
+\input{_product_sys_category_01-_01_copy_8h}
+\input{_product_sys_category_01-_01_copy_8h_source}
+\input{_product_sys_category_8h}
+\input{_product_sys_category_8h_source}
+\input{_product_tender_dialog_8h}
+\input{_product_tender_dialog_8h_source}
+\input{_product_tender_entry_dialog_8h}
+\input{_product_tender_entry_dialog_8h_source}
+\input{_product_tender_list_8h}
+\input{_product_tender_list_8h_source}
+\input{_product_tender_list_dlg_8h}
+\input{_product_tender_list_dlg_8h_source}
+\input{_product_update_dialog_8h}
+\input{_product_update_dialog_8h_source}
+\input{_purchase_desktop_8h}
+\input{_purchase_desktop_8h_source}
+\input{_purchase_invoice_extra_8h}
+\input{_purchase_invoice_extra_8h_source}
+\input{_purchase_invoice_lines_8h}
+\input{_purchase_invoice_lines_8h_source}
+\input{_purchase_order_batch_dialog_8h}
+\input{_purchase_order_batch_dialog_8h_source}
+\input{_purchase_order_batch_input_8h}
+\input{_purchase_order_batch_input_8h_source}
+\input{_purchase_order_batch_list_8h}
+\input{_purchase_order_batch_list_8h_source}
+\input{_purchase_order_delivery_8h}
+\input{_purchase_order_delivery_8h_source}
+\input{_purchase_order_dialog_8h}
+\input{_purchase_order_dialog_8h_source}
+\input{_purchase_order_dialog_ex_8h}
+\input{_purchase_order_dialog_ex_8h_source}
+\input{_purchase_order_dialog_ex___v2_8h}
+\input{_purchase_order_dialog_ex___v2_8h_source}
+\input{_purchase_order_dialog_nonstock_8h}
+\input{_purchase_order_dialog_nonstock_8h_source}
+\input{_purchase_order_extra_8h}
+\input{_purchase_order_extra_8h_source}
+\input{_purchase_order_invoice_8h}
+\input{_purchase_order_invoice_8h_source}
+\input{_purchase_order_invoice_payment_add_dialog_8h}
+\input{_purchase_order_invoice_payment_add_dialog_8h_source}
+\input{_purchase_order_invoice_payment_dialog_8h}
+\input{_purchase_order_invoice_payment_dialog_8h_source}
+\input{_purchase_order_invoice_payment_list_8h}
+\input{_purchase_order_invoice_payment_list_8h_source}
+\input{_purchase_order_line_input_8h}
+\input{_purchase_order_line_input_8h_source}
+\input{_purchase_order_line_input_ex_8h}
+\input{_purchase_order_line_input_ex_8h_source}
+\input{_purchase_order_lines_8h}
+\input{_purchase_order_lines_8h_source}
+\input{_purchase_order_lines_ex_8h}
+\input{_purchase_order_lines_ex_8h_source}
+\input{_purchase_order_list_8h}
+\input{_purchase_order_list_8h_source}
+\input{_purchase_order_lock_dialog_8h}
+\input{_purchase_order_lock_dialog_8h_source}
+\input{_purchase_order_memo_8h}
+\input{_purchase_order_memo_8h_source}
+\input{_purchase_order_non_stock_dialog_8h}
+\input{_purchase_order_non_stock_dialog_8h_source}
+\input{_purchase_order_prepare_dialog_8h}
+\input{_purchase_order_prepare_dialog_8h_source}
+\input{_purchase_order_v_a_t_totals_8h}
+\input{_purchase_order_v_a_t_totals_8h_source}
+\input{_purchase_payable_list_8h}
+\input{_purchase_payable_list_8h_source}
+\input{_purchase_return_order_dialog_8h}
+\input{_purchase_return_order_dialog_8h_source}
+\input{_purchase_return_order_line_input_8h}
+\input{_purchase_return_order_line_input_8h_source}
+\input{_purchase_return_order_lines_8h}
+\input{_purchase_return_order_lines_8h_source}
+\input{_purchase_return_order_list_8h}
+\input{_purchase_return_order_list_8h_source}
+\input{_purchase_return_order_select_dialog_8h}
+\input{_purchase_return_order_select_dialog_8h_source}
+\input{_quantity_adjustment_dialog_8h}
+\input{_quantity_adjustment_dialog_8h_source}
+\input{_reject_order_note_dialog_8h}
+\input{_reject_order_note_dialog_8h_source}
+\input{_resource_8h}
+\input{_resource_8h_source}
+\input{_search_popup___v2_8h}
+\input{_search_popup___v2_8h_source}
+\input{stdafx_8h}
+\input{stdafx_8h_source}
+\input{_storage_adjustment_dialog_8h}
+\input{_storage_adjustment_dialog_8h_source}
+\input{_storage_adjustment_list_8h}
+\input{_storage_adjustment_list_8h_source}
+\input{_storage_delivery_order_dialog_8h}
+\input{_storage_delivery_order_dialog_8h_source}
+\input{_storage_delivery_order_line_input_8h}
+\input{_storage_delivery_order_line_input_8h_source}
+\input{_storage_delivery_order_lines_8h}
+\input{_storage_delivery_order_lines_8h_source}
+\input{_storage_delivery_order_list_8h}
+\input{_storage_delivery_order_list_8h_source}
+\input{_storage_dialog_8h}
+\input{_storage_dialog_8h_source}
+\input{_storage_import_dialog_8h}
+\input{_storage_import_dialog_8h_source}
+\input{_storage_import_line_input_8h}
+\input{_storage_import_line_input_8h_source}
+\input{_storage_import_line_input2_8h}
+\input{_storage_import_line_input2_8h_source}
+\input{_storage_import_lines_8h}
+\input{_storage_import_lines_8h_source}
+\input{_storage_import_list_8h}
+\input{_storage_import_list_8h_source}
+\input{_storage_inventory_8h}
+\input{_storage_inventory_8h_source}
+\input{_storage_inventory_control_dialog_8h}
+\input{_storage_inventory_control_dialog_8h_source}
+\input{_storage_list_8h}
+\input{_storage_list_8h_source}
+\input{_storage_medical_cabinet_dialog_8h}
+\input{_storage_medical_cabinet_dialog_8h_source}
+\input{_storage_medical_cabinet_line_input_8h}
+\input{_storage_medical_cabinet_line_input_8h_source}
+\input{_storage_medical_cabinet_line_replate_dialog_8h}
+\input{_storage_medical_cabinet_line_replate_dialog_8h_source}
+\input{_storage_medical_cabinet_lines_8h}
+\input{_storage_medical_cabinet_lines_8h_source}
+\input{_storage_medical_cabinet_list_8h}
+\input{_storage_medical_cabinet_list_8h_source}
+\input{_storage_movement_dialog_8h}
+\input{_storage_movement_dialog_8h_source}
+\input{_storage_movement_line_input_8h}
+\input{_storage_movement_line_input_8h_source}
+\input{_storage_movement_lines_8h}
+\input{_storage_movement_lines_8h_source}
+\input{_storage_movement_list_8h}
+\input{_storage_movement_list_8h_source}
+\input{_storage_preorder_dialog_8h}
+\input{_storage_preorder_dialog_8h_source}
+\input{_storage_return_order_dialog_8h}
+\input{_storage_return_order_dialog_8h_source}
+\input{_storage_return_order_line_input_8h}
+\input{_storage_return_order_line_input_8h_source}
+\input{_storage_return_order_line_input2_8h}
+\input{_storage_return_order_line_input2_8h_source}
+\input{_storage_return_order_lines_8h}
+\input{_storage_return_order_lines_8h_source}
+\input{_storage_return_order_list_8h}
+\input{_storage_return_order_list_8h_source}
+\input{_storage_transaction_dialog_8h}
+\input{_storage_transaction_dialog_8h_source}
+\input{_storage_transaction_line_input_8h}
+\input{_storage_transaction_line_input_8h_source}
+\input{_storage_transaction_line_input2_8h}
+\input{_storage_transaction_line_input2_8h_source}
+\input{_storage_transaction_line_input_ex_8h}
+\input{_storage_transaction_line_input_ex_8h_source}
+\input{_storage_transaction_lines_8h}
+\input{_storage_transaction_lines_8h_source}
+\input{_storage_transaction_list_8h}
+\input{_storage_transaction_list_8h_source}
+\input{_sys_user_setup___v2_8h}
+\input{_sys_user_setup___v2_8h_source}
+\input{_text_field_dialog_8h}
+\input{_text_field_dialog_8h_source}
+\input{_t_m_operation_minutes_8h}
+\input{_t_m_operation_minutes_8h_source}
+\input{_t_m_preoperation_summarize_8h}
+\input{_t_m_preoperation_summarize_8h_source}
+\input{_t_m_record_summary_8h}
+\input{_t_m_record_summary_8h_source}
+\input{_tree_ctrl_ex_8h}
+\input{_tree_ctrl_ex_8h_source}
+\input{_uom_list_8h}
+\input{_uom_list_8h_source}
+\input{_uom_popup_8h}
+\input{_uom_popup_8h_source}
+\input{_v_i_m_e_s_c_o_r_e___e10_def_8h}
+\input{_v_i_m_e_s_c_o_r_e___e10_def_8h_source}
+\input{_ward_material_replace_dialog_8h}
+\input{_ward_material_replace_dialog_8h_source}
+\input{_ward_patient_medical_debt_dialog_8h}
+\input{_ward_patient_medical_debt_dialog_8h_source}
+\input{_w_m_export_list_8h}
+\input{_w_m_export_list_8h_source}
+\input{_w_m_import_list_8h}
+\input{_w_m_import_list_8h_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}

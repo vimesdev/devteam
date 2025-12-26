@@ -1,0 +1,87 @@
+\doxysection{MAMaterial\+Payment.\+h}
+\hypertarget{_m_a_material_payment_8h_source}{}\label{_m_a_material_payment_8h_source}\index{Include/HMSReportForms/Pharmacy/MAMaterialPayment.h@{Include/HMSReportForms/Pharmacy/MAMaterialPayment.h}}
+\mbox{\hyperlink{_m_a_material_payment_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAMaterialPayment\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAMaterialPayment\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_m_a_material_payment_aabe40ea13d346fdfc0430ebfa0e3dd5b}{CMAMaterialPayment}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_af9bcb017cb292abc9b1533acc9efa4d3}{m\_wndReportCondition}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a1a0eb9a1e19e9acb806f185cd215b2e3}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a3c074b9b334308c042b28cd1689e684b}{m\_wndFromDate}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_af0d0a90aac305b7cd9b8096387b9d9dd}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a23273a228ab962ee2ca3d083f2646314}{m\_wndToDate}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a88abc47407bac5668846e0cdb242794b}{m\_wndSupplierLabel}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a607509a324a78d003af10e1c952ee63c}{m\_wndSupplier}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a858300bbf176a3c8f4e37fcae63ff1e7}{m\_wndStorageList}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_ab1a9542744558f01714d8fa4a0374346}{m\_wndExport}};}
+\DoxyCodeLine{00043\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_material_payment_a2559d76c6e9c2a61fc33ece580794287}{m\_szFromDate}};}
+\DoxyCodeLine{00044\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_material_payment_af29d4377c3174124868cdf644e30580d}{m\_szToDate}};}
+\DoxyCodeLine{00045\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_material_payment_a97301c622c4e1be66c6ab75b6579f8b0}{m\_szSupplierKey}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_abe91a20a9ac43778ec295abf3e9c6824}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_ae42e082b4f3c4943f5d6ca47304601a1}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_ac80c92b50dcf80e9ff428ec37d78c953}{OnSupplierSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a44cf83a8935394af163846a42341e55b}{OnSupplierSelendok}}();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierSetfocus();\ }}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierKillfocus();\ }}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a75eaecea3461d1ae1289849839fb68ac}{OnSupplierLoadData}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierAddNew();\ }}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_ab90c2e14891c7e4db33dedbbb27a6148}{OnStorageListLoadData}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a6e6c47d8fccf60b15133764d20391245}{OnStorageListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a1e10dab6f33c5c6995fa5b788a382a46}{OnStorageListDblClick}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_abef69648632573bca5b5200768b405e9}{OnStorageListDeleteItem}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a98e7303ba0843f67b2e13a183960ba01}{OnExportSelect}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_aabe40ea13d346fdfc0430ebfa0e3dd5b}{CMAMaterialPayment}}(CWnd\ *pParent);}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_c_m_a_material_payment_a1577142dbabe43783728240504e975bc}{\string~CMAMaterialPayment}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_a03fa99a149eb3b2b9ff09a52bbeadd7a}{OnCreateComponents}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_acbc251c32978aad1047d6f388de1a1ac}{OnInitializeComponents}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_a41bd7bfc9439ad349f88d266bc7bf31b}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_afcfd82b4d4fd448e7e51e3637748df5e}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_aefbd4e62e3e8f07178d847a422bb578d}{GetDataToScreen}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_ae6c864613bc1a5554d522a28df240580}{GetScreenToData}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_aed8e13a2b7a79766da8d4c05ba0d4507}{SetDefaultValues}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_material_payment_acef38a61f8bb314ab1fdb206ac689865}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_material_payment_acc512119cf5f7bb449f516952f11439b}{OnAddMAMaterialPayment}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_material_payment_a1340a5e7206db0ead5e284b91cafca14}{OnEditMAMaterialPayment}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_material_payment_a722c980242dc2b3f72e801bff33386c0}{OnDeleteMAMaterialPayment}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_material_payment_ae137b18a646043d2288ba704250429ef}{OnSaveMAMaterialPayment}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_material_payment_a2af8d141f89c5de853eff526b24ce206}{OnCancelMAMaterialPayment}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_material_payment_abc51c43737b42d8d071575750991011c}{OnMAMaterialPaymentListLoadData}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_a60c005cdd4182b864912be3951f17c5c}{WriteHeader}}(CExcel*\ pXls,\ CRecord*\ pRs);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_material_payment_a5ff93466a076e2aef4441b09b68a9355}{WriteDetail}}(CExcel*\ pXls,\ CRecord*\ pRs);}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

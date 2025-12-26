@@ -1,0 +1,72 @@
+\doxysection{Purchase\+Order\+Lines.\+h}
+\hypertarget{_purchase_order_lines_8h_source}{}\label{_purchase_order_lines_8h_source}\index{Include/VIMESCORE\_E10/PurchaseOrderLines.h@{Include/VIMESCORE\_E10/PurchaseOrderLines.h}}
+\mbox{\hyperlink{_purchase_order_lines_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PURCHASEORDERLINES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PURCHASEORDERLINES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_purchase_order_lines_a7688267b325791de3b82db86a8e7adf9}{CPurchaseOrderLines}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_ad3ffcd9c78c4d7f1e208747bc7baccf8}{m\_nOrderID}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a5f4c08a4ca69ac55c19cecdb8b035b3e}{m\_nOrderLine}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_ac7cbfa5f742c61061827ef1fe1e3b53d}{m\_nStorageID}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a0a0640f38ab26f9ecb267a7740399369}{m\_nTaxID}};}
+\DoxyCodeLine{00038\ \ \ \ \ CWnd*\ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a5a215899dffc04fb296333038af5a484}{m\_pWndOrder}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_adb58e79ba11153e774c8803f8e6c54ff}{m\_wndList}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a3ef43728a65db248c0df66c3e24cb3db}{OnListLoadData}}();\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_af3f26c43d42937d7393572d977a795d6}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a74f78cea930f7105e463fa80987710a3}{OnListDblClick}}();\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_ace5a05e0ccb18a2c54d199f2abc03a4a}{OnListAddItem}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_af648da68a8baa9fa1ee83d148d8c052f}{OnListEditItem}}();\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a7305871da1e3eb43038c02ada9d73643}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a7688267b325791de3b82db86a8e7adf9}{CPurchaseOrderLines}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_ab815826d6f2b83e43601145515281c13}{\string~CPurchaseOrderLines}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_lines_ae61cf87a5c67bc16a6073e539ed15bbc}{OnCreateComponents}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_lines_ab62f90853d0762183879ae0b50205bf9}{OnInitializeComponents}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_lines_a891900d077d5d17f89b192db4f05c763}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_lines_a01723caa3acf132f7025eff547c280e0}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_lines_a027a9b04682faeb1f274ee6ce2899285}{GetDataToScreen}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_lines_a4aa0e9cbea334e701c97fdecfc05d3ca}{GetScreenToData}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_lines_a4177d0214454abec9111c795933ed821}{SetDefaultValues}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_a03ee6bcc052932cff3c7b11ffc6f1725}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_a2a1d8815f180d07f80fe9bcc88cbddde}{OnAddPurchaseOrderLines}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_a3e53e6337e277425ea5d1802293e0e32}{OnEditPurchaseOrderLines}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_a30748cdbe01f341a0a4cd8519dd39719}{OnDeletePurchaseOrderLines}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_af6d72b656364796c834dc9137e8f6d77}{OnSavePurchaseOrderLines}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_a9119f28f2ea0502278b21a9f7fd5a95d}{OnCancelPurchaseOrderLines}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_a03a7e31d58795f4841381ec6e91aa993}{OnPurchaseOrderLinesListLoadData}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_a8013127d1972cc34f802814a203718a6}{Refresh}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_lines_a3624b5b58e2bb20ce0e8720c4d9c577c}{GetOrderStatus}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_lines_ab952a8f9553094e3a9648d37acd46402}{OnUnitPriceCheckValue}}();}
+\DoxyCodeLine{00067\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_purchase_order_lines_ac208ec8307a4f4c9bbd7a6ae25872fce}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,172 @@
+\doxysection{PMSPrescription\+Order\+IN\+\_\+\+EX.\+h}
+\hypertarget{_p_m_s_prescription_order_i_n___e_x_8h_source}{}\label{_p_m_s_prescription_order_i_n___e_x_8h_source}\index{Include/VIMESCORE\_E10/PMSPrescriptionOrderIN\_EX.h@{Include/VIMESCORE\_E10/PMSPrescriptionOrderIN\_EX.h}}
+\mbox{\hyperlink{_p_m_s_prescription_order_i_n___e_x_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PMSPRESCRIPTIONORDERINEX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PMSPRESCRIPTIONORDERINEX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Storage\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a913074ce9fe03a5bac5626f9528ea74d}{CPMSPrescriptionOrderINEX}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:\ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a49d556315cf0984aab7f46db4681dd2d}{m\_nOrderID}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a9c8b09583efa3db38590b164a36c3ada}{m\_nProductID}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aaee550dc96fbda53f8de1c67e5266d30}{m\_nUnitPrice}};}
+\DoxyCodeLine{00037\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ae2be09e75d7f70d109629372aca32fb7}{m\_szIsPaid}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aca47ee7fd974515ad0c49241524a0fa3}{m\_szType}};}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aac7b53f0c6c3df2ca75513db7be5bd5d}{m\_bPreview}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a8f38178fe4b4b8e578999b1d6475fbc4}{m\_wndPatientProfiles}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a25d839479661ab88171825f7eb47ab01}{m\_wndOrderLine}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ac9c434ece670d6ecbd6d43bb687a92bf}{m\_wndStorageLabel}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ae7a3ec45798d3d3f6538b85e8f65d15a}{m\_wndStorage}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2efebaf5ea35c0110638a1cf17f3dbfa}{m\_wndDepartmentLabel}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2bd9e87a776684b6597618dc04586ab7}{m\_wndDepartment}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ac4edbb9da8bbbf416ddf744fcbc96cbf}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a95f1f63f2d4f9faa2116df0e04e5346e}{m\_wndSearchInformation}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ad9222b3935f1b5f74ca24e4f813828f1}{m\_wndStatus}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a4b4f6683ed96c31de844d6b3d4b06fdb}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2ce06024122abcf9e9f4d22fb171d5fb}{m\_wndFromDate}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a246f5560633daf9d1022cd3720132760}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_af5457d66d62bb7430b8e21991bae4abb}{m\_wndToDate}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ac317f49d4ee01b2b25fbade29b60c343}{m\_wndNameLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aafadf5df9ead2c592a2356a843d5e4c4}{m\_wndName}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a4e98e91f6a74cef8504a4e6682f4e15d}{m\_wndDocNoLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a77a207978769f723d934035fa88ba4ec}{m\_wndDocNo}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ad2e515aa3b1a8c7178c8a359d17f0c21}{m\_wndOrderNo}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aebe7822f79335a7dea88628131c78ba5}{m\_wndFind}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ab2b53754f47a1271f1484b8f06401e9a}{m\_wndPatientList}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ae508835c9938e6a0a3a2c3d7200ea546}{m\_wndDrugList}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a4235f3416da756e651f3253ff96bdeea}{m\_wndPrint}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a0c57524f646c69c1a0d44f410a5ae41a}{m\_wndIssue}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_af9973c80505f5b74eddd6dd88abc1617}{m\_wndCancel}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_af78a681114a857e36086549b2be19a08}{m\_wndShowDetailForItems}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a1aeb75b024229159f25bdf563b3cd050}{m\_wndTotalAmountLabel}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a94a1874378a3a1835dbf44c4ec25b258}{m\_wndTotalAmount}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a54f745b22e768718406370624b0f57d7}{m\_wndTotalPaymentLabel}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a6c2dec894a6632737d52c98b2e8b16b1}{m\_wndTotalPayment}};}
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_acb810a1ed2bb822e194d5a3c69c5d9a8}{m\_szStorageKey}};}
+\DoxyCodeLine{00072\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ac29a39b63a59bff10dd3fec63f82d9c8}{m\_szDepartmentKey}};}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a228ed6a514c2c1bb668be5ec958aa0bf}{m\_szStatusKey}};}
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a0897a3467a9bfd756ebbe17575e16328}{m\_szFromDate}};}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a071da8bc7a0c0ae9810edff75668b22a}{m\_szToDate}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a33f9b2290d7e7d1c60c2f35de10b5fd8}{m\_szName}};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ad347faa55f05a0988553e6342d656016}{m\_nDocNo}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a3bb60ae5741c2d212017bb50f34863a0}{m\_nOrderNo}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ad5a8e70219a0be0a0a1f4cd09d5da179}{m\_bShowDetailForItems}};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a1aec5068225ba2ca17006d53f7123223}{m\_nTotalAmount}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ae98c8390399d987bb54642bb751817ff}{m\_nTotalPayment}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a3b73ea31da71755829c3cff285400823}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ab5836796b9d8a86b4c0a113c4d522dd7}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a706246c887283df52aba9f867dd25708}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aab3e01bc7f7d7be1e0c714a07ae40331}{OnStorageAddNew}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a9d4c36c195483e93b33b119dd2f48817}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a16384e9ae38d3ccae52f2e17142139da}{OnDepartmentSelendok}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentSetfocus();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentKillfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a22041bf1f9e436207a3aacb4f6f57b45}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a9b11f3b4e02508fb5ea7474955abfcb6}{OnDepartmentAddNew}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a571008e4cbd60e740f88b50a8aec7968}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a945165abedc528934495afefb41ba479}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a00aa766f7c65c72b38a425c68dbd18e9}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a63b9ac3b26aa489029c98dd69c41aa51}{OnStatusAddNew}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ac30a6c78ca058bf2692df29795886c1e}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a472c4bdd48e929750f1ebb8c7404d8db}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameChange();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ad8be2f290174ddf9ca0f7d4e94fa2caa}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocNoChange();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocNoSetfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocNoKillfocus();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a3e716a9730410ad8709c9026f52ecfbc}{OnDocNoCheckValue}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_adc9e7ed4d081d9b5437944d55e2fbda3}{OnOrderNoCheckValue}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_add01e6aa7c39cf2b09148087c931d3a2}{OnFindSelect}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a86caef5659df0c9db2ed3e56b2005a76}{OnPatientListLoadData}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a726cac79aa5fc7f1af22979bce164392}{OnPatientListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ab46d055a07025b9fab54b6c78ac29356}{OnPatientListDblClick}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_af741e7913cc7c9579a9b8872ef931a4c}{OnPatientListDeleteItem}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_acc593fd9946ec1152f21d3462ec48cbb}{OnPatientListCancelOrder}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aed57a8f16b17f76beb7bdd5ce8908a31}{OnPatientListRollback}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a6911d0560c7a48908a5d9b378700c278}{OnPatientListIssue}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_af94a608cf6f3501d5b73d6b6a1e61f7a}{OnDrugListLoadData}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a99c181d03809d3a1f30a0676f8e0e142}{OnDrugListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a528aa52221d1f100c2c7fb7897131b99}{OnDrugListDblClick}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a903fad11a1561d08927eb088657a2a8d}{OnDrugListDeleteItem}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a9b212670d823500fdb6ea0d202dd4730}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_af66ca704dea5573288d436c255933210}{OnIssueSelect}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a718dac76efb0d7f9e0b2e690036b78a5}{OnResizeLayout}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a3aff6ec88fc769f405fe30ac2b34466a}{OnIssueSelectEX}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a1a85b8f39e67572cb1c62005640c64d7}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a074383d9ab021f30e635c510e8da4407}{OnReturnSelect}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a31461df12de2e744f1fa207fd44783de}{OnShowDetailForItemsSelect}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountChange();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountSetfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountKillfocus();\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2756a31aac8ab07dcdd53e7a0cc9808f}{OnTotalAmountCheckValue}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalPaymentChange();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalPaymentSetfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalPaymentKillfocus();\ }}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a4637cb3f870f89741682775f51ce5ac3}{OnTotalPaymentCheckValue}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a0c29d47bf04efde05fa9d3f74bbc6e41}{OnRollbackOrder}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_abfb5f61550b24babd7ffc99fa76a99c6}{OnRecalcOrder}}();}
+\DoxyCodeLine{00149\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a36e97a9d593d933791b5787e284e65c2}{GetCurrentStatus}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a913074ce9fe03a5bac5626f9528ea74d}{CPMSPrescriptionOrderINEX}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a17ba09cf7c25cdaea9ffda538a481ebf}{\string~CPMSPrescriptionOrderINEX}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a40c670dda3438f1f0acf9d044d5d76b5}{OnCreateComponents}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a071752916b3205eae3f297c41bfa0095}{OnInitializeComponents}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2a22a43132a9f06f8f192132f2d9881d}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a9bdd241955b5e29e135ffa9370a5320b}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a29b420418efeb8d89e5ff484a39fc105}{GetDataToScreen}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a006f1d98a2d2921410dacdb5a8bfca83}{GetScreenToData}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a3804630e81f1d00d680c82810fd95f9a}{SetDefaultValues}}();}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_aa0a6fd9b97abd064592cdc9aaa914093}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ac58c5b07c3bd74c751305a7220ce9e0b}{OnAddPMSPrescriptionOrder}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a48416e4705829d2b47bdfbe65ac5f63e}{OnEditPMSPrescriptionOrder}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2682b0a67bb6327ce9259869b88d5a0a}{OnDeletePMSPrescriptionOrder}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2a94e6a89971c9db51954eb165d51b5b}{OnSavePMSPrescriptionOrder}}();\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_abc81e7c97a81b3afba97b4ee5eb3f93d}{OnCancelPMSPrescriptionOrder}}();\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ade7c9f6d4c29c7c7b606c3ad7a90a896}{OnPMSPrescriptionOrderListLoadData}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_a2a93748a2c8e5ffc8727c1360d6a3290}{ShowDetail}}(\textcolor{keywordtype}{bool}\ bDetail);}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_prescription_order_i_n_e_x_ab39d85e569ce6eec2673178ca1ee5191}{OnDrugListEditUnitPrice}}();}
+\DoxyCodeLine{00168\ \};}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

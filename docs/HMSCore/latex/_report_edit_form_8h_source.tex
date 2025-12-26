@@ -1,0 +1,122 @@
+\doxysection{Report\+Edit\+Form.\+h}
+\hypertarget{_report_edit_form_8h_source}{}\label{_report_edit_form_8h_source}\index{Include/HMSCore/ReportEditForm.h@{Include/HMSCore/ReportEditForm.h}}
+\mbox{\hyperlink{_report_edit_form_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CReportEditForm\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CReportEditForm\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2006-\/2008.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Name\ (VIMES.,\ JSC).\ 2006-\/2008.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_field_info_a9714792f70b4ede7e8acd9311f6c062e}{tagFieldInfo}}\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{structtag_field_info_ab435e72eb0667592b123845854e46535}{szType}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{structtag_field_info_ada4761003dd3c5940d0ed8d0124ac0d3}{szCaption}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{structtag_field_info_a0cf683fb315ebe2e524b1f7e696a2434}{szName}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{structtag_field_info_a6611c6aa136eddda7cb9b3c1f791169a}{szDefValue}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{structtag_field_info_ad74fc23a4a6ee4d6b3cace9806ae2e32}{arrayString}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{structtag_field_info_a0beebfb35db88968f0684046aa95b6fc}{szValue}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_field_info_a2b93b550034c8113d2b1493449f36299}{nTypeCtrl}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_field_info_a7d13f7f7ff72105d0853ec6cb87a0fb0}{nX}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_field_info_abffdf6294da4249a738f4218da691b91}{nY}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_field_info_a956ae9f22c53cf79b2e1396a30b71f1e}{nWidth}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_field_info_a2e558cef5150dc831565fece11af0bb5}{nHeight}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{structtag_field_info_a066e322a2474e0aafaa414bda448084a}{bMultiLine}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{structtag_field_info_aa348d95ff5df5f53dbff7d89fd431f90}{bReadOnly}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{structtag_field_info_a093125b9aefa9a254946b7e7282cccb3}{bRequire}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ CWnd*\ \ \ \mbox{\hyperlink{structtag_field_info_aa3050c06c3f814c6a77777cc3a578bb6}{pWnd}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_field_info_a9714792f70b4ede7e8acd9311f6c062e}{tagFieldInfo}}()\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_field_info_a066e322a2474e0aafaa414bda448084a}{bMultiLine}}\ =\ FALSE;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_field_info_aa3050c06c3f814c6a77777cc3a578bb6}{pWnd}}\ =\ NULL;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_field_info_aa348d95ff5df5f53dbff7d89fd431f90}{bReadOnly}}\ =\ FALSE;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_field_info_a093125b9aefa9a254946b7e7282cccb3}{bRequire}}\ =\ FALSE;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \}\mbox{\hyperlink{_report_edit_form_8h_a15f50c8b2e03581304af8317afd0e76a}{FieldInfo}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{class\ \ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_report_edit_form_a3e4dc518a6b7b4a7fc34b7297d1328c7}{CReportEditForm}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00058\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a5091ea98fe0951979f432219e384c737}{m\_bCreated}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a8fdd950076a1914473e6b9ddf15efa2b}{m\_bInited}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a700cab9324bf7fbdc469a87c8348dd97}{m\_yRepos}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{_report_edit_form_8h_a15f50c8b2e03581304af8317afd0e76a}{FieldInfo}}*\ \mbox{\hyperlink{class_c_report_edit_form_a6e78cfad08ebfbd77adde09362f65333}{fromReportItem}}(\textcolor{keywordtype}{void}*\ obj);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a5844ea08315c5af25a4c05e3eabb1ef4}{initReportSection}}(\textcolor{keywordtype}{void}*\ section);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_report_edit_form_a6cad1897569caa739ea5e67fb63e007d}{m\_szFileName}};}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ CArray<FieldInfo*,\ FieldInfo*>\ \mbox{\hyperlink{class_c_report_edit_form_a44cd6a810cd6f1fe4e0e4220026d9d92}{m\_arFields}};}
+\DoxyCodeLine{00070\ \ \ \ \ CMap<UINT,\ UINT,\ FieldInfo*,FieldInfo*>\ \mbox{\hyperlink{class_c_report_edit_form_a2d0ee4e647af3bf6638778b3a17a1b1f}{m\_arActions}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_af65e56035adf868d77b2f063ed810f94}{m\_pWndFocus}};}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a3e4dc518a6b7b4a7fc34b7297d1328c7}{CReportEditForm}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_ae4ab9de38d5df4825d658209b348bef9}{\string~CReportEditForm}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a0d3d705599f040ad7395fc776fa9982a}{Init}}(LPCTSTR\ lpszFile);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_acf7ea7d6ebcd05d153993cf9a63fa81c}{OnInitFields}}()\{\}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_ad89ef9458791a006941dfbbc50dc4d8a}{OnCreateComponents}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_a9db27602c918354af146182002c528f5}{OnInitializeComponents}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_a3fa937b197811840de5b6fbd6d15a4fd}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_a973705910e772b75fbf8ee6aa2f02088}{GetDataToScreen}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_a14eeacaa6ed668828a7910eaa547b197}{GetScreenToData}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_aaeea565511736d19dbc659eea35f2a95}{SetDefaultValues}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a698efc215f9726afcbd39e60636b251c}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//Hàm\ thêm\ các\ nút\ button(Add,\ edit,\ delete,\ cancel,\ save,\ print...)}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a75815caf2149d2fa022427c09871def2}{AddButton}}(LPCTSTR\ lpszCaption,\ UINT\ nID,\ \textcolor{keywordtype}{void}*\ callback=NULL);}
+\DoxyCodeLine{00089\ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a0503ea4571cbd454a192b18d35889f3b}{SetValue}}(CString\ szName,\ CString\ szData);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a88f3b476ec857ce757a46fadc204bbc4}{GetValue}}(CString\ szName,\ CString\&\ szData);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a887fc02f08da3df6b927d02726098768}{SetType}}(LPCTSTR\ lpszName,\ \textcolor{keywordtype}{int}\ nType);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_aebbb64824eef6c3fadbc11352bebc3e6}{SetReadOnly}}(LPCTSTR\ lpszName,\ BOOL\ bFlag=TRUE);}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_ab87640aa2a7868c0e8cce8ef885fd7c7}{SetRequire}}(LPCTSTR\ lpszName,\ BOOL\ bFlag=TRUE);}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{_report_edit_form_8h_a15f50c8b2e03581304af8317afd0e76a}{FieldInfo}}*\ \mbox{\hyperlink{class_c_report_edit_form_a5c393970c98605485e26ede2630ff0c1}{Get}}(LPCTSTR\ lpszName);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_report_edit_form_a98709907422c52a3d488ebe0b90612c5}{OnComboLoadData}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//Hàm\ cho\ phép\ lưu\ dữ\ liệu\ từ\ các\ control\ vào\ biến\ json:\ m\_jData\ hoặc\ ngược\ lại}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_acbe3cbcb0e60c4629af2069e22753932}{UpdateData}}(BOOL\ bSaveAndValidate=TRUE);}
+\DoxyCodeLine{00103\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_a059c70d5fc84dfc3a9a3e155b0103f5a}{OnDestroy}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_report_edit_form_afd10e97ba2bc77b927b1ff3115163119}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00105\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_report_edit_form_a47365d16f34d5e9a3150ed04930f7f74}{OnCommand}}(WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//Ham\ gọi\ các\ sự\ kiện\ khi\ click\ vào\ các\ nút\ button(add,\ edit,\ delete,\ save...);}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//nID:\ Là\ giá\ trị\ ID\ của\ từng\ button\ khi\ được\ tạo}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_a377cf6c39b86ac41f1e4820949e56fe8}{OnClickEvent}}(UINT\ nID);}
+\DoxyCodeLine{00111\ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_ae470e6b9c2408eac3cc3e9b31f4656cc}{Print}}(BOOL\ bPreview=TRUE);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00115\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_edit_form_a6c064a3aa48290997751bbc3cfe641a5}{OnSize}}(UINT\ nType,\ \textcolor{keywordtype}{int}\ cx,\ \textcolor{keywordtype}{int}\ cy);}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

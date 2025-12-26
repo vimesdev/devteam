@@ -1,0 +1,78 @@
+\doxysection{SODMonthly\+Statistics.\+h}
+\hypertarget{_s_o_d_monthly_statistics_8h_source}{}\label{_s_o_d_monthly_statistics_8h_source}\index{Include/HMSReportForms/Examination/SODMonthlyStatistics.h@{Include/HMSReportForms/Examination/SODMonthlyStatistics.h}}
+\mbox{\hyperlink{_s_o_d_monthly_statistics_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SODMONTHLYSTATISTICS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SODMONTHLYSTATISTICS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ TIEP\_DON\ 0}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ TONG\_KHAM\ 1}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ KHAM\_CHUYEN\_PHONG\ 2}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ KHAM\_NOP\_TIEN\ 3}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ KHAM\_CHUA\_THU\ 4}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ routine(pXcel,\ pStr,\ pFromDate,\ pToDate)\ \{pXcel.CreateSheet(1);pXcel.SetWorksheet(0);\(\backslash\)}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ pXcel.SetCellText(0,\ 0,\ pMF-\/>m\_CompanyInfo.sc\_pname,\ 4098,\ true);\(\backslash\)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ pXcel.SetCellText(0,\ 1,\ pMF-\/>m\_CompanyInfo.sc\_name,\ 4098,\ true);\(\backslash\)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ pStr.Format(\_T("{}T\(\backslash\)x1EEB\ ng\(\backslash\)xE0y\ \%s\ \(\backslash\)x111\(\backslash\)x1EBFn\ ng\(\backslash\)xE0y\ \%s"{}),\ CDate::Convert(pFromDate,\ yyyymmdd,\ ddmmyyyy),\ CDate::Convert(pToDate,\ yyyymmdd,\ ddmmyyyy));\(\backslash\)}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\ \ \ \ pXcel.SetCellText(0,\ 3,\ pStr,\ 4098);\}}}
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a8e7618d1ddf4e1f8f6b42b4d2e3e6586}{CSODMonthlyStatistics}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ \ \ \ \ CStringArray\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a93b3992269151bb541c6250a01bec992}{m\_arrQueryTitle}};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_ad7a9c7e1cfee33a3906c6499056ffc65}{m\_wndReportCondition}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a027161b99f08a5a2e1278c318e578735}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_ad818542171bc687f6d766492f230231e}{m\_wndFromDate}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_af5d369efc352a3a402d2892cbaec659e}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_afcd07efcd5028b228aefdedf507adf67}{m\_wndToDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a10f64a5c64ce1d1936a66af827ce7981}{m\_wndPrint}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a7e937d3bb3f55fa654f839dfbb57ad9c}{m\_wndExport}};}
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a4cd10976122043150c24f1603b1a48b8}{m\_szFromDate}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a3d9b452eddb6979c0a29b5effb498d5b}{m\_szToDate}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a22b84bb47b7d6908c98869d01d9a70e9}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_aeb9c0a0d2997653b26d01b71bd2ae18a}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_abc6436c765af293c44c938f7de9e3c14}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_acb5ef6a0813461dc437b3ac9cc905463}{OnExportSelect}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_abdf5730b6d8f0435d76792509382bbf0}{OnExport}}(CExcel*\ pXcel,\ \textcolor{keywordtype}{long}\&\ nRow,\ \textcolor{keywordtype}{int}\ nQueryID,\ \textcolor{keywordtype}{double}\ nData);}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a8e7618d1ddf4e1f8f6b42b4d2e3e6586}{CSODMonthlyStatistics}}(CWnd\ *pParent);}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_ae6ff1a5b671e8bc56f2f642614b10d99}{\string~CSODMonthlyStatistics}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a994b56fdf64b04406dc77b2c2c90e651}{OnCreateComponents}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_ac248b6699e0a9fed839bb58db1616fcd}{OnInitializeComponents}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a0996c82a99c1d603e1d36c831ddb910a}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_af9a25a5fcb04e8b58cc1f0c5dc105fc4}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a560da19489abc9ba2674c976241f726f}{SetDefaultValues}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_a2cd685593c0d1672b4df9a51fb106f54}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_s_o_d_monthly_statistics_ae2128198f39f8e7920e1ef15e46fca6b}{GetQueryString}}(\textcolor{keywordtype}{int}\ nQueryID);}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

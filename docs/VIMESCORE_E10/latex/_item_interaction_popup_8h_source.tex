@@ -1,0 +1,96 @@
+\doxysection{Item\+Interaction\+Popup.\+h}
+\hypertarget{_item_interaction_popup_8h_source}{}\label{_item_interaction_popup_8h_source}\index{Include/VIMESCORE\_E10/ItemInteractionPopup.h@{Include/VIMESCORE\_E10/ItemInteractionPopup.h}}
+\mbox{\hyperlink{_item_interaction_popup_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ITEMINTERACTIONPOPUP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ITEMINTERACTIONPOPUP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiPopup.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_item_interaction_popup_aa5f2fab49bc1500ae66882dd8cda1c5a}{CItemInteractionPopup}}\ :\ \textcolor{keyword}{public}\ CGuiPopup\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CWnd\ *\ \mbox{\hyperlink{class_c_item_interaction_popup_ab0a43992e87759c42a22e0ff001986cf}{m\_pWnd}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_a547f429d99ddb373559dc69464787c60}{m\_nCaseID}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_item_interaction_popup_ac4a19ce434f87729e38a3df55e4f5339}{m\_nFirstItemID}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_item_interaction_popup_a67ea23931c10d6e767048adcae5246d3}{m\_nSecondItemID}};}
+\DoxyCodeLine{00037\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_item_interaction_popup_a7933e5d39e0d3d6c9780583dab45b141}{m\_hms\_interaction\_caseTbl}};}
+\DoxyCodeLine{00038\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_item_interaction_popup_aa11635191981e8d62560e0df2ad21a33}{m\_hms\_interaction\_lineTbl}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_ab2954424f6351dd89f819212ffc5d9d3}{m\_wndGenericInformation}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a5c904518660e0ffefecd3e70db3c6ddb}{m\_wndNameLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a47fec86e2add7d40fa0533f651190d10}{m\_wndName}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a703e7912d4b31f76743ea05fb7b691fa}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_ae523631c2e3a5b8dd0f4c0a1dbf1625f}{m\_wndType}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a289b59a225a4b703da94cd013eb5e13b}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a376bdaf59145b81afa669cdec007a05b}{m\_wndDescription}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a4aeeaa798a984685d4aba75952a2c622}{m\_wndSave}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_afb071009e1f14d8f6d85b1849872873e}{m\_wndX}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a44cac97f785c4ac03526af423f424fc9}{m\_wndItemLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a8be9a85b6c3412505bdf2801d46e5670}{m\_wndItem}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_item_interaction_popup_adf0acc2fa58d34677f3b7a9408a1ca1b}{m\_szName}};}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_item_interaction_popup_a4731264097f004e68cde24ca162d17f0}{m\_szTypeKey}};}
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_item_interaction_popup_a6b4a4d5baed1efec4cb0d6a45cc1952d}{m\_szDescription}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_item_interaction_popup_a839f8ee5ef54ec96ad783c34ba257a82}{m\_szItemKey}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameChange();\ }}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a6133c8f89db8839b2c63550c4ac23538}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a1ddd7023deade5c790dc339a9243de99}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a35e6c93b43acbe5eaef6ddd9a249e345}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_af2ec036c6f3560d576bf0909ee9302f2}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeAddNew();\ }}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_aa0d5f4410da58174e8a1db3ca4c68210}{OnDescriptionCheckValue}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_aae3a6ba857bd91dd0eb0db07431bb80c}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a80d8312b8fa5be85bcfe3d8475f47c78}{OnXSelect}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_abf7450b472488fae5b57d41437cb11d4}{OnItemSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a1a6d258f61f4471c947c10614e254eb7}{OnItemSelendok}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemSetfocus();\ }}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemKillfocus();\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a5b264421142060d320c60369db769111}{OnItemLoadData}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemAddNew();\ }}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_aa5f2fab49bc1500ae66882dd8cda1c5a}{CItemInteractionPopup}}(CWnd\ *pParent);}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_c_item_interaction_popup_a3750423dcf5d645bc424670c73d5b923}{\string~CItemInteractionPopup}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_item_interaction_popup_abd75b1df18c93059ee8e3950eb6b7779}{OnCreateComponents}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_item_interaction_popup_a5a2ceb843e801217a3d6c830ea80d03c}{OnInitializeComponents}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_item_interaction_popup_a5ec6d1a8584790c77d886341f12b6d2a}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_item_interaction_popup_a54860be1cc0117997d6d763ced5a0294}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_item_interaction_popup_a4b68c9e82e802f6bc606ba834a6aa5a0}{GetDataToScreen}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_item_interaction_popup_aae2fc618ee46ea8af813d4264750ded7}{GetScreenToData}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_item_interaction_popup_a2bc117a315ce09b0981f041c7fc09670}{SetDefaultValues}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_a3665c962dcf85d2f54440226437c9b1e}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_a37b98f5ec1e38992f07ceb3854c96003}{OnAddItemInteractionPopup}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_a3a0eebebef173f5cae7b720c60ade63d}{OnEditItemInteractionPopup}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_ad03b83aef7b9194eb7aa4028107fe2c3}{OnDeleteItemInteractionPopup}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_a184aed91669d27d5bc74fd8aa632c1fe}{OnSaveItemInteractionPopup}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_a63aa1134e815b821b910db814cca412b}{OnCancelItemInteractionPopup}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_item_interaction_popup_a77b849e5512ccce77bdad52c444928b7}{OnItemInteractionPopupListLoadData}}();\ }
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

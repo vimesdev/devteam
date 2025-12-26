@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_tax_rate_8h" kind="file" language="C++">
+    <compoundname>AdTaxRate.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_ad_tax_rate_popup_8h" local="yes">AdTaxRatePopup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdTaxRate.h</label>
+        <link refid="_ad_tax_rate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AdTaxRatePopup.h</label>
+        <link refid="_ad_tax_rate_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_ad_tax_rate" prot="public">CAdTaxRate</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADTAXRATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADTAXRATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ad_tax_rate_popup_8h" kindref="compound">AdTaxRatePopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_ad_tax_rate" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><sp/><ref refid="class_c_ad_tax_rate_1a306b42c29447262bbb4ccdddd981fd6a" kindref="member">CAdTaxRate</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_tax_rate_1ac09d39ef6b8e36d621249b793715967c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_popup" kindref="compound">CAdTaxRatePopup</ref><sp/><ref refid="class_c_ad_tax_rate_1ac09d39ef6b8e36d621249b793715967c" kindref="member">m_wndPopup</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_tax_rate_1aaa46fab4c34f1ddf33eb28a2eb29bb9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1aaa46fab4c34f1ddf33eb28a2eb29bb9d" kindref="member">m_arFilters</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_tax_rate_1a15b7adcaf2a1dd4e944de1d754dc4f8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a15b7adcaf2a1dd4e944de1d754dc4f8e" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_tax_rate_1a248a3e57b9bf4407272d9a932c4f72bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a248a3e57b9bf4407272d9a932c4f72bd" kindref="member">m_nSearchID</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_tax_rate_1a46b9e2db6e4ca070a3334b36becec0f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a46b9e2db6e4ca070a3334b36becec0f7" kindref="member">m_wndBankInformation</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_tax_rate_1ace5cfdcca72bd1ef182e3289d75e911b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1ace5cfdcca72bd1ef182e3289d75e911b" kindref="member">m_wndSearchLabel</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_tax_rate_1a2ab9ff1015cf206c10edf5bde6fa1e5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a2ab9ff1015cf206c10edf5bde6fa1e5d" kindref="member">m_wndSearch</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_tax_rate_1ae9a414bf3c8618945d642b4dd0a8ca38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1ae9a414bf3c8618945d642b4dd0a8ca38" kindref="member">m_wndTypeOfFilter</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_tax_rate_1a43b73e3ee268da4ebfb8fd623ceeb1d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a43b73e3ee268da4ebfb8fd623ceeb1d0" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_tax_rate_1a1f3ceea5b505f96a7d6afdce72c11d72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a1f3ceea5b505f96a7d6afdce72c11d72" kindref="member">m_wndAdd</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_ad_tax_rate_1ad3e0baaa09d5c2f630eea1b720077953" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1ad3e0baaa09d5c2f630eea1b720077953" kindref="member">m_wndEdit</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_ad_tax_rate_1a52bbce1ca5ddc0fa60b67b3abd9ef169" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a52bbce1ca5ddc0fa60b67b3abd9ef169" kindref="member">m_wndDelete</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_ad_tax_rate_1af6f0c5a46e5bcf55e55d25cdaff0d771" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1af6f0c5a46e5bcf55e55d25cdaff0d771" kindref="member">m_wndTypeOfFilterDesc</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_c_ad_tax_rate_1a655724c562d7540015f4be4f8fa94e55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_tax_rate_1a655724c562d7540015f4be4f8fa94e55" kindref="member">m_szSearch</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_tax_rate_1a44aec999cd6eed651347ed7371b9bac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a44aec999cd6eed651347ed7371b9bac7" kindref="member">OnSearchCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_tax_rate_1a7162925f667ccf60ca1789e401c2fef6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a7162925f667ccf60ca1789e401c2fef6" kindref="member">OnTypeOfFilterSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_tax_rate_1a37fdce74d2fb558d98c14265c9633eb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a37fdce74d2fb558d98c14265c9633eb0" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_tax_rate_1a300115be4db19c59fe0296672383e9e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a300115be4db19c59fe0296672383e9e1" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_tax_rate_1a349d16af77fed0a17682e771fd539e37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a349d16af77fed0a17682e771fd539e37" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_tax_rate_1a3256df366e83c1dc1275414c966e7de3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a3256df366e83c1dc1275414c966e7de3" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_tax_rate_1ac036b438f7c0743d47efa1cf1e263dd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1ac036b438f7c0743d47efa1cf1e263dd2" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_tax_rate_1a1650adff14db5b0a69aa80823ba9741e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a1650adff14db5b0a69aa80823ba9741e" kindref="member">OnEditSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_tax_rate_1ae4220a6093ef93cd4453cf4d2733cb7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1ae4220a6093ef93cd4453cf4d2733cb7f" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_tax_rate_1a306b42c29447262bbb4ccdddd981fd6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a306b42c29447262bbb4ccdddd981fd6a" kindref="member">CAdTaxRate</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_tax_rate_1a425e8989d6572047be9d89f436d46fbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_tax_rate_1a425e8989d6572047be9d89f436d46fbb" kindref="member">~CAdTaxRate</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_tax_rate_1aa7090decad74b4bd55b5fba33c048e49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1aa7090decad74b4bd55b5fba33c048e49" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_tax_rate_1adbcb3662054723d9c768222cc440ed23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1adbcb3662054723d9c768222cc440ed23" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_tax_rate_1af251248cc9708603e109a8c3fef374e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1af251248cc9708603e109a8c3fef374e5" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_tax_rate_1a8fd470cf52134e23bb95189da59ebcf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1a8fd470cf52134e23bb95189da59ebcf9" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_tax_rate_1a9548d55a13c299059abe3fbcafb82c69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1a9548d55a13c299059abe3fbcafb82c69" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_tax_rate_1ad18afffde4decef87870b4824c1610e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1ad18afffde4decef87870b4824c1610e8" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_tax_rate_1a9ed0cb14d12ac8485ecceea7a658447e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1a9ed0cb14d12ac8485ecceea7a658447e" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_tax_rate_1a0d99bc15eddf1afafa9beaec8ba5ab3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1a0d99bc15eddf1afafa9beaec8ba5ab3c" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_tax_rate_1a6ddb67c6e9a228b5331ad9c973bbd7eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1a6ddb67c6e9a228b5331ad9c973bbd7eb" kindref="member">OnAddAdTaxRate</ref>();<sp/></highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_tax_rate_1afaa8a932cca84c064aa73aca9ff4d38f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1afaa8a932cca84c064aa73aca9ff4d38f" kindref="member">OnEditAdTaxRate</ref>();<sp/></highlight></codeline>
+<codeline lineno="73" refid="class_c_ad_tax_rate_1ad4b860fd15ad5dae5471d9a688857d7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1ad4b860fd15ad5dae5471d9a688857d7b" kindref="member">OnDeleteAdTaxRate</ref>();<sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_ad_tax_rate_1a1315a9ecf7147f0151117d2e4fb8bb9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1a1315a9ecf7147f0151117d2e4fb8bb9d" kindref="member">OnSaveAdTaxRate</ref>();<sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_ad_tax_rate_1af6c32b36b41fc98f6ac1251c2737b796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1af6c32b36b41fc98f6ac1251c2737b796" kindref="member">OnCancelAdTaxRate</ref>();<sp/></highlight></codeline>
+<codeline lineno="76" refid="class_c_ad_tax_rate_1ac00c33dec65fd0ef3e351364afa71e49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_tax_rate_1ac00c33dec65fd0ef3e351364afa71e49" kindref="member">OnAdTaxRateListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdTaxRate.h"/>
+  </compounddef>
+</doxygen>

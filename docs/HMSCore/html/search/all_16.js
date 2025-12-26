@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['validateinsinfo_0',['ValidateInsInfo',['../class_c_h_m_s_helper.html#a7a60e0eb26c7d44750e82496172cd69c',1,'CHMSHelper']]],
+  ['vc_5fextralean_1',['VC_EXTRALEAN',['../framework_8h.html#a0172fbace36625330d5f0f163a1ddc1a',1,'VC_EXTRALEAN:&#160;framework.h'],['../stdafx_8h.html#a0172fbace36625330d5f0f163a1ddc1a',1,'VC_EXTRALEAN:&#160;stdafx.h']]],
+  ['viewemrsignature_2',['ViewEMRSignature',['../class_c_h_m_s_main_frame.html#ad0b1cd80288cb421aa2043dd1acd161c',1,'CHMSMainFrame']]],
+  ['viewsignaturepending_3',['ViewSignaturePending',['../class_c_h_m_s_main_frame.html#ad3893b22232f87b27fae39b7cfa45735',1,'CHMSMainFrame']]],
+  ['vimesgeneralsetupdialog_2eh_4',['VIMESGeneralSetupDialog.h',['../_v_i_m_e_s_general_setup_dialog_8h.html',1,'']]],
+  ['vimesgeneralsetupdialog_5fv2_2eh_5',['VIMESGeneralSetupDialog_V2.h',['../_v_i_m_e_s_general_setup_dialog___v2_8h.html',1,'']]],
+  ['vimesgeneralsetupdialogv2_5fh_6',['VIMESGENERALSETUPDIALOGv2_H',['../_v_i_m_e_s_general_setup_dialog___v2_8h.html#af613d10180b46c8d5eed7529ffefa332',1,'VIMESGeneralSetupDialog_V2.h']]],
+  ['vimespermissionpacs_2eh_7',['VIMESPermissionPACS.h',['../_v_i_m_e_s_permission_p_a_c_s_8h.html',1,'']]],
+  ['vm_5fborrowdoc_8',['VM_BORROWDOC',['../_h_m_s_patient_record_info_8h.html#adb445da76910f44f5ce1e272dbd52a55',1,'HMSPatientRecordInfo.h']]],
+  ['vm_5fborrowedit_9',['VM_BORROWEDIT',['../_h_m_s_patient_record_info_8h.html#a995de51e016070db4a4ea391937476ee',1,'HMSPatientRecordInfo.h']]],
+  ['vm_5fbredit_10',['VM_BREDIT',['../_h_m_s_patient_record_info_8h.html#acafabaa7a89a5838e2583c3fafc691cb',1,'HMSPatientRecordInfo.h']]],
+  ['vm_5fbrnone_11',['VM_BRNONE',['../_h_m_s_patient_record_info_8h.html#af9c52bdb9f83911db1484947ef94a4f5',1,'HMSPatientRecordInfo.h']]],
+  ['vm_5fbrview_12',['VM_BRVIEW',['../_h_m_s_patient_record_info_8h.html#a7a890859b92a14f715e76f05b51831d5',1,'HMSPatientRecordInfo.h']]],
+  ['vm_5feval_13',['VM_EVAL',['../_h_m_s_register_take_care_package_dialog_8h.html#aadcf3dbfbff6585df2b09d5a4d9c91d8',1,'HMSRegisterTakeCarePackageDialog.h']]],
+  ['vm_5fpreview_14',['VM_PREVIEW',['../_h_m_s_operation_material_dialog_8h.html#aa7ac0dfca6cb7c37b02f2236036d2a2c',1,'VM_PREVIEW:&#160;HMSOperationMaterialDialog.h'],['../_h_m_s_operation_material_dialog_e_x_8h.html#aa7ac0dfca6cb7c37b02f2236036d2a2c',1,'VM_PREVIEW:&#160;HMSOperationMaterialDialogEX.h'],['../_h_m_s_paraclinical_material_dialog_8h.html#aa7ac0dfca6cb7c37b02f2236036d2a2c',1,'VM_PREVIEW:&#160;HMSParaclinicalMaterialDialog.h']]],
+  ['vm_5fprint_15',['VM_PRINT',['../_h_m_s_benh_an_h_t_m_l_dialog_8h.html#ac288eeae8d71add2882d74c9401158ee',1,'HMSBenhAnHTMLDialog.h']]],
+  ['vm_5frefresh_16',['VM_REFRESH',['../_h_m_s_benh_an_h_t_m_l_dialog_8h.html#aaab83fbe36491eb7787ec8b5a030e559',1,'HMSBenhAnHTMLDialog.h']]],
+  ['vm_5fregister_17',['VM_REGISTER',['../_a_t_m_patient_info_view_8h.html#a2ff5da0fab3421b93add3352de29ade7',1,'ATMPatientInfoView.h']]],
+  ['vm_5freturndoc_18',['VM_RETURNDOC',['../_h_m_s_patient_record_info_8h.html#a411aab315feffe2cfefc06725f001c2e',1,'HMSPatientRecordInfo.h']]],
+  ['vm_5fsave_19',['VM_SAVE',['../_h_m_s_benh_an_h_t_m_l_dialog_8h.html#ab89da58f962ddeb6e62edf85a5678a26',1,'HMSBenhAnHTMLDialog.h']]],
+  ['vm_5fswap_20',['VM_SWAP',['../_a_t_m_patient_info_view_8h.html#acea913c86eb6bef21e8a450e473f02c6',1,'ATMPatientInfoView.h']]]
+];

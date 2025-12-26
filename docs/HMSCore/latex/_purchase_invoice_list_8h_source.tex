@@ -1,0 +1,133 @@
+\doxysection{Purchase\+Invoice\+List.\+h}
+\hypertarget{_purchase_invoice_list_8h_source}{}\label{_purchase_invoice_list_8h_source}\index{Include/HMSCore/PurchaseInvoiceList.h@{Include/HMSCore/PurchaseInvoiceList.h}}
+\mbox{\hyperlink{_purchase_invoice_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PurchaseInvoiceLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PurchaseInvoiceLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_purchase_invoice_list_a0bbd6bf73988c6c48623b6f60b22f8a8}{CPurchaseInvoiceList}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_afea1a0ba742c9ecd58414b9f0ead4889}{m\_nID}};}
+\DoxyCodeLine{00037\ \ \ \ \ CStringArray\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a45f81f142e3fb31ebbf5c34315ca0443}{m\_arFilters}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_afd7a7cfda186f50c2b27d0de1c0d0b17}{m\_nSearchID}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a773d9cc64d17ee1f577c61256414c083}{m\_szType}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_aca48dbb98b68dd36f352abda2035cc25}{m\_wndSearchInformation}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a1a44b9a27df66771a41222561e81177b}{m\_wndQuoteList}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_ac4f8fce4c285a84a83793023801bc674}{m\_wndFromDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a99933dbc2dc1b2f10899a5fbeef84107}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a30ac983e64478de60538e3a4d7f8756e}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a629d2263aad81a5cda07607519ec3c69}{m\_wndToDate}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a0681df4f042c9779a427cccf449da978}{m\_wndPayOrderLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a6658264acc83042d36e1f7d7dd53498b}{m\_wndPayOrder}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a10d45143aa613519d20a227a522c14d7}{m\_wndSupplierLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a7f22d50ba51bbb163105483bc2079e53}{m\_wndSupplier}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a888493738503a93a679c823a89e6049f}{m\_wndSearchLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_ae08f64ecbaa422cbb4d232d119fa6c24}{m\_wndSearch}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a1b9977dc0a5210ef9e0ff5f2adab0815}{m\_wndOption}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_aec2b28923f57bced9e4a1393439fc2a1}{m\_wndList}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_af82f15b9cac0a4fc5cc38051d96888ed}{m\_wndView}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_ad397e9dfd0f35bdd40031bf8b299d2dd}{m\_wndAdd}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a268656c93c662a4e3f7872cd9ab9a157}{m\_wndEdit}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a9303e3d10b9eb212b4e2a8be9ec7e757}{m\_wndDelete}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_adb4bea5057291d909888d9d968ac7243}{m\_wndPaidFlag}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a5dffdd41fb72c1eb15f9b99ffc21994e}{m\_wndApprovedFlag}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a194b943f2c28e1e690f264bf6019e773}{m\_wndNonStockFlag}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a6c09b77c5f8a80299478d88d72bb2fc1}{m\_wndLocked}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_invoice_list_ac4bbca810f718be751d1556fcc1a13f3}{m\_szFromDate}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_invoice_list_aa92a781e6fbe83c6c12cc66fd6c4c6e2}{m\_szToDate}};}
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_invoice_list_ac4f1ca018c1c6c0189f2c64f06894c48}{m\_szPayOrderKey}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_invoice_list_a4e345afbbdf662aa2b4a3a85f642ac1f}{m\_szSupplierKey}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_invoice_list_a6e29450113506fe68a8c85907380bd47}{m\_szSearch}};}
+\DoxyCodeLine{00071\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a308e06ffb2e1191142739e3e3bb6e5fd}{m\_bPaidFlag}};}
+\DoxyCodeLine{00072\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_af333e0a82a9ed01f6910871b993abaf8}{m\_bApprovedFlag}};}
+\DoxyCodeLine{00073\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a7f5bc0bd0e71693758d3e055ffb3fb5b}{m\_bNonStockFlag}};}
+\DoxyCodeLine{00074\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a8390ae025d80ea7cc8d80f8e38daaef6}{m\_bLocked}};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a2e4c29ec49f0afba285db217bebf520b}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a9de9347a1a20a7c3008c0025f4a1ae7f}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_aecf0f9b78ab5c9435d98c9ee03e79316}{OnPayOrderLoadData}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a18df4948c3478d99bf1bd468eef521a3}{OnPayOrderSelendok}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a5527a40e6e3b5c65279da531ad0f1ea0}{OnSupplierLoadData}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a3b01f542a224adaf73dac01fc3dce6a5}{OnSupplierSelendok}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchChange();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchSetfocus();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchKillfocus();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a891e6c825440e12e04f9246bb217c1c3}{OnSearchCheckValue}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a9dbd5f0d9c97d27cf5acf3770c53a830}{OnOptionSelect}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a2ebfbe6ea95420ad89b4f3a81341756e}{OnListLoadData}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a8a804c473cc8ebac8ae8475d3bfc65d7}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_ac45cfe668584748ac2d490b6f53c8199}{OnListDblClick}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a86cc307e7e0cccdd2e62b63adc75a7f5}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a5bf1b40bebec1e42a48fc29d1db22b9a}{OnListAddItem}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a152b1eba2897b724ca5c2e5cb8c9e5e0}{OnListEditItem}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_ac26687a053b1c27e98719eb30ff2a2cc}{OnListViewItem}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a2bb7591e8867d416914c127545bfd529}{OnListRollbackKG}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a7fe9682e866470186e94349c595f80d0}{OnViewSelect}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_abbf9b317ad1f86852cb486f307bbc94b}{OnAddSelect}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a16cbfb15fa65f6e0713a2ff2f9f608a5}{OnEditSelect}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a76206899bfeb5108e6168a9dd32c70fa}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a788f9d0e4893cf45b1eec4787d19d029}{OnPaidSelect}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a6bd0d00dd93ed46fc408fa8c343f00f7}{OnApprovalSelect}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_adc89e19b0de66494cba016bcd467125a}{OnNonStockFlagSelect}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_adbb97ac017492be510cf3ac591cfe5d7}{OnLockedSelect}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a0bbd6bf73988c6c48623b6f60b22f8a8}{CPurchaseInvoiceList}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_invoice_list_a3e3f78c92a2819da98fcf2459a4b2f65}{\string~CPurchaseInvoiceList}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a217fe3e0dc11f3b1f0542b0eb6bb1ae3}{OnCreateComponents}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a789def317d19f5a74cbb980dfa5124c8}{OnInitializeComponents}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a2e0b3e6d7a35f2b955c1a094ff390c03}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_aabf352f633b72b91a59d4380ad7aa526}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_ac249d928d5ced94305257ea63d188a5d}{GetDataToScreen}}();}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a382930ad22c024ee72188bccdada3178}{GetScreenToData}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a33e582418488cd1e2ddcbaeb730ad6c7}{SetDefaultValues}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a105612506c95e267dffde21fc6bb81c3}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a42c200b9b9177f367c9b8e8c8dbd46a7}{OnAddPurchaseInvoiceList}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a845d8d6d77bb8dab22b7b08f63124f02}{OnEditPurchaseInvoiceList}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a248f5de1188d23da79fb8f52eb5c73e9}{OnDeletePurchaseInvoiceList}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a50042cd311e90259c1d7c1735966d655}{OnSavePurchaseInvoiceList}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a20ff362d7d3130ece58caf183ee545d8}{OnCancelPurchaseInvoiceList}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a444aa2017d421446e2bdd7ecb0907aa9}{OnPurchaseInvoiceListListLoadData}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a52f950e437935e3ee2cf4f86cdeb8164}{OnAddPurchaseInvoiceNonStock}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_adcf7e4591e04205871c3c785340b66fd}{Refresh}}();}
+\DoxyCodeLine{00127\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00128\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_invoice_list_a428e9881998a5bf8c190067b306827d5}{OnSetFocus}}(CWnd*\ pOldWnd);}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

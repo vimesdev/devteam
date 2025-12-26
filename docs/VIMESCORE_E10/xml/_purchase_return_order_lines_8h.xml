@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_purchase_return_order_lines_8h" kind="file" language="C++">
+    <compoundname>PurchaseReturnOrderLines.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes local="yes">GridListCtrl.h</includes>
+    <includedby refid="_purchase_return_order_dialog_8h" local="yes">Include/VIMESCORE_E10/PurchaseReturnOrderDialog.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/PurchaseReturnOrderLines.h</label>
+        <link refid="_purchase_return_order_lines_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="5">
+        <label>GridListCtrl.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Include/VIMESCORE_E10/PurchaseReturnOrderDialog.h</label>
+        <link refid="_purchase_return_order_dialog_8h"/>
+      </node>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/PurchaseReturnOrderLines.h</label>
+        <link refid="_purchase_return_order_lines_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_purchase_return_order_lines" prot="public">CPurchaseReturnOrderLines</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PURCHASERETURNORDERLINES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PURCHASERETURNORDERLINES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GridListCtrl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_purchase_return_order_lines" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_purchase_return_order_lines_1ab274549539c2a1268b8a20a915d35f20" kindref="member">CPurchaseReturnOrderLines</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="class_c_purchase_return_order_lines_1af353fa684eef5ac3448f1b1b3c98c1ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1af353fa684eef5ac3448f1b1b3c98c1ac" kindref="member">m_nOrderID</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_purchase_return_order_lines_1aa396db7226ba9517c4fdc4245b85e86d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1aa396db7226ba9517c4fdc4245b85e86d" kindref="member">m_nOrderLine</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_purchase_return_order_lines_1a7fa56349302fc43f304d05ec8b682b73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a7fa56349302fc43f304d05ec8b682b73" kindref="member">m_nStorageID</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_c_purchase_return_order_lines_1a26da89e0ea77630560bf7790c70095ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a26da89e0ea77630560bf7790c70095ef" kindref="member">m_nTaxID</ref>;</highlight></codeline>
+<codeline lineno="38" refid="class_c_purchase_return_order_lines_1a58cf2aeeae9ce63ee05616cb1e3f1658" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CWnd*<sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a58cf2aeeae9ce63ee05616cb1e3f1658" kindref="member">m_pWndOrder</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_c_purchase_return_order_lines_1aabb2c3603c6f5fa3fb94d0176dee2794" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1aabb2c3603c6f5fa3fb94d0176dee2794" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_purchase_return_order_lines_1a8c9b1244c4bc5d0b24c2942375e56f9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a8c9b1244c4bc5d0b24c2942375e56f9a" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="43" refid="class_c_purchase_return_order_lines_1adc67077036488ede4d3b50db7e272da0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1adc67077036488ede4d3b50db7e272da0" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="44" refid="class_c_purchase_return_order_lines_1a32cba1af6205323b53dc1a271ec4b3e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a32cba1af6205323b53dc1a271ec4b3e7" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="45" refid="class_c_purchase_return_order_lines_1a506c03c7e8b2782c9f7b6c6df12477d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a506c03c7e8b2782c9f7b6c6df12477d1" kindref="member">OnListAddItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="46" refid="class_c_purchase_return_order_lines_1a1ef59b8958b73cd3e8e6036358302b11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a1ef59b8958b73cd3e8e6036358302b11" kindref="member">OnListEditItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="47" refid="class_c_purchase_return_order_lines_1a23577d18fc26b8bcf162987c84026451" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a23577d18fc26b8bcf162987c84026451" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="48" refid="class_c_purchase_return_order_lines_1ab274549539c2a1268b8a20a915d35f20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1ab274549539c2a1268b8a20a915d35f20" kindref="member">CPurchaseReturnOrderLines</ref>();</highlight></codeline>
+<codeline lineno="49" refid="class_c_purchase_return_order_lines_1a8f1355beb7d2f3f229ffd4af82fd9ce4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1a8f1355beb7d2f3f229ffd4af82fd9ce4" kindref="member">~CPurchaseReturnOrderLines</ref>();</highlight></codeline>
+<codeline lineno="50" refid="class_c_purchase_return_order_lines_1adb8e29200c1e6b1eb084696d48ca0aae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1adb8e29200c1e6b1eb084696d48ca0aae" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="51" refid="class_c_purchase_return_order_lines_1a3869a5dcaea46b4de3b21510243854e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a3869a5dcaea46b4de3b21510243854e7" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="52" refid="class_c_purchase_return_order_lines_1ab5c425f623b6175df57aa7ca94403025" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1ab5c425f623b6175df57aa7ca94403025" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="53" refid="class_c_purchase_return_order_lines_1a5f0f5d9c8bffef3c3531c77793f3a0ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a5f0f5d9c8bffef3c3531c77793f3a0ae" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="54" refid="class_c_purchase_return_order_lines_1ae3275d3011af4992a07444e25bda7641" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1ae3275d3011af4992a07444e25bda7641" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="55" refid="class_c_purchase_return_order_lines_1a9be1596ec89a96c8b1dbeab18021c302" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a9be1596ec89a96c8b1dbeab18021c302" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="56" refid="class_c_purchase_return_order_lines_1ac917cc8f17e6d2c14f70a076be03fcd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1ac917cc8f17e6d2c14f70a076be03fcd0" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="57" refid="class_c_purchase_return_order_lines_1a4799325a363a4645e740cb122d8e12ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a4799325a363a4645e740cb122d8e12ff" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="58" refid="class_c_purchase_return_order_lines_1a1bee29f72deec834fb9e5de4f1a92335" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a1bee29f72deec834fb9e5de4f1a92335" kindref="member">OnAddPurchaseReturnOrderLines</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_purchase_return_order_lines_1a667a7316974c3ff29dde4603e682e846" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a667a7316974c3ff29dde4603e682e846" kindref="member">OnEditPurchaseReturnOrderLines</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_purchase_return_order_lines_1ad9d7812cd2f00f61522a74da105879d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1ad9d7812cd2f00f61522a74da105879d7" kindref="member">OnDeletePurchaseReturnOrderLines</ref>();<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_purchase_return_order_lines_1a938c7449a7862a49d0720a8b48eb7cde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a938c7449a7862a49d0720a8b48eb7cde" kindref="member">OnSavePurchaseReturnOrderLines</ref>();<sp/></highlight></codeline>
+<codeline lineno="62" refid="class_c_purchase_return_order_lines_1ad2b616d119c4255232576b57c51a09c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1ad2b616d119c4255232576b57c51a09c0" kindref="member">OnCancelPurchaseReturnOrderLines</ref>();<sp/></highlight></codeline>
+<codeline lineno="63" refid="class_c_purchase_return_order_lines_1a9b30d36186c7b0f4f1af397468025c02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_purchase_return_order_lines_1a9b30d36186c7b0f4f1af397468025c02" kindref="member">OnPurchaseReturnOrderLinesListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="64" refid="class_c_purchase_return_order_lines_1abd96d8bb426daddd816e76ba549c37c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_purchase_return_order_lines_1abd96d8bb426daddd816e76ba549c37c2" kindref="member">Refresh</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nOrderID);</highlight></codeline>
+<codeline lineno="65" refid="class_c_purchase_return_order_lines_1a84f156951c9e85bd25b2e1505c6ed241" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_purchase_return_order_lines_1a84f156951c9e85bd25b2e1505c6ed241" kindref="member">GetOrderStatus</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/PurchaseReturnOrderLines.h"/>
+  </compounddef>
+</doxygen>

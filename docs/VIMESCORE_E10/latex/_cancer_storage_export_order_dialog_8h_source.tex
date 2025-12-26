@@ -1,0 +1,209 @@
+\doxysection{Cancer\+Storage\+Export\+Order\+Dialog.\+h}
+\hypertarget{_cancer_storage_export_order_dialog_8h_source}{}\label{_cancer_storage_export_order_dialog_8h_source}\index{Include/VIMESCORE\_E10/CancerStorageExportOrderDialog.h@{Include/VIMESCORE\_E10/CancerStorageExportOrderDialog.h}}
+\mbox{\hyperlink{_cancer_storage_export_order_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CancerStorageExportOrderDialog\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CancerStorageExportOrderDialog\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cancer_storage_export_order_lines_8h}{CancerStorageExportOrderLines.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//CStorageDelivery:\ Cac\ class\ lien\ quan\ den\ phieu\ xuat\ khac}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2f097602f4c304fddf7154e93b2787b1}{CCancerStorageExportOrderDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a6018f475318df71bde408b40de63bfd9}{m\_bRefresh}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a12ac6bc3023339d8c53e3dc883965842}{m\_nID}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2112d38e1aafa4e39aa15992ebc0b148}{m\_nImportID}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_afe05be707cc56f84973411a3fcde92f4}{m\_nDocNo}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ab84d6f2c7dee23e30b4e774f3a43d3ed}{m\_nTreatIdx}};}
+\DoxyCodeLine{00045\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a60f3f607ff61b9086b8cc84723494e31}{m\_szCreatedBy}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a20f79e2037fd65d60cdb34350be3cbe2}{m\_szStatusDesc}};}
+\DoxyCodeLine{00047\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a213751ff6c9a57e790366672a070ea16}{m\_szStatus}};}
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2bcfa20a978898c81192527085354467}{m\_szPosted}};}
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a04a37c5e5247d334e984f25df4e581f7}{m\_szOrgID}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aa73396b6839f5ad1f9fbe4aad70b2fe9}{m\_szType}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_lines}{CCancerStorageExportOrderLines}}\ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a4e94bc54c8e4602361753ab63c81ac93}{m\_wndLines}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a40949933db836489632e6398d1ef8c7a}{m\_wndGeneralInformation}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a930e67814879c7dca295f4b58a40aa3c}{m\_wndOrderInformation}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a41f67d28bb56bea15738e72ba187b67b}{m\_wndTerms}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7a84a0c92805774f4d0237706718c2dd}{m\_wndSummary}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ad7d44047cdfa05791b174cdc333a43a9}{m\_wndTransactionTypeLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a1cbfd4a4454c66ea8ea4f429a5f5663a}{m\_wndTransactionType}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ad2bea9593386f806c3a681455083477c}{m\_wndFromStorageLabel}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ac630086c0e8f85e80ba59c122c1bef01}{m\_wndFromStorage}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a6ec0367202d3313ced91ed2a0bc6269a}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a806f03e6f600b2e610f681772332ddb6}{m\_wndDescription}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7fc3a86ec9b671f79fab16c5827cfe44}{m\_wndReferenceLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a8843f66d2a9f4343105d51071a57a7d5}{m\_wndReference}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a5b10972020ce3bfab25f2cb736d24934}{m\_wndPlus}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ac8d7b75ee900860a4378d01bc44a99e5}{m\_wndOriginalDocument}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2a89d64434da752f0f1457a212922d25}{m\_wndDeliveryObject}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a973665ad1e211280e9bde20bff25f8fb}{m\_wndOrderNoLabel}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a4dfe5f100fac5c18158d0b9ed994a4f2}{m\_wndOrderNo}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a9c3b5dfd73a9fce22d1c898e4f24cb4e}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a9fff01f40bb4abd886259e8e7d77c1ba}{m\_wndOrderDate}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a25766f5deafc3028009be1d493fc97a5}{m\_wndAccountingDateLabel}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a767c23fb72e23cf3be56a7868ba01bf2}{m\_wndAccountingDate}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a3c50b3af04e412ef89d98aa269dc7927}{m\_wndApprovedDate}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2a3e05e55f65faa960d9c2ca8e0f8e27}{m\_wndNote}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aaeb2d405ac75a9a19c08c8c9fb9d3f81}{m\_wndTotalLinesLabel}};}
+\DoxyCodeLine{00082\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a34d7c076fd75f6986d4c00ff86288b1f}{m\_wndTotalLines}};}
+\DoxyCodeLine{00083\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a4b102676bb970752e2c3a8323f40025c}{m\_wndTotalAmountLabel}};}
+\DoxyCodeLine{00084\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aa7d4b8818673cd1e0a0c04990c1654e3}{m\_wndTotalAmount}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a96c44a81c202ba461939512dd01f5ff5}{m\_wndAdd}};}
+\DoxyCodeLine{00088\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ae9a0edf59e12ac3b37b1df11433b41fe}{m\_wndEdit}};}
+\DoxyCodeLine{00089\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a724435985723365142fc514306f836c9}{m\_wndDelete}};}
+\DoxyCodeLine{00090\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a95637647cf292cda3412ad229c754d5c}{m\_wndSave}};}
+\DoxyCodeLine{00091\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_af822a01b7730004fea77285bfb4fc48f}{m\_wndDiscard}};}
+\DoxyCodeLine{00092\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a55ee0f28e3f0464be808b002d4f1f2f8}{m\_wndPrint}};}
+\DoxyCodeLine{00093\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_adffc1b64e8718e7d114345ba6cd85429}{m\_wndPost}};}
+\DoxyCodeLine{00094\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a4a574af17af564156af5571993da039a}{m\_wndClose}};}
+\DoxyCodeLine{00095\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ad49d08c26d0cf187419de16e9d64c732}{m\_wndAddLine}};}
+\DoxyCodeLine{00096\ \ \ \ \ CGuiTabCtrl\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a0718da193536020f251cde7b5b60f6d5}{m\_wndTab}};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a43f38f1b339f12015b02e18ded8da61d}{m\_szFromStorageKey}};}
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a003bc4fba85bc46a644c2bfc91b1efb5}{m\_szDescription}};}
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ad6308d32aa28189fb0037ab7da3ad51f}{m\_szReference}};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a383418415c73416f09cb9a0ddafa727d}{m\_szOrderNo}};}
+\DoxyCodeLine{00103\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a55da406b61c1a4ac0b138a573192a37f}{m\_szOrderDate}};}
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a3b28142330f60e9f0733ea4f53ceafb3}{m\_szAccountingDate}};}
+\DoxyCodeLine{00105\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a0fed68da7c662e263028b96930a15885}{m\_szApprovedDate}};}
+\DoxyCodeLine{00106\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a70a18befaea2c6f98b1ebb0aa0ca7488}{m\_szTransactionTypeKey}};}
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a46d1251c83962885c5363e624e9a29bd}{m\_szDeliveryObjectKey}};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ab5330fd9ca7fc8c3c7a670818eb04de3}{m\_nTotalLines}};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aaeb0c4de34033ed4053803caf12f9db1}{m\_nTotalAmount}};}
+\DoxyCodeLine{00111\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a3af8c453b8ddd510f8cf867d9d7f2281}{m\_transactionTbl}};}
+\DoxyCodeLine{00112\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a8a5bfc992baa9b197f9fa39b5c192dd9}{m\_transactionlineTbl}};}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a43beb6d31610f47a1726546817d2bb6b}{OnFromStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ad46610cf1d599fa6c87e3b9f061e826b}{OnFromStorageSelendok}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageSetfocus();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageKillfocus();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a3bb8d1d5f0c67884f7aa543ce8648cd0}{OnFromStorageLoadData}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageAddNew();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ae58bc5d3db3fd5400e8db4d1c5841914}{OnToDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aa12489b000ea9444189e0cfed9f8aefd}{OnToDepartmentSelendok}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentSetfocus();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentKillfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a50527abfd13ac0497f6ca9ece45f196d}{OnToDepartmentLoadData}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentAddNew();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aae118f665f19db5b91f6943e6c1ac700}{OnDelivererSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7d133c6c1d2f5a2f0890745419c03d61}{OnDelivererSelendok}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererSetfocus();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererKillfocus();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a4f99bc88b7fbcf6e69b5a35732e0933e}{OnDelivererLoadData}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererAddNew();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ae642cd5b0059a3467704b006ec73ba3c}{OnReceiverSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a4db05fe38d19ac2ecaee2d9253e093a1}{OnReceiverSelendok}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverSetfocus();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverKillfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_addc4aec28db3240d6feacbbdced52927}{OnReceiverLoadData}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverAddNew();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2ab5bfae31ea24e8782417d400b412d0}{OnDescriptionCheckValue}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoChange();\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoSetfocus();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoKillfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a523847a93198a112a7e4f0b1089dc5f2}{OnOrderNoCheckValue}}();\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_acc620d5b8a1fbe8e49d6db92310e5b83}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAccountingDateChange();\ }}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAccountingDateSetfocus();\ }}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAccountingDateKillfocus();\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a91101c79dc9b667bd0e0754b82abb1e9}{OnAccountingDateCheckValue}}();\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a3a997379a95cd202aaa9bf991f25a4c2}{OnApprovedDateCheckValue}}();\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a469de29bdd78942161440a61688b0f79}{OnTransactionTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2d1b30f2c89390b683e1aa3b1984347d}{OnTransactionTypeSelendok}}();\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeSetfocus();\ }}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeKillfocus();\ }}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7b0b122a4de4d3b6b1e184c1ea23b138}{OnTransactionTypeLoadData}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeAddNew();\ }}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a48685b489759d3675640df5fab4d625e}{OnReferenceLabelSelect}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a769a7fb998c51c83c1c987b3d605da90}{OnDeliveryObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ae29b42e358d2c44e725ea3a4fb920d56}{OnDeliveryObjectSelendok}}();\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDeliveryObjectSetfocus();\ }}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDeliveryObjectKillfocus();\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7a5e6d518755e20badbad0516a8af5ed}{OnDeliveryObjectLoadData}}();\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDeliveryObjectAddNew();\ }}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesChange();\ }}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesSetfocus();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesKillfocus();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a5ccb006e22fc9ecdb29ba46b6a71461a}{OnTotalLinesCheckValue}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountChange();\ }}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountSetfocus();\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountKillfocus();\ }}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7ae945590bfbd6e58180cf3e55635aee}{OnTotalAmountCheckValue}}();\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a3df62f13fdc0de29b514f02b5a95997a}{InsertTransactionLine}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ad89b9d1cd4e8f59aa457163b099b09cf}{OnAddSelect}}();\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a35dad60d77e80319493b82971d1d4c0c}{OnEditSelect}}();\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ae57cfcb03ad6a13f53ef1e4532e7e16f}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a683dfd3d9f5846e7bb11232b4039af03}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a38154c26a3e750b2885047d94aecc2a4}{OnDiscardSelect}}();\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aea3f4af5e2f80cd7637cfdd05b6febb0}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a958bba5bd8daed95a0e5abf18e761d71}{OnPostSelect}}();\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a0d9102c692acca72e0be0bb989fa1ff7}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a0d6f311c2e54bc8575159fb1b9c3dbd7}{OnAddLineSelect}}();\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aad7401ae8e74341f1e9779f36b3e6699}{OnTabSelectChange}}(\textcolor{keywordtype}{int}\ nOld,\ \textcolor{keywordtype}{int}\ nNew);\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a8ecfcaf76f9d40af26611552c056c3cc}{OnPlusSelect}}();}
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2f097602f4c304fddf7154e93b2787b1}{CCancerStorageExportOrderDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a6776f5972ccae6e630a738cfb14e0716}{\string~CCancerStorageExportOrderDialog}}();}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a2e8d2434901d7c18abe573438c1f3b04}{OnCreateComponents}}();}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_ab571ffed8f3d3b7ea8b1afd6b76a10eb}{OnInitializeComponents}}();}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a483d2cf4a206164306a9756f27c4fc0d}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a52df0de34a4fd968f5f7d271d335cc04}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7365f823621187b0be5080cb3c868678}{GetDataToScreen}}();}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a28661639a3e323695b00026353e54e32}{GetScreenToData}}();}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a4eda10c23aad0eed5774beec1e2edfdd}{SetDefaultValues}}();}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a7fd6b55b2debb9afa7b1c3884c71c1b9}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_aa69deeda365a29a6d9b774ec12524bc1}{OnAddCancerStorageExportOrderDialog}}();\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a82905ac8562ce85f0dc088ceb851248f}{OnEditCancerStorageExportOrderDialog}}();\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a3157431621157f242b0a0f90d4ed599d}{OnDeleteCancerStorageExportOrderDialog}}();\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_af0f3b35547a8407e91364c9ad23caa2c}{OnSaveCancerStorageExportOrderDialog}}();\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a523f12bf1c88ae10a845cb739fbad8dc}{OnDiscardCancerStorageExportOrderDialog}}();\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a6e14fac31bfb67ec2e079fffff2a0b42}{OnCancerStorageExportOrderDialogListLoadData}}();\ }
+\DoxyCodeLine{00205\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_acd8c6bf7c869b7078d555b2ac3b2840d}{GetOrderStatus}}();}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_cancer_storage_export_order_dialog_a249e054febd77ca9fe0dab31e0e4e8bb}{IsAllowEdit}}();}
+\DoxyCodeLine{00207\ \};}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

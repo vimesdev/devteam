@@ -1,0 +1,158 @@
+\doxysection{Ward\+Patient\+Medical\+Usage\+Dialog\+\_\+\+V2.\+h}
+\hypertarget{_ward_patient_medical_usage_dialog___v2_8h_source}{}\label{_ward_patient_medical_usage_dialog___v2_8h_source}\index{Include/HMSCore/WardPatientMedicalUsageDialog\_V2.h@{Include/HMSCore/WardPatientMedicalUsageDialog\_V2.h}}
+\mbox{\hyperlink{_ward_patient_medical_usage_dialog___v2_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CWardPatientMedicalUsageDialog\_V2\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CWardPatientMedicalUsageDialog\_V2\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a9e9e3b09c93935c0338b18c78f9c3571}{CWardPatientMedicalUsageDialog\_V2}}\ :\ \textcolor{keyword}{public}\ CGuiDialog}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a7116dcb2a93f8aefde6d1368531546eb}{m\_bRefresh}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aab950e95db731c6d8dead2b38d7a4e56}{m\_nID}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad59a08ac826ab1cfdc91542c43f9d95f}{m\_nDocno}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aedf2dae89fee3820b6761e4c6a56afa4}{m\_nOrderID}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a4d6851b482b5d6fdfcbac255affa1385}{m\_nStorageID}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a0124edd4027a4aac44e7d92db026d8ce}{m\_nCStorageID}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a1a624b785a2a9334907bed1a7b29dcb2}{m\_szDept}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_acb37b3be703020bac1ae087266b23d3c}{m\_szStorages}};\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_acaf3587c25a5c7a92142c739a8bdd9fa}{m\_nTransactionID}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_af1bb24d9cca400d21b3adbb936d77c26}{m\_nProductItemID}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aa07c8bd938b26127abb73d8ea4c474ba}{m\_wndOrder}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a86b923e6be42477663fee4699aa3aaef}{m\_nQuantity}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a858da1a42c5a626ab79aa3172f96c64e}{m\_nUnitPrice}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a53c8bd96c3376f659d94df8b6a4aa163}{m\_nOnHand}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aea0a25c2ec2f8177a1351738e7baa75b}{m\_szProductKey}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_adc68d223d6f6a03aec292e1044fa5e65}{m\_szProductOrgID}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a4595f47191aa159c326905807f42fd2e}{m\_szTransactionType}};\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a3583248f98955e071b4cc02ccf55f2e3}{m\_wndGroupDrugList}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aa4b77c7989927dbff96669b693a061bf}{m\_wndGroupPatientList}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a3752623e78c8fe0de6c65c18419ee657}{m\_wndApply}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad2bbc50df50ae601125bae7e3aad4732}{m\_wndPreview}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a7b5518c9d09739e50d4c7b2644ad6a59}{m\_wndClose}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGridListView\ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ab71f2d4eb599394a84a2104fbe1aa786}{m\_wndPatientList}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CGridListView\ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a8e1aa50df00873f85cbb6e6669ab3af0}{m\_wndDrugList}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ac103b83f7f10e2f8b4d9c882c990f9dc}{m\_transactionlineTbl}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a64373ab8f05c73e6c8d995b45d973b74}{m\_wndFromDateLabel}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a7fe57f01732ee2a9d86f98865f38232a}{m\_wndAll}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a21885e2480a3671545bc9cabf432ab19}{m\_wndFromDate}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a24003cec05c4d2bdbd9baca6a2b21f43}{m\_wndToDateLabel}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a1adfcd2836391e96a114a8cbd03256d3}{m\_wndToDate}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a780c48fa598893071243a47922c8d325}{m\_wndRefresh}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad6c7d0924cad56654d2eefa4144ee6b0}{m\_wndObject}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a966ca382cbe21c39f829a70672633dde}{m\_wndServiceObject}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a5ec34815db0f2876278b6bc7b8186ed3}{m\_wndInsObject}};\ }
+\DoxyCodeLine{00084\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a78ec013fa25d884d6f3784bd9d50cbd4}{m\_wndSolderObject}};\ }
+\DoxyCodeLine{00085\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ae8454654fe5a03c40d401519d79a1f40}{m\_wndSearchLabel}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a87304ad9fd834a75e78eb21797feeacd}{m\_wndSearch}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad2689e2660e098b474f3e0dbcc612c2f}{m\_wndAllMaterial}};\ }
+\DoxyCodeLine{00088\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a96f5e6b5521ac570e7ac6b0630e326dc}{m\_wndReusableMaterial}};\ }
+\DoxyCodeLine{00089\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a62df082600f068e1e9ea5ca85cbfcf06}{m\_wndNormalMaterial}};\ }
+\DoxyCodeLine{00090\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a102c55bd76eaf8e9d3254a5ad655009e}{m\_wndZoneLabel}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ada0aa305b5253fbb9be637fd60693858}{m\_wndZone}};\ }
+\DoxyCodeLine{00092\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a2f725a31a34fb833f2167f3c0b3558ab}{m\_wndphieutreo}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_af258e055ce8efcfe215ed4046a49005c}{m\_szZoneKey}};\ }
+\DoxyCodeLine{00094\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a9dd8885f4595723efc2a123680588504}{m\_bAll}};\ }
+\DoxyCodeLine{00095\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a7bb4c1eeedd7ae2c086834c0e14954bc}{m\_szFromDate}};\ }
+\DoxyCodeLine{00096\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad51400f951d8f99ee083c43f15d833c6}{m\_szToDate}};\ }
+\DoxyCodeLine{00097\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a4bc7ac247c82fce1dd83fafbbd2e2d49}{m\_szWhere}};\ }
+\DoxyCodeLine{00098\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ac935946d5cd4d62475ba3f2b6dc62759}{m\_bServiceObject}};\ }
+\DoxyCodeLine{00099\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a7f2bdcb6f8f4eda133071fa4312cb597}{m\_bInsObject}};\ }
+\DoxyCodeLine{00100\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a6240e6378e8ea68e6bd64d6e52b6f6b5}{m\_bSolderObject}};\ }
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aab5bf5b05801de5c04bdfc3a2331fe57}{m\_szSearch}};\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a55155c1ac3e40ba061f025aefd3a4026}{m\_nMaterialType}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_abd15e10d5d26e427c179e10217e3c598}{m\_bphieutreo}};\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_afd91fc401c763fc19a9e431916ec0a29}{OnApplySelect}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aaefcad9a7a8360e04f3fb902de47cde1}{OnPreviewSelect}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a692be76ce70a7a6c8a7da0ab36d3ea0d}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a2966ac6f6661492f70ed9998fa706b31}{OnPatientListLoadData}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a5682e3fab68f7be9006e304bdbd99424}{OnPatientListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a5f0ed943cacda03a4b28eb62ad8d5ce5}{OnPatientListDblClick}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a1c135b2c9d399f3ba02efa0bacfbb062}{OnPatientListAddToSheetItem}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a1c1ec35b691dd6bf10e858abc7522c18}{OnPatientListCheckAllItem}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_adb4e73c50cd25a910e23272feef751e6}{OnPatientListUnCheckAllItem}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a338f359500d4c78e4087650f70fe7c38}{OnDrugListLoadData}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aba4d82460fc55503209065321a3f1ae5}{OnDrugListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ac69427451f627178ecfbc9d29b3c0e55}{OnDrugListDblClick}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a95aa884ae617dbeb9f1f4a939c77d24f}{OnDrugListDeleteItem}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a8105c951293288728fb5c2c24bc55a9e}{OnRecalcOrder}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00119\ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a16014a6a6fcd9d1e374083ace4cdd6cd}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a59e82f2b51b4c1efb75924adaa9bb476}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a3a9d662a199d114e8481cc23b4b1509e}{OnRefreshSelect}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aab54de5d77d733d82e6dc582c0d9337e}{OnAllSelect}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a0f59ebf1c482d49c2bb50c103b10e19e}{OnServiceObjectSelect}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad6f5d5d9e2494626a523eeef04c77237}{OnInsObjectSelect}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a36a0966c8838ca6ebabc95c6300e1540}{OnSolderObjectSelect}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ac361dc496c02a1e8995959e1850ae1a5}{OnReusableMaterialSelect}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a1c05fb721ecde2da32f0733d6e5aa495}{OnNormalMaterialSelect}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a56fe8ff9dad7ea48b526e4a4452a7cb8}{OnAllMaterialSelect}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a3cb1b436a561a2eb26382132ac74d801}{OnSearchChange}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a27b6a0351bf0ee23e9710e098bf2caaa}{OnphieutreoSelect}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchSetfocus();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchKillfocus();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_acf99924aea4928ad5c7b785a659dc9b0}{OnSearchCheckValue}}();}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_af4a7f1e7c15e971e9b9269f1070f0628}{OnZoneLoadData}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a9e9e3b09c93935c0338b18c78f9c3571}{CWardPatientMedicalUsageDialog\_V2}}(CWnd\ *pParent);}
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a8c86233059e47fbc8b29c269c6c67a16}{\string~CWardPatientMedicalUsageDialog\_V2}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_af5230f5bfd7fc1d4959ae14729d176f1}{OnCreateComponents}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a81b335f72548f78f5e97df73c54a3e67}{OnInitializeComponents}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aaa450be04a81bd1b651a28edb5d9b9f0}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a9111088750c36f0d00699d99f45bbb6e}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a459597973b2518bb8745fd1783e6ca8b}{GetDataToScreen}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a7b47bd6181f1af86601630714b2685bf}{GetScreenToData}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aa787d69137b0e2b5bdee6d527fde1170}{SetDefaultValues}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aa0467a2d07795fd27754612e711ca0e2}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ab284dea4f7367e48f35a6295f2720760}{OnAddCWardPatientMedicalUsageDialog\_V2}}();\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a5f8b10f2014091d141117879676a8a6b}{OnEditCWardPatientMedicalUsageDialog\_V2}}();\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a1afe192ad10be38b4e2ba49f64c69186}{OnDeleteCWardPatientMedicalUsageDialog\_V2}}();\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a47a5943079e409016759d0a4f9ab0e75}{OnSaveCWardPatientMedicalUsageDialog\_V2}}();\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a97f4a1d6b0185491a06924475a0c4001}{OnCancelCWardPatientMedicalUsageDialog\_V2}}();\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad97ed326427392a5add39f1ff3c21c58}{OnCWardPatientMedicalUsageDialog\_V2ListLoadData}}();}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a6c82aba80f2891e8c68bb72494268b1b}{OnPatientListLoadCP}}();}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_aaf223d71c91f8e9e2947c1474b940ee3}{OnPatientListLoadDG}}();}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_a5a802128be16e0fd7eefb8821d96d8cc}{OnPatientListLoadDV}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ab4a9d6cea4da579f2ce7da4d26d03f01}{OnPatientListLoadALL}}();}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00164\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ad5e205bf1676e58e753f7c83b33d400e}{OnClose}}();}
+\DoxyCodeLine{00165\ \ \ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_ward_patient_medical_usage_dialog___v2_ab3984eec45210239d2ea340c39f83c98}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00166\ \};}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

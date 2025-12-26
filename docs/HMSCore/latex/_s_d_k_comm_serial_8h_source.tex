@@ -1,0 +1,156 @@
+\doxysection{SDKComm\+Serial.\+h}
+\hypertarget{_s_d_k_comm_serial_8h_source}{}\label{_s_d_k_comm_serial_8h_source}\index{Include/HMSCore/SDKCommSerial.h@{Include/HMSCore/SDKCommSerial.h}}
+\mbox{\hyperlink{_s_d_k_comm_serial_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CSDKCommSerial\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CSDKCommSerial\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <afxmt.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_comm_defs_8h}{CommDefs.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SIZE\_INQ\ \ \ \ \ 1152}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ SIZE\_OUTQ\ \ \ \ 2048}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MAX\_READSIZE\ 80L}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ WM\_MODEM\_READ\_EVNT\ (WM\_USER\ +\ 1001)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ WM\_MODEM\_DOWNLOAD\ (WM\_USER\ +\ 1002)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ WM\_MODEM\_UPLOAD\ (WM\_USER\ +\ 1003)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ WM\_MODEM\_RUNORDER\ (WM\_USER\ +\ 1004)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ WM\_MODEM\_PERFORMORDER\ (WM\_USER\ +\ 1005)}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ DWORD\ \ WINAPI\ \mbox{\hyperlink{_s_d_k_comm_serial_8h_a4a6478bb2da38a10852d3476196fa3d0}{CommReadThread}}(\textcolor{keywordtype}{void}\ *pvData);}
+\DoxyCodeLine{00024\ DWORD\ \ WINAPI\ \mbox{\hyperlink{_s_d_k_comm_serial_8h_ac0441b42e5f356aff37a91b5ec2cfe87}{CommWriteThread}}(\textcolor{keywordtype}{void}\ *pvData);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ WM\_RECEIVE\_TEXT\ RegisterWindowMessage(\_T("{}WM\_RECEIVE\_TEXT"{}))}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_s_d_k_comm_serial_ac080b76c3739ed852fe6fad6428e7d37}{CSDKCommSerial}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a242d573840f2bcfa02711e98f4429ef8}{m\_nParity}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a05e20eb51ae55064151308d575fdc763}{m\_nStopBits}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aa40c1fbe8bcdc94ea28e02a019f5310f}{m\_nFlowControl}};}
+\DoxyCodeLine{00034\ \ \ \ \ DWORD\ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a7e2b4984074af8dd5b59e99b6aa80058}{m\_dwBaudrate}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a314802b31d6a8b5a34a86910522b4fe0}{m\_nDataBits}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a192d8c4c806659c495f09b435ea7c288}{m\_nHanshaking}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a1a923db4c26be08e31337b249ceed83a}{m\_bLog}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aebaf5394f3a79b2279c7b276ca17f505}{PortDeactivate}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ CWnd*\ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aa717f83fde75646698554c5c62bdc1e5}{m\_pMainWnd}};}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ LONG\ \textcolor{keyword}{volatile}\ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_af58c70be5d6111494b5f279828d8961d}{m\_nCount}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ac080b76c3739ed852fe6fad6428e7d37}{CSDKCommSerial}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a79c04328865d9e334e86933b4a13d43e}{\string~CSDKCommSerial}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ad1917c839d68d1c2fc26ef612f35f8f1}{Close}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a8899aa99ea2da9e09fb750c75a300aa2}{Write}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sBuffer,\ \textcolor{keywordtype}{int}\ nLength);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a1189f0beaf2d171af2cef129c4cd1bbd}{SendBuffer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ sBuffer,\ \textcolor{keywordtype}{int}\ nLength);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a6c7ba6231ec4e89be8624b37cd50c7a6}{ExecuteNextCommand}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a09af6ae9b3d275878f89b064838a67d3}{Open}}(CString\ szPort);}
+\DoxyCodeLine{00053\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a6e7d2bc891b3485af0dbdf07421edb6d}{StartThreads}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00054\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a59d537cd38190a255dd78b9db6d15e3e}{Initialize}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00055\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_adf6e00425faef2c6c4bf6edcd45ce1e2}{PortConfigure}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a05b052a047a7a8369db522548f9b8b45}{Settings}}(DWORD\ dwBaudrate,\ \textcolor{keywordtype}{int}\ nDatabit,\ \textcolor{keywordtype}{int}\ nPartity,\ \textcolor{keywordtype}{int}\ nStopbit);}
+\DoxyCodeLine{00057\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_af8d7919ce7d1b74f19424975ef09c48b}{IsConnected}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a1d4219a1dc730cf008e1f4a575b1d0d2}{Lock}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_accc135615ddeb66e0a873ff68d7c2537}{UnLock}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ab45bc50dc97c647da62608947d473b35}{GetBaudrate}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ae3b9ac9ba8bcea493a1924ebfc85c710}{GetDataBits}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a4fac4ae7dfb4a773ecf338a89b142c2c}{GetStopBits}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a5f109aca6d8f564ec98c5b540009cb19}{GetParity}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ac48c8e81640ac896a419e1d40785ac91}{GetHanshaking}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a9a5b65c8a58c9882ab4a7be6bb4bd636}{EnableLog}}(\textcolor{keywordtype}{bool}\ bFlag);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ab1a6c4f0d3e4ec1e992e5a4bd98d93b3}{IsEnableLog}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a9bc96c83de69c7daa11fa5b2d60bb6a8}{DoBackground}}()\{\}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_abf437fd4b01908dc746c894eb05dddee}{OnExit}}()\{\}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aebaced4302c9b7306618a839f98ee5c0}{OnReceive}}(BYTE*\ lpBuf,\ \textcolor{keywordtype}{int}\ nSize)\{\}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a2000519b9ca057816d3a0eb1ef4381b9}{OnTimeOut}}()\{\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{static}\ UINT\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ac1ec1257e60726db6e8bca8e29481597}{ReaderThread}}(LPVOID\ pParam);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{static}\ UINT\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a975657e4c5d366189d9adefc3341cfde}{WriterThread}}(LPVOID\ pParam);}
+\DoxyCodeLine{00076\ \ \ \ \ DWORD\ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ab836df03f67a375d6f4a101fee500fb2}{OnReaderThread}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ae86356831ae37250f46c9b7b6c9b2fad}{OnNotify}}(\mbox{\hyperlink{_comm_defs_8h_abfb80eb1f0c87c3b01ef15be485de626}{COM\_EVENTS}}\ event);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_s_d_k_comm_serial_1_1_command_item}{CommandItem}}\ }
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_c_s_d_k_comm_serial_1_1_command_item_a215e6e3b4eb999f58c675ac5e67fdee9}{sATCommand}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_s_d_k_comm_serial_1_1_command_item_a1142cc6d8f825605ce41484597824971}{iNumberOfRetry}};}
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ std::queue<CommandItem>\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a40cf31585e6db677afeb04bd3aacb0a3}{m\_qCommandsQueue}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_acf9d5902e60e0d08534b789845ee0be3}{m\_bConnected}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ HANDLE\ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ad074afa13e28869cde9e43dd51990bfe}{m\_hCOMPort}};}
+\DoxyCodeLine{00090\ \ \ \ \ HANDLE\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a3c5afc9c56d2aa9ea136ebee48ba245a}{m\_pReaderThread}};}
+\DoxyCodeLine{00091\ \ \ \ \ HANDLE\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_afed48925b583b2089e49e453516d35f1}{m\_pWriteThread}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ CCriticalSection\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a11ef43701f82f5171519f3887c9070e1}{m\_cs}};}
+\DoxyCodeLine{00094\ \ \ \ \ DCB\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a650903c9606594aea7836e89f6208692}{originaldcb}};}
+\DoxyCodeLine{00095\ \ \ \ \ OVERLAPPED\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ac9b70138dce6390e20321526d31a8f31}{m\_oReaderThreadExit}};\ }
+\DoxyCodeLine{00096\ \ \ \ \ OVERLAPPED\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a5d63efd3a92a10e90e7793ff076e066e}{m\_oWriterThreadExit}};}
+\DoxyCodeLine{00097\ \ \ \ \ OVERLAPPED\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aa05ce7e8f9fe768b987faab601d7811a}{m\_oWriteNextCommandInQueue}};}
+\DoxyCodeLine{00098\ \ \ \ \ COMMTIMEOUTS\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aa3f7abc3928cb4dd695b53dc02808828}{originalcommtimeouts}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//Define\ commstd}}
+\DoxyCodeLine{00102\ \ \ \ \ HANDLE\ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a386de91db88b30aab960d6292b17fcd2}{m\_hComstdThread}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Thread\ to\ handle\ ongoing\ activity}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a90fe5ccca08cc86c3eb49d73c17ae8b5}{m\_fHaltThread}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ To\ control\ when\ thread\ shuts\ down}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\ Data\ access\ control}}
+\DoxyCodeLine{00105\ \ \ \ \ CRITICAL\_SECTION\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a78f5d83568b1adfab82168ce505e6665}{m\_csect}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ To\ synchronize\ access\ to\ driver\ vars.}}
+\DoxyCodeLine{00106\ \ \ \ \ HANDLE\ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_adaf6ec349bf6626bf936b8b16dd881f4}{m\_ahEvent}}[\mbox{\hyperlink{_comm_defs_8h_a25425ecb642d0c2357851329b8ea1c88}{EVENT\_COUNT}}];\ \ \textcolor{comment}{//\ To\ control\ scheduling}}
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ Control\ fields\ for\ receiving}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ac8bca8bf1534f6c790fc313a8f0f6dba}{m\_nRBufrSize}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Size\ of\ receive\ buffer}}
+\DoxyCodeLine{00109\ \ \ \ \ BYTE\ \ \ *\mbox{\hyperlink{class_c_s_d_k_comm_serial_a0cff43a6f5d07136aae30fb2658a9b36}{m\_pbBufrStart}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Address\ of\ receive\ buffer}}
+\DoxyCodeLine{00110\ \ \ \ \ BYTE\ \ \ *\mbox{\hyperlink{class_c_s_d_k_comm_serial_a821e1a3d0b532d0ed4291d676c3ab0b5}{m\_pbBufrEnd}};}
+\DoxyCodeLine{00111\ \ \ \ \ BYTE\ \ \ *\mbox{\hyperlink{class_c_s_d_k_comm_serial_a4d477ece4c316a1b40938683641e4f3c}{m\_pbReadEnd}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Where\ read\ thread\ left\ off}}
+\DoxyCodeLine{00112\ \ \ \ \ BYTE\ \ \ *\mbox{\hyperlink{class_c_s_d_k_comm_serial_af5b6c0133226e60208fd8b64d82fba80}{m\_pbComStart}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marks\ area\ being\ unloaded\ by\ main\ Com}}
+\DoxyCodeLine{00113\ \ \ \ \ BYTE\ \ \ *\mbox{\hyperlink{class_c_s_d_k_comm_serial_acb2963ba939f815f46645b1c4206aa7d}{m\_pbComEnd}};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a44f1b9a15e51285602bc8e5094b6c306}{m\_fBufrFull}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ when\ driver\ buffers\ are\ full}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a21f2ca92055dd0c3f34909db652d24fb}{m\_fBufrEmpty}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ when\ driver\ buffers\ are\ empty}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ Control\ fields\ for\ sending}}
+\DoxyCodeLine{00118\ \ \ \ \ DWORD\ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a6e0d0a4879b975ffb3948a26eeff0dc9}{m\_dwBytesToSend}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Number\ of\ bytes\ pending\ for\ write}}
+\DoxyCodeLine{00119\ \ \ \ \ DWORD\ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a37484d8f690863b7230fc3e3d406a95d}{m\_dwSndOffset}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Offset\ into\ send\ buffer\ for\ write}}
+\DoxyCodeLine{00120\ \ \ \ \ BYTE\ \ \ *\mbox{\hyperlink{class_c_s_d_k_comm_serial_af99ab4f7a5dc2a1b98b8781f71e775e8}{m\_pbSndBufr}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buffer\ used\ by\ pending\ write\ calls}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_afd763347100d31b89039296bb7545a0e}{m\_fBreakSignalOn}};\ \ \ \ \ \ \ \textcolor{comment}{//\ TRUE\ while\ sending\ break\ signal}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a43e1762f4acebe862faaf203924d4632}{m\_fNotifyRcv}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TRUE\ if\ driver\ should\ send\ notification}}
+\DoxyCodeLine{00125\ \ \ \ \ DWORD\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_acf85a65532ad69676ddf9f5ba6d29fa5}{m\_dwEventMask}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mask\ used\ in\ Set/GetCommEventmask}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ae4d21557f7905a67f2cc89850f7b8c46}{m\_fSending}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TRUE\ if\ we've\ sent\ a\ buffer\ of\ data}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aba7449074f795fdf2c00820190106b5a}{m\_lSndTimer}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ started\ when\ we\ issue\ a\ WriteComm}}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a3117a0cab37ef815bd39bc41277865db}{m\_lSndLimit}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ amt.\ of\ time\ to\ wait\ for\ send}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a7301cc599b71813b60888d1bdb2983a5}{m\_lSndStuck}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ amt.\ of\ time\ we've\ been\ waiting\ for}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ handshaking}}
+\DoxyCodeLine{00131\ \ \ \ \ OVERLAPPED\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ab475f854a8f6419960ba893e96013dc6}{m\_stWriteOv}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aeeb3d99d3a89a739b526bea5084a7879}{RcvRefill}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a25c406de8e37be57f4bccc4ebfa1b9e7}{RcvClear}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a8f1f5b5fe305108c403aae0b6f1f3e5c}{SndBufrSend}}(\textcolor{keywordtype}{void}\ *pvBufr,\ \textcolor{keywordtype}{int}\ \ nSize);}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aa9330a09259c4ab24d38e008ea06485b}{SndBufrIsBusy}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ab307ed93ac74fb19ca76a93fa62536dd}{SndBufrQuery}}(\textcolor{keywordtype}{unsigned}\ *pafStatus,\textcolor{keywordtype}{long}\ *plHandshakeDelay);}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_ab3f3224f9b4b8bcd34aa29f60ab966d4}{SndBufrClear}}();}
+\DoxyCodeLine{00141\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_s_d_k_comm_serial_a5a555772c8873d5445b614fd7602a4c7}{WriteString}}(\textcolor{keywordtype}{char}*\ lpszString,\ \textcolor{keywordtype}{int}\ nLength);}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_s_d_k_comm_serial_aef4c235ac89f552c5156ad9a2ac605fd}{Invoke}}(\textcolor{keywordtype}{int}\ nTimeout\ =\ 500);}
+\DoxyCodeLine{00143\ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ DWORD\ \ WINAPI\ \mbox{\hyperlink{_s_d_k_comm_serial_8h_a78a733e02b5d16fcff0f4e69218aa40d}{CSDKCommSerialThread}}(\textcolor{keywordtype}{void}\ *pvData);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+
+\end{DoxyCode}

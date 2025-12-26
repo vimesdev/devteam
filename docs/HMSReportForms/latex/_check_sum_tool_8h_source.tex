@@ -1,0 +1,73 @@
+\doxysection{Check\+Sum\+Tool.\+h}
+\hypertarget{_check_sum_tool_8h_source}{}\label{_check_sum_tool_8h_source}\index{Include/HMSReportForms/LIMS/CheckSumTool.h@{Include/HMSReportForms/LIMS/CheckSumTool.h}}
+\mbox{\hyperlink{_check_sum_tool_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHECKSUMTOOL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHECKSUMTOOL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_check_sum_tool_afc8856464dbabaa1fa71e3e12a789d40}{CCheckSumTool}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_a6684f272504db68238eef0581da18306}{m\_wndCheckSumCondition}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_a43bed47bcfeb1bb7171c5f20a6d4ff1d}{m\_wndCheckSum}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_a03187605e93de788468ee43ed92d0123}{m\_wndAsciiLabel}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_ac3b5963f2f031c4affec5e21d8adacb5}{m\_wndAscii}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_acb1b3a846305589f5b821884f73c5203}{m\_wndHexaValueCSLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_a4891bd1267d8293e6c59b57a4e838ac5}{m\_wndCheckSumValue}};}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_check_sum_tool_a4aa13e75e7a7956fb3ffcc483141a0ad}{m\_szAscii}};}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_check_sum_tool_a28722c5fab4db3aab5ce066b24631f91}{m\_szCheckSumValue}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//CString\ GetASTMCheckSumValue;}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_aa56f5a7f9f5baee9bfe28ccd70f8fa74}{OnCheckSumSelect}}();\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAsciiChange();\ }}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAsciiSetfocus();\ }}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAsciiKillfocus();\ }}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_af260ee0b7bd2a8f8ad8a02f6ff3c9a00}{OnAsciiCheckValue}}();\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCheckSumValueChange();\ }}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCheckSumValueSetfocus();\ }}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCheckSumValueKillfocus();\ }}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_a48ec3b966d707a4299cd8bf93ad18ece}{OnCheckSumValueCheckValue}}();\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_afc8856464dbabaa1fa71e3e12a789d40}{CCheckSumTool}}(CWnd\ *pParent);}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_c_check_sum_tool_a606ffedb6491b037173a0c733f2f65bd}{\string~CCheckSumTool}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_acd816bcc62f2c19c76ba3d5432249266}{OnCreateComponents}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_afecd1fd36bc8ba31ba9ae39abcb295dc}{OnInitializeComponents}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_a8009773426123834fba55af9f47cfb87}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_a557f70582e7b09237fc3a5320f900182}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_a4ddca6227b078ac324606f0759763007}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_a61efdc09822db56df675e5c24a70d7e8}{GetDataToScreen}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_a00a137f7d75c154326283fa8bdc17ec7}{GetScreenToData}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_check_sum_tool_a7d92c27d56f84e53a0638c21e73251f0}{SetDefaultValues}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_check_sum_tool_a2d9d9ede53f84188272ca3bba0f9b1c0}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_check_sum_tool_a05951bd74fc4f0413719f50a78edf917}{OnAddCheckSumTool}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_check_sum_tool_a0630a0641fd6a933579ca4da5adc7f90}{OnEditCheckSumTool}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_check_sum_tool_ac283c3df409c4a020eebb0179bedff2f}{OnDeleteCheckSumTool}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_check_sum_tool_a8a21a64a0ff74d26559b5b58d05e877a}{OnSaveCheckSumTool}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_check_sum_tool_afba5b3b4fc1c16d9a0f37038d03ef92d}{OnCancelCheckSumTool}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_check_sum_tool_a6f093071bfe66d38eae32716d0ac5df1}{OnCheckSumToolListLoadData}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_check_sum_tool_a6faa824c152211c9effc8c56e75e2ddf}{GetASTMCheckSumValue}}(CString\ \mbox{\hyperlink{class_c_check_sum_tool_a4aa13e75e7a7956fb3ffcc483141a0ad}{m\_szAscii}});}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,108 @@
+\doxysection{Acc\+Bank\+Statement\+List.\+h}
+\hypertarget{_acc_bank_statement_list_8h_source}{}\label{_acc_bank_statement_list_8h_source}\index{Include/VIMESCORE\_E10/AccBankStatementList.h@{Include/VIMESCORE\_E10/AccBankStatementList.h}}
+\mbox{\hyperlink{_acc_bank_statement_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BANKSTATEMENTLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BANKSTATEMENTLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a53d156aaa32a77cdf49c30c2047294c4}{CAccBankStatementList}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_ab3aa51e1e2d1eba0ef6b919b7fd6ca89}{m\_szID}};}
+\DoxyCodeLine{00036\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_acfe83e630ea22298b408fa173139095e}{m\_szVoucherType}};}
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_ab06aad339d9b8070a21ae8ec50714aa3}{m\_wndSearchInformation}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_ac1a48b40c14cb7fe62bc925e6c05149c}{m\_wndInvoiceList}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_ad362bbb57445a9d165366a9c2bb8525f}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_ae5365d58af77d441d7f6aabac56e265a}{m\_wndFromDate}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a4657d604f824d7e9c31362e8c0a0b53f}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_adb5ec24723e745abdefa80aa543606e5}{m\_wndToDate}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a2cee73bb6cb4482b080b0f3bf517b3fa}{m\_wndDataPeriodLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_aa4c3009cf00db9aeb447c54aa34205a5}{m\_wndDataPeriod}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a3b7d5270f71b04e6edb08f176e2e5480}{m\_wndInvoiceNoLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_af33880e9f86bb12946d1fac5366f2506}{m\_wndInvoiceNo}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a6dd920a0d74aad297a3df6c1976ba681}{m\_wndReload}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGridListCtrl\ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a06bbf07d9ba55974dc99ce6a44bd1edd}{m\_wndList}};}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a1391b735748cbc771d512ac8bfb3fef3}{m\_wndView}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_aa625b657a44419a1dbc697b49602a822}{m\_wndAdd}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_aaa8ce8e44ca251d6334f451db48256a6}{m\_wndEdit}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a091795db834eba62f4971e470169abce}{m\_wndDelete}};}
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a952d0a71d2f747c037e8ad2fbe76a921}{m\_szFromDate}};}
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a80444c41268c94bc3f007c4c5ba53ea3}{m\_szToDate}};}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a62affb0dbe7b7bf1c0dc94ab51809d4a}{m\_szDataPeriodKey}};}
+\DoxyCodeLine{00058\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_acc_bank_statement_list_ad9c939bbb50a95ec1541b670c0a15cd2}{m\_szInvoiceNo}};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a2c7c14823a6b1034fe41b96226747c85}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a1c14f450cbb7c6c6a7af64afe16eace0}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a709615141fc0ef832e95714c2e8407e0}{OnDataPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a586c3fd40143afc361d07fccac2ced15}{OnDataPeriodSelendok}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDataPeriodSetfocus();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDataPeriodKillfocus();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a1883c768e18966dc48263c52292b57ec}{OnDataPeriodLoadData}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a8a363f4a7bb733f2ddaa9413be38a8bf}{OnDataPeriodAddNew}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoChange();\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoSetfocus();\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoKillfocus();\ }}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a2ae0274bab66a417439a0dc2f31919a6}{OnInvoiceNoCheckValue}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a8be7cf431d57332a32257123d7fdaa97}{OnReloadSelect}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_aad99273ed3b557c870fe3f06a1120911}{OnListLoadData}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a61959707223eeccd47a875d2cf1965f3}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a35d2c032125d0996a129d8dc8d486025}{OnListDblClick}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_af410128365a2cae0de5fc93980483da0}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a376bbfeaa4f318ec0b231d7cbab31d40}{OnViewSelect}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a615189f44b3691bd1b7e6a8066d83c39}{OnAddSelect}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_aeff03f784dbe408fb1e5775ca5808e86}{OnEditSelect}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a0e983434b5f7c8cdaf215ae85a2026dc}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a53d156aaa32a77cdf49c30c2047294c4}{CAccBankStatementList}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a6c597b5d0a3762bfa8d7ca626b5a9a0f}{\string~CAccBankStatementList}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_ac7184141c1f236ad60e8e3ed2e82ebd2}{OnCreateComponents}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_ae3d5be519e792cb4ec7a0c33c64bf8c8}{OnInitializeComponents}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a0a6cda9771615c7333daf5a19346d0ea}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_ad6dcd0ceb871625a6270ef01c825c87d}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_addb1cc637c35d4917360aff29e9a83e2}{GetDataToScreen}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_afea28d23f72fc102ad28b59a77f6fd94}{GetScreenToData}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a0522bf6f06e5f2a547a092dd69053602}{SetDefaultValues}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a06bc70025f469737263136fde0ada784}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a6888fce33ac645e9066de6b2969dbc79}{OnAddAccBankStatementList}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_abff9882ab19519dbae1a4824d2ed252f}{OnEditAccBankStatementList}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_acb60d9dcfd45a8e3b076f8545a75e193}{OnDeleteAccBankStatementList}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a9412ec07f1c120af97892fff15e715bb}{OnSaveAccBankStatementList}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a689fc112f6b271f5cf705e5ef11f4495}{OnCancelAccBankStatementList}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_acc_bank_statement_list_a7b823e73a5be006dff91d9a13aa016ce}{OnAccBankStatementListListLoadData}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_ac79124c292aa7a7f190cff8f656a6cd0}{SetVoucherType}}(CString\ szType);}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_acc_bank_statement_list_a36c9541df1e7984a1ae37ed020272681}{Refresh}}();}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

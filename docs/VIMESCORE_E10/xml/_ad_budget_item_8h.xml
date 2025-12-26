@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_budget_item_8h" kind="file" language="C++">
+    <compoundname>AdBudgetItem.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_ad_budget_item_popup_8h" local="yes">AdBudgetItemPopup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdBudgetItem.h</label>
+        <link refid="_ad_budget_item_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AdBudgetItemPopup.h</label>
+        <link refid="_ad_budget_item_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_ad_budget_item" prot="public">CAdBudgetItem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADBUDGETITEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADBUDGETITEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ad_budget_item_popup_8h" kindref="compound">AdBudgetItemPopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_ad_budget_item" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_ad_budget_item_1a2bebe5c54e9cfc310f7e035626008471" kindref="member">CAdBudgetItem</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_budget_item_1a844937ae904849e13644bfd36ea0720a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_popup" kindref="compound">CAdBudgetItemPopup</ref><sp/><sp/><ref refid="class_c_ad_budget_item_1a844937ae904849e13644bfd36ea0720a" kindref="member">m_wndPopup</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_budget_item_1a471262b0ac1a45beeee6d34b8a834fb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a471262b0ac1a45beeee6d34b8a834fb5" kindref="member">m_arFilters</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_budget_item_1a5bc5d1e8a8a5f7dc541e520ebaa2c699" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a5bc5d1e8a8a5f7dc541e520ebaa2c699" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_budget_item_1a178ae9e9395010b3af66611bfac7789d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a178ae9e9395010b3af66611bfac7789d" kindref="member">m_nSearchID</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_budget_item_1afb234ac5183ea5cec6165aa95c0d5da8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1afb234ac5183ea5cec6165aa95c0d5da8" kindref="member">m_wndBankInformation</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_budget_item_1a6cbcd0a7f26ce9682146514b8eb45af0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a6cbcd0a7f26ce9682146514b8eb45af0" kindref="member">m_wndSearchLabel</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_budget_item_1a6c9148130192d93421cc6fdffe7ab963" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a6c9148130192d93421cc6fdffe7ab963" kindref="member">m_wndSearch</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_budget_item_1acc077a6b94773172d7fa97747d123c4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1acc077a6b94773172d7fa97747d123c4b" kindref="member">m_wndTypeOfFilter</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_budget_item_1aff9d161b7b9c3023f986e71c7b2ad4db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1aff9d161b7b9c3023f986e71c7b2ad4db" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_budget_item_1a0a215c43c717d2b212b5b445e61292b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a0a215c43c717d2b212b5b445e61292b3" kindref="member">m_wndAdd</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_ad_budget_item_1abf195dd0a5adcb5ceed917c793a086fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1abf195dd0a5adcb5ceed917c793a086fa" kindref="member">m_wndEdit</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_ad_budget_item_1a2724430ace9fdc59296768d8a51a8304" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a2724430ace9fdc59296768d8a51a8304" kindref="member">m_wndDelete</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_ad_budget_item_1acd4be0a191d1a36853d7cb5b8f9c351d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1acd4be0a191d1a36853d7cb5b8f9c351d" kindref="member">m_wndTypeOfFilterDesc</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_c_ad_budget_item_1a06b464b9ace545b5ef5deacc2ea33bbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_budget_item_1a06b464b9ace545b5ef5deacc2ea33bbf" kindref="member">m_szSearch</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_budget_item_1ad8f68346107b37ca9ab9c7178cbb57cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1ad8f68346107b37ca9ab9c7178cbb57cc" kindref="member">OnSearchCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_budget_item_1ae8a7f161dac6bd5406d92ded3bd1e366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1ae8a7f161dac6bd5406d92ded3bd1e366" kindref="member">OnTypeOfFilterSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_budget_item_1abdeb7bfe3ef2d038de58ed2d88796475" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1abdeb7bfe3ef2d038de58ed2d88796475" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_budget_item_1a2fd08f275904d176ca006a0a58fa80d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a2fd08f275904d176ca006a0a58fa80d5" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_budget_item_1aed80274cc5e1ff4e3ce65e6e3216f324" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1aed80274cc5e1ff4e3ce65e6e3216f324" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_budget_item_1a207c6a42ed30aa39627177dae61f52b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a207c6a42ed30aa39627177dae61f52b1" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_budget_item_1a0a8bd536beca38935a21d9a85bf4326f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a0a8bd536beca38935a21d9a85bf4326f" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_budget_item_1a09c93391389c3e2500635d8c3fc7d9a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a09c93391389c3e2500635d8c3fc7d9a4" kindref="member">OnEditSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_budget_item_1a604bd734d9d65a22da369915212e3ce6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a604bd734d9d65a22da369915212e3ce6" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_budget_item_1a2bebe5c54e9cfc310f7e035626008471" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a2bebe5c54e9cfc310f7e035626008471" kindref="member">CAdBudgetItem</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_budget_item_1a037866684476c51da7925db096fc784a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_budget_item_1a037866684476c51da7925db096fc784a" kindref="member">~CAdBudgetItem</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_budget_item_1a521e1c01c315c12c84569b35c9bfa8c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a521e1c01c315c12c84569b35c9bfa8c9" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_budget_item_1a9a348e9997817fda9602e77466656217" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a9a348e9997817fda9602e77466656217" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_budget_item_1aaa44dc9966eee55947a59917ae2cd924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1aaa44dc9966eee55947a59917ae2cd924" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_budget_item_1a2071ac4aa7b34f930ac30c2cc317dce5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a2071ac4aa7b34f930ac30c2cc317dce5" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_budget_item_1a05e11b6fd4cdb3aacc67ee489391e36b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a05e11b6fd4cdb3aacc67ee489391e36b" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_budget_item_1a622230a68ae1f4db8ecf989a09519dbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a622230a68ae1f4db8ecf989a09519dbf" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_budget_item_1af9cbf3b9c125dc4c767b2e863aa715e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1af9cbf3b9c125dc4c767b2e863aa715e9" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_budget_item_1a1c20cbd8e437f357786e9ba60bad8f57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a1c20cbd8e437f357786e9ba60bad8f57" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_budget_item_1a0f49626751fe433d21e803e39b66459d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a0f49626751fe433d21e803e39b66459d" kindref="member">OnAddAdBudgetItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_budget_item_1a6197009aacd32f2b4b41e65ec6921f29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a6197009aacd32f2b4b41e65ec6921f29" kindref="member">OnEditAdBudgetItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="73" refid="class_c_ad_budget_item_1a2aa1fe2569438b80357b21ef468119d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a2aa1fe2569438b80357b21ef468119d3" kindref="member">OnDeleteAdBudgetItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_ad_budget_item_1a402226e3f04a4a5b42a866bc49af391b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a402226e3f04a4a5b42a866bc49af391b" kindref="member">OnSaveAdBudgetItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_ad_budget_item_1a44182d3d5033f88ff7befd80a2d2b53f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a44182d3d5033f88ff7befd80a2d2b53f" kindref="member">OnCancelAdBudgetItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="76" refid="class_c_ad_budget_item_1a9e0dfa9d012b593fd5c2e7f6fe6f6090" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_budget_item_1a9e0dfa9d012b593fd5c2e7f6fe6f6090" kindref="member">OnAdBudgetItemListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdBudgetItem.h"/>
+  </compounddef>
+</doxygen>

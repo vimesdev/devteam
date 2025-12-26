@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/HMSRelativeDialog.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_h_m_s_relative_dialog_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">HMSRelativeDialog.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_h_m_s_relative_dialog_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef HMSRELATIVEDIALOG_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define HMSRELATIVEDIALOG_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright � Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiDialog.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html">   30</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a1b1cf8922f9d0066a02b73f0e4960fe5">CHMSRelativeDialog</a> : <span class="keyword">public</span> CGuiDialog{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aa15a9649afbe97a8c234b2ec75efda20">   33</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#aa15a9649afbe97a8c234b2ec75efda20">m_wndRelativeInformation</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ab20252816dbde2cd48e7b1ac9474f165">   34</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#ab20252816dbde2cd48e7b1ac9474f165">m_wndRelativeNameLabel</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a3df6a656a304fe3083f0667380a7e737">   35</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a3df6a656a304fe3083f0667380a7e737">m_wndRelativeName</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a24207451afbd139dcc74cf9b1ace922e">   36</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a24207451afbd139dcc74cf9b1ace922e">m_wndRelationLabel</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#adc06f6e9664cb61e272256f61f50cbd0">   37</a></span>    CGuiComboBox    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#adc06f6e9664cb61e272256f61f50cbd0">m_wndRelation</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a4ea44a6611a5a019323dc987b498f51c">   38</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a4ea44a6611a5a019323dc987b498f51c">m_wndYobLabel</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a2f32ec276621eb0b224919c94b56c090">   39</a></span>    CGuiNumberCtrl  <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a2f32ec276621eb0b224919c94b56c090">m_wndYob</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ae6d04d5de3f03f3544292c7bf911ab67">   40</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#ae6d04d5de3f03f3544292c7bf911ab67">m_wndSexLabel</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a88c1989350099065f50361b69b87ab1a">   41</a></span>    CGuiComboBox    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a88c1989350099065f50361b69b87ab1a">m_wndSex</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aaeb138558e02c5065d93c4b62e589e7e">   42</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#aaeb138558e02c5065d93c4b62e589e7e">m_wndAddressLabel</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a898ab37a1faaa34f73c67382cd718073">   43</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a898ab37a1faaa34f73c67382cd718073">m_wndAddress</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a8daacda9632b880b0b22236d227b5b55">   44</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a8daacda9632b880b0b22236d227b5b55">m_wndReferenceLabel</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a48d850d8a990933a9a3010b82c72db3a">   45</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a48d850d8a990933a9a3010b82c72db3a">m_wndReference</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a4d96c692e4a7c576dfcf84de2838f0ff">   46</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a4d96c692e4a7c576dfcf84de2838f0ff">m_wndNoteLabel</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a081b468e732125f8c8895dc26c18bd4a">   47</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a081b468e732125f8c8895dc26c18bd4a">m_wndNote</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a97a80080c7ec89afc6e9b1373f8563e8">   48</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a97a80080c7ec89afc6e9b1373f8563e8">m_wndAdd</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#adc50aa64ff5a919f4c5f98e89ca37bad">   49</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#adc50aa64ff5a919f4c5f98e89ca37bad">m_wndEdit</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ab1f3ba57107d0105b00f9d0471355daa">   50</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#ab1f3ba57107d0105b00f9d0471355daa">m_wndDelete</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ab39ae8fc81865c66c3edb7710991df7d">   51</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#ab39ae8fc81865c66c3edb7710991df7d">m_wndSave</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ab5829c6f11a5a8ce224de02185de88fe">   52</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#ab5829c6f11a5a8ce224de02185de88fe">m_wndCancel</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a1c9adae9ead0fc7c8dbcf9ec85c5416b">   53</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a1c9adae9ead0fc7c8dbcf9ec85c5416b">m_wndList</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a6709db8582e0d6e49ac76614123642ec">   55</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a6709db8582e0d6e49ac76614123642ec">m_nIdx</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ace6a38ecc9f1821acbf3dd27b4b05dc3">   56</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#ace6a38ecc9f1821acbf3dd27b4b05dc3">m_szRelativeName</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a2cd70c1fb7621a5a548388e5e2ed6745">   57</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a2cd70c1fb7621a5a548388e5e2ed6745">m_szRelationKey</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a9969097d3ccf0e24fa652cf00bd5bd0f">   58</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a9969097d3ccf0e24fa652cf00bd5bd0f">m_nYob</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ace01fdbc5d455be4a432905184821a4e">   59</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#ace01fdbc5d455be4a432905184821a4e">m_szSexKey</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aea879600a467c7859b8e865023d44341">   60</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#aea879600a467c7859b8e865023d44341">m_szAddress</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a7bc6397ae3cfe67ca2a2851498a7de0f">   61</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a7bc6397ae3cfe67ca2a2851498a7de0f">m_szReference</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a69e73837d7c3c1e1c82a041714e2df63">   62</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a69e73837d7c3c1e1c82a041714e2df63">m_szNote</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a4c4ddbf65423bb511064539ff7ae04bd">   63</a></span>    CDbfMap <a class="code hl_variable" href="class_c_h_m_s_relative_dialog.html#a4c4ddbf65423bb511064539ff7ae04bd">m_hms_relativeTbl</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">//void          OnRelativeNameChange(); </span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//void          OnRelativeNameSetfocus(); </span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">//void          OnRelativeNameKillfocus(); </span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a2c1d056207dd12a9024add48ef82853b">   67</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a2c1d056207dd12a9024add48ef82853b">OnRelativeNameCheckValue</a>(); </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a3447b8f3f4788dc6d1344540824b230f">   68</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a3447b8f3f4788dc6d1344540824b230f">OnRelationSelectChange</a>(<span class="keywordtype">int</span> nOldItemSel, <span class="keywordtype">int</span> nNewItemSel); </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a5577d15e827695ed975d90eeb876cb00">   69</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a5577d15e827695ed975d90eeb876cb00">OnRelationSelendok</a>(); </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">//void          OnRelationSetfocus(); </span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">//void          OnRelationKillfocus(); </span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a2befdabb21b4e9685719848ae6833fad">   72</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a2befdabb21b4e9685719848ae6833fad">OnRelationLoadData</a>(); </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">//void          OnRelationAddNew(); </span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//void          OnYobChange(); </span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">//void          OnYobSetfocus(); </span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">//void          OnYobKillfocus(); </span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a9aa6c3b5fa26d9e7bae23de7dc95e3f0">   77</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a9aa6c3b5fa26d9e7bae23de7dc95e3f0">OnYobCheckValue</a>(); </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a152c94166a8fa027966e31e761ba2265">   78</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a152c94166a8fa027966e31e761ba2265">OnSexSelectChange</a>(<span class="keywordtype">int</span> nOldItemSel, <span class="keywordtype">int</span> nNewItemSel); </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a2a664142f102a3bdcf4a20e2a8c8908e">   79</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a2a664142f102a3bdcf4a20e2a8c8908e">OnSexSelendok</a>(); </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">//void          OnSexSetfocus(); </span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">//void          OnSexKillfocus(); </span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a262526d803daf43d04c1b39e59073933">   82</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a262526d803daf43d04c1b39e59073933">OnSexLoadData</a>(); </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">//void          OnSexAddNew(); </span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">//void          OnAddressChange(); </span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">//void          OnAddressSetfocus(); </span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">//void          OnAddressKillfocus(); </span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#adc51180df0d0df168bfc5b51046cf5b8">   87</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#adc51180df0d0df168bfc5b51046cf5b8">OnAddressCheckValue</a>(); </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//void          OnReferenceChange(); </span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">//void          OnReferenceSetfocus(); </span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">//void          OnReferenceKillfocus(); </span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a5220cc17a61006e34b1f0cf5a5af1a67">   91</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a5220cc17a61006e34b1f0cf5a5af1a67">OnReferenceCheckValue</a>(); </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">//void          OnNoteChange(); </span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">//void          OnNoteSetfocus(); </span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">//void          OnNoteKillfocus(); </span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a0bd08b9879e4c9b05e98672ec992399c">   95</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a0bd08b9879e4c9b05e98672ec992399c">OnNoteCheckValue</a>(); </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a3cf4ed08e85cc17b1fb1d9c2277971e0">   96</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a3cf4ed08e85cc17b1fb1d9c2277971e0">OnAddSelect</a>(); </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aafd8b5e703dd223ecc73fc012793c371">   97</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#aafd8b5e703dd223ecc73fc012793c371">OnEditSelect</a>(); </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a9db5c7189748e18d47c087811f81aa95">   98</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a9db5c7189748e18d47c087811f81aa95">OnDeleteSelect</a>(); </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aecf5d0cea8e5814dd540d7685ca52d66">   99</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#aecf5d0cea8e5814dd540d7685ca52d66">OnSaveSelect</a>(); </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a44f4bfb9fca32b50264d767430d29be2">  100</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a44f4bfb9fca32b50264d767430d29be2">OnCancelSelect</a>(); </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a0b29698b00b30c0075843dcebc909e5c">  101</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a0b29698b00b30c0075843dcebc909e5c">OnListLoadData</a>(); </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a7cdd27d953c5a70016ca4ebdc814f8e6">  102</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a7cdd27d953c5a70016ca4ebdc814f8e6">OnListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aeb013888a74dea200b25491e31741c1c">  103</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#aeb013888a74dea200b25491e31741c1c">OnListDblClick</a>(); </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a4eecf35d492421b1963511bdbf5cd437">  104</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a4eecf35d492421b1963511bdbf5cd437">OnListDeleteItem</a>(); </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a1b1cf8922f9d0066a02b73f0e4960fe5">  105</a></span>    <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a1b1cf8922f9d0066a02b73f0e4960fe5">CHMSRelativeDialog</a>(CWnd *pParent);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ab9864bb00b9e002db9ac6af744a49b79">  106</a></span>    <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#ab9864bb00b9e002db9ac6af744a49b79">~CHMSRelativeDialog</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aad36027d2d54d39575a99c783e3d99c2">  107</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#aad36027d2d54d39575a99c783e3d99c2">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a18408dfc0889ee2afe2d8cd6346e7be5">  108</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a18408dfc0889ee2afe2d8cd6346e7be5">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aea2cea7060f0fe3d2849d833b1c37904">  109</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#aea2cea7060f0fe3d2849d833b1c37904">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a1bb232fc1ffacd2727a62bc5b77029e6">  110</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a1bb232fc1ffacd2727a62bc5b77029e6">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#aab1e7035130b1a241660769e8df84653">  111</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#aab1e7035130b1a241660769e8df84653">UpdateJson</a>(BOOL bSaveAndValidate);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#ae653534741e74c74113d1e9f80e18667">  112</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#ae653534741e74c74113d1e9f80e18667">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a8af94770eec8ccff46b4c3abb736ad1d">  113</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a8af94770eec8ccff46b4c3abb736ad1d">GetScreenToData</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a23fff5eb071cb6931abc44f9569b1df6">  114</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a23fff5eb071cb6931abc44f9569b1df6">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a86fcad8f63bd5ae0a33d8494cdcccb2d">  115</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a86fcad8f63bd5ae0a33d8494cdcccb2d">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a0496c31fbcd70ae0c69e17952f7976f5">  116</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a0496c31fbcd70ae0c69e17952f7976f5">OnAddHMSRelativeDialog</a>(); </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a3b08d3e95656557f8c542d27004738a8">  117</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a3b08d3e95656557f8c542d27004738a8">OnEditHMSRelativeDialog</a>(); </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a9cdaf70e65662d2071d1ce97b0758ba6">  118</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a9cdaf70e65662d2071d1ce97b0758ba6">OnDeleteHMSRelativeDialog</a>(); </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a0013853335732378f62aa078dbf6a2b9">  119</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a0013853335732378f62aa078dbf6a2b9">OnSaveHMSRelativeDialog</a>(); </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#adb4143759f506d9a58c6e6a0618ef127">  120</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#adb4143759f506d9a58c6e6a0618ef127">OnCancelHMSRelativeDialog</a>(); </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_c_h_m_s_relative_dialog.html#a340316ea6bf532facdd170089f08290b">  121</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_relative_dialog.html#a340316ea6bf532facdd170089f08290b">OnHMSRelativeDialogListLoadData</a>(); </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>};</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a0013853335732378f62aa078dbf6a2b9"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a0013853335732378f62aa078dbf6a2b9">CHMSRelativeDialog::OnSaveHMSRelativeDialog</a></div><div class="ttdeci">int OnSaveHMSRelativeDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a0496c31fbcd70ae0c69e17952f7976f5"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a0496c31fbcd70ae0c69e17952f7976f5">CHMSRelativeDialog::OnAddHMSRelativeDialog</a></div><div class="ttdeci">int OnAddHMSRelativeDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a081b468e732125f8c8895dc26c18bd4a"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a081b468e732125f8c8895dc26c18bd4a">CHMSRelativeDialog::m_wndNote</a></div><div class="ttdeci">CGuiTextCtrl m_wndNote</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:47</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a0b29698b00b30c0075843dcebc909e5c"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a0b29698b00b30c0075843dcebc909e5c">CHMSRelativeDialog::OnListLoadData</a></div><div class="ttdeci">long OnListLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a0bd08b9879e4c9b05e98672ec992399c"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a0bd08b9879e4c9b05e98672ec992399c">CHMSRelativeDialog::OnNoteCheckValue</a></div><div class="ttdeci">int OnNoteCheckValue()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a152c94166a8fa027966e31e761ba2265"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a152c94166a8fa027966e31e761ba2265">CHMSRelativeDialog::OnSexSelectChange</a></div><div class="ttdeci">void OnSexSelectChange(int nOldItemSel, int nNewItemSel)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a18408dfc0889ee2afe2d8cd6346e7be5"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a18408dfc0889ee2afe2d8cd6346e7be5">CHMSRelativeDialog::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a1b1cf8922f9d0066a02b73f0e4960fe5"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a1b1cf8922f9d0066a02b73f0e4960fe5">CHMSRelativeDialog::CHMSRelativeDialog</a></div><div class="ttdeci">CHMSRelativeDialog(CWnd *pParent)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a1bb232fc1ffacd2727a62bc5b77029e6"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a1bb232fc1ffacd2727a62bc5b77029e6">CHMSRelativeDialog::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a1c9adae9ead0fc7c8dbcf9ec85c5416b"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a1c9adae9ead0fc7c8dbcf9ec85c5416b">CHMSRelativeDialog::m_wndList</a></div><div class="ttdeci">CGuiListCtrl m_wndList</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:53</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a23fff5eb071cb6931abc44f9569b1df6"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a23fff5eb071cb6931abc44f9569b1df6">CHMSRelativeDialog::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a24207451afbd139dcc74cf9b1ace922e"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a24207451afbd139dcc74cf9b1ace922e">CHMSRelativeDialog::m_wndRelationLabel</a></div><div class="ttdeci">CGuiLabel m_wndRelationLabel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:36</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a262526d803daf43d04c1b39e59073933"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a262526d803daf43d04c1b39e59073933">CHMSRelativeDialog::OnSexLoadData</a></div><div class="ttdeci">long OnSexLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a2a664142f102a3bdcf4a20e2a8c8908e"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a2a664142f102a3bdcf4a20e2a8c8908e">CHMSRelativeDialog::OnSexSelendok</a></div><div class="ttdeci">void OnSexSelendok()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a2befdabb21b4e9685719848ae6833fad"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a2befdabb21b4e9685719848ae6833fad">CHMSRelativeDialog::OnRelationLoadData</a></div><div class="ttdeci">long OnRelationLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a2c1d056207dd12a9024add48ef82853b"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a2c1d056207dd12a9024add48ef82853b">CHMSRelativeDialog::OnRelativeNameCheckValue</a></div><div class="ttdeci">int OnRelativeNameCheckValue()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a2cd70c1fb7621a5a548388e5e2ed6745"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a2cd70c1fb7621a5a548388e5e2ed6745">CHMSRelativeDialog::m_szRelationKey</a></div><div class="ttdeci">CString m_szRelationKey</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:57</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a2f32ec276621eb0b224919c94b56c090"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a2f32ec276621eb0b224919c94b56c090">CHMSRelativeDialog::m_wndYob</a></div><div class="ttdeci">CGuiNumberCtrl m_wndYob</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:39</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a340316ea6bf532facdd170089f08290b"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a340316ea6bf532facdd170089f08290b">CHMSRelativeDialog::OnHMSRelativeDialogListLoadData</a></div><div class="ttdeci">int OnHMSRelativeDialogListLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a3447b8f3f4788dc6d1344540824b230f"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a3447b8f3f4788dc6d1344540824b230f">CHMSRelativeDialog::OnRelationSelectChange</a></div><div class="ttdeci">void OnRelationSelectChange(int nOldItemSel, int nNewItemSel)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a3b08d3e95656557f8c542d27004738a8"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a3b08d3e95656557f8c542d27004738a8">CHMSRelativeDialog::OnEditHMSRelativeDialog</a></div><div class="ttdeci">int OnEditHMSRelativeDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a3cf4ed08e85cc17b1fb1d9c2277971e0"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a3cf4ed08e85cc17b1fb1d9c2277971e0">CHMSRelativeDialog::OnAddSelect</a></div><div class="ttdeci">void OnAddSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a3df6a656a304fe3083f0667380a7e737"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a3df6a656a304fe3083f0667380a7e737">CHMSRelativeDialog::m_wndRelativeName</a></div><div class="ttdeci">CGuiTextCtrl m_wndRelativeName</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:35</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a44f4bfb9fca32b50264d767430d29be2"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a44f4bfb9fca32b50264d767430d29be2">CHMSRelativeDialog::OnCancelSelect</a></div><div class="ttdeci">void OnCancelSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a48d850d8a990933a9a3010b82c72db3a"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a48d850d8a990933a9a3010b82c72db3a">CHMSRelativeDialog::m_wndReference</a></div><div class="ttdeci">CGuiTextCtrl m_wndReference</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:45</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a4c4ddbf65423bb511064539ff7ae04bd"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a4c4ddbf65423bb511064539ff7ae04bd">CHMSRelativeDialog::m_hms_relativeTbl</a></div><div class="ttdeci">CDbfMap m_hms_relativeTbl</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:63</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a4d96c692e4a7c576dfcf84de2838f0ff"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a4d96c692e4a7c576dfcf84de2838f0ff">CHMSRelativeDialog::m_wndNoteLabel</a></div><div class="ttdeci">CGuiLabel m_wndNoteLabel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:46</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a4ea44a6611a5a019323dc987b498f51c"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a4ea44a6611a5a019323dc987b498f51c">CHMSRelativeDialog::m_wndYobLabel</a></div><div class="ttdeci">CGuiLabel m_wndYobLabel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:38</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a4eecf35d492421b1963511bdbf5cd437"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a4eecf35d492421b1963511bdbf5cd437">CHMSRelativeDialog::OnListDeleteItem</a></div><div class="ttdeci">int OnListDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a5220cc17a61006e34b1f0cf5a5af1a67"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a5220cc17a61006e34b1f0cf5a5af1a67">CHMSRelativeDialog::OnReferenceCheckValue</a></div><div class="ttdeci">int OnReferenceCheckValue()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a5577d15e827695ed975d90eeb876cb00"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a5577d15e827695ed975d90eeb876cb00">CHMSRelativeDialog::OnRelationSelendok</a></div><div class="ttdeci">void OnRelationSelendok()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a6709db8582e0d6e49ac76614123642ec"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a6709db8582e0d6e49ac76614123642ec">CHMSRelativeDialog::m_nIdx</a></div><div class="ttdeci">long m_nIdx</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:55</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a69e73837d7c3c1e1c82a041714e2df63"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a69e73837d7c3c1e1c82a041714e2df63">CHMSRelativeDialog::m_szNote</a></div><div class="ttdeci">CString m_szNote</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:62</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a7bc6397ae3cfe67ca2a2851498a7de0f"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a7bc6397ae3cfe67ca2a2851498a7de0f">CHMSRelativeDialog::m_szReference</a></div><div class="ttdeci">CString m_szReference</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:61</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a7cdd27d953c5a70016ca4ebdc814f8e6"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a7cdd27d953c5a70016ca4ebdc814f8e6">CHMSRelativeDialog::OnListSelectChange</a></div><div class="ttdeci">void OnListSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a86fcad8f63bd5ae0a33d8494cdcccb2d"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a86fcad8f63bd5ae0a33d8494cdcccb2d">CHMSRelativeDialog::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a88c1989350099065f50361b69b87ab1a"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a88c1989350099065f50361b69b87ab1a">CHMSRelativeDialog::m_wndSex</a></div><div class="ttdeci">CGuiComboBox m_wndSex</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:41</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a898ab37a1faaa34f73c67382cd718073"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a898ab37a1faaa34f73c67382cd718073">CHMSRelativeDialog::m_wndAddress</a></div><div class="ttdeci">CGuiTextCtrl m_wndAddress</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:43</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a8af94770eec8ccff46b4c3abb736ad1d"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a8af94770eec8ccff46b4c3abb736ad1d">CHMSRelativeDialog::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a8daacda9632b880b0b22236d227b5b55"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a8daacda9632b880b0b22236d227b5b55">CHMSRelativeDialog::m_wndReferenceLabel</a></div><div class="ttdeci">CGuiLabel m_wndReferenceLabel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:44</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a97a80080c7ec89afc6e9b1373f8563e8"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a97a80080c7ec89afc6e9b1373f8563e8">CHMSRelativeDialog::m_wndAdd</a></div><div class="ttdeci">CGuiButton m_wndAdd</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:48</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a9969097d3ccf0e24fa652cf00bd5bd0f"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a9969097d3ccf0e24fa652cf00bd5bd0f">CHMSRelativeDialog::m_nYob</a></div><div class="ttdeci">long m_nYob</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:58</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a9aa6c3b5fa26d9e7bae23de7dc95e3f0"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a9aa6c3b5fa26d9e7bae23de7dc95e3f0">CHMSRelativeDialog::OnYobCheckValue</a></div><div class="ttdeci">int OnYobCheckValue()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a9cdaf70e65662d2071d1ce97b0758ba6"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a9cdaf70e65662d2071d1ce97b0758ba6">CHMSRelativeDialog::OnDeleteHMSRelativeDialog</a></div><div class="ttdeci">int OnDeleteHMSRelativeDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_a9db5c7189748e18d47c087811f81aa95"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#a9db5c7189748e18d47c087811f81aa95">CHMSRelativeDialog::OnDeleteSelect</a></div><div class="ttdeci">void OnDeleteSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aa15a9649afbe97a8c234b2ec75efda20"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aa15a9649afbe97a8c234b2ec75efda20">CHMSRelativeDialog::m_wndRelativeInformation</a></div><div class="ttdeci">CGuiGroupBox m_wndRelativeInformation</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:33</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aab1e7035130b1a241660769e8df84653"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aab1e7035130b1a241660769e8df84653">CHMSRelativeDialog::UpdateJson</a></div><div class="ttdeci">void UpdateJson(BOOL bSaveAndValidate)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aad36027d2d54d39575a99c783e3d99c2"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aad36027d2d54d39575a99c783e3d99c2">CHMSRelativeDialog::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aaeb138558e02c5065d93c4b62e589e7e"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aaeb138558e02c5065d93c4b62e589e7e">CHMSRelativeDialog::m_wndAddressLabel</a></div><div class="ttdeci">CGuiLabel m_wndAddressLabel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:42</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aafd8b5e703dd223ecc73fc012793c371"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aafd8b5e703dd223ecc73fc012793c371">CHMSRelativeDialog::OnEditSelect</a></div><div class="ttdeci">void OnEditSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ab1f3ba57107d0105b00f9d0471355daa"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ab1f3ba57107d0105b00f9d0471355daa">CHMSRelativeDialog::m_wndDelete</a></div><div class="ttdeci">CGuiButton m_wndDelete</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:50</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ab20252816dbde2cd48e7b1ac9474f165"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ab20252816dbde2cd48e7b1ac9474f165">CHMSRelativeDialog::m_wndRelativeNameLabel</a></div><div class="ttdeci">CGuiLabel m_wndRelativeNameLabel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:34</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ab39ae8fc81865c66c3edb7710991df7d"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ab39ae8fc81865c66c3edb7710991df7d">CHMSRelativeDialog::m_wndSave</a></div><div class="ttdeci">CGuiButton m_wndSave</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:51</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ab5829c6f11a5a8ce224de02185de88fe"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ab5829c6f11a5a8ce224de02185de88fe">CHMSRelativeDialog::m_wndCancel</a></div><div class="ttdeci">CGuiButton m_wndCancel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:52</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ab9864bb00b9e002db9ac6af744a49b79"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ab9864bb00b9e002db9ac6af744a49b79">CHMSRelativeDialog::~CHMSRelativeDialog</a></div><div class="ttdeci">~CHMSRelativeDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ace01fdbc5d455be4a432905184821a4e"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ace01fdbc5d455be4a432905184821a4e">CHMSRelativeDialog::m_szSexKey</a></div><div class="ttdeci">CString m_szSexKey</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:59</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ace6a38ecc9f1821acbf3dd27b4b05dc3"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ace6a38ecc9f1821acbf3dd27b4b05dc3">CHMSRelativeDialog::m_szRelativeName</a></div><div class="ttdeci">CString m_szRelativeName</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:56</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_adb4143759f506d9a58c6e6a0618ef127"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#adb4143759f506d9a58c6e6a0618ef127">CHMSRelativeDialog::OnCancelHMSRelativeDialog</a></div><div class="ttdeci">int OnCancelHMSRelativeDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_adc06f6e9664cb61e272256f61f50cbd0"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#adc06f6e9664cb61e272256f61f50cbd0">CHMSRelativeDialog::m_wndRelation</a></div><div class="ttdeci">CGuiComboBox m_wndRelation</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:37</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_adc50aa64ff5a919f4c5f98e89ca37bad"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#adc50aa64ff5a919f4c5f98e89ca37bad">CHMSRelativeDialog::m_wndEdit</a></div><div class="ttdeci">CGuiButton m_wndEdit</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:49</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_adc51180df0d0df168bfc5b51046cf5b8"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#adc51180df0d0df168bfc5b51046cf5b8">CHMSRelativeDialog::OnAddressCheckValue</a></div><div class="ttdeci">int OnAddressCheckValue()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ae653534741e74c74113d1e9f80e18667"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ae653534741e74c74113d1e9f80e18667">CHMSRelativeDialog::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_ae6d04d5de3f03f3544292c7bf911ab67"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#ae6d04d5de3f03f3544292c7bf911ab67">CHMSRelativeDialog::m_wndSexLabel</a></div><div class="ttdeci">CGuiLabel m_wndSexLabel</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:40</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aea2cea7060f0fe3d2849d833b1c37904"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aea2cea7060f0fe3d2849d833b1c37904">CHMSRelativeDialog::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aea879600a467c7859b8e865023d44341"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aea879600a467c7859b8e865023d44341">CHMSRelativeDialog::m_szAddress</a></div><div class="ttdeci">CString m_szAddress</div><div class="ttdef"><b>Definition</b> HMSRelativeDialog.h:60</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aeb013888a74dea200b25491e31741c1c"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aeb013888a74dea200b25491e31741c1c">CHMSRelativeDialog::OnListDblClick</a></div><div class="ttdeci">void OnListDblClick()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_relative_dialog_html_aecf5d0cea8e5814dd540d7685ca52d66"><div class="ttname"><a href="class_c_h_m_s_relative_dialog.html#aecf5d0cea8e5814dd540d7685ca52d66">CHMSRelativeDialog::OnSaveSelect</a></div><div class="ttdeci">void OnSaveSelect()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_h_m_s_relative_dialog_8h.html">HMSRelativeDialog.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

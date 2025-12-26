@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/HMSOperationOrder.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_h_m_s_operation_order_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">HMSOperationOrder.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_h_m_s_operation_order_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef HMSOPERATIONORDER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define HMSOPERATIONORDER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright � Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiView.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="_h_m_s_operation_general_view_8h.html">HMSOperationGeneralView.h</a>&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="_h_m_s_operation_material_view_8h.html">HMSOperationMaterialView.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="_h_m_s_i_n_operation_material_view_8h.html">HMSINOperationMaterialView.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="_h_m_s_surgery_charge_view_8h.html">HMSSurgeryChargeView.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="_h_m_s_surgery_profiles_8h.html">HMSSurgeryProfiles.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="_h_m_s_operation_sequence_view_8h.html">HMSOperationSequenceView.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html">   50</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_h_m_s_operation_order.html#ad383d1bfa4c26db4d78ec393440bf1e9">CHMSOperationOrder</a> : <span class="keyword">public</span> CGuiView</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a7864f0311276928d357237ea80cf0408">   53</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a7864f0311276928d357237ea80cf0408">m_nOrderID</a>; </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#ac57e01a122b11e0861af118c20fadafc">   54</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#ac57e01a122b11e0861af118c20fadafc">m_szDoctor</a>; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a0c60c3063a030ba46422c01fd82ca993">   55</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a0c60c3063a030ba46422c01fd82ca993">m_szItemID</a>; </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#aa405f0b423b2563240ba6ee7e53d8e21">   56</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#aa405f0b423b2563240ba6ee7e53d8e21">m_nRefIdx</a>; </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a99c2130ed8419504587910515529f4ed">   57</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a99c2130ed8419504587910515529f4ed">m_szStatus</a>; </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a9f66066120d3042aaf2a60ca9162ee8b">   60</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a9f66066120d3042aaf2a60ca9162ee8b">m_szCreatedBy</a>; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#ad1891212cb3f653319e3cb6307eeafe2">   61</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#ad1891212cb3f653319e3cb6307eeafe2">m_szDepartmentID</a>; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a4c3e4e7ad9bd991964b7f2e1b9c7b2fa">   67</a></span>    <span class="keywordtype">void</span>    <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a4c3e4e7ad9bd991964b7f2e1b9c7b2fa">RefreshData</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#ab8c5508e966b023ae773098ad4feada8">   69</a></span>    <a class="code hl_class" href="class_c_h_m_s_operation_general_view.html">CHMSOperationGeneralView</a>    <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#ab8c5508e966b023ae773098ad4feada8">m_wndGeneralView</a>; </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a7224ca0f74dace9ecf3fd1d6148e28a5">   70</a></span>    <a class="code hl_class" href="class_c_h_m_s_operation_material_view.html">CHMSOperationMaterialView</a>   <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a7224ca0f74dace9ecf3fd1d6148e28a5">m_wndMaterialView</a>; </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a3c105c81ee02f3f7198c5dbacc714b84">   71</a></span>    <a class="code hl_class" href="class_c_h_m_s_i_n_operation_material_view.html">CHMSINOperationMaterialView</a> <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a3c105c81ee02f3f7198c5dbacc714b84">m_wndINMaterialView</a>; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a6d35e3834c5477d7542b54e1ee58f111">   72</a></span>    <a class="code hl_class" href="class_c_h_m_s_operation_material_view.html">CHMSOperationMaterialView</a>   <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a6d35e3834c5477d7542b54e1ee58f111">m_wndMaterialPreparingView</a>; </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a97ba2ca679942dd676cb44e33da939cd">   73</a></span>    <a class="code hl_class" href="class_c_h_m_s_surgery_profiles.html">CHMSSurgeryProfiles</a>         <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a97ba2ca679942dd676cb44e33da939cd">m_wndProfiles</a>; </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a1f23b6be4c7a8ae0e229285cda1aa544">   74</a></span>    <a class="code hl_class" href="class_c_h_m_s_operation_sequence_view.html">CHMSOperationSequenceView</a> <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a1f23b6be4c7a8ae0e229285cda1aa544">m_wndSequenceView</a>; </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a3ea1b334d4f8575757f241415a2b4879">   76</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a3ea1b334d4f8575757f241415a2b4879">m_wndOperationInformation</a>; </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#af62160989408d46a9f983725d8e610b8">   77</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#af62160989408d46a9f983725d8e610b8">m_wndSearch</a>; </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a9d0ed5fbf7ccba4fcb09b56c981536e8">   78</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a9d0ed5fbf7ccba4fcb09b56c981536e8">m_wndOrderList</a>; </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#adf142bce76e85c51e68fb68a3398d33e">   79</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#adf142bce76e85c51e68fb68a3398d33e">m_wndDescription</a>; </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a5814772605905502e3aff3ccec8c295f">   80</a></span>    CGuiTabCtrl <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a5814772605905502e3aff3ccec8c295f">m_wndTab</a>; </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a12a0f49a4b2f29a6620720b9f8dc180c">   81</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#a12a0f49a4b2f29a6620720b9f8dc180c">m_szSearch</a>; </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#adb0be4d04441e34d6255583f75e2dbb7">   82</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_operation_order.html#adb0be4d04441e34d6255583f75e2dbb7">m_szDescription</a>; </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a12086766507946dc33390eb668908e25">   89</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a12086766507946dc33390eb668908e25">OnSearchCheckValue</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#abdbbf52c12ba9b2db355f343ce6ce176">   96</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_operation_order.html#abdbbf52c12ba9b2db355f343ce6ce176">OnPictureViewDICOM</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#af769f848bcae06fd708cc91a42e18b8c">  103</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_operation_order.html#af769f848bcae06fd708cc91a42e18b8c">OnPictureViewDICOM_Orderline</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a75768bb6d6f314e2676bca41102ab76d">  109</a></span>    <span class="keywordtype">void</span>         <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a75768bb6d6f314e2676bca41102ab76d">OnViewDicomImagesOrderline</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a9ca6aff9263299428524dcbeae300bb3">  116</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a9ca6aff9263299428524dcbeae300bb3">OnOrderListLoadData</a>(); </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a394a834a593ad871ea6cfe9fe96e96f0">  124</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a394a834a593ad871ea6cfe9fe96e96f0">OnOrderListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a83d0143e1efe5d4ef1d1f775620a29be">  130</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a83d0143e1efe5d4ef1d1f775620a29be">OnOrderListDblClick</a>(); </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#ae3379852ddf9d7c26e2f5faa78475d3f">  137</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_operation_order.html#ae3379852ddf9d7c26e2f5faa78475d3f">OnOrderListDeleteItem</a>(); </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#abfdbb4bc659540762417c0fdec800f0e">  144</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_operation_order.html#abfdbb4bc659540762417c0fdec800f0e">OnDescriptionCheckValue</a>(); </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a2ba2f0d33bb22b59af58352882ded163">  152</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a2ba2f0d33bb22b59af58352882ded163">OnTabSelectChange</a>(<span class="keywordtype">int</span> nOld, <span class="keywordtype">int</span> nNew); </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#ad383d1bfa4c26db4d78ec393440bf1e9">  158</a></span>    <a class="code hl_function" href="class_c_h_m_s_operation_order.html#ad383d1bfa4c26db4d78ec393440bf1e9">CHMSOperationOrder</a>();</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a2ee9957565904240c34b0da99467a43c">  164</a></span>    <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a2ee9957565904240c34b0da99467a43c">~CHMSOperationOrder</a>();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#aad576c56cb009069a5a44e5b1b1f1d48">  170</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#aad576c56cb009069a5a44e5b1b1f1d48">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a3f8f9ebc2d4cfa8d05278563fbcffc03">  176</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a3f8f9ebc2d4cfa8d05278563fbcffc03">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a21acb2cd7b168d966550e6969f64858d">  182</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a21acb2cd7b168d966550e6969f64858d">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a4a2227ebe98db3038872a7e5715563b6">  189</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a4a2227ebe98db3038872a7e5715563b6">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a8a55e3f09c33e43da7584731ec793914">  195</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a8a55e3f09c33e43da7584731ec793914">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a74a2e59c204fb0524285f18ebe3a9ccc">  201</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a74a2e59c204fb0524285f18ebe3a9ccc">GetScreenToData</a>();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a6e851279d5c847494e7a5c6715981e01">  207</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a6e851279d5c847494e7a5c6715981e01">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a8e80a9e3704b53398da3afe270db70e7">  215</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a8e80a9e3704b53398da3afe270db70e7">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a96abee818fcb0167ff844af2fe2be2d9">  222</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a96abee818fcb0167ff844af2fe2be2d9">OnAddHMSOperationOrder</a>(); </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#adebf0c347b31aa2a8876bc76c1cc40c1">  229</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#adebf0c347b31aa2a8876bc76c1cc40c1">OnEditHMSOperationOrder</a>(); </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a4731a074494811798f58ce2472e475e4">  236</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a4731a074494811798f58ce2472e475e4">OnDeleteHMSOperationOrder</a>(); </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a5dc0f9d0cc86cc65e9fe1984c3e862da">  243</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a5dc0f9d0cc86cc65e9fe1984c3e862da">OnSaveHMSOperationOrder</a>(); </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a764f79ae636d2dfb0d196b376318ec41">  250</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a764f79ae636d2dfb0d196b376318ec41">OnCancelHMSOperationOrder</a>(); </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#adc447d0d94f543eb49bb0424ed14cf58">  257</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#adc447d0d94f543eb49bb0424ed14cf58">OnHMSOperationOrderListLoadData</a>(); </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#ab453e31480b79a5cdcd52322cbf13bfc">  264</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#ab453e31480b79a5cdcd52322cbf13bfc">OnModifyItemFee</a>();</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#afb1cc2f24bbe463b69cf892a2e29bc9d">  271</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#afb1cc2f24bbe463b69cf892a2e29bc9d">OnEditOperation</a>();</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a39549b6cc22ead7116d62d4afea69891">  278</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a39549b6cc22ead7116d62d4afea69891">OnPrintMaterial</a>();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#aa3ad27af3fd7092b7356a9555b20a7f1">  285</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#aa3ad27af3fd7092b7356a9555b20a7f1">OnPrintHitech</a>();</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a91e2df5fe0b9ac807b4e87dd366d110a">  292</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a91e2df5fe0b9ac807b4e87dd366d110a">OnNhapPhieuPhucHoiChucNang</a>();</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a5292e8a271cd575a87e02b69817345b0">  299</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a5292e8a271cd575a87e02b69817345b0">OnPrintOrderC6</a>();</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#aef7d9b7cd0b6db05325e5f488d479b8c">  305</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#aef7d9b7cd0b6db05325e5f488d479b8c">OnDescription</a>();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a2f7d5d21f35ab1bb3fc85fef4b499e3f">  311</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a2f7d5d21f35ab1bb3fc85fef4b499e3f">OnOperation</a>(); </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a71d1896cd4686d436367223026dd21f2">  317</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a71d1896cd4686d436367223026dd21f2">OnUpdateOperationBoard</a>();</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a31f5c49b7e6c2bd5af23f6fc95a8f49a">  324</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a31f5c49b7e6c2bd5af23f6fc95a8f49a">OnCancelOperationBoard</a>();</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a81dd61ab7dc45b612516b312e81b97ff">  330</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a81dd61ab7dc45b612516b312e81b97ff">OnFollowLaserTreatment</a>();</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a88c7273a3e3c08e6dfcac4b05208a849">  336</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a88c7273a3e3c08e6dfcac4b05208a849">OnResizeLayout</a>();</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="class_c_h_m_s_operation_order.html#a2910a4661599397212218d80dc7707a7">  342</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_operation_order.html#a2910a4661599397212218d80dc7707a7">OnUpdateInfo</a>();</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>};</div>
+</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_h_m_s_i_n_operation_material_view_8h_html"><div class="ttname"><a href="_h_m_s_i_n_operation_material_view_8h.html">HMSINOperationMaterialView.h</a></div></div>
+<div class="ttc" id="a_h_m_s_operation_general_view_8h_html"><div class="ttname"><a href="_h_m_s_operation_general_view_8h.html">HMSOperationGeneralView.h</a></div></div>
+<div class="ttc" id="a_h_m_s_operation_material_view_8h_html"><div class="ttname"><a href="_h_m_s_operation_material_view_8h.html">HMSOperationMaterialView.h</a></div></div>
+<div class="ttc" id="a_h_m_s_operation_sequence_view_8h_html"><div class="ttname"><a href="_h_m_s_operation_sequence_view_8h.html">HMSOperationSequenceView.h</a></div></div>
+<div class="ttc" id="a_h_m_s_surgery_charge_view_8h_html"><div class="ttname"><a href="_h_m_s_surgery_charge_view_8h.html">HMSSurgeryChargeView.h</a></div></div>
+<div class="ttc" id="a_h_m_s_surgery_profiles_8h_html"><div class="ttname"><a href="_h_m_s_surgery_profiles_8h.html">HMSSurgeryProfiles.h</a></div></div>
+<div class="ttc" id="aclass_c_h_m_s_i_n_operation_material_view_html"><div class="ttname"><a href="class_c_h_m_s_i_n_operation_material_view.html">CHMSINOperationMaterialView</a></div><div class="ttdef"><b>Definition</b> HMSINOperationMaterialView.h:31</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_general_view_html"><div class="ttname"><a href="class_c_h_m_s_operation_general_view.html">CHMSOperationGeneralView</a></div><div class="ttdoc">View hiển thị thông tin chung của đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationGeneralView.h:44</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_material_view_html"><div class="ttname"><a href="class_c_h_m_s_operation_material_view.html">CHMSOperationMaterialView</a></div><div class="ttdef"><b>Definition</b> HMSOperationMaterialView.h:30</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a0c60c3063a030ba46422c01fd82ca993"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a0c60c3063a030ba46422c01fd82ca993">CHMSOperationOrder::m_szItemID</a></div><div class="ttdeci">CString m_szItemID</div><div class="ttdoc">ID của item phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:55</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a12086766507946dc33390eb668908e25"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a12086766507946dc33390eb668908e25">CHMSOperationOrder::OnSearchCheckValue</a></div><div class="ttdeci">int OnSearchCheckValue()</div><div class="ttdoc">Kiểm tra giá trị tìm kiếm.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a12a0f49a4b2f29a6620720b9f8dc180c"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a12a0f49a4b2f29a6620720b9f8dc180c">CHMSOperationOrder::m_szSearch</a></div><div class="ttdeci">CString m_szSearch</div><div class="ttdoc">Chuỗi tìm kiếm.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:81</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a1f23b6be4c7a8ae0e229285cda1aa544"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a1f23b6be4c7a8ae0e229285cda1aa544">CHMSOperationOrder::m_wndSequenceView</a></div><div class="ttdeci">CHMSOperationSequenceView m_wndSequenceView</div><div class="ttdoc">View sequence phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:74</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a21acb2cd7b168d966550e6969f64858d"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a21acb2cd7b168d966550e6969f64858d">CHMSOperationOrder::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div><div class="ttdoc">Thiết lập các sự kiện cho cửa sổ</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a2910a4661599397212218d80dc7707a7"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a2910a4661599397212218d80dc7707a7">CHMSOperationOrder::OnUpdateInfo</a></div><div class="ttdeci">void OnUpdateInfo()</div><div class="ttdoc">Cập nhật thông tin.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a2ba2f0d33bb22b59af58352882ded163"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a2ba2f0d33bb22b59af58352882ded163">CHMSOperationOrder::OnTabSelectChange</a></div><div class="ttdeci">void OnTabSelectChange(int nOld, int nNew)</div><div class="ttdoc">Xử lý sự kiện thay đổi tab.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a2ee9957565904240c34b0da99467a43c"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a2ee9957565904240c34b0da99467a43c">CHMSOperationOrder::~CHMSOperationOrder</a></div><div class="ttdeci">~CHMSOperationOrder()</div><div class="ttdoc">Destructor.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a2f7d5d21f35ab1bb3fc85fef4b499e3f"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a2f7d5d21f35ab1bb3fc85fef4b499e3f">CHMSOperationOrder::OnOperation</a></div><div class="ttdeci">void OnOperation()</div><div class="ttdoc">Xử lý phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a31f5c49b7e6c2bd5af23f6fc95a8f49a"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a31f5c49b7e6c2bd5af23f6fc95a8f49a">CHMSOperationOrder::OnCancelOperationBoard</a></div><div class="ttdeci">int OnCancelOperationBoard()</div><div class="ttdoc">Hủy bảng phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a394a834a593ad871ea6cfe9fe96e96f0"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a394a834a593ad871ea6cfe9fe96e96f0">CHMSOperationOrder::OnOrderListSelectChange</a></div><div class="ttdeci">void OnOrderListSelectChange(int nOldItem, int nNewItem)</div><div class="ttdoc">Xử lý sự kiện thay đổi lựa chọn trong danh sách đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a39549b6cc22ead7116d62d4afea69891"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a39549b6cc22ead7116d62d4afea69891">CHMSOperationOrder::OnPrintMaterial</a></div><div class="ttdeci">int OnPrintMaterial()</div><div class="ttdoc">In vật liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a3c105c81ee02f3f7198c5dbacc714b84"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a3c105c81ee02f3f7198c5dbacc714b84">CHMSOperationOrder::m_wndINMaterialView</a></div><div class="ttdeci">CHMSINOperationMaterialView m_wndINMaterialView</div><div class="ttdoc">View vật liệu nội khoa.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:71</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a3ea1b334d4f8575757f241415a2b4879"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a3ea1b334d4f8575757f241415a2b4879">CHMSOperationOrder::m_wndOperationInformation</a></div><div class="ttdeci">CGuiGroupBox m_wndOperationInformation</div><div class="ttdoc">Group box chứa thông tin đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:76</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a3f8f9ebc2d4cfa8d05278563fbcffc03"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a3f8f9ebc2d4cfa8d05278563fbcffc03">CHMSOperationOrder::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div><div class="ttdoc">Khởi tạo các thành phần.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a4731a074494811798f58ce2472e475e4"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a4731a074494811798f58ce2472e475e4">CHMSOperationOrder::OnDeleteHMSOperationOrder</a></div><div class="ttdeci">int OnDeleteHMSOperationOrder()</div><div class="ttdoc">Xử lý xóa đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a4a2227ebe98db3038872a7e5715563b6"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a4a2227ebe98db3038872a7e5715563b6">CHMSOperationOrder::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div><div class="ttdoc">Trao đổi dữ liệu giữa các điều khiển và biến thành viên.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a4c3e4e7ad9bd991964b7f2e1b9c7b2fa"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a4c3e4e7ad9bd991964b7f2e1b9c7b2fa">CHMSOperationOrder::RefreshData</a></div><div class="ttdeci">void RefreshData()</div><div class="ttdoc">Làm mới dữ liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a5292e8a271cd575a87e02b69817345b0"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a5292e8a271cd575a87e02b69817345b0">CHMSOperationOrder::OnPrintOrderC6</a></div><div class="ttdeci">int OnPrintOrderC6()</div><div class="ttdoc">In đơn phẫu thuật C6.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a5814772605905502e3aff3ccec8c295f"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a5814772605905502e3aff3ccec8c295f">CHMSOperationOrder::m_wndTab</a></div><div class="ttdeci">CGuiTabCtrl m_wndTab</div><div class="ttdoc">Tab control chứa các view con.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:80</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a5dc0f9d0cc86cc65e9fe1984c3e862da"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a5dc0f9d0cc86cc65e9fe1984c3e862da">CHMSOperationOrder::OnSaveHMSOperationOrder</a></div><div class="ttdeci">int OnSaveHMSOperationOrder()</div><div class="ttdoc">Xử lý lưu đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a6d35e3834c5477d7542b54e1ee58f111"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a6d35e3834c5477d7542b54e1ee58f111">CHMSOperationOrder::m_wndMaterialPreparingView</a></div><div class="ttdeci">CHMSOperationMaterialView m_wndMaterialPreparingView</div><div class="ttdoc">View vật liệu chuẩn bị</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:72</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a6e851279d5c847494e7a5c6715981e01"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a6e851279d5c847494e7a5c6715981e01">CHMSOperationOrder::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div><div class="ttdoc">Đặt các giá trị mặc định cho các điều khiển.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a71d1896cd4686d436367223026dd21f2"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a71d1896cd4686d436367223026dd21f2">CHMSOperationOrder::OnUpdateOperationBoard</a></div><div class="ttdeci">void OnUpdateOperationBoard()</div><div class="ttdoc">Cập nhật bảng phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a7224ca0f74dace9ecf3fd1d6148e28a5"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a7224ca0f74dace9ecf3fd1d6148e28a5">CHMSOperationOrder::m_wndMaterialView</a></div><div class="ttdeci">CHMSOperationMaterialView m_wndMaterialView</div><div class="ttdoc">View vật liệu phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:70</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a74a2e59c204fb0524285f18ebe3a9ccc"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a74a2e59c204fb0524285f18ebe3a9ccc">CHMSOperationOrder::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div><div class="ttdoc">Lấy dữ liệu từ màn hình và lưu vào biến thành viên.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a75768bb6d6f314e2676bca41102ab76d"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a75768bb6d6f314e2676bca41102ab76d">CHMSOperationOrder::OnViewDicomImagesOrderline</a></div><div class="ttdeci">void OnViewDicomImagesOrderline()</div><div class="ttdoc">Xem hình ảnh DICOM từ order line.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a764f79ae636d2dfb0d196b376318ec41"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a764f79ae636d2dfb0d196b376318ec41">CHMSOperationOrder::OnCancelHMSOperationOrder</a></div><div class="ttdeci">int OnCancelHMSOperationOrder()</div><div class="ttdoc">Xử lý hủy bỏ thao tác.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a7864f0311276928d357237ea80cf0408"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a7864f0311276928d357237ea80cf0408">CHMSOperationOrder::m_nOrderID</a></div><div class="ttdeci">long m_nOrderID</div><div class="ttdoc">ID của đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:53</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a81dd61ab7dc45b612516b312e81b97ff"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a81dd61ab7dc45b612516b312e81b97ff">CHMSOperationOrder::OnFollowLaserTreatment</a></div><div class="ttdeci">void OnFollowLaserTreatment()</div><div class="ttdoc">Theo dõi điều trị laser.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a83d0143e1efe5d4ef1d1f775620a29be"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a83d0143e1efe5d4ef1d1f775620a29be">CHMSOperationOrder::OnOrderListDblClick</a></div><div class="ttdeci">void OnOrderListDblClick()</div><div class="ttdoc">Xử lý sự kiện double click vào đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a88c7273a3e3c08e6dfcac4b05208a849"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a88c7273a3e3c08e6dfcac4b05208a849">CHMSOperationOrder::OnResizeLayout</a></div><div class="ttdeci">void OnResizeLayout()</div><div class="ttdoc">Tính toán lại layout khi resize.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a8a55e3f09c33e43da7584731ec793914"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a8a55e3f09c33e43da7584731ec793914">CHMSOperationOrder::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div><div class="ttdoc">Lấy dữ liệu từ biến thành viên và hiển thị lên màn hình.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a8e80a9e3704b53398da3afe270db70e7"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a8e80a9e3704b53398da3afe270db70e7">CHMSOperationOrder::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div><div class="ttdoc">Đặt chế độ làm việc cho view.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a91e2df5fe0b9ac807b4e87dd366d110a"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a91e2df5fe0b9ac807b4e87dd366d110a">CHMSOperationOrder::OnNhapPhieuPhucHoiChucNang</a></div><div class="ttdeci">int OnNhapPhieuPhucHoiChucNang()</div><div class="ttdoc">Nhập phiếu phục hồi chức năng.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a96abee818fcb0167ff844af2fe2be2d9"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a96abee818fcb0167ff844af2fe2be2d9">CHMSOperationOrder::OnAddHMSOperationOrder</a></div><div class="ttdeci">int OnAddHMSOperationOrder()</div><div class="ttdoc">Xử lý thêm đơn phẫu thuật mới.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a97ba2ca679942dd676cb44e33da939cd"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a97ba2ca679942dd676cb44e33da939cd">CHMSOperationOrder::m_wndProfiles</a></div><div class="ttdeci">CHMSSurgeryProfiles m_wndProfiles</div><div class="ttdoc">View hồ sơ phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:73</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a99c2130ed8419504587910515529f4ed"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a99c2130ed8419504587910515529f4ed">CHMSOperationOrder::m_szStatus</a></div><div class="ttdeci">CString m_szStatus</div><div class="ttdoc">Trạng thái đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:57</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a9ca6aff9263299428524dcbeae300bb3"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a9ca6aff9263299428524dcbeae300bb3">CHMSOperationOrder::OnOrderListLoadData</a></div><div class="ttdeci">long OnOrderListLoadData()</div><div class="ttdoc">Load dữ liệu danh sách đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a9d0ed5fbf7ccba4fcb09b56c981536e8"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a9d0ed5fbf7ccba4fcb09b56c981536e8">CHMSOperationOrder::m_wndOrderList</a></div><div class="ttdeci">CGuiListCtrl m_wndOrderList</div><div class="ttdoc">Danh sách đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:78</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_a9f66066120d3042aaf2a60ca9162ee8b"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#a9f66066120d3042aaf2a60ca9162ee8b">CHMSOperationOrder::m_szCreatedBy</a></div><div class="ttdeci">CString m_szCreatedBy</div><div class="ttdoc">Người tạo đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:60</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_aa3ad27af3fd7092b7356a9555b20a7f1"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#aa3ad27af3fd7092b7356a9555b20a7f1">CHMSOperationOrder::OnPrintHitech</a></div><div class="ttdeci">int OnPrintHitech()</div><div class="ttdoc">In hitech.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_aa405f0b423b2563240ba6ee7e53d8e21"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#aa405f0b423b2563240ba6ee7e53d8e21">CHMSOperationOrder::m_nRefIdx</a></div><div class="ttdeci">long m_nRefIdx</div><div class="ttdoc">Index tham chiếu.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:56</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_aad576c56cb009069a5a44e5b1b1f1d48"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#aad576c56cb009069a5a44e5b1b1f1d48">CHMSOperationOrder::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div><div class="ttdoc">Tạo các thành phần giao diện.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_ab453e31480b79a5cdcd52322cbf13bfc"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#ab453e31480b79a5cdcd52322cbf13bfc">CHMSOperationOrder::OnModifyItemFee</a></div><div class="ttdeci">int OnModifyItemFee()</div><div class="ttdoc">Chỉnh sửa phí item.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_ab8c5508e966b023ae773098ad4feada8"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#ab8c5508e966b023ae773098ad4feada8">CHMSOperationOrder::m_wndGeneralView</a></div><div class="ttdeci">CHMSOperationGeneralView m_wndGeneralView</div><div class="ttdoc">View thông tin chung của phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:69</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_abdbbf52c12ba9b2db355f343ce6ce176"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#abdbbf52c12ba9b2db355f343ce6ce176">CHMSOperationOrder::OnPictureViewDICOM</a></div><div class="ttdeci">int OnPictureViewDICOM()</div><div class="ttdoc">Xem hình ảnh DICOM.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_abfdbb4bc659540762417c0fdec800f0e"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#abfdbb4bc659540762417c0fdec800f0e">CHMSOperationOrder::OnDescriptionCheckValue</a></div><div class="ttdeci">int OnDescriptionCheckValue()</div><div class="ttdoc">Kiểm tra giá trị mô tả</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_ac57e01a122b11e0861af118c20fadafc"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#ac57e01a122b11e0861af118c20fadafc">CHMSOperationOrder::m_szDoctor</a></div><div class="ttdeci">CString m_szDoctor</div><div class="ttdoc">Mã bác sĩ</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:54</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_ad1891212cb3f653319e3cb6307eeafe2"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#ad1891212cb3f653319e3cb6307eeafe2">CHMSOperationOrder::m_szDepartmentID</a></div><div class="ttdeci">CString m_szDepartmentID</div><div class="ttdoc">ID khoa.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:61</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_ad383d1bfa4c26db4d78ec393440bf1e9"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#ad383d1bfa4c26db4d78ec393440bf1e9">CHMSOperationOrder::CHMSOperationOrder</a></div><div class="ttdeci">CHMSOperationOrder()</div><div class="ttdoc">Constructor mặc định.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_adb0be4d04441e34d6255583f75e2dbb7"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#adb0be4d04441e34d6255583f75e2dbb7">CHMSOperationOrder::m_szDescription</a></div><div class="ttdeci">CString m_szDescription</div><div class="ttdoc">Mô tả đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:82</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_adc447d0d94f543eb49bb0424ed14cf58"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#adc447d0d94f543eb49bb0424ed14cf58">CHMSOperationOrder::OnHMSOperationOrderListLoadData</a></div><div class="ttdeci">int OnHMSOperationOrderListLoadData()</div><div class="ttdoc">Load dữ liệu danh sách đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_adebf0c347b31aa2a8876bc76c1cc40c1"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#adebf0c347b31aa2a8876bc76c1cc40c1">CHMSOperationOrder::OnEditHMSOperationOrder</a></div><div class="ttdeci">int OnEditHMSOperationOrder()</div><div class="ttdoc">Xử lý chỉnh sửa đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_adf142bce76e85c51e68fb68a3398d33e"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#adf142bce76e85c51e68fb68a3398d33e">CHMSOperationOrder::m_wndDescription</a></div><div class="ttdeci">CGuiTextCtrl m_wndDescription</div><div class="ttdoc">Control mô tả</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:79</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_ae3379852ddf9d7c26e2f5faa78475d3f"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#ae3379852ddf9d7c26e2f5faa78475d3f">CHMSOperationOrder::OnOrderListDeleteItem</a></div><div class="ttdeci">int OnOrderListDeleteItem()</div><div class="ttdoc">Xử lý xóa đơn phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_aef7d9b7cd0b6db05325e5f488d479b8c"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#aef7d9b7cd0b6db05325e5f488d479b8c">CHMSOperationOrder::OnDescription</a></div><div class="ttdeci">void OnDescription()</div><div class="ttdoc">Xử lý mô tả</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_af62160989408d46a9f983725d8e610b8"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#af62160989408d46a9f983725d8e610b8">CHMSOperationOrder::m_wndSearch</a></div><div class="ttdeci">CGuiTextCtrl m_wndSearch</div><div class="ttdoc">Control tìm kiếm đơn phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSOperationOrder.h:77</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_af769f848bcae06fd708cc91a42e18b8c"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#af769f848bcae06fd708cc91a42e18b8c">CHMSOperationOrder::OnPictureViewDICOM_Orderline</a></div><div class="ttdeci">int OnPictureViewDICOM_Orderline()</div><div class="ttdoc">Xem hình ảnh DICOM từ order line.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_order_html_afb1cc2f24bbe463b69cf892a2e29bc9d"><div class="ttname"><a href="class_c_h_m_s_operation_order.html#afb1cc2f24bbe463b69cf892a2e29bc9d">CHMSOperationOrder::OnEditOperation</a></div><div class="ttdeci">int OnEditOperation()</div><div class="ttdoc">Chỉnh sửa phẫu thuật.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_operation_sequence_view_html"><div class="ttname"><a href="class_c_h_m_s_operation_sequence_view.html">CHMSOperationSequenceView</a></div><div class="ttdef"><b>Definition</b> HMSOperationSequenceView.h:30</div></div>
+<div class="ttc" id="aclass_c_h_m_s_surgery_profiles_html"><div class="ttname"><a href="class_c_h_m_s_surgery_profiles.html">CHMSSurgeryProfiles</a></div><div class="ttdoc">View quản lý hồ sơ phẫu thuật.</div><div class="ttdef"><b>Definition</b> HMSSurgeryProfiles.h:42</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_h_m_s_operation_order_8h.html">HMSOperationOrder.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

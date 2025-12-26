@@ -1,0 +1,100 @@
+\doxysection{MASUnpaid\+Order\+List.\+h}
+\hypertarget{_m_a_s_unpaid_order_list_8h_source}{}\label{_m_a_s_unpaid_order_list_8h_source}\index{Include/HMSReportForms/Pharmacy/MASUnpaidOrderList.h@{Include/HMSReportForms/Pharmacy/MASUnpaidOrderList.h}}
+\mbox{\hyperlink{_m_a_s_unpaid_order_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MASUnpaidOrderList\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MASUnpaidOrderList\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a671a41d5690ea1a227962ce33318d06c}{CMASUnpaidOrderList}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a582ea9be90a29d59f7de98bca2b0c1ce}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_aa4539a09999bd440ec6d0186608fead7}{m\_wndFromDate}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a822a99f37f13fc91b213c4577d68a07c}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a8a9123cd3b4a10353d2aa2c0b3b2fd55}{m\_wndToDate}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a09c6db2453b37bc5f79d4a109f5e80d2}{m\_wndSupplierLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a823e6ce0cfc4038174b80e968c6ea59b}{m\_wndSupplier}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ab7b86bf654fdd2f0da71a7f7e17638f4}{m\_wndStorageLabel}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a43d7a0f15a827dcd3475a0b735a5411b}{m\_wndStorage}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a2509ef34840e7f26c2ba3a6966d0cc97}{m\_wndItemGroupLabel}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a91cb22f285b3ea7e5e1f27e7e48ec29b}{m\_wndItemGroup}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a44e10ec75b9ceb7719e2d9561c01559f}{m\_wndSourceLabel}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a783bb28d90e0b1de81dac887edf66528}{m\_wndGeneralDepartmentUsage}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ad67829b31ab3596cc284880e815b343c}{m\_wndSource}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a5c989a50064e6d84aca2542e32095ce3}{m\_wndPrintPreview}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ad2015e615900ae06f58aeb50857f7f69}{m\_wndExport}};}
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a66234b2b6c5dd6ed26af77aa3c4c1f53}{m\_szFromDate}};}
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a3f6e7302cf29ad2c574e502ba0545f74}{m\_szToDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ad018189072636eff43b957eae1b66368}{m\_szItemGroupKey}};}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ac33ca8a2e02f7ad22590adf05fb2a539}{m\_szStorageKey}};}
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ab066173117326f6d8f8de0bc5f4b2f6b}{m\_szSourceKey}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a6903d8be98f67a4e587af4682ffa460d}{m\_szSupplierKey}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_acb4b3014f36d040abe0fc8933f021b94}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a3522784fce5381b546e3ff0b587f4b3a}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a84e337639f38dc3cc8335c8db7e42102}{OnSupplierLoadData}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a56c388ae0e8b7994a81f41fba2508174}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a972048dd51fd69605a711d130eca503f}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a83960968ca8c25f16bafc2b64e34a84c}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageAddNew();\ \ }}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_acafdf4dbb5f0bf1864177a59e4c4af38}{OnItemGroupSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_afc3286152666a9832993dbd0728edfed}{OnItemGroupSelendok}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemGroupSetfocus();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemGroupKillfocus();\ }}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_afaeaccd8876bffce1d34cdfde5ee2fb3}{OnItemGroupLoadData}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemGroupAddNew();\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ab28680efa9e1c9aaefbb1d8b1e8f27c6}{OnSourceSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_aa8e1a85f0731d33391a7ade18fcb1398}{OnSourceSelendok}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSourceSetfocus();\ }}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSourceKillfocus();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a2040e02b3e1a6544094fbe45eac23b68}{OnSourceLoadData}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSourceAddNew();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a20740fa907069412811024908fffea0c}{OnPrintPreviewSelect}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a81c4702dd3f616c9be14f133e50476dd}{OnExportSelect}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a671a41d5690ea1a227962ce33318d06c}{CMASUnpaidOrderList}}(CWnd\ *pParent);}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a9ed2173fc352fd3d6bd525563654c4ac}{\string~CMASUnpaidOrderList}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_af2862406bba0b598a576447fabcfc37b}{OnCreateComponents}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a750d2eaf2077c8aed1ff1dcaf21e9f2a}{OnInitializeComponents}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a66a8f6eefa4b3724475fa2bdb2e3c1a0}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_af1bce065d0cace797481b5157ec09d94}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a082bc58798748c1d61831383532d4838}{SetDefaultValues}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a3d90c70e34a9c471ffce0b1f6305775c}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00091\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_abc3fb7bbfddbbded5d046dea12dcafb6}{GetQueryString1}}();}
+\DoxyCodeLine{00092\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_a5d58deee4f5d57fc64560981a2cd539e}{GetQueryString2}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_af9861a92a5fb0c18f4a3b205ed18a5bc}{GetDebtAmount}}(CString\ szPartnerID,\ CString\ szDate);}
+\DoxyCodeLine{00094\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00095\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_m_a_s_unpaid_order_list_ac164be70a356b841cad246ba80c17865}{OnSetFocus}}(CWnd*\ pOldWnd);}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

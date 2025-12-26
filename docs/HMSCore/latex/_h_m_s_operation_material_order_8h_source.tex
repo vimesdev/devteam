@@ -1,0 +1,302 @@
+\doxysection{HMSOperation\+Material\+Order.\+h}
+\hypertarget{_h_m_s_operation_material_order_8h_source}{}\label{_h_m_s_operation_material_order_8h_source}\index{Include/HMSCore/HMSOperationMaterialOrder.h@{Include/HMSCore/HMSOperationMaterialOrder.h}}
+\mbox{\hyperlink{_h_m_s_operation_material_order_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSOPERATIONMATERIALORDER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSOPERATIONMATERIALORDER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a5e6022e1ab10ddc03a7528747945656c}{CHMSOperationMaterialOrder}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_afa7cc920919224e486540cd4a7060edc}{m\_wndPatientListInfo}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad23cb63e0c2f7867b6044d6e9afed08b}{m\_wndSurgeryInfor}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_adb3d7bdaa5813b1f7bc2ac98b6a95bcc}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a7941b742995ebc04e6b08c699d11331b}{m\_wndFromDate}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ac711dd0dd779129ff783d73b47a13d9f}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4f8c06b1549797bd877ca509b756869e}{m\_wndToDate}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a01636e529eb22f8af0353745f84c444e}{m\_wndDocNoLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a8f5d87de87d472f4285e43704194ebbd}{m\_wndFindDoc}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4bc6448a3cb1fadd1f1e360f1d46011e}{m\_wndFullNameLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a79b994fe2acae074f31a02efd6b1436a}{m\_wndFindName}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a2a3a657b7e090014a2382db5734373dc}{m\_wndFind}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4a13c90f261f2e5860a59f3e05529639}{m\_wndDocumentNoLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae11425b72cf1d8161d49a65b66d7f15b}{m\_wndDocumentNo}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//CGuiNumberCtrl\ \ \ \ m\_wndDocumentNo;}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae65fddb0d1a1a8c8a079b45763275128}{m\_wndPatientNameLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a275c9c588f936021725fcc22a55803cc}{m\_wndPatientName}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_af2085e6b9b32cd515977067cd105cd98}{m\_wndObjectLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_afdeb29179942da000a91296549d130de}{m\_wndObject}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a256f9a8319d5254f49cd13b9787dd237}{m\_wndAgeLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a9019fed1b39084abb09e7c5609c7ad53}{m\_wndAge}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_acd31e22072c6ae5c53d247bfb091a2b0}{m\_wndSexLabel}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ac291ed70c05bbe03a1942b30a3948e4e}{m\_wndSex}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad25d9c0f40987e5ade71626407ce4636}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ab29e494e04c350fec7908ec268ce17fa}{m\_wndOrderDate}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_acd23490d643341c99c8abc42af907184}{m\_wndPerformDeptLabel}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a8f55ac9cb2cb633f2a570c97f22868a3}{m\_wndPerformDept}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa78c0431edf350d83c02a2fe404ca234}{m\_wndTableLabel}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae10774c27ad615043b08359e9b914567}{m\_wndTable}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a263f23604e196ab9710aac87217064c8}{m\_wndDiagnosticLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ab96ecbd7f25146400d83858356f25df5}{m\_wndDiagnostic}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aff5667d6b0be40d8246b897ba8c0e03f}{m\_wndSurgeryNameLabel}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a77039275d63e38183b41f7c1afc1c90d}{m\_wndSurgeryName}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_abe970a6d94c08e65b2b569315895c10d}{m\_wndCommentLabel}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a47d2eac79a114ed2703fe600e049624b}{m\_wndComment}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a32477b1d45356a3c895f3d979b4c2abf}{m\_wndBeforeSurgeryLabel}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ade7170be8e24b8dc3fa2cd873ac99244}{m\_wndBeforeSurgery}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ac1d355eeb721b58677021bb386a4b6b8}{m\_wndAntibioticBackup}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aced4ef96cb5ea0da2b53bc836ec748d1}{m\_wndYes}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a7b3a258c365ea398331eca5034582777}{m\_wndNo}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad2305622310f3c789fb7b47ab74cb323}{m\_wndAnesthesiaMethodLabel}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a84457947620d7ff616308396ae8a0028}{m\_wndAnesthesiaMethod}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a978ff0f4ac3dbf3d7e0ae335f5f28544}{m\_wndSurgeonLabel}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a390243d7e60850e47b253c1d1d3b6f79}{m\_wndSurgeon}};}
+\DoxyCodeLine{00081\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3580e8cd13d944130fc4681fd2f2c0e2}{m\_wndAssistLabel}};}
+\DoxyCodeLine{00082\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a9782823787219dff20e1f652fb5f5e52}{m\_wndAssist}};}
+\DoxyCodeLine{00083\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad477dcf7f5d4a47b7534f8ce1ffccdaa}{m\_wndAssist2Label}};}
+\DoxyCodeLine{00084\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a11ee59ceb70b190ff058de52246954df}{m\_wndAssist2}};}
+\DoxyCodeLine{00085\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4ee73ee5ade2080b6ab4892c71dfa512}{m\_wndAdd}};}
+\DoxyCodeLine{00086\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a0093a703cfe622c91c9733498849a71d}{m\_wndEdit}};}
+\DoxyCodeLine{00087\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_afb0435921f8cb3baec6534aefe48faf5}{m\_wndDelete}};}
+\DoxyCodeLine{00088\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a0ef22cbcb5c050cdc617805d965fda1b}{m\_wndSave}};}
+\DoxyCodeLine{00089\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_afa5ecca66c40b8c40ba522c946687a06}{m\_wndCancel}};}
+\DoxyCodeLine{00090\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a1c35c60fad25112c34002e583c3e6682}{m\_wndAddDrugMaterial}};}
+\DoxyCodeLine{00091\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3a6bd803946e50f6030043fad3e6fc9c}{m\_wndList}};}
+\DoxyCodeLine{00092\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a520ed3bb98613003c41b8b8ab0981d04}{m\_wndDrugList}};}
+\DoxyCodeLine{00093\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a2b5b60c12ab2f28c6521987ec1eb71d3}{m\_wndPrintPatientList}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae0d01821bbc15f5912def43c23148603}{m\_szFromDate}};}
+\DoxyCodeLine{00096\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa8854ab4ab2e5d6db47309d88955e928}{m\_szToDate}};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a66449f41746f71274d2a672c447912fe}{m\_nFindDoc}};}
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aad9fa236d03c82ef7d210bbbec042f5e}{m\_szFindName}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a42558d528f121a854d648e1612528b95}{m\_nDocumentNo}};}
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a2b2af4685c85006cd33d6bbd88725c25}{m\_szDocumentNoKey}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a942e5a246849fd5aaae8bf7c30fa527e}{m\_szPatientName}};}
+\DoxyCodeLine{00105\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae71ad77cf41addfebd6ccdf2f64684ef}{m\_szObjectKey}};}
+\DoxyCodeLine{00106\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aebe3a05f6c058db7b43293731b3b701a}{m\_szAge}};}
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3eb5e600ea9bb71cef3b9701bddda8e9}{m\_szSexKey}};}
+\DoxyCodeLine{00108\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a27b381d7fc13284c56573113f31d7721}{m\_szOrderDate}};}
+\DoxyCodeLine{00109\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a0370f8cfb58bf9cdd595ee4e36473c2d}{m\_szPerformDeptKey}};}
+\DoxyCodeLine{00110\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad80930b0c331f07c5532f499e03b5090}{m\_szTableKey}};}
+\DoxyCodeLine{00111\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a1bcb5d54e9b5765d6a7bea06f48481b1}{m\_szDiagnostic}};}
+\DoxyCodeLine{00112\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a8a8482fc0b1aa7f438b316632c19c347}{m\_szSurgeryNameKey}};}
+\DoxyCodeLine{00113\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a948d01342819decf5372751b5ba6872d}{m\_szComment}};}
+\DoxyCodeLine{00114\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a10d3edfe2fd3bcf6f64b45353ed84686}{m\_szBeforeSurgeryKey}};}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4639f23ae59974ae38af5cc65f24765e}{m\_nYes}};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_abb3e5c01d9b501e9a7b64be60bfcbb42}{m\_nNo}};}
+\DoxyCodeLine{00117\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a7dce3613806b65f83bd2ac2ab6342f0f}{m\_szAnesthesiaMethodKey}};}
+\DoxyCodeLine{00118\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_af6fdc425949ffce3570339ab944c6e7f}{m\_szSurgeonKey}};}
+\DoxyCodeLine{00119\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_abacd0f0a96cdc51595e732909d050223}{m\_szAssistKey}};}
+\DoxyCodeLine{00120\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ab89895ad2ba67ff564780ca0161fe72e}{m\_szAssist2Key}};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_abfb535cafe11a68eb956801f343638a0}{m\_hms\_operation\_Tbl}};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_afd9ea36996e9f37600581152627f5fa8}{m\_nOperationID}};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae09ed3c4ea27777dc34d1a9a1d64bb5e}{m\_nPatientNo}};}
+\DoxyCodeLine{00126\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3e4740151978f47e1dd9cd5bbdaa711a}{m\_szOpStatus}};}
+\DoxyCodeLine{00127\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aeebd8c7d836dd46ce92a9874265d4b21}{m\_szMatStatus}};}
+\DoxyCodeLine{00128\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_acf313abcf102a6ddb9eb7274ce82dcd3}{m\_szObjectType}};}
+\DoxyCodeLine{00129\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a2c2a685d9d82f6571c63d95e991f4453}{m\_szPOrder}};}
+\DoxyCodeLine{00130\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a8e118220b4468174ac03fa4194d714e6}{m\_szOldOrderDate}};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a0be613f7dd10650a485b473ac578efa0}{m\_nIdx}};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4f0fff163bf968d80c8c3d076594fd20}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a13542c94b5719e72c64d2f93f176a033}{OnToDateCheckValue}}();}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFindDocChange();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFindDocSetfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFindDocKillfocus();\ }}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae291c4741d98c27f4669d4e70e1f8782}{OnFindDocCheckValue}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFindNameChange();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFindNameSetfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFindNameKillfocus();\ }}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a0e6cfe30aa1b98cf54ae199631b5bb85}{OnFindNameCheckValue}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a931621034d5fa219181bd4d5d9c23404}{OnFindSelect}}();}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoChange();\ }}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoSetfocus();\ }}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoKillfocus();\ }}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnDocumentNoCheckValue();}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa20527cf41efdd6e1de8e49e21f2717d}{OnDocumentNoSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a04ff000c360a88a8fce721e662f6cdee}{OnDocumentNoSelendok}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoSetfocus();\ }}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoKillfocus();\ }}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a888049263a8e6b90f6c24d6650f75e8a}{OnDocumentNoLoadData}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoAddNew();}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameChange();\ }}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameSetfocus();\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameKillfocus();\ }}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a219a76117ae05038080eed206929e2db}{OnPatientNameCheckValue}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a294eda2524c23aed4721c2daa3766a2a}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_adf2a5a94e0a65fde46b6722c4a9d8d36}{OnObjectSelendok}}();\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectSetfocus();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectKillfocus();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a466b599e571b70accaeba1a3dc39f90d}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectAddNew();\ }}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAgeChange();\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAgeSetfocus();\ }}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAgeKillfocus();\ }}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4bfa1a4e8c448f09cdd321360e30b24e}{OnAgeCheckValue}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa70a11bc2e02dfc5886deb323f703f62}{OnSexSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a837d109fb8413b9411a75cd53ebeb398}{OnSexSelendok}}();\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexSetfocus();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexKillfocus();\ }}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a753006679dc9704152d6d80f6631669e}{OnSexLoadData}}();\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexAddNew();}}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_abd3432ccfc80d612ccb36e011c7f2535}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aaec12c60bbb11fbde5f17cccb70e5a8a}{OnPerformDeptSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a5a192db383afa98b752876f8e7f8a17a}{OnPerformDeptSelendok}}();\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptSetfocus();\ }}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptKillfocus();\ }}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a5363931c05418dcc096fae67ad778d57}{OnPerformDeptLoadData}}();\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptAddNew();\ }}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a8125a3cc9a12673d63e0e7a894625575}{OnTableSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a339e0d73835bbb661e8b459b2b3f45cd}{OnTableSelendok}}();\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTableSetfocus();\ }}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTableKillfocus();\ }}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3dc47939e488da54782a19146e13fb7b}{OnTableLoadData}}();\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTableAddNew();\ }}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticChange();\ }}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticSetfocus();\ }}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticKillfocus();\ }}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a72f6ed844ba30237c8001dfaf413f746}{OnDiagnosticCheckValue}}();\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a1d1e3875037a6493ee5b77aeb1c29fd4}{OnSurgeryNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a945ce597ac3e933b2def2adbb6d3ecd5}{OnSurgeryNameSelendok}}();\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryNameSetfocus();\ }}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryNameKillfocus();\ }}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aff4f2e98ed7f32e4291e24aa1a22b80c}{OnSurgeryNameLoadData}}();\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryNameAddNew();\ }}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCommentChange();\ }}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCommentSetfocus();\ }}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCommentKillfocus();\ }}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_afc6f7b02143f9d46c0ea01080f1be9c4}{OnCommentCheckValue}}();\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_accab2278feb55a300e3617208a010531}{OnBeforeSurgerySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a5c1b90751a6b8628dcb5e921eac386a7}{OnBeforeSurgerySelendok}}();\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeforeSurgerySetfocus();\ }}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeforeSurgeryKillfocus();\ }}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a8a8e30755639ca057b72ecf536010122}{OnBeforeSurgeryLoadData}}();\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeforeSurgeryAddNew();\ }}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a1e4ee8fab86afc414ceeb8ff00b9b336}{OnYesSelect}}();\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3d19363ab45a9bdc9de02b386e9b46a1}{OnNoSelect}}();\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3263c1c81c2741747d34dc33c8b5c9cd}{OnAnesthesiaMethodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a52807186307cb8b6387df7c64ba3fd53}{OnAnesthesiaMethodSelendok}}();\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthesiaMethodSetfocus();\ }}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthesiaMethodKillfocus();\ }}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae8e9b8063c3f5cfe88915af6cf14be35}{OnAnesthesiaMethodLoadData}}();\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthesiaMethodAddNew();\ }}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a82c3ee906300890f1e9d02b278646900}{OnSurgeonSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a7ca7d3515eda7f782f9686f28dfbb8a4}{OnSurgeonSelendok}}();\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeonSetfocus();\ }}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeonKillfocus();\ }}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4458c09e3f6ac2628076ae299125316d}{OnSurgeonLoadData}}();\ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeonAddNew();\ }}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a9f1493770ca6fa55a2780268ac8477ec}{OnAssistSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a7f3e07570267a303020efa1d5e149f92}{OnAssistSelendok}}();\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistSetfocus();\ }}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistKillfocus();\ }}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a6731a42e430a224842bef2e4a0b862a1}{OnAssistLoadData}}();\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistAddNew();\ }}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a9dfd492be1847bc2b9933def10294e2c}{OnAssist2SelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a000a772d3064231a8d8fafdaa24d4548}{OnAssist2Selendok}}();\ }
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssist2Setfocus();\ }}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssist2Killfocus();\ }}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_af2a9972054cbf7599eb73cf272c4ec7c}{OnAssist2LoadData}}();\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssist2AddNew();\ }}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a2ad45e515ff9141e70ae679b280e7665}{OnAddSelect}}();\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a01bd516389498365377164dbf9a81685}{OnEditSelect}}();\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a96faee5d3e3d8cce80680f704fde92e0}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a90ad501f8a3e5fbb71b947c017ee2fc4}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aad5d28a486fb121eb145228dcd2c650e}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a892ec02dea536afdbdb57ed5d2ef25b7}{OnAddDrugMaterialSelect}}();\ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a3d60fa8adca52aba065d2cdf2f080c74}{OnListLoadData}}();\ }
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a86916abb39591114a2cdc80f0019f8ab}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a8d48f445bf6397e9022b9730a4dfdcfd}{OnListDblClick}}();\ }
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa8c54a398bdbbed60e3cba796462ac09}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a84d8b343aa883732a36137a0fabb59ba}{OnDrugListLoadData}}();\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa4a5bfd054ece8df7fb172ae20f7045b}{OnDrugListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae329eed952c1f3f98c645559b0ce151a}{OnDrugListDblClick}}();\ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a6f7c6830458049cc033530dc06aa4407}{OnDrugListDeleteItem}}();}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ab2850d71987461b838c3e9bfa93469fd}{OnPrintPatientListSelect}}();}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ac99a8309b966b9aa9fc4b5819be9bdf4}{OnQtyCheckValue}}();}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a29c99c80d063743847b3338f3e765d47}{OnQtyKillfocus}}();}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a5e6022e1ab10ddc03a7528747945656c}{CHMSOperationMaterialOrder}}();}
+\DoxyCodeLine{00266\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a00f78369a2a3aea349eeadfa073c81e3}{\string~CHMSOperationMaterialOrder}}();}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a5783bfd68092c2653af4ad6f242986fa}{OnCreateComponents}}();}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad88c4281011cdffe44edcf3cbcf863c7}{OnInitializeComponents}}();}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ae2f87d3817ee7a334306f29df84c6a7c}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a2062e699ec6e1c6c291eeb355a2f7f8b}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa70ff3c302df891747c5f7d47f1d8f2f}{GetDataToScreen}}();}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_af616f3cdb780437ed97f6369e770a279}{GetScreenToData}}();}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a997130c0a482fbc5c74d6a5c97b616e9}{SetDefaultValues}}();}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a893d351f319a9a730b30eee4901d23bf}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a9c4c8d5df27623d25730e4aecca0de13}{OnAddHMSOperationMaterialOrder}}();\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a5d96310f55970ed2caf3ef121d01b89f}{OnEditHMSOperationMaterialOrder}}();\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a20d820091c225f7b5e5c8a6225636611}{OnDeleteHMSOperationMaterialOrder}}();\ }
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_acb130baa4e36d42aa4b50de8392e70e3}{OnSaveHMSOperationMaterialOrder}}();\ }
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a6c440ccc08edae6ef8f5842d8f1b0179}{OnCancelHMSOperationMaterialOrder}}();\ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad1efbc4f5d2bea960ed112aa614c6d45}{OnHMSOperationMaterialOrderListLoadData}}();}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a395eabbb53696a2f3ba5def17639a42b}{OnCheckValidate}}();}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ad2866e09a85edad9b2e3326a88e52df2}{OnRefreshDrugList}}();}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_aa3f56e06c2645a8b369395b8bef8c36e}{OnRefreshPatientList}}();}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_ac1d47129e26ff530ed99d8f86426bf2d}{PreTranslateMessage}}(MSG\ *pMsg);}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a6221dda61db2493b1438da17dbf03a5d}{OnSendOrder}}();}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a4952a8078f9e9217b93abb3c1a362766}{OnPatientListCheckAll}}();}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a050b27a5190aaae8fe7cb2da6a77aa49}{OnPatientListUncheckAll}}();}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a747906428dcf13b433fa143b8b3c3c59}{OnPrintPatient}}();}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a0c52bee8e345e432324cdb58c0e71933}{OnPrint}}(\textcolor{keywordtype}{bool}\ bPrintAll\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ bPreview\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00296\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_order_a1e289d0458422bd4494a4b7638c0d1b1}{GetQueryString}}(\textcolor{keywordtype}{bool}\ bPrintAll\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \};}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

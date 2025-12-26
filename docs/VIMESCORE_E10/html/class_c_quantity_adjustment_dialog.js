@@ -1,0 +1,28 @@
+var class_c_quantity_adjustment_dialog =
+[
+    [ "CQuantityAdjustmentDialog", "class_c_quantity_adjustment_dialog.html#ac739ddb02c218948861a4b4f5d03a88e", null ],
+    [ "~CQuantityAdjustmentDialog", "class_c_quantity_adjustment_dialog.html#aaa08a12ea83737d43a4a7bff7fc987af", null ],
+    [ "GetDataToScreen", "class_c_quantity_adjustment_dialog.html#a0da2790fc346ae62f49a98c3b96c8cd1", null ],
+    [ "GetScreenToData", "class_c_quantity_adjustment_dialog.html#aee9318eeb281ac004cb70cdd4c5224ab", null ],
+    [ "OnAddQuantityAdjustmentDialog", "class_c_quantity_adjustment_dialog.html#a50b99dd63a18bd432c39a92976e67bdf", null ],
+    [ "OnCancelQuantityAdjustmentDialog", "class_c_quantity_adjustment_dialog.html#a134134c295080f433d4b3cfb3828c30a", null ],
+    [ "OnCreateComponents", "class_c_quantity_adjustment_dialog.html#a5932b837694955e7d1f06a2d8ec4e844", null ],
+    [ "OnDeleteQuantityAdjustmentDialog", "class_c_quantity_adjustment_dialog.html#acd9c286f78a7ecea50878454eae0e243", null ],
+    [ "OnDiscardSelect", "class_c_quantity_adjustment_dialog.html#a8d8cf0732e1bafeda75b8707a83a1c6e", null ],
+    [ "OnDoDataExchange", "class_c_quantity_adjustment_dialog.html#a6293277058f92b11ed3b35fed3578357", null ],
+    [ "OnEditQuantityAdjustmentDialog", "class_c_quantity_adjustment_dialog.html#a4fd3c98a6f8dae7e3318ac893bae01c3", null ],
+    [ "OnInitializeComponents", "class_c_quantity_adjustment_dialog.html#a2dbd43e4271ac23fa9cae22dc0bf2086", null ],
+    [ "OnOKSelect", "class_c_quantity_adjustment_dialog.html#abbf79522fa154375c254d5353f05cb52", null ],
+    [ "OnQuantityAdjustmentDialogListLoadData", "class_c_quantity_adjustment_dialog.html#a1f45cfe7e14e0992b8fb3e0e46773a70", null ],
+    [ "OnRealInventoryQuantityCheckValue", "class_c_quantity_adjustment_dialog.html#a375809c1fe9abe6064a3c7c37e957f2e", null ],
+    [ "OnSaveQuantityAdjustmentDialog", "class_c_quantity_adjustment_dialog.html#a7f7c4d8b8b446e50b77d0bcd41f76916", null ],
+    [ "OnSetWindowEvents", "class_c_quantity_adjustment_dialog.html#a47c9ce4225ea7df8c6921cca968c1729", null ],
+    [ "SetDefaultValues", "class_c_quantity_adjustment_dialog.html#a5b0a0750d9a0852e79ec241a0dd3e3f1", null ],
+    [ "SetMode", "class_c_quantity_adjustment_dialog.html#acd8fcc9febeef1383370ca3ca162ed69", null ],
+    [ "m_nRealInventoryQuantity", "class_c_quantity_adjustment_dialog.html#abaf4b128be274fc81799282162720bb1", null ],
+    [ "m_wndDiscard", "class_c_quantity_adjustment_dialog.html#a1d055c95d8f993938b5a1c80381ded59", null ],
+    [ "m_wndInventoryQuantity", "class_c_quantity_adjustment_dialog.html#a92b58c8558155e4f7e442f8f97df6755", null ],
+    [ "m_wndOK", "class_c_quantity_adjustment_dialog.html#a5216d54ab4a674fad2954f81eefb8662", null ],
+    [ "m_wndRealInventoryQuantity", "class_c_quantity_adjustment_dialog.html#a6b33fe648b7a2a2452e6e85dc710eaa2", null ],
+    [ "m_wndRealInventoryQuantityLabel", "class_c_quantity_adjustment_dialog.html#a26f80689659ea6e4319c4a68a884c3ab", null ]
+];

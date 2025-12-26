@@ -1,0 +1,103 @@
+\doxysection{Blood\+Bank\+List\+Servicex.\+h}
+\hypertarget{_blood_bank_list_servicex_8h_source}{}\label{_blood_bank_list_servicex_8h_source}\index{Include/HMSReportForms/LIMS/BloodBankListServicex.h@{Include/HMSReportForms/LIMS/BloodBankListServicex.h}}
+\mbox{\hyperlink{_blood_bank_list_servicex_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BLOODBANKLISTSERVICEX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BLOODBANKLISTSERVICEX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_blood_bank_list_servicex_a9ba53394ce995eb696af851cf540a0f2}{CBloodBankListServicex}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a43da98991f9c30348640c0ad4c95713f}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a665f0d8cabc6508d0137e182799c841c}{m\_wndFromDate}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_adac9f162830eafae6808e49e616de3ed}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_ae368051205898f0ae899a3e58c23a046}{m\_wndToDate}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_ab82470eea754d4ed580461c924f9f596}{m\_wndReportCondition}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a53129b4faa613e910ff79b2a91f73a1a}{m\_wndObject}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_aea7de8a8be8d05406768576c78ed880e}{m\_wndDepartment}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a2bc2c8042257d1fc856d093bb1e7c74d}{m\_wndList}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_aa057760c5cfaca0569c5e95aa3b54c91}{m\_wndListProduct}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_af58d95619b154e2ae83a168a8035d0d2}{m\_wndPrintPreview}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a489f1846fd5a80ca7157c857fc951308}{m\_wndExport}};}
+\DoxyCodeLine{00045\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a443ae3b8a423e7f73d9c79f7c90e1dd1}{m\_szFromDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a76faf36cd8c61d4c9808ded5ec031202}{m\_szToDate}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a8556d99034fd40699ff1beaabcc7e61e}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a7f34c9bd402c32ff89dac21c4532ad2f}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_ab2abe1a4127ce8658ab29ce231e1e4b4}{OnObjectCheckAll}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a2e27d56b9df7f3ed125fb7ebdec6a2d3}{OnObjectUncheckAll}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_af503e5723e10b4e58a88ad01ff212729}{OnDeptCheckAll}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_ae6baee99e0f6331b62353e7d733ffd01}{OnDeptUncheckAll}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a19cd01eb04b39c39bc0e3602c8008bc4}{OnListCheckAll}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_aaa212dce1163c2f1c8db56c8383f6d4e}{OnListUncheckAll}}();}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a2208f9819e51a490a05972eacbad7388}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a30eb838d193b20ee74f7971e6e6dd3ef}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_abb583fb5a7b8d8ffcb59c7e41ac618c8}{OnObjectDblClick}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a1f99ab4abfc00efcde845d405d4de93f}{OnObjectDeleteItem}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_aa49c2ebfbc715d87702220b0a7b854a1}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a84a59cf39839da3bca7000fa6a3ffde9}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a29182b26bd34858558f8e130fce6b400}{OnDepartmentDblClick}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a068f44d7a7dab3abcb315aaba8a07519}{OnDepartmentDeleteItem}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_aeccf8ed790aff4965c89d72cb3cb9647}{OnListLoadData}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a7da48519af271d4a03ead6dbefbe03f7}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a17c1c678d9a47e39792eb9959ea641e1}{OnListDblClick}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_ae6210dee956f0182b7e5b0b57373b570}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a6148fb9ed7b233991c7f589f0ab0ca9e}{OnPrintPreviewSelect}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_ae101e73bf6fdffe51643531277307400}{OnExportSelect}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a714e1392f0ec3b6388b05abaa90fe821}{OnExportSelect1}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a9f9a44ce30561500e0f7e285017a6de0}{OnExportSelect2}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a9ba53394ce995eb696af851cf540a0f2}{CBloodBankListServicex}}(CWnd\ *pParent);}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a7d33a06db09aa306ad9e4ff9b570ccbd}{\string~CBloodBankListServicex}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a0967dc7127863667e1de56a8194e40f3}{OnCreateComponents}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a84f446061b0fa682f09adc75b65efe48}{OnInitializeComponents}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a0e1095195dc8622e4d3d303beddc057e}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a49a320cd69d730888b573a443ace955e}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_af59a8b2fc14af9a162ee7dc3e0797c29}{GetDataToScreen}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a14e1a4fc80951c9ff487d842deb6c56a}{GetScreenToData}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_aca6c6b7e930ba543a0c9b5981e4dfa02}{SetDefaultValues}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a0d614dd17a5c63a6ba0301abd015e30b}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a6f1a6941ea854a58281f0e205c257bc7}{OnAddBloodBankListService}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a299f31880274fc7e80235c3b657a7242}{OnEditBloodBankListService}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a4177afe8cf5edaea09e0e1d7af2b1c75}{OnDeleteBloodBankListService}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a9dca39a52bbb695812c01d0369c0104a}{OnSaveBloodBankListService}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a8f5b52ae72511e7f7d3172b12b29d65f}{OnCancelBloodBankListService}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a4369d2dd13b5f3dd0b6a818fb3736cdd}{OnBloodBankListServiceListLoadData}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_a65df90260eccfcfff32ce4f88e829785}{GetQueryString}}();}
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_blood_bank_list_servicex_accc8cea4cee596a569207f4786379deb}{GetQueryString1}}();}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

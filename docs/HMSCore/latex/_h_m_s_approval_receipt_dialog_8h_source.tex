@@ -1,0 +1,171 @@
+\doxysection{HMSApproval\+Receipt\+Dialog.\+h}
+\hypertarget{_h_m_s_approval_receipt_dialog_8h_source}{}\label{_h_m_s_approval_receipt_dialog_8h_source}\index{Include/HMSCore/HMSApprovalReceiptDialog.h@{Include/HMSCore/HMSApprovalReceiptDialog.h}}
+\mbox{\hyperlink{_h_m_s_approval_receipt_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSAPPROVALRECEIPTDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSAPPROVALRECEIPTDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ ©\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a2caae431c1b6e245490c653152f2a7f9}{CHMSApprovalReceiptDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ace46097bbbd32d9e3945dee710d8c2a7}{m\_wndGeneralCost}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ab89f026a88218279161bafc755604bfc}{m\_wndList}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ad45ba2fb813e7fcd0bf58183a5c0ee23}{m\_wndReceiptDateLabel}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a2496765df2333f1c1d083967b845c8d3}{m\_wndReceiptDate}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a3560495333cf3f58725cf136bde381c5}{m\_wndStaffLabel}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ac174631c22bdb51bb680ecc8735b6043}{m\_wndStaff}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ac76dc69e5ac2dde876b739a4ca42b486}{m\_wndReceiptNoLabel}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aa5fc65d312dbbd8f5a447d8218367ef6}{m\_wndReceiptNo}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a6f7eb22a89696c1eaad6cb3cd4b5cc8f}{m\_wndPaymentMethodLabel}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_af3483288f23bdd85a5751d999e49d3dc}{m\_wndPaymentMethod}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a53ac17f83f5b1b8fb381c991faa2ad76}{m\_wndTotalAmountLabel}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a5f7ad5680c9c373c002ddf75a8029a70}{m\_wndTotalAmount}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ab72a1b61dcd926012084d28c18f6b66c}{m\_wndTotalDepositLabel}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_abf8871ae6fe8f5cd618dff52d136c57e}{m\_wndTotalDeposit}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a621763516c0e61e174bbb1d116e68c10}{m\_wndTotalPayableLabel}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_abee9be052cf7cec364d499e0997c97e1}{m\_wndTotalPayable}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a6ada1d5f06125c9a8095dd851edeb648}{m\_wndPaymentLabel}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ac02302e0891b488ff43c9b849579a116}{m\_wndPayment}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a1abf2702134228fd8d28ecb2060e314f}{m\_wndRefundLabel}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aa2d089f12ca3c5be6e61407f284de889}{m\_wndRefund}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_adc5b8573efb194fcd7b00e4deecb2280}{m\_wndApproval}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a3fd6f8de6c556a45816e736fbcd257a9}{m\_wndCancel}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a55918d5bfe7308b00f6dd5df79a79f48}{m\_wndPrintReceipt}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aceede9bb9d218908d73d94d2ff827c89}{m\_wndClose}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aea1927f84f138163f91f8914d5a78f60}{m\_wndInvoiceList}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aa3695e327f4a8ee98ac10fa95e06710f}{m\_wndNotCreateOrderPaid}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_af47a45a64b7cccf9c3d9336fc4cd0157}{m\_szReceiptDate}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ad946443c37580fd8c6ec1b1e1fadf944}{m\_szStaff}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a595c8414141dc7785a0bf7f31a5bf91f}{m\_nReceiptNo}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a430dbbbcbe01ff297c6cea8078bdda2a}{m\_nDocumentNo}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ac24313b4f3884fe77413284d4bfec51c}{m\_nInvoiceNo}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ade40d23354c7437cb30f1cd55284664f}{m\_nDrugOrderNo}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a16fd05391faf08f06fbd8e02ebd283d2}{m\_nbatch\_id}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a16dd324db7ebff30b6c0208caa6b97bf}{m\_nSaleOrderID}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ac54c9dcd0d890f4b18ad3fb189d5d4d2}{m\_nDocumentNo2}};\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ad472c69e16e929bc4c84a57c8f167b6d}{m\_szPaymentMethodKey}};\ }
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ade90535c197fe6427bc8dc1ab4dea781}{m\_szDepartments}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a1ac077881ce9f11e68f51e5e6b264d14}{m\_szFeeType}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a0bbfaad95154c5baf04366bef45ceaf0}{m\_szStatus}};\ }
+\DoxyCodeLine{00088\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a7c664491cac80856a106acf919feca20}{m\_szDocStatus}};\ }
+\DoxyCodeLine{00089\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_af0054f8dd86a000c3d3e51c97b3ad8ef}{m\_szReceiptDeptID}};\ }
+\DoxyCodeLine{00090\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ad540a088402de054256be9c8858e487d}{m\_szReasonKey}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a4d4d7c122e4b6adfc07f30826def923e}{m\_szSerialNo}};\ }
+\DoxyCodeLine{00092\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ab1438f7f6758ee71d0313b43b6166b51}{m\_szLocked}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a512cbb13fca5c0d69a189b04d9e3521b}{m\_szIsRetailOrder}};\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ae8c6a9c01aa976db9ff75c1cd01a60dc}{m\_nTotalAmount}};\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ab98a04e6f3c34166d733c240079e46e5}{m\_nTotalDeposit}};\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a7b8905e353baeed5cd1d6e6dc58f3860}{m\_nTotalDiscount}};\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_abb41d025afbd3ce2318723457768e079}{m\_nTotalPayable}};\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a3a1bfad4ba6e3b584c041bf03893720a}{m\_nPayment}};\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a48a9251aa1a4698ec9627a5bc7854244}{m\_nRefund}};\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aae7c2e58b773ce4620e0b19fa16f80dd}{m\_nTtlCost}};\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a4b3be79020923c96a96a16838904d021}{m\_bNotIncDrug}};\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aee8c52f0a1b8b7deefe513d4e6c400ae}{m\_nOperationFees}};\ }
+\DoxyCodeLine{00105\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_acd140085a40830ea7b3e7a3421d3887a}{m\_bNotCreateOrderPaid}};\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a3e75b4ce298db6fa91efa4343450fc7a}{OnListLoadData}}();}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a3451eb66bff5c5a022b8007c734eefc7}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a141d93a498c6988122fe2ce363c631e6}{OnListDblClick}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ab3eb08a3a6c066beee081eb2ef9b98ae}{OnListDeleteItem}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptDateChange();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptDateSetfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptDateKillfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ad1e895a0f2c03c89746d3fc974652b83}{OnReceiptDateCheckValue}}();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStaffChange();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStaffSetfocus();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStaffKillfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ab02804f014a0476e554dc04c06687ed5}{OnStaffCheckValue}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptNoChange();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptNoSetfocus();\ }}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptNoKillfocus();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ab3fcf2887a9d763d0891e9f571f34cef}{OnReceiptNoCheckValue}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ae6e8320f1d69b6f49663c9165548326b}{OnPaymentMethodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aac37252696232eef1669963d47b7845b}{OnPaymentMethodSelendok}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentMethodSetfocus();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentMethodKillfocus();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ae83761e3b4c55697f723b854d1dea2e5}{OnPaymentMethodLoadData}}();}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentMethodAddNew();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountChange();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountSetfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountKillfocus();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_af80d1d76d5bf537285afb0d2f87b0e4c}{OnTotalAmountCheckValue}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalDepositChange();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalDepositSetfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalDepositKillfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ae24cbbcdc6bcae88ddfcc5c8db5966d5}{OnTotalDepositCheckValue}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalPayableChange();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalPayableSetfocus();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalPayableKillfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aaaa1784f584db5706606a118ea6690a9}{OnTotalPayableCheckValue}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentChange();\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentSetfocus();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentKillfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ae02a30911f758eaef7719c71e7175992}{OnPaymentCheckValue}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRefundChange();\ }}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRefundSetfocus();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRefundKillfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a967c8945c0429d43f533a92c7a3bc0cb}{OnRefundCheckValue}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a2e6228f85acb1084bd5543225a265f53}{OnApprovalSelect}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ad9d4156bcbc0f384e3024e9f3e347dc5}{OnApprovalPacsSelect}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ace4b8b40f97cab75f947181627244695}{OnApprovalHospitalFeeSelect}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a76841b3d86c688fb99d826536a38f08c}{OnApprovalPMSelect}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a2a03c625691479673d829950b73cab60}{OnCancelSelect}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a3900a8891bf2c0db526a787f7a7747b3}{OnPrintReceiptSelect}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a4bbfd437c86e19fad8e1dcbf4828b863}{OnPrintPMReceiptSelect}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a7482c623a7f73d435f1a5b921a5ba767}{OnCloseSelect}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_afa31c80f2af3d5f52f02c3c356bb90f5}{OnInvoiceListLoadData}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a7674312526043147331c68c3ad49616a}{OnInvoiceListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a9ee339e2ced13311cd0f3a5045e0805a}{OnInvoiceListDblClick}}();}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a0083475e25a5e1e04d75aa1a5e5d076d}{OnInvoiceListDeleteItem}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_acb8597dcae862781c714c6d4a40f4fc2}{OnNotCreateOrderPaidSelect}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a2caae431c1b6e245490c653152f2a7f9}{CHMSApprovalReceiptDialog}}(CWnd*\ pParent);}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a243bda1e89d5a7d4f9c4c40ceaf2bbcc}{\string~CHMSApprovalReceiptDialog}}();}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a473dfeffc5606a5e225cb984e81397a6}{OnCreateComponents}}();}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a58c06b6df610a6dd8a32d768db0ee01e}{OnInitializeComponents}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a894c85c0f91ee8c94d79d52c8ebb9bdf}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a815a633bf323d5c7253ec3d3d9edfc5d}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a7699ede79c92243de2bf14e5ea8bcfb5}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a90c23b4646f0a3577a81928cddf5dd60}{GetDataToScreen}}();}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a042e433bc0b75c7979ec11918c4bbaea}{GetScreenToData}}();}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a51267aaebb74dbf351b4ec9e456a82bc}{SetDefaultValues}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_af0d9fcb7951fdff2de43949498be9a36}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a85b3c07146b7c0d2f6baad5518507bd4}{OnAddHMSApprovalReceiptDialog}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_ad96aaa8d21d54aaa78e839269be60411}{OnEditHMSApprovalReceiptDialog}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a05de52d59e9bac0fb6047be02ceae135}{OnDeleteHMSApprovalReceiptDialog}}();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a7b1415310e8a6447e09868172d3ca4a4}{OnSaveHMSApprovalReceiptDialog}}();}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_a2eab7567b3be7915eb5e4e416624336f}{OnCancelHMSApprovalReceiptDialog}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_approval_receipt_dialog_aa3d91f308300d65a2b745c5e98f3a077}{OnHMSApprovalReceiptDialogListLoadData}}();}
+\DoxyCodeLine{00179\ \};}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

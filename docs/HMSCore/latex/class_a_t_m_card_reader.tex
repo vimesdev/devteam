@@ -1,0 +1,625 @@
+\doxysection{ATMCard\+Reader Class Tham chiếu}
+\hypertarget{class_a_t_m_card_reader}{}\label{class_a_t_m_card_reader}\index{ATMCardReader@{ATMCardReader}}
+
+
+Class quản lý đọc thẻ \doxylink{class_a_t_m}{ATM} sử dụng PC/\+SC (Smart Card) API.  
+
+
+
+
+{\ttfamily \#include $<$ATMCard\+Reader.\+h$>$}
+
+\doxysubsubsection*{Các hàm thành viên Public}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_t_m_card_reader_aa9f42e4efbc18eecf5c1d5ecbd6f340b}{ATMCard\+Reader}} (\mbox{\hyperlink{class_a_t_m}{ATM}} \texorpdfstring{$\ast$}{*}atm)
+\begin{DoxyCompactList}\small\item\em Constructor của \doxylink{class_a_t_m_card_reader}{ATMCard\+Reader}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_a_t_m_card_reader_aef7bb9e4d98202b0a249ad1b3bad2046}{\texorpdfstring{$\sim$}{\string~}\+ATMCard\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Destructor của \doxylink{class_a_t_m_card_reader}{ATMCard\+Reader}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_t_m_card_reader_aceb07b3ee9b003fcef1f03a5f1adc0c5}{Set\+Reader\+Name}} (CString sz\+Reader\+Name)
+\begin{DoxyCompactList}\small\item\em Thiết lập tên reader sẽ sử dụng. \end{DoxyCompactList}\item 
+LONG \mbox{\hyperlink{class_a_t_m_card_reader_a8405099f505cc2e6e7aaa7647911b533}{Register\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Đăng ký smart card context với hệ thống. \end{DoxyCompactList}\item 
+LONG \mbox{\hyperlink{class_a_t_m_card_reader_ae9b5d185735f73670d24ebe892d1d07b}{Release\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Giải phóng smart card context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_t_m_card_reader_afe99675c9842e93f14c1e8620091daba}{Get\+List\+Readers}} ()
+\begin{DoxyCompactList}\small\item\em Lấy danh sách các reader có sẵn trong hệ thống. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_a_t_m_card_reader_a794d4bfac6a9dc66f4bb17406f5371b1}{Get\+Reader\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Lấy số lượng reader có sẵn. \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_afffd465e19b659ae33f88ce4fd639161}{Get\+Reader\+At}} (int n\+Index)
+\begin{DoxyCompactList}\small\item\em Lấy tên reader tại index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_t_m_card_reader_a93069a4c3bb241e3ebab61e1d9e0a956}{Connect}} ()
+\begin{DoxyCompactList}\small\item\em Kết nối với thẻ trong reader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_t_m_card_reader_a86201d7ac61bdfad56a43c514d205f63}{Disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Ngắt kết nối với thẻ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_t_m_card_reader_a2ce4dc9d23027df7589cb4216940a7b3}{Is\+Connected}} ()
+\begin{DoxyCompactList}\small\item\em Kiểm tra có đang kết nối với thẻ không. \end{DoxyCompactList}\item 
+LONG \mbox{\hyperlink{class_a_t_m_card_reader_ab5adb95957858af4952664ef161b75f4}{Transmit}} ()
+\begin{DoxyCompactList}\small\item\em Gửi lệnh APDU đến thẻ \end{DoxyCompactList}\item 
+UINT \mbox{\hyperlink{class_a_t_m_card_reader_a15a0efae396c8454de20683b286aa71f}{Get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Lấy trạng thái hiện tại của thẻ \end{DoxyCompactList}\item 
+UINT \mbox{\hyperlink{class_a_t_m_card_reader_a79d62a00dfa4da5416810ac381cb9020}{Get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Lấy trạng thái chi tiết của thẻ và reader. \end{DoxyCompactList}\item 
+UINT \mbox{\hyperlink{class_a_t_m_card_reader_a8f1c96ef743241d4adc4b645f4ef1cce}{Get\+Status\+Change}} ()
+\begin{DoxyCompactList}\small\item\em Kiểm tra sự thay đổi trạng thái của thẻ \end{DoxyCompactList}\item 
+LONG \mbox{\hyperlink{class_a_t_m_card_reader_af345ee341ae0bd68522f31d7213380e2}{Load\+Key}} ()
+\begin{DoxyCompactList}\small\item\em Load key vào thẻ để xác thực. \end{DoxyCompactList}\item 
+LONG \mbox{\hyperlink{class_a_t_m_card_reader_afd01a63f523e86322934e481a96b4ab1}{Authenticate}} ()
+\begin{DoxyCompactList}\small\item\em Xác thực với thẻ sử dụng key đã load. \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_ab7d17e3f75d3993fc687fe03426cf506}{Read\+Block}} (CString block\+Id)
+\begin{DoxyCompactList}\small\item\em Đọc dữ liệu từ một block cụ thể trên thẻ \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_a5e9a8ecff373bbb7745e0bc7a16bb745}{Read\+Block\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Đọc dữ liệu từ block hiện tại. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_t_m_card_reader_a47cac40e70ed531153f584195e9456dc}{Write\+Block}} (CString block\+Id, CString data)
+\begin{DoxyCompactList}\small\item\em Ghi dữ liệu vào một block cụ thể trên thẻ \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_aedc787fc6fc482c328004cd6272ae0fd}{Get\+Card\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Lấy ID của thẻ hiện tại. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_t_m_card_reader_a6e0e2e822a3add8ffd02dc8f061d65f1}{Is\+Enable\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Kiểm tra timer có được bật không. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_t_m_card_reader_adae9036153909edf74958328a59d15a9}{On\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Xử lý sự kiện timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Các thuộc tính Public}
+\begin{DoxyCompactItemize}
+\item 
+SCARD\+\_\+\+READERSTATE \mbox{\hyperlink{class_a_t_m_card_reader_a0651025b9e11ad6e1e2adbd67a763f8a}{Reader\+State1}}
+\begin{DoxyCompactList}\small\item\em Trạng thái reader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Các hàm thành viên Private}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_t_m_card_reader_a6fabc93dd200f66862ff4dc76f91c43a}{ATR\+\_\+\+UID}} (int card\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Xử lý ATR và UID theo loại thẻ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_t_m_card_reader_aa23b82ef9d441c8925c2573c6e331739}{card\+\_\+\+Type\+\_\+\+Identification}} ()
+\begin{DoxyCompactList}\small\item\em Xác định loại thẻ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Các thuộc tính Private}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_t_m}{ATM}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_t_m_card_reader_ab9b5756e2534aec68d16677f946aa85d}{m\+\_\+atm}}
+\begin{DoxyCompactList}\small\item\em Con trỏ đến đối tượng \doxylink{class_a_t_m}{ATM}. \end{DoxyCompactList}\item 
+DWORD \mbox{\hyperlink{class_a_t_m_card_reader_a350cdea616a842690a6f15a8d5c07ec3}{m\+\_\+handle}}
+\begin{DoxyCompactList}\small\item\em Handle của card. \end{DoxyCompactList}\item 
+DWORD \mbox{\hyperlink{class_a_t_m_card_reader_a3f75df54963a8dd7b4437f9830392d91}{m\+\_\+h\+Context}}
+\begin{DoxyCompactList}\small\item\em Handle của smart card context. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_t_m_card_reader_a1a5bb28829a57da20fce011ba6d8cee7}{m\+\_\+connected}}
+\begin{DoxyCompactList}\small\item\em Cờ xác định đã kết nối với thẻ chưa. \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_adc89f73ca35d44c136948bf239f251f9}{m\+\_\+card\+Id}}
+\begin{DoxyCompactList}\small\item\em ID của thẻ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_t_m_card_reader_a82dbe6ec6a35a6458e8821b41ccc32cc}{m\+\_\+establish\+Context}}
+\begin{DoxyCompactList}\small\item\em Cờ xác định đã thiết lập context chưa. \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_a9ad273745ec0d4bf2008553fa75f16b8}{m\+\_\+reader\+Name}}
+\begin{DoxyCompactList}\small\item\em Tên của reader đang sử dụng. \end{DoxyCompactList}\item 
+CString\+Array \mbox{\hyperlink{class_a_t_m_card_reader_a91d5ba4e58f66ddab4545400787d504e}{m\+\_\+reader\+List}}
+\begin{DoxyCompactList}\small\item\em Danh sách các reader có sẵn. \end{DoxyCompactList}\item 
+CString\+Array \mbox{\hyperlink{class_a_t_m_card_reader_a163ab33be96cee3f9321e89349f7d099}{m\+\_\+block\+List}}
+\begin{DoxyCompactList}\small\item\em Danh sách các block đã đọc. \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_af0a1e6eeaab2eb288cccc6d10e11b88a}{m\+\_\+status\+Desc}}
+\begin{DoxyCompactList}\small\item\em Mô tả trạng thái. \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_a8ca91d0b005957e955195d31c1c9abba}{m\+\_\+card\+Status}}
+\begin{DoxyCompactList}\small\item\em Trạng thái thẻ \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{class_a_t_m_card_reader_ae068c62c0c775923ce9cabec93a37e5b}{m\+\_\+atr\+Label}}
+\begin{DoxyCompactList}\small\item\em ATR (Answer To Reset) label. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_a_t_m_card_reader_a17e74a7d6a01f1c80f26cb8bd18a349a}{m\+\_\+release\+Flag}}
+\begin{DoxyCompactList}\small\item\em Flag để release context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_a_t_m_card_reader_a6e397e77baa5de46701217b79f694f54}{m\+\_\+card\+Type}}
+\begin{DoxyCompactList}\small\item\em Loại thẻ (lưu trữ loại thẻ đã xác định). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_t_m_card_reader_ac686a35a9a27e0a03b57c77db891edd7}{m\+\_\+timer}}
+\begin{DoxyCompactList}\small\item\em Cờ bật/tắt timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Mô tả chi tiết}
+Class quản lý đọc thẻ \doxylink{class_a_t_m}{ATM} sử dụng PC/\+SC (Smart Card) API. 
+
+Class này cung cấp các chức năng để\+:
+\begin{DoxyItemize}
+\item Kết nối và quản lý smart card reader
+\item Đọc và ghi dữ liệu từ thẻ \doxylink{class_a_t_m}{ATM}
+\item Xác thực thẻ và load key
+\item Quản lý trạng thái thẻ và reader
+\item Hỗ trợ timer để theo dõi trạng thái thẻ 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_a_t_m_card_reader_doc-constructors}
+\doxysubsection{Thông tin về Constructor và Destructor}
+\Hypertarget{class_a_t_m_card_reader_aa9f42e4efbc18eecf5c1d5ecbd6f340b}\index{ATMCardReader@{ATMCardReader}!ATMCardReader@{ATMCardReader}}
+\index{ATMCardReader@{ATMCardReader}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{ATMCardReader()}{ATMCardReader()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_aa9f42e4efbc18eecf5c1d5ecbd6f340b} 
+ATMCard\+Reader\+::\+ATMCard\+Reader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_t_m}{ATM}} \texorpdfstring{$\ast$}{*}}]{atm}{}\end{DoxyParamCaption})}
+
+
+
+Constructor của \doxylink{class_a_t_m_card_reader}{ATMCard\+Reader}. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em atm} & Con trỏ đến đối tượng \doxylink{class_a_t_m}{ATM}, không được NULL\\
+\hline
+\end{DoxyParams}
+Khởi tạo \doxylink{class_a_t_m_card_reader}{ATMCard\+Reader} với đối tượng \doxylink{class_a_t_m}{ATM} được chỉ định. Các thành viên được khởi tạo với giá trị mặc định. \Hypertarget{class_a_t_m_card_reader_aef7bb9e4d98202b0a249ad1b3bad2046}\index{ATMCardReader@{ATMCardReader}!````~ATMCardReader@{\texorpdfstring{$\sim$}{\string~}ATMCardReader}}
+\index{````~ATMCardReader@{\texorpdfstring{$\sim$}{\string~}ATMCardReader}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ATMCardReader()}{\string~ATMCardReader()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_aef7bb9e4d98202b0a249ad1b3bad2046} 
+ATMCard\+Reader\+::\texorpdfstring{$\sim$}{\string~}\+ATMCard\+Reader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor của \doxylink{class_a_t_m_card_reader}{ATMCard\+Reader}. 
+
+Giải phóng tất cả tài nguyên, ngắt kết nối thẻ và release context nếu cần. 
+
+\label{doc-func-members}
+\Hypertarget{class_a_t_m_card_reader_doc-func-members}
+\doxysubsection{Thông tin về hàm thành viên}
+\Hypertarget{class_a_t_m_card_reader_a6fabc93dd200f66862ff4dc76f91c43a}\index{ATMCardReader@{ATMCardReader}!ATR\_UID@{ATR\_UID}}
+\index{ATR\_UID@{ATR\_UID}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{ATR\_UID()}{ATR\_UID()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a6fabc93dd200f66862ff4dc76f91c43a} 
+void ATMCard\+Reader\+::\+ATR\+\_\+\+UID (\begin{DoxyParamCaption}\item[{int}]{card\+\_\+type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Xử lý ATR và UID theo loại thẻ 
+
+\Hypertarget{class_a_t_m_card_reader_afd01a63f523e86322934e481a96b4ab1}\index{ATMCardReader@{ATMCardReader}!Authenticate@{Authenticate}}
+\index{Authenticate@{Authenticate}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{Authenticate()}{Authenticate()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_afd01a63f523e86322934e481a96b4ab1} 
+LONG ATMCard\+Reader\+::\+Authenticate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Xác thực với thẻ sử dụng key đã load. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+SCARD\+\_\+\+S\+\_\+\+SUCCESS nếu xác thực thành công, mã lỗi SCARD nếu thất bại
+\end{DoxyReturn}
+Thực hiện xác thực với thẻ sử dụng key đã được load bằng \doxylink{class_a_t_m_card_reader_af345ee341ae0bd68522f31d7213380e2}{Load\+Key()}. Sau khi xác thực thành công, có thể đọc/ghi dữ liệu từ các block được bảo vệ. \Hypertarget{class_a_t_m_card_reader_aa23b82ef9d441c8925c2573c6e331739}\index{ATMCardReader@{ATMCardReader}!card\_Type\_Identification@{card\_Type\_Identification}}
+\index{card\_Type\_Identification@{card\_Type\_Identification}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{card\_Type\_Identification()}{card\_Type\_Identification()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_aa23b82ef9d441c8925c2573c6e331739} 
+void ATMCard\+Reader\+::card\+\_\+\+Type\+\_\+\+Identification (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Xác định loại thẻ 
+
+\Hypertarget{class_a_t_m_card_reader_a93069a4c3bb241e3ebab61e1d9e0a956}\index{ATMCardReader@{ATMCardReader}!Connect@{Connect}}
+\index{Connect@{Connect}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a93069a4c3bb241e3ebab61e1d9e0a956} 
+bool ATMCard\+Reader\+::\+Connect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Kết nối với thẻ trong reader. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu kết nối thành công, false nếu thất bại
+\end{DoxyReturn}
+Kết nối với thẻ đang được đặt trong reader đã được chỉ định. Sau khi kết nối thành công, có thể đọc/ghi dữ liệu từ thẻ. Cần gọi \doxylink{class_a_t_m_card_reader_a8405099f505cc2e6e7aaa7647911b533}{Register\+Context()} và \doxylink{class_a_t_m_card_reader_aceb07b3ee9b003fcef1f03a5f1adc0c5}{Set\+Reader\+Name()} trước. \Hypertarget{class_a_t_m_card_reader_a86201d7ac61bdfad56a43c514d205f63}\index{ATMCardReader@{ATMCardReader}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{Disconnect()}{Disconnect()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a86201d7ac61bdfad56a43c514d205f63} 
+void ATMCard\+Reader\+::\+Disconnect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ngắt kết nối với thẻ 
+
+Ngắt kết nối với thẻ hiện tại. Sau khi ngắt kết nối, không thể đọc/ghi dữ liệu nữa. \Hypertarget{class_a_t_m_card_reader_aedc787fc6fc482c328004cd6272ae0fd}\index{ATMCardReader@{ATMCardReader}!GetCardId@{GetCardId}}
+\index{GetCardId@{GetCardId}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{GetCardId()}{GetCardId()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_aedc787fc6fc482c328004cd6272ae0fd} 
+CString ATMCard\+Reader\+::\+Get\+Card\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lấy ID của thẻ hiện tại. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+ID của thẻ dạng chuỗi hex
+\end{DoxyReturn}
+Trả về ID (UID) của thẻ đang được kết nối. ID được đọc từ thẻ khi kết nối. \Hypertarget{class_a_t_m_card_reader_afe99675c9842e93f14c1e8620091daba}\index{ATMCardReader@{ATMCardReader}!GetListReaders@{GetListReaders}}
+\index{GetListReaders@{GetListReaders}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{GetListReaders()}{GetListReaders()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_afe99675c9842e93f14c1e8620091daba} 
+void ATMCard\+Reader\+::\+Get\+List\+Readers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lấy danh sách các reader có sẵn trong hệ thống. 
+
+Quét hệ thống để tìm tất cả các smart card reader có sẵn và lưu vào m\+\_\+reader\+List. Cần gọi \doxylink{class_a_t_m_card_reader_a8405099f505cc2e6e7aaa7647911b533}{Register\+Context()} trước khi gọi phương thức này. \Hypertarget{class_a_t_m_card_reader_afffd465e19b659ae33f88ce4fd639161}\index{ATMCardReader@{ATMCardReader}!GetReaderAt@{GetReaderAt}}
+\index{GetReaderAt@{GetReaderAt}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{GetReaderAt()}{GetReaderAt()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_afffd465e19b659ae33f88ce4fd639161} 
+CString ATMCard\+Reader\+::\+Get\+Reader\+At (\begin{DoxyParamCaption}\item[{int}]{n\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Lấy tên reader tại index. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em n\+Index} & Index của reader trong danh sách (0-\/based) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+Tên của reader tại index, chuỗi rỗng nếu index không hợp lệ
+\end{DoxyReturn}
+Trả về tên của reader tại vị trí index trong danh sách. \Hypertarget{class_a_t_m_card_reader_a794d4bfac6a9dc66f4bb17406f5371b1}\index{ATMCardReader@{ATMCardReader}!GetReaderCount@{GetReaderCount}}
+\index{GetReaderCount@{GetReaderCount}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{GetReaderCount()}{GetReaderCount()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a794d4bfac6a9dc66f4bb17406f5371b1} 
+int ATMCard\+Reader\+::\+Get\+Reader\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lấy số lượng reader có sẵn. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+Số lượng reader trong danh sách
+\end{DoxyReturn}
+Trả về số lượng reader đã được tìm thấy sau khi gọi \doxylink{class_a_t_m_card_reader_afe99675c9842e93f14c1e8620091daba}{Get\+List\+Readers()}. \Hypertarget{class_a_t_m_card_reader_a15a0efae396c8454de20683b286aa71f}\index{ATMCardReader@{ATMCardReader}!GetState@{GetState}}
+\index{GetState@{GetState}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a15a0efae396c8454de20683b286aa71f} 
+UINT ATMCard\+Reader\+::\+Get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lấy trạng thái hiện tại của thẻ 
+
+\begin{DoxyReturn}{Giá trị trả về}
+Mã trạng thái của thẻ (SCARD\+\_\+\+ABSENT, SCARD\+\_\+\+PRESENT, SCARD\+\_\+\+SWALLOWED, etc.)
+\end{DoxyReturn}
+Kiểm tra và trả về trạng thái hiện tại của thẻ trong reader. \Hypertarget{class_a_t_m_card_reader_a79d62a00dfa4da5416810ac381cb9020}\index{ATMCardReader@{ATMCardReader}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{GetStatus()}{GetStatus()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a79d62a00dfa4da5416810ac381cb9020} 
+UINT ATMCard\+Reader\+::\+Get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lấy trạng thái chi tiết của thẻ và reader. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+Mã trạng thái chi tiết
+\end{DoxyReturn}
+Lấy thông tin chi tiết về trạng thái của thẻ và reader, bao gồm ATR. \Hypertarget{class_a_t_m_card_reader_a8f1c96ef743241d4adc4b645f4ef1cce}\index{ATMCardReader@{ATMCardReader}!GetStatusChange@{GetStatusChange}}
+\index{GetStatusChange@{GetStatusChange}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{GetStatusChange()}{GetStatusChange()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a8f1c96ef743241d4adc4b645f4ef1cce} 
+UINT ATMCard\+Reader\+::\+Get\+Status\+Change (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Kiểm tra sự thay đổi trạng thái của thẻ 
+
+\begin{DoxyReturn}{Giá trị trả về}
+Mã trạng thái mới nếu có thay đổi
+\end{DoxyReturn}
+Kiểm tra xem trạng thái thẻ có thay đổi không (ví dụ\+: thẻ được đưa vào hoặc lấy ra). \Hypertarget{class_a_t_m_card_reader_a2ce4dc9d23027df7589cb4216940a7b3}\index{ATMCardReader@{ATMCardReader}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{IsConnected()}{IsConnected()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a2ce4dc9d23027df7589cb4216940a7b3} 
+bool ATMCard\+Reader\+::\+Is\+Connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Kiểm tra có đang kết nối với thẻ không. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu đang kết nối, false nếu không
+\end{DoxyReturn}
+Trả về trạng thái kết nối hiện tại với thẻ. \Hypertarget{class_a_t_m_card_reader_a6e0e2e822a3add8ffd02dc8f061d65f1}\index{ATMCardReader@{ATMCardReader}!IsEnableTimer@{IsEnableTimer}}
+\index{IsEnableTimer@{IsEnableTimer}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{IsEnableTimer()}{IsEnableTimer()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a6e0e2e822a3add8ffd02dc8f061d65f1} 
+bool ATMCard\+Reader\+::\+Is\+Enable\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Kiểm tra timer có được bật không. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu timer đang bật, false nếu đang tắt
+\end{DoxyReturn}
+Trả về trạng thái của timer dùng để theo dõi trạng thái thẻ. \Hypertarget{class_a_t_m_card_reader_af345ee341ae0bd68522f31d7213380e2}\index{ATMCardReader@{ATMCardReader}!LoadKey@{LoadKey}}
+\index{LoadKey@{LoadKey}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{LoadKey()}{LoadKey()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_af345ee341ae0bd68522f31d7213380e2} 
+LONG ATMCard\+Reader\+::\+Load\+Key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load key vào thẻ để xác thực. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+SCARD\+\_\+\+S\+\_\+\+SUCCESS nếu thành công, mã lỗi SCARD nếu thất bại
+\end{DoxyReturn}
+Load key vào thẻ để chuẩn bị cho quá trình xác thực (authentication). Cần kết nối với thẻ trước khi gọi phương thức này. \Hypertarget{class_a_t_m_card_reader_adae9036153909edf74958328a59d15a9}\index{ATMCardReader@{ATMCardReader}!OnTimer@{OnTimer}}
+\index{OnTimer@{OnTimer}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{OnTimer()}{OnTimer()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_adae9036153909edf74958328a59d15a9} 
+void ATMCard\+Reader\+::\+On\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Xử lý sự kiện timer. 
+
+Được gọi định kỳ bởi timer để kiểm tra trạng thái thẻ và cập nhật UI nếu cần. Có thể kiểm tra xem thẻ có còn trong reader không và tự động ngắt kết nối nếu thẻ bị lấy ra. \Hypertarget{class_a_t_m_card_reader_ab7d17e3f75d3993fc687fe03426cf506}\index{ATMCardReader@{ATMCardReader}!ReadBlock@{ReadBlock}}
+\index{ReadBlock@{ReadBlock}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{ReadBlock()}{ReadBlock()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_ab7d17e3f75d3993fc687fe03426cf506} 
+CString ATMCard\+Reader\+::\+Read\+Block (\begin{DoxyParamCaption}\item[{CString}]{block\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Đọc dữ liệu từ một block cụ thể trên thẻ 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em block\+Id} & ID của block cần đọc (dạng chuỗi hex, ví dụ\+: "{}04"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+Dữ liệu đọc được từ block dạng chuỗi hex, chuỗi rỗng nếu thất bại
+\end{DoxyReturn}
+Đọc dữ liệu từ block có ID được chỉ định trên thẻ. Block phải đã được xác thực nếu có bảo vệ. Dữ liệu trả về dạng hex string. \Hypertarget{class_a_t_m_card_reader_a5e9a8ecff373bbb7745e0bc7a16bb745}\index{ATMCardReader@{ATMCardReader}!ReadBlockData@{ReadBlockData}}
+\index{ReadBlockData@{ReadBlockData}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{ReadBlockData()}{ReadBlockData()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a5e9a8ecff373bbb7745e0bc7a16bb745} 
+CString ATMCard\+Reader\+::\+Read\+Block\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Đọc dữ liệu từ block hiện tại. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+Dữ liệu đọc được từ block dạng chuỗi hex, chuỗi rỗng nếu thất bại
+\end{DoxyReturn}
+Đọc dữ liệu từ block đang được chỉ định (có thể được set trước đó). Tương tự \doxylink{class_a_t_m_card_reader_ab7d17e3f75d3993fc687fe03426cf506}{Read\+Block()} nhưng không cần chỉ định block\+Id. \Hypertarget{class_a_t_m_card_reader_a8405099f505cc2e6e7aaa7647911b533}\index{ATMCardReader@{ATMCardReader}!RegisterContext@{RegisterContext}}
+\index{RegisterContext@{RegisterContext}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{RegisterContext()}{RegisterContext()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a8405099f505cc2e6e7aaa7647911b533} 
+LONG ATMCard\+Reader\+::\+Register\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Đăng ký smart card context với hệ thống. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+SCARD\+\_\+\+S\+\_\+\+SUCCESS nếu thành công, mã lỗi SCARD nếu thất bại
+\end{DoxyReturn}
+Thiết lập smart card context để có thể sử dụng PC/\+SC API. Phải gọi phương thức này trước khi sử dụng các chức năng khác. \Hypertarget{class_a_t_m_card_reader_ae9b5d185735f73670d24ebe892d1d07b}\index{ATMCardReader@{ATMCardReader}!ReleaseContext@{ReleaseContext}}
+\index{ReleaseContext@{ReleaseContext}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{ReleaseContext()}{ReleaseContext()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_ae9b5d185735f73670d24ebe892d1d07b} 
+LONG ATMCard\+Reader\+::\+Release\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Giải phóng smart card context. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+SCARD\+\_\+\+S\+\_\+\+SUCCESS nếu thành công, mã lỗi SCARD nếu thất bại
+\end{DoxyReturn}
+Release smart card context đã được đăng ký. Nên gọi khi không còn sử dụng reader nữa. \Hypertarget{class_a_t_m_card_reader_aceb07b3ee9b003fcef1f03a5f1adc0c5}\index{ATMCardReader@{ATMCardReader}!SetReaderName@{SetReaderName}}
+\index{SetReaderName@{SetReaderName}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{SetReaderName()}{SetReaderName()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_aceb07b3ee9b003fcef1f03a5f1adc0c5} 
+void ATMCard\+Reader\+::\+Set\+Reader\+Name (\begin{DoxyParamCaption}\item[{CString}]{sz\+Reader\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập tên reader sẽ sử dụng. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em sz\+Reader\+Name} & Tên của reader (ví dụ\+: "{}\+ACS ACR122\+U PICC Interface 0"{})\\
+\hline
+\end{DoxyParams}
+Thiết lập reader name để sử dụng khi kết nối. Reader name phải có trong danh sách reader có sẵn. \Hypertarget{class_a_t_m_card_reader_ab5adb95957858af4952664ef161b75f4}\index{ATMCardReader@{ATMCardReader}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{Transmit()}{Transmit()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_ab5adb95957858af4952664ef161b75f4} 
+LONG ATMCard\+Reader\+::\+Transmit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gửi lệnh APDU đến thẻ 
+
+\begin{DoxyReturn}{Giá trị trả về}
+SCARD\+\_\+\+S\+\_\+\+SUCCESS nếu thành công, mã lỗi SCARD nếu thất bại
+\end{DoxyReturn}
+Gửi lệnh APDU (Application Protocol Data Unit) đến thẻ và nhận phản hồi. Cần kết nối với thẻ trước khi gọi phương thức này. \Hypertarget{class_a_t_m_card_reader_a47cac40e70ed531153f584195e9456dc}\index{ATMCardReader@{ATMCardReader}!WriteBlock@{WriteBlock}}
+\index{WriteBlock@{WriteBlock}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{WriteBlock()}{WriteBlock()}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a47cac40e70ed531153f584195e9456dc} 
+bool ATMCard\+Reader\+::\+Write\+Block (\begin{DoxyParamCaption}\item[{CString}]{block\+Id}{, }\item[{CString}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Ghi dữ liệu vào một block cụ thể trên thẻ 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em block\+Id} & ID của block cần ghi (dạng chuỗi hex, ví dụ\+: "{}04"{}) \\
+\hline
+{\em data} & Dữ liệu cần ghi dạng chuỗi hex (16 bytes = 32 ký tự hex) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu ghi thành công, false nếu thất bại
+\end{DoxyReturn}
+Ghi dữ liệu vào block có ID được chỉ định trên thẻ. Block phải đã được xác thực nếu có bảo vệ. Dữ liệu phải đúng định dạng hex và đủ 16 bytes. 
+
+\label{doc-variable-members}
+\Hypertarget{class_a_t_m_card_reader_doc-variable-members}
+\doxysubsection{Thông tin về Member Data}
+\Hypertarget{class_a_t_m_card_reader_ab9b5756e2534aec68d16677f946aa85d}\index{ATMCardReader@{ATMCardReader}!m\_atm@{m\_atm}}
+\index{m\_atm@{m\_atm}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_atm}{m\_atm}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_ab9b5756e2534aec68d16677f946aa85d} 
+\mbox{\hyperlink{class_a_t_m}{ATM}}\texorpdfstring{$\ast$}{*} ATMCard\+Reader\+::m\+\_\+atm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Con trỏ đến đối tượng \doxylink{class_a_t_m}{ATM}. 
+
+\Hypertarget{class_a_t_m_card_reader_ae068c62c0c775923ce9cabec93a37e5b}\index{ATMCardReader@{ATMCardReader}!m\_atrLabel@{m\_atrLabel}}
+\index{m\_atrLabel@{m\_atrLabel}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_atrLabel}{m\_atrLabel}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_ae068c62c0c775923ce9cabec93a37e5b} 
+CString ATMCard\+Reader\+::m\+\_\+atr\+Label\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ATR (Answer To Reset) label. 
+
+\Hypertarget{class_a_t_m_card_reader_a163ab33be96cee3f9321e89349f7d099}\index{ATMCardReader@{ATMCardReader}!m\_blockList@{m\_blockList}}
+\index{m\_blockList@{m\_blockList}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_blockList}{m\_blockList}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a163ab33be96cee3f9321e89349f7d099} 
+CString\+Array ATMCard\+Reader\+::m\+\_\+block\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Danh sách các block đã đọc. 
+
+\Hypertarget{class_a_t_m_card_reader_adc89f73ca35d44c136948bf239f251f9}\index{ATMCardReader@{ATMCardReader}!m\_cardId@{m\_cardId}}
+\index{m\_cardId@{m\_cardId}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_cardId}{m\_cardId}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_adc89f73ca35d44c136948bf239f251f9} 
+CString ATMCard\+Reader\+::m\+\_\+card\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ID của thẻ 
+
+\Hypertarget{class_a_t_m_card_reader_a8ca91d0b005957e955195d31c1c9abba}\index{ATMCardReader@{ATMCardReader}!m\_cardStatus@{m\_cardStatus}}
+\index{m\_cardStatus@{m\_cardStatus}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_cardStatus}{m\_cardStatus}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a8ca91d0b005957e955195d31c1c9abba} 
+CString ATMCard\+Reader\+::m\+\_\+card\+Status\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Trạng thái thẻ 
+
+\Hypertarget{class_a_t_m_card_reader_a6e397e77baa5de46701217b79f694f54}\index{ATMCardReader@{ATMCardReader}!m\_cardType@{m\_cardType}}
+\index{m\_cardType@{m\_cardType}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_cardType}{m\_cardType}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a6e397e77baa5de46701217b79f694f54} 
+int ATMCard\+Reader\+::m\+\_\+card\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loại thẻ (lưu trữ loại thẻ đã xác định). 
+
+\Hypertarget{class_a_t_m_card_reader_a1a5bb28829a57da20fce011ba6d8cee7}\index{ATMCardReader@{ATMCardReader}!m\_connected@{m\_connected}}
+\index{m\_connected@{m\_connected}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_connected}{m\_connected}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a1a5bb28829a57da20fce011ba6d8cee7} 
+bool ATMCard\+Reader\+::m\+\_\+connected\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cờ xác định đã kết nối với thẻ chưa. 
+
+\Hypertarget{class_a_t_m_card_reader_a82dbe6ec6a35a6458e8821b41ccc32cc}\index{ATMCardReader@{ATMCardReader}!m\_establishContext@{m\_establishContext}}
+\index{m\_establishContext@{m\_establishContext}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_establishContext}{m\_establishContext}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a82dbe6ec6a35a6458e8821b41ccc32cc} 
+bool ATMCard\+Reader\+::m\+\_\+establish\+Context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cờ xác định đã thiết lập context chưa. 
+
+\Hypertarget{class_a_t_m_card_reader_a350cdea616a842690a6f15a8d5c07ec3}\index{ATMCardReader@{ATMCardReader}!m\_handle@{m\_handle}}
+\index{m\_handle@{m\_handle}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_handle}{m\_handle}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a350cdea616a842690a6f15a8d5c07ec3} 
+DWORD ATMCard\+Reader\+::m\+\_\+handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handle của card. 
+
+\Hypertarget{class_a_t_m_card_reader_a3f75df54963a8dd7b4437f9830392d91}\index{ATMCardReader@{ATMCardReader}!m\_hContext@{m\_hContext}}
+\index{m\_hContext@{m\_hContext}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_hContext}{m\_hContext}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a3f75df54963a8dd7b4437f9830392d91} 
+DWORD ATMCard\+Reader\+::m\+\_\+h\+Context\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handle của smart card context. 
+
+\Hypertarget{class_a_t_m_card_reader_a91d5ba4e58f66ddab4545400787d504e}\index{ATMCardReader@{ATMCardReader}!m\_readerList@{m\_readerList}}
+\index{m\_readerList@{m\_readerList}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_readerList}{m\_readerList}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a91d5ba4e58f66ddab4545400787d504e} 
+CString\+Array ATMCard\+Reader\+::m\+\_\+reader\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Danh sách các reader có sẵn. 
+
+\Hypertarget{class_a_t_m_card_reader_a9ad273745ec0d4bf2008553fa75f16b8}\index{ATMCardReader@{ATMCardReader}!m\_readerName@{m\_readerName}}
+\index{m\_readerName@{m\_readerName}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_readerName}{m\_readerName}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a9ad273745ec0d4bf2008553fa75f16b8} 
+CString ATMCard\+Reader\+::m\+\_\+reader\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tên của reader đang sử dụng. 
+
+\Hypertarget{class_a_t_m_card_reader_a17e74a7d6a01f1c80f26cb8bd18a349a}\index{ATMCardReader@{ATMCardReader}!m\_releaseFlag@{m\_releaseFlag}}
+\index{m\_releaseFlag@{m\_releaseFlag}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_releaseFlag}{m\_releaseFlag}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a17e74a7d6a01f1c80f26cb8bd18a349a} 
+int ATMCard\+Reader\+::m\+\_\+release\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag để release context. 
+
+\Hypertarget{class_a_t_m_card_reader_af0a1e6eeaab2eb288cccc6d10e11b88a}\index{ATMCardReader@{ATMCardReader}!m\_statusDesc@{m\_statusDesc}}
+\index{m\_statusDesc@{m\_statusDesc}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_statusDesc}{m\_statusDesc}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_af0a1e6eeaab2eb288cccc6d10e11b88a} 
+CString ATMCard\+Reader\+::m\+\_\+status\+Desc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mô tả trạng thái. 
+
+\Hypertarget{class_a_t_m_card_reader_ac686a35a9a27e0a03b57c77db891edd7}\index{ATMCardReader@{ATMCardReader}!m\_timer@{m\_timer}}
+\index{m\_timer@{m\_timer}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{m\_timer}{m\_timer}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_ac686a35a9a27e0a03b57c77db891edd7} 
+bool ATMCard\+Reader\+::m\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cờ bật/tắt timer. 
+
+\Hypertarget{class_a_t_m_card_reader_a0651025b9e11ad6e1e2adbd67a763f8a}\index{ATMCardReader@{ATMCardReader}!ReaderState1@{ReaderState1}}
+\index{ReaderState1@{ReaderState1}!ATMCardReader@{ATMCardReader}}
+\doxysubsubsection{\texorpdfstring{ReaderState1}{ReaderState1}}
+{\footnotesize\ttfamily \label{class_a_t_m_card_reader_a0651025b9e11ad6e1e2adbd67a763f8a} 
+SCARD\+\_\+\+READERSTATE ATMCard\+Reader\+::\+Reader\+State1}
+
+
+
+Trạng thái reader. 
+
+
+
+Thông tin cho class được biên soạn từ các file sau đây\+:\begin{DoxyCompactItemize}
+\item 
+Include/\+HMSCore/\mbox{\hyperlink{_a_t_m_card_reader_8h}{ATMCard\+Reader.\+h}}\end{DoxyCompactItemize}

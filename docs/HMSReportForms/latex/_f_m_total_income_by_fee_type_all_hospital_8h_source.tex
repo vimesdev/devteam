@@ -1,0 +1,205 @@
+\doxysection{FMTotal\+Income\+By\+Fee\+Type\+All\+Hospital.\+h}
+\hypertarget{_f_m_total_income_by_fee_type_all_hospital_8h_source}{}\label{_f_m_total_income_by_fee_type_all_hospital_8h_source}\index{Include/HMSReportForms/HospitalFee/FMTotalIncomeByFeeTypeAllHospital.h@{Include/HMSReportForms/HospitalFee/FMTotalIncomeByFeeTypeAllHospital.h}}
+\mbox{\hyperlink{_f_m_total_income_by_fee_type_all_hospital_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMTotalInComeByFeeTypeAllHospital\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMTotalInComeByFeeTypeAllHospital\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a6057486ad94171d4f6bdeb85eadf6d3b}{CFMTotalInComeByFeeTypeAllHospital}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ac1260acbf67cf34529dbca58565dbfcb}{m\_mIndex}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a8cc5dbe84a8b6bee470f5c31aa237246}{m\_nTotal}}[18],\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a470b365be6fcd4a83958cbfb6b5402bc}{m\_nDaySum}}[18],\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ae282d501ad99de1f3653865a19d2b62c}{m\_nDeptSum}}[18];}
+\DoxyCodeLine{00039\ \ \ \ \ CStringArray\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a5a0f483c724b75a07c944ce4a48e2ca9}{m\_arr\_data\_name}};}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a95abfd553701f1f9e1b9bbd0adaab337}{m\_szPrevDate}},\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9ba82e9c10be5a4308ebd3623465bc7e}{m\_szPrevDept}};}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a6f4fbf752d1ae608bc1b7bb5403bd1c5}{m\_szCashIDS}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9554340f3472f96250482aaf6a287fd4}{m\_wndReportCondition}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a7418158395f8ce4c0b9d35ecd42a7579}{m\_wndYearLabel}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ad25a5230011d60241b5b570aa3782b48}{m\_wndYear}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a0c4e897bde53437377b3efae45d41eda}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a2d2f7f09b562950bdb2d0a7773d6ee6a}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a021bcd864ffdd86f3bda2413a9844bdf}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a59d00cf8eb8acfcddaa419807e753808}{m\_wndFromDate}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a648c2f6c46609e40aee787327a77110c}{m\_wndToDate}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aa1b7175b4b7df0f091401dc31dca7fed}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_af489dfcdf1420da3b3ea88b992a34965}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a20b26b06134d0cd4e584247940f28f2c}{m\_wndDoctorLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a40be2c4781568d4a7ebd04d5440c36be}{m\_wndDoctor}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_abf146cb5e27b1d80291a96314366ab20}{m\_wndRoomLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ac16a9de039fde97d356df9d56b2862d6}{m\_wndRoom}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a27adc5c8363ca74027f7933aa6668ff6}{m\_wndClerk}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ace3dcec6bec6fbaaf25c51d43f6c75f1}{m\_wndOrderByLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a96ecdbae91b02bbd3993b3c70ac989f6}{m\_wndOrderBy}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ab649f84a3e77f5d236ddbe224bb99ccd}{m\_wndDeptLabel}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a73216427071665f1d87bb8c07b7302ca}{m\_wndDept}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a4e5ea67cb4555b68feebaa6d98ad64c5}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a0fd90efd890d00a9ac0f10ba7a4679b9}{m\_wndStatus}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_af9edc46db9962e0a38002cf4344e5914}{m\_wndList}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a7fe01834f45f1a0dad8e1f5c20122496}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a2694d0ce86d376ffe937e7ecde4fc691}{m\_wndMarkAll}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a0c0cbc5ebf510c218fa870b53748f6a2}{m\_wndUnMark}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_abf6e2285f8f6db1e3260669ea60a6f0b}{m\_wndPrint}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aa1ca05df27011b97198d1d6e7e3557bd}{m\_wndExport}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9881a745a25e1dbd405a7267c41c7f8a}{m\_wndInpatient}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aa4b78365fcd523d7ec7eff27544a8ba2}{m\_wndOutpatient}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a82dd653d5123d77ca5d59fe5f56cc469}{m\_wndDeposit}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ac2eac295553e7050f40bc0f53719a92e}{m\_wndAll}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9eb76e8672cd900722d94ae4771bf763}{m\_wndSOD}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a3d80000ec5d6c9642393a9e6e614681e}{m\_wndSoldier}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a8d043cd6190797c1ef53bd592bc06247}{m\_wndCreateData}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a5827ad359446bc38f9c5be8f33d95b69}{m\_nYear}};}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a2fbdeaeb17b685d92baa4b9c86355f6a}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a7a77a9813476bd914ab5962d23ae4baa}{m\_szFromDate}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a65b4adcd388f00915edec80bef5e54d0}{m\_szToDate}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aa0f5a8b1bc16181457ec8eb473ce9448}{m\_szClerkKey}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a95ad382c97d62ee6f0a68f93349c40ab}{m\_szDoctorKey}};}
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a13c258c7d306316639a5756a83f69cc2}{m\_szOrderByKey}};}
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ad27df33549e2bcca6308462c9ac60764}{m\_szStatusKey}};}
+\DoxyCodeLine{00086\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a4191f4a611f88847a26f364958cfaf0c}{m\_szDeptKey}};}
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_afbda7be5337d8cfad6608ed14263b078}{m\_szRoomKey}};}
+\DoxyCodeLine{00088\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a649955768296c50aa52042c33c6df69a}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ae7eb525801efc63d6cb4a7189a8f4509}{m\_nPatientType}};}
+\DoxyCodeLine{00090\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a2ea287a70caabe14c477f7b32fb6b624}{m\_bSOD}};}
+\DoxyCodeLine{00091\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a270855fa238cf01157341fba8dfa7a49}{m\_bSoldier}};}
+\DoxyCodeLine{00092\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_abcca10464047741063cb02a0eb117259}{m\_szInvoiceNoType}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a07923a98a5992f88b9d44d7621c05d83}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_af18b6f1b2d4bbed492097562e17a7a0a}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ab35e4c5f18a415ee5ebf6ff051b80c4d}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a893ce795c85668e7cab74f6411bb886a}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9d52f0b420d00c8692fc340ed1d4dcd5}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a76ad3065863b8874de3a510f52c21989}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ac114f5821179ea41d4cbd70236a27cb4}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9e5a85c5e7d044601f0725a49e27a4a4}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a3bfd5ad503e9e849b74d29c60117e2c8}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a92442ba9797e5d1a61a7f1d1b9c668ce}{OnDoctorLoadData}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a0bc659865bdb2d8be7914c2683719fc2}{OnRoomLoadData}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a1b1f352930f47190dbde9f3dc9526f3a}{OnOrderBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a09c31ea426aeed6b0bc16ca095d24037}{OnOrderBySelendok}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderBySetfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByKillfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_afe7a973e95235e92027fba80da41628f}{OnOrderByLoadData}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByAddNew();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a134fd627b4f04be53259f1e07f1593c6}{OnDeptLoadData}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ac9ba480bff85bf95d91caac44856c27e}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a6e664b6cabfd1dfa16074e75d202fd41}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a5d81b63c189a877170392ed523c99069}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a7fe82b74a0333ec95b562388f5aaad61}{OnListLoadData}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aca4adc8eb75eb94222d3b9f9675a4eff}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a62639c3506b6902df789eda0679e28c7}{OnListDblClick}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_adaf0dad7139664c249e29267df0090f1}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ae8ba4d476b82b1aaf7a2e59884bf437d}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a614ffb0d6f784c30d3fca0b6a492f068}{OnMarkAllSelect}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a70478de10ee756a39a20c1733e97e40b}{OnUnMarkSelect}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a7b4c5682c89a9b57c65748366088a517}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a96ec389b613c3a878b823d874100518a}{OnExportSelect}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a83c4bc7db4bbde4584a48c45aa6d5499}{OnExportDetail}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a7efd26570b1f88f6b83f8354233807db}{OnExportTotal}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a299a47fd6fd9801abda5aed5698119b6}{OnExportTotalAll}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a70340c2ae0f8fab4ea551dcfdd70dc21}{OnInpatientSelect}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ae966f0dd20950ea1c0264f11f9d39b7a}{OnOutpatientSelect}}();\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a093ec671e659b905da4e1367026259a5}{OnDepositSelect}}();\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a91da351ea880de4a447b9111544427c6}{OnAllSelect}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ae6e3406d2ff8f3b779b79991b27d7764}{OnSODSelect}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a174321ce2ecc321cb013ed921d960416}{OnSoldierSelect}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a1b14b3315c108657dc55cd6b4a05099c}{OnPrint1stver}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a1700e7d814a2ef6fcd1e57416a49e6d0}{OnPrint2ndver}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a219bde31d57438a44dd1007fb0c7ac58}{OnPrint2ndver\_}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a8384d42a303da2cb8ab072727c75d5f3}{OnCheckBeforePrint}}(CReport*\ rpt,\ CRecord\&\ rs);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_abaaa0220578c874be931c64efe2f4285}{OnPrintOther}}(CReport*\ rpt);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ IsNewGroup(CReport*\ rpt,\ CRecord*\ rs,\ bool\&\ bNewDate,\ bool\&\ bNewDept,\ CReportSection*\&\ rpDateGroup,\ CReportSection*\&\ rpDeptGroup);}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a733567224063fd0bd49d0ed6af8839de}{IsNewGroup}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept,\ CReportSection**\ ppDateGroup,\ CReportSection**\ ppDeptGroup);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aabfbd117caf42d52c9a99f64462f4161}{IsNewGroup}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept);}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_adf5da91a03466fe539792a54f4bf67cd}{OnPrintGroupSummary}}(CReport*\ rpt,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept,\ CReportSection*\ pDateGroup,\ CReportSection*\ pDeptGroup);}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a8266e29068a01a365db6f30e4e7fd5e8}{OnPrintGroupSummary}}(CReport*\ rpt,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept);}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a296186dfefc49b63eaac9ccaff200406}{OnPrintGroupDescr}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept);}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a1fb6b6db27736cdb29eee8488dea3d89}{OnPrintGroupDescr}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept,\ CReportSection**\ ppDateGroup,\ CReportSection**\ ppDeptGroup);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a053eb1e1779a80a4853947891c2fa88b}{OnPrintDetail}}(CReport*\ rpt,\ CRecord*\ rs);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aeb118ed115744ffb9d700051ab409fe0}{OnPrintDetail}}(CReport*\ rpt,\ CReportSection*\ pDetail,\ CRecord*\ rs);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9a3f0bc549cf602c5560b54156ed2cd6}{OnCalcData}}(CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept);}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a80d861c46bda1c7907094d3087d032cd}{ResetVar}}();}
+\DoxyCodeLine{00167\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ac6e3618b2744472b613c13edeb9f301c}{GetQueryStringDetail}}();}
+\DoxyCodeLine{00168\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a4dffaad0486a8e50c1529f69ce9196e4}{GetQueryStringTotal}}();}
+\DoxyCodeLine{00169\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_af6afdce88edf937e2ab6bb8cac5d6478}{GetQueryStringTotalAll}}();}
+\DoxyCodeLine{00170\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_abe4f29ddb0a0487a1bffe965ad20f344}{GetQueryString2}}();}
+\DoxyCodeLine{00171\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_ac464dd3e03d7262d5a7d034f93118a81}{GetQueryString}}();}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a6057486ad94171d4f6bdeb85eadf6d3b}{CFMTotalInComeByFeeTypeAllHospital}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aa74568a365e071a139f16e9674d658e1}{\string~CFMTotalInComeByFeeTypeAllHospital}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aa6e588a28eac9f42b9ea638452459d29}{OnCreateComponents}}();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aa600290ef062d7f147f0f7f5b8e71f30}{OnInitializeComponents}}();}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a9f6d60732f1e6a2df37e209805bc235d}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a37ff6df9830a7b00a970fe53ee344fa6}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a2e4569e551cac70e78b83775f71b268d}{GetDataToScreen}}();}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_afb1ca5251043351f8a1596b9d3c2b497}{GetScreenToData}}();}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a594f957aff495b11ad21a60e0c4d4551}{SetDefaultValues}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a6ec715cef8a4decb7104b7c761ee7b9d}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a1b222761a268762ec50f5cf4fdd558e5}{OnAddFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_acaf95e92ce9ce2d6be7945d5a64e3084}{OnEditFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aba3364e9e23740c006775b45b87b354f}{OnDeleteFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a570b5261b51a192da64d4826073d8d67}{OnSaveFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a6c235c48425d0d6436ca6bb1a3123a75}{OnCancelFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aff556495d917b257ce0993e1619660fe}{OnFMInsuranceReceiptSummaryListLoadData}}();\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aca1cca9f4daaffc929498038b17f04f7}{OnRound}}(\textcolor{keywordtype}{double}\ nToRound);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a19b5bcf277b38fc05964c2ce5f3f78fc}{OnListCheckAllTYC}}();}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a4017bc129bc325bd0ef187e509af3bf9}{OnListCheckAllPTTYC}}();}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a593861c5904dd26d5679c303a7c6b93d}{OnListCheckAllBHAB}}();}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a3b33c77ec4646fcd1003ba63566d9e8e}{OnListCheckAllDVAB}}();}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a6639286d9d17c47af67dae8ed58e90ab}{OnListCheckAllQUANAB}}();}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a24e8866edf8244b8f914f862038f016a}{OnListCheckAllBH}}();}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a89cbdcc54f11bb82c5571e485a959875}{OnListCheckAllDV}}();}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a1b81fb27a6b0854fb0503ddb9d7eb7cd}{OnListCheckAllQUAN}}();}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_af8685bc041673971461312b7d99a809c}{OnListSearchItem}}();}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_aaf805cab49a06a9ef924685df2bd7b07}{OnCreateDataSelect}}();}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_fee_type_all_hospital_a748084a6baaf80e17e6e571f7e35157b}{OnDeleteDataBeforeInsert}}();}
+\DoxyCodeLine{00201\ \};}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

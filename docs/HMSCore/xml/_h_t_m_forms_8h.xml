@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_h_t_m_forms_8h" kind="file" language="C++">
+    <compoundname>HTMForms.h</compoundname>
+    <includes local="yes">HTMLayoutCtrl.h</includes>
+    <includes local="no">afxtempl.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/HMSCore/HTMForms.h</label>
+        <link refid="_h_t_m_forms_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>HTMLayoutCtrl.h</label>
+      </node>
+      <node id="3">
+        <label>afxtempl.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_option_item" prot="public">OptionItem</innerclass>
+    <innerclass refid="class_option_list" prot="public">OptionList</innerclass>
+    <innerclass refid="structtag_h_t_m_form_data" prot="public">tagHTMFormData</innerclass>
+    <innerclass refid="class_c_h_t_m_forms" prot="public">CHTMForms</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_h_t_m_forms_8h_1a6e4c47e9e475529afcdcf54dc8612579" prot="public" static="no">
+        <name>BEGIN_HTML_COMMAND_MAP</name>
+        <initializer>        virtual LRESULT OnHtmlCommand(NMHL_COMMAND_CLICK *pnmCommand) {</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/HTMForms.h" line="284" column="9" bodyfile="Include/HMSCore/HTMForms.h" bodystart="284" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_t_m_forms_8h_1ac01bdb829cdca4b6e7b75711887877f3" prot="public" static="no">
+        <name>ON_HTML_COMMAND</name>
+        <param><defname>WStrHtmlElementId</defname></param>
+        <param><defname>Proc</defname></param>
+        <initializer>        if( wcscmp(WStrHtmlElementId,pnmCommand-&gt;szElementID) == 0 ) \
+        {  Proc(); return 0; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/HTMForms.h" line="287" column="9" bodyfile="Include/HMSCore/HTMForms.h" bodystart="287" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="define" id="_h_t_m_forms_8h_1a377dffe1df5e04944cce2ffbabae1d89" prot="public" static="no">
+        <name>END_HTML_COMMAND_MAP</name>
+        <initializer>        return 0; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/HTMForms.h" line="291" column="9" bodyfile="Include/HMSCore/HTMForms.h" bodystart="291" bodyend="292"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_h_t_m_forms_8h_1ad2e93865acdc76afcba73960519bdd28" prot="public" static="no">
+        <type>struct <ref refid="structtag_h_t_m_form_data" kindref="compound">tagHTMFormData</ref></type>
+        <definition>typedef struct tagHTMFormData HTMFormData</definition>
+        <argsstring></argsstring>
+        <name>HTMFormData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/HTMForms.h" line="102" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HTMLFORMS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTMLFORMS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;HTMLayoutCtrl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;afxtempl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;HTMLForms.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//class<sp/>CHTMDialog:<sp/>public<sp/>CGuiDialog{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//public:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CHTMForms<sp/>m_forms;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CHTMDialog(CWnd<sp/>*pParent):<sp/>CGuiDialog(pParent){};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>~CHTMDialog(){};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>void<sp/>OnCreateComponents()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>m_forms.Create(WS_CHILD|WS_VISIBLE,<sp/>CRect(5,<sp/>5,<sp/>600,<sp/>480),<sp/>this,<sp/>0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>m_forms.Load(L&quot;C:\\Temp\\Phieuchidingcolistin.html&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>BOOL<sp/>PreTranslateMessage(MSG<sp/>*pMsg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>CDialog::PreTranslateMessage(pMsg);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CHTMForms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_option_item" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_option_item_1a228f33017760a4254dfdaab547ecbc0f" kindref="member">OptionItem</ref>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36" refid="class_option_item_1a228f33017760a4254dfdaab547ecbc0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_option_item_1a228f33017760a4254dfdaab547ecbc0f" kindref="member">OptionItem</ref>(CString<sp/>szId,<sp/>CString<sp/>szText,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isSelected=</highlight><highlight class="keyword">false</highlight><highlight class="normal">):</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_option_item_1a8ec35b9fcf5d995a2d57418eae51abf9" kindref="member">m_bSelected</ref>(isSelected),<sp/><ref refid="class_option_item_1a5bf2640cf462d0a6258b491ea28ea077" kindref="member">m_szId</ref>(szId),<sp/><ref refid="class_option_item_1acd210164d82a8bf70c1f39df1a8eea84" kindref="member">m_szText</ref>(szText){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40" refid="class_option_item_1ac4052caa12a8e6ad75a63341b64aa229" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_option_item_1ac4052caa12a8e6ad75a63341b64aa229" kindref="member">~OptionItem</ref>(){}</highlight></codeline>
+<codeline lineno="41" refid="class_option_item_1a5bf2640cf462d0a6258b491ea28ea077" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_option_item_1a5bf2640cf462d0a6258b491ea28ea077" kindref="member">m_szId</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_option_item_1acd210164d82a8bf70c1f39df1a8eea84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_option_item_1acd210164d82a8bf70c1f39df1a8eea84" kindref="member">m_szText</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_option_item_1a8ec35b9fcf5d995a2d57418eae51abf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_option_item_1a8ec35b9fcf5d995a2d57418eae51abf9" kindref="member">m_bSelected</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_option_list" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_option_list_1ae963c31330b24a2ead6304edd2cb0755" kindref="member">OptionList</ref>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49" refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CArray&lt;OptionItem*,<sp/>OptionItem*&gt;<sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>;</highlight></codeline>
+<codeline lineno="50" refid="class_option_list_1ae963c31330b24a2ead6304edd2cb0755" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_option_list_1ae963c31330b24a2ead6304edd2cb0755" kindref="member">OptionList</ref>(){</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52" refid="class_option_list_1a482dbac83793c511e7594e2f33401658" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_option_list_1a482dbac83793c511e7594e2f33401658" kindref="member">~OptionList</ref>(){}</highlight></codeline>
+<codeline lineno="53" refid="class_option_list_1a31be914878a304c0a37bd3aad567f064" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_option_list_1a31be914878a304c0a37bd3aad567f064" kindref="member">Add</ref>(<ref refid="class_option_item" kindref="compound">OptionItem</ref>*<sp/>newItem)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>.Add(newItem);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57" refid="class_option_list_1a570868875694b29f90137194da1bf548" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_option_list_1a570868875694b29f90137194da1bf548" kindref="member">Remove</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nIndex)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>.RemoveAt(nIndex);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61" refid="class_option_list_1af12199b4f8f771d0b53e9762f5749a67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_option_list_1af12199b4f8f771d0b53e9762f5749a67" kindref="member">RemoveAll</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=0;<sp/>i<sp/>&lt;<sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>.GetCount();<sp/>i++)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_option_item" kindref="compound">OptionItem</ref>*<sp/>o<sp/>=<sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>[i];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>o;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>.RemoveAll();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_option_list_1a24e5158a3b501cc56806a33efcf02c4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_option_item" kindref="compound">OptionItem</ref>*<sp/><ref refid="class_option_list_1a24e5158a3b501cc56806a33efcf02c4d" kindref="member">GetAt</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nIndex)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>[nIndex];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75" refid="class_option_list_1a640f8b9f668865f5f747c9bb58c26bf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_option_list_1a640f8b9f668865f5f747c9bb58c26bf7" kindref="member">GetCount</ref>(){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_option_list_1af74dfd18b2ca3066d7423b84928c458e" kindref="member">m_items</ref>.GetCount();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="structtag_h_t_m_form_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtag_h_t_m_form_data_1a5587b11690ea2a896d2618d151a37ed8" kindref="member">tagHTMFormData</ref>{</highlight></codeline>
+<codeline lineno="82" refid="structtag_h_t_m_form_data_1ab0c2d3483d97a308269afb77722cb23e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1ab0c2d3483d97a308269afb77722cb23e" kindref="member">m_nPatientNo</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structtag_h_t_m_form_data_1a0d48a435455f47e969f0a461a6a62242" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a0d48a435455f47e969f0a461a6a62242" kindref="member">m_nDocumentNo</ref>;</highlight></codeline>
+<codeline lineno="84" refid="structtag_h_t_m_form_data_1a10a1b45ace59a8964b5503e54c20ded9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a10a1b45ace59a8964b5503e54c20ded9" kindref="member">m_szDeptID</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structtag_h_t_m_form_data_1accfa8e131ec9baff1be3dcbf0be11227" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1accfa8e131ec9baff1be3dcbf0be11227" kindref="member">m_szRecordNo</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structtag_h_t_m_form_data_1aa23fcf9b7cf63dd3bc686ec5c01b2089" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1aa23fcf9b7cf63dd3bc686ec5c01b2089" kindref="member">m_nRefIdx</ref>;</highlight></codeline>
+<codeline lineno="87" refid="structtag_h_t_m_form_data_1a917ca770acc7c7b0de7cb7d295f70f34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a917ca770acc7c7b0de7cb7d295f70f34" kindref="member">m_nTreatTime</ref>;</highlight></codeline>
+<codeline lineno="88" refid="structtag_h_t_m_form_data_1a7c6d9d93dca8ff206b2f3388aa4b324b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a7c6d9d93dca8ff206b2f3388aa4b324b" kindref="member">m_nRoomID</ref>;</highlight></codeline>
+<codeline lineno="89" refid="structtag_h_t_m_form_data_1a0058660b70c504510e81c21a56989f9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a0058660b70c504510e81c21a56989f9a" kindref="member">m_nOrderId</ref>;</highlight></codeline>
+<codeline lineno="90" refid="structtag_h_t_m_form_data_1a6fdc3f74b1b95b3280440fbba35c1cc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a6fdc3f74b1b95b3280440fbba35c1cc6" kindref="member">m_szReference</ref>;</highlight></codeline>
+<codeline lineno="91" refid="structtag_h_t_m_form_data_1a5587b11690ea2a896d2618d151a37ed8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a5587b11690ea2a896d2618d151a37ed8" kindref="member">tagHTMFormData</ref>(){</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1ab0c2d3483d97a308269afb77722cb23e" kindref="member">m_nPatientNo</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a0d48a435455f47e969f0a461a6a62242" kindref="member">m_nDocumentNo</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1aa23fcf9b7cf63dd3bc686ec5c01b2089" kindref="member">m_nRefIdx</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a917ca770acc7c7b0de7cb7d295f70f34" kindref="member">m_nTreatTime</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a0058660b70c504510e81c21a56989f9a" kindref="member">m_nOrderId</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a7c6d9d93dca8ff206b2f3388aa4b324b" kindref="member">m_nRoomID</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a10a1b45ace59a8964b5503e54c20ded9" kindref="member">m_szDeptID</ref>.Empty();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1a6fdc3f74b1b95b3280440fbba35c1cc6" kindref="member">m_szReference</ref>.Empty();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtag_h_t_m_form_data_1accfa8e131ec9baff1be3dcbf0be11227" kindref="member">m_szRecordNo</ref>.Empty();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102" refid="_h_t_m_forms_8h_1ad2e93865acdc76afcba73960519bdd28" refkind="member"><highlight class="normal">}<sp/><ref refid="_h_t_m_forms_8h_1ad2e93865acdc76afcba73960519bdd28" kindref="member">HTMFormData</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="class_c_h_t_m_forms" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/><sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_h_t_m_forms_1a1ba3c0a03a62b6f487a47d5f68093ef3" kindref="member">CHTMForms</ref><sp/>:<sp/><ref refid="class_c_h_t_m_layout_ctrl_1aa1168241067d85512213e7ff0160aaa0" kindref="member">CHTMLayoutCtrl</ref></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>DECLARE_DYNAMIC(<ref refid="class_c_h_t_m_forms_1a1ba3c0a03a62b6f487a47d5f68093ef3" kindref="member">CHTMForms</ref>)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="class_c_h_t_m_forms_1ad85e6f90b045b3f5c738f4100c8d494d" refkind="member"><highlight class="normal"><sp/><sp/>PrintEx*<sp/><ref refid="class_c_h_t_m_forms_1ad85e6f90b045b3f5c738f4100c8d494d" kindref="member">m_pPrinter</ref>;<sp/></highlight><highlight class="comment">//HTMLLayout<sp/>print<sp/>manager</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_c_h_t_m_forms_1aa7375075fc4d36769c4f20659a02613f" refkind="member"><highlight class="normal"><sp/><sp/>CRect<sp/><ref refid="class_c_h_t_m_forms_1aa7375075fc4d36769c4f20659a02613f" kindref="member">m_rcPrintArea</ref>;<sp/></highlight><highlight class="comment">//print<sp/>area<sp/>in<sp/>printer<sp/>device<sp/>units</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="class_c_h_t_m_forms_1a048c870d3586f3e5a0a3515c50ac95ea" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a048c870d3586f3e5a0a3515c50ac95ea" kindref="member">m_scaled_width</ref>;<sp/><sp/></highlight><highlight class="comment">//scaled<sp/>width<sp/>of<sp/>the<sp/>print<sp/>area<sp/>for<sp/>1:1<sp/>scale</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_c_h_t_m_forms_1acf7fe596f451bbb20d0b4207f47956a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1acf7fe596f451bbb20d0b4207f47956a0" kindref="member">m_margin_left</ref>;<sp/></highlight><highlight class="comment">//page<sp/>margins<sp/>in<sp/>inches</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_c_h_t_m_forms_1abfc8b72144ca4dafb9b2bcaba82c7cfb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1abfc8b72144ca4dafb9b2bcaba82c7cfb" kindref="member">m_margin_top</ref>;</highlight></codeline>
+<codeline lineno="116" refid="class_c_h_t_m_forms_1a34cc0a5560895f8b5d2b57c1724cd0f3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a34cc0a5560895f8b5d2b57c1724cd0f3" kindref="member">m_margin_right</ref>;</highlight></codeline>
+<codeline lineno="117" refid="class_c_h_t_m_forms_1a618311161affb0a11aa137a95eeb5a9c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a618311161affb0a11aa137a95eeb5a9c" kindref="member">m_margin_bottom</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="class_c_h_t_m_forms_1a607b102ba9ad4050556550113619c2d3" refkind="member"><highlight class="normal"><sp/><sp/>CSize<sp/><sp/><ref refid="class_c_h_t_m_forms_1a607b102ba9ad4050556550113619c2d3" kindref="member">m_measured</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_c_h_t_m_forms_1a805f1fa8bc71ead9fef3b12c6e0da684" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>LPCBYTE<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a805f1fa8bc71ead9fef3b12c6e0da684" kindref="member">m_pHtmlBuffer</ref>;</highlight></codeline>
+<codeline lineno="122" refid="class_c_h_t_m_forms_1ab30f782accb1526d68b34aaf0ded5ce5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>DWORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1ab30f782accb1526d68b34aaf0ded5ce5" kindref="member">m_nHtmlSize</ref>;</highlight></codeline>
+<codeline lineno="123" refid="class_c_h_t_m_forms_1a50c3324ea63416ff8f4fe74270e73288" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>named_values*<sp/><sp/><ref refid="class_c_h_t_m_forms_1a50c3324ea63416ff8f4fe74270e73288" kindref="member">m_pvalues</ref>;</highlight></codeline>
+<codeline lineno="124" refid="class_c_h_t_m_forms_1a8b7be392b8feff0a027e72ddd383855f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>json::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a8b7be392b8feff0a027e72ddd383855f" kindref="member">m_base_url</ref>;</highlight></codeline>
+<codeline lineno="125" refid="class_c_h_t_m_forms_1acdc0a61ccd9b14609adce9a2aab632b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1acdc0a61ccd9b14609adce9a2aab632b0" kindref="member">m_return_id</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_c_h_t_m_forms_1ab6b3ff0e5ad9c3892ca492480da14c32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_h_t_m_forms_1ab6b3ff0e5ad9c3892ca492480da14c32" kindref="member">m_szHtmlFile</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Readonly<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="class_c_h_t_m_forms_1aa1aa1273165b16f62292289d4d6bf92b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1aa1aa1273165b16f62292289d4d6bf92b" kindref="member">m_ROFields</ref>;</highlight></codeline>
+<codeline lineno="131" refid="class_c_h_t_m_forms_1ad622a6e7a87595c5f7f0f5e5e8356e47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CMap&lt;CString,<sp/>LPCTSTR,<sp/><ref refid="class_option_list" kindref="compound">OptionList</ref>*,<sp/><ref refid="class_option_list" kindref="compound">OptionList</ref>*&gt;<sp/><ref refid="class_c_h_t_m_forms_1ad622a6e7a87595c5f7f0f5e5e8356e47" kindref="member">m_options</ref>;</highlight></codeline>
+<codeline lineno="132" refid="class_c_h_t_m_forms_1a9fad6f38a50fa2727a018a09931d23aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CMap&lt;CString,<sp/>LPCTSTR,<sp/>CString,<sp/>CString&gt;<sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a9fad6f38a50fa2727a018a09931d23aa" kindref="member">m_data</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Tên<sp/>view<sp/>cần<sp/>load<sp/>dữ<sp/>liệu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="class_c_h_t_m_forms_1af284528bf3f99616bbb17a87b24a3b5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1af284528bf3f99616bbb17a87b24a3b5d" kindref="member">m_szTableView</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Tên<sp/>bảng<sp/>cần<sp/>lưu<sp/>trữ<sp/>dữ<sp/>liệu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_c_h_t_m_forms_1a76bab67b71988b9d7136efac9a4f1d2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a76bab67b71988b9d7136efac9a4f1d2f" kindref="member">m_szTableName</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Tên<sp/>trường<sp/>khoa<sp/>chính</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="class_c_h_t_m_forms_1aeeda9ebb7c90065506b94dcc19e88d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1aeeda9ebb7c90065506b94dcc19e88d5c" kindref="member">m_szFieldKey</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Mã<sp/>duy<sp/>nhất<sp/>hệ<sp/>thống<sp/>cần<sp/>lưu(<sp/>docno,...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="class_c_h_t_m_forms_1a40500c7f042b17b989eedb0b3c94f7dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a40500c7f042b17b989eedb0b3c94f7dc" kindref="member">m_szUID</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Thêm<sp/>điều<sp/>kiện<sp/>where<sp/>trong<sp/>trường<sp/>hợp<sp/>cần<sp/>thiết</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_c_h_t_m_forms_1a9f95aa92fa8efdc6d398ac033b513138" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a9f95aa92fa8efdc6d398ac033b513138" kindref="member">m_szWhere</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="class_c_h_t_m_forms_1a8375d31cf2917396316d6e5ebc03aff7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a8375d31cf2917396316d6e5ebc03aff7" kindref="member">m_szType</ref>;</highlight></codeline>
+<codeline lineno="147" refid="class_c_h_t_m_forms_1a7efcfd040180594a4850316c8bd09d71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a7efcfd040180594a4850316c8bd09d71" kindref="member">m_szForm</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_c_h_t_m_forms_1a70d120807a2f91c3405de37c0e1c56a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_h_t_m_forms_8h_1ad2e93865acdc76afcba73960519bdd28" kindref="member">HTMFormData</ref><sp/><ref refid="class_c_h_t_m_forms_1a70d120807a2f91c3405de37c0e1c56a3" kindref="member">m_fKey</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="class_c_h_t_m_forms_1a1ba3c0a03a62b6f487a47d5f68093ef3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a1ba3c0a03a62b6f487a47d5f68093ef3" kindref="member">CHTMForms</ref>();</highlight></codeline>
+<codeline lineno="152" refid="class_c_h_t_m_forms_1af7e5a48390aa9511b08ad5fa71b7e8d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>~<ref refid="class_c_h_t_m_forms_1a1ba3c0a03a62b6f487a47d5f68093ef3" kindref="member">CHTMForms</ref>();</highlight></codeline>
+<codeline lineno="153" refid="class_c_h_t_m_forms_1a096d8f330b80cbbf3e1204e01e10ab70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a096d8f330b80cbbf3e1204e01e10ab70" kindref="member">Create</ref>(CWnd*<sp/>pParent,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h);</highlight></codeline>
+<codeline lineno="154" refid="class_c_h_t_m_forms_1a3c53383b1fe0a4984ef4daa706b3c2fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a3c53383b1fe0a4984ef4daa706b3c2fd" kindref="member">OnDraw</ref>(CDC*<sp/>pDC);<sp/><sp/></highlight><highlight class="comment">//<sp/>overridden<sp/>to<sp/>draw<sp/>this<sp/>view</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="class_c_h_t_m_forms_1a96764c37679b15d73f893c5e076d88b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a96764c37679b15d73f893c5e076d88b2" kindref="member">OnPrepareDC</ref>(CDC*<sp/>pDC,<sp/>CPrintInfo*<sp/>pInfo<sp/>=<sp/>NULL);</highlight></codeline>
+<codeline lineno="156" refid="class_c_h_t_m_forms_1ab9095291389ecc1ea76b7e54c20c3721" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1ab9095291389ecc1ea76b7e54c20c3721" kindref="member">OnInitializes</ref>();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="class_c_h_t_m_forms_1a746bcec08a08be1818faec5c6f700166" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>afx_msg<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a746bcec08a08be1818faec5c6f700166" kindref="member">OnFilePrintPreview</ref>();</highlight></codeline>
+<codeline lineno="159" refid="class_c_h_t_m_forms_1a0eab056e7a8db490367d76ee289a35c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>afx_msg<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a0eab056e7a8db490367d76ee289a35c5" kindref="member">OnFilePrint</ref>();</highlight></codeline>
+<codeline lineno="160" refid="class_c_h_t_m_forms_1a9edf395c823ec729bf63e8470f39e5a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a9edf395c823ec729bf63e8470f39e5a2" kindref="member">EnableControls</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bFlag=true);</highlight></codeline>
+<codeline lineno="161" refid="class_c_h_t_m_forms_1a63ba07ee3ac86e810266e9476ac51e44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a63ba07ee3ac86e810266e9476ac51e44" kindref="member">EnableControl</ref>(LPCTSTR<sp/>lpszName,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bEnable);</highlight></codeline>
+<codeline lineno="162" refid="class_c_h_t_m_forms_1aa0f38fb80d361a8773a192073029e4f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1aa0f38fb80d361a8773a192073029e4f9" kindref="member">UpdateData</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>baveAndValidate=true);</highlight></codeline>
+<codeline lineno="163" refid="class_c_h_t_m_forms_1a4057bf176e7f2c852d78df85f4537f52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a4057bf176e7f2c852d78df85f4537f52" kindref="member">Save</ref>(LPCTSTR<sp/>lpszFile);</highlight></codeline>
+<codeline lineno="164" refid="class_c_h_t_m_forms_1ac91bbf7c2d82fad85a7c1e7104cc4d08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1ac91bbf7c2d82fad85a7c1e7104cc4d08" kindref="member">OnAfterLoadData</ref>();</highlight></codeline>
+<codeline lineno="165" refid="class_c_h_t_m_forms_1ac5342ef7d7303afba890710f9b4a6be5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1ac5342ef7d7303afba890710f9b4a6be5" kindref="member">SetValue</ref>(LPCTSTR<sp/>lpszName,<sp/>CString<sp/>szValue);</highlight></codeline>
+<codeline lineno="166" refid="class_c_h_t_m_forms_1aa1f2349193b7c1a3fec79d0f4248a869" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1aa1f2349193b7c1a3fec79d0f4248a869" kindref="member">GetValue</ref>(LPCTSTR<sp/>lpszName,<sp/>CString&amp;<sp/>szValue);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Load<sp/>file<sp/>html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="class_c_h_t_m_forms_1ad7713a8393303a76a540599eae1069fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1ad7713a8393303a76a540599eae1069fe" kindref="member">Load</ref>(LPCTSTR<sp/>lpszFile);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Ham<sp/>load<sp/>file<sp/>va<sp/>in(truong<sp/>hop<sp/>dac<sp/>biet<sp/>file<sp/>in<sp/>&lt;&gt;<sp/>file<sp/>view)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="class_c_h_t_m_forms_1a7557db41b8aa6ba6f9148bf438c39860" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a7557db41b8aa6ba6f9148bf438c39860" kindref="member">PrintFromFile</ref>(LPCTSTR<sp/>lpszFile);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Hàm<sp/>get<sp/>data<sp/>từ<sp/>server<sp/>load<sp/>lên<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="class_c_h_t_m_forms_1a2527521cfd8ecea9318f6d10d7b72e31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a2527521cfd8ecea9318f6d10d7b72e31" kindref="member">GetData</ref>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Ham<sp/>lấy<sp/>dữ<sp/>liệu<sp/>từ<sp/>form<sp/>lưu<sp/>trữ<sp/>lên<sp/>server</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="class_c_h_t_m_forms_1acce8b9ff04baa6738fc40c6d9a3be41e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1acce8b9ff04baa6738fc40c6d9a3be41e" kindref="member">PostData</ref>();</highlight></codeline>
+<codeline lineno="176" refid="class_c_h_t_m_forms_1aaee308f9af9c5f34c71f212e811aacb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1aaee308f9af9c5f34c71f212e811aacb2" kindref="member">OnOptionSelect</ref>(<ref refid="class_option_item" kindref="compound">OptionItem</ref>*<sp/>selected){};</highlight></codeline>
+<codeline lineno="177" refid="class_c_h_t_m_forms_1afc5a25d9447ff9c5f59b4ed24d5feedf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>dom::element<sp/><ref refid="class_c_h_t_m_forms_1afc5a25d9447ff9c5f59b4ed24d5feedf" kindref="member">Find</ref>(LPCTSTR<sp/>lpszName);</highlight></codeline>
+<codeline lineno="178" refid="class_c_h_t_m_forms_1add6525830ef0645ea3883d2fd4c1749c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1add6525830ef0645ea3883d2fd4c1749c" kindref="member">IsReadOnly</ref>(LPCTSTR<sp/>szField);</highlight></codeline>
+<codeline lineno="179" refid="class_c_h_t_m_forms_1a02d291e7ae21356fff1296539e8dd1df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a02d291e7ae21356fff1296539e8dd1df" kindref="member">GetHtmlResource</ref>(LPCTSTR<sp/>pszName,<sp/></highlight><highlight class="comment">/*out*/</highlight><highlight class="normal">PBYTE&amp;<sp/>pb,<sp/></highlight><highlight class="comment">/*out*/</highlight><highlight class="normal">DWORD&amp;<sp/>cb,<sp/>HMODULE<sp/>hModule);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="class_c_h_t_m_forms_1aeb2df227a26486fbf17f11e1abde5aab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1aeb2df227a26486fbf17f11e1abde5aab" kindref="member">AddOption</ref>(LPCTSTR<sp/>lpszName,<sp/><ref refid="class_option_list" kindref="compound">OptionList</ref>*<sp/><ref refid="namespaceoptions" kindref="compound">options</ref>);</highlight></codeline>
+<codeline lineno="182" refid="class_c_h_t_m_forms_1add5e95086a989535685edb1754676e72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1add5e95086a989535685edb1754676e72" kindref="member">InitSelection</ref>(LPCTSTR<sp/>lpszName,<sp/>LPCTSTR<sp/>lpszSection);</highlight></codeline>
+<codeline lineno="183" refid="class_c_h_t_m_forms_1a503f05c685e5581e76050c90e7703503" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a503f05c685e5581e76050c90e7703503" kindref="member">SetTableName</ref>(LPCTSTR<sp/>lpszTable);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="185" refid="class_c_h_t_m_forms_1af490a674acddd585ccfc87e8f1bfad10" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BOOL<sp/><ref refid="class_c_h_t_m_forms_1af490a674acddd585ccfc87e8f1bfad10" kindref="member">OnPreparePrinting</ref>(CPrintInfo*<sp/>pInfo);</highlight></codeline>
+<codeline lineno="186" refid="class_c_h_t_m_forms_1a696be7d749fa870bd61eb49ba46f58eb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a696be7d749fa870bd61eb49ba46f58eb" kindref="member">OnBeginPrinting</ref>(CDC*<sp/>pDC,<sp/>CPrintInfo*<sp/>pInfo);</highlight></codeline>
+<codeline lineno="187" refid="class_c_h_t_m_forms_1ac8eb766a06ebdd3b3c824b3f79ffc909" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1ac8eb766a06ebdd3b3c824b3f79ffc909" kindref="member">OnEndPrinting</ref>(CDC*<sp/>pDC,<sp/>CPrintInfo*<sp/>pInfo);</highlight></codeline>
+<codeline lineno="188" refid="class_c_h_t_m_forms_1adbb4d78b24c5f51fa6db652b687752bf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1adbb4d78b24c5f51fa6db652b687752bf" kindref="member">OnPrint</ref>(CDC*<sp/>pDC,<sp/>CPrintInfo*<sp/>pInfo);</highlight></codeline>
+<codeline lineno="189" refid="class_c_h_t_m_forms_1a237220e4eaeed1e00aa1bdcc782bd1dc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BOOL<sp/><ref refid="class_c_h_t_m_forms_1a237220e4eaeed1e00aa1bdcc782bd1dc" kindref="member">on_event</ref>(HELEMENT<sp/>he,<sp/>HELEMENT<sp/>target,<sp/>BEHAVIOR_EVENTS<sp/>type,<sp/>UINT_PTR<sp/>reason<sp/>);<sp/></highlight></codeline>
+<codeline lineno="190" refid="class_c_h_t_m_forms_1aae2a7ea1938f7fedf10105fe73947e36" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BOOL<sp/><ref refid="class_c_h_t_m_forms_1aae2a7ea1938f7fedf10105fe73947e36" kindref="member">OnEvent</ref>(HELEMENT<sp/>he,<sp/>HELEMENT<sp/>target,<sp/>BEHAVIOR_EVENTS<sp/>type,<sp/>UINT_PTR<sp/>reason<sp/>);<sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="192" refid="class_c_h_t_m_forms_1a3c4eac19f04ee5787f8c0428ae961cfd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a3c4eac19f04ee5787f8c0428ae961cfd" kindref="member">OnCreateOptions</ref>(CString<sp/>szName){}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>DECLARE_MESSAGE_MAP()</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Generic<sp/>creator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="class_c_h_t_m_forms_1a4effca1e3c8e50ff9cc0639d4d6cb49a" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>BOOL<sp/><ref refid="class_c_h_t_m_forms_1a096d8f330b80cbbf3e1204e01e10ab70" kindref="member">Create</ref>(DWORD<sp/>dwStyle,<sp/>const<sp/>RECT&amp;<sp/>rect,<sp/>CWnd*<sp/>pParentWnd,<sp/>UINT<sp/>nID);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Generic<sp/>creator<sp/>allowing<sp/>extended<sp/>style<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="class_c_h_t_m_forms_1a24f75c451ebeaba4638ad0163c825729" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>BOOL<sp/><ref refid="class_c_h_t_m_forms_1a24f75c451ebeaba4638ad0163c825729" kindref="member">CreateEx</ref>(DWORD<sp/>dwExStyle,<sp/>DWORD<sp/>dwStyle,<sp/>const<sp/>RECT&amp;<sp/>rect,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>CWnd*<sp/>pParentWnd,<sp/>UINT<sp/>nID);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>html<sp/>from<sp/>memory<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="class_c_h_t_m_forms_1ac8792222da94b7f7e3068b634b7fd33e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1ac8792222da94b7f7e3068b634b7fd33e" kindref="member">LoadHtml</ref>(LPCBYTE<sp/>pb,<sp/>DWORD<sp/>nBytes);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>load<sp/>html<sp/>from<sp/>resource<sp/>by<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="class_c_h_t_m_forms_1a6b3e3497fa1e1d7d98279447dfaa2201" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a6b3e3497fa1e1d7d98279447dfaa2201" kindref="member">LoadHtmlResource</ref>(LPCTSTR<sp/>pszName,<sp/>HMODULE<sp/>hModule<sp/>=<sp/>NULL);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>load<sp/>html<sp/>from<sp/>resource<sp/>by<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="class_c_h_t_m_forms_1a4f3bcd3b27f21c3a52a2d0edc6bca23e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a6b3e3497fa1e1d7d98279447dfaa2201" kindref="member">LoadHtmlResource</ref>(DWORD<sp/>resID,<sp/>HMODULE<sp/>hModule<sp/>=<sp/>NULL);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Overridables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>custom<sp/>behavior<sp/>notifications,<sp/>see<sp/>behaviors/notifications.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="class_c_h_t_m_forms_1af74382e4751992b57f62088111b8df03" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1af74382e4751992b57f62088111b8df03" kindref="member">OnBehaviorNotify</ref>(UINT<sp/>uMsg,<sp/>WPARAM<sp/>wParam,<sp/>LPARAM<sp/>lParam);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>non-HTMLayout<sp/>notifications</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="class_c_h_t_m_forms_1a8b4a964da98f28f7ce1ae2573f0b2f87" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a8b4a964da98f28f7ce1ae2573f0b2f87" kindref="member">OnHtmlGenericNotifications</ref>(UINT<sp/>uMsg,<sp/>WPARAM<sp/>wParam,<sp/>LPARAM<sp/>lParam);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>control<sp/>for<sp/>&lt;INPUT&gt;,<sp/>&lt;WIDGET&gt;,<sp/>&lt;TEXTAREA&gt;,<sp/>&lt;SELECT&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="class_c_h_t_m_forms_1a9d488085bd4274ae227991dee8eb91eb" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a9d488085bd4274ae227991dee8eb91eb" kindref="member">OnCreateControl</ref>(LPNMHL_CREATE_CONTROL<sp/>pnmcc);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>post-control-creation<sp/>notification.<sp/>Good<sp/>place<sp/>to<sp/>set<sp/>additional<sp/>styles<sp/>for<sp/>builtin<sp/>controls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="class_c_h_t_m_forms_1afcfbf7404f43914e310d4f1e02afb0ed" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1afcfbf7404f43914e310d4f1e02afb0ed" kindref="member">OnControlCreated</ref>(LPNMHL_CREATE_CONTROL<sp/>pnmcc);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>your<sp/>chance<sp/>to<sp/>destroy<sp/>child<sp/>control<sp/>in<sp/>your<sp/>own<sp/>way.<sp/>::DestroyWindow<sp/>used<sp/>by<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="class_c_h_t_m_forms_1ae10e8ea03cbeb8b4cc0ad9aea4303779" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1ae10e8ea03cbeb8b4cc0ad9aea4303779" kindref="member">OnDestroyControl</ref>(LPNMHL_DESTROY_CONTROL<sp/>pnmhl);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>hyperlink<sp/>notifications<sp/>generated<sp/>by<sp/>the<sp/>hyperlink<sp/>behavior.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="class_c_h_t_m_forms_1a70ecdc4e39bd26f16be81e65f83cdf6c" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a70ecdc4e39bd26f16be81e65f83cdf6c" kindref="member">OnHyperLink</ref>(NMHL_HYPERLINK*<sp/>pnmhl);</highlight></codeline>
+<codeline lineno="229" refid="class_c_h_t_m_forms_1adf564cd31a60face127fa8516496789b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1adf564cd31a60face127fa8516496789b" kindref="member">OnHyperLinkEnter</ref>(NMHL_HYPERLINK*<sp/>pnmhl);</highlight></codeline>
+<codeline lineno="230" refid="class_c_h_t_m_forms_1ac74573eda2a8cd945cf6e69b631be334" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1ac74573eda2a8cd945cf6e69b631be334" kindref="member">OnHyperLinkLeave</ref>(NMHL_HYPERLINK*<sp/>pnmhl);</highlight></codeline>
+<codeline lineno="231" refid="class_c_h_t_m_forms_1aeb6a4168268691f70f1bf818061d9e94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1aeb6a4168268691f70f1bf818061d9e94" kindref="member">OnHyperLinkClick</ref>(NMHL_HYPERLINK*<sp/>pnmhl);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Override<sp/>this<sp/>to<sp/>load<sp/>data<sp/>(images<sp/>or<sp/>css<sp/>sheets)<sp/>from<sp/>places<sp/>other<sp/>than<sp/>this<sp/>app<sp/>resources.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="class_c_h_t_m_forms_1afc28753f9fdd535a08ae790b7376b472" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1afc28753f9fdd535a08ae790b7376b472" kindref="member">OnLoadData</ref>(LPNMHL_LOAD_DATA<sp/>pnmld);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Data<sp/>arrived.<sp/>Handle<sp/>this<sp/>if<sp/>you<sp/>want<sp/>to<sp/>store<sp/>them<sp/>somewhere<sp/>for<sp/>future<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="class_c_h_t_m_forms_1a86a55e08da40c061c0e8b07b0c2a9734" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a86a55e08da40c061c0e8b07b0c2a9734" kindref="member">OnDataLoaded</ref>(LPNMHL_DATA_LOADED<sp/>pnmld);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>resources<sp/>are<sp/>in<sp/>place.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="class_c_h_t_m_forms_1a00848c02277c9f7dda540db50c9947f3" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a00848c02277c9f7dda540db50c9947f3" kindref="member">OnDocumentComplete</ref>();</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Attach<sp/>your<sp/>own<sp/>behavior<sp/>to<sp/>the<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="class_c_h_t_m_forms_1a39e985578b70dc6397f1409751bbda74" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a39e985578b70dc6397f1409751bbda74" kindref="member">OnAttachBehavior</ref>(<sp/>LPNMHL_ATTACH_BEHAVIOR<sp/>lpab<sp/>);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DOM<sp/>helpers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="class_c_h_t_m_forms_1a3de93ab084f319dbee88bf4970ba5470" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a3de93ab084f319dbee88bf4970ba5470" kindref="member">GetAttrInt</ref>(HELEMENT<sp/>he,<sp/>LPCSTR<sp/>attrName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>defaultValue<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="249" refid="class_c_h_t_m_forms_1ab78d6e80c8a2901cb32165d5477cba3b" refkind="member"><highlight class="normal"><sp/><sp/>CString<sp/><ref refid="class_c_h_t_m_forms_1ab78d6e80c8a2901cb32165d5477cba3b" kindref="member">GetElementType</ref>(HELEMENT<sp/>he);</highlight></codeline>
+<codeline lineno="250" refid="class_c_h_t_m_forms_1a10fb84f7216bdeb04bed36f173e50c72" refkind="member"><highlight class="normal"><sp/><sp/>CString<sp/><ref refid="class_c_h_t_m_forms_1a10fb84f7216bdeb04bed36f173e50c72" kindref="member">GetAttr</ref>(HELEMENT<sp/>he,<sp/>LPCSTR<sp/>attrName);</highlight></codeline>
+<codeline lineno="251" refid="class_c_h_t_m_forms_1abcfce7784b57b4fd80dcd1bdc7e53439" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1abcfce7784b57b4fd80dcd1bdc7e53439" kindref="member">HasAttr</ref>(HELEMENT<sp/>he,<sp/>LPCSTR<sp/>attrName);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">protected:</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>HTMLayout<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="class_c_h_t_m_forms_1a86bf208716c893229286cb7c75e4167a" refkind="member"><highlight class="normal"><sp/><sp/>static<sp/>LRESULT<sp/>CALLBACK<sp/><ref refid="class_c_h_t_m_forms_1a86bf208716c893229286cb7c75e4167a" kindref="member">callback</ref>(UINT<sp/>uMsg,<sp/>WPARAM<sp/>wParam,<sp/>LPARAM<sp/>lParam,<sp/>LPVOID<sp/>vParam);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="258" refid="class_c_h_t_m_forms_1aadac9cf22c7d7cc9320a22629daef8cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1aadac9cf22c7d7cc9320a22629daef8cf" kindref="member">SetCallback</ref>();</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="260" refid="class_c_h_t_m_forms_1aa4e906e7724d04c0bda621585b8052d7" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1aa4e906e7724d04c0bda621585b8052d7" kindref="member">WindowProc</ref>(<sp/>UINT<sp/>message,<sp/>WPARAM<sp/>wParam,<sp/>LPARAM<sp/>lParam);</highlight></codeline>
+<codeline lineno="261" refid="class_c_h_t_m_forms_1a62c177726d5175d59157fc4750cacf1f" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a62c177726d5175d59157fc4750cacf1f" kindref="member">OnHtmlNotify</ref>(UINT<sp/>uMsg,<sp/>WPARAM<sp/>wParam,<sp/>LPARAM<sp/>lParam);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="263" refid="class_c_h_t_m_forms_1a9f0a88b371e6b7730864161f0daaaffc" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1a9f0a88b371e6b7730864161f0daaaffc" kindref="member">OnHtmlCommand</ref>(NMHL_COMMAND_CLICK<sp/>*pnmCommand)<sp/>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="265" refid="class_c_h_t_m_forms_1aa7771aab1db81bbf92a8474e9e01c98e" refkind="member"><highlight class="normal"><sp/><sp/>LRESULT<sp/><ref refid="class_c_h_t_m_forms_1aa7771aab1db81bbf92a8474e9e01c98e" kindref="member">LoadResourceData</ref>(LPNMHL_LOAD_DATA<sp/>pnmld);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="268" refid="class_c_h_t_m_forms_1a60ba5029f1f6861caef6e3d83f40920d" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>BOOL<sp/><sp/><ref refid="class_c_h_t_m_forms_1a60ba5029f1f6861caef6e3d83f40920d" kindref="member">handle_event</ref><sp/>(HELEMENT<sp/>he,<sp/>BEHAVIOR_EVENT_PARAMS&amp;<sp/>params<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="269" refid="class_c_h_t_m_forms_1a4f464dc9b657c823fa30e656f6e2374d" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>BOOL<sp/><sp/><ref refid="class_c_h_t_m_forms_1a4f464dc9b657c823fa30e656f6e2374d" kindref="member">handle_key</ref><sp/><sp/><sp/><sp/>(HELEMENT<sp/>he,<sp/>KEY_PARAMS&amp;<sp/>params<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="270" refid="class_c_h_t_m_forms_1acfe73108f1cb5273d0915a37984f2e82" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/>BOOL<sp/><sp/><ref refid="class_c_h_t_m_forms_1acfe73108f1cb5273d0915a37984f2e82" kindref="member">handle_mouse</ref><sp/><sp/>(HELEMENT<sp/>he,<sp/>MOUSE_PARAMS&amp;<sp/>params<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="class_c_h_t_m_forms_1a9a5faed4094899d421a37727e758dbbd" refkind="member"><highlight class="normal"><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a9a5faed4094899d421a37727e758dbbd" kindref="member">OnElementEvent</ref>(dom::element<sp/>el);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="276" refid="class_c_h_t_m_forms_1a14c4ec309b7fc7c22e9ba818e9d98315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>HELEMENT<sp/><sp/><sp/><sp/><ref refid="class_c_h_t_m_forms_1a14c4ec309b7fc7c22e9ba818e9d98315" kindref="member">GetRootElement</ref>();</highlight></codeline>
+<codeline lineno="277" refid="class_c_h_t_m_forms_1a95da9fda6b224a3cf781720f51172c84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>BOOL<sp/><ref refid="class_c_h_t_m_forms_1a95da9fda6b224a3cf781720f51172c84" kindref="member">PreTranslateMessage</ref>(<sp/>MSG*<sp/>pMsg<sp/>);</highlight></codeline>
+<codeline lineno="278" refid="class_c_h_t_m_forms_1af90d0b035a8d46ae4eb144d3f6b6fe47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>afx_msg<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1af90d0b035a8d46ae4eb144d3f6b6fe47" kindref="member">OnCreate</ref>(LPCREATESTRUCT<sp/>lpCreateStruct);</highlight></codeline>
+<codeline lineno="279" refid="class_c_h_t_m_forms_1afb9f1a4c4909908c25eca7547cacbb89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>afx_msg<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1afb9f1a4c4909908c25eca7547cacbb89" kindref="member">OnDestroy</ref>();</highlight></codeline>
+<codeline lineno="280" refid="class_c_h_t_m_forms_1a6bbfa59c3ec49641212589296eaaf0b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>afx_msg<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_t_m_forms_1a6bbfa59c3ec49641212589296eaaf0b4" kindref="member">OnNcDestroy</ref>();</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//<sp/>HTML<sp/>command<sp/>map<sp/>macros:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="_h_t_m_forms_8h_1a6e4c47e9e475529afcdcf54dc8612579" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BEGIN_HTML_COMMAND_MAP<sp/>\</highlight></codeline>
+<codeline lineno="285"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>virtual<sp/>LRESULT<sp/>OnHtmlCommand(NMHL_COMMAND_CLICK<sp/>*pnmCommand)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="_h_t_m_forms_8h_1ac01bdb829cdca4b6e7b75711887877f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ON_HTML_COMMAND(WStrHtmlElementId,<sp/>Proc)<sp/>\</highlight></codeline>
+<codeline lineno="288"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>wcscmp(WStrHtmlElementId,pnmCommand-&gt;szElementID)<sp/>==<sp/>0<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="289"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>Proc();<sp/>return<sp/>0;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="_h_t_m_forms_8h_1a377dffe1df5e04944cce2ffbabae1d89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>END_HTML_COMMAND_MAP<sp/>\</highlight></codeline>
+<codeline lineno="292"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;../lib/HTMLayout.lib&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/HMSCore/HTMForms.h"/>
+  </compounddef>
+</doxygen>

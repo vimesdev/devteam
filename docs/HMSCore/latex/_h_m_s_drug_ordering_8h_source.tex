@@ -1,0 +1,73 @@
+\doxysection{HMSDrug\+Ordering.\+h}
+\hypertarget{_h_m_s_drug_ordering_8h_source}{}\label{_h_m_s_drug_ordering_8h_source}\index{Include/HMSCore/HMSDrugOrdering.h@{Include/HMSCore/HMSDrugOrdering.h}}
+\mbox{\hyperlink{_h_m_s_drug_ordering_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSDRUGORDERING\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSDRUGORDERING\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_drug_ordering_a6151eeb89e1a10947cbe00f318a57095}{CHMSDrugOrdering}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a367fae6bbe9d2ed58552f9c826c70891}{m\_bIsTracking}};}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a73ca9469cdf253f53e2b3a57e5e8c93a}{m\_wndDrugOrdering}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_ad22aa6fda12b41d61cfc4f83bcdad212}{m\_wndList}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a70cff33c37f0cb2f8cc57b18b8992ea7}{m\_wndDiseaseSummary}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_ae15d0e10fae457d1bb6fd06bca77adca}{m\_wndCheckDrugInteractions}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a1e89b62e15ec5e1e96578a3cb38cb9d8}{m\_wndDiseaseSummaryLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a2cf6182dba6fb7fb81c3a38d884ba15f}{m\_szDiseaseSummary}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_ab5973ec1f6e78730d262f1a78f312cd8}{OnListLoadData}}();\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_ad68b089dca35e6f3597b6e5c254dccd7}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a14b5ac4ff75348ddda1034e9b19113d2}{OnListDblClick}}();\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a245b1a60223755e420778d8079830c12}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiseaseSummaryChange();\ }}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiseaseSummarySetfocus();\ }}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiseaseSummaryKillfocus();\ }}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a78c55eb5115d18f06d52663b028ad366}{OnDiseaseSummaryCheckValue}}();\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a676c25d927b172349a871ab03ffd9009}{OnCheckDrugInteractionsSelect}}();\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a6151eeb89e1a10947cbe00f318a57095}{CHMSDrugOrdering}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_afedc981256ce0ecbd4e16831840ab7dd}{\string~CHMSDrugOrdering}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a99c8d900302ac99c24b2d5f08eb3bc2f}{OnCreateComponents}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a68d3f84abda915992ce30f6c8805eb86}{OnInitializeComponents}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_ab8df62d226786aed4b482536498dd11c}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a4f6d59916696d630bf22c54eb0cd81fd}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a2a833c56d72dd79373ac632d3364f546}{GetDataToScreen}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a8a7a10d41937af6477365bd98b011b09}{GetScreenToData}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_ac08571da914a7e4d16b702ed74b759fd}{SetDefaultValues}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a901c7dadf59100d13ae331cb5af4e2a2}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_acf2df9c3e6fcaea4871f63d4cff447df}{OnAddHMSDrugOrdering}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_afeda190b3b3a2ff0b627307dc23fcc8c}{OnEditHMSDrugOrdering}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a0aa990d6046377617caefd2d78b298c4}{OnDeleteHMSDrugOrdering}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a7beafe83cf201308d9f5a0c799dd8882}{OnSaveHMSDrugOrdering}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a2e93eebcc589dab6d67bf4fe0f0f1b29}{OnCancelHMSDrugOrdering}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_ae26aaffde3790f7ec5a227f9b4da555e}{OnHMSDrugOrderingListLoadData}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00066\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_aaf4385023fb89b1592a962da390f8021}{OnMouseMove}}(UINT\ nFlags,\ CPoint\ point);}
+\DoxyCodeLine{00067\ \ \ \ \ afx\_msg\ LRESULT\ \mbox{\hyperlink{class_c_h_m_s_drug_ordering_a0c1205a8692564da1618ab90493fc09e}{OnMouseLeave}}(WPARAM\ wparam,\ LPARAM\ lparam);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

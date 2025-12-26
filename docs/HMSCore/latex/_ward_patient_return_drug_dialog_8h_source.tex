@@ -1,0 +1,113 @@
+\doxysection{Ward\+Patient\+Return\+Drug\+Dialog.\+h}
+\hypertarget{_ward_patient_return_drug_dialog_8h_source}{}\label{_ward_patient_return_drug_dialog_8h_source}\index{Include/HMSCore/WardPatientReturnDrugDialog.h@{Include/HMSCore/WardPatientReturnDrugDialog.h}}
+\mbox{\hyperlink{_ward_patient_return_drug_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CWARDPATIENTRETURNDRUGDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CWARDPATIENTRETURNDRUGDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_drug_list_return}{DrugListReturn}}\{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{struct_drug_list_return_aef08d0d726836ab30d1a76ca125ae6aa}{Product\_id}};\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{struct_drug_list_return_a95b5f0952a36fca1d50a0c2931bd55d4}{Product\_item\_id}};\ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ CString\ \mbox{\hyperlink{struct_drug_list_return_acdd4fd848842c73421d2dadcfbef9752}{product\_name}};}
+\DoxyCodeLine{00035\ \ \ \ \ CString\ \mbox{\hyperlink{struct_drug_list_return_abeb690d17184b38d947226cec33d19b5}{product\_uomname}};}
+\DoxyCodeLine{00036\ \ \ \ \ CString\ \mbox{\hyperlink{struct_drug_list_return_a7a76ca622ed123ec01f6dc460f37b1dd}{product\_countryname}};\ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_drug_list_return_a6eb9c8b324534523734ae91f003babb6}{hpol\_unitprice}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_drug_list_return_a7cb47831e4dd37197d8fffe83d8dfa39}{hpol\_qtyreverse}};}
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{_ward_patient_return_drug_dialog_8h_a9be601d0ad98b72540ffdb726191f8ca}{RETURNITEM}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_ward_patient_return_drug_dialog}{CWardPatientReturnDrugDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00053\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00054\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a132fda6873caec2b07dde428b0f7dd6c}{m\_nTransactionID}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_aa6ebf8eef7a686d6ce68fb6b149509f2}{m\_nDocno}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a987e0f05c1ef0b73b9815e5e2069432c}{m\_nOrderID}};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a6c73b64ae2e4e381ee0bfa3a1205d2ef}{m\_nOrderLine}};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_aceeedd1b4c72d8e98e6b2cf476b31d42}{m\_nStorageID}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a809c7312e9506c6af1577ade46875a38}{m\_nStorageToID}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a05669b317f7cbc24a96d410226601ece}{m\_nProductItemID}};}
+\DoxyCodeLine{00062\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a3769cfc24e1f0aa3bfc8bf30f1399536}{m\_wndOrder}};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a63d66eab2c5e0b177c19d374a37a2c47}{m\_nQuantity}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_ae144ff301fa938180ca292a33088255d}{m\_nUnitPrice}};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a880a86eadebd4688c4db8e46625295ff}{m\_nOnHand}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_af7cb1044e93490e4a4591c49ba4ab481}{m\_szProductKey}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_af4a778baba4b3cb24fa0c84d48eb09bd}{m\_szOrgID}};}
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a8429f820ee31a591d09b546a0fc36a6f}{m\_szTransactionType}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_af8033e2aafb9e6b470d6be8f02c3b2e8}{m\_szIsEMOperation}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a29810c5d8427273d48dfcb484a3eedf7}{m\_szIsOutPatient}};}
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a2642fd5be61112c30f37c77f1073ca39}{m\_sDept}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a894cbbb9a13e09a91259a3feb434a5c1}{m\_wndGroupDrugList}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a536f274491f6d7e25a9e423faa9bcfb5}{m\_wndGroupPatientList}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a7ac9149fec93d37eb6f6378b61760b7b}{m\_wndApply}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a15c75d8f4cad6d70172147b42013b326}{m\_wndPreview}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a399187e549e485c89b57e70f4e0763cb}{m\_wndClose}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a8ab29541d89ac6e4fad832f267cf32f1}{m\_wndPatientList}};}
+\DoxyCodeLine{00081\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a0c19ae2d82e119bd983943bb3bb1403c}{m\_wndDrugList}};}
+\DoxyCodeLine{00082\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a1b359bb0f6038e779c95886542689ed4}{m\_transactionlineTbl}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_ac9f090606207fe1c06a01ffb7056e275}{OnApplySelect}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a9cdc263781545320b13389c3b7319ea4}{OnPreviewSelect}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_aa2a1918fdbe205fcc7e8bee04a72788e}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a529dd52264bb9985afc5699447048f6d}{OnPatientListLoadData}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_abaddd368925e03046b931afc8663e052}{OnPatientListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a4389e078b02b72c79a70fe5c8cbeeb69}{OnPatientListDblClick}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_aeaaea05e4f8be3e043ae90b4211b8d8a}{OnPatientListAddToSheetItem}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a64533a6db5d391562b5a10221e90b32e}{OnPatientListCheckAllItem}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a1d1ed9d55ef8d2ca9b3583eb8f50db19}{OnPatientListUnCheckAllItem}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a5e3c27ca77d26b8b246e78f90139b976}{OnDrugListLoadData}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a85b694fb8215cd269baa37445b8eb290}{OnDrugListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a77b933c34be9606b6c9e85728af1e659}{OnDrugListDblClick}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a31806c951c76cb4ad6e10cb2a390c49e}{OnDrugListDeleteItem}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a04e9a0f2cb7ea576f071cc4e376a5beb}{CWardPatientReturnDrugDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_abd8b5f09856d10cb506b9c4d7e4a8c4d}{\string~CWardPatientReturnDrugDialog}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a7df2bb4ab441d6032fa154463aa6fb64}{OnCreateComponents}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_ab9a80069f974417290cd920583b4e232}{OnInitializeComponents}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a4a9230cf34589e03da8420934487f032}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a75e76fa5664563a1982970061fb57aeb}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_ab0869ca2b0f3b302c6e54b52105d95d9}{GetDataToScreen}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a2707a71e377e2981f55516201a53502f}{GetScreenToData}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a7987ae71c3873c4640e7c19850caa3c5}{SetDefaultValues}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a50c4d262b88a91fc97d1e63b3835f3c3}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_af0d225f124d6c783eda4e852f737bb85}{OnAddCWardPatientReturnDrugDialog}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_af79e1711c2926e99a9eb42e0f2a60e24}{OnEditCWardPatientReturnDrugDialog}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_aca0c9bd7280b54b0b58a90d3c57b73b4}{OnDeleteCWardPatientReturnDrugDialog}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_acd1c6aa5256d524a6dbfeb6a85abcfe0}{OnSaveCWardPatientReturnDrugDialog}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_abd2bde986c2c30a9c514d2e867d1d767}{OnCancelCWardPatientReturnDrugDialog}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a1894b573dcbfb87b0526fd1da23a51b5}{OnCWardPatientReturnDrugDialogListLoadData}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_ac56cabcbf71e4f9c5f2680da34f8164d}{OnUpdateState}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{long}\ nProductItem\_ID,\ \textcolor{keywordtype}{bool}\ bCheck\ );}
+\DoxyCodeLine{00113\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00114\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_a2ba4c20bb6dbad31d46742b4e3b5cbb3}{OnClose}}();}
+\DoxyCodeLine{00115\ protected:}
+\DoxyCodeLine{00116\ \textcolor{comment}{//\ \ virtual\ BOOL\ OnNotify(WPARAM\ wParam,\ LPARAM\ lParam,\ LRESULT*\ pResult);}}
+\DoxyCodeLine{00117\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_ae86986f627d6e70f8cce63210979a2e1}{OnLvnItemchangedList}}(NMHDR\ *pNMHDR,\ LRESULT\ *pResult);}
+\DoxyCodeLine{00118\ public:}
+\DoxyCodeLine{00119\ \ \ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_ward_patient_return_drug_dialog_ab4d14b0b09abfbeaef3b9608a22ed194}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

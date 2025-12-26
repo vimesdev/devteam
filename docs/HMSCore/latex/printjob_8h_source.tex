@@ -1,0 +1,102 @@
+\doxysection{printjob.\+h}
+\hypertarget{printjob_8h_source}{}\label{printjob_8h_source}\index{Include/HMSCore/printjob.h@{Include/HMSCore/printjob.h}}
+\mbox{\hyperlink{printjob_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2017,\ David\ PHAM-\/VAN\ <dev.nfet.net@gmail.com>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ PRINTING\_PLUGIN\_PRINT\_JOB\_H\_}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ PRINTING\_PLUGIN\_PRINT\_JOB\_H\_}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{printjob_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t}};\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_printer_a6d6f75fd42b79eda7011610e20a8e7bb}{Printer}}\ \{}
+\DoxyCodeLine{00032\ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{struct_printer_a6f6750de13ae64cc047270e07133c2d8}{name}};}
+\DoxyCodeLine{00033\ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{struct_printer_ad6254c06c7485fa8d703c5673918f9ed}{url}};}
+\DoxyCodeLine{00034\ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{struct_printer_a8528fa72762e5681c423ad581a12a293}{model}};}
+\DoxyCodeLine{00035\ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{struct_printer_aa647a6c89672288465547a81e90f257e}{location}};}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{struct_printer_acab6db8548a24cb9ba128e99f16a98e7}{comment}};}
+\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_printer_a62beab82f3b5e19860a96784464944e7}{defaults}};}
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_printer_a1ebb9d0d8eaecccbc094956efe083ad4}{available}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{struct_printer_a6d6f75fd42b79eda7011610e20a8e7bb}{Printer}}(std::string\ \mbox{\hyperlink{struct_printer_a6f6750de13ae64cc047270e07133c2d8}{name}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_printer_ad6254c06c7485fa8d703c5673918f9ed}{url}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_printer_a8528fa72762e5681c423ad581a12a293}{model}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_printer_aa647a6c89672288465547a81e90f257e}{location}},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_printer_acab6db8548a24cb9ba128e99f16a98e7}{comment}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_printer_a62beab82f3b5e19860a96784464944e7}{defaults}},}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_printer_a1ebb9d0d8eaecccbc094956efe083ad4}{available}})}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_printer_a6f6750de13ae64cc047270e07133c2d8}{name}}(\mbox{\hyperlink{struct_printer_a6f6750de13ae64cc047270e07133c2d8}{name}}),}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_printer_ad6254c06c7485fa8d703c5673918f9ed}{url}}(\mbox{\hyperlink{struct_printer_ad6254c06c7485fa8d703c5673918f9ed}{url}}),}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_printer_a8528fa72762e5681c423ad581a12a293}{model}}(\mbox{\hyperlink{struct_printer_a8528fa72762e5681c423ad581a12a293}{model}}),}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_printer_aa647a6c89672288465547a81e90f257e}{location}}(\mbox{\hyperlink{struct_printer_aa647a6c89672288465547a81e90f257e}{location}}),}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_printer_acab6db8548a24cb9ba128e99f16a98e7}{comment}}(\mbox{\hyperlink{struct_printer_acab6db8548a24cb9ba128e99f16a98e7}{comment}}),}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_printer_a62beab82f3b5e19860a96784464944e7}{defaults}}(\mbox{\hyperlink{struct_printer_a62beab82f3b5e19860a96784464944e7}{defaults}}),}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_printer_a1ebb9d0d8eaecccbc094956efe083ad4}{available}}(\mbox{\hyperlink{struct_printer_a1ebb9d0d8eaecccbc094956efe083ad4}{available}})\ \{\}}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_print_job_a4297d46368ff50d61f65e236ba68587d}{PrintJob}}\ \{}
+\DoxyCodeLine{00057\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_print_job_a64e910c0bacf95083c2af3ab55c7810c}{index}};}
+\DoxyCodeLine{00060\ \ \ HGLOBAL\ \mbox{\hyperlink{class_print_job_a6a51d4906a6cc35b9408c47b41782e2e}{hDevMode}};}
+\DoxyCodeLine{00061\ \ \ HGLOBAL\ \mbox{\hyperlink{class_print_job_a2733fc640e3b5e5c367cf02b59447343}{hDevNames}};}
+\DoxyCodeLine{00062\ \ \ HDC\ \mbox{\hyperlink{class_print_job_acfd0bca919264c426c8a0f3311b5fa6f}{hDC}};}
+\DoxyCodeLine{00063\ \ \ std::string\ \mbox{\hyperlink{class_print_job_a10b0198e7e4ad4a10e0a0f44a55dc222}{documentName}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{class_print_job_a4297d46368ff50d61f65e236ba68587d}{PrintJob}}(\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_print_job_a64e910c0bacf95083c2af3ab55c7810c}{index}});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_print_job_a94ee2c624a3b994bb2305ccdccb2b7dc}{id}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_print_job_a64e910c0bacf95083c2af3ab55c7810c}{index}};\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ std::vector<Printer>\ \mbox{\hyperlink{class_print_job_acdec9cd4a623e70775786f2401a3c243}{listPrinters}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_print_job_a89f22099331460eb829ea492e0a7434d}{printPdf}}(std::wstring\ name,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::wstring\ printer,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ width,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ height,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LPBYTE\ data,\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_print_job_a72de6f69d4957abf149ed2b2d1f17474}{writeJob}}(LPBYTE\ data,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_print_job_a78bf65521596029212e7ebf4833f1d4c}{cancelJob}}(std::string\ error);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_print_job_a83aa2c2b8ff7b5c3e37b4896f70bf227}{sharePdf}}(std::vector<uint8\_t>\ data,\ std::string\ name);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_print_job_afbe0b7007c6b01db3031c8bdec777961}{pickPrinter}}(\textcolor{keywordtype}{void}*\ result);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_print_job_a325955f80c02b35f7471971650af8ebb}{rasterPdf}}(std::vector<uint8\_t>\ data,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<int>\ pages,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ scale);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ std::map<std::string,\ bool>\ \mbox{\hyperlink{class_print_job_ab4c6722deca699722dd43c7b1db349ed}{printingInfo}}();}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ PRINTING\_PLUGIN\_PRINT\_JOB\_H\_}}
+
+\end{DoxyCode}

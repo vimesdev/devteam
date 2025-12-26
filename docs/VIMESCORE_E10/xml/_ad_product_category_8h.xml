@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_product_category_8h" kind="file" language="C++">
+    <compoundname>AdProductCategory.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_ad_product_category_popup_8h" local="yes">AdProductCategoryPopup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdProductCategory.h</label>
+        <link refid="_ad_product_category_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AdProductCategoryPopup.h</label>
+        <link refid="_ad_product_category_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_ad_product_category" prot="public">CAdProductCategory</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADPRODUCTCATEGORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADPRODUCTCATEGORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ad_product_category_popup_8h" kindref="compound">AdProductCategoryPopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_ad_product_category" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_ad_product_category_1a88ceefaf44e5c96373cfc5373da5ec7e" kindref="member">CAdProductCategory</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_product_category_1a2dc8babe9a8721b4692ffe06abe8e3e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_popup" kindref="compound">CAdProductCategoryPopup</ref><sp/><ref refid="class_c_ad_product_category_1a2dc8babe9a8721b4692ffe06abe8e3e9" kindref="member">m_wndPopup</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_product_category_1a080372eb7ba86e748419af8beda4ee00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a080372eb7ba86e748419af8beda4ee00" kindref="member">m_arFilters</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_product_category_1a277201d318294409cb408f21eb1a45cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a277201d318294409cb408f21eb1a45cd" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_product_category_1a5a5a305830d0ddd846283e693ee27818" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a5a5a305830d0ddd846283e693ee27818" kindref="member">m_nSearchID</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="class_c_ad_product_category_1a081651c05761d3dd7b3615df0a556c29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a081651c05761d3dd7b3615df0a556c29" kindref="member">m_wndBankInformation</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_product_category_1a30b29a33014c96afdf9cabd7e2a24287" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a30b29a33014c96afdf9cabd7e2a24287" kindref="member">m_wndSearchLabel</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_product_category_1ad4c53442968413472e01d449ea4d4e3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1ad4c53442968413472e01d449ea4d4e3f" kindref="member">m_wndSearch</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_product_category_1aef2edc969472bfcc4d9a7517a17ba541" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1aef2edc969472bfcc4d9a7517a17ba541" kindref="member">m_wndTypeOfFilter</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_product_category_1aeed1d9ce2704b9a4e3a3a07d7e9ac568" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1aeed1d9ce2704b9a4e3a3a07d7e9ac568" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_product_category_1a5c86ea59a66931c12ba8fca628b8aa10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a5c86ea59a66931c12ba8fca628b8aa10" kindref="member">m_wndAdd</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_product_category_1a87d4d6fcab379e73010579d520b6be9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a87d4d6fcab379e73010579d520b6be9c" kindref="member">m_wndEdit</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_ad_product_category_1a43b6bde2f285b6bd2baa0d584565650e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a43b6bde2f285b6bd2baa0d584565650e" kindref="member">m_wndDelete</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_ad_product_category_1a0d2845493125de4f4b7093cdb9702027" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a0d2845493125de4f4b7093cdb9702027" kindref="member">m_wndTypeOfFilterDesc</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_ad_product_category_1afaacabf9d5648d56b5448aaf19000c64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_product_category_1afaacabf9d5648d56b5448aaf19000c64" kindref="member">m_szSearch</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_c_ad_product_category_1ade9131a4d1465ea05340154fa1c1770c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1ade9131a4d1465ea05340154fa1c1770c" kindref="member">OnSearchCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_product_category_1aacfefce5869754670f940375d280e5ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1aacfefce5869754670f940375d280e5ce" kindref="member">OnTypeOfFilterSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_product_category_1a251ee8a6896ddf7a78e17c7663edc2b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a251ee8a6896ddf7a78e17c7663edc2b1" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_product_category_1a86069057452110aa5e5a4038ab5e494b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a86069057452110aa5e5a4038ab5e494b" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_product_category_1a91166a3707e8de341a4b25bc6fb39988" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a91166a3707e8de341a4b25bc6fb39988" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_product_category_1a4e5f3e10a15f802c6c3c9a7563f99bfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a4e5f3e10a15f802c6c3c9a7563f99bfa" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_product_category_1ade7702127a35a26167b83b238a9067eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1ade7702127a35a26167b83b238a9067eb" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_product_category_1a0c1d93f0f56052d1a6190972f69a3ef0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a0c1d93f0f56052d1a6190972f69a3ef0" kindref="member">OnEditSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_product_category_1a4d03dbe598ed758742368fbe26bb5ee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a4d03dbe598ed758742368fbe26bb5ee1" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_product_category_1a88ceefaf44e5c96373cfc5373da5ec7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1a88ceefaf44e5c96373cfc5373da5ec7e" kindref="member">CAdProductCategory</ref>();</highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_product_category_1af3b9e0664673c6edec43490223b55c9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_product_category_1af3b9e0664673c6edec43490223b55c9f" kindref="member">~CAdProductCategory</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_product_category_1ab7a2c02ca91fe2a3b524461c25e40580" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1ab7a2c02ca91fe2a3b524461c25e40580" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_product_category_1a708672f1ce5be78e51f5d1100a913675" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a708672f1ce5be78e51f5d1100a913675" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_product_category_1a0f1e5a141fa7f0993a9e7b216c34f664" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a0f1e5a141fa7f0993a9e7b216c34f664" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_product_category_1aa85598065f5517279ed5d1acb910938f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1aa85598065f5517279ed5d1acb910938f" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_product_category_1a1f48109ab46daf066972976a81e5f058" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a1f48109ab46daf066972976a81e5f058" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_product_category_1a5daa36ab2014c65925a3121eb5fcff98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a5daa36ab2014c65925a3121eb5fcff98" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_product_category_1a99df75b6cfbe4493405539daee9cc859" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a99df75b6cfbe4493405539daee9cc859" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_product_category_1ae077ccf5570ac28ed31cfc0aceab6002" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1ae077ccf5570ac28ed31cfc0aceab6002" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_product_category_1a10699cd8c9ef59200892827d456ab87f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a10699cd8c9ef59200892827d456ab87f" kindref="member">OnAddAdProductCategory</ref>();<sp/></highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_product_category_1acfa9cca3a20f81856e1a6bb015cf743e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1acfa9cca3a20f81856e1a6bb015cf743e" kindref="member">OnEditAdProductCategory</ref>();<sp/></highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_product_category_1a9fa0d0d813495b43673351359046554a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a9fa0d0d813495b43673351359046554a" kindref="member">OnDeleteAdProductCategory</ref>();<sp/></highlight></codeline>
+<codeline lineno="73" refid="class_c_ad_product_category_1a240a793e3651a7a0c81a77b7bcf7ef60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a240a793e3651a7a0c81a77b7bcf7ef60" kindref="member">OnSaveAdProductCategory</ref>();<sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_ad_product_category_1ad8ed5389272f823cf76acfaa7f7dfd44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1ad8ed5389272f823cf76acfaa7f7dfd44" kindref="member">OnCancelAdProductCategory</ref>();<sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_ad_product_category_1a3697cc2ee943857135a306eab96ec691" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_product_category_1a3697cc2ee943857135a306eab96ec691" kindref="member">OnAdProductCategoryListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdProductCategory.h"/>
+  </compounddef>
+</doxygen>

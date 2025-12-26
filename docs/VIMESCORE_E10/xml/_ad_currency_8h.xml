@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_currency_8h" kind="file" language="C++">
+    <compoundname>AdCurrency.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_ad_currency_popup_8h" local="yes">AdCurrencyPopup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdCurrency.h</label>
+        <link refid="_ad_currency_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AdCurrencyPopup.h</label>
+        <link refid="_ad_currency_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_ad_currency" prot="public">CAdCurrency</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADCURRENCY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADCURRENCY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ad_currency_popup_8h" kindref="compound">AdCurrencyPopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_ad_currency" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_ad_currency_1a840e20f21f112c4c71e9e586650ffea4" kindref="member">CAdCurrency</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_currency_1ac3fc63d2a5c01f91b7d87c48dbce68de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_popup" kindref="compound">CAdCurrencyPopup</ref><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1ac3fc63d2a5c01f91b7d87c48dbce68de" kindref="member">m_wndPopup</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_currency_1a07724b349d3cdddcd42681f12bd5b59c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a07724b349d3cdddcd42681f12bd5b59c" kindref="member">m_arFilters</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_currency_1a53145f9cc86604949deed053e106cc3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a53145f9cc86604949deed053e106cc3e" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_currency_1a40fd0acab00acba6a34c81ecd19ee21f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a40fd0acab00acba6a34c81ecd19ee21f" kindref="member">m_nSearchID</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_currency_1a3e19eb0153882abdd14539dc258fbc92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a3e19eb0153882abdd14539dc258fbc92" kindref="member">m_wndBankInformation</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_currency_1abf233fbbfca956fa98b3beaf9dc9d325" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1abf233fbbfca956fa98b3beaf9dc9d325" kindref="member">m_wndSearchLabel</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_currency_1ad20d6dcb11f425894a47b5564437a342" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1ad20d6dcb11f425894a47b5564437a342" kindref="member">m_wndSearch</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_currency_1a6bec333b0dcd0edbcee291afbad23ef1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a6bec333b0dcd0edbcee291afbad23ef1" kindref="member">m_wndTypeOfFilter</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_currency_1a2c814af8e1c20d235de51de5a85dcab6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a2c814af8e1c20d235de51de5a85dcab6" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_currency_1a0ea618bb8108d78f271f3123cb923e54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a0ea618bb8108d78f271f3123cb923e54" kindref="member">m_wndAdd</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_ad_currency_1a43696505d6807d8f6c2794d4bf09ff5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a43696505d6807d8f6c2794d4bf09ff5b" kindref="member">m_wndEdit</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_ad_currency_1af58eae01b68114b3496fb5a92b68e9ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1af58eae01b68114b3496fb5a92b68e9ae" kindref="member">m_wndDelete</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_ad_currency_1a85f5f13d91b118c0b08c0c852d206b6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a85f5f13d91b118c0b08c0c852d206b6e" kindref="member">m_wndTypeOfFilterDesc</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_c_ad_currency_1aca47c72d1b3314aa7db4796aa2f2d495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_currency_1aca47c72d1b3314aa7db4796aa2f2d495" kindref="member">m_szSearch</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_currency_1aeff75291c467aa201f04c3f2fe898815" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1aeff75291c467aa201f04c3f2fe898815" kindref="member">OnSearchCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_currency_1a11ab89d98656f3ecd940d595d39269ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a11ab89d98656f3ecd940d595d39269ca" kindref="member">OnTypeOfFilterSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_currency_1a6871dc895661610ab2baf3b3bf757d1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a6871dc895661610ab2baf3b3bf757d1d" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_currency_1a876ebfa9ca0d4815d492fee3e233e6ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a876ebfa9ca0d4815d492fee3e233e6ed" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_currency_1a37cfb110d7dfa06f0408690a358e0518" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a37cfb110d7dfa06f0408690a358e0518" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_currency_1a776c201f1ea4f1ba36d9430276f666f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a776c201f1ea4f1ba36d9430276f666f6" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_currency_1aa80672df292a956dbab060ddd685a804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1aa80672df292a956dbab060ddd685a804" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_currency_1a36bbc23abe7880c90f298516f9741c3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a36bbc23abe7880c90f298516f9741c3c" kindref="member">OnEditSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_currency_1ad1a582821db45a7d4b608584a392dde6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1ad1a582821db45a7d4b608584a392dde6" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_currency_1a840e20f21f112c4c71e9e586650ffea4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1a840e20f21f112c4c71e9e586650ffea4" kindref="member">CAdCurrency</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_currency_1ad5ca10e3eb240e8b18ddd9bd9dc79973" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_currency_1ad5ca10e3eb240e8b18ddd9bd9dc79973" kindref="member">~CAdCurrency</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_currency_1a399dcdd741aa300e80d2f764f959686e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a399dcdd741aa300e80d2f764f959686e" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_currency_1afd367713b78620a508f2368213f7f226" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1afd367713b78620a508f2368213f7f226" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_currency_1a316ec5a81b4ec375ee2b309e00629e1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a316ec5a81b4ec375ee2b309e00629e1a" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_currency_1a069b0e39079e86c9d9015e9cb4b1f824" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a069b0e39079e86c9d9015e9cb4b1f824" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_currency_1a81c4ea4b5ed19fd69fa9438c28599516" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a81c4ea4b5ed19fd69fa9438c28599516" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_currency_1a5b2e5544c8952d8f464e44ea1dd956e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a5b2e5544c8952d8f464e44ea1dd956e9" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_currency_1a471b14bdb871ceb548c7bc9d6d946bc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a471b14bdb871ceb548c7bc9d6d946bc2" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_currency_1a5a0b0d4eda6defbba8fe442e0850d719" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a5a0b0d4eda6defbba8fe442e0850d719" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_currency_1a8a8c39715cff9bebb1791a38870b5b82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a8a8c39715cff9bebb1791a38870b5b82" kindref="member">OnAddAdCurrency</ref>();<sp/></highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_currency_1a0d0c8aea1aa26db19eff55a92d47e091" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a0d0c8aea1aa26db19eff55a92d47e091" kindref="member">OnEditAdCurrency</ref>();<sp/></highlight></codeline>
+<codeline lineno="73" refid="class_c_ad_currency_1a754dcce28f6012a06a8a1c6e24c7287e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a754dcce28f6012a06a8a1c6e24c7287e" kindref="member">OnDeleteAdCurrency</ref>();<sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_ad_currency_1a53fdfcd1141faa92b66b7a2c7cf936bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a53fdfcd1141faa92b66b7a2c7cf936bf" kindref="member">OnSaveAdCurrency</ref>();<sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_ad_currency_1a68e5deff17b048e358cacf9959a389f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a68e5deff17b048e358cacf9959a389f6" kindref="member">OnCancelAdCurrency</ref>();<sp/></highlight></codeline>
+<codeline lineno="76" refid="class_c_ad_currency_1a34511c78b1c5547685645f025735cebc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_currency_1a34511c78b1c5547685645f025735cebc" kindref="member">OnAdCurrencyListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdCurrency.h"/>
+  </compounddef>
+</doxygen>

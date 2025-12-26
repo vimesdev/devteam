@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['bankcustomer_2eh_0',['BankCustomer.h',['../_bank_customer_8h.html',1,'']]],
+  ['bankcustomerlist_2eh_1',['BankCustomerList.h',['../_bank_customer_list_8h.html',1,'']]],
+  ['banknopinlimit_2',['BankNoPinLimit',['../structtag_c_u_s_t_o_m_e_r_i_n_f_o.html#aecfb5f3396180a87f79f0fc11660b7fa',1,'tagCUSTOMERINFO']]],
+  ['base64_2eh_3',['base64.h',['../base64_8h.html',1,'']]],
+  ['base64decode_4',['base64Decode',['../class_c_h_m_s_helper.html#acce371e5c1ea1e58f4b769d93042c2da',1,'CHMSHelper']]],
+  ['begin_5fhtml_5fcommand_5fmap_5',['BEGIN_HTML_COMMAND_MAP',['../_h_t_m_forms_8h.html#a6e4c47e9e475529afcdcf54dc8612579',1,'BEGIN_HTML_COMMAND_MAP:&#160;HTMForms.h'],['../_h_t_m_layout_ctrl_x_8h.html#a6e4c47e9e475529afcdcf54dc8612579',1,'BEGIN_HTML_COMMAND_MAP:&#160;HTMLayoutCtrlX.h']]],
+  ['birthdate_6',['BirthDate',['../structtag_c_u_s_t_o_m_e_r_i_n_f_o.html#aa1a1aa8b9fc42c826368c14d93fb9c12',1,'tagCUSTOMERINFO']]],
+  ['bitclear_7',['bitclear',['../_comm_defs_8h.html#a5d2270b0031c3ff35970ce0e2739c80b',1,'CommDefs.h']]],
+  ['bitset_8',['bitset',['../_comm_defs_8h.html#ab73c41f84636ecf7749a7f869ac3e77a',1,'CommDefs.h']]],
+  ['bittest_9',['bittest',['../_comm_defs_8h.html#a5d9f368817ffb3c27bd0e82a36e74de9',1,'CommDefs.h']]],
+  ['bmultiline_10',['bMultiLine',['../structtag_field_info.html#a066e322a2474e0aafaa414bda448084a',1,'tagFieldInfo']]],
+  ['breadonly_11',['bReadOnly',['../structtag_field_info.html#aa348d95ff5df5f53dbff7d89fd431f90',1,'tagFieldInfo']]],
+  ['brequire_12',['bRequire',['../structtag_field_info.html#a093125b9aefa9a254946b7e7282cccb3',1,'tagFieldInfo']]],
+  ['browser_13',['Browser',['../class_c_web_view2_view.html#abc4adb69e4c742f562a47f7bbf327243',1,'CWebView2View']]],
+  ['builddcomptreeusingvisual_14',['BuildDCompTreeUsingVisual',['../class_edge_view_component.html#ab090357d736e81aabf576de79e0e656a',1,'EdgeViewComponent']]],
+  ['buildwincompvisualtree_15',['BuildWinCompVisualTree',['../class_edge_view_component.html#a915689d5b29703a5c5a8f63e2c129004',1,'EdgeViewComponent']]],
+  ['bvisible_16',['bVisible',['../struct_c_h_m_s_fee_document_1_1tag_f_e_e.html#aa3b0b6fa84fedfa3a57a8d49eaba951e',1,'CHMSFeeDocument::tagFEE::bVisible'],['../struct_c_h_m_s_fee_document_inpatient_1_1tag_f_e_e.html#a579ef409dd7b3482096ad0a683aed0a7',1,'CHMSFeeDocumentInpatient::tagFEE::bVisible'],['../structtag_f_e_e_i_t_e_m_s.html#ab547aa57232cb87c0830829746d1f4e0',1,'tagFEEITEMS::bVisible']]]
+];

@@ -1,0 +1,27 @@
+var class_c_ole_rich_edit_ctrl =
+[
+    [ "COleRichEditCtrl", "class_c_ole_rich_edit_ctrl.html#a320a35d074d1807a89520a704caed91c", null ],
+    [ "~COleRichEditCtrl", "class_c_ole_rich_edit_ctrl.html#a8fd5f321a322cdb1c1596847523d7204", null ],
+    [ "~IExRichEditOleCallback", "class_c_ole_rich_edit_ctrl.html#a6899c26eefa0d621bac1137a12bdef80", null ],
+    [ "AddRef", "class_c_ole_rich_edit_ctrl.html#a9da6ed85433bf3dbffc8e4512dd8aa7d", null ],
+    [ "ContextSensitiveHelp", "class_c_ole_rich_edit_ctrl.html#aa18ee8f991b03f8146797cc7b36b66a7", null ],
+    [ "DeleteObject", "class_c_ole_rich_edit_ctrl.html#aeac43c95adff655b277fc2aa80cf5740", null ],
+    [ "GetClipboardData", "class_c_ole_rich_edit_ctrl.html#a92badd8056d5d5552dfdd738dc93bdaa", null ],
+    [ "GetContextMenu", "class_c_ole_rich_edit_ctrl.html#aba760d70b217a87dd449e20fedab5e08", null ],
+    [ "GetDragDropEffect", "class_c_ole_rich_edit_ctrl.html#ad85e7d70f67679cb4a8ed7cc19bb4369", null ],
+    [ "GetInPlaceContext", "class_c_ole_rich_edit_ctrl.html#a488e7442b3bf87a1d40ed58352a849c1", null ],
+    [ "GetNewStorage", "class_c_ole_rich_edit_ctrl.html#a69c4ff24d3179be99135f3b68b3e1ce9", null ],
+    [ "OnCreate", "class_c_ole_rich_edit_ctrl.html#a0a3ebe40127210b5fc30f6416a2801e8", null ],
+    [ "PreSubclassWindow", "class_c_ole_rich_edit_ctrl.html#a5f4f8b9a369884704c9023090475381f", null ],
+    [ "QueryAcceptData", "class_c_ole_rich_edit_ctrl.html#a7fd5e682a027f63c4d3e7abbb8f95dbc", null ],
+    [ "QueryInsertObject", "class_c_ole_rich_edit_ctrl.html#adcffdf1dc005a15a7f708f52934c88a5", null ],
+    [ "QueryInterface", "class_c_ole_rich_edit_ctrl.html#ae3d9f5ea3ddacaf996fe98ead05fb8e7", null ],
+    [ "Release", "class_c_ole_rich_edit_ctrl.html#af7ee57d606a909737ebf1130fdbf8939", null ],
+    [ "ShowContainerUI", "class_c_ole_rich_edit_ctrl.html#a22e2ed99a73a7b0ff6977b939db73664", null ],
+    [ "StreamInFromResource", "class_c_ole_rich_edit_ctrl.html#a59e0b7136fcb6a7a8ad8e239561b53a1", null ],
+    [ "m_bCallbackSet", "class_c_ole_rich_edit_ctrl.html#adb97a81569439ccf029e0d2e0f6cef07", null ],
+    [ "m_dwRef", "class_c_ole_rich_edit_ctrl.html#aee2f80e192915cafb65013c34ba638c7", null ],
+    [ "m_iNumStorages", "class_c_ole_rich_edit_ctrl.html#a82b098e91fd37b47a8906115c3374276", null ],
+    [ "m_pIRichEditOleCallback", "class_c_ole_rich_edit_ctrl.html#a29a93d30932447c0e1c497514917f195", null ],
+    [ "pStorage", "class_c_ole_rich_edit_ctrl.html#ac55c0a045d16bc832f8ec1099f87b1a1", null ]
+];

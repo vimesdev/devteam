@@ -1,0 +1,193 @@
+\doxysection{HMSCancer\+Drug\+Order\+Dialog.\+h}
+\hypertarget{_h_m_s_cancer_drug_order_dialog_8h_source}{}\label{_h_m_s_cancer_drug_order_dialog_8h_source}\index{Include/HMSCore/HMSCancerDrugOrderDialog.h@{Include/HMSCore/HMSCancerDrugOrderDialog.h}}
+\mbox{\hyperlink{_h_m_s_cancer_drug_order_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSCANCERDRUGORDERDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSCANCERDRUGORDERDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a716a4b17bb151a5d5d2593525dfc5266}{CHMSCancerDrugOrderDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aacfdb46f224f15c7a3cb998e2194e01c}{m\_cancer\_order\_id}};\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a89bf8ab07a1a0e33beca4c6b056fc4cd}{m\_cancer\_orderline\_id}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a67806c355949eb3d4969249f402edee1}{m\_nUomID}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad39486db002b673e01f18ffb1e666d84}{m\_szCancerDiagramID}};\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_af37c5697b0ce04bd57fc85010b7d58e0}{m\_wndDrugInformation}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aa8fe943d52feb6be2a80e8d04ba97fa7}{m\_wndStorageLabel}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a0a1f8be6a54ea3eca9ad4e5484ef34a9}{m\_wndStorage}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a91d09e55c74bfd388b197434e946cb65}{m\_wndOrderQtyLabel}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_af3e3cd6aabdce13416f528fe25c12766}{m\_wndOrderQty}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a2384251e8f27b58a399f4cb7d7a53041}{m\_wndNameLabel}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a71a3397738055f8d632050f7d2c1cb2a}{m\_wndName}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a9367ba9cf4990dabf6d05a3568add89d}{m\_wndQuantityLabel}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aa4ae2a2de1f01dc365772165fc67efa3}{m\_wndQuantity}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ac9ead7c5aee99ce1df475dc3c80d016e}{m\_wndName2Label}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ada9b0798bfc1b54b59f719ac0bfa1035}{m\_wndName2}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a61f8014090e02605a2a8f53c64d47d50}{m\_wndQuantity2Label}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a682ebbbd19f1ab0b5fc575ba06474783}{m\_wndQuantity2}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_adcbc35fe37c5d1ea6abcf9e500da601c}{m\_wndName3Label}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_af8eecef68f3f23303e6899ba824af371}{m\_wndName3}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a1490633f055e244b7d1670c38ad9ae0a}{m\_wndQuantity3Label}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a1de39f9f139a32c9cf362e2702af5d77}{m\_wndQuantity3}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a3fe91d9a492ee8a0cfd96ded271e6bd4}{m\_wndSave}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ae7c1fb3bb94297eb8acc4ffd5d6e9d9a}{m\_wndClose}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad2db7feed43788ef191dd63b192a7839}{m\_wndUsageLabel}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a12fc95a768e05444f1b19f34097bd0a1}{m\_wndUsage}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a5aa5ecfc536777d268deb2375fcee5d1}{m\_wndUsageDesc}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a803e172c89cf2576d93815ff2873a843}{m\_wndUsage1Label}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a1ad1f67e1d416b068696326dc4ad88b5}{m\_wndUsage1}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a75d8a449c27ce245447c83d3af59e4b8}{m\_wndUsage1Desc}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ae611cc05d7e843e1be421b3953c8f557}{m\_wndUsage2Label}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aab2817a143f242d11ee606b99cdb2f9b}{m\_wndUsage2}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a09aab10c0361ae46fd25494fdcaa3607}{m\_wndUsage2Desc}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a0427fefdda2dd68e52b2e5fe5da7b3a4}{m\_wndTenphacdoLabel}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a9e8e9233ce633225ad5238d69a06617c}{m\_wndTenphacdo}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a8aab0fb3a7bfe04d3ca3ab4b7dc0cdc1}{m\_wndDonviLabel}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ab49974d55d79e4773ad824245ace0434}{m\_wndDonvi}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad17730e9ad19ff8ce8a0e2d0e4c3de4f}{m\_wndLieuDungLabel}};\ }
+\DoxyCodeLine{00084\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a232cb9d35ccdfb3d2c49d25c9efa7e68}{m\_wndLieuDung}};\ }
+\DoxyCodeLine{00085\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a100bfe52939b9ea812067fb1bfb625db}{m\_wndDiengiaiLabel}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a85ce33a093d8472cc2c043aa7a8295a8}{m\_wndDiengiai}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_acf75cafc984427c7a715d11629d1699e}{m\_wndCheckName2}};\ }
+\DoxyCodeLine{00088\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a66e8a85ea6fca6380641a62e8d5b7a73}{m\_wndCheckName3}};\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a0e5e2097e92fa5c4427e47127c878bd7}{m\_szStorageKey}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a1662aa5c8e697d694940528f3c0cbdc6}{m\_nOrderQty}};\ }
+\DoxyCodeLine{00092\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a50ebd9fc3653c5fe83ec2da7add92a9f}{m\_szNameKey}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a69a0ea22f7545fb985aef14a7a64bd39}{m\_nQuantity}};\ }
+\DoxyCodeLine{00094\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a13578468e8d5e70a1ce260b055b739c9}{m\_szName2Key}};\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a4e161040114d7a85a3d04128214d6fa2}{m\_nQuantity2}};\ }
+\DoxyCodeLine{00096\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a2ec3fe36b344094a296b276ec08056d9}{m\_szName3Key}};\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ac4078e733dba5e13ee4b54790f85cd50}{m\_nQuantity3}};\ }
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad433abb856ed3f9ed2962f92bc3acfbb}{m\_szUsageKey}};\ }
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a0362aa85600e2bee1fceb6885d4af2bc}{m\_szUsageDesc}};\ }
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ac0ddcb4a6f8adf70fd0411e5b68f4206}{m\_szUsage1Key}};\ }
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a7678e6431246e8ba5c58d85e61fa27c9}{m\_szUsage1Desc}};\ }
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a7e0ea45336e2144db39542edde07b2de}{m\_szUsage2Key}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a0fb7199519391db282c61ead332d4bb9}{m\_szUsage2Desc}};\ }
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a33123adef43eeab0eacfce10fd7b3ed5}{m\_szTenphacdo}};\ }
+\DoxyCodeLine{00105\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad5d9b150624ac30dfcbea0a0a779f1bf}{m\_szDonvi}};\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_abf57145de541e3fd7e62c90afc54d407}{m\_nLieuDung}};\ }
+\DoxyCodeLine{00107\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a93dc3012e9c6824c8bf41cab7be8ba7c}{m\_bCheckName2}};\ }
+\DoxyCodeLine{00108\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aba66c5c5da0d2d9c0358a72ebe655d0f}{m\_bCheckName3}};\ }
+\DoxyCodeLine{00109\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a3b255c192df6972b8e20b05aa8bf26b4}{m\_szDiengiai}};\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a67920cef470f981624ee48e574ff07d8}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad8dbdd85f52df84075b9e0f4844cb25c}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_abccc18a2b640f1a6854a2f09c3da3ce6}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageAddNew();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderQtyChange();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderQtySetfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderQtyKillfocus();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a4028dd322cdd74a302247b555bc3b834}{OnOrderQtyCheckValue}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a40bd88df19d6c441b3d39e57bb19310f}{OnNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a54d4e5b39b8fc4766e5d87dfa7ea6e9e}{OnNameSelendok}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a3c1f7813f73eb26edacdc53af40645a0}{OnNameLoadData}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameAddNew();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantityChange();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantitySetfocus();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantityKillfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad77202ac095beb8a4878958ede89bfb3}{OnQuantityCheckValue}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ad96fef9f271e4dad330036611f4ab79b}{OnName2SelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_acea1ebc66d11f3cb83ef9f51fc006bb7}{OnName2Selendok}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnName2Setfocus();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnName2Killfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a2761fb1699a30848cbafb807b7b03b21}{OnName2LoadData}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnName2AddNew();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantity2Change();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantity2Setfocus();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantity2Killfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a863dd10bc09e51eda2f9117da0a871f3}{OnQuantity2CheckValue}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a046a0a6d8d99870e75b68fbf7bddcefe}{OnName3SelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aa0c3670dac0c23ae5c9c8b64cf50f8d1}{OnName3Selendok}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnName3Setfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnName3Killfocus();\ }}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a659b61f83b9e203613f94463a92b2c65}{OnName3LoadData}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnName3AddNew();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantity3Change();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantity3Setfocus();\ }}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantity3Killfocus();\ }}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a166451aac1c85336915d684040dbf61f}{OnQuantity3CheckValue}}();\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a7c1a71e1397d3e698a2ffc2384cd3819}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a33d8b78a76ac8c5157476726fc3c2623}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ab3d4f0f611824da7d4cadc2974580d0d}{OnUsageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a38079d1e9857df93f2f2db655e70c625}{OnUsageSelendok}}();\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageSetfocus();\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageKillfocus();\ }}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a0dafa90ddae9ac425336c822809bd08f}{OnUsageLoadData}}();\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageAddNew();\ }}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageDescChange();\ }}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageDescSetfocus();\ }}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageDescKillfocus();\ }}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ab8c029ce8630ff7dd703e0ea97c23874}{OnUsageDescCheckValue}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a62c87613f8ba04266833b14ba9886a1a}{OnUsage1SelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ab2b7d4492f53afbd463f49827b01cfe9}{OnUsage1Selendok}}();\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage1Setfocus();\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage1Killfocus();\ }}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_adb69e204609cae55e0a07beb2e534a60}{OnUsage1LoadData}}();\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage1AddNew();\ }}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage1DescChange();\ }}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage1DescSetfocus();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage1DescKillfocus();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a55b21933b91ef4a65a86dec431f574ef}{OnUsage1DescCheckValue}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a8f941a2187f8edaa47d6ff5d904fbddf}{OnUsage2SelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a8fda78fa591b7f2f45ac6593d603d53d}{OnUsage2Selendok}}();\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage2Setfocus();\ }}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage2Killfocus();\ }}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a448e2023157ce54f43737b10e7ee4796}{OnUsage2LoadData}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage2AddNew();\ }}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage2DescChange();\ }}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage2DescSetfocus();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsage2DescKillfocus();\ }}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aaec4e78ac57f11af13a0564ba4d49959}{OnUsage2DescCheckValue}}();\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a05af710a183cd1bdb9942bf58a310bac}{OnCheckName2Select}}();\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a922f92a0cc9a654ba35e3c84f11bc304}{OnCheckName3Select}}();\ }
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a716a4b17bb151a5d5d2593525dfc5266}{CHMSCancerDrugOrderDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a9ec6862901e1b78f44e2081a9fcce4d5}{\string~CHMSCancerDrugOrderDialog}}();}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a4ad6707fcc8bd72372d63a8bf38d9c22}{OnCreateComponents}}();}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a5eda4fb282d51a40671db0f5b63761e8}{OnInitializeComponents}}();}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_adb98c6daedd2ed19a39631f3cb051ee9}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ae89ebb2ed2e80e0ab7e285885248fe4c}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a80ae0d5917f74b9983c1efe2745343d0}{GetDataToScreen}}();}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a2d6d4a626cc662e656c8b857baf6a20c}{GetScreenToData}}();}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a4370528ab4784abad5099e6fe39cfb86}{SetDefaultValues}}();}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aa1d6192d18dcad8f646a0ab64f04a862}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a08e3941f1f83bd87d98d993942d09def}{OnAddHMSCancerDrugOrderDialog}}();\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a0709401da754ff069f93a59d2999088b}{OnEditHMSCancerDrugOrderDialog}}();\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_ac99dfb223961d1939a8bc9b1689d4244}{OnDeleteHMSCancerDrugOrderDialog}}();\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_aed12e86d1a3ec56540b6f4c10cabb579}{OnSaveHMSCancerDrugOrderDialog}}();\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_a665e249fcc912152eb103117af7fc97d}{OnCancelHMSCancerDrugOrderDialog}}();\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_cancer_drug_order_dialog_abd5008880b324c4ffb5bff1a360a3454}{OnHMSCancerDrugOrderDialogListLoadData}}();\ }
+\DoxyCodeLine{00201\ \};}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,176 @@
+\doxysection{HMSTreatment\+Prescription\+Popup\+\_\+\+V2.\+h}
+\hypertarget{_h_m_s_treatment_prescription_popup___v2_8h_source}{}\label{_h_m_s_treatment_prescription_popup___v2_8h_source}\index{Include/HMSCore/HMSTreatmentPrescriptionPopup\_V2.h@{Include/HMSCore/HMSTreatmentPrescriptionPopup\_V2.h}}
+\mbox{\hyperlink{_h_m_s_treatment_prescription_popup___v2_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSTreatmentPrescriptionPopup\_V2\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSTreatmentPrescriptionPopup\_V2\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Storage\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiPopup.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GuiAutoTextCtrl.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_m_s_drug_ordering_8h}{HMSDrugOrdering.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac8409ce2c8240d4a932ef9b21a5f6463}{CHMSTreatmentPrescriptionPopup\_V2}}\ :\ \textcolor{keyword}{public}\ CGuiPopup}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00049\ \ \ \ \ CWnd*\ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a18cd3d31ea7131cbf8f535927934df08}{m\_pParentOwner}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a362b94596674c0bc1d2b9dace6c62d21}{m\_bEditQty}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aeb2bc0e5d49b596d850e930a628f13d4}{m\_nStorageId}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_adffb78e36caff2f15797325ee22f7aa4}{m\_nProductId}};\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aebcaa48bdb75cd550ee49864ec0133f4}{m\_nOrderID}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a3389c9185c984f258d4c4642e938678b}{m\_szOrders}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aff9ba4ef86912409711f1a9f00bd19f5}{m\_nLevel1}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a3781abdb52e118aa86ae87d6b44d5000}{m\_nLevel2}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a379b07f87117111ee89664498bb54529}{m\_nLevel3}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac5bcb343bb7e9450db116baeac6fe014}{m\_bInPackage}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac111c53aee6d2b98b31e816b29561ddc}{m\_bOutLine}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ada9c663bda9d7bf0c628ea1e4ede18f4}{m\_bIsReq}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_adaa7bcd813de078224045709d498299d}{m\_nTreatIdx}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ae868c84f494a869410aa8545c3ee513f}{m\_szTreatDate}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac714a79bc09ecf3d0220859213c886bb}{m\_szOrderDate}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ad31fa7864926b3be8df86685e4737881}{m\_szStorageObjects}};\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a708faa3019c1026bdf28e0baaa3df3dd}{m\_wndStorageLabel}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a48829fd14b126001b6bc26c3cb5fce13}{m\_wndStorage}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a7a6e412c8a62216b13b4296a85bcd072}{m\_wndServiceWarehouse}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aad94f9eb89c08a5761e7f589e82aa6ea}{m\_wndInsWarehouse}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a2ff15877a6ae8230a165e4acdf5a41f0}{m\_wndNameLabel}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a859b1ab9bc9ff7a46877c10fd740a0d5}{m\_wndName}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a1255cc9e2478e6f64c126772472bd93e}{m\_wndGenericSearch}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_af771b5cc24dd87ab0af94d9f569fa86b}{m\_wndUnitLabel}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_afb348a0d234dbe4ac85d7a354979b8ae}{m\_wndUnit}};\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a455bd9c536e80c2ba823d03addd3eae9}{m\_wndQuantityLabel}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aae6f8c91b5e235f277fdef2e1b354abf}{m\_wndQty}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aaa2705f45f5b493559d48a19b615b9f3}{m\_wndMaxQuantityLabel}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_acc602df10acea4af8db6bd9760fac833}{m\_wndMaxQuantity}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ae471c73259d222a36e9b111dcdcc19ef}{m\_wndCancerOpt}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a8bde7daae85d377b30e9c38aa84b1fde}{m\_wndOutPrescription}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a17af2454a1f6a6389e144cb29c57e165}{m\_wndIndicationLabel}};\ }
+\DoxyCodeLine{00084\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a4faa8ad466da7b70336f3dead9eca9eb}{m\_wndIndication}};\ }
+\DoxyCodeLine{00085\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aba77d4e0e62f5a199dfb55d05e77d011}{m\_wndTimeLabel}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a7c8a89a4f84298c12b78d7c416f49355}{m\_wndTime}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a6b66f45b904a4170f6d5ca9ac559c2c9}{m\_wndSpeedLabel}};\ }
+\DoxyCodeLine{00088\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ab56486d80145362110d4ee7847118435}{m\_wndSpeed}};\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a72d3df5c64f61afcbc2f5a11e30a558a}{m\_wndUsage}};\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_af9dd70c267d3289d5920e4add57a464f}{m\_wndSave}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a603ca4db59413bcbfc595b842cba5127}{m\_wndClose}};\ }
+\DoxyCodeLine{00094\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a7b47ef3db28d6405b384e178aba6aa79}{m\_szStorageKey}};\ }
+\DoxyCodeLine{00095\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac05429497b423eb9ae3092b42d83ce37}{m\_bServiceWarehouse}};\ }
+\DoxyCodeLine{00096\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a85ef3f1a4853b90a1a0f2d5b45b6b42b}{m\_bInsWarehouse}};\ }
+\DoxyCodeLine{00097\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a8c72072470b45a1e215312efc12c7ed2}{m\_szNameKey}};\ }
+\DoxyCodeLine{00098\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_af0a3d42b82ce17e3cb3a1dba28af9f45}{m\_bGenericSearch}};\ }
+\DoxyCodeLine{00099\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aa099c3024337e918a118ed988ea1f1e1}{m\_bCancer}};\ }
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_abf3e68c577df85f5c3f67c825c90ccda}{m\_szUnit}};\ }
+\DoxyCodeLine{00101\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ab0ee6c68bbc923e4aae5c08c0839f9d4}{m\_bOutPrescription}};\ }
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a64f4d9e9eae25d4cda75c89a8f29d1c3}{m\_szTime}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a8fbc258e2c63fc4e05a1461116399140}{m\_hms\_ipharmaorderTbl}};\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a3d2d324bc9132e6889ea70ec449177d2}{m\_nQty}};\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a8da2173a5fe459af0ab5ead0d2e79157}{m\_nMaxQuantity}};\ }
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a007a3753af97bff4d4d723a3f1948d08}{m\_szIndicationKey}};\ }
+\DoxyCodeLine{00108\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a89e3ef48e745905714814ef320a48d23}{m\_szSpeed}};\ }
+\DoxyCodeLine{00109\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a8ebb656528e1eb8b379e5f771dda459c}{m\_szUsage}};\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ade986aa19d248abfd12ba7631f5807b7}{OnTimeCheckValue}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a8c80f495a82a4fc97cba4373adffc800}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_adec8222ad5e824757a1fd06106dfcd45}{OnStorageSelendok}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a5d479719ca22df6ef68d4d2d9420c175}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageAddNew();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_af9ed26828650e822e9f37e6cb0a64c60}{OnServiceWarehouseSelect}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a454c0c2c5d68af263f1228e2c30d56a1}{OnInsWarehouseSelect}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac28e516e0b41d20df5a6b39151b216e9}{OnNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a61634a7ab8fcb823c532e894b2d783a8}{OnNameSelendok}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a15fba19cf83bc611fdcc2b50d6a273f4}{OnNameLoadData}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameAddNew();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a2ea90a28b2f23afe67f54f24954874dc}{OnGenericSearchSelect}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitChange();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitSetfocus();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitKillfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a56378b61027747df3a06eaccc7032833}{OnUnitCheckValue}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyChange();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtySetfocus();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyKillfocus();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a97566272c26d97930849e5fe12c9db72}{OnQtyCheckValue}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantityChange();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantitySetfocus();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantityKillfocus();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_abfd2488b8798c0e71de704f799740456}{OnMaxQuantityCheckValue}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a827655e2d61556c8655b88b8b6cfc5a2}{OnIndicationSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aa9016e32a8a90439bcf07df4154354b2}{OnIndicationSelendok}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIndicationSetfocus();\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIndicationKillfocus();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a37cb16b9f9e9f5b3ffcb7fc5a43f7be6}{OnIndicationLoadData}}();\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aeb86fbefc994208d762f881fb8fafe28}{OnIndicationCheckValue}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIndicationAddNew();\ }}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSpeedChange();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSpeedSetfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSpeedKillfocus();\ }}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a861ab49b12e3de607aeee9aa92a79461}{OnSpeedCheckValue}}();\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageChange();\ }}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a44a5a96aa1a5f6841537fcf79374775c}{OnUsageSetfocus}}();\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageKillfocus();\ }}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ab793639a25d1471bc434534eee06d76c}{OnUsageCheckValue}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ae12e79085aa8efe41a358e392827aea9}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a95e2cff9cb85b9796e3e329e4d1df2a7}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00156\ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ }
+\DoxyCodeLine{00158\ \textcolor{comment}{//\ \ CHMSTreatmentPrescriptionPopup\_V2();}}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac8409ce2c8240d4a932ef9b21a5f6463}{CHMSTreatmentPrescriptionPopup\_V2}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode=VM\_ADD,\ \textcolor{keywordtype}{int}\ x=0,\ \textcolor{keywordtype}{int}\ y\ =0);}
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aec75ede6b99f49087ca7445050825798}{\string~CHMSTreatmentPrescriptionPopup\_V2}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a13f70a0f48d8f7fc77c57393e8735436}{OnCreateComponents}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a9dfbe4f16cba2fd54368b689c51f9e01}{OnInitializeComponents}}();}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_adddb745f0a79678177b8d7a76f469cbe}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aea003e34ab98af069ef268492760ab57}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ae1986b39bc22139506c74cfb06139cf3}{GetDataToScreen}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ad163335896bc2638027281578ecb1636}{GetScreenToData}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_ac872353680bb2036e0be1329f4516c5f}{SetDefaultValues}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_abb3393943934a4985ba346306fee983d}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_aa52a9c27c85c3316a067d884d2036702}{OnAddHMSTreatmentPrescriptionPopup}}();\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a6fdfc090eeb04dfc0592e3a2ac102840}{OnEditHMSTreatmentPrescriptionPopup}}();\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a06237de3097f8f90f46bd2243bf133d7}{OnDeleteHMSTreatmentPrescriptionPopup}}();\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a2809a7941e615064e809b7334fcc465a}{OnSaveHMSTreatmentPrescriptionPopup}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a94a40915795664ea1582a7767c413f55}{OnCancelHMSTreatmentPrescriptionPopup}}();\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a60191cfe94d6867e5f6f4ea94365ba78}{OnHMSTreatmentPrescriptionPopupListLoadData}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a6a95e5fc6ed8da88301636a0d8a6a4f8}{OnOutPrescriptionSelect}}();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//Ham\ ket\ thua\ tu\ lop\ CGuiPopup;}}
+\DoxyCodeLine{00177\ \textcolor{comment}{//\ \ void\ \ \ \ ShowPopup(CWnd*\ pWndRef,\ int\ nShowPopup=WPS\_BOTTOM);}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_prescription_popup___v2_a618cf34c154b0bf94d3d31adc97b693b}{ClosePopup}}();}
+\DoxyCodeLine{00179\ \textcolor{comment}{//\ \ void\ \ \ \ CreatePopup(bool\ bInPackage=false);}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ }
+\DoxyCodeLine{00182\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \};}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

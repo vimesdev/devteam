@@ -1,0 +1,110 @@
+\doxysection{Edge\+View\+Component.\+h}
+\hypertarget{_edge_view_component_8h_source}{}\label{_edge_view_component_8h_source}\index{Include/HMSCore/EdgeViewComponent.h@{Include/HMSCore/EdgeViewComponent.h}}
+\mbox{\hyperlink{_edge_view_component_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Copyright\ (C)\ Microsoft\ Corporation.\ All\ rights\ reserved.}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Use\ of\ this\ source\ code\ is\ governed\ by\ a\ BSD-\/style\ license\ that\ can\ be}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ found\ in\ the\ LICENSE\ file.}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stdafx_8h}{stdafx.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_edge_browser_dlg_8h}{EdgeBrowserDlg.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <dcomp.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ USE\_WEBVIEW2\_WIN10}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <winrt/Windows.UI.Composition.Desktop.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ This\ component\ handles\ commands\ from\ the\ View\ menu,\ as\ well\ as\ the\ ZoomFactorChanged}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ event,\ and\ any\ functionality\ related\ to\ sizing\ and\ visibility\ of\ the\ WebView.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ It\ also\ manages\ interaction\ with\ the\ compositor\ if\ running\ in\ windowless\ mode.}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }DCompTargetImpl;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge_view_component_a983df73ff98e76838f2f5ad3da298569}{EdgeViewComponent}}\ :\ \textcolor{keyword}{public}\ ComponentBase}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge_view_component_a7a1d1060ff5818358176b080457fb868}{DCompTargetImpl}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_edge_view_component_a983df73ff98e76838f2f5ad3da298569}{EdgeViewComponent}}(}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ CEdgeBrowserAppDlg*\ appWindow,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ IDCompositionDevice*\ dcompDevice,}
+\DoxyCodeLine{00029\ \#ifdef\ \mbox{\hyperlink{_edge_browser_dlg_8h_a981fc68460c4e85608c4402c2c3c50e0}{USE\_WEBVIEW2\_WIN10}}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ winrtComp::Compositor\ wincompCompositor,}
+\DoxyCodeLine{00031\ \#endif}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isDCompTargetMode}
+\DoxyCodeLine{00033\ \ \ \ \ );}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_ada70002359e3978447627674023db1a8}{HandleWindowMessage}}(}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ HWND\ hWnd,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ UINT\ message,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ WPARAM\ wParam,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ LPARAM\ lParam,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ LRESULT*\ result)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_acfaa822cf5d4e6c3c0ff934cba33280f}{SetBounds}}(RECT\ bounds);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_edge_view_component_ac7646f526438700258380ac309a332e2}{\string~EdgeViewComponent}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_edge_view_component_a30c4c53a410628093a9c3b8c3a83c950}{TransformType}}}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_edge_view_component_a30c4c53a410628093a9c3b8c3a83c950ac7c5a181d7cc5f5733d84dd9bd778967}{kIdentity}}\ =\ 0,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_edge_view_component_a30c4c53a410628093a9c3b8c3a83c950a01cabc0c2b4dd3bdcaa8c9e21796c00d}{kScale2X}},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_edge_view_component_a30c4c53a410628093a9c3b8c3a83c950acd26c3908b1876dbb807801b0f0df1f2}{kRotate30Deg}},}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_edge_view_component_a30c4c53a410628093a9c3b8c3a83c950a3101e0b985e9f59c4a93d40f94e8d270}{kRotate60DegDiagonally}}}
+\DoxyCodeLine{00053\ \ \ \ \ \};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a4d111b07fecb0aae486c6072a455b429}{ResizeWebView}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a154474d91a856e3ea7856025b97d9b99}{ToggleVisibility}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_aaef2f0c97eb85bc430278abb8f92b111}{SetSizeRatio}}(\textcolor{keywordtype}{float}\ ratio);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a8a702f28fe5397b3d5fc9ba23a7f4ad5}{SetZoomFactor}}(\textcolor{keywordtype}{float}\ zoom);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_ae8a13a18c0ff3b643a42c08ee87e2e58}{SetScale}}(\textcolor{keywordtype}{float}\ scale);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a11dafa4b0438046688bfae4fb4c7684b}{SetTransform}}(\mbox{\hyperlink{class_edge_view_component_a30c4c53a410628093a9c3b8c3a83c950}{TransformType}}\ transformType);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_ad689413e4fdb812a95a1da75f9e54c2e}{ShowWebViewBounds}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a30c1584afcf31d6e06c8d72186c7aa70}{ShowWebViewZoom}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Browser*\ m\_appWindow\ =\ nullptr;}}
+\DoxyCodeLine{00064\ \ \ \ \ CEdgeBrowserAppDlg*\ \mbox{\hyperlink{class_edge_view_component_ab78e8566856a4e54d1322606b940d082}{m\_appWindow}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00065\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2Controller>\ \mbox{\hyperlink{class_edge_view_component_a6ddff2a394b956c05cf4927988ecf95e}{m\_controller}};}
+\DoxyCodeLine{00066\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2>\ \mbox{\hyperlink{class_edge_view_component_a8c36fd3b49d07137a0b602f29e09ced9}{m\_webView}};}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_abb49b5835f8c3abab9b2063d610d2063}{m\_isDcompTargetMode}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_affb748c8c3800197cc38786bca6da9c1}{m\_isVisible}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_edge_view_component_afb09cfa5c40d733724998bfb30c5b6e9}{m\_webViewRatio}}\ =\ 1.0f;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_edge_view_component_a0a108fecefa7912c5a0a4e12c8a9ed00}{m\_webViewZoomFactor}}\ =\ 1.0f;}
+\DoxyCodeLine{00072\ \ \ \ \ RECT\ \mbox{\hyperlink{class_edge_view_component_ac2db6a24fddead17c30acf3bf10d234f}{m\_webViewBounds}}\ =\ \{\};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_edge_view_component_ac0db7c1f6f349e5c070024aacd56749b}{m\_webViewScale}}\ =\ 1.0f;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_a34e179cb78def040f3c5ebb2e919afb0}{m\_useCursorId}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00075\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_edge_view_component_a024cefd2d4d31822223e94731708bbfc}{m\_zoomFactorChangedToken}}\ =\ \{\};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_a82d0df87f536ef8a0b1d01975bff9cd4}{OnMouseMessage}}(UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_a4c814f225a3faf4b59e628cb913edb41}{OnPointerMessage}}(UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a2cc370125fe91603ed7c329092910cc3}{TrackMouseEvents}}(DWORD\ mouseTrackingFlags);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_ae4d962040c7a99501e574d44635649f9}{m\_isTrackingMouse}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_edge_view_component_a401e98febbef329d0a8e27c3e0a5653e}{m\_isCapturingMouse}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00082\ \ \ \ \ std::unordered\_set<UINT>\ \mbox{\hyperlink{class_edge_view_component_aa1b428515a635274e5efb59b8c6e7098}{m\_pointerIdsStartingInWebView}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_ab090357d736e81aabf576de79e0e656a}{BuildDCompTreeUsingVisual}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a9d88b554699d137a0ddaf2ab23fe0ff5}{DestroyDCompVisualTree}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ Microsoft::WRL::ComPtr<IDCompositionDevice>\ \mbox{\hyperlink{class_edge_view_component_a239f89d1ac592b24546c5009fcc564e0}{m\_dcompDevice}};}
+\DoxyCodeLine{00088\ \ \ \ \ Microsoft::WRL::ComPtr<IDCompositionTarget>\ \mbox{\hyperlink{class_edge_view_component_a175e70e44cdb211b3bdc153a13d22b84}{m\_dcompHwndTarget}};}
+\DoxyCodeLine{00089\ \ \ \ \ Microsoft::WRL::ComPtr<IDCompositionVisual>\ \mbox{\hyperlink{class_edge_view_component_abe0a35f753ab2f86dfaf9e064ecf0daf}{m\_dcompRootVisual}};}
+\DoxyCodeLine{00090\ \ \ \ \ Microsoft::WRL::ComPtr<IDCompositionVisual>\ \mbox{\hyperlink{class_edge_view_component_a8e84049453d273c1c953e911a7921c90}{m\_dcompWebViewVisual}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#ifdef\ USE\_WEBVIEW2\_WIN10}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a915689d5b29703a5c5a8f63e2c129004}{BuildWinCompVisualTree}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_view_component_a08816217d8acf22fcf3163e9462637a3}{DestroyWinCompVisualTree}}();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ winrt::Windows::UI::Composition::Compositor\ \mbox{\hyperlink{class_edge_view_component_ad23288d05b17aba8d7d870c77dda563f}{m\_wincompCompositor}}\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00097\ \ \ \ \ winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget\ \mbox{\hyperlink{class_edge_view_component_af8a04abc68bdeb38ea71780a36193137}{m\_wincompHwndTarget}}\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00098\ \ \ \ \ winrt::Windows::UI::Composition::ContainerVisual\ \mbox{\hyperlink{class_edge_view_component_afe7dcd6753391030ed2071265427c643}{m\_wincompRootVisual}}\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00099\ \ \ \ \ winrt::Windows::UI::Composition::ContainerVisual\ \mbox{\hyperlink{class_edge_view_component_a2ddc22ba42aeeb3c622937b1235c6255}{m\_wincompWebViewVisual}}\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_edge_view_component_a764a26dacf1529e27ae3d37f51f4448e}{m\_cursorChangedToken}}\ =\ \{\};}
+\DoxyCodeLine{00104\ \};}
+
+\end{DoxyCode}

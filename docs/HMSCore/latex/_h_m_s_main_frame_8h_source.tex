@@ -1,0 +1,770 @@
+\doxysection{HMSMain\+Frame.\+h}
+\hypertarget{_h_m_s_main_frame_8h_source}{}\label{_h_m_s_main_frame_8h_source}\index{Include/HMSCore/HMSMainFrame.h@{Include/HMSCore/HMSMainFrame.h}}
+\mbox{\hyperlink{_h_m_s_main_frame_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSMAINFRAME\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSMAINFRAME\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}guimainframe.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GuiComboBox.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Dbmap.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}GuiListCtrl.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_a_t_m_8h}{Atm.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pipe_service_8h}{PipeService.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//Khi\ goi\ mot\ benh\ nhan\ vao\ cac\ bien\ nay\ se\ duoc\ gan\ gia\ tri\ trong\ class\ CHMSExamine}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//va\ duoc\ dung\ chung\ cho\ tat\ ca\ cac\ class\ vi\ the\ ta\ moi\ khai\ bao\ bien\ toan\ cuc}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//ma\ benh\ nhan}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ COLOR\_SEND\ RGB(200,\ 200,\ 230)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ COLOR\_TERMINATE\ RGB(0,\ 128,\ 128)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ COLOR\_ACCEPT\ \ \ \ RGB(0,\ 128,\ 255)}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ WM\_REFRESH\ \ WM\_USER+100}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o}{tagHMSUSERINFO}}\{}
+\DoxyCodeLine{00028\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a8fba6b3aa5215a8084b4bca8a3af93f4}{su\_groupid}};}
+\DoxyCodeLine{00029\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a08decb4c1e9e08b89d3976650ca2231c}{su\_name}};}
+\DoxyCodeLine{00030\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a3bea6a988b27e18d34a15fd0e44e8479}{su\_password}};}
+\DoxyCodeLine{00031\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a7eef690672e284c38a3d8a5857a68be2}{su\_deptid}};}
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_aed19c4e999e3cab0aaa14f9e86f6fdad}{su\_roomid}};}
+\DoxyCodeLine{00033\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a275d315897e8b62ff6f27d9a6c6ca2e7}{su\_hms\_xdept}};}
+\DoxyCodeLine{00034\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_ad6e5c44f07c233fbc5662dbeec12f703}{su\_hms\_xdepts}};}
+\DoxyCodeLine{00035\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a6903c1022cfa8d2e4aa610a4d42e0753}{su\_hms\_xroom}};}
+\DoxyCodeLine{00036\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a7c338a7a75b9a6c3729227c03acda1a3}{su\_hms\_xroom2}};}
+\DoxyCodeLine{00037\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_adf954847bd653646d30ed41ae063be61}{su\_hms\_xobject}};}
+\DoxyCodeLine{00038\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a15d7308e28f4f5a5cb2a20d3e9ec5da3}{su\_hms\_rmmodule}};}
+\DoxyCodeLine{00039\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a09610a20e8b1fefbdd234c9c3c45d858}{su\_hms\_emmodule}};}
+\DoxyCodeLine{00040\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a10ed3af72ce550290378539bcffe06b8}{su\_hms\_tmmodule}};}
+\DoxyCodeLine{00041\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a64cbb98a72dfbc16a69402eb282c404b}{su\_hms\_usmodule}};}
+\DoxyCodeLine{00042\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_af83cc20a2cccfbb91a32ed91c7a77185}{su\_hms\_pamodule}};}
+\DoxyCodeLine{00043\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a2d43b8d1d36baf996b2f55c06a1e1e73}{su\_hms\_esmodule}};}
+\DoxyCodeLine{00044\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a3c1492fe42e87107044ce838e6f150f3}{su\_hms\_hfmodule}};}
+\DoxyCodeLine{00045\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_ad0d7d77f9035184366e243597b5c0d3f}{su\_hms\_pmmodule}};}
+\DoxyCodeLine{00046\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a0e3c3981c808c6e8b34275c1ddc3d2f1}{su\_hms\_opmodule}};}
+\DoxyCodeLine{00047\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a7e17681de49503f8b4ffb6b1ea0e1ab7}{su\_hms\_crmodule}};}
+\DoxyCodeLine{00048\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_aea587816af1f646b8434eba314b333f2}{su\_hms\_mmmodule}};}
+\DoxyCodeLine{00049\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a26faf61575f645af111be739347e7794}{su\_hms\_mamodule}};}
+\DoxyCodeLine{00050\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a429f04203ef6159ab90e90dc263383ac}{su\_hms\_sysmodule}};}
+\DoxyCodeLine{00051\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a19048f73b9096c8973568329cd8ab36c}{su\_hms\_labmodule}};}
+\DoxyCodeLine{00052\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a233d6bf6c0e1b76cdcf09f1cc4b92391}{su\_hms\_wmmodule}};}
+\DoxyCodeLine{00053\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a3207ab334d19c6332d72d33f16d437ae}{su\_signature}};}
+\DoxyCodeLine{00054\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_ac28b77c62f248afb45971e5bd347100b}{su\_signatureid}};}
+\DoxyCodeLine{00055\ \ \ CString\ \ \ \mbox{\hyperlink{structtag_h_m_s_u_s_e_r_i_n_f_o_a17cd5a4f1521d654f5793aa6109e4fd9}{su\_position}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_abcf39084b42b744731ab24b4444e8ae2}{HMSUSERINFO}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o}{tagCOMPANYINFO}}\{}
+\DoxyCodeLine{00060\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_aec9c017af9a5efcdc307ab7d719bdce4}{sc\_id}};}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_af482cae90d677c314e5d0305b3ae9938}{sc\_name}};}
+\DoxyCodeLine{00062\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_a67747bd9fc5302da270b40dc608c3e7d}{sc\_pname}};}
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_afc54b0238709e9bbe6514e43ebfc773f}{sc\_address}};}
+\DoxyCodeLine{00064\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_a12cd42a4762d606a108778061e6777e9}{sc\_phone}};}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_a547dc42054360269d87f5c8d11e4805d}{sc\_website}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_a0427321bd49be90f429576ca1b8b8fdf}{sc\_email}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_a64073b22d0d08ced3f0a2d14546fdeac}{sc\_type}};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_afcdd49378c3ea45c3ae6323fcd77c6f8}{sc\_provid}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_a3ce853ade4ed90f99715f4e7eecef2dc}{sc\_distid}};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_c_o_m_p_a_n_y_i_n_f_o_a92c2b02b86e655e1aa7376fa911b6855}{sc\_hospital\_route}};}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ \}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_ac861150fc56b95348aa365381eaf9454}{COMPANYINFO}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_i_c_d10_i_n_f_o}{tagICD10INFO}}\{}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_i_c_d10_i_n_f_o_a45697c30a3a56b1a05002af2f785efe8}{szICD}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_i_c_d10_i_n_f_o_aea586652753e7b88ed68ea77428a3fca}{szName}};}
+\DoxyCodeLine{00077\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_i_c_d10_i_n_f_o_a6f6025cf044be511650cdb6a3d63a7d1}{szLowerName}};}
+\DoxyCodeLine{00078\ \}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_a5439007791dcc2aad83f097e4f856e4e}{ICD10INFO}};}
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_a_d_d_r_e_s_s_i_n_f_o}{tagADDRESSINFO}}\{}
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_a_d_d_r_e_s_s_i_n_f_o_a8b000ab271eef2c9762ab429fc350f55}{szID}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_a_d_d_r_e_s_s_i_n_f_o_a8e44c8b084253c4fe8802268b3d8f18e}{szName}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_a_d_d_r_e_s_s_i_n_f_o_acff16ee6bff32ea222c9d856d60f2a68}{szWrd}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_a_d_d_r_e_s_s_i_n_f_o_a28d647eb8a18a6d6f9cbdce8e73b7440}{szLowerName}};}
+\DoxyCodeLine{00084\ \}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_aedd29f34e5ff9559b6d4e19a8b583df5}{ADDRESSINFO}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_h_o_s_p_i_t_a_l_i_n_f_o}{tagHOSPITALINFO}}\{}
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_h_o_s_p_i_t_a_l_i_n_f_o_adddb5fce1a47a138cfbc4a43314eac5b}{szID}};}
+\DoxyCodeLine{00088\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_h_o_s_p_i_t_a_l_i_n_f_o_a62b2bf528edc7f194b464a2a5aeecea8}{szName}};}
+\DoxyCodeLine{00089\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_h_o_s_p_i_t_a_l_i_n_f_o_aa52b521f0f4c57068f0cd70b9705b367}{szLowerName}};}
+\DoxyCodeLine{00090\ \}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_aea0b96d67437f08f22353ef85bc58f6e}{HOSPITALINFO}};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t}{tagOPERATIONLIST}}\{}
+\DoxyCodeLine{00093\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_adcaf0c29d4154d30e6471beca2aaa385}{szID}};}
+\DoxyCodeLine{00094\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a8e466c40d140b50be3deaa0153e2f01e}{szName}};}
+\DoxyCodeLine{00095\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a10c8fe481ab78d974506fc755f5af6d5}{szLowerName}};}
+\DoxyCodeLine{00096\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a035a5aef06dc91dd61afb0b14ff684ec}{szServPrice}};}
+\DoxyCodeLine{00097\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_af4f9a1a8284fc7232c0bc553322656ab}{szInsPrice}};}
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_aff3124ca577705f8391e5cb210aea931}{szPolPrice}};}
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a9048dfe6fcdd95bf7201be0c67fabe62}{szReqPrice}};}
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a27ea8b9c895b3ddebc32347da3d0e616}{szApplyDate}};}
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_ac60b5c77ca6dbdd6d7b3c8e486a31697}{szHitech}};}
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_ab7c39528bba5a02ca696ddb10b637475}{szInsPaid}};}
+\DoxyCodeLine{00103\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_ab4411801f2a8143d0a6f1918c6180000}{szPolPaid}};}
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_adc3e91ce41c636bdac20d95b4213b509}{szGroupType}};}
+\DoxyCodeLine{00105\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a98628f3abb34e91c9034743e4b33f605}{szGroupName}};}
+\DoxyCodeLine{00106\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a51fbc4621022d48072827c5bab4b1400}{szModality}};}
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_ae9165156985cd4029f48974bb6658896}{szOptRef}};}
+\DoxyCodeLine{00108\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_a19e8654e4e3ee519adc5920231b36a29}{szServPricePrev}};}
+\DoxyCodeLine{00109\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_aed66c1a1e47786712f249118b7798b0d}{szInsPricePrev}};}
+\DoxyCodeLine{00110\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_o_p_e_r_a_t_i_o_n_l_i_s_t_ac2e838f14dad0c62179d72247d3c09f9}{szPolPricePrev}};}
+\DoxyCodeLine{00111\ \}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_a7a256d1d862604f79afb1feba94c244a}{OPERATIONLIST}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a8f85a24fa7ac8ace7648847c6e8d4e93}{tagFEEITEMS}}\{}
+\DoxyCodeLine{00114\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_af330382fe25dcaee6a10d12a70c1d357}{szGroupID}};}
+\DoxyCodeLine{00115\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a0b659a30149c63c2781d60a67b6974dd}{szID}};}
+\DoxyCodeLine{00116\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a1cd5e7fe2803c5a6052f763308f506f4}{szName}};}
+\DoxyCodeLine{00117\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a962012bc33ce0b8fb7087691209123f8}{szUnit}};}
+\DoxyCodeLine{00118\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a35711a81b6c34db66fa44e6297bca749}{szStatus}};}
+\DoxyCodeLine{00119\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a4b2ea17c2dae3240e1b9ce248ddb4ce3}{szFeeType}};}
+\DoxyCodeLine{00120\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a16b079afd83d2d8d62cec9fa5a1da1af}{szDisrate}};}
+\DoxyCodeLine{00121\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a6916c6c5d37d243e36e1e475929d3c5c}{szPayrate}};}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a7bd14ad8760f1fa3e4fadc11ed1a614e}{nQuantity}};}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_aa080e9027194a291d147e18a7ec58d2e}{nPrice}};}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a59e1f94ecb713c4b217d2268089d9455}{nInsPrice}};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a9fdcbc2510b919d321e7dbce1775f7a0}{nCost}};}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a3b90e9479c4d40d122e156a471f2e2f3}{nInsCost}};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_aaa2d3428d42567596a40b1a8f2aa5c6e}{nInsPaid}};}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a894d6704fa463c5dca30354a482d838e}{nDiscount}};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a5e655b203edce67fafe86aafabba0357}{nDiffPaid}};}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_ad70fb97d867f0f773e26ec7dd9c31489}{nPatPaid}};}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a157576e111841c62a4a5c7177f672db2}{nPatDebt}};}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a0713b6b5b38b17ed5cde6dabf874bea9}{nUnpaid}};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a281f0bc212366f25cbf670a2e5f21cc2}{nCopayment}};}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_ab547aa57232cb87c0830829746d1f4e0}{bVisible}};}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_aee34ebf679704b357cc5ec5256fbe7ee}{nFreeAmount}};}
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a8f85a24fa7ac8ace7648847c6e8d4e93}{tagFEEITEMS}}()}
+\DoxyCodeLine{00137\ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_af330382fe25dcaee6a10d12a70c1d357}{szGroupID}}.Empty();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a0b659a30149c63c2781d60a67b6974dd}{szID}}.Empty();}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a1cd5e7fe2803c5a6052f763308f506f4}{szName}}.Empty();}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a962012bc33ce0b8fb7087691209123f8}{szUnit}}.Empty();}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a35711a81b6c34db66fa44e6297bca749}{szStatus}}.Empty();}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a4b2ea17c2dae3240e1b9ce248ddb4ce3}{szFeeType}}.Empty();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a7bd14ad8760f1fa3e4fadc11ed1a614e}{nQuantity}}=0;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_aa080e9027194a291d147e18a7ec58d2e}{nPrice}}=0;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a59e1f94ecb713c4b217d2268089d9455}{nInsPrice}}=0;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a9fdcbc2510b919d321e7dbce1775f7a0}{nCost}}=0;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a3b90e9479c4d40d122e156a471f2e2f3}{nInsCost}}\ =\ 0;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_aaa2d3428d42567596a40b1a8f2aa5c6e}{nInsPaid}}=0;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a894d6704fa463c5dca30354a482d838e}{nDiscount}}=0;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a5e655b203edce67fafe86aafabba0357}{nDiffPaid}}=0;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_ad70fb97d867f0f773e26ec7dd9c31489}{nPatPaid}}=0;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a157576e111841c62a4a5c7177f672db2}{nPatDebt}}=0;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a0713b6b5b38b17ed5cde6dabf874bea9}{nUnpaid}}=0;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a281f0bc212366f25cbf670a2e5f21cc2}{nCopayment}}=0;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a16b079afd83d2d8d62cec9fa5a1da1af}{szDisrate}}.Empty();}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_f_e_e_i_t_e_m_s_a6916c6c5d37d243e36e1e475929d3c5c}{szPayrate}}.Empty();}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \}\mbox{\hyperlink{_h_m_s_main_frame_8h_a58a7dd9f61e4054fe9b5ba61b4e22ae7}{FEEITEMS}};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_a58a7dd9f61e4054fe9b5ba61b4e22ae7}{FEEITEMS}}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_a115d4f8206b9cc5ea320bc464b3c5a04}{FEEITEM}};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ FORMAT\_DATE(szData,\ fmt,\ date)\ szData.Format(fmt,date.Mid(8,2),date.Mid(5,2),date.Left(4));}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_web_view2_view}{CWebView2View}};}
+\DoxyCodeLine{00167\ \textcolor{keyword}{extern}\ UINT\ \mbox{\hyperlink{_h_m_s_main_frame_8h_a80d71b2ce8394b3efc5d7d51610919df}{CMD\_EMRVIEWER}};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00184\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa37c3aa7bb8490d393d6236aee69fdc3}{CHMSMainFrame}}\ :\ \textcolor{keyword}{public}\ CGuiMainFrame}
+\DoxyCodeLine{00185\ \{}
+\DoxyCodeLine{00186\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00187\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a81322a540d87bc76b622395344f5a4d0}{m\_bActivated}};\ }
+\DoxyCodeLine{00188\ \ \ \ \ vector<ICD10INFO>\ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6d09ebf968a337f6753017338d13e0e1}{m\_icd10}};\ }
+\DoxyCodeLine{00189\ \ \ \ \ vector<ADDRESSINFO>\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac64ae332d14f4e89f13ec6b58765d11c}{m\_address}};\ }
+\DoxyCodeLine{00190\ \ \ \ \ vector<HOSPITALINFO>\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae976f84a846367b8e931f24047829ef4}{m\_hospital}};\ }
+\DoxyCodeLine{00191\ \ \ \ \ vector<OPERATIONLIST>\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aacb9c8c92069dd49b2b7c2bcf9d71f8f}{m\_optList}};\ }
+\DoxyCodeLine{00192\ \ \ \ \ }
+\DoxyCodeLine{00193\ \ \ \ \ HANDLE\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a1b3eb2f0ce0cb0af3792faa457a91b67}{m\_hThread}};\ }
+\DoxyCodeLine{00194\ \ \ \ \ HANDLE\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6022f7003666644ac811f54ebb896333}{m\_hPipeThread}};\ }
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad53eafea2289360253e9440eb14e46a6}{m\_hms\_patientTbl}};\ }
+\DoxyCodeLine{00197\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a7ee272c2a4fa769d60bb1525af213a8a}{m\_hms\_docTbl}};\ }
+\DoxyCodeLine{00198\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab6459d00ef919e39c1175ec843e8d827}{m\_hms\_examdocTbl}};\ }
+\DoxyCodeLine{00199\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a58ed0e792d699190260db5c53e1ead1c}{m\_hms\_cardInfoTbl}};\ }
+\DoxyCodeLine{00200\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a1050923a79797d8f8df38819f13cc947}{m\_hms\_cardTbl}};\ }
+\DoxyCodeLine{00201\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a1e2c2cee44b7ceaf53b0c9e7fa3fe5e0}{m\_hms\_examTbl}};\ }
+\DoxyCodeLine{00202\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6b450b4f434338c33ffb4c648dc00877}{m\_hms\_operationTbl}};\ }
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a76f1f9c34d5214b2d5f4fa0e7d58dbd3}{m\_bAllowLoadICD10}};\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a897a00879294679827f3ee27fa8c5401}{m\_bAllowLoadAddress}};\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a678989ed386a7097a4287a40a4c93563}{m\_bAllowLoadHospital}};\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a47b0af86431c1ba6ecc34205b346ca3a}{m\_bAllowLoadOperation}};\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa00cccd8292c9e6cc66e48021036f8fb}{m\_bHasReplicationPostgreSQL}};\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a75ededc92043fefb152fb148e68f3439}{m\_bHasPOS}};\ }
+\DoxyCodeLine{00210\ \ \ \ \ }
+\DoxyCodeLine{00211\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab5f06e292f5ad5d7280be80e26afaad3}{m\_szCommPOS}};\ }
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{comment}{//\ Các\ biến\ dùng\ trong\ cổng\ BHYT}}
+\DoxyCodeLine{00215\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aceb0e9622cbf21e49dfad20db05dfe23}{m\_szInsURL}};\ }
+\DoxyCodeLine{00216\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0e8d5affa677e3d481695775d3633527}{m\_szInsUserID}};\ }
+\DoxyCodeLine{00217\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a49614390e95e8de53483bb656a10d3c5}{m\_szInsPassword}};\ }
+\DoxyCodeLine{00218\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa12a1420e520cf9e8b6d3649a5db0c66}{m\_szInsTokenID}};\ }
+\DoxyCodeLine{00219\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a3a7a8d98fa7ec3d6ebd10f2108119c56}{m\_szInsAccessToken}};\ }
+\DoxyCodeLine{00220\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a88caeca5f93023a36abda3267a1213ae}{m\_szAutoPrint}};\ }
+\DoxyCodeLine{00221\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a058f2970c7014505df9e6bab7aaa924d}{m\_szAutoPayment}};\ }
+\DoxyCodeLine{00222\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a687d578d1ef31e556b430a86667ccf07}{m\_szInsRegDate}};\ }
+\DoxyCodeLine{00223\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a67e36d2ffa3dd494a5fe0da7b9659a9e}{m\_szInsExpDate}};\ }
+\DoxyCodeLine{00224\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab626d4dd0828702eb0350d7762bb7bf3}{m\_szAllowInputDate}};\ }
+\DoxyCodeLine{00225\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a709cfbf412f1461f22784d60f6fdae7d}{m\_szSerialNo}};\ }
+\DoxyCodeLine{00226\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac2438e394e9ba74aac51cdedad854a15}{m\_szRecvDate}};\ }
+\DoxyCodeLine{00227\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_afb8290edc68743c00d7fc07d12040ff8}{m\_szPrintHemaReceipt}};\ }
+\DoxyCodeLine{00228\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a46e06c182a58b0b95edfd90ffc879235}{m\_szCurrentDir}};\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a4bb3ecbab52862d2410d990fe2d4b0c8}{m\_bIsAutoCheckCard}};\ }
+\DoxyCodeLine{00230\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a764a100960604fdaf0b37de00f67336d}{m\_szInsuranceWebService}};\ }
+\DoxyCodeLine{00231\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a532720b20e9d3d3783648813c04bc65e}{m\_szIPWebSevice}};\ }
+\DoxyCodeLine{00232\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab9e7a3e02347574d70db723ee70fec6b}{m\_szIpTPH}};\ }
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a4acbf2a99a9b5bda0cc6b2f15a90ece4}{m\_nRecvNo}};\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa184ec9e940c7cbe505feb8069f8a920}{m\_nInsOffLinePayment}};\ }
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ BOOL\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_acca9aeef57d4862b45105f6be7866338}{m\_bSmartCard}};\ }
+\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{class_a_t_m}{ATM}}*\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae5817a8fe79af27b44fddc1618050a0e}{m\_atm}};\ }
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ CDb\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a915305c5c1bf5cc6bf4fb76557e46b27}{m\_pgDb}};\ }
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_add01aa1a003b8c1056eed7e02b719e72}{m\_bPrintSummarize}};\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a15e3715ad55ae2b95c7b19eec863d30a}{m\_bIsDoctor}};\ }
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \mbox{\hyperlink{_h_m_s_main_frame_8h_ac861150fc56b95348aa365381eaf9454}{COMPANYINFO}}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae2d9d5e5c741685ffba1f49fbd108f1a}{m\_CompanyInfo}};\ }
+\DoxyCodeLine{00246\ \ \ \ \ \mbox{\hyperlink{_h_m_s_main_frame_8h_abcf39084b42b744731ab24b4444e8ae2}{HMSUSERINFO}}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a334843a916e09227e461bfc2aa65c068}{m\_UserInfo}};\ }
+\DoxyCodeLine{00247\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af80aa7ad52b230bf655c6517c3714546}{m\_szStoragePerm}};\ }
+\DoxyCodeLine{00248\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad361ea6c63f7ce90a8c8bd1b6c53db5e}{m\_szInsuranceMethod2015}};\ }
+\DoxyCodeLine{00249\ \ \ \ \ }
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0b24e9c708791837cfe58a753fee4933}{m\_nPatientNo}};\ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9638034a1bb69470253f74260c40698c}{m\_nDocumentNo}};\ }
+\DoxyCodeLine{00253\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5bd4ba408d619505583574c17c6ded8f}{m\_szDept}};\ }
+\DoxyCodeLine{00254\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_afb3562ba032a3ec0e61797a04498161e}{m\_szStorages}};\ }
+\DoxyCodeLine{00255\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a118e736c436401ba59242293aab6ba19}{m\_szStatus}};\ }
+\DoxyCodeLine{00256\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a27c95dc1757f1d2f38da793241f6ac17}{m\_szExamStatus}};\ }
+\DoxyCodeLine{00257\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9240f074c0504628686d28d2a048e250}{m\_szDoctor}};\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa204fe49f1b3504daab82bb74e167b59}{m\_nRoomID}};\ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a545ee43df4710257e11bacf0f3083438}{m\_nBedID}};\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af1d0c22274b42b34da3f5edde35d0c68}{m\_nRefIndex}};\ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9d7db5644edc1d8f6662e5e5f7ee3557}{m\_nTreatIdx}};\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad22df6f5377bc3aabbf9db4e89420dc6}{m\_nReceptNo}};\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5e3958cc97ee50591d66d70142f1018d}{m\_nFloor}};\ }
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a60f9adba39f4543e8c3ef3b889c677bc}{m\_nPriceColumnShow}};\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8cdeb7097b0e40d70e77e121697f4f7b}{m\_nWidthPolPrice}};\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8246ff238bd8dd71d48652543b963a73}{m\_nWidthRePrice}}\ ;\ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a3ae9bd331660263bbfc6d813629c5c54}{m\_nPrescriptionTotalAmount}};\ }
+\DoxyCodeLine{00269\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a27209adc28b5fffbe025551900ea48b6}{m\_szObject}};\ }
+\DoxyCodeLine{00270\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a1ff91ef07cb6f852794aab752874442c}{m\_szObjectType}};\ }
+\DoxyCodeLine{00271\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9c10f2364d408a10462e26eeb5d2432d}{m\_szAdmitDate}};\ }
+\DoxyCodeLine{00272\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a39d5e66864c3d8c82dbe93c5217733b7}{m\_szEntryDate}};\ }
+\DoxyCodeLine{00273\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a18e0d32aa3e695b85033ba004a5b4577}{m\_szDischargeDate}};\ }
+\DoxyCodeLine{00274\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa1fb6d5e20e20738b0f2184ab85a3370}{m\_szDiagnostic}};\ }
+\DoxyCodeLine{00275\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a93881cadde0a0dad2370bea890651fb4}{m\_szFreePaymentCostExam}};\ }
+\DoxyCodeLine{00276\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a51fecb9a149c37285abb9c77d63c4954}{m\_szCurrentFileNamePACS}};\ }
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0480274e767671dad2fdfecd1f3686c0}{m\_szUserGroup}};\ }
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2ad767afad38bcd60f361af9e8fc420e}{m\_bConfirm}};\ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac6396e8cf1692073028e32a4ed37d5fd}{m\_bSignature}};\ }
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af6ed14046a474f4cda4649e99ec11f30}{m\_bSheetReatOnly}};\ }
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ HBITMAP\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a57ab79b4322c3224b462fccff4e2d740}{m\_hBitmap}};\ }
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae3f1d5048d2118357dd5089526a7ab31}{m\_szInPatient}};\ }
+\DoxyCodeLine{00287\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9b89bffeb491a760523ff59f968f2cca}{m\_szOutpatient}};\ }
+\DoxyCodeLine{00288\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aed2bab36d7a7f43e1b1531f860464a59}{m\_szOutLine}};\ }
+\DoxyCodeLine{00289\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a05716eb14740589acd97d7a96fafdde2}{m\_szEmergency}};\ }
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae2c8fcd6aef72a7abbdd05a5b57318df}{m\_szAllowCancelDailyOrder}};\ }
+\DoxyCodeLine{00292\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a72c4f24ceaa1c14f57c753f1d5bb2777}{m\_szAllowCancelCabinetOrder}};\ }
+\DoxyCodeLine{00293\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a54dad9d2f3a1f447d6d5873e154737b3}{m\_szAllowCancelPrescriptionOrder}};\ }
+\DoxyCodeLine{00294\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a62e873a250055f4c562e34130ccd82ff}{m\_szViewTotalInsPaid}};\ }
+\DoxyCodeLine{00295\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8ff5339b4034d0643949e48796c32bf9}{m\_szDrugOrderByName}};\ }
+\DoxyCodeLine{00296\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2a630633494be7a34ea423690763e346}{m\_szReturnOrderPrintDetail}};\ }
+\DoxyCodeLine{00297\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a98bd2a8bb5a1a4c9261539fe03b63ee5}{m\_szDiscountPrintReport}};\ }
+\DoxyCodeLine{00298\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac3c7bfeb52a4a89b4194c1055dd4abe3}{m\_szUrlBank}};\ }
+\DoxyCodeLine{00299\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a87f2d7c0f2d6620d7e12b49de705d28b}{DEFAULT\_STORAGE\_ID}};\ }
+\DoxyCodeLine{00300\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_afb617768680a4e6426e116de57598110}{m\_szPlannedWarehouseId}};\ }
+\DoxyCodeLine{00301\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a703f9b5dfa817fe8a00995760e331140}{m\_szConsignationWarehouseId}};\ }
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad94ef2fb3a6ddb37143e19c91b92fde1}{m\_nTreatTime}};\ }
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af9124f5f4265fd89affedc5300cb13f5}{m\_nCancerTime}};\ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aae3c2604864d792fece728e5915699d9}{m\_bIsReq}};\ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_afe20b78ccb4777c3cafc29afdf210117}{m\_bIsDocumentReadOnly}};\ }
+\DoxyCodeLine{00307\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6a48d17ba177c7840e22634e8bb961ef}{m\_szPatientName}};\ }
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac1160a1034f9fa82f84ddd97172b4060}{m\_szNotification}};\ }
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ CStringArray\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac189589643c9700fe67a1fdaa50f8510}{m\_arTYC}};\ }
+\DoxyCodeLine{00312\ \ \ \ \ CStringArray\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad17062571d405c1b488c757a2159983f}{m\_arPTTYC}};\ }
+\DoxyCodeLine{00313\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aac300bebc68203109d011c7533c24667}{m\_szTYCDepts}};\ }
+\DoxyCodeLine{00314\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9a17ecdc9fb74899c9b24c87ed2f051f}{m\_szPTTYCDepts}};\ }
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa04a9f774af0dc05debb9df9eba575a8}{m\_szZone}};\ }
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a95c85bf163e163934e374182b996c614}{IsTYC}}();\ }
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a334b751a8d0cd251e8efa772da0b7cac}{IsPTTYC}}();\ }
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa1046beb0dea186bfc9e887d60d0da37}{m\_szuse\_viettin\_bank\_qr}};\ }
+\DoxyCodeLine{00321\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac4760a4200ba4c6d7ceb3bc879068be0}{m\_viettin\_bank\_qr\_address}};\ }
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{comment}{//\ Cấu\ hình\ DICOM}}
+\DoxyCodeLine{00324\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa5a19990eb663108b3cd75b689466947}{m\_szServerAddress}};\ }
+\DoxyCodeLine{00325\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2b34c555052ac0020779dac0592b75d6}{m\_szServerAETitle}};\ }
+\DoxyCodeLine{00326\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae423814f2a257ff22efba0d3088d8c14}{m\_szClientAETitle}};\ }
+\DoxyCodeLine{00327\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab28ebf10a77d19f961219a003cf9b3a1}{m\_szServerAddressPACS}};\ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_adec18ccdab587dcaa53655be59602053}{m\_nServerPort}};\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a103600cc97ab5c8fa796c91971d3b786}{m\_nClientPort}};\ }
+\DoxyCodeLine{00330\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aba9cc8dc8b4d0c5a05037531f8b3beff}{m\_bIVFSwitch}};\ }
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{comment}{//\ Merge\ from\ E10\ dll}}
+\DoxyCodeLine{00333\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_acfc00bcffc81832c0124a9043e91e2cb}{m\_szCompanyName}};\ }
+\DoxyCodeLine{00334\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa31d1c2dfdc0401b199eacd6641691cc}{m\_szDepartment}};\ }
+\DoxyCodeLine{00335\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a10bb029a4aec2ac85d5bee9a839159e5}{m\_szDefaultCurrency}};\ }
+\DoxyCodeLine{00336\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af834dadd3430c43c567cb929f9cb146e}{m\_szDepartmentPerm}};\ }
+\DoxyCodeLine{00337\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a47ea85b770cf11fa2a75df93a444e7dd}{m\_szDeptID}};\ }
+\DoxyCodeLine{00338\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae796ea4a869a6ad08d82a754e7b66daa}{m\_szOriginModuleID}};\ }
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8b8871219a7093bd1f8a69f5ef790830}{m\_bMultipleCurrency}};\ }
+\DoxyCodeLine{00340\ \ \ \ \ }
+\DoxyCodeLine{00341\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac8ecfed40de346a294f5a501a8fe4ef5}{m\_wndSignPending}};\ }
+\DoxyCodeLine{00342\ \ \ \ \ \mbox{\hyperlink{class_c_web_view2_view}{CWebView2View}}*\ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_abe11cf9f9f953c337cf984582deb40d2}{m\_pWebView}};\ }
+\DoxyCodeLine{00343\ \ \ \ \ \mbox{\hyperlink{class_pipe_service}{PipeService}}*\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8e76acfa1e75b44e5bade9755abf95a4}{m\_pPipe}};\ }
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \ \ \ \ }
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00352\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa37c3aa7bb8490d393d6236aee69fdc3}{CHMSMainFrame}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00353\ \ \ \ \ }
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a25a3c468a2af11438f41f4b1ee772645}{\string~CHMSMainFrame}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00359\ \ \ \ \ }
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5d0359f4c718c00d5ef5ca0468433e67}{IsActiveDocument}}();}
+\DoxyCodeLine{00367\ \ \ \ \ }
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab69d72c6d0bf32406cff96d78e93f820}{IsInPatient}}();}
+\DoxyCodeLine{00375\ \ \ \ \ }
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a970b65566e47e961d423a174da960a77}{IsOutPatient}}();}
+\DoxyCodeLine{00383\ \ \ \ \ }
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00393\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a529298f70d2cd3a27743ad92d96cce18}{IsPaymentFee}}(CString\ szType,\ \textcolor{keywordtype}{long}\ nIdx)\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\};}
+\DoxyCodeLine{00394\ \ \ \ \ }
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keyword}{virtual}\ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad1a4697ac165bee42d1e9448df7fb424}{GetDocumentStatus}}();}
+\DoxyCodeLine{00402\ \ \ \ \ }
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8c7f2c25524676b21c95dcb8117cdec6}{CreateFees}}(CString\ szType);}
+\DoxyCodeLine{00411\ \ \ \ \ }
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6954557de27f0fd908f1d34dd3e088e4}{OnInitializes}}();}
+\DoxyCodeLine{00418\ \ \ \ \ }
+\DoxyCodeLine{00424\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2bf91805ffe41c401262b18b260984a6}{OnInitData}}();}
+\DoxyCodeLine{00425\ \ \ \ \ }
+\DoxyCodeLine{00431\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad3dd41c6fd017b0265acd0978ea2202b}{PreInitData}}();}
+\DoxyCodeLine{00432\ \ \ \ \ }
+\DoxyCodeLine{00438\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa2fb42109d4d6212442eb703f30954f0}{GetDepartmentID}}();}
+\DoxyCodeLine{00439\ \ \ \ \ }
+\DoxyCodeLine{00446\ \ \ \ \ CDbfMap*\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a96049776db84e28bffb846405b1ac7c5}{GetCardInfoTbl}}()\ \{\ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{class_c_h_m_s_main_frame_a58ed0e792d699190260db5c53e1ead1c}{m\_hms\_cardInfoTbl}};\ \}}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00454\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aec0a4e4ffe08d63eaa4504692ee54370}{ToCurrency}}(\textcolor{keywordtype}{long}\ lValue);}
+\DoxyCodeLine{00455\ \ \ \ \ }
+\DoxyCodeLine{00463\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a79416facae5f8144810e82abc0b77413}{ToCurrency}}(\textcolor{keywordtype}{double}\ dValue);}
+\DoxyCodeLine{00464\ \ \ \ \ }
+\DoxyCodeLine{00471\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a64077fac47a2a2add3bebd11b36e55a3}{ToCurrency}}(LPCTSTR\ lpszValue);}
+\DoxyCodeLine{00472\ \ \ \ \ }
+\DoxyCodeLine{00480\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa7941a58e286ff7a43c3c46777f2144f}{GetParam}}(LPCTSTR\ lpszName);}
+\DoxyCodeLine{00481\ \ \ \ \ }
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa34a1849b376891b2b1aaab004f61153}{GetTotalDepositAmount}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ CString\ szClass);}
+\DoxyCodeLine{00491\ \ \ \ \ }
+\DoxyCodeLine{00500\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aaa9fd4469c11d5d8bab495b89894baf0}{CheckPrescriptionTotalAomunt}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00501\ \ \ \ \ }
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a99945a494fbce72f625f4652d60d19ac}{AddMenuItemReport}}(\textcolor{keywordtype}{int}\ nID,\ LPCTSTR\ szName,\ \textcolor{keywordtype}{void}\ (*\_menuCmd)(CWnd\ *pWnd)=NULL);}
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00519\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a36263153d0adced7063e193ecce6b9a7}{LoadProvillList}}(CGuiComboBox\ *pWnd,\ CString\ szKey,\ CString\ szFilter\ =\ \_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00520\ \ \ \ \ }
+\DoxyCodeLine{00529\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a57342e1213438d0ca7aa03fb6456dd6e}{LoadDistrictList}}(CGuiComboBox\ *pWnd,\ CString\ szProvillID,\ CString\ szKey);}
+\DoxyCodeLine{00530\ \ \ \ \ }
+\DoxyCodeLine{00541\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa1659fb1e3dbf8febd4e82ee14942f0c}{LoadVillageList}}(CGuiComboBox\ *pWnd,\ CString\ szProvillID,CString\ szDistrictID,\ CString\ szKey,\ CString\ szFilter\ =\ \_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00542\ \ \ \ \ }
+\DoxyCodeLine{00551\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a636cbd1f172fd6b0d6e3ed82873b6c1a}{LoadAddressList}}(CGuiComboBox\ *pWnd,\ CString\ szKey,\ \textcolor{keywordtype}{bool}\ bNew=\textcolor{keyword}{false});}
+\DoxyCodeLine{00552\ \ \ \ \ }
+\DoxyCodeLine{00560\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5e2fa513d591eb391d4237d11ec9840a}{LoadSexList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00561\ \ \ \ \ }
+\DoxyCodeLine{00569\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6838f5c5adbcce595265b7f2d2d901df}{LoadNationList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00570\ \ \ \ \ }
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a1cb6e4a2ca95bc7906f92a938826ff2c}{LoadOccupationList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00579\ \ \ \ \ }
+\DoxyCodeLine{00587\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a3e7dd4cce9b3e868f2beda6e241500ab}{LoadRankList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00588\ \ \ \ \ }
+\DoxyCodeLine{00596\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a21ae4d8f94739fa01a3ad6c5baf90140}{LoadPositionList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00597\ \ \ \ \ }
+\DoxyCodeLine{00605\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a38317fb568285d66be617164e6fda667}{LoadObjectList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00606\ \ \ \ \ }
+\DoxyCodeLine{00614\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ada37b95f053ccd71074e8fb91bdf3088}{LoadPatientStateList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00615\ \ \ \ \ }
+\DoxyCodeLine{00624\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aaafbbfa33e23154590ec1801dbd8f298}{LoadExamtypeList}}(CGuiComboBox\ *pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00625\ \ \ \ \ }
+\DoxyCodeLine{00633\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aaf84eb5d8f0bfa69f95d236bca9f8bf4}{LoadExamRoomList}}(CGuiComboBox\ *pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00634\ \ \ \ \ }
+\DoxyCodeLine{00644\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_acfab32f1a4d79c8305ddade950e45047}{LoadDoctorList}}(CGuiComboBox*\ pWnd,\ CString\ szKey,\ CString\ szDept=\_T(\textcolor{stringliteral}{"{}"{}}),\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00645\ \ \ \ \ }
+\DoxyCodeLine{00654\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9507d7368d6dd54d5bd9850ffd6ed36e}{LoadDepartment}}(CGuiComboBox*\ pWnd,\ CString\ szDepartmentKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00655\ \ \ \ \ }
+\DoxyCodeLine{00665\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8b4f55e0ccd1db53ffb7fb000cdd9e1e}{LoadICD}}(CGuiComboBox*\ pWnd,\ CString\ szKey,\ CString\ szExcept=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00666\ \ \ \ \ }
+\DoxyCodeLine{00677\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a26ac7e7f5f2e63b488f6ee38cd2bbb0d}{LoadOperationList}}(CGuiComboBox*\ pWnd,\ CString\ szKey,\ CString\ szObjectType,\ CString\ szAdmitDate);}
+\DoxyCodeLine{00678\ \ \ \ \ }
+\DoxyCodeLine{00689\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5dc3002276516eb194b1e3328c478554}{LoadOperationListEx}}(CGuiComboBox*\ pWnd,\ CString\ szKey,\ CString\ szObjectType,\ CString\ szAdmitDate,\ CString\ szFilter\ =\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00690\ \ \ \ \ }
+\DoxyCodeLine{00701\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_abd5065cc38e0b601875100bbae264ac6}{LoadSelectionList}}(CGuiComboBox*\ pWnd,CString\ szSelectionID,\ \ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00702\ \ \ \ \ }
+\DoxyCodeLine{00710\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ace5f648e328664d2020b83c82be43f02}{LoadHospitalList}}(CGuiComboBox*\ pWnd,\ CString\ szKey);}
+\DoxyCodeLine{00711\ \ \ \ \ }
+\DoxyCodeLine{00720\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_abd669d877986b8076eceab136f762346}{LoadStockList}}(CWnd\ *pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00721\ \ \ \ \ }
+\DoxyCodeLine{00730\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8faac3a8c90e7eb2221fbf6f1bc53b3f}{LoadProductItemList}}(CGuiComboBox\ *pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00731\ \ \ \ \ }
+\DoxyCodeLine{00740\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac70992d4ca3a2e02aefa1812b89923db}{LoadStorageList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00741\ \ \ \ \ }
+\DoxyCodeLine{00750\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af08fa3529afb214579704bef8428bbc4}{LoadManufactureList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00751\ \ \ \ \ }
+\DoxyCodeLine{00760\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac1acde11a610142ba15724af0450fe55}{LoadTransactionTypeList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00761\ \ \ \ \ }
+\DoxyCodeLine{00770\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2c0a5be52db46a6d421cc70998275807}{LoadUserList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00771\ \ \ \ \ }
+\DoxyCodeLine{00780\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aef004a9ecceb95cad66564de59390362}{LoadProductTypeList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00781\ \ \ \ \ }
+\DoxyCodeLine{00790\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a3aeb99e8d6d4debc00d704ace73d35b2}{LoadProductCategoryList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00791\ }
+\DoxyCodeLine{00800\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a73741bb47b63ed020dbef707b84156f1}{LoadCountryList}}(CWnd\ *pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00801\ \ \ \ \ }
+\DoxyCodeLine{00810\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6c3d685bac34a03321f324755423cf83}{LoadUserListEx}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00811\ \ \ \ \ }
+\DoxyCodeLine{00820\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0890c6d1656b07f784116238d5a5b8a8}{LoadDrugIndication}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00821\ }
+\DoxyCodeLine{00829\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac1ac6db69cfb4b0d012e42c07d0714c0}{GetAgeString}}(CString\ szBirthDate);}
+\DoxyCodeLine{00830\ \ \ \ \ }
+\DoxyCodeLine{00838\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_af90ef0fc411cd005928b9c957eaa8dd8}{GetSelectionString}}(CString\ szID,\ CString\ szCode);}
+\DoxyCodeLine{00839\ \ \ \ \ }
+\DoxyCodeLine{00846\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_acc35f5fa875d8464b1d48ea672915f78}{GetProvinceString}}(CString\ szID);}
+\DoxyCodeLine{00847\ \ \ \ \ }
+\DoxyCodeLine{00854\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a79a65fe79001b94c119a6ecf1a193cc6}{GetDistrictString}}(CString\ szID);}
+\DoxyCodeLine{00855\ \ \ \ \ }
+\DoxyCodeLine{00862\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a3718f888b6c2b3162f1ef107f01163a5}{GetVillageString}}(CString\ szID);}
+\DoxyCodeLine{00863\ \ \ \ \ }
+\DoxyCodeLine{00870\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a407ab5843a944c4f1fcbfb10cd7fc854}{GetAddressString}}(CString\ szID);}
+\DoxyCodeLine{00871\ \ \ \ \ }
+\DoxyCodeLine{00877\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a47cbe65a7f029cdb1b4184c9eb1de608}{GetObjectType}}();}
+\DoxyCodeLine{00878\ \ \ \ \ }
+\DoxyCodeLine{00885\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a799a334c2c27780b7032d27dc2c1a9b5}{GetObjectString}}(CString\ szObjectID);}
+\DoxyCodeLine{00886\ \ \ \ \ }
+\DoxyCodeLine{00893\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a958e71dd0ad87a2223195d6fb1fcbbf5}{GetDoctorName}}(CString\ szDoctorID);}
+\DoxyCodeLine{00894\ \ \ \ \ }
+\DoxyCodeLine{00902\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a7b054853491d9fb86901ffd272f8c364}{GetStatusString}}(CString\ szStatus,\ CString\ szTranslateString=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00903\ \ \ \ \ }
+\DoxyCodeLine{00909\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab365d90bb70ccb2d2b47759c9647a9f5}{GetCurrentDepartmentID}}();}
+\DoxyCodeLine{00910\ \ \ \ \ }
+\DoxyCodeLine{00916\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa01ca9e84b2d1f4aeaace948ec982e79}{GetCurrentDepartmentName}}();}
+\DoxyCodeLine{00917\ \ \ \ \ }
+\DoxyCodeLine{00923\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a00942cfbf3faba31bda0be9ed4562911}{GetCurrentRoomID}}();}
+\DoxyCodeLine{00924\ \ \ \ \ }
+\DoxyCodeLine{00930\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a313b00f2b6c463dd5fbc5d564356fc97}{GetCurrentRoomName}}();}
+\DoxyCodeLine{00931\ \ \ \ \ }
+\DoxyCodeLine{00937\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6f90397d8432ec44c0b3c915311caf8c}{GetUserGroup}}();}
+\DoxyCodeLine{00938\ \ \ \ \ }
+\DoxyCodeLine{00945\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6824f8c4e5f57618d9e3e80ea41bf39c}{GetDiagnostic}}(LPCTSTR\ lpszICD);}
+\DoxyCodeLine{00946\ \ \ \ \ }
+\DoxyCodeLine{00953\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae16c7981481d88cbb1983a08b6b8dbd8}{GetDepartmentName}}(LPCTSTR\ lpszDept);}
+\DoxyCodeLine{00954\ \ \ \ \ }
+\DoxyCodeLine{00961\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a3f842362716e49fd89b90f22cf482a72}{GetStorageName}}(\textcolor{keywordtype}{int}\ nStockID);}
+\DoxyCodeLine{00962\ \ \ \ \ }
+\DoxyCodeLine{00970\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6d750e29c6a35956b11fbaa841a6538a}{GetRoomName}}(CString\ szDeptID,\ \textcolor{keywordtype}{int}\ nRoomID);}
+\DoxyCodeLine{00971\ \ \ \ \ }
+\DoxyCodeLine{00980\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aab0dd49c72351a7411f491ffe426b180}{GetBedName}}(CString\ szDeptID,\ \textcolor{keywordtype}{int}\ nRoomID,\ \textcolor{keywordtype}{int}\ nBedIdx);}
+\DoxyCodeLine{00981\ \ \ \ \ }
+\DoxyCodeLine{00987\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a97c94cbe1f7dcab01440b6bb583f3d64}{GetHealthServiceName}}();}
+\DoxyCodeLine{00988\ \ \ \ \ }
+\DoxyCodeLine{00994\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a30fd1dc2b86b883c6158214b6ea82f25}{GetHospitalName}}();}
+\DoxyCodeLine{00995\ \ \ \ \ }
+\DoxyCodeLine{01001\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad44dc847a7707ca35bedf1656b4ad1c0}{GetHospitalID}}();}
+\DoxyCodeLine{01002\ }
+\DoxyCodeLine{01003\ }
+\DoxyCodeLine{01009\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2c81000a9543611135abefca6f50cdd4}{GetObjectID}}();}
+\DoxyCodeLine{01010\ \ \ \ \ }
+\DoxyCodeLine{01017\ \ \ \ \ HBITMAP\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad592ef60ecd4b39bd2cc59a8dbd638bc}{GetSignatureImage}}(LPCTSTR\ lpszUserID);}
+\DoxyCodeLine{01018\ \ \ \ \ }
+\DoxyCodeLine{01025\ \ \ \ \ HBITMAP\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a02db8d9a60299d9709470809932dc13a}{GetPACSImage}}(LPCTSTR\ lpszNameFile);}
+\DoxyCodeLine{01026\ }
+\DoxyCodeLine{01032\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab6123606872494f79b3d58c7053a1fbd}{GetTreatTime}}();}
+\DoxyCodeLine{01033\ \ \ \ \ }
+\DoxyCodeLine{01040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aefb30beaef3bf5eb6709940ba78d494d}{IsOutLine}}();}
+\DoxyCodeLine{01041\ }
+\DoxyCodeLine{01047\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad90aa16a28d80dcf0940395fbffa53d2}{PrintDeliveryOrder}}(\textcolor{keywordtype}{long}\ nOID);}
+\DoxyCodeLine{01048\ \ \ \ \ }
+\DoxyCodeLine{01056\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6e452e1d237a40cf9d2eae0d0ff27f09}{OnPrintDelivery}}(\textcolor{keywordtype}{long}\ nOID,\ LPCTSTR\ lpszDate,\ LPCTSTR\ lpszDoctor);}
+\DoxyCodeLine{01057\ }
+\DoxyCodeLine{01058\ }
+\DoxyCodeLine{01069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab7f9f68f304af7845ff01346d74d8fd1}{PrintParaclinicalOrder}}(\textcolor{keywordtype}{long}\ nOrderID,\ CString\ szGroup,CString\ szItemID=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01070\ }
+\DoxyCodeLine{01078\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a920af6cdcfcca31ca0d1aeb92a2f870f}{PrintTestOrderX}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01079\ \ \ \ \ }
+\DoxyCodeLine{01089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_acdf6f27bde3c2b2b7a4e1d91dc0ea49b}{PrintPACSOrderX}}(\textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID\ =\ \_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDownload=\textcolor{keyword}{false});}
+\DoxyCodeLine{01090\ \ \ \ \ }
+\DoxyCodeLine{01098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2273e489c05558d1af516bdf2cfa0b55}{PrintTestResultX}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01099\ \ \ \ \ }
+\DoxyCodeLine{01108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9a26078bcabf5dfcffda464b36ff9d90}{PrintTestOrderX2}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01109\ \ \ \ \ }
+\DoxyCodeLine{01119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_adb9449265146535381c2991a76405fce}{PrintPACSOrderX2}}(\textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID\ =\ \_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDownload=\textcolor{keyword}{false});}
+\DoxyCodeLine{01120\ \ \ \ \ }
+\DoxyCodeLine{01129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a1f8739a497ad7945e505b5d1968c4f92}{PrintTestResult\_KSD}}(\textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID\ =\ \_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01130\ \ \ \ \ }
+\DoxyCodeLine{01140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9de5e7c856274d8a968ab0728ca4170d}{PrintPACSResultX}}(\textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID\ =\ \_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDownload=\textcolor{keyword}{false});}
+\DoxyCodeLine{01141\ \ \ \ \ }
+\DoxyCodeLine{01149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a562f145ed40855190e2684a1de12e4cd}{PrintTestOrder}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01150\ \ \ \ \ }
+\DoxyCodeLine{01159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a346020eba75d168b25f795a8524a36c5}{PrintPACSOrder}}(\textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID\ =\ \_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01160\ \ \ \ \ }
+\DoxyCodeLine{01168\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2d6171bc6192336cc2eb12fd789a6097}{PrintPACSOrder}}(CReport*\ rpt,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{int}\&\ nIndex);}
+\DoxyCodeLine{01169\ \ \ \ \ }
+\DoxyCodeLine{01179\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5abd36a3dd15dc1fd1c0bfe649152804}{PrintPrescription}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage=1,\ \textcolor{keywordtype}{bool}\ bInPatient=\textcolor{keyword}{false});}
+\DoxyCodeLine{01180\ \ \ \ \ }
+\DoxyCodeLine{01189\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_afca09e0294fefa8a95de7b5d1d0e9c06}{PrintPrescriptionin}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage=1);}
+\DoxyCodeLine{01190\ \ \ \ \ }
+\DoxyCodeLine{01200\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aaf01b2236a718d094ea975a4b1453e6c}{PrintPrescription2}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage=1,\ \textcolor{keywordtype}{bool}\ bInPatient=\textcolor{keyword}{false});}
+\DoxyCodeLine{01201\ \ \ \ \ }
+\DoxyCodeLine{01210\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_acc8d48401accf6216fb69c89160d070f}{PrintDrugDelivery}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage=1);}
+\DoxyCodeLine{01211\ \ \ \ \ }
+\DoxyCodeLine{01220\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a68ef19d54e52837c85139880828613cd}{PrintDrugDelivery\_GNHT}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage=1);}
+\DoxyCodeLine{01221\ \ \ \ \ }
+\DoxyCodeLine{01230\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a698761445f6002e8bb59d6eaeaf4fca2}{PrintDrugDelivery}}(CString\ szOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage=1);}
+\DoxyCodeLine{01231\ \ \ \ \ }
+\DoxyCodeLine{01240\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac4fa08a68e2f107d746d5b503cdf78e2}{PrintDrugDeliveryin}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage=1);}
+\DoxyCodeLine{01241\ \ \ \ \ }
+\DoxyCodeLine{01249\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a19572e6b0d96ec8a5cbcbed2081723d4}{PrintDrugDelivery\_N}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01250\ }
+\DoxyCodeLine{01267\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_acff690e92ddb3758fa5458c8d989d8f6}{OnBankGenQRpay}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ CString\ szMID,\ CString\ szTID,\ CString\ szBillNumber,\ CString\ szDescription,\ CString\ szDeptID,\ CString\ szUserID,\ CString\ szType,\ \textcolor{keywordtype}{long}\ nAmount);}
+\DoxyCodeLine{01268\ \ \ \ \ }
+\DoxyCodeLine{01276\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab31b707f6f298264de41e3b1c0b4501c}{PrintQRCodeSheet}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nKey,\ CString\ szType);}
+\DoxyCodeLine{01277\ \ \ \ \ }
+\DoxyCodeLine{01286\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a7ff377eff5ea81789f49a0674e9ead24}{PrintDrugDelivery\_B}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage\ =\ 1);}
+\DoxyCodeLine{01287\ \ \ \ \ }
+\DoxyCodeLine{01296\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a4d2fc407665a2f8d40ccd76aabf1cfff}{PrintDrugDelivery\_GNHT\_B}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{bool}\ bPreview\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bDirect\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{int}\ nNumberPage\ =\ 1);}
+\DoxyCodeLine{01297\ \ \ \ \ }
+\DoxyCodeLine{01308\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af49cf4233a6abfde48c87939fe05f5b9}{OnDeleteQrCode}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nInvoiceNo,\ \textcolor{keywordtype}{long}\ nKey\ =\ 0,\ CString\ sztype\ =\ \_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01309\ \ \ \ \ }
+\DoxyCodeLine{01315\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a4523129f69aa985c0bf9d10aea57e1dd}{PrintDrugOrder}}(\textcolor{keywordtype}{long}\ nOID);}
+\DoxyCodeLine{01316\ \ \ \ \ }
+\DoxyCodeLine{01322\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aaf65e9291dedeb0c7ceadcc5323c837a}{PrintAdmissionSheet}}(\textcolor{keywordtype}{long}\ nDocumentNo);}
+\DoxyCodeLine{01323\ \ \ \ \ }
+\DoxyCodeLine{01330\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a7d16dff151b8fd764d048b7b635a8194}{PrintHospitalTransferSheet}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{int}\ nRefIdx);}
+\DoxyCodeLine{01331\ \ \ \ \ }
+\DoxyCodeLine{01338\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0e0e76d83d51faa8604f4eda5bf96081}{PrintHospitalTransferSheet\_V2}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{int}\ nRefIdx);}
+\DoxyCodeLine{01339\ \ \ \ \ }
+\DoxyCodeLine{01346\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa22949ab501954f4558363662a9008e5}{PrintDischargeSheet}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{int}\ nRefIdx);}
+\DoxyCodeLine{01347\ \ \ \ \ }
+\DoxyCodeLine{01354\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a84faf7cf22ec1d16328535c35d8951cc}{PrintDischargeSheetOut}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{int}\ nRefIdx);}
+\DoxyCodeLine{01355\ \ \ \ \ }
+\DoxyCodeLine{01361\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0da878a5a8ba77174ad71a19d7472d79}{PrintReturnDrugOrder}}(CString\ szSheetID);}
+\DoxyCodeLine{01362\ \ \ \ \ }
+\DoxyCodeLine{01368\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a4400d5e269d09ea66f07fca1916d75a4}{OnPrintMaterialDetail}}(\textcolor{keywordtype}{int}\ nDocumentNo);}
+\DoxyCodeLine{01369\ \ \ \ \ }
+\DoxyCodeLine{01375\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8e7106250fa05912682936044f4d6214}{PrintDepartmentDeliveryOrder}}(LPCTSTR\ szID);}
+\DoxyCodeLine{01376\ }
+\DoxyCodeLine{01387\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a23bfe990b06721d18be29c12f5f52bb8}{OnPrintExaminationSheet}}(\textcolor{keywordtype}{int}\ nDocumentNo,\ \textcolor{keywordtype}{bool}\ bPrintPrescription=\textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ bRequest\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{01388\ \ \ \ \ }
+\DoxyCodeLine{01397\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a1d01909d5d51972c62f849b40efe1026}{OnPrintExaminationSheet2}}(\textcolor{keywordtype}{int}\ nDocumentNo,\ \textcolor{keywordtype}{bool}\ bPrintPrescription=\textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{true});}
+\DoxyCodeLine{01398\ \ \ \ \ }
+\DoxyCodeLine{01412\ \ \ \ \ HBITMAP\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2fa09bddd4733f54507c449a19881bd6}{DownloadImage}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID,\ \ \textcolor{keywordtype}{int}\ nWidth,\ \textcolor{keywordtype}{int}\ nHeight,\ \textcolor{keywordtype}{int}\ nColumn,\ \textcolor{keywordtype}{int}\ nRow);}
+\DoxyCodeLine{01413\ \ \ \ \ }
+\DoxyCodeLine{01423\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a96d6aed2e8d056e04ef955b28e772d88}{DownloadDicomFile}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID);}
+\DoxyCodeLine{01424\ }
+\DoxyCodeLine{01432\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a94f8374a2932228816bdecb40ac4da8a}{OnLoadSystemData}}(LPCTSTR\ lpszName,\ LPCTSTR\ lpszData);}
+\DoxyCodeLine{01433\ \ \ \ \ }
+\DoxyCodeLine{01442\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a04c0fd9b58a9870e8ade19140d36289a}{OnReadNumberSpeaking}}(\textcolor{keywordtype}{int}\ nReceptNo,\ \textcolor{keywordtype}{int}\ nRoomID,\ \textcolor{keywordtype}{bool}\ flg);}
+\DoxyCodeLine{01443\ \ \ \ \ }
+\DoxyCodeLine{01449\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aab5cada854b3e4b3b4b4f9f42aaee91e}{ReadFileWAV}}(CString\ szFileName);}
+\DoxyCodeLine{01450\ \ \ \ \ }
+\DoxyCodeLine{01461\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af2616e049fd24195139a295a39235517}{CheckDepositAmount}}(\textcolor{keywordtype}{long}\ nDocument,\ CString\ szItem,\ \textcolor{keywordtype}{float}\ nQty,\ CString\ szIsMaterial=\_T(\textcolor{stringliteral}{"{}N"{}}),\ \textcolor{keywordtype}{int}\ nStorage\_ID=0);}
+\DoxyCodeLine{01462\ \ \ \ \ }
+\DoxyCodeLine{01480\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af8a3c7509857bec8cba878d6a7185aa7}{LoadFeeList}}(CGuiListCtrl*\ pList,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nInvoiceNo,}
+\DoxyCodeLine{01481\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalCost,\ \textcolor{keywordtype}{double}\&\ \ nTotalInsCost,\ \textcolor{keywordtype}{double}\&\ nTotalDiscount,\ }
+\DoxyCodeLine{01482\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalDiffCost,\ \textcolor{keywordtype}{double}\&\ nTotalCopayment,\ \textcolor{keywordtype}{double}\&\ nTotalPatPaid,\ }
+\DoxyCodeLine{01483\ \ \ \ \ \ \ \ \ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{long}\ nInsInvoice=0,\ \textcolor{keywordtype}{bool}\ bCancel=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{01484\ \ \ \ \ }
+\DoxyCodeLine{01503\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ace5d663893e337394995178234e611c0}{LoadFeeList\_v3}}(CGridListView*\ pList,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nInvoiceNo,}
+\DoxyCodeLine{01504\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalCost,\ \textcolor{keywordtype}{double}\&\ \ nTotalInsCost,\ \textcolor{keywordtype}{double}\&\ nTotalDiscount,\ }
+\DoxyCodeLine{01505\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalDiffCost,\ \textcolor{keywordtype}{double}\&\ nTotalCopayment,\ \textcolor{keywordtype}{double}\&\ nTotalPatPaid,\ }
+\DoxyCodeLine{01506\ \ \ \ \ \ \ \ \ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{long}\ nInsInvoice=0,\ \textcolor{keywordtype}{bool}\ bCancel=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{01507\ }
+\DoxyCodeLine{01525\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a30d730f5f641779a2e5477800797098b}{LoadFeeListFromInvoices}}(CGuiListCtrl*\ pList,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ CArray<long,long\&>\&\ arInvoices,}
+\DoxyCodeLine{01526\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalCost,\ \textcolor{keywordtype}{double}\&\ \ nTotalInsCost,\ \textcolor{keywordtype}{double}\&\ nTotalDiscount,\ }
+\DoxyCodeLine{01527\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalDiffCost,\ \textcolor{keywordtype}{double}\&\ nTotalCopayment,\ \textcolor{keywordtype}{double}\&\ nTotalPatPaid,\ }
+\DoxyCodeLine{01528\ \ \ \ \ \ \ \ \ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{long}\ nInsInvoice=0,\ \textcolor{keywordtype}{bool}\ bCancel=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{01529\ \ \ \ \ }
+\DoxyCodeLine{01548\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8323c7c2bdfcd74f6d77779c66589574}{LoadFeeListFromInvoices\_v3}}(CGridListView*\ pList,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ CArray<long,long\&>\&\ arInvoices,}
+\DoxyCodeLine{01549\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalCost,\ \textcolor{keywordtype}{double}\&\ \ nTotalInsCost,\ \textcolor{keywordtype}{double}\&\ nTotalDiscount,\ }
+\DoxyCodeLine{01550\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\&\ nTotalDiffCost,\ \textcolor{keywordtype}{double}\&\ nTotalCopayment,\ \textcolor{keywordtype}{double}\&\ nTotalPatPaid,\ }
+\DoxyCodeLine{01551\ \ \ \ \ \ \ \ \ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{long}\ nInsInvoice=0,\ \textcolor{keywordtype}{bool}\ bCancel=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{01552\ }
+\DoxyCodeLine{01558\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0dd36757443270f9f172d9224c17f839}{HasPOS}}();}
+\DoxyCodeLine{01559\ \ \ \ \ }
+\DoxyCodeLine{01565\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6ea5339a9865b89ee8cb3236fc66bf7a}{GetCommPOS}}();}
+\DoxyCodeLine{01566\ \ \ \ \ }
+\DoxyCodeLine{01572\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad79d43be9a784cb655443b36e8e475b8}{IsReq}}();}
+\DoxyCodeLine{01573\ \ \ \ \ }
+\DoxyCodeLine{01579\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a3515b31315af97db5b4d9fe58f388054}{IsDocumentReadOnly}}();}
+\DoxyCodeLine{01580\ \ \ \ \ }
+\DoxyCodeLine{01586\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae0cec3f1b1f78e2f405bba1e4ad3c60a}{GetAdmitDate}}();}
+\DoxyCodeLine{01587\ \ \ \ \ }
+\DoxyCodeLine{01600\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a51ec7573ebc00b2311fdb9e52b78f95d}{LogRowChange}}(CString\ szSourceTable,\ CString\ szEvent,\ \textcolor{keywordtype}{long}\ nKeyValue,\ CString\ szUpdateSql,\ CString\ szUserId,\ CString\ szExceptCol);}
+\DoxyCodeLine{01601\ \ \ \ \ }
+\DoxyCodeLine{01608\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9e1df8bbc71faeb7f5064f1d5c0d25e8}{GetAllowedDrugLevel}}();}
+\DoxyCodeLine{01609\ \ \ \ \ }
+\DoxyCodeLine{01619\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae1e66fe60618af34e24aacbceda19841}{MakeColorbyRank}}(CGuiListCtrl*\ pList,\ \textcolor{keywordtype}{long}\ nDocNo,\ \textcolor{keywordtype}{int}\ nRow,\ \textcolor{keywordtype}{int}\ nColumn);}
+\DoxyCodeLine{01620\ }
+\DoxyCodeLine{01627\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa0df82871e80dcaaeadedae39742c5fa}{OnSmartCardConnected}}(CString\ szCardId);}
+\DoxyCodeLine{01628\ \ \ \ \ }
+\DoxyCodeLine{01634\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac02793e9dbe146c257c6cc573a716381}{OnSmartCardDisconnected}}();}
+\DoxyCodeLine{01635\ \ \ \ \ }
+\DoxyCodeLine{01641\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_adc5bf49731c405e338db143dff71a716}{OnInitSmartCard}}();}
+\DoxyCodeLine{01642\ \ \ \ \ }
+\DoxyCodeLine{01648\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a7925f2fdeda7b5f66b7298e1bf788f5e}{OnSmartCardConfig}}();}
+\DoxyCodeLine{01649\ \ \ \ \ }
+\DoxyCodeLine{01655\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a075fab19633211705cd805a5f04a2ee8}{IsSmartCard}}();}
+\DoxyCodeLine{01656\ \ \ \ \ }
+\DoxyCodeLine{01662\ \ \ \ \ \textcolor{keyword}{virtual}\ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_add2c883804ee2d688802b7edfd5186fd}{GetCardId}}();}
+\DoxyCodeLine{01663\ \ \ \ \ }
+\DoxyCodeLine{01668\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a812ec374806e7ffc5d89b057e976e4b9}{m\_szCancer}};}
+\DoxyCodeLine{01669\ \ \ \ \ }
+\DoxyCodeLine{01676\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a821dd69e548a218770c360b1fa1bab71}{IsCancerPatient}}();}
+\DoxyCodeLine{01677\ \ \ \ \ }
+\DoxyCodeLine{01685\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae81b10547cb8d40ab53e7a1e91e3b9d9}{IsRequireUsage}}(CString\ szProductId);}
+\DoxyCodeLine{01686\ \ \ \ \ }
+\DoxyCodeLine{01693\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a76d291a3fc35d0322577b0ad877d5219}{PrintGuideExam}}(\textcolor{keywordtype}{long}\ nContractId,\ \textcolor{keywordtype}{long}\ nDocumentNo);}
+\DoxyCodeLine{01694\ \ \ \ \ }
+\DoxyCodeLine{01702\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a727c74cd0d4e35c2fe238407a7b28c13}{EscapeQuote}}(CString\ szString);}
+\DoxyCodeLine{01703\ \ \ \ \ }
+\DoxyCodeLine{01712\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6b3020fdc74fca445248c9e10b33875b}{String2Array}}(CString\ szData,\ CStringArray*\ strList,\ \textcolor{keywordtype}{int}\ nSize);}
+\DoxyCodeLine{01713\ \ \ \ \ }
+\DoxyCodeLine{01721\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae3ab6b46185b1357c81ebd3c9d2d3b23}{GetLoaiKCB}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{int}\ nTreattime\ =0);}
+\DoxyCodeLine{01722\ \ \ \ \ }
+\DoxyCodeLine{01736\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a189863f7ca20b88100cdaddf832bef2b}{SaveEMRData}}(CString\ szType,\ CString\ szName,\ \textcolor{keywordtype}{long}\ nDocNo,\ }
+\DoxyCodeLine{01737\ \ \ \ \ \ \ \ \ CString\ szDeptId,\ \textcolor{keywordtype}{long}\ nRefIdx,\textcolor{keywordtype}{int}\ nRoomId,\textcolor{keywordtype}{long}\ nOptIdx,CString\ szData);}
+\DoxyCodeLine{01738\ \ \ \ \ }
+\DoxyCodeLine{01751\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_af48ab3a822767174b7d3eaa802313085}{GetEMRData}}(\textcolor{keywordtype}{long}\ nDocNo,\ \textcolor{keywordtype}{int}\ nTreatTime,\ CString\ szType,\ CString\ szName,\ CString\ szFilter,\ CString\&\ szData);}
+\DoxyCodeLine{01752\ \ \ \ \ }
+\DoxyCodeLine{01758\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a708bc9c9155cb9922534cc4f40df6ea0}{GetErrorMessage}}();}
+\DoxyCodeLine{01759\ }
+\DoxyCodeLine{01771\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_abc0814e9c4d342dfca97c535575ddd69}{UpdateObject}}(\textcolor{keywordtype}{long}\ nPatientNo,\ \textcolor{keywordtype}{long}\ nDocNo,\ \textcolor{keywordtype}{int}\ nOldObject,\ CString\ szOldCardNo,\ \textcolor{keywordtype}{int}\ nNewObject,\ CString\ szNewCardNo);}
+\DoxyCodeLine{01772\ }
+\DoxyCodeLine{01781\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2b44d176c64c1c4d2207cb0286548ec3}{LoadContractList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01782\ \ \ \ \ }
+\DoxyCodeLine{01792\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae6e757941580472a2e45fbe941574b82}{LoadPartnerList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bLoadAll=\textcolor{keyword}{false});}
+\DoxyCodeLine{01793\ \ \ \ \ }
+\DoxyCodeLine{01802\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a15e35724e8492c48df30562ae30ea9e1}{LoadProductList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01803\ \ \ \ \ }
+\DoxyCodeLine{01812\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad4678846471f22516a3da32a6b864dfa}{LoadResourceList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01813\ \ \ \ \ }
+\DoxyCodeLine{01822\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_adf344b061d0050d8f1c6caa92e005322}{LoadTaxList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01823\ }
+\DoxyCodeLine{01832\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ae5073b19d813e13901a58628aa7934d0}{LoadBankList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01833\ \ \ \ \ }
+\DoxyCodeLine{01842\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a9d62923e9c647de0ec16fdaedaaa6d2d}{LoadBankAccountList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01843\ \ \ \ \ }
+\DoxyCodeLine{01852\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a13b7362638929e2bb19cbdcd4bc4cc6c}{LoadPartnerTypeList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01853\ \ \ \ \ }
+\DoxyCodeLine{01862\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a57eb7f555c1be3b65eec874ec4b6b604}{LoadUomList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01863\ \ \ \ \ }
+\DoxyCodeLine{01872\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa08c74fe57e473e5d3fb3e8fdc274d93}{LoadPayOrderList}}(CWnd*\ pWnd,\ CString\ szKey,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01873\ }
+\DoxyCodeLine{01882\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a6b4c0f672a7ce69b1c6e67fb48a290e9}{NetDownloadFile}}(CString\ szUrl,\ CString\ szFileName);}
+\DoxyCodeLine{01883\ }
+\DoxyCodeLine{01891\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_af8d31be8ec3e1f0cdd696171129191d8}{PrintPdf}}(CString\ szFile);}
+\DoxyCodeLine{01892\ \ \ \ \ }
+\DoxyCodeLine{01901\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac4648a106329729a655db2beaee7a0ef}{DownloadAndPrintPdf}}(CString\ szLink,\ CString\ szFile=\_T(\textcolor{stringliteral}{"{}printer.pdf"{}}));}
+\DoxyCodeLine{01902\ }
+\DoxyCodeLine{01912\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad6e063cb4137c681ed360b75930688dc}{DownloadAndPrintDocX}}(CString\ szLink,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{false});}
+\DoxyCodeLine{01913\ \ \ \ \ }
+\DoxyCodeLine{01919\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a818e626a59c7d31399fb5891f0212d78}{CheckCoreVersion}}();}
+\DoxyCodeLine{01920\ \ \ \ \ }
+\DoxyCodeLine{01925\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a37bc6a8e7616e9e788df9cbc4de14ff4}{HideSplash}}();}
+\DoxyCodeLine{01926\ \ \ \ \ }
+\DoxyCodeLine{01942\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a45b763561f2e78460ec46ba08850f117}{LaunchWeb}}(CString\ szLink,\ CString\ szContentType\ =\ \_T(\textcolor{stringliteral}{"{}Content-\/Type:\ application/pdf"{}}),\ CString*\ szResponse=NULL,\ CString*\ szError=NULL);}
+\DoxyCodeLine{01943\ \ \ \ \ }
+\DoxyCodeLine{01944\ }
+\DoxyCodeLine{01951\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac7941f25605e6fc36866a750f58f46a8}{CreatDateTimesTypeJSon}}(CString\ szTimes);}
+\DoxyCodeLine{01952\ \ \ \ \ }
+\DoxyCodeLine{01961\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa349d7e63d732205d004811e4f8f6a77}{GetFileMedical}}(\textcolor{keywordtype}{long}\ nDocno,\ CString\ szType,\ CString\ szArrayDocno\ =\ \_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01962\ }
+\DoxyCodeLine{01971\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0a468fc578e6cd0b2611fdef356c1592}{GetFileSignAndExecOpen}}(\textcolor{keywordtype}{long}\ nDocno,\ \textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID\ =\ \_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{01972\ \ \ \ \ }
+\DoxyCodeLine{01987\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad43b0bc959c4e63116d5a34517be4c4c}{OnPostGenDocX}}(CReport*\ rpt,\ CString\ szID,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nOrderID,\ CString\ szRPTName,\ CString\ szItemID,\ CString\ szArrOrder\ =\ \_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPreview\ =\ \textcolor{keyword}{true},\ \ \textcolor{keywordtype}{bool}\ bDirect=\textcolor{keyword}{false});}
+\DoxyCodeLine{01988\ \ \ \ \ }
+\DoxyCodeLine{01999\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_abfb20a939a14823737a1c29624a85682}{PostAndGenDocX}}(CString\ szID,\ \textcolor{keywordtype}{long}\ nDocumentNo,\textcolor{keywordtype}{long}\ nOrderID,\ CString\ szItemID,\ CString\ szSignatureID);}
+\DoxyCodeLine{02000\ \ \ \ \ }
+\DoxyCodeLine{02007\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a55f218f0c47a372e8bb4f551ccfda839}{isValidPhoneNumber}}(\textcolor{keyword}{const}\ CString\&\ input);}
+\DoxyCodeLine{02008\ \ \ \ \ }
+\DoxyCodeLine{02015\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a992ff79f3d30fdb3a257b063d5f770c9}{isValidIdCardNumber}}(\textcolor{keyword}{const}\ CString\&\ input);}
+\DoxyCodeLine{02016\ \ \ \ \ }
+\DoxyCodeLine{02023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab985132b8a3421d57ead3b1ad2dd6094}{SaveCardInfo}}(CDbfMap*\ tbl);}
+\DoxyCodeLine{02024\ \ \ \ \ }
+\DoxyCodeLine{02034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad121d99e1176be1102a56cac0ffb1688}{CheckInsCardInfo}}(CString\ szCardNo,\ CString\ szName,\ CString\ szBirthDate,\ std::string\&\ strResponse);}
+\DoxyCodeLine{02035\ \ \ \ \ }
+\DoxyCodeLine{02046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a969ee602b188eead41e580a8287f0d38}{ParseCard}}(CString\ szObject,\ CString\ szCardNo,\ CString\&\ szRetCode,\ \textcolor{keywordtype}{int}\&\ nInsDiscount,\ \textcolor{keywordtype}{int}\&\ nGroupID);}
+\DoxyCodeLine{02047\ \ \ \ \ }
+\DoxyCodeLine{02053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a66784cd4cb6d35b9457e0c305a2f778e}{GetAdmitDateTimes}}();}
+\DoxyCodeLine{02054\ \ \ \ \ }
+\DoxyCodeLine{02062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_afa8331c12cb15813189e93fbe8b11a8a}{pCompareDateTimes}}(CString\ szDate1,\ CString\ szDate2);}
+\DoxyCodeLine{02063\ \ \ \ \ }
+\DoxyCodeLine{02073\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5be451a8cc5e393a42ccd18ee1efee47}{LoadNurseList}}(CGuiComboBox*\ pWnd,\ CString\ szKey,\ CString\ szDept\ =\ \_T(\textcolor{stringliteral}{"{}"{}}),\ CString\ szFilter\ =\ \_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{02074\ \ \ \ \ }
+\DoxyCodeLine{02081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a467098db3fc495f767cd82e11eb9ef76}{GetConfigValue}}(CString\ szConfig);}
+\DoxyCodeLine{02082\ \ \ \ \ }
+\DoxyCodeLine{02083\ }
+\DoxyCodeLine{02096\ \ \ \ \ \textcolor{keyword}{virtual}\ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a05db09ea58d3ecae0ecdce5b14fdf3a4}{GetSignatureUnikey}}(CReportPrinter\ *pPrinter,\ CString\ szFormID,\ CString\ szSignID,\ \textcolor{keywordtype}{long}\ nDocmentNo,\ \textcolor{keywordtype}{long}\ nOrderId,\ CString\ szCode);}
+\DoxyCodeLine{02097\ \ \ \ \ }
+\DoxyCodeLine{02108\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad28808ca8bc7670c41149a7fa5747b6b}{GetSignID}}(CString\ szForm,\ CString\ szSignID,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nOrderId,\ CString\ szCode);}
+\DoxyCodeLine{02109\ \ \ \ \ }
+\DoxyCodeLine{02118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_aa5582545c438f3fc0c2fcf1cf412ba8a}{OnPrintMTransaction}}(CString\ szOrderNo,\ \textcolor{keywordtype}{long}\ nTransactionID,\ \textcolor{keywordtype}{bool}\ bPrintGop,\ \textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{02119\ \ \ \ \ }
+\DoxyCodeLine{02128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a22271eaa7ca6e4b74be638d6ace7bb85}{OnPrintReturnMTransaction}}(CString\ szOrderNo,\ \textcolor{keywordtype}{long}\ nTransactionID,\ \textcolor{keywordtype}{bool}\ bPrintGop,\ \textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{02129\ \ \ \ \ }
+\DoxyCodeLine{02145\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a59b7a44b718502f6f2fae153e32b2cf4}{OnBankGenQRpay\_vtb}}(\textcolor{keywordtype}{long}\ nOrderID,\textcolor{keywordtype}{long}\ nDocumentNo,CString\ szMID,\ CString\ szTID,\ CString\ szBillNumber,\ CString\ szDescription,\ CString\ szDeptID,\ CString\ szUserID,\ CString\ szType,\ \textcolor{keywordtype}{long}\ nAmount);}
+\DoxyCodeLine{02146\ }
+\DoxyCodeLine{02153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_a8e0037f0c4ef1a6346a6b215a83f43ee}{StartPipeService}}(LPCTSTR\ lpszNamed);}
+\DoxyCodeLine{02154\ \ \ \ \ }
+\DoxyCodeLine{02159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad0b1cd80288cb421aa2043dd1acd161c}{ViewEMRSignature}}();}
+\DoxyCodeLine{02160\ \ \ \ \ }
+\DoxyCodeLine{02165\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_main_frame_ad3893b22232f87b27fae39b7cfa45735}{ViewSignaturePending}}();}
+\DoxyCodeLine{02166\ }
+\DoxyCodeLine{02167\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{02175\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a37c17dadf34cad0f85acc61038a13b83}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{02176\ }
+\DoxyCodeLine{02184\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a2e08d6ea9e0020b0ae58a79d4b472989}{OnCommand}}(WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{02185\ \ \ \ \ }
+\DoxyCodeLine{02196\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_m_s_main_frame_af7175abe189867897449c80fa62c821c}{OnWndMsg}}(UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam,\ LRESULT*\ pResult);}
+\DoxyCodeLine{02197\ \ \ \ \ }
+\DoxyCodeLine{02207\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0fdd92aefd00c463c2ef6703ab3c57fd}{OnCmdMsg}}(UINT\ nID,\ \textcolor{keywordtype}{int}\ nCode,\ \textcolor{keywordtype}{void}*\ pExtra,\ AFX\_CMDHANDLERINFO*\ pHandlerInfo);}
+\DoxyCodeLine{02208\ \ \ \ \ }
+\DoxyCodeLine{02215\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a5e9e4af6556fc78c88bef1642f7516fe}{OnUpdateUIState}}(UINT\ \textcolor{comment}{/*nAction*/},\ UINT\ \textcolor{comment}{/*nUIElement*/});}
+\DoxyCodeLine{02216\ \ \ \ \ }
+\DoxyCodeLine{02223\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a342dfae341679b03c8379bf9a106952a}{OnInitMenu}}(CMenu*\ pMenu);}
+\DoxyCodeLine{02224\ \ \ \ \ }
+\DoxyCodeLine{02229\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a0238eeb88b6fbceeb5350f4e2834eeb7}{OnDestroy}}();}
+\DoxyCodeLine{02230\ \ \ \ \ }
+\DoxyCodeLine{02237\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_a843c84b407073e64b9b62bd61e35e06e}{OnCreate}}(LPCREATESTRUCT\ lpCreateStruct);}
+\DoxyCodeLine{02238\ \ \ \ \ }
+\DoxyCodeLine{02245\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ac7c624d17828c0bc4a75e4f2d6904e29}{OnTimer}}(UINT\ nIDEvent);}
+\DoxyCodeLine{02246\ }
+\DoxyCodeLine{02251\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{02252\ }
+\DoxyCodeLine{02253\ public:}
+\DoxyCodeLine{02262\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_main_frame_ab3cb0ef1df64088ac47b8bf047146e2c}{OnSize}}(UINT\ nType,\ \textcolor{keywordtype}{int}\ cx,\ \textcolor{keywordtype}{int}\ cy);}
+\DoxyCodeLine{02263\ \};}
+\DoxyCodeLine{02264\ }
+\DoxyCodeLine{02265\ \textcolor{preprocessor}{\#define\ Notice(sql)\{\ \_tprintf(\_T("{}\(\backslash\)r\(\backslash\)n\%s"{}),\ (LPCTSTR)\ \ sql);\ \_fmsg(\_T("{}\(\backslash\)r\(\backslash\)n\%s"{}),\ szSQL);\}}}
+\DoxyCodeLine{02266\ }
+\DoxyCodeLine{02267\ AFX\_EXT\_CLASS\ \ CString\ \mbox{\hyperlink{_h_m_s_main_frame_8h_a31afce843501df140d2f3a80480a8fc5}{ToCurrency}}(CString\ src);}
+\DoxyCodeLine{02268\ AFX\_EXT\_CLASS\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_afec6ed76dedb5a0c6ef753fc71ab3edf}{GetEncoderClsid}}(\textcolor{keyword}{const}\ WCHAR*\ format,\ CLSID*\ pClsid);}
+\DoxyCodeLine{02269\ AFX\_EXT\_CLASS\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_h_m_s_main_frame_8h_a75e1c759d9e7d2149959bf570c08b24b}{ResizeControl}}(CWnd*\ pSelf,\ CWnd*\ pCtrl,\ \textcolor{keywordtype}{int}\ nNewSize);}
+\DoxyCodeLine{02270\ }
+\DoxyCodeLine{02271\ }
+\DoxyCodeLine{02272\ }
+\DoxyCodeLine{02273\ }
+\DoxyCodeLine{02274\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

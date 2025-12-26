@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - VIMESCORE_E10 Documentation: Include/VIMESCORE_E10/NumberFieldDialog.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - VIMESCORE_E10 Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_number_field_dialog_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">NumberFieldDialog.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_number_field_dialog_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef NUMBERFIELDDIALOG_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define NUMBERFIELDDIALOG_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright � Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiDialog.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html">   30</a></span><span class="keyword">class </span><a class="code hl_function" href="class_c_number_field_dialog.html#a9cda3ffc1ec5201c35c9c3ee5ddb30ba">CNumberFieldDialog</a> : <span class="keyword">public</span> CGuiDialog{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a0b740d87ed159d3cde3fa20cc0bb7f78">   32</a></span>    CString     <a class="code hl_variable" href="class_c_number_field_dialog.html#a0b740d87ed159d3cde3fa20cc0bb7f78">m_szTitle</a>, <a class="code hl_variable" href="class_c_number_field_dialog.html#afa6a3530e4a93122988fd2aabc65afea">m_szValueName</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a3b95d8ae39dd8ddb2cf8e8c22dff98df">   33</a></span>    <span class="keywordtype">double</span>  <a class="code hl_variable" href="class_c_number_field_dialog.html#a71e67c11f5685881e2121eb1d7cfca8d">m_nMin</a>, <a class="code hl_variable" href="class_c_number_field_dialog.html#a3b95d8ae39dd8ddb2cf8e8c22dff98df">m_nMax</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a69a85943eef93b0cd3e86687bb0875eb">   34</a></span>    <span class="keywordtype">bool</span>    <a class="code hl_variable" href="class_c_number_field_dialog.html#a69a85943eef93b0cd3e86687bb0875eb">m_bHasMin</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a7bf31085542d2a1baef9a087a218226a">   35</a></span>    <span class="keywordtype">bool</span>    <a class="code hl_variable" href="class_c_number_field_dialog.html#a7bf31085542d2a1baef9a087a218226a">m_bHasMax</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#ac2d4e7d45712ac5259fcc100e6082374">   37</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_number_field_dialog.html#ac2d4e7d45712ac5259fcc100e6082374">m_wndNumberFieldGroupBox</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a31e62cd198025561b06249c6c084b4c1">   38</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_number_field_dialog.html#a31e62cd198025561b06249c6c084b4c1">m_wndValueLabel</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#af2bf9b9979d5ed295d92830bf7972519">   39</a></span>    CGuiNumberCtrl  <a class="code hl_variable" href="class_c_number_field_dialog.html#af2bf9b9979d5ed295d92830bf7972519">m_wndValue</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a02b291350053e9d2f0e37ebdd791ed2b">   40</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_number_field_dialog.html#a02b291350053e9d2f0e37ebdd791ed2b">m_wndOK</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#ae43d4959dd6bdb8e3c360d9fa494f65e">   41</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_number_field_dialog.html#ae43d4959dd6bdb8e3c360d9fa494f65e">m_wndClose</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a99569e7ce3005618544ad0f7f419b355">   42</a></span>    <span class="keywordtype">double</span>          <a class="code hl_variable" href="class_c_number_field_dialog.html#a99569e7ce3005618544ad0f7f419b355">m_nValue</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">//void          OnValueChange(); </span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">//void          OnValueSetfocus(); </span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">//void          OnValueKillfocus(); </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a5e2fb59204d06a3956224515ea661722">   46</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_number_field_dialog.html#a5e2fb59204d06a3956224515ea661722">OnValueCheckValue</a>(); </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a6532f62999aa822e999e23f1a412cbe8">   47</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_number_field_dialog.html#a6532f62999aa822e999e23f1a412cbe8">OnOKSelect</a>(); </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a4d22021d5e0f40577bab7212f243aa10">   48</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_number_field_dialog.html#a4d22021d5e0f40577bab7212f243aa10">OnCloseSelect</a>(); </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a44db73b3184013f3fb0ebcd785f504cc">   49</a></span>    <span class="keywordtype">void</span>        <a class="code hl_function" href="class_c_number_field_dialog.html#a44db73b3184013f3fb0ebcd785f504cc">SetMin</a>(<span class="keywordtype">double</span> nMin){ <a class="code hl_variable" href="class_c_number_field_dialog.html#a71e67c11f5685881e2121eb1d7cfca8d">m_nMin</a> = nMin; <a class="code hl_variable" href="class_c_number_field_dialog.html#a69a85943eef93b0cd3e86687bb0875eb">m_bHasMin</a> = <span class="keyword">true</span>;}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a303b790b352338c092ca798f12f6b08d">   50</a></span>    <span class="keywordtype">void</span>        <a class="code hl_function" href="class_c_number_field_dialog.html#a303b790b352338c092ca798f12f6b08d">SetMax</a>(<span class="keywordtype">double</span> nMax){ <a class="code hl_variable" href="class_c_number_field_dialog.html#a3b95d8ae39dd8ddb2cf8e8c22dff98df">m_nMax</a> = nMax; <a class="code hl_variable" href="class_c_number_field_dialog.html#a7bf31085542d2a1baef9a087a218226a">m_bHasMax</a> = <span class="keyword">true</span>;}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a6a049f25bac522c7157cbcc4cdb3807d">   51</a></span>    CString     <a class="code hl_function" href="class_c_number_field_dialog.html#a6a049f25bac522c7157cbcc4cdb3807d">GetText</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a9cda3ffc1ec5201c35c9c3ee5ddb30ba">   53</a></span>    <a class="code hl_function" href="class_c_number_field_dialog.html#a9cda3ffc1ec5201c35c9c3ee5ddb30ba">CNumberFieldDialog</a>(CWnd *pParent, CString szValueName = _T(<span class="stringliteral">&quot;Value&quot;</span>), CString szTitle = _T(<span class="stringliteral">&quot;Input Number&quot;</span>));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a149c82d3b10e04557153e40b4e70fb13">   54</a></span>    <a class="code hl_function" href="class_c_number_field_dialog.html#a149c82d3b10e04557153e40b4e70fb13">~CNumberFieldDialog</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#ae2af63b63fb8c59b7fb8aea9e12ba6e0">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_number_field_dialog.html#ae2af63b63fb8c59b7fb8aea9e12ba6e0">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#af7f34c60f9ac780c222d0293eab235f5">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_number_field_dialog.html#af7f34c60f9ac780c222d0293eab235f5">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a78b9b9f24ad33bd926d463a44f24c57c">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a78b9b9f24ad33bd926d463a44f24c57c">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#af3ce5b3f12ab4caf4fbd3fe38da228ca">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_number_field_dialog.html#af3ce5b3f12ab4caf4fbd3fe38da228ca">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a62a6549316b960df3936c21021fd6db1">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a62a6549316b960df3936c21021fd6db1">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a78bb42ad68066fc565db30ea45efe108">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a78bb42ad68066fc565db30ea45efe108">GetScreenToData</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#ad2a19cc2cd5bd9be1e005066e0b9d80c">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_number_field_dialog.html#ad2a19cc2cd5bd9be1e005066e0b9d80c">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a2117e190daa28b1911c6b31b7b74e176">   62</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a2117e190daa28b1911c6b31b7b74e176">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a458ebc14f9ff6a85299071fe96515aa3">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a458ebc14f9ff6a85299071fe96515aa3">OnAddNumberFieldDialog</a>(); </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a249d6f799ecb62444c90eda809dde7d8">   64</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a249d6f799ecb62444c90eda809dde7d8">OnEditNumberFieldDialog</a>(); </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a9b9782a67c77c8dda9dc451948a627ba">   65</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a9b9782a67c77c8dda9dc451948a627ba">OnDeleteNumberFieldDialog</a>(); </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#acd8aa6dbd4172cd05a8e1cdf2fa913df">   66</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_number_field_dialog.html#acd8aa6dbd4172cd05a8e1cdf2fa913df">OnSaveNumberFieldDialog</a>(); </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a4813446a58644d4f4890b7892fa9b384">   67</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a4813446a58644d4f4890b7892fa9b384">OnCancelNumberFieldDialog</a>(); </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_number_field_dialog.html#a716d3cd5b001d782ac662132c8828da7">   68</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_number_field_dialog.html#a716d3cd5b001d782ac662132c8828da7">OnNumberFieldDialogListLoadData</a>(); </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a02b291350053e9d2f0e37ebdd791ed2b"><div class="ttname"><a href="class_c_number_field_dialog.html#a02b291350053e9d2f0e37ebdd791ed2b">CNumberFieldDialog::m_wndOK</a></div><div class="ttdeci">CGuiButton m_wndOK</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:40</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a0b740d87ed159d3cde3fa20cc0bb7f78"><div class="ttname"><a href="class_c_number_field_dialog.html#a0b740d87ed159d3cde3fa20cc0bb7f78">CNumberFieldDialog::m_szTitle</a></div><div class="ttdeci">CString m_szTitle</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:32</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a149c82d3b10e04557153e40b4e70fb13"><div class="ttname"><a href="class_c_number_field_dialog.html#a149c82d3b10e04557153e40b4e70fb13">CNumberFieldDialog::~CNumberFieldDialog</a></div><div class="ttdeci">~CNumberFieldDialog()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a2117e190daa28b1911c6b31b7b74e176"><div class="ttname"><a href="class_c_number_field_dialog.html#a2117e190daa28b1911c6b31b7b74e176">CNumberFieldDialog::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a249d6f799ecb62444c90eda809dde7d8"><div class="ttname"><a href="class_c_number_field_dialog.html#a249d6f799ecb62444c90eda809dde7d8">CNumberFieldDialog::OnEditNumberFieldDialog</a></div><div class="ttdeci">int OnEditNumberFieldDialog()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a303b790b352338c092ca798f12f6b08d"><div class="ttname"><a href="class_c_number_field_dialog.html#a303b790b352338c092ca798f12f6b08d">CNumberFieldDialog::SetMax</a></div><div class="ttdeci">void SetMax(double nMax)</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:50</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a31e62cd198025561b06249c6c084b4c1"><div class="ttname"><a href="class_c_number_field_dialog.html#a31e62cd198025561b06249c6c084b4c1">CNumberFieldDialog::m_wndValueLabel</a></div><div class="ttdeci">CGuiLabel m_wndValueLabel</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:38</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a3b95d8ae39dd8ddb2cf8e8c22dff98df"><div class="ttname"><a href="class_c_number_field_dialog.html#a3b95d8ae39dd8ddb2cf8e8c22dff98df">CNumberFieldDialog::m_nMax</a></div><div class="ttdeci">double m_nMax</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:33</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a44db73b3184013f3fb0ebcd785f504cc"><div class="ttname"><a href="class_c_number_field_dialog.html#a44db73b3184013f3fb0ebcd785f504cc">CNumberFieldDialog::SetMin</a></div><div class="ttdeci">void SetMin(double nMin)</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:49</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a458ebc14f9ff6a85299071fe96515aa3"><div class="ttname"><a href="class_c_number_field_dialog.html#a458ebc14f9ff6a85299071fe96515aa3">CNumberFieldDialog::OnAddNumberFieldDialog</a></div><div class="ttdeci">int OnAddNumberFieldDialog()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a4813446a58644d4f4890b7892fa9b384"><div class="ttname"><a href="class_c_number_field_dialog.html#a4813446a58644d4f4890b7892fa9b384">CNumberFieldDialog::OnCancelNumberFieldDialog</a></div><div class="ttdeci">int OnCancelNumberFieldDialog()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a4d22021d5e0f40577bab7212f243aa10"><div class="ttname"><a href="class_c_number_field_dialog.html#a4d22021d5e0f40577bab7212f243aa10">CNumberFieldDialog::OnCloseSelect</a></div><div class="ttdeci">void OnCloseSelect()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a5e2fb59204d06a3956224515ea661722"><div class="ttname"><a href="class_c_number_field_dialog.html#a5e2fb59204d06a3956224515ea661722">CNumberFieldDialog::OnValueCheckValue</a></div><div class="ttdeci">int OnValueCheckValue()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a62a6549316b960df3936c21021fd6db1"><div class="ttname"><a href="class_c_number_field_dialog.html#a62a6549316b960df3936c21021fd6db1">CNumberFieldDialog::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a6532f62999aa822e999e23f1a412cbe8"><div class="ttname"><a href="class_c_number_field_dialog.html#a6532f62999aa822e999e23f1a412cbe8">CNumberFieldDialog::OnOKSelect</a></div><div class="ttdeci">void OnOKSelect()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a69a85943eef93b0cd3e86687bb0875eb"><div class="ttname"><a href="class_c_number_field_dialog.html#a69a85943eef93b0cd3e86687bb0875eb">CNumberFieldDialog::m_bHasMin</a></div><div class="ttdeci">bool m_bHasMin</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:34</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a6a049f25bac522c7157cbcc4cdb3807d"><div class="ttname"><a href="class_c_number_field_dialog.html#a6a049f25bac522c7157cbcc4cdb3807d">CNumberFieldDialog::GetText</a></div><div class="ttdeci">CString GetText()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a716d3cd5b001d782ac662132c8828da7"><div class="ttname"><a href="class_c_number_field_dialog.html#a716d3cd5b001d782ac662132c8828da7">CNumberFieldDialog::OnNumberFieldDialogListLoadData</a></div><div class="ttdeci">int OnNumberFieldDialogListLoadData()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a71e67c11f5685881e2121eb1d7cfca8d"><div class="ttname"><a href="class_c_number_field_dialog.html#a71e67c11f5685881e2121eb1d7cfca8d">CNumberFieldDialog::m_nMin</a></div><div class="ttdeci">double m_nMin</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:33</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a78b9b9f24ad33bd926d463a44f24c57c"><div class="ttname"><a href="class_c_number_field_dialog.html#a78b9b9f24ad33bd926d463a44f24c57c">CNumberFieldDialog::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a78bb42ad68066fc565db30ea45efe108"><div class="ttname"><a href="class_c_number_field_dialog.html#a78bb42ad68066fc565db30ea45efe108">CNumberFieldDialog::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a7bf31085542d2a1baef9a087a218226a"><div class="ttname"><a href="class_c_number_field_dialog.html#a7bf31085542d2a1baef9a087a218226a">CNumberFieldDialog::m_bHasMax</a></div><div class="ttdeci">bool m_bHasMax</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:35</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a99569e7ce3005618544ad0f7f419b355"><div class="ttname"><a href="class_c_number_field_dialog.html#a99569e7ce3005618544ad0f7f419b355">CNumberFieldDialog::m_nValue</a></div><div class="ttdeci">double m_nValue</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:42</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a9b9782a67c77c8dda9dc451948a627ba"><div class="ttname"><a href="class_c_number_field_dialog.html#a9b9782a67c77c8dda9dc451948a627ba">CNumberFieldDialog::OnDeleteNumberFieldDialog</a></div><div class="ttdeci">int OnDeleteNumberFieldDialog()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_a9cda3ffc1ec5201c35c9c3ee5ddb30ba"><div class="ttname"><a href="class_c_number_field_dialog.html#a9cda3ffc1ec5201c35c9c3ee5ddb30ba">CNumberFieldDialog::CNumberFieldDialog</a></div><div class="ttdeci">CNumberFieldDialog(CWnd *pParent, CString szValueName=_T(&quot;Value&quot;), CString szTitle=_T(&quot;Input Number&quot;))</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_ac2d4e7d45712ac5259fcc100e6082374"><div class="ttname"><a href="class_c_number_field_dialog.html#ac2d4e7d45712ac5259fcc100e6082374">CNumberFieldDialog::m_wndNumberFieldGroupBox</a></div><div class="ttdeci">CGuiGroupBox m_wndNumberFieldGroupBox</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:37</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_acd8aa6dbd4172cd05a8e1cdf2fa913df"><div class="ttname"><a href="class_c_number_field_dialog.html#acd8aa6dbd4172cd05a8e1cdf2fa913df">CNumberFieldDialog::OnSaveNumberFieldDialog</a></div><div class="ttdeci">int OnSaveNumberFieldDialog()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_ad2a19cc2cd5bd9be1e005066e0b9d80c"><div class="ttname"><a href="class_c_number_field_dialog.html#ad2a19cc2cd5bd9be1e005066e0b9d80c">CNumberFieldDialog::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_ae2af63b63fb8c59b7fb8aea9e12ba6e0"><div class="ttname"><a href="class_c_number_field_dialog.html#ae2af63b63fb8c59b7fb8aea9e12ba6e0">CNumberFieldDialog::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_ae43d4959dd6bdb8e3c360d9fa494f65e"><div class="ttname"><a href="class_c_number_field_dialog.html#ae43d4959dd6bdb8e3c360d9fa494f65e">CNumberFieldDialog::m_wndClose</a></div><div class="ttdeci">CGuiButton m_wndClose</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:41</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_af2bf9b9979d5ed295d92830bf7972519"><div class="ttname"><a href="class_c_number_field_dialog.html#af2bf9b9979d5ed295d92830bf7972519">CNumberFieldDialog::m_wndValue</a></div><div class="ttdeci">CGuiNumberCtrl m_wndValue</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:39</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_af3ce5b3f12ab4caf4fbd3fe38da228ca"><div class="ttname"><a href="class_c_number_field_dialog.html#af3ce5b3f12ab4caf4fbd3fe38da228ca">CNumberFieldDialog::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_af7f34c60f9ac780c222d0293eab235f5"><div class="ttname"><a href="class_c_number_field_dialog.html#af7f34c60f9ac780c222d0293eab235f5">CNumberFieldDialog::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_number_field_dialog_html_afa6a3530e4a93122988fd2aabc65afea"><div class="ttname"><a href="class_c_number_field_dialog.html#afa6a3530e4a93122988fd2aabc65afea">CNumberFieldDialog::m_szValueName</a></div><div class="ttdeci">CString m_szValueName</div><div class="ttdef"><b>Definition</b> NumberFieldDialog.h:32</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_bf016c3c43d37998710d5d1e08bd38a2.html">VIMESCORE_E10</a></li><li class="navelem"><a href="_number_field_dialog_8h.html">NumberFieldDialog.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

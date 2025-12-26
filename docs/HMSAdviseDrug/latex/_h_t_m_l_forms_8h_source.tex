@@ -1,0 +1,331 @@
+\doxysection{HTMLForms.\+h}
+\hypertarget{_h_t_m_l_forms_8h_source}{}\label{_h_t_m_l_forms_8h_source}\index{Include/HMSAdviseDrug/HTMLForms.h@{Include/HMSAdviseDrug/HTMLForms.h}}
+\mbox{\hyperlink{_h_t_m_l_forms_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HTMLFORMS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HTMLFORMS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmprint.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_behavior.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_dom.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}htmlayout/behaviors/notifications.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}htmlayout/value.h"{}}\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_dom.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_value.hpp"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_aux.h"{}}\ \textcolor{comment}{//\ utf8\ }}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}HTMLayoutCtrl.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <afxtempl.h>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ namespace\ }htmlayout;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\#include\ "{}HTMLForms.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//class\ CHTMDialog:\ public\ CGuiDialog\{}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//public:}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ \ CHTMLForms\ m\_forms;}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ \ CHTMDialog(CWnd\ *pParent):\ CGuiDialog(pParent)\{\};}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ \ \string~CHTMDialog()\{\};}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ \ void\ OnCreateComponents()}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \{}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ \ \ \ \ m\_forms.Create(WS\_CHILD|WS\_VISIBLE,\ CRect(5,\ 5,\ 600,\ 480),\ this,\ 0);}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ \ \ \ \ \ m\_forms.Load(L"{}C:\(\backslash\)\(\backslash\)Temp\(\backslash\)\(\backslash\)Phieuchidingcolistin.html"{});}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ \ \ \ \ \ }}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ \ \}}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ \ BOOL\ PreTranslateMessage(MSG\ *pMsg)}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ \ \{}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ \ \ \ \ return\ CDialog::PreTranslateMessage(pMsg);}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ \ \}}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ }}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\};}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ CHTMLForms}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_option_item_a228f33017760a4254dfdaab547ecbc0f}{OptionItem}}\{}
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_option_item_a228f33017760a4254dfdaab547ecbc0f}{OptionItem}}(CString\ szId,\ CString\ szText,\ \textcolor{keywordtype}{bool}\ isSelected=\textcolor{keyword}{false}):}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \mbox{\hyperlink{class_option_item_a8ec35b9fcf5d995a2d57418eae51abf9}{m\_bSelected}}(isSelected),\ \mbox{\hyperlink{class_option_item_a5bf2640cf462d0a6258b491ea28ea077}{m\_szId}}(szId),\ \mbox{\hyperlink{class_option_item_acd210164d82a8bf70c1f39df1a8eea84}{m\_szText}}(szText)\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_option_item_ac4052caa12a8e6ad75a63341b64aa229}{\string~OptionItem}}()\{\}}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \mbox{\hyperlink{class_option_item_a5bf2640cf462d0a6258b491ea28ea077}{m\_szId}};}
+\DoxyCodeLine{00058\ \ \ \ \ CString\ \mbox{\hyperlink{class_option_item_acd210164d82a8bf70c1f39df1a8eea84}{m\_szText}};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_option_item_a8ec35b9fcf5d995a2d57418eae51abf9}{m\_bSelected}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_option_list_ae963c31330b24a2ead6304edd2cb0755}{OptionList}}\{}
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ CArray<OptionItem*,\ OptionItem*>\ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}};}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_option_list_ae963c31330b24a2ead6304edd2cb0755}{OptionList}}()\{}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_option_list_a482dbac83793c511e7594e2f33401658}{\string~OptionList}}()\{\}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_option_list_a31be914878a304c0a37bd3aad567f064}{Add}}(\mbox{\hyperlink{class_option_item}{OptionItem}}*\ newItem)}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}}.Add(newItem);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_option_list_a570868875694b29f90137194da1bf548}{Remove}}(\textcolor{keywordtype}{int}\ nIndex)}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}}.RemoveAt(nIndex);}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_option_list_af12199b4f8f771d0b53e9762f5749a67}{RemoveAll}}()}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =0;\ i\ <\ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}}.GetCount();\ i++)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_option_item}{OptionItem}}*\ o\ =\ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}}[i];}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ o;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}}.RemoveAll();}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_option_item}{OptionItem}}*\ \mbox{\hyperlink{class_option_list_a24e5158a3b501cc56806a33efcf02c4d}{GetAt}}(\textcolor{keywordtype}{int}\ nIndex)}
+\DoxyCodeLine{00088\ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}}[nIndex];}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_option_list_a640f8b9f668865f5f747c9bb58c26bf7}{GetCount}}()\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_option_list_af74dfd18b2ca3066d7423b84928c458e}{m\_items}}.GetCount();}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_h_t_m_form_data_a5587b11690ea2a896d2618d151a37ed8}{tagHTMFormData}}\{}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_ab0c2d3483d97a308269afb77722cb23e}{m\_nPatientNo}};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a0d48a435455f47e969f0a461a6a62242}{m\_nDocumentNo}};}
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a10a1b45ace59a8964b5503e54c20ded9}{m\_szDeptID}};}
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_accfa8e131ec9baff1be3dcbf0be11227}{m\_szRecordNo}};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_aa23fcf9b7cf63dd3bc686ec5c01b2089}{m\_nRefIdx}};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a917ca770acc7c7b0de7cb7d295f70f34}{m\_nTreatTime}};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a7c6d9d93dca8ff206b2f3388aa4b324b}{m\_nRoomID}};}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a0058660b70c504510e81c21a56989f9a}{m\_nOrderId}};}
+\DoxyCodeLine{00106\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a6fdc3f74b1b95b3280440fbba35c1cc6}{m\_szReference}};}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a5587b11690ea2a896d2618d151a37ed8}{tagHTMFormData}}()\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_ab0c2d3483d97a308269afb77722cb23e}{m\_nPatientNo}}\ =\ 0;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a0d48a435455f47e969f0a461a6a62242}{m\_nDocumentNo}}\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_aa23fcf9b7cf63dd3bc686ec5c01b2089}{m\_nRefIdx}}\ =\ 0;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a917ca770acc7c7b0de7cb7d295f70f34}{m\_nTreatTime}}\ =\ 0;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a0058660b70c504510e81c21a56989f9a}{m\_nOrderId}}\ =\ 0;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a7c6d9d93dca8ff206b2f3388aa4b324b}{m\_nRoomID}}\ =\ 0;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a10a1b45ace59a8964b5503e54c20ded9}{m\_szDeptID}}.Empty();}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_a6fdc3f74b1b95b3280440fbba35c1cc6}{m\_szReference}}.Empty();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtag_h_t_m_form_data_accfa8e131ec9baff1be3dcbf0be11227}{m\_szRecordNo}}.Empty();}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \}\ \mbox{\hyperlink{_h_t_m_l_forms_8h_ad2e93865acdc76afcba73960519bdd28}{HTMFormData}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{class\ \ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a80f864a810d647a8e716610ceb2be2e5}{CHTMLForms}}\ :}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#if\ (\_MSC\_VER\ >\ 1500)}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{public}\ CHTMLayoutCtrl}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{public}\ CView,}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{public}\ htmlayout::event\_handler}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00128\ \ \ \ \ }
+\DoxyCodeLine{00129\ \{}
+\DoxyCodeLine{00130\ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{class_c_h_t_m_l_forms_a80f864a810d647a8e716610ceb2be2e5}{CHTMLForms}})}
+\DoxyCodeLine{00131\ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ PrintEx*\ \mbox{\hyperlink{class_c_h_t_m_l_forms_adeb9de1ac0455e119b05fcf5c6232a90}{m\_pPrinter}};\ \textcolor{comment}{//HTMLLayout\ print\ manager}}
+\DoxyCodeLine{00133\ \ \ CRect\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a16f3b0f019d77b23ea9f4beae65d3878}{m\_rcPrintArea}};\ \textcolor{comment}{//print\ area\ in\ printer\ device\ units}}
+\DoxyCodeLine{00134\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a6526985bdc9e635b5f45f3f0898dd4d6}{m\_scaled\_width}};\ \ \textcolor{comment}{//scaled\ width\ of\ the\ print\ area\ for\ 1:1\ scale}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a97a4936b1562aa50920381d8079ff218}{m\_margin\_left}};\ \textcolor{comment}{//page\ margins\ in\ inches}}
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a368e4a7b8307c5d7436b171064340cd8}{m\_margin\_top}};}
+\DoxyCodeLine{00138\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ac037130ddade8aa2a60c47d295b669fd}{m\_margin\_right}};}
+\DoxyCodeLine{00139\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a4fc79e64d5d5755f60b63ad8df929530}{m\_margin\_bottom}};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ CSize\ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_ad3778edc942922be3e02fe90e19ff6c1}{m\_measured}};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ LPCBYTE\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a8450acb6b02947d015ee783389d594ef}{m\_pHtmlBuffer}};}
+\DoxyCodeLine{00144\ \ \ \ \ DWORD\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a2693b0f5299fa18fb174086293b33eb0}{m\_nHtmlSize}};}
+\DoxyCodeLine{00145\ \ \ \ \ named\_values*\ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a7f2e57a2366b04a333991b47bdacc656}{m\_pvalues}};}
+\DoxyCodeLine{00146\ \ \ \ \ json::\textcolor{keywordtype}{string}\ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a3baeb78e008472d0f8e8b2b0df1e6b5d}{m\_base\_url}};}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_aefa95aa6c97f0dc2eea631aa56b21ce4}{m\_return\_id}};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a9e35a9fdd513505879e16da010c39673}{m\_szHtmlFile}};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \textcolor{comment}{//Readonly\ fields}}
+\DoxyCodeLine{00152\ \ \ \ \ CStringArray\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a7c6185c6a9504b917285ac3b90791b99}{m\_ROFields}};}
+\DoxyCodeLine{00153\ \ \ \ \ CMap<CString,\ LPCTSTR,\ \mbox{\hyperlink{class_option_list}{OptionList}}*,\ \mbox{\hyperlink{class_option_list}{OptionList}}*>\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a53898936881d78793850423cbdf11697}{m\_options}};}
+\DoxyCodeLine{00154\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ CString>\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a2eb5f9fb78072dd67130645df063b701}{m\_data}};}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//Tên\ view\ cần\ load\ dữ\ liệu}}
+\DoxyCodeLine{00156\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a345a452702e6aca29b9fee3c724a4f5e}{m\_szTableView}};}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//Tên\ bảng\ cần\ lưu\ trữ\ dữ\ liệu}}
+\DoxyCodeLine{00158\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_ae76070c8d1f4fdfe33563a4b277533ad}{m\_szTableName}};}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//Tên\ trường\ khoa\ chính}}
+\DoxyCodeLine{00160\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_ac459a45bded1ba851e55d5d004c24d0c}{m\_szFieldKey}};}
+\DoxyCodeLine{00161\ public:}
+\DoxyCodeLine{00162\ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//Mã\ duy\ nhất\ hệ\ thống\ cần\ lưu(\ docno,...)}}
+\DoxyCodeLine{00164\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_aa641e10f1ec3490a19f591ec1d3cf215}{m\_szUID}};}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//Thêm\ điều\ kiện\ where\ trong\ trường\ hợp\ cần\ thiết}}
+\DoxyCodeLine{00166\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_afd9a9ae0f6e2e985e0f48afee44c7fb6}{m\_szWhere}};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#if\ (\_MSC\_VER\ <\ 1500)}}
+\DoxyCodeLine{00169\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a76b30f61b7eec5c57f1e0772badb5443}{m\_szType}};}
+\DoxyCodeLine{00170\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a320d6e4ea98041efaaba5f24568f3ba8}{m\_szForm}};}
+\DoxyCodeLine{00171\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{_h_t_m_l_forms_8h_ad2e93865acdc76afcba73960519bdd28}{HTMFormData}}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a5772ec9e94b91ff78f260aaa88ff3fee}{m\_fKey}};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a80f864a810d647a8e716610ceb2be2e5}{CHTMLForms}}();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a1b06f722b28aff61bb44502b5cd81d4b}{\string~CHTMLForms}}();}
+\DoxyCodeLine{00177\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_aa2bd3db4adcd79028d8583461b8c0c1d}{Create}}(CWnd*\ pParent,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ w,\ \textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_adef284fdeede7a453a07594ca61a1eae}{OnDraw}}(CDC*\ pDC);\ \ \textcolor{comment}{//\ overridden\ to\ draw\ this\ view}}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a8e24417f3c3979f188302f730a5990cc}{OnPrepareDC}}(CDC*\ pDC,\ CPrintInfo*\ pInfo\ =\ NULL);}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a42e6f084b5ed0ab51891a6e40c9b8fdd}{OnInitializes}}();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a715331a9b8d99cbce84146f0d868baa9}{OnFilePrintPreview}}();}
+\DoxyCodeLine{00183\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ae6e76d45b615e42085100cad00b33abc}{OnFilePrint}}();}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a71f0a93164bcf798f671c42d13f520a7}{EnableControls}}(\textcolor{keywordtype}{bool}\ bFlag=\textcolor{keyword}{true});}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_afa79be45e610a70db3305285ae50e0ee}{EnableControl}}(LPCTSTR\ lpszName,\ \textcolor{keywordtype}{bool}\ bEnable);}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a12d7659a9ea28221192ac9373e55e89a}{UpdateData}}(\textcolor{keywordtype}{bool}\ baveAndValidate=\textcolor{keyword}{true});}
+\DoxyCodeLine{00187\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a0e7c8fcbfcb153667645e777abc55eed}{Save}}(LPCTSTR\ lpszFile);}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a5a68b256cebc58c32cd11a8a4e6771b7}{OnAfterLoadData}}();}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a2d32da9ee0e61493e159682042d59495}{SetValue}}(LPCTSTR\ lpszName,\ CString\ szValue);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a75841891659f2dfbbca933e6572c6c10}{GetValue}}(LPCTSTR\ lpszName,\ CString\&\ szValue);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{comment}{//Load\ file\ html}}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a8ddc74ae6a2d04f3ad821afe875bcf74}{Load}}(LPCTSTR\ lpszFile);}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//Ham\ load\ file\ va\ in(truong\ hop\ dac\ biet\ file\ in\ <>\ file\ view)}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a344ac90208df64d280bec988d153cc19}{PrintFromFile}}(LPCTSTR\ lpszFile);}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//Hàm\ get\ data\ từ\ server\ load\ lên\ form}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_ad5b77a48e6bc0e4685d93a9b4f3e2d66}{GetData}}();}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a13b7b15d6cc5487842778937399eb9d5}{GetData\_V1}}();}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_ae0424e65464a9657fac96ace5c1618d2}{GetData\_V2}}();}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//Ham\ lấy\ dữ\ liệu\ từ\ form\ lưu\ trữ\ lên\ server}}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a350764606d261f86a027b9899fbff856}{PostData}}();}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a1f683e397f99eab8cce4171fd1b6bbe8}{OnOptionSelect}}(\mbox{\hyperlink{class_option_item}{OptionItem}}*\ selected)\{\};}
+\DoxyCodeLine{00203\ \ \ \ \ dom::element\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a757ee89e4865cc9d5d31f7f65763ef3d}{Find}}(LPCTSTR\ lpszName);}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a4b1a67a24888188d4f76deb1214f65aa}{IsReadOnly}}(LPCTSTR\ szField);}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ab7ba1de24ee03c98ec332c9d99a3f88e}{GetHtmlResource}}(LPCTSTR\ pszName,\ \textcolor{comment}{/*out*/}PBYTE\&\ pb,\ \textcolor{comment}{/*out*/}DWORD\&\ cb,\ HMODULE\ hModule);}
+\DoxyCodeLine{00206\ \ \ \ \ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ae2a82c8f61b9e6ac31f7b65772be014a}{AddOption}}(LPCTSTR\ lpszName,\ \mbox{\hyperlink{class_option_list}{OptionList}}*\ options);}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_af9b7ae7957f7314a95d85af69f13d9b7}{InitSelection}}(LPCTSTR\ lpszName,\ LPCTSTR\ lpszSection);}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a7b4dde188eda918e4fd11d77f5ee880d}{SetTableName}}(LPCTSTR\ lpszTable);}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a6e3d65698aa3d4f4101d616967caca70}{SetType}}(LPCTSTR\ lpszType);}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ac34d85e6f78f47367235fc1a24c9e619}{GetEMRData}}(\textcolor{keywordtype}{long}\ nDocNo,\ \textcolor{keywordtype}{int}\ nTreatTime,\ CString\ szType,\ CString\ szName,\ CString\ szFilter,\ CString\&\ szData);}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00214\ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a6ca90f3b3e28034a0d554a85e8319887}{OnPreparePrinting}}(CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00215\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ade2d2ced28ce0a3e4ff48e840b13ae08}{OnBeginPrinting}}(CDC*\ pDC,\ CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00216\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a55d3b816217aef084ae1ee74cfdeefb4}{OnEndPrinting}}(CDC*\ pDC,\ CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00217\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a9dd82ce8ece7af27e09b94ef2b32c432}{OnPrint}}(CDC*\ pDC,\ CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00218\ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_l_forms_afffff81a43b9ebe6da59a48dc9e7ec7b}{on\_event}}(HELEMENT\ he,\ HELEMENT\ target,\ BEHAVIOR\_EVENTS\ type,\ UINT\_PTR\ reason\ );\ }
+\DoxyCodeLine{00219\ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ad1788ce2c7b4e5e73ba0bec9a8e582f4}{OnEvent}}(HELEMENT\ he,\ HELEMENT\ target,\ BEHAVIOR\_EVENTS\ type,\ UINT\_PTR\ reason\ );\ }
+\DoxyCodeLine{00220\ \ \ }
+\DoxyCodeLine{00221\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ae98ca8f78d36ffab7d18adc7e7b8bd96}{OnCreateOptions}}(CString\ szName)\{\}}
+\DoxyCodeLine{00222\ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ public:}
+\DoxyCodeLine{00225\ \ \ \textcolor{comment}{//\ Generic\ creator}}
+\DoxyCodeLine{00226\ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_l_forms_aa2bd3db4adcd79028d8583461b8c0c1d}{Create}}(DWORD\ dwStyle,\ const\ RECT\&\ rect,\ CWnd*\ pParentWnd,\ UINT\ nID);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \textcolor{comment}{//\ Generic\ creator\ allowing\ extended\ style\ bits}}
+\DoxyCodeLine{00229\ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a1496a4a80c27c3c032adb2fc00fba5ef}{CreateEx}}(DWORD\ dwExStyle,\ DWORD\ dwStyle,\ const\ RECT\&\ rect,}
+\DoxyCodeLine{00230\ \ \ \ \ CWnd*\ pParentWnd,\ UINT\ nID);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \textcolor{comment}{//\ Load\ html\ from\ memory\ buffer}}
+\DoxyCodeLine{00233\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ae3cb0a0930f3a315a4179d240f4ff4e8}{LoadHtml}}(LPCBYTE\ pb,\ DWORD\ nBytes);}
+\DoxyCodeLine{00234\ \ \ \textcolor{comment}{//\ load\ html\ from\ resource\ by\ name}}
+\DoxyCodeLine{00235\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ab35bb5ea90e835daa3ede1282c8e9a0d}{LoadHtmlResource}}(LPCTSTR\ pszName,\ HMODULE\ hModule\ =\ NULL);}
+\DoxyCodeLine{00236\ \ \ \textcolor{comment}{//\ load\ html\ from\ resource\ by\ id}}
+\DoxyCodeLine{00237\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ab35bb5ea90e835daa3ede1282c8e9a0d}{LoadHtmlResource}}(DWORD\ resID,\ HMODULE\ hModule\ =\ NULL);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \textcolor{comment}{//\ Overridables}}
+\DoxyCodeLine{00240\ \ \ }
+\DoxyCodeLine{00241\ \ \ \textcolor{comment}{//\ custom\ behavior\ notifications,\ see\ behaviors/notifications.h}}
+\DoxyCodeLine{00242\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ac8d167d61242285d139d5288882f75f0}{OnBehaviorNotify}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \textcolor{comment}{//\ non-\/HTMLayout\ notifications}}
+\DoxyCodeLine{00245\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ade2fec47fbc040cc3394e6c1d7ea2032}{OnHtmlGenericNotifications}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00246\ \ \ }
+\DoxyCodeLine{00247\ \ \ \textcolor{comment}{//\ create\ control\ for\ <INPUT>,\ <WIDGET>,\ <TEXTAREA>,\ <SELECT>}}
+\DoxyCodeLine{00248\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a06bc35c66a05e36170dbeb7c45afac3f}{OnCreateControl}}(LPNMHL\_CREATE\_CONTROL\ pnmcc);}
+\DoxyCodeLine{00249\ \ \ }
+\DoxyCodeLine{00250\ \ \ \textcolor{comment}{//\ post-\/control-\/creation\ notification.\ Good\ place\ to\ set\ additional\ styles\ for\ builtin\ controls}}
+\DoxyCodeLine{00251\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_aefe51469ce5813a0c647ce3292119872}{OnControlCreated}}(LPNMHL\_CREATE\_CONTROL\ pnmcc);}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \textcolor{comment}{//\ your\ chance\ to\ destroy\ child\ control\ in\ your\ own\ way.\ ::DestroyWindow\ used\ by\ default}}
+\DoxyCodeLine{00254\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a22310c22a037b532fc36f0f18e980ac6}{OnDestroyControl}}(LPNMHL\_DESTROY\_CONTROL\ pnmhl);}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \textcolor{comment}{//\ All\ hyperlink\ notifications\ generated\ by\ the\ hyperlink\ behavior.}}
+\DoxyCodeLine{00257\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a54545b58c49bc819ffcba46d40ef0a90}{OnHyperLink}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00258\ \ \ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a59049f78064db7272ca641a99ec55264}{OnHyperLinkEnter}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00259\ \ \ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_aeccc0a3dea87a958b7fba90cea7d2f2e}{OnHyperLinkLeave}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00260\ \ \ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a6faf9b11a3c838f65249ddee705eb0c9}{OnHyperLinkClick}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \textcolor{comment}{//\ Override\ this\ to\ load\ data\ (images\ or\ css\ sheets)\ from\ places\ other\ than\ this\ app\ resources.}}
+\DoxyCodeLine{00263\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a1369630093a6a1f02b93f14ac7af1d54}{OnLoadData}}(LPNMHL\_LOAD\_DATA\ pnmld);}
+\DoxyCodeLine{00264\ \ \ }
+\DoxyCodeLine{00265\ \ \ \textcolor{comment}{//\ Data\ arrived.\ Handle\ this\ if\ you\ want\ to\ store\ them\ somewhere\ for\ future\ use.}}
+\DoxyCodeLine{00266\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a32698b036d9a24f670d2c41f2f1c21ad}{OnDataLoaded}}(LPNMHL\_DATA\_LOADED\ pnmld);}
+\DoxyCodeLine{00267\ \ \ }
+\DoxyCodeLine{00268\ \ \ \textcolor{comment}{//\ All\ resources\ are\ in\ place.}}
+\DoxyCodeLine{00269\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a795d84e973699bf5bce1c8c598bb84a7}{OnDocumentComplete}}();}
+\DoxyCodeLine{00270\ \ \ }
+\DoxyCodeLine{00271\ \ \ \textcolor{comment}{//\ Attach\ your\ own\ behavior\ to\ the\ element}}
+\DoxyCodeLine{00272\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_aeed0a55e3fc6715eccb982aa75c9e687}{OnAttachBehavior}}(\ LPNMHL\_ATTACH\_BEHAVIOR\ lpab\ );}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \textcolor{comment}{//\ DOM\ helpers}}
+\DoxyCodeLine{00277\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a8730e0d392fcb914b6378a1b85f88792}{GetAttrInt}}(HELEMENT\ he,\ LPCSTR\ attrName,\ \textcolor{keywordtype}{int}\ defaultValue\ =\ 0);}
+\DoxyCodeLine{00278\ \ \ CString\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ac2a29bf46b1674e0ed92945b422ca605}{GetElementType}}(HELEMENT\ he);}
+\DoxyCodeLine{00279\ \ \ CString\ \mbox{\hyperlink{class_c_h_t_m_l_forms_abbf4880901401921d2ed9af5184bece4}{GetAttr}}(HELEMENT\ he,\ LPCSTR\ attrName);}
+\DoxyCodeLine{00280\ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a03ff2b1e9fd4e055dce011e92cdfbb94}{HasAttr}}(HELEMENT\ he,\ LPCSTR\ attrName);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ protected:}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \textcolor{comment}{//\ HTMLayout\ callback}}
+\DoxyCodeLine{00285\ \ \ static\ LRESULT\ CALLBACK\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a13303b9e6cf97ccabbb03ca1d2c3e2b5}{callback}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam,\ LPVOID\ vParam);}
+\DoxyCodeLine{00286\ \ \ }
+\DoxyCodeLine{00287\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_aa3bbbc1d86ee238ca93b65eaa1af46d5}{SetCallback}}();}
+\DoxyCodeLine{00288\ \ }
+\DoxyCodeLine{00289\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a9ebd8071868085820e9d1b60ed8d0ad0}{WindowProc}}(\ UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00290\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_aa7cb1d8c5b4b70942f87629ca2dd75e4}{OnHtmlNotify}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00291\ \ \ }
+\DoxyCodeLine{00292\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_aee76d81d1b3b1f8dcd691f1c494fca24}{OnHtmlCommand}}(NMHL\_COMMAND\_CLICK\ *pnmCommand)\ ;}
+\DoxyCodeLine{00293\ \ \ }
+\DoxyCodeLine{00294\ \ \ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a3103326f132116cf80328269ed1b8787}{LoadResourceData}}(LPNMHL\_LOAD\_DATA\ pnmld);}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ }
+\DoxyCodeLine{00297\ \ \ virtual\ BOOL\ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_aa74943573cb838b0844bb92bcff2fcbd}{handle\_event}}\ (HELEMENT\ he,\ BEHAVIOR\_EVENT\_PARAMS\&\ params\ )\ ;}
+\DoxyCodeLine{00298\ \ \ virtual\ BOOL\ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a3fecf6c2d066b4019ca89931a5314204}{handle\_key}}\ \ \ \ (HELEMENT\ he,\ KEY\_PARAMS\&\ params\ )\ ;}
+\DoxyCodeLine{00299\ \ \ virtual\ BOOL\ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a9312079b3f5e00e5736b76d31921cffb}{handle\_mouse}}\ \ (HELEMENT\ he,\ MOUSE\_PARAMS\&\ params\ )\ ;}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a86065f7ca1828d8b036ca21c3c5b8c71}{OnElementEvent}}(dom::element\ el);}
+\DoxyCodeLine{00302\ \ \ }
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00304\ public:}
+\DoxyCodeLine{00305\ \ \ \ \ HELEMENT\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_l_forms_a8e65a0f65ee19489274f7ceeba26ce69}{GetRootElement}}();}
+\DoxyCodeLine{00306\ \ \ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_l_forms_ad4cc68cb41365e9d8eecad9511fdcdd1}{PreTranslateMessage}}(\ MSG*\ pMsg\ );}
+\DoxyCodeLine{00307\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a491d4428b69667c83639a79a8fbd3200}{OnCreate}}(LPCREATESTRUCT\ lpCreateStruct);}
+\DoxyCodeLine{00308\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a861033b8408ac25927ec0ce508d00fe2}{OnDestroy}}();}
+\DoxyCodeLine{00309\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_l_forms_a83da9c1a100bffed843771d17353536c}{OnNcDestroy}}();}
+\DoxyCodeLine{00310\ \};}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \textcolor{comment}{//\ HTML\ command\ map\ macros:}}
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#define\ BEGIN\_HTML\_COMMAND\_MAP\ \(\backslash\)}}
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ virtual\ LRESULT\ OnHtmlCommand(NMHL\_COMMAND\_CLICK\ *pnmCommand)\ \{}}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#define\ ON\_HTML\_COMMAND(WStrHtmlElementId,\ Proc)\ \(\backslash\)}}
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ if(\ wcscmp(WStrHtmlElementId,pnmCommand-\/>szElementID)\ ==\ 0\ )\ \(\backslash\)}}
+\DoxyCodeLine{00318\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \{\ \ Proc();\ return\ 0;\ \}}}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ END\_HTML\_COMMAND\_MAP\ \(\backslash\)}}
+\DoxyCodeLine{00321\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ return\ 0;\ \}}}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}../lib/HTMLayout.lib"{})}}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

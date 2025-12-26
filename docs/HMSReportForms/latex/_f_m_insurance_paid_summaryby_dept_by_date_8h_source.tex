@@ -1,0 +1,180 @@
+\doxysection{FMInsurance\+Paid\+Summaryby\+Dept\+By\+Date.\+h}
+\hypertarget{_f_m_insurance_paid_summaryby_dept_by_date_8h_source}{}\label{_f_m_insurance_paid_summaryby_dept_by_date_8h_source}\index{Include/HMSReportForms/HospitalFee/FMInsurancePaidSummarybyDeptByDate.h@{Include/HMSReportForms/HospitalFee/FMInsurancePaidSummarybyDeptByDate.h}}
+\mbox{\hyperlink{_f_m_insurance_paid_summaryby_dept_by_date_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMInsurancePaidSummaryByDeptByDate\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMInsurancePaidSummaryByDeptByDate\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a1498681835b3c1090e3157250e678b60}{CFMInsurancePaidSummaryByDeptByDate}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ m\_mIndex;}}
+\DoxyCodeLine{00034\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_af183c22a822b5f6ab4286fda28707aa4}{m\_szWhere}};}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a4bb40f65af996f716a0790bf9330a5db}{m\_szCashIDS}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a5de53d3f7acdc5b19ab87bec4852304e}{m\_wndReportCondition}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ad4a17ef1105cfe8d81195d616f2a7603}{m\_wndYearLabel}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a52004051d7aa019bb3c6f7db5b2d1723}{m\_wndYear}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a48748bd2b36a61123e92386856f4f7e2}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a89be73033f7c4220d4c4f8ea63c9e046}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a9e6bb33e2a47c5e7ea5361e9212fdf64}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ad380a017bd2fb8aedcfaf033b0f71b84}{m\_wndFromDate}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a62ddb53c232490ca984d048ee5f8fbdb}{m\_wndToDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a497599727f96909fd6684dbe863b3e77}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a700a6b0785ffdaf3d5b9ee2f094cd9a9}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a6327599c4e90517b06bec78d876af155}{m\_wndClerk}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aaa79a36aa2f9712200eef3b256116718}{m\_wndOrderByLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a71117619c712ff34126f01b2e1de3f6e}{m\_wndOrderBy}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ac525741813e159228723b58e01be6f2c}{m\_wndDeptLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a00465b6eebfa2f41afae5991e43d3722}{m\_wndDept}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a517800a202bc682fab494aa6f49bf627}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a7712e7e7216f3eb644ddcea69b135bf4}{m\_wndStatus}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_afdaf9e4c6f2dab86138e690c220f2616}{m\_wndList}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a632a760e33f6ff1430f212f36c1e0059}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a144b3c3bfc755571aebab04d268b45b5}{m\_wndMarkAll}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ac6ad6dd950c57b523380488fde06d2fc}{m\_wndUnMark}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a69bc7ee3c14fe44577542003f4d07dc1}{m\_wndPrint}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a3e9b24a3110d752977a9bc5efe233dae}{m\_wndExport}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a9ada7a1bf4643ca7324e5eb51151ec9a}{m\_wndInpatient}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a79cbd02e1ab86773c5fdabe1fd64ade9}{m\_wndOutpatient}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a94a5e82256fc2547330ea08fcc129262}{m\_wndDeposit}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aec68e35ecfe59ecfffc3b617cda95148}{m\_wndAll}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a38d72a1e551f46e1e357aea44bd3f11b}{m\_wndSOD}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aac491528da3237fce30912616ca9acf4}{m\_wndObjectTypeLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a0a370206c17493716376f8a716d93c2a}{m\_wndObjectType}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a6a64066651373fccd336a583462dcb5a}{m\_wndSoldierWCard}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aa385e4445d95b4af916217539b9423b3}{m\_nYear}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ae63f358225bdccb366af050c00b0f8ed}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a2a4c149e6e9b1b373e7280a4a4d59cce}{m\_szFromDate}};}
+\DoxyCodeLine{00072\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a6b5cf0ef2c4b94e3c8e2b463f4d046cd}{m\_szToDate}};}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a6131b0e9e37aa4d06351eab733342507}{m\_szClerkKey}};}
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ad7bcdfa5982d3e00c65bde21e971fc81}{m\_szOrderByKey}};}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a7d4eb1a7bbbe910ea53bb155cd4b7c1e}{m\_szStatusKey}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_abe6da129f3a0420160949a3e0605fe6a}{m\_szDeptKey}};}
+\DoxyCodeLine{00077\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a2e5a6dfbab026bf97e9ae03bcc5b09f3}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00078\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a33b1470e4ed4153f96c5c88b30ca7994}{m\_bSOD}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_abea1e6ba6a676472f708731f3239ec7e}{m\_nPatientType}};}
+\DoxyCodeLine{00080\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aee0395a162159e2acdafc3cd51f556e5}{m\_bSoldierWCard}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a26146d33cc0e2200eba21b2aceb807c9}{m\_szObjectTypeKey}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_af7fd03922dbe203c653103501adbf5e0}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a2a1799ac7b845e6f3b79425addd768ed}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aa43872088b72df86e9684a0679e68ee6}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a48d4fd963bc33e34fba28de151edde82}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a35f11a01321d4727426b77b8003bed25}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ac4b18b9874cc049cfc9214743189c2f0}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a9ca6b9a41edc25ecb6525d01257ea24f}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ab61ad5d23eada0f6296f452d8f03ed00}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aaeed1ff3ff132398db60b6e01dbfa8a8}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a3e3d9258fb1a48ce7759250bbb0168a3}{OnOrderBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a44fe28fee8f470977c9556270b43fb06}{OnOrderBySelendok}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderBySetfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByKillfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ada3f06f2ab32153a5911269dc49734cd}{OnOrderByLoadData}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByAddNew();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a01417b2bf9ae3623149a3e6d89061a90}{OnDeptLoadData}}();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a47c181c05049d570e8ab01e715e45a6d}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a11819556a2a90312f9c5e6229eb73db4}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a71b0527d3912fdaab7102c5b30e5e49c}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a5396399f6fa1560f98119aa5231d7ade}{OnListLoadData}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ab927ba5f9aa1b2baf574492cae08f63a}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ac81b288df98fa9c5d13a414300453358}{OnListDblClick}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a7d95f7b81b056ebf17d97d240e5bf231}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a473ed08f3a6fe45dbc70838aa9c1b1f7}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_acd8cf2b0f48d91d29e8a7cbf59b7cde2}{OnSoldierWCardSelect}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aecaf713c605e390e01708a49a982aa05}{OnObjectTypeLoadData}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ad9f42531732e9f920c22a9137f836dda}{OnMarkAllSelect}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_abab95225fe9b3cc2d03b737997c05fd9}{OnUnMarkSelect}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a3bdc5e7daa3f619d7643f5a3fe91f233}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ab989a7701dbd6ea1291b4dcf830ed843}{OnExportSelect}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ae7dbce32db3aba119cf4527700dd8514}{OnExportDetailSelect}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ab9a2a3617600ec444aa6e24fee923006}{OnExportPatientList}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a75ba8548c3041fc7a327707873870d4f}{OnInpatientSelect}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a22c8235dd483839dd17299d6573d99da}{OnOutpatientSelect}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_afe6663b3644352002ea63603d588ab47}{OnDepositSelect}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a629cfee9788dad9ceaad738200a24688}{OnSODSelect}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a809c1b7bad8f76e6da4b6ac6f0d79a66}{OnAllSelect}}();\ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a43193e14227d7fb7532508248b09f003}{OnPrint1stver}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aae50004d89240132697051cdba0190af}{OnPrint2ndver}}();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ab6ef1c30a5a3331379b6e966fbea30fe}{GetQueryString}}();}
+\DoxyCodeLine{00144\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ad520647512f6ac76af99ad42dd895e40}{GetQueryString2}}();}
+\DoxyCodeLine{00145\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a074915d1464031830aa80a693eed9e81}{GetQueryString\_check}}();}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a1498681835b3c1090e3157250e678b60}{CFMInsurancePaidSummaryByDeptByDate}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_abcaea5f9cbef7edf53d0344bd13e5e46}{\string~CFMInsurancePaidSummaryByDeptByDate}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_afeef31452e9cde4da6830a55173a4d95}{OnCreateComponents}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aa23b8c0b8db4bbd2354a20104298e387}{OnInitializeComponents}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_af624ce9fd621b63547354dc936683c0e}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a97d1b735532ddffe1014521fa1036660}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_af090fa950d1bceba15a28506dbee5533}{GetDataToScreen}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aab805f12846319a06b6acc8969bbbc2c}{GetScreenToData}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a4065dc51e83cda785bce3c470fdb1aa2}{SetDefaultValues}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ab110e4d45986b631bbbfffc5d2814766}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a78fb55c94f93718e25024cb8fa692822}{OnAddFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a688469f7bd2e8f1a851b89c3b0ed0111}{OnEditFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aa1bdd7e6d48ed27adef2cffe79a3eeb2}{OnDeleteFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ae94a6fcf4eba6f6c3f5c911b915e4bd5}{OnSaveFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_aeb53328120606cb7a7d31d0af25a9c10}{OnCancelFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a7b08b6aecfea4efded389a5bf33826b6}{OnFMInsuranceReceiptSummaryListLoadData}}();}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ad61d9ef23c0104f6aa56d1f59c9ffd2b}{OnListCheckAllTYC}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a415184c2ecacd6f331103f1bf40f3c16}{OnListCheckAllPTTYC}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a5c5b88d209e4091894627c2d78d2d67d}{OnListCheckAllInvoice}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ad48b6bb012514c63657f6616b4a9e13e}{OnListCheckAllRefund}}();}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a28abb0454f002016f57a2a107ccacdcd}{OnListSearchItem}}();}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_ac0d6e52b71fcd868eff8a3266116c23f}{OnListCheckAllIns}}();}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a527c20e6446b9a0ced2e13ba20cd1e05}{OnListUnCheckAllIns}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a6d346be4b6f4ea1d94f2545999a87810}{OnListCheckAllSolder}}();}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_a1d20fed57738c91dc6138753fcb13920}{OnListUnCheckAllSolder}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_af5be9f96e5f15ceff1ed39c8ba3fa8d8}{OnListCheckAllInsSolder}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_paid_summary_by_dept_by_date_af5d4839fe06beb5f38d1231a6fe84a95}{OnListUnCheckAllInsSolder}}();}
+\DoxyCodeLine{00176\ \};}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

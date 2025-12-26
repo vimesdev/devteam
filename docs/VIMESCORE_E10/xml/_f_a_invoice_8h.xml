@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_f_a_invoice_8h" kind="file" language="C++">
+    <compoundname>FAInvoice.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiDialog.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includedby refid="_f_a_bank_statement_dialog_8h" local="yes">Include/VIMESCORE_E10/FABankStatementDialog.h</includedby>
+    <includedby refid="_f_a_cash_view_8h" local="yes">Include/VIMESCORE_E10/FACashView.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/FAInvoice.h</label>
+        <link refid="_f_a_invoice_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="3">
+        <label>GuiDialog.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Include/VIMESCORE_E10/FABankStatementDialog.h</label>
+        <link refid="_f_a_bank_statement_dialog_8h"/>
+      </node>
+      <node id="3">
+        <label>Include/VIMESCORE_E10/FACashView.h</label>
+        <link refid="_f_a_cash_view_8h"/>
+      </node>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/FAInvoice.h</label>
+        <link refid="_f_a_invoice_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_f_a_invoice" prot="public">CFAInvoice</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FAINVOICE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FAINVOICE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiDialog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_c_f_a_invoice" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_f_a_invoice_1a545d832c2a15d55e7ba93b2872d5032e" kindref="member">CFAInvoice</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiDialog{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="class_c_f_a_invoice_1a8a33b39829fc23b6f84e18e87169c748" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CArray&lt;CWnd*,<sp/>CWnd*&gt;<sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a8a33b39829fc23b6f84e18e87169c748" kindref="member">m_Buttons</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="class_c_f_a_invoice_1a8fad3c4a4ee85f7e8cb888e2513b5a93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a8fad3c4a4ee85f7e8cb888e2513b5a93" kindref="member">m_nInvoiceID</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_f_a_invoice_1a7264fb7cbc5914e37cb1d982bd60e330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a7264fb7cbc5914e37cb1d982bd60e330" kindref="member">m_szDocType</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_f_a_invoice_1acd859070f6b0a41f1f9d00889b828b61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1acd859070f6b0a41f1f9d00889b828b61" kindref="member">m_szStatus</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_c_f_a_invoice_1a10533014bad0c8c57d891dcc26edebcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CArray&lt;CWnd*,<sp/>CWnd*&gt;<sp/><ref refid="class_c_f_a_invoice_1a10533014bad0c8c57d891dcc26edebcb" kindref="member">m_sectionWnds</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_c_f_a_invoice_1a1e3ca18d2a4c97cffe74f868e3c35c28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CArray&lt;int,<sp/>int&gt;<sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a1e3ca18d2a4c97cffe74f868e3c35c28" kindref="member">m_sectionHeights</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="class_c_f_a_invoice_1acd1e3f1a145ca7a823bae109c4e0d61c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTabCtrl<sp/><ref refid="class_c_f_a_invoice_1acd1e3f1a145ca7a823bae109c4e0d61c" kindref="member">m_wndTab</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_c_f_a_invoice_1a4ca5cdd80d41ec81241f51243cfd850e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a4ca5cdd80d41ec81241f51243cfd850e" kindref="member">m_fa_invoiceTbl</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_f_a_invoice_1a8e411cebaebb1f3f65592a030909c602" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CRecord*<sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a8e411cebaebb1f3f65592a030909c602" kindref="member">m_rsInvoice</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_c_f_a_invoice_1a545d832c2a15d55e7ba93b2872d5032e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a545d832c2a15d55e7ba93b2872d5032e" kindref="member">CFAInvoice</ref>(CWnd<sp/>*pParent);</highlight></codeline>
+<codeline lineno="47" refid="class_c_f_a_invoice_1a7f4d1098f2c1294c4bcb81102a5fbce9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a7f4d1098f2c1294c4bcb81102a5fbce9" kindref="member">~CFAInvoice</ref>();</highlight></codeline>
+<codeline lineno="48" refid="class_c_f_a_invoice_1a8291c8f1f28da3caff31118d4831c456" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a8291c8f1f28da3caff31118d4831c456" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="49" refid="class_c_f_a_invoice_1a5c19cda689f7f809c9fe319303d63c07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a5c19cda689f7f809c9fe319303d63c07" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="50" refid="class_c_f_a_invoice_1a3aa5b1aa0bbe348baa9682155098e3e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a3aa5b1aa0bbe348baa9682155098e3e9" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="51" refid="class_c_f_a_invoice_1a95683e4c6212db388000bbf33da359f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a95683e4c6212db388000bbf33da359f1" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="52" refid="class_c_f_a_invoice_1a29090c11fcadb2e615d975e21645f1f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a29090c11fcadb2e615d975e21645f1f4" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="53" refid="class_c_f_a_invoice_1a812083a62310a944faa31492285a8431" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a812083a62310a944faa31492285a8431" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="54" refid="class_c_f_a_invoice_1a58e53e81a638425ddbe6a2c1b67312c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a58e53e81a638425ddbe6a2c1b67312c3" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="55" refid="class_c_f_a_invoice_1add02f110e202e4571aa8408c57733268" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1add02f110e202e4571aa8408c57733268" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="56" refid="class_c_f_a_invoice_1a0e4df1a083973495e584f8c6cd4a3a63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a0e4df1a083973495e584f8c6cd4a3a63" kindref="member">OnTabSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOld,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNew);<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_f_a_invoice_1ad3760523df37d4e3c9b32b830c97021c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1ad3760523df37d4e3c9b32b830c97021c" kindref="member">OnButtonClick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nIndex);</highlight></codeline>
+<codeline lineno="58" refid="class_c_f_a_invoice_1afdd050799b909a7317caa6c7e3899d42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1afdd050799b909a7317caa6c7e3899d42" kindref="member">OnAddFAInvoice</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_f_a_invoice_1a949af0c2089ed37a65d292eaf75b3ab2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a949af0c2089ed37a65d292eaf75b3ab2" kindref="member">OnEditFAInvoice</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_f_a_invoice_1a35ffc9752e68285106e32085b4d4ce2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a35ffc9752e68285106e32085b4d4ce2f" kindref="member">OnDeleteFAInvoice</ref>();<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_f_a_invoice_1ae05680ff2444c7dd91824eb698182ab0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1ae05680ff2444c7dd91824eb698182ab0" kindref="member">OnSaveFAInvoice</ref>();<sp/></highlight></codeline>
+<codeline lineno="62" refid="class_c_f_a_invoice_1a43899b3e67d1f51b4cf36f5cf0c42550" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a43899b3e67d1f51b4cf36f5cf0c42550" kindref="member">OnCancelFAInvoice</ref>();<sp/></highlight></codeline>
+<codeline lineno="63" refid="class_c_f_a_invoice_1a5a6e7181cc719f82f2e6a9639092bd60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a5a6e7181cc719f82f2e6a9639092bd60" kindref="member">OnFAInvoiceListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="class_c_f_a_invoice_1a525e98041421d046bc32e920cc90bbf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton*<sp/><ref refid="class_c_f_a_invoice_1a525e98041421d046bc32e920cc90bbf9" kindref="member">CreateButton</ref>(LPCTSTR<sp/>lpszCaption,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nWidth=80);</highlight></codeline>
+<codeline lineno="67" refid="class_c_f_a_invoice_1a37a298bdd96324832f8309d2dc6cc834" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton*<sp/><ref refid="class_c_f_a_invoice_1a37a298bdd96324832f8309d2dc6cc834" kindref="member">GetButton</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nIndex);</highlight></codeline>
+<codeline lineno="68" refid="class_c_f_a_invoice_1afbd1b9e708760756400ecf6d546e927d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1afbd1b9e708760756400ecf6d546e927d" kindref="member">RecalcLayout</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_f_a_invoice_1ae1c75fefe53073360ab34649a64d884c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1ae1c75fefe53073360ab34649a64d884c" kindref="member">OnButtonSelect</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_c_f_a_invoice_1a0b08bdeac7e5cc26d2ce1f95868ee411" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a0b08bdeac7e5cc26d2ce1f95868ee411" kindref="member">AddSection</ref>(CWnd<sp/>*pWnd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nHeight);</highlight></codeline>
+<codeline lineno="72" refid="class_c_f_a_invoice_1a6b09e0e665c13201c5a6d27a7f868c67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a6b09e0e665c13201c5a6d27a7f868c67" kindref="member">SetSectionHeight</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nIndex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>nHeight);</highlight></codeline>
+<codeline lineno="73" refid="class_c_f_a_invoice_1aa5dd26a352bcc5afe7b0aec9e3fa5c71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1aa5dd26a352bcc5afe7b0aec9e3fa5c71" kindref="member">GetInvoiceID</ref>();</highlight></codeline>
+<codeline lineno="74" refid="class_c_f_a_invoice_1a91f3a1632874d03e935882fece188f80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap*<sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a91f3a1632874d03e935882fece188f80" kindref="member">GetDbf</ref>();</highlight></codeline>
+<codeline lineno="75" refid="class_c_f_a_invoice_1a3fd68aac387a68870b490b69c06a4539" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a3fd68aac387a68870b490b69c06a4539" kindref="member">CreateNewInvoice</ref>();</highlight></codeline>
+<codeline lineno="76" refid="class_c_f_a_invoice_1a289de0ba6e88b95e89a0cd32ee1170ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a289de0ba6e88b95e89a0cd32ee1170ca" kindref="member">CancelInvoice</ref>();</highlight></codeline>
+<codeline lineno="77" refid="class_c_f_a_invoice_1a791127fd9084be7a0bfa81d8761cf072" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1a791127fd9084be7a0bfa81d8761cf072" kindref="member">LoadData</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nInvoiceID);</highlight></codeline>
+<codeline lineno="78" refid="class_c_f_a_invoice_1a652c219f9ef47b7c683f60ca2a9fe71c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_f_a_invoice_1a652c219f9ef47b7c683f60ca2a9fe71c" kindref="member">GetDocType</ref>();</highlight></codeline>
+<codeline lineno="79" refid="class_c_f_a_invoice_1a9a08a0b1bbc5710e75d45fff14b58a50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_f_a_invoice_1a9a08a0b1bbc5710e75d45fff14b58a50" kindref="member">GetPostedStatus</ref>();</highlight></codeline>
+<codeline lineno="80" refid="class_c_f_a_invoice_1acbd0c57b0894a3d243e1875a923dbf21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_f_a_invoice_1acbd0c57b0894a3d243e1875a923dbf21" kindref="member">UpdatePostedLabel</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>DECLARE_MESSAGE_MAP()</highlight></codeline>
+<codeline lineno="83" refid="class_c_f_a_invoice_1a74d05c8436e5cdd2c5ba20970da1ddb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>afx_msg<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_f_a_invoice_1a74d05c8436e5cdd2c5ba20970da1ddb2" kindref="member">OnSize</ref>(UINT<sp/>nType,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cy);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/FAInvoice.h"/>
+  </compounddef>
+</doxygen>

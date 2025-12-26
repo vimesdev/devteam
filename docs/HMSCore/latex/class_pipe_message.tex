@@ -1,0 +1,174 @@
+\doxysection{Pipe\+Message Class Tham chiếu}
+\hypertarget{class_pipe_message}{}\label{class_pipe_message}\index{PipeMessage@{PipeMessage}}
+
+
+Lớp đại diện cho message được truyền qua named pipe.  
+
+
+
+
+{\ttfamily \#include $<$Pipe\+Service.\+h$>$}
+
+\doxysubsubsection*{Các hàm thành viên Public}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pipe_message_afb2946d3d7ea62ad097a1adb150a67a8}{Pipe\+Message}} ()
+\item 
+\mbox{\hyperlink{class_pipe_message_a43be5399ecec9c51cff3045d3cafe0be}{Pipe\+Message}} (UINT message)
+\item 
+\mbox{\hyperlink{class_pipe_message_a0d303d64a00d6f7a9964f2e53ef84774}{\texorpdfstring{$\sim$}{\string~}\+Pipe\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_pipe_message_a166bab048e9631c240a7088233cf4e37}{Set\+Status}} (\mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d}{e\+Status}} status)
+\item 
+int \mbox{\hyperlink{class_pipe_message_a4d54da55daf9b28e1464cb4b34b965d8}{Get\+Status}} ()
+\item 
+void \mbox{\hyperlink{class_pipe_message_aa2ec32a7996b6a2ee8788c8d788c1402}{Set\+Message}} (UINT message)
+\item 
+UINT \mbox{\hyperlink{class_pipe_message_ab4f7c80bf8fe4d0dd0e866c792a3bbe0}{Get\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_pipe_message_a0289995f9fe89dab046ec9f1d8e3f763}{Set\+Data}} (const char \texorpdfstring{$\ast$}{*}data)
+\item 
+std\+::string \mbox{\hyperlink{class_pipe_message_aef7a1377062e0d295d3fc1949d6002f6}{Get\+Data}} ()
+\item 
+std\+::wstring \mbox{\hyperlink{class_pipe_message_a6bf5b7ad68565ba1aa8a692336f58e29}{To\+String}} ()
+\item 
+bool \mbox{\hyperlink{class_pipe_message_a3fcd31fa5d60569dd769ed2b3a71c666}{Parse}} (LPCTSTR lpsz\+Data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Các thuộc tính Public}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_pipe_message_ac46ef39892dfe462de8e42916aa9d03b}{m\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Dữ liệu của message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{các thuộc tính Protected}
+\begin{DoxyCompactItemize}
+\item 
+UINT \mbox{\hyperlink{class_pipe_message_ab62c4edfc0f7127ddef2564635969a1c}{m\+\_\+message}}
+\begin{DoxyCompactList}\small\item\em ID của message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pipe_message_a4c265cbf97770c2d7da9aee37b3af7ee}{m\+\_\+status}}
+\begin{DoxyCompactList}\small\item\em Trạng thái message (status\+\_\+ok, status\+\_\+error, status\+\_\+cancel). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Mô tả chi tiết}
+Lớp đại diện cho message được truyền qua named pipe. 
+
+Class này quản lý các message được gửi/nhận qua named pipe\+:
+\begin{DoxyItemize}
+\item Lưu trữ message ID và status
+\item Chứa dữ liệu dạng string
+\item Hỗ trợ parse và convert sang string 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_pipe_message_doc-constructors}
+\doxysubsection{Thông tin về Constructor và Destructor}
+\Hypertarget{class_pipe_message_afb2946d3d7ea62ad097a1adb150a67a8}\index{PipeMessage@{PipeMessage}!PipeMessage@{PipeMessage}}
+\index{PipeMessage@{PipeMessage}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{PipeMessage()}{PipeMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_pipe_message_afb2946d3d7ea62ad097a1adb150a67a8} 
+Pipe\+Message\+::\+Pipe\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_pipe_message_a43be5399ecec9c51cff3045d3cafe0be}\index{PipeMessage@{PipeMessage}!PipeMessage@{PipeMessage}}
+\index{PipeMessage@{PipeMessage}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{PipeMessage()}{PipeMessage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_pipe_message_a43be5399ecec9c51cff3045d3cafe0be} 
+Pipe\+Message\+::\+Pipe\+Message (\begin{DoxyParamCaption}\item[{UINT}]{message}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_pipe_message_a0d303d64a00d6f7a9964f2e53ef84774}\index{PipeMessage@{PipeMessage}!````~PipeMessage@{\texorpdfstring{$\sim$}{\string~}PipeMessage}}
+\index{````~PipeMessage@{\texorpdfstring{$\sim$}{\string~}PipeMessage}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PipeMessage()}{\string~PipeMessage()}}
+{\footnotesize\ttfamily \label{class_pipe_message_a0d303d64a00d6f7a9964f2e53ef84774} 
+Pipe\+Message\+::\texorpdfstring{$\sim$}{\string~}\+Pipe\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_pipe_message_doc-func-members}
+\doxysubsection{Thông tin về hàm thành viên}
+\Hypertarget{class_pipe_message_aef7a1377062e0d295d3fc1949d6002f6}\index{PipeMessage@{PipeMessage}!GetData@{GetData}}
+\index{GetData@{GetData}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{GetData()}{GetData()}}
+{\footnotesize\ttfamily \label{class_pipe_message_aef7a1377062e0d295d3fc1949d6002f6} 
+std\+::string Pipe\+Message\+::\+Get\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pipe_message_ab4f7c80bf8fe4d0dd0e866c792a3bbe0}\index{PipeMessage@{PipeMessage}!GetMessage@{GetMessage}}
+\index{GetMessage@{GetMessage}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{GetMessage()}{GetMessage()}}
+{\footnotesize\ttfamily \label{class_pipe_message_ab4f7c80bf8fe4d0dd0e866c792a3bbe0} 
+UINT Pipe\+Message\+::\+Get\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pipe_message_a4d54da55daf9b28e1464cb4b34b965d8}\index{PipeMessage@{PipeMessage}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{GetStatus()}{GetStatus()}}
+{\footnotesize\ttfamily \label{class_pipe_message_a4d54da55daf9b28e1464cb4b34b965d8} 
+int Pipe\+Message\+::\+Get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pipe_message_a3fcd31fa5d60569dd769ed2b3a71c666}\index{PipeMessage@{PipeMessage}!Parse@{Parse}}
+\index{Parse@{Parse}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{Parse()}{Parse()}}
+{\footnotesize\ttfamily \label{class_pipe_message_a3fcd31fa5d60569dd769ed2b3a71c666} 
+bool Pipe\+Message\+::\+Parse (\begin{DoxyParamCaption}\item[{LPCTSTR}]{lpsz\+Data}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_pipe_message_a0289995f9fe89dab046ec9f1d8e3f763}\index{PipeMessage@{PipeMessage}!SetData@{SetData}}
+\index{SetData@{SetData}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{SetData()}{SetData()}}
+{\footnotesize\ttfamily \label{class_pipe_message_a0289995f9fe89dab046ec9f1d8e3f763} 
+void Pipe\+Message\+::\+Set\+Data (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pipe_message_aa2ec32a7996b6a2ee8788c8d788c1402}\index{PipeMessage@{PipeMessage}!SetMessage@{SetMessage}}
+\index{SetMessage@{SetMessage}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{SetMessage()}{SetMessage()}}
+{\footnotesize\ttfamily \label{class_pipe_message_aa2ec32a7996b6a2ee8788c8d788c1402} 
+void Pipe\+Message\+::\+Set\+Message (\begin{DoxyParamCaption}\item[{UINT}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pipe_message_a166bab048e9631c240a7088233cf4e37}\index{PipeMessage@{PipeMessage}!SetStatus@{SetStatus}}
+\index{SetStatus@{SetStatus}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{SetStatus()}{SetStatus()}}
+{\footnotesize\ttfamily \label{class_pipe_message_a166bab048e9631c240a7088233cf4e37} 
+void Pipe\+Message\+::\+Set\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d}{e\+Status}}}]{status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pipe_message_a6bf5b7ad68565ba1aa8a692336f58e29}\index{PipeMessage@{PipeMessage}!ToString@{ToString}}
+\index{ToString@{ToString}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_pipe_message_a6bf5b7ad68565ba1aa8a692336f58e29} 
+std\+::wstring Pipe\+Message\+::\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_pipe_message_doc-variable-members}
+\doxysubsection{Thông tin về Member Data}
+\Hypertarget{class_pipe_message_ac46ef39892dfe462de8e42916aa9d03b}\index{PipeMessage@{PipeMessage}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \label{class_pipe_message_ac46ef39892dfe462de8e42916aa9d03b} 
+std\+::string Pipe\+Message\+::m\+\_\+data}
+
+
+
+Dữ liệu của message. 
+
+\Hypertarget{class_pipe_message_ab62c4edfc0f7127ddef2564635969a1c}\index{PipeMessage@{PipeMessage}!m\_message@{m\_message}}
+\index{m\_message@{m\_message}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{m\_message}{m\_message}}
+{\footnotesize\ttfamily \label{class_pipe_message_ab62c4edfc0f7127ddef2564635969a1c} 
+UINT Pipe\+Message\+::m\+\_\+message\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ID của message. 
+
+\Hypertarget{class_pipe_message_a4c265cbf97770c2d7da9aee37b3af7ee}\index{PipeMessage@{PipeMessage}!m\_status@{m\_status}}
+\index{m\_status@{m\_status}!PipeMessage@{PipeMessage}}
+\doxysubsubsection{\texorpdfstring{m\_status}{m\_status}}
+{\footnotesize\ttfamily \label{class_pipe_message_a4c265cbf97770c2d7da9aee37b3af7ee} 
+int Pipe\+Message\+::m\+\_\+status\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Trạng thái message (status\+\_\+ok, status\+\_\+error, status\+\_\+cancel). 
+
+
+
+Thông tin cho class được biên soạn từ các file sau đây\+:\begin{DoxyCompactItemize}
+\item 
+Include/\+HMSCore/\mbox{\hyperlink{_pipe_service_8h}{Pipe\+Service.\+h}}\end{DoxyCompactItemize}

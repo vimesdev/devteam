@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_contract_status_8h" kind="file" language="C++">
+    <compoundname>AdContractStatus.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_ad_contract_status_popup_8h" local="yes">AdContractStatusPopup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdContractStatus.h</label>
+        <link refid="_ad_contract_status_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AdContractStatusPopup.h</label>
+        <link refid="_ad_contract_status_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_ad_contract_status" prot="public">CAdContractStatus</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADCONTRACTSTATUS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADCONTRACTSTATUS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ad_contract_status_popup_8h" kindref="compound">AdContractStatusPopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_ad_contract_status" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_ad_contract_status_1aca0e83b004788578648ab0787a90cdda" kindref="member">CAdContractStatus</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_contract_status_1a6ff0a9f92d5e955435a75571eacf9c1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_popup" kindref="compound">CAdContractStatusPopup</ref><sp/><sp/><ref refid="class_c_ad_contract_status_1a6ff0a9f92d5e955435a75571eacf9c1d" kindref="member">m_wndPopup</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_contract_status_1aed407d4bbfddddbfdd38af93f48d3a3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1aed407d4bbfddddbfdd38af93f48d3a3d" kindref="member">m_arFilters</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_contract_status_1a71548a709c575875ebc29b1239710d08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a71548a709c575875ebc29b1239710d08" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_contract_status_1a6e4467b22cbe7c836fe7c5a45ce4be3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a6e4467b22cbe7c836fe7c5a45ce4be3e" kindref="member">m_nSearchID</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_contract_status_1a3cbaa4b99989a986ad29d7fd9e1f8648" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a3cbaa4b99989a986ad29d7fd9e1f8648" kindref="member">m_wndBankInformation</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_contract_status_1a41667b320adaff822c7a6af815b4ed34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a41667b320adaff822c7a6af815b4ed34" kindref="member">m_wndSearchLabel</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_contract_status_1a7338b6992481cc1b07893576b003be93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a7338b6992481cc1b07893576b003be93" kindref="member">m_wndSearch</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_contract_status_1ac761ab083131b8831f8e668db82d5660" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1ac761ab083131b8831f8e668db82d5660" kindref="member">m_wndTypeOfFilter</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_contract_status_1a664589730602094a79d78c2c9aecd6cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a664589730602094a79d78c2c9aecd6cf" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_contract_status_1a48a267d16efc89a32bfcfefcb007de0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a48a267d16efc89a32bfcfefcb007de0f" kindref="member">m_wndAdd</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_ad_contract_status_1afa35afcaad703cbd2a111a686e2ac010" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1afa35afcaad703cbd2a111a686e2ac010" kindref="member">m_wndEdit</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_ad_contract_status_1ac277314a5d7997a2be051c24f2c4b552" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1ac277314a5d7997a2be051c24f2c4b552" kindref="member">m_wndDelete</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_ad_contract_status_1a57cbbe125fe6c1a3f632a0b871194630" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a57cbbe125fe6c1a3f632a0b871194630" kindref="member">m_wndTypeOfFilterDesc</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_c_ad_contract_status_1aa715ec8916b6de892c247300b084b683" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_contract_status_1aa715ec8916b6de892c247300b084b683" kindref="member">m_szSearch</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_contract_status_1a5436b28959b4feb2bf682847f9599d99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a5436b28959b4feb2bf682847f9599d99" kindref="member">OnSearchCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_contract_status_1a67b9cb9f05a2d361771d3293bc740fe4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a67b9cb9f05a2d361771d3293bc740fe4" kindref="member">OnTypeOfFilterSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_contract_status_1a594d714be93eb3c12954e1f570f3914a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a594d714be93eb3c12954e1f570f3914a" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_contract_status_1a635efa504e25324c1e8adc77303f9145" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a635efa504e25324c1e8adc77303f9145" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_contract_status_1a5c22d6bdfc15c8d53fb6ad750b0c5dc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a5c22d6bdfc15c8d53fb6ad750b0c5dc4" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_contract_status_1ad655f1b1dcc93ff0203e6b72369c6bfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1ad655f1b1dcc93ff0203e6b72369c6bfc" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_contract_status_1a9e578b684b5c5d087a266e6d8e146125" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a9e578b684b5c5d087a266e6d8e146125" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_contract_status_1a309e94af17ac15339565006ed7d720bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1a309e94af17ac15339565006ed7d720bc" kindref="member">OnEditSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_contract_status_1ae2a5abe9a9dc22fd27b0826efe2ac9d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1ae2a5abe9a9dc22fd27b0826efe2ac9d0" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_contract_status_1aca0e83b004788578648ab0787a90cdda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1aca0e83b004788578648ab0787a90cdda" kindref="member">CAdContractStatus</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_contract_status_1aa0e0b12790cb12886eccda4b6b04b1e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_contract_status_1aa0e0b12790cb12886eccda4b6b04b1e3" kindref="member">~CAdContractStatus</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_contract_status_1a03da8f010e8b6d77a27cd040b6d83b15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a03da8f010e8b6d77a27cd040b6d83b15" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_contract_status_1a6e11a5f765a96930ee99e715e1767919" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a6e11a5f765a96930ee99e715e1767919" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_contract_status_1aceff2c945d1701490c68c89b45ec0820" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1aceff2c945d1701490c68c89b45ec0820" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_contract_status_1abb75e03a733e0b30804b8001e0f348d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1abb75e03a733e0b30804b8001e0f348d7" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_contract_status_1ae7367b8d9fcfddc78bab1c83ceef056f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1ae7367b8d9fcfddc78bab1c83ceef056f" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_contract_status_1ab56fbf13e31dda70aaef45ee1f356338" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1ab56fbf13e31dda70aaef45ee1f356338" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_contract_status_1ae4edf11da70f909787b6d770a69abf01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1ae4edf11da70f909787b6d770a69abf01" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_contract_status_1a0cbe09e469aa22cb51b55c6ff1b53725" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a0cbe09e469aa22cb51b55c6ff1b53725" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_contract_status_1a0e888e89eba3c0c165376d48376b9171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a0e888e89eba3c0c165376d48376b9171" kindref="member">OnAddAdContractStatus</ref>();<sp/></highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_contract_status_1a05654568634de0f05b5b5e4b8c7648b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a05654568634de0f05b5b5e4b8c7648b7" kindref="member">OnEditAdContractStatus</ref>();<sp/></highlight></codeline>
+<codeline lineno="73" refid="class_c_ad_contract_status_1a6ffc697b058ecaafc3c0c410982228bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a6ffc697b058ecaafc3c0c410982228bf" kindref="member">OnDeleteAdContractStatus</ref>();<sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_ad_contract_status_1a5bfd633255787ce1f0b30305055f5542" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a5bfd633255787ce1f0b30305055f5542" kindref="member">OnSaveAdContractStatus</ref>();<sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_ad_contract_status_1a52ec3ade6b202e52e3da98f131ff1598" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1a52ec3ade6b202e52e3da98f131ff1598" kindref="member">OnCancelAdContractStatus</ref>();<sp/></highlight></codeline>
+<codeline lineno="76" refid="class_c_ad_contract_status_1ab6035f9c2d5f966a66583da03c1cc744" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_contract_status_1ab6035f9c2d5f966a66583da03c1cc744" kindref="member">OnAdContractStatusListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdContractStatus.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,204 @@
+\doxysection{Storage\+Delivery\+Order\+Dialog.\+h}
+\hypertarget{_storage_delivery_order_dialog_8h_source}{}\label{_storage_delivery_order_dialog_8h_source}\index{Include/VIMESCORE\_E10/StorageDeliveryOrderDialog.h@{Include/VIMESCORE\_E10/StorageDeliveryOrderDialog.h}}
+\mbox{\hyperlink{_storage_delivery_order_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STORAGEDELIVERYORDERDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STORAGEDELIVERYORDERDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_storage_delivery_order_lines_8h}{StorageDeliveryOrderLines.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//CStorageDelivery:\ Cac\ class\ lien\ quan\ den\ phieu\ xuat\ khac}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_storage_delivery_order_dialog_aba67d4428a9b695a1fa857eeeca9a6cf}{CStorageDeliveryOrderDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a0bb6aaca13b2f60636719a8729d18f65}{m\_bRefresh}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ad98ae4829b03db9f0d45fc77ba95745f}{m\_nID}};}
+\DoxyCodeLine{00042\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ad8b40dbb74e3a427aec2da297ac909d2}{m\_szCreatedBy}};}
+\DoxyCodeLine{00043\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ad91f866e0502ca7b6a84e626ba82848e}{m\_szStatusDesc}};}
+\DoxyCodeLine{00044\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a88d59ea18f5cdbfca437bede0734ca5b}{m\_szStatus}};}
+\DoxyCodeLine{00045\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_afc8461b6a55ff29e139f4674a0662cf4}{m\_szPosted}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a10cd6c8b4a07c8bc8efa6a2a7f777fd1}{m\_szOrgID}};}
+\DoxyCodeLine{00047\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aaa3d27e551dec14abb84a7525b05b643}{m\_szType}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_lines}{CStorageDeliveryOrderLines}}\ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a63092746d971fe551125e148f92fc8bd}{m\_wndLines}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a70fc8d23c16521a0527aded32cc65219}{m\_wndGeneralInformation}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a358d765d40318d2792075dde63758f37}{m\_wndOrderInformation}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a4809c189829e403dd19adf9044f1f3ea}{m\_wndTerms}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ac92f857d3ab92a1f21995cb7bcedc052}{m\_wndSummary}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aced0633cee652c18e91a68e15056c80a}{m\_wndTransactionTypeLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab644969d7a2cde56b80bc8260a5e9320}{m\_wndTransactionType}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a80c63f8442593c19654d07691fc55c1e}{m\_wndFromStorageLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a1e36bb5edf0a816389eb3fb5ddbc9da9}{m\_wndFromStorage}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab99092fc61fb95a20945e61bd1941789}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a1f3a5d0f1febe2d732eb7be7582591ff}{m\_wndDescription}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a23ed6ad0f41c8f8f4be483d1e1fc2246}{m\_wndReferenceLabel}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aed2beaa30588dd2819fa1fbb871dc5e0}{m\_wndReference}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aab37cd9bc57de8655f4710bdcb1feceb}{m\_wndPlus}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab1e152f4cfc1d625aea3a311d15c4a96}{m\_wndOriginalDocument}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_abcbcd565a5b04c48c3179e0e68bf6b3c}{m\_wndDeliveryObject}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_af17aa9492b708cc7d130d61de8abbdac}{m\_wndOrderNoLabel}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a8f1c920b43a7131007a043bf729a1db6}{m\_wndOrderNo}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a201bfcff08c5287900bb9f04b0f49d08}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a7e255b44961ea147585bf2e7877af327}{m\_wndOrderDate}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a6fc4533693f4929a26091a5a1aa208fc}{m\_wndAccountingDateLabel}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a7705f1e19651fdbd2f54db4d31bfb254}{m\_wndAccountingDate}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a61f956ecadb283732f779189b2766e3f}{m\_wndApprovedDate}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ae30348a645364d680fdc0d05c37bbd24}{m\_wndNote}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a35a653ad5fd3e255e7dbe62a92d3e1dc}{m\_wndTotalLinesLabel}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_afae2ee51bba2b070ba4990e90dc85930}{m\_wndTotalLines}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a8cdecbd2611642e1839c4f2ac4a409c7}{m\_wndTotalAmountLabel}};}
+\DoxyCodeLine{00081\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab11cc0bf04c07701de5d68c07fe398f6}{m\_wndTotalAmount}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a564d02542a0e556c44fb27f97ffb1cfc}{m\_wndAdd}};}
+\DoxyCodeLine{00085\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a323ef43e7d61b38fba593f5e3a64a0be}{m\_wndEdit}};}
+\DoxyCodeLine{00086\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a02c4ec0fc3c280ab888358478e83249f}{m\_wndDelete}};}
+\DoxyCodeLine{00087\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a6859e8ab14d2cf5b5b4077ebb39a08b8}{m\_wndSave}};}
+\DoxyCodeLine{00088\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ae8619ec9af3eb3363df3130cab803a2e}{m\_wndDiscard}};}
+\DoxyCodeLine{00089\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a91c1a475d4a55a17bc507cd40ded48b6}{m\_wndPrint}};}
+\DoxyCodeLine{00090\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ac1dbba91905bc0c2d484a009d91a151f}{m\_wndPost}};}
+\DoxyCodeLine{00091\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a3d5abb436b0e86908fd7a1a45d905c46}{m\_wndClose}};}
+\DoxyCodeLine{00092\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a92b75bc157947dd7b6904b7eebd9188e}{m\_wndAddLine}};}
+\DoxyCodeLine{00093\ \ \ \ \ CGuiTabCtrl\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a60906cbb73c3c21deb895cc8c1f7c67d}{m\_wndTab}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab99232f1b5262ad80929a2521df3916f}{m\_szFromStorageKey}};}
+\DoxyCodeLine{00096\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a269bc411f5621c99683688697b8a40e1}{m\_szDescription}};}
+\DoxyCodeLine{00097\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ae0aed5e06074e8850b793f9140363535}{m\_szReference}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a17e26c035f7b21c9aa462f4f1c64c9ad}{m\_szOrderNo}};}
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_af45cf8d29ec77bf4def9fd216d5dfb7f}{m\_szOrderDate}};}
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a7b46c88f2f464676c4e9e02db8c4b5a1}{m\_szAccountingDate}};}
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a6ac7ad0546d60d71895b2737186a7d36}{m\_szApprovedDate}};}
+\DoxyCodeLine{00103\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a42ac1a0452a944b6bcc9df15350a66c5}{m\_szTransactionTypeKey}};}
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a31a1d4af31ee47e15063d916fdeed1fc}{m\_szDeliveryObjectKey}};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a69b17eef1b8fab125e5d06306ec6bc02}{m\_nTotalLines}};}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a0cf106436e1d457764a5f05d8b86b64f}{m\_nTotalAmount}};}
+\DoxyCodeLine{00108\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a91e2c8d0c35cf5b8fe7cae7124a142a0}{m\_transactionTbl}};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a948b14aa1c38548bd7656b0cf3861ac9}{OnFromStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aa01ab779c165b937d46790ba43b40fc6}{OnFromStorageSelendok}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageSetfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageKillfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a74e14840c6ac03627942eacb75781312}{OnFromStorageLoadData}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageAddNew();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab00d05ac3d3cb655b22d0e0323aebe94}{OnToDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a5326033c912d2d07c7972551b7e59700}{OnToDepartmentSelendok}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentSetfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentKillfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aaa346e181e36c5ec3f6be8c7864896f7}{OnToDepartmentLoadData}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentAddNew();\ }}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a97c4fce30979d3c3c50489a8c6a3d455}{OnDelivererSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_acdf886d807b58d091b20913733e5d5d0}{OnDelivererSelendok}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererSetfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererKillfocus();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ac010fa296c270a5b3273159a67438fa9}{OnDelivererLoadData}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererAddNew();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a5541329a5e8a56b4be795a1021982150}{OnReceiverSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a13f85790fed0990ff7b3f96ec0eace00}{OnReceiverSelendok}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverSetfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverKillfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_afee86976daecb100d12dff55bbe5080d}{OnReceiverLoadData}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverAddNew();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_adc7c5dc560402a26c1b3f66126dabc5d}{OnDescriptionCheckValue}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoChange();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoSetfocus();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoKillfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a518f951b7620fc9cdeb09765fbea5bea}{OnOrderNoCheckValue}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a3949d4f5bffe2abb08cc680508718f86}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAccountingDateChange();\ }}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAccountingDateSetfocus();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAccountingDateKillfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a88b20bdca3c61def318dce9753cb8c35}{OnAccountingDateCheckValue}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a55e1ea6e98efd2037e2805c344e5d053}{OnApprovedDateCheckValue}}();\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ac7de4cd0cee889ec04e22782688907e0}{OnTransactionTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a2848e6aaa8eac7e7acc3ae09320674e3}{OnTransactionTypeSelendok}}();\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeSetfocus();\ }}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeKillfocus();\ }}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ae6d052fe5aa743dcc85d56ea9f1b3901}{OnTransactionTypeLoadData}}();\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeAddNew();\ }}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a213b85a17f940b6807ce55d3118cdcea}{OnReferenceLabelSelect}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ad77a92cad76c8120ec4f7d3c4b1f85cb}{OnDeliveryObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_af04dc5b67d7468862ef14941e84459ba}{OnDeliveryObjectSelendok}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDeliveryObjectSetfocus();\ }}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDeliveryObjectKillfocus();\ }}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a435b53afba0eb60cc3bda4f34cf7324e}{OnDeliveryObjectLoadData}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDeliveryObjectAddNew();\ }}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesChange();\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesSetfocus();\ }}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesKillfocus();\ }}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a0e4e5c129d4966059726c2a6fc1b9755}{OnTotalLinesCheckValue}}();\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountChange();\ }}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountSetfocus();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountKillfocus();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a2049a7c7a5151b48b2044a131d5c0a53}{OnTotalAmountCheckValue}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aae8c0c7373a1e76ba4f994436c1d6fc9}{OnAddSelect}}();\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a6a7629476837734539b55fcff1365444}{OnEditSelect}}();\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a2d02edb925c5d588c5d135d1ef829d93}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ad34b8031f1d303917c3ca62b171e2b32}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ac647097d70434518b189f9fd8c555c07}{OnDiscardSelect}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ada6e2275ce1970201f8eb68542aae796}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ac1b1d731f02216918a609f14fe9ec61b}{OnPostSelect}}();\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ae51ba7650bc1688999399ca97190464f}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ae044062afa9432fee585c14d65e4c948}{OnAddLineSelect}}();\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a63931a7a5df19e65d7ebd2b17a8d15b6}{OnTabSelectChange}}(\textcolor{keywordtype}{int}\ nOld,\ \textcolor{keywordtype}{int}\ nNew);\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a5578a9cdbfd1b3b18289aa93a2f14892}{OnPlusSelect}}();}
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_aba67d4428a9b695a1fa857eeeca9a6cf}{CStorageDeliveryOrderDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ae7b98cff86930107414fe0ed08268605}{\string~CStorageDeliveryOrderDialog}}();}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_acdf182e8c6b51eea54dd6c3bd8671152}{OnCreateComponents}}();}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a505966411f9138e3ed1ef77648774ba4}{OnInitializeComponents}}();}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a900890e7c8602f0f7293558bdfbc26d5}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a5d554183571258781bcab0aaad75cf4f}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a2a36dbda282dfa2095be7bfe476c6c6d}{GetDataToScreen}}();}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a52144e4a0dd692f31c5fa03b4413186f}{GetScreenToData}}();}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ac9fecdccf53cfaf8e1a6386ac7ff4ac3}{SetDefaultValues}}();}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab2fe8b91c77e210ed7bd733c5cdd6e9c}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a61e5a67e8119d37bfff0cc8871985431}{OnAddStorageDeliveryOrderDialog}}();\ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a2ca9138d790cc1d51b92d7fd53709c23}{OnEditStorageDeliveryOrderDialog}}();\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a121e190935d025398685b7a143c504c8}{OnDeleteStorageDeliveryOrderDialog}}();\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a1d43ecf58a7972da52a95aadc0c61aa3}{OnSaveStorageDeliveryOrderDialog}}();\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a0f46ce845d27a21b7f206a5cb77bceb3}{OnDiscardStorageDeliveryOrderDialog}}();\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_ab553ff65de10430a465aceb18426586c}{OnStorageDeliveryOrderDialogListLoadData}}();\ }
+\DoxyCodeLine{00200\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a1a5563c28de1f47b3c9f108fc49047c0}{GetOrderStatus}}();}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_storage_delivery_order_dialog_a25dd9b8b569600866ee62b02ed41156d}{IsAllowEdit}}();}
+\DoxyCodeLine{00202\ \};}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

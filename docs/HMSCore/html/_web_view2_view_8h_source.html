@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/WebView2View.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_web_view2_view_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">WebView2View.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_web_view2_view_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef WEBVIEW2VIEW_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define WEBVIEW2VIEW_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// WebView2BrowserView.h : interface of the CWebView2View class</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;afxwin.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;wil/com.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;WebView2.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;wil/wrl.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">extern</span> std::atomic&lt;long&gt; <a class="code hl_variable" href="_web_view2_view_8h.html#ac741b008de9413be6ffaf47605c64c81">g_views</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">extern</span> std::atomic&lt;long&gt; <a class="code hl_variable" href="_web_view2_view_8h.html#a89ed52b8c54228bb680fd480c657ae60">g_browsers</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">extern</span> wil::com_ptr&lt;ICoreWebView2Environment&gt; <a class="code hl_variable" href="_web_view2_view_8h.html#ac42018664dac2ab5234a6d87dc51bfd7">g_webViewEnvironment</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html">   35</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_web_view2_view.html#a9d19014fc4ff8d8335b51077661c8fe2">CWebView2View</a> : <span class="keyword">public</span> CView</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{   </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a63f94e35cbb24cc928e5da9f0340e16e">   37</a></span>    <span class="keywordtype">long</span> <a class="code hl_variable" href="class_c_web_view2_view.html#a63f94e35cbb24cc928e5da9f0340e16e">m_Id</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// WebView2 members merged from BrowserWindowEdge</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a35fd301e2be8c19a4540a3c151162686">   40</a></span>    wil::com_ptr&lt;ICoreWebView2Controller&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#a35fd301e2be8c19a4540a3c151162686">m_webViewController</a>; </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a0e84286a701ae99eed74ef8bab7bf45a">   41</a></span>    wil::com_ptr&lt;ICoreWebView2&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#a0e84286a701ae99eed74ef8bab7bf45a">m_webView</a>; </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ac39c85fab5eadab0dcbacd93fff55e96">   42</a></span>    std::wstring <a class="code hl_variable" href="class_c_web_view2_view.html#ac39c85fab5eadab0dcbacd93fff55e96">m_initialUri</a>; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a639228ae23fba6709d01dc63b655d4e3">   43</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_c_web_view2_view.html#a639228ae23fba6709d01dc63b655d4e3">m_isWebViewReady</a>; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#abe260e6fb4c142294f155570e6c38cb3">   45</a></span>    std::function&lt;void()&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#abe260e6fb4c142294f155570e6c38cb3">m_onWebViewFirstInitialized</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// Event tokens</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a8b58f50ffde68f0b2ce2cdab13df0952">   48</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_c_web_view2_view.html#a8b58f50ffde68f0b2ce2cdab13df0952">m_WebMessageReceivedToken</a> = {}; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a3552f5150f2366097c0007d5aa96cfec">   49</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_c_web_view2_view.html#a3552f5150f2366097c0007d5aa96cfec">m_NavigationStartingToken</a> = {}; </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a08254859ecf8f4746f03a0d1bc42b130">   50</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_c_web_view2_view.html#a08254859ecf8f4746f03a0d1bc42b130">m_NavigationCompletedToken</a> = {}; </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a284edeed3eb43b3df15f7901369b4130">   51</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_c_web_view2_view.html#a284edeed3eb43b3df15f7901369b4130">m_ProcessFailedToken</a> = {}; </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a68ac50346c42c0491aabb2135d64a434">   52</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_c_web_view2_view.html#a68ac50346c42c0491aabb2135d64a434">m_DevToolsSecurityToken</a> = {}; </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a2f3b95234196ab416d0ad28ab9b1a0a9">   53</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_c_web_view2_view.html#a2f3b95234196ab416d0ad28ab9b1a0a9">m_DevToolsLogToken</a> = {}; </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Event brokers</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a44689b5fe752fafdd3ab4edfee065929">   56</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2WebMessageReceivedEventHandler&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#a44689b5fe752fafdd3ab4edfee065929">m_MessageBroker</a>; </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a34c8f6f0c2b98122cff074a20d9c5cf0">   57</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2NavigationStartingEventHandler&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#a34c8f6f0c2b98122cff074a20d9c5cf0">m_NavigationStartingBroker</a>; </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a5d0ad016ae0f4f4cc10fdec29b5ceb22">   58</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2NavigationCompletedEventHandler&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#a5d0ad016ae0f4f4cc10fdec29b5ceb22">m_NavigationCompletedBroker</a>; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a647df5e9c9929b32078336ac2812d7a7">   59</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2ProcessFailedEventHandler&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#a647df5e9c9929b32078336ac2812d7a7">m_ProcessFailedBroker</a>; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#af8b62fe6dbd9c59ab92ea96aca87d7f0">   60</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2DevToolsProtocolEventReceivedEventHandler&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#af8b62fe6dbd9c59ab92ea96aca87d7f0">m_devToolsSecurityBroker</a>; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a1bfc92bbc4ed9977a46ad4f2fcae34cc">   61</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2DevToolsProtocolEventReceivedEventHandler&gt; <a class="code hl_variable" href="class_c_web_view2_view.html#a1bfc92bbc4ed9977a46ad4f2fcae34cc">m_devToolsLogBroker</a>; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ad0efa6e32d08934909e269196199366a">   63</a></span>    Microsoft::WRL::Wrappers::Event <a class="code hl_variable" href="class_c_web_view2_view.html#ad0efa6e32d08934909e269196199366a">NavigationCompletedEvent</a>; </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a37932b296ece8ce68d6eecf24f72325e">   71</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a37932b296ece8ce68d6eecf24f72325e">Init</a>(std::wstring initialUri = L<span class="stringliteral">&quot;https://www.bing.com/&quot;</span>, std::function&lt;<span class="keywordtype">void</span>()&gt; webviewCreatedCallback = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a308f89e0a32b06550803787768be2a97">   78</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_web_view2_view.html#a308f89e0a32b06550803787768be2a97">InitWebView</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ac4718481ed0d99b50b328a4bee865f26">   85</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#ac4718481ed0d99b50b328a4bee865f26">SetEventsAndBrokers</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a7e9d01135aab5154f4427f6998f9974f">   94</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#a7e9d01135aab5154f4427f6998f9974f">OnCreateEnvironmentCompleted</a>(HRESULT result, ICoreWebView2Environment *env);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a6de1c0f7e92d7f1ca6b566eb86b303b2">  103</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#a6de1c0f7e92d7f1ca6b566eb86b303b2">OnCreateControllerCompleted</a>(HRESULT result, ICoreWebView2Controller *controller);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ada273c6359428b54cd8f2f2ecff85a4b">  110</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#ada273c6359428b54cd8f2f2ecff85a4b">RunAsync</a>(std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">void</span>)&gt; callback);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a453587d7f4794240d53540d32c483bc0">  119</a></span>    afx_msg LRESULT <a class="code hl_function" href="class_c_web_view2_view.html#a453587d7f4794240d53540d32c483bc0">OnRunAsync</a>(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keyword">public</span>: <span class="comment">// create from serialization only</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a9d19014fc4ff8d8335b51077661c8fe2">  127</a></span>    <a class="code hl_function" href="class_c_web_view2_view.html#a9d19014fc4ff8d8335b51077661c8fe2">CWebView2View</a>(LPCTSTR lpszUrl=NULL);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    DECLARE_DYNCREATE(<a class="code hl_function" href="class_c_web_view2_view.html#a9d19014fc4ff8d8335b51077661c8fe2">CWebView2View</a>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">// Attributes</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">// Operations</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a1ccba81dd200d7a45455bbfe2dde5116">  141</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_web_view2_view.html#a1ccba81dd200d7a45455bbfe2dde5116">Initialize</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a696f28f217326ba6e161352bb160c366">  148</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_web_view2_view.html#a696f28f217326ba6e161352bb160c366">IsInited</a>();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a81786d2a9f0bfe47450dd50d89132586">  154</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a81786d2a9f0bfe47450dd50d89132586">Cleanup</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#abc4adb69e4c742f562a47f7bbf327243">  164</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#abc4adb69e4c742f562a47f7bbf327243">Browser</a>(HWND hWnd, std::wstring url, <span class="keywordtype">int</span> nShow = SW_SHOW);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ace54359d7f18fd8384f4dddf9e7dd011">  174</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#ace54359d7f18fd8384f4dddf9e7dd011">CreateWebView</a>(HWND m_hWnd, CRect rect, std::wstring userDataFolder);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a4cf65a427a4999c248e3a69fa4c68579">  182</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#a4cf65a427a4999c248e3a69fa4c68579">Navigate</a>(std::wstring url);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ad4bee7586e39c7814ecd984f5a278ea4">  190</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#ad4bee7586e39c7814ecd984f5a278ea4">NavigateToString</a>(std::wstring content);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a77f0f98d54671c6903bfc2882dfe3e67">  198</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#a77f0f98d54671c6903bfc2882dfe3e67">GoRoute</a>(std::wstring url);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a29897e36d082f9fa627942d304ed0fdf">  206</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a29897e36d082f9fa627942d304ed0fdf">ExecuteScriptWithResult</a>(std::wstring script,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                                 std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::wstring &amp;)&gt; callback);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a4da8b855dfa27a28f568fd88251f0794">  214</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a4da8b855dfa27a28f568fd88251f0794">SendStringWebMessage</a>(std::wstring message);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a361b98eb90657ad501ca065707082825">  223</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#a361b98eb90657ad501ca065707082825">AddInitializeScript</a>(std::wstring script, Microsoft::WRL::ComPtr&lt;ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler&gt; handler = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#adffd88831640a668c79babdaaf822579">  232</a></span>    HRESULT <a class="code hl_function" href="class_c_web_view2_view.html#adffd88831640a668c79babdaaf822579">InjectScript</a>(std::wstring script, Microsoft::WRL::ComPtr&lt;ICoreWebView2ExecuteScriptCompletedHandler&gt; handler = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#af68d028c52a6cca5adda492f8e42f314">  240</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_web_view2_view.html#af68d028c52a6cca5adda492f8e42f314">Login</a>(LPCTSTR lpszMod = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a70034237b8f39460f506e9915a087538">  247</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_c_web_view2_view.html#a70034237b8f39460f506e9915a087538">IsLoging</a>();</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a5845c46a98c704deb6f8af6cf415e896">  254</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a5845c46a98c704deb6f8af6cf415e896">Resize</a>(CRect rect);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ad4128ad94a24bae52fa476b41ddd97ae">  261</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#ad4128ad94a24bae52fa476b41ddd97ae">Resize</a>(RECT bounds = RECT());</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ab768a5823343588fd8fa13b04433636b">  268</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#ab768a5823343588fd8fa13b04433636b">Show</a>(BOOL bShow);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a4032f07c06a249da31b1355a8061fa49">  274</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a4032f07c06a249da31b1355a8061fa49">ClearCache</a>();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#abbbebe7d7130c9d557e3d9a43c67ebc3">  280</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#abbbebe7d7130c9d557e3d9a43c67ebc3">SetHighDPIAwareness</a>();</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="comment">// Static methods from BrowserWindowEdge</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#aef4156e296350e1a7d936c68afa65b80">  289</a></span>    <span class="keyword">static</span> BOOL <a class="code hl_function" href="class_c_web_view2_view.html#aef4156e296350e1a7d936c68afa65b80">InitInstance</a>(HINSTANCE hInstance);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ae0b0ce143d54737e4ed264544441f1c9">  297</a></span>    <span class="keyword">static</span> std::wstring <a class="code hl_function" href="class_c_web_view2_view.html#ae0b0ce143d54737e4ed264544441f1c9">s2ws</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ad8194c8da0bc8da9ac4f22bf81f8789b">  305</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="class_c_web_view2_view.html#ad8194c8da0bc8da9ac4f22bf81f8789b">ws2s</a>(<span class="keyword">const</span> std::wstring&amp; wstr);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ac8376d5ac85d2af8736d1a39c20afa8c">  313</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#ac8376d5ac85d2af8736d1a39c20afa8c">CheckFailure</a>(HRESULT hr, LPCWSTR errorMessage);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a1c36bad4303098234f7dbb2a724289a7">  320</a></span>    <span class="keyword">static</span> std::wstring <a class="code hl_function" href="class_c_web_view2_view.html#a1c36bad4303098234f7dbb2a724289a7">GetAppDataDirectory</a>();</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a356c8502d79af1cbfa698c6af528dc4a">  328</a></span>    <span class="keyword">static</span> std::wstring <a class="code hl_function" href="class_c_web_view2_view.html#a356c8502d79af1cbfa698c6af528dc4a">GetFullPathFor</a>(LPCWSTR relativePath);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a67b2aee2a86f0ffbeefa28c1945376b1">  336</a></span>    <span class="keyword">static</span> std::wstring <a class="code hl_function" href="class_c_web_view2_view.html#a67b2aee2a86f0ffbeefa28c1945376b1">GetFilePathAsURI</a>(std::wstring fullPath);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="comment">// Overrides</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a7177b07534b79ade8b65c7697bb8623c">  340</a></span>    <span class="keyword">virtual</span> BOOL <a class="code hl_function" href="class_c_web_view2_view.html#a7177b07534b79ade8b65c7697bb8623c">PreCreateWindow</a>(CREATESTRUCT&amp; cs);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a64fd99c92156716a36f8def1c88e82f0">  341</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a64fd99c92156716a36f8def1c88e82f0">OnDraw</a>(CDC * <span class="comment">/*pDC*/</span>);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#abccb1728c217230b3197e423266eeca0">  343</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#abccb1728c217230b3197e423266eeca0">OnInitialUpdate</a>(); <span class="comment">// called first time after construct</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a2820acd53c5242df89410e7723478ef4">  345</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a2820acd53c5242df89410e7723478ef4">DoDataExchange</a>(CDataExchange* pDX);    <span class="comment">// DDX/DDV support</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">// Implementation</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a99b719c25fca66e9fd914d11e15b0984">  350</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_c_web_view2_view.html#a99b719c25fca66e9fd914d11e15b0984">~CWebView2View</a>();</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">#ifdef _DEBUG</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> AssertValid() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Dump(CDumpContext&amp; dc) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="comment">// Generated message map functions</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ae5214d64e01d5eb42a4f27699ca86423">  360</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#ae5214d64e01d5eb42a4f27699ca86423">OnFilePrintPreview</a>();</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a65523fd6d2401502bf7c415c8e3eac53">  361</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a65523fd6d2401502bf7c415c8e3eac53">OnRButtonUp</a>(UINT nFlags, CPoint point);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#af3c5f911010a26961c492c1db836eaa5">  362</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#af3c5f911010a26961c492c1db836eaa5">OnContextMenu</a>(CWnd* pWnd, CPoint point);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    DECLARE_MESSAGE_MAP()</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>public:</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a0a16e898210d209520ebf8b5f92c4fd1">  365</a></span>    CStatic <a class="code hl_variable" href="class_c_web_view2_view.html#a0a16e898210d209520ebf8b5f92c4fd1">m_Label_View</a>;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a5362435dafe2f3b8d8e3eac743d33c6c">  366</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a5362435dafe2f3b8d8e3eac743d33c6c">OnSize</a>(UINT nType, <span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy);</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ad0192479e4a7956c8e93489def7f90de">  367</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#ad0192479e4a7956c8e93489def7f90de">OnShowWindow</a>(BOOL bShow, UINT nStatus);</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a5984aeb3a21f7aecc3e3b07a97e5a2d4">  368</a></span>    virtual LRESULT <a class="code hl_function" href="class_c_web_view2_view.html#a5984aeb3a21f7aecc3e3b07a97e5a2d4">WindowProc</a>(UINT message, WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="comment">//  afx_msg void OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized);</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a2ab4a8e2176f28b7748b847b8122b76b">  370</a></span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a2ab4a8e2176f28b7748b847b8122b76b">OnActivateView</a>(BOOL bActivate, CView* pActivateView, CView* pDeactiveView);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#a9fc0ad4eabaf3e1d743baf113e1b85e1">  371</a></span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#a9fc0ad4eabaf3e1d743baf113e1b85e1">PostNcDestroy</a>();</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="class_c_web_view2_view.html#ac7be093b880a4cbdd8977b954feb95a6">  372</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_web_view2_view.html#ac7be093b880a4cbdd8977b954feb95a6">OnDestroy</a>();</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>};</div>
+</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_web_view2_view_8h_html_a89ed52b8c54228bb680fd480c657ae60"><div class="ttname"><a href="_web_view2_view_8h.html#a89ed52b8c54228bb680fd480c657ae60">g_browsers</a></div><div class="ttdeci">std::atomic&lt; long &gt; g_browsers</div></div>
+<div class="ttc" id="a_web_view2_view_8h_html_ac42018664dac2ab5234a6d87dc51bfd7"><div class="ttname"><a href="_web_view2_view_8h.html#ac42018664dac2ab5234a6d87dc51bfd7">g_webViewEnvironment</a></div><div class="ttdeci">wil::com_ptr&lt; ICoreWebView2Environment &gt; g_webViewEnvironment</div></div>
+<div class="ttc" id="a_web_view2_view_8h_html_ac741b008de9413be6ffaf47605c64c81"><div class="ttname"><a href="_web_view2_view_8h.html#ac741b008de9413be6ffaf47605c64c81">g_views</a></div><div class="ttdeci">std::atomic&lt; long &gt; g_views</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a08254859ecf8f4746f03a0d1bc42b130"><div class="ttname"><a href="class_c_web_view2_view.html#a08254859ecf8f4746f03a0d1bc42b130">CWebView2View::m_NavigationCompletedToken</a></div><div class="ttdeci">EventRegistrationToken m_NavigationCompletedToken</div><div class="ttdoc">Token đăng ký event hoàn thành navigation.</div><div class="ttdef"><b>Definition</b> WebView2View.h:50</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a0a16e898210d209520ebf8b5f92c4fd1"><div class="ttname"><a href="class_c_web_view2_view.html#a0a16e898210d209520ebf8b5f92c4fd1">CWebView2View::m_Label_View</a></div><div class="ttdeci">CStatic m_Label_View</div><div class="ttdef"><b>Definition</b> WebView2View.h:365</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a0e84286a701ae99eed74ef8bab7bf45a"><div class="ttname"><a href="class_c_web_view2_view.html#a0e84286a701ae99eed74ef8bab7bf45a">CWebView2View::m_webView</a></div><div class="ttdeci">wil::com_ptr&lt; ICoreWebView2 &gt; m_webView</div><div class="ttdoc">WebView2 core object để hiển thị web content.</div><div class="ttdef"><b>Definition</b> WebView2View.h:41</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a1bfc92bbc4ed9977a46ad4f2fcae34cc"><div class="ttname"><a href="class_c_web_view2_view.html#a1bfc92bbc4ed9977a46ad4f2fcae34cc">CWebView2View::m_devToolsLogBroker</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2DevToolsProtocolEventReceivedEventHandler &gt; m_devToolsLogBroker</div><div class="ttdoc">Event handler cho DevTools log.</div><div class="ttdef"><b>Definition</b> WebView2View.h:61</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a1c36bad4303098234f7dbb2a724289a7"><div class="ttname"><a href="class_c_web_view2_view.html#a1c36bad4303098234f7dbb2a724289a7">CWebView2View::GetAppDataDirectory</a></div><div class="ttdeci">static std::wstring GetAppDataDirectory()</div><div class="ttdoc">Lấy thư mục AppData.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a1ccba81dd200d7a45455bbfe2dde5116"><div class="ttname"><a href="class_c_web_view2_view.html#a1ccba81dd200d7a45455bbfe2dde5116">CWebView2View::Initialize</a></div><div class="ttdeci">bool Initialize()</div><div class="ttdoc">Khởi tạo WebView từ DLL.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a2820acd53c5242df89410e7723478ef4"><div class="ttname"><a href="class_c_web_view2_view.html#a2820acd53c5242df89410e7723478ef4">CWebView2View::DoDataExchange</a></div><div class="ttdeci">virtual void DoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a284edeed3eb43b3df15f7901369b4130"><div class="ttname"><a href="class_c_web_view2_view.html#a284edeed3eb43b3df15f7901369b4130">CWebView2View::m_ProcessFailedToken</a></div><div class="ttdeci">EventRegistrationToken m_ProcessFailedToken</div><div class="ttdoc">Token đăng ký event process failed.</div><div class="ttdef"><b>Definition</b> WebView2View.h:51</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a29897e36d082f9fa627942d304ed0fdf"><div class="ttname"><a href="class_c_web_view2_view.html#a29897e36d082f9fa627942d304ed0fdf">CWebView2View::ExecuteScriptWithResult</a></div><div class="ttdeci">void ExecuteScriptWithResult(std::wstring script, std::function&lt; void(const std::wstring &amp;)&gt; callback)</div><div class="ttdoc">Thực thi JavaScript và nhận kết quả</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a2ab4a8e2176f28b7748b847b8122b76b"><div class="ttname"><a href="class_c_web_view2_view.html#a2ab4a8e2176f28b7748b847b8122b76b">CWebView2View::OnActivateView</a></div><div class="ttdeci">virtual void OnActivateView(BOOL bActivate, CView *pActivateView, CView *pDeactiveView)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a2f3b95234196ab416d0ad28ab9b1a0a9"><div class="ttname"><a href="class_c_web_view2_view.html#a2f3b95234196ab416d0ad28ab9b1a0a9">CWebView2View::m_DevToolsLogToken</a></div><div class="ttdeci">EventRegistrationToken m_DevToolsLogToken</div><div class="ttdoc">Token đăng ký event DevTools log.</div><div class="ttdef"><b>Definition</b> WebView2View.h:53</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a308f89e0a32b06550803787768be2a97"><div class="ttname"><a href="class_c_web_view2_view.html#a308f89e0a32b06550803787768be2a97">CWebView2View::InitWebView</a></div><div class="ttdeci">bool InitWebView()</div><div class="ttdoc">Khởi tạo WebView2.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a34c8f6f0c2b98122cff074a20d9c5cf0"><div class="ttname"><a href="class_c_web_view2_view.html#a34c8f6f0c2b98122cff074a20d9c5cf0">CWebView2View::m_NavigationStartingBroker</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2NavigationStartingEventHandler &gt; m_NavigationStartingBroker</div><div class="ttdoc">Event handler cho navigation starting.</div><div class="ttdef"><b>Definition</b> WebView2View.h:57</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a3552f5150f2366097c0007d5aa96cfec"><div class="ttname"><a href="class_c_web_view2_view.html#a3552f5150f2366097c0007d5aa96cfec">CWebView2View::m_NavigationStartingToken</a></div><div class="ttdeci">EventRegistrationToken m_NavigationStartingToken</div><div class="ttdoc">Token đăng ký event bắt đầu navigation.</div><div class="ttdef"><b>Definition</b> WebView2View.h:49</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a356c8502d79af1cbfa698c6af528dc4a"><div class="ttname"><a href="class_c_web_view2_view.html#a356c8502d79af1cbfa698c6af528dc4a">CWebView2View::GetFullPathFor</a></div><div class="ttdeci">static std::wstring GetFullPathFor(LPCWSTR relativePath)</div><div class="ttdoc">Lấy đường dẫn đầy đủ</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a35fd301e2be8c19a4540a3c151162686"><div class="ttname"><a href="class_c_web_view2_view.html#a35fd301e2be8c19a4540a3c151162686">CWebView2View::m_webViewController</a></div><div class="ttdeci">wil::com_ptr&lt; ICoreWebView2Controller &gt; m_webViewController</div><div class="ttdoc">WebView2 controller để điều khiển WebView.</div><div class="ttdef"><b>Definition</b> WebView2View.h:40</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a361b98eb90657ad501ca065707082825"><div class="ttname"><a href="class_c_web_view2_view.html#a361b98eb90657ad501ca065707082825">CWebView2View::AddInitializeScript</a></div><div class="ttdeci">HRESULT AddInitializeScript(std::wstring script, Microsoft::WRL::ComPtr&lt; ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler &gt; handler=nullptr)</div><div class="ttdoc">Thêm script khởi tạo.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a37932b296ece8ce68d6eecf24f72325e"><div class="ttname"><a href="class_c_web_view2_view.html#a37932b296ece8ce68d6eecf24f72325e">CWebView2View::Init</a></div><div class="ttdeci">void Init(std::wstring initialUri=L&quot;https://www.bing.com/&quot;, std::function&lt; void()&gt; webviewCreatedCallback=nullptr)</div><div class="ttdoc">Khởi tạo WebView2.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a4032f07c06a249da31b1355a8061fa49"><div class="ttname"><a href="class_c_web_view2_view.html#a4032f07c06a249da31b1355a8061fa49">CWebView2View::ClearCache</a></div><div class="ttdeci">void ClearCache()</div><div class="ttdoc">Xóa cache.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a44689b5fe752fafdd3ab4edfee065929"><div class="ttname"><a href="class_c_web_view2_view.html#a44689b5fe752fafdd3ab4edfee065929">CWebView2View::m_MessageBroker</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2WebMessageReceivedEventHandler &gt; m_MessageBroker</div><div class="ttdoc">Event handler cho web message received.</div><div class="ttdef"><b>Definition</b> WebView2View.h:56</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a453587d7f4794240d53540d32c483bc0"><div class="ttname"><a href="class_c_web_view2_view.html#a453587d7f4794240d53540d32c483bc0">CWebView2View::OnRunAsync</a></div><div class="ttdeci">afx_msg LRESULT OnRunAsync(WPARAM wParam, LPARAM lParam)</div><div class="ttdoc">Xử lý message chạy async.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a4cf65a427a4999c248e3a69fa4c68579"><div class="ttname"><a href="class_c_web_view2_view.html#a4cf65a427a4999c248e3a69fa4c68579">CWebView2View::Navigate</a></div><div class="ttdeci">HRESULT Navigate(std::wstring url)</div><div class="ttdoc">Navigate đến URL.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a4da8b855dfa27a28f568fd88251f0794"><div class="ttname"><a href="class_c_web_view2_view.html#a4da8b855dfa27a28f568fd88251f0794">CWebView2View::SendStringWebMessage</a></div><div class="ttdeci">void SendStringWebMessage(std::wstring message)</div><div class="ttdoc">Gửi message string đến web content.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a5362435dafe2f3b8d8e3eac743d33c6c"><div class="ttname"><a href="class_c_web_view2_view.html#a5362435dafe2f3b8d8e3eac743d33c6c">CWebView2View::OnSize</a></div><div class="ttdeci">afx_msg void OnSize(UINT nType, int cx, int cy)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a5845c46a98c704deb6f8af6cf415e896"><div class="ttname"><a href="class_c_web_view2_view.html#a5845c46a98c704deb6f8af6cf415e896">CWebView2View::Resize</a></div><div class="ttdeci">void Resize(CRect rect)</div><div class="ttdoc">Resize WebView với CRect.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a5984aeb3a21f7aecc3e3b07a97e5a2d4"><div class="ttname"><a href="class_c_web_view2_view.html#a5984aeb3a21f7aecc3e3b07a97e5a2d4">CWebView2View::WindowProc</a></div><div class="ttdeci">virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a5d0ad016ae0f4f4cc10fdec29b5ceb22"><div class="ttname"><a href="class_c_web_view2_view.html#a5d0ad016ae0f4f4cc10fdec29b5ceb22">CWebView2View::m_NavigationCompletedBroker</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2NavigationCompletedEventHandler &gt; m_NavigationCompletedBroker</div><div class="ttdoc">Event handler cho navigation completed.</div><div class="ttdef"><b>Definition</b> WebView2View.h:58</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a639228ae23fba6709d01dc63b655d4e3"><div class="ttname"><a href="class_c_web_view2_view.html#a639228ae23fba6709d01dc63b655d4e3">CWebView2View::m_isWebViewReady</a></div><div class="ttdeci">bool m_isWebViewReady</div><div class="ttdoc">Cờ xác định WebView đã sẵn sàng chưa.</div><div class="ttdef"><b>Definition</b> WebView2View.h:43</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a63f94e35cbb24cc928e5da9f0340e16e"><div class="ttname"><a href="class_c_web_view2_view.html#a63f94e35cbb24cc928e5da9f0340e16e">CWebView2View::m_Id</a></div><div class="ttdeci">long m_Id</div><div class="ttdoc">ID duy nhất của view.</div><div class="ttdef"><b>Definition</b> WebView2View.h:37</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a647df5e9c9929b32078336ac2812d7a7"><div class="ttname"><a href="class_c_web_view2_view.html#a647df5e9c9929b32078336ac2812d7a7">CWebView2View::m_ProcessFailedBroker</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2ProcessFailedEventHandler &gt; m_ProcessFailedBroker</div><div class="ttdoc">Event handler cho process failed.</div><div class="ttdef"><b>Definition</b> WebView2View.h:59</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a64fd99c92156716a36f8def1c88e82f0"><div class="ttname"><a href="class_c_web_view2_view.html#a64fd99c92156716a36f8def1c88e82f0">CWebView2View::OnDraw</a></div><div class="ttdeci">virtual void OnDraw(CDC *)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a65523fd6d2401502bf7c415c8e3eac53"><div class="ttname"><a href="class_c_web_view2_view.html#a65523fd6d2401502bf7c415c8e3eac53">CWebView2View::OnRButtonUp</a></div><div class="ttdeci">afx_msg void OnRButtonUp(UINT nFlags, CPoint point)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a67b2aee2a86f0ffbeefa28c1945376b1"><div class="ttname"><a href="class_c_web_view2_view.html#a67b2aee2a86f0ffbeefa28c1945376b1">CWebView2View::GetFilePathAsURI</a></div><div class="ttdeci">static std::wstring GetFilePathAsURI(std::wstring fullPath)</div><div class="ttdoc">Chuyển đổi file path sang URI.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a68ac50346c42c0491aabb2135d64a434"><div class="ttname"><a href="class_c_web_view2_view.html#a68ac50346c42c0491aabb2135d64a434">CWebView2View::m_DevToolsSecurityToken</a></div><div class="ttdeci">EventRegistrationToken m_DevToolsSecurityToken</div><div class="ttdoc">Token đăng ký event DevTools security.</div><div class="ttdef"><b>Definition</b> WebView2View.h:52</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a696f28f217326ba6e161352bb160c366"><div class="ttname"><a href="class_c_web_view2_view.html#a696f28f217326ba6e161352bb160c366">CWebView2View::IsInited</a></div><div class="ttdeci">bool IsInited()</div><div class="ttdoc">Kiểm tra WebView đã được khởi tạo chưa.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a6de1c0f7e92d7f1ca6b566eb86b303b2"><div class="ttname"><a href="class_c_web_view2_view.html#a6de1c0f7e92d7f1ca6b566eb86b303b2">CWebView2View::OnCreateControllerCompleted</a></div><div class="ttdeci">HRESULT OnCreateControllerCompleted(HRESULT result, ICoreWebView2Controller *controller)</div><div class="ttdoc">Xử lý khi tạo controller hoàn thành.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a70034237b8f39460f506e9915a087538"><div class="ttname"><a href="class_c_web_view2_view.html#a70034237b8f39460f506e9915a087538">CWebView2View::IsLoging</a></div><div class="ttdeci">bool IsLoging()</div><div class="ttdoc">Kiểm tra đang đăng nhập.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a7177b07534b79ade8b65c7697bb8623c"><div class="ttname"><a href="class_c_web_view2_view.html#a7177b07534b79ade8b65c7697bb8623c">CWebView2View::PreCreateWindow</a></div><div class="ttdeci">virtual BOOL PreCreateWindow(CREATESTRUCT &amp;cs)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a77f0f98d54671c6903bfc2882dfe3e67"><div class="ttname"><a href="class_c_web_view2_view.html#a77f0f98d54671c6903bfc2882dfe3e67">CWebView2View::GoRoute</a></div><div class="ttdeci">HRESULT GoRoute(std::wstring url)</div><div class="ttdoc">Điều hướng đến route.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a7e9d01135aab5154f4427f6998f9974f"><div class="ttname"><a href="class_c_web_view2_view.html#a7e9d01135aab5154f4427f6998f9974f">CWebView2View::OnCreateEnvironmentCompleted</a></div><div class="ttdeci">HRESULT OnCreateEnvironmentCompleted(HRESULT result, ICoreWebView2Environment *env)</div><div class="ttdoc">Xử lý khi tạo environment hoàn thành.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a81786d2a9f0bfe47450dd50d89132586"><div class="ttname"><a href="class_c_web_view2_view.html#a81786d2a9f0bfe47450dd50d89132586">CWebView2View::Cleanup</a></div><div class="ttdeci">void Cleanup()</div><div class="ttdoc">Giải phóng WebView và DLL.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a8b58f50ffde68f0b2ce2cdab13df0952"><div class="ttname"><a href="class_c_web_view2_view.html#a8b58f50ffde68f0b2ce2cdab13df0952">CWebView2View::m_WebMessageReceivedToken</a></div><div class="ttdeci">EventRegistrationToken m_WebMessageReceivedToken</div><div class="ttdoc">Token đăng ký event nhận message từ web.</div><div class="ttdef"><b>Definition</b> WebView2View.h:48</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a99b719c25fca66e9fd914d11e15b0984"><div class="ttname"><a href="class_c_web_view2_view.html#a99b719c25fca66e9fd914d11e15b0984">CWebView2View::~CWebView2View</a></div><div class="ttdeci">virtual ~CWebView2View()</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a9d19014fc4ff8d8335b51077661c8fe2"><div class="ttname"><a href="class_c_web_view2_view.html#a9d19014fc4ff8d8335b51077661c8fe2">CWebView2View::CWebView2View</a></div><div class="ttdeci">CWebView2View(LPCTSTR lpszUrl=NULL)</div><div class="ttdoc">Constructor với URL.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_a9fc0ad4eabaf3e1d743baf113e1b85e1"><div class="ttname"><a href="class_c_web_view2_view.html#a9fc0ad4eabaf3e1d743baf113e1b85e1">CWebView2View::PostNcDestroy</a></div><div class="ttdeci">virtual void PostNcDestroy()</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ab768a5823343588fd8fa13b04433636b"><div class="ttname"><a href="class_c_web_view2_view.html#ab768a5823343588fd8fa13b04433636b">CWebView2View::Show</a></div><div class="ttdeci">void Show(BOOL bShow)</div><div class="ttdoc">Hiển thị/ẩn WebView.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_abbbebe7d7130c9d557e3d9a43c67ebc3"><div class="ttname"><a href="class_c_web_view2_view.html#abbbebe7d7130c9d557e3d9a43c67ebc3">CWebView2View::SetHighDPIAwareness</a></div><div class="ttdeci">void SetHighDPIAwareness()</div><div class="ttdoc">Thiết lập High DPI awareness.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_abc4adb69e4c742f562a47f7bbf327243"><div class="ttname"><a href="class_c_web_view2_view.html#abc4adb69e4c742f562a47f7bbf327243">CWebView2View::Browser</a></div><div class="ttdeci">HRESULT Browser(HWND hWnd, std::wstring url, int nShow=SW_SHOW)</div><div class="ttdoc">Mở browser với URL.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_abccb1728c217230b3197e423266eeca0"><div class="ttname"><a href="class_c_web_view2_view.html#abccb1728c217230b3197e423266eeca0">CWebView2View::OnInitialUpdate</a></div><div class="ttdeci">virtual void OnInitialUpdate()</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_abe260e6fb4c142294f155570e6c38cb3"><div class="ttname"><a href="class_c_web_view2_view.html#abe260e6fb4c142294f155570e6c38cb3">CWebView2View::m_onWebViewFirstInitialized</a></div><div class="ttdeci">std::function&lt; void()&gt; m_onWebViewFirstInitialized</div><div class="ttdoc">Callback được gọi khi WebView được khởi tạo lần đầu.</div><div class="ttdef"><b>Definition</b> WebView2View.h:45</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ac39c85fab5eadab0dcbacd93fff55e96"><div class="ttname"><a href="class_c_web_view2_view.html#ac39c85fab5eadab0dcbacd93fff55e96">CWebView2View::m_initialUri</a></div><div class="ttdeci">std::wstring m_initialUri</div><div class="ttdoc">URI ban đầu để load khi khởi tạo.</div><div class="ttdef"><b>Definition</b> WebView2View.h:42</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ac4718481ed0d99b50b328a4bee865f26"><div class="ttname"><a href="class_c_web_view2_view.html#ac4718481ed0d99b50b328a4bee865f26">CWebView2View::SetEventsAndBrokers</a></div><div class="ttdeci">HRESULT SetEventsAndBrokers()</div><div class="ttdoc">Thiết lập các event và broker.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ac7be093b880a4cbdd8977b954feb95a6"><div class="ttname"><a href="class_c_web_view2_view.html#ac7be093b880a4cbdd8977b954feb95a6">CWebView2View::OnDestroy</a></div><div class="ttdeci">afx_msg void OnDestroy()</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ac8376d5ac85d2af8736d1a39c20afa8c"><div class="ttname"><a href="class_c_web_view2_view.html#ac8376d5ac85d2af8736d1a39c20afa8c">CWebView2View::CheckFailure</a></div><div class="ttdeci">static void CheckFailure(HRESULT hr, LPCWSTR errorMessage)</div><div class="ttdoc">Kiểm tra lỗi HRESULT.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ace54359d7f18fd8384f4dddf9e7dd011"><div class="ttname"><a href="class_c_web_view2_view.html#ace54359d7f18fd8384f4dddf9e7dd011">CWebView2View::CreateWebView</a></div><div class="ttdeci">HRESULT CreateWebView(HWND m_hWnd, CRect rect, std::wstring userDataFolder)</div><div class="ttdoc">Tạo WebView.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ad0192479e4a7956c8e93489def7f90de"><div class="ttname"><a href="class_c_web_view2_view.html#ad0192479e4a7956c8e93489def7f90de">CWebView2View::OnShowWindow</a></div><div class="ttdeci">afx_msg void OnShowWindow(BOOL bShow, UINT nStatus)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ad0efa6e32d08934909e269196199366a"><div class="ttname"><a href="class_c_web_view2_view.html#ad0efa6e32d08934909e269196199366a">CWebView2View::NavigationCompletedEvent</a></div><div class="ttdeci">Microsoft::WRL::Wrappers::Event NavigationCompletedEvent</div><div class="ttdoc">Event wrapper cho navigation completed.</div><div class="ttdef"><b>Definition</b> WebView2View.h:63</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ad4128ad94a24bae52fa476b41ddd97ae"><div class="ttname"><a href="class_c_web_view2_view.html#ad4128ad94a24bae52fa476b41ddd97ae">CWebView2View::Resize</a></div><div class="ttdeci">void Resize(RECT bounds=RECT())</div><div class="ttdoc">Resize WebView với RECT.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ad4bee7586e39c7814ecd984f5a278ea4"><div class="ttname"><a href="class_c_web_view2_view.html#ad4bee7586e39c7814ecd984f5a278ea4">CWebView2View::NavigateToString</a></div><div class="ttdeci">HRESULT NavigateToString(std::wstring content)</div><div class="ttdoc">Navigate đến HTML content.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ad8194c8da0bc8da9ac4f22bf81f8789b"><div class="ttname"><a href="class_c_web_view2_view.html#ad8194c8da0bc8da9ac4f22bf81f8789b">CWebView2View::ws2s</a></div><div class="ttdeci">static std::string ws2s(const std::wstring &amp;wstr)</div><div class="ttdoc">Chuyển đổi wstring sang string.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ada273c6359428b54cd8f2f2ecff85a4b"><div class="ttname"><a href="class_c_web_view2_view.html#ada273c6359428b54cd8f2f2ecff85a4b">CWebView2View::RunAsync</a></div><div class="ttdeci">void RunAsync(std::function&lt; void(void)&gt; callback)</div><div class="ttdoc">Chạy callback bất đồng bộ</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_adffd88831640a668c79babdaaf822579"><div class="ttname"><a href="class_c_web_view2_view.html#adffd88831640a668c79babdaaf822579">CWebView2View::InjectScript</a></div><div class="ttdeci">HRESULT InjectScript(std::wstring script, Microsoft::WRL::ComPtr&lt; ICoreWebView2ExecuteScriptCompletedHandler &gt; handler=nullptr)</div><div class="ttdoc">Inject script vào web page.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ae0b0ce143d54737e4ed264544441f1c9"><div class="ttname"><a href="class_c_web_view2_view.html#ae0b0ce143d54737e4ed264544441f1c9">CWebView2View::s2ws</a></div><div class="ttdeci">static std::wstring s2ws(const std::string &amp;str)</div><div class="ttdoc">Chuyển đổi string sang wstring.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_ae5214d64e01d5eb42a4f27699ca86423"><div class="ttname"><a href="class_c_web_view2_view.html#ae5214d64e01d5eb42a4f27699ca86423">CWebView2View::OnFilePrintPreview</a></div><div class="ttdeci">afx_msg void OnFilePrintPreview()</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_aef4156e296350e1a7d936c68afa65b80"><div class="ttname"><a href="class_c_web_view2_view.html#aef4156e296350e1a7d936c68afa65b80">CWebView2View::InitInstance</a></div><div class="ttdeci">static BOOL InitInstance(HINSTANCE hInstance)</div><div class="ttdoc">Khởi tạo instance.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_af3c5f911010a26961c492c1db836eaa5"><div class="ttname"><a href="class_c_web_view2_view.html#af3c5f911010a26961c492c1db836eaa5">CWebView2View::OnContextMenu</a></div><div class="ttdeci">afx_msg void OnContextMenu(CWnd *pWnd, CPoint point)</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_af68d028c52a6cca5adda492f8e42f314"><div class="ttname"><a href="class_c_web_view2_view.html#af68d028c52a6cca5adda492f8e42f314">CWebView2View::Login</a></div><div class="ttdeci">bool Login(LPCTSTR lpszMod=nullptr)</div><div class="ttdoc">Đăng nhập.</div></div>
+<div class="ttc" id="aclass_c_web_view2_view_html_af8b62fe6dbd9c59ab92ea96aca87d7f0"><div class="ttname"><a href="class_c_web_view2_view.html#af8b62fe6dbd9c59ab92ea96aca87d7f0">CWebView2View::m_devToolsSecurityBroker</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2DevToolsProtocolEventReceivedEventHandler &gt; m_devToolsSecurityBroker</div><div class="ttdoc">Event handler cho DevTools security.</div><div class="ttdef"><b>Definition</b> WebView2View.h:60</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_web_view2_view_8h.html">WebView2View.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

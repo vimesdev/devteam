@@ -1,0 +1,144 @@
+\doxysection{Include/\+HMSCore/\+Pipe\+Service.h File Tham chiếu}
+\hypertarget{_pipe_service_8h}{}\label{_pipe_service_8h}\index{Include/HMSCore/PipeService.h@{Include/HMSCore/PipeService.h}}
+{\ttfamily \#include $<$afxwin.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pipe_message}{Pipe\+Message}}
+\begin{DoxyCompactList}\small\item\em Lớp đại diện cho message được truyền qua named pipe. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_pipe_service}{Pipe\+Service}}
+\begin{DoxyCompactList}\small\item\em Lớp dịch vụ quản lý named pipe để giao tiếp với các ứng dụng khác. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Định nghĩa}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_pipe_service_8h_a8dc3c4c59a7522d6b4d41a2fc0e7d98b}{PM\+\_\+\+CARD}}~0x100000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d}{e\+Status}} \{ \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da405da0d107497b3596a3818a48478c9f}{status\+\_\+error}} = -\/1
+, \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23dad52787b0cfb0da2c053a68bcdc54bc6f}{status\+\_\+ok}} = 0
+, \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da19b3a09cf2291e62dc01cf90b9c17f45}{status\+\_\+cancel}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5e}{e\+Finger}} \{ \newline
+\mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea23e8755dca2afce79b8702f1d02c6145}{finger\+\_\+none}} = 0
+, \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea9e17e01aa447afeeec502628be0b3235}{finger\+\_\+enrollment}}
+, \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ead81ae66f9a26f69db621d2e52eb99911}{finger\+\_\+verification}}
+, \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea17147a53e3ea6dd8a0feb510fbbffc78}{finger\+\_\+add}}
+, \newline
+\mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea8396d17316110342bfbf7b80d6aaf084}{finger\+\_\+delete}}
+, \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea55996ee9d5571899be851cd33b81a673}{finger\+\_\+save}}
+, \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaf13267fd815ba64fe89bdffee54ab023}{finger\+\_\+read}}
+, \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaa383bd6e63b589015963701cc4160fcc}{finger\+\_\+bitmap}}
+, \newline
+\mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea03ee9808e992750eee883f86c694299a}{pipe\+\_\+write}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Các biến}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_pipe_service_8h_a876f7ef90651d73d99cd5ab050baf6ff}{k\+Pipe\+Running}}
+\item 
+CWnd \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_pipe_service_8h_af13dab293f1bfd6a62bcb0043cd6e6d0}{k\+Main\+Wnd}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_pipe_service_8h_doc-define-members}
+\doxysubsection{Thông tin về định nghĩa}
+\Hypertarget{_pipe_service_8h_a8dc3c4c59a7522d6b4d41a2fc0e7d98b}\index{PipeService.h@{PipeService.h}!PM\_CARD@{PM\_CARD}}
+\index{PM\_CARD@{PM\_CARD}!PipeService.h@{PipeService.h}}
+\doxysubsubsection{\texorpdfstring{PM\_CARD}{PM\_CARD}}
+{\footnotesize\ttfamily \label{_pipe_service_8h_a8dc3c4c59a7522d6b4d41a2fc0e7d98b} 
+\#define PM\+\_\+\+CARD~0x100000}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_pipe_service_8h_doc-enum-members}
+\doxysubsection{Thông tin về Enumeration Type}
+\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5e}\index{PipeService.h@{PipeService.h}!eFinger@{eFinger}}
+\index{eFinger@{eFinger}!PipeService.h@{PipeService.h}}
+\doxysubsubsection{\texorpdfstring{eFinger}{eFinger}}
+{\footnotesize\ttfamily \label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5e} 
+enum \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5e}{e\+Finger}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_none@{finger\_none}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_none@{finger\_none}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea23e8755dca2afce79b8702f1d02c6145}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea23e8755dca2afce79b8702f1d02c6145} 
+finger\+\_\+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_enrollment@{finger\_enrollment}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_enrollment@{finger\_enrollment}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea9e17e01aa447afeeec502628be0b3235}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea9e17e01aa447afeeec502628be0b3235} 
+finger\+\_\+enrollment&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_verification@{finger\_verification}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_verification@{finger\_verification}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ead81ae66f9a26f69db621d2e52eb99911}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ead81ae66f9a26f69db621d2e52eb99911} 
+finger\+\_\+verification&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_add@{finger\_add}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_add@{finger\_add}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea17147a53e3ea6dd8a0feb510fbbffc78}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea17147a53e3ea6dd8a0feb510fbbffc78} 
+finger\+\_\+add&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_delete@{finger\_delete}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_delete@{finger\_delete}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea8396d17316110342bfbf7b80d6aaf084}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea8396d17316110342bfbf7b80d6aaf084} 
+finger\+\_\+delete&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_save@{finger\_save}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_save@{finger\_save}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea55996ee9d5571899be851cd33b81a673}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea55996ee9d5571899be851cd33b81a673} 
+finger\+\_\+save&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_read@{finger\_read}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_read@{finger\_read}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaf13267fd815ba64fe89bdffee54ab023}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaf13267fd815ba64fe89bdffee54ab023} 
+finger\+\_\+read&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{finger\_bitmap@{finger\_bitmap}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!finger\_bitmap@{finger\_bitmap}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaa383bd6e63b589015963701cc4160fcc}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaa383bd6e63b589015963701cc4160fcc} 
+finger\+\_\+bitmap&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pipe\_write@{pipe\_write}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!pipe\_write@{pipe\_write}}}\Hypertarget{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea03ee9808e992750eee883f86c694299a}\label{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea03ee9808e992750eee883f86c694299a} 
+pipe\+\_\+write&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d}\index{PipeService.h@{PipeService.h}!eStatus@{eStatus}}
+\index{eStatus@{eStatus}!PipeService.h@{PipeService.h}}
+\doxysubsubsection{\texorpdfstring{eStatus}{eStatus}}
+{\footnotesize\ttfamily \label{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d} 
+enum \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d}{e\+Status}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{status\_error@{status\_error}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!status\_error@{status\_error}}}\Hypertarget{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da405da0d107497b3596a3818a48478c9f}\label{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da405da0d107497b3596a3818a48478c9f} 
+status\+\_\+error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{status\_ok@{status\_ok}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!status\_ok@{status\_ok}}}\Hypertarget{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23dad52787b0cfb0da2c053a68bcdc54bc6f}\label{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23dad52787b0cfb0da2c053a68bcdc54bc6f} 
+status\+\_\+ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{status\_cancel@{status\_cancel}!PipeService.h@{PipeService.h}}\index{PipeService.h@{PipeService.h}!status\_cancel@{status\_cancel}}}\Hypertarget{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da19b3a09cf2291e62dc01cf90b9c17f45}\label{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da19b3a09cf2291e62dc01cf90b9c17f45} 
+status\+\_\+cancel&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-var-members}
+\Hypertarget{_pipe_service_8h_doc-var-members}
+\doxysubsection{Thông tin về các biến}
+\Hypertarget{_pipe_service_8h_af13dab293f1bfd6a62bcb0043cd6e6d0}\index{PipeService.h@{PipeService.h}!kMainWnd@{kMainWnd}}
+\index{kMainWnd@{kMainWnd}!PipeService.h@{PipeService.h}}
+\doxysubsubsection{\texorpdfstring{kMainWnd}{kMainWnd}}
+{\footnotesize\ttfamily \label{_pipe_service_8h_af13dab293f1bfd6a62bcb0043cd6e6d0} 
+CWnd\texorpdfstring{$\ast$}{*} k\+Main\+Wnd\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{_pipe_service_8h_a876f7ef90651d73d99cd5ab050baf6ff}\index{PipeService.h@{PipeService.h}!kPipeRunning@{kPipeRunning}}
+\index{kPipeRunning@{kPipeRunning}!PipeService.h@{PipeService.h}}
+\doxysubsubsection{\texorpdfstring{kPipeRunning}{kPipeRunning}}
+{\footnotesize\ttfamily \label{_pipe_service_8h_a876f7ef90651d73d99cd5ab050baf6ff} 
+bool k\+Pipe\+Running\hspace{0.3cm}{\ttfamily [extern]}}
+

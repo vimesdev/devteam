@@ -1,0 +1,168 @@
+\doxysection{FMInsurance\+Posted\+Receipt\+Voucher\+List\+SOM.\+h}
+\hypertarget{_f_m_insurance_posted_receipt_voucher_list_s_o_m_8h_source}{}\label{_f_m_insurance_posted_receipt_voucher_list_s_o_m_8h_source}\index{Include/HMSReportForms/HospitalFee/FMInsurancePostedReceiptVoucherListSOM.h@{Include/HMSReportForms/HospitalFee/FMInsurancePostedReceiptVoucherListSOM.h}}
+\mbox{\hyperlink{_f_m_insurance_posted_receipt_voucher_list_s_o_m_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMInsurancePostedReceiptVoucherListSOM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMInsurancePostedReceiptVoucherListSOM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a36b1ff4fb5073bd6a8bc8fd02a87a8d0}{CFMInsurancePostedReceiptVoucherListSOM}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ad20c46a405f10288b0a9b2e20c290241}{m\_mIndex}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ac8d33c67bc4b721b7c2b2a14adc924d7}{m\_nEAmount}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aab05e388229fe9b85fd9bb970dfe1456}{m\_nIAmount}};}
+\DoxyCodeLine{00037\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ac4a6f3eae93c6ff35c8e5f2cce28b0e5}{m\_szCashIDS}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a9c3afab271570b3ca827264b355503a7}{m\_szReceiptStr}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aba5eed81fdcdf57781e0f058eb85c4c6}{m\_wndReportCondition}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a42a17eff8043571436510e5e9ffc7afe}{m\_wndDeptInfo}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a86719e1165b1a52c2e9eba6056f04681}{m\_wndPaymentSheet}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_abb57742ff72100a8fc85449ec29a134d}{m\_wndYearLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a4d78fc25f6192c5cc0f70c2b82b5b77d}{m\_wndYear}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a89db80c4a7264f06e7040f3d2c03e775}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a025b3588efc78857f2eb1ec374dec246}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aa2471e5540021e8a8cfbcf8015b631c9}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a55c81c098cbfe7196656bac9b647134f}{m\_wndFromDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a73cfdac1bdc96d17191ba03eae00b1a2}{m\_wndToDate}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a0dbc06a6b34ef6e3cbba96fda4b4b9ab}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a43dee5350da073a2a00452a8dd2a8d3c}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a40af01fe8ee24e55f9717e5835a7e2bf}{m\_wndClerk}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a90839e02d3875c44fec2cc34b3ae822a}{m\_wndObjectLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a578e80090b0a4783b9d3611612c418f7}{m\_wndObject}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a860b2912f2d173eaaf79f31ba7bef7f7}{m\_wndOrderByLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aeeff62f144cfd0fa347dd9474563fb8e}{m\_wndOrderBy}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a988f2efa83dda295560b2f05f5a833a5}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a1761faa83ed5c289465014d53a077f93}{m\_wndStatus}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a09d1c4d30bdf90e20c781b474f17adb4}{m\_wndList}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ae35f6d9ff0681608a9ee5c404d5d3197}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a9d5c0be555a9ed50f4e5c8d25be138ae}{m\_wndMarkAll}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_af6a7e4e1cb35afc9431338eaca144ac0}{m\_wndUnMark}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a843a39fe3d715f2c5d2e9195ec14074e}{m\_wndPrint}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a7891532b15223819e1b755ffd3dd5d6a}{m\_wndExport}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a6fcdcf41271bc47737350916c3c2542a}{m\_wndInpatient}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a3946649b86937b31852b7eacafb86110}{m\_wndOutpatient}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a94d10973704988d844aaf59863c92d08}{m\_wndDeposit}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a484110aa20e888b17010bac1429513dc}{m\_wndEDeposit}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a1522afe33c1bb4908242de059648247a}{m\_wndAll}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a0ba7b99d4ed2f6350ea65cf6b8be594a}{m\_wndSOD}};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a240b14ea3e110582604b1da9d8236582}{m\_nYear}};}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a737fa742c2947f52963ecedcd7b54681}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aaf0c15dd633462427db578e96dbbc9c4}{m\_szFromDate}};}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a15f864cec5f7942f6c85f39159f6507b}{m\_szToDate}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ab65332ab15c003a5363bc44a7a74d7a1}{m\_szClerkKey}};}
+\DoxyCodeLine{00077\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_abfeb80cf95f2b67e529e6cec12a3023c}{m\_szObjectKey}};}
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a2f393d1455dc966c76cca673d7c0a833}{m\_szOrderByKey}};}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_af9f8462371d4413f4d6e734286f9e8eb}{m\_szStatusKey}};}
+\DoxyCodeLine{00080\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ab392397caa0f72d9c46681b80539999b}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00081\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ae941ad949c291e58256fc13f61275d1d}{m\_bInpatient}};}
+\DoxyCodeLine{00082\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a67b02a1928e2d94d989417699ab1b2d6}{m\_bOutpatient}};}
+\DoxyCodeLine{00083\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a6fb94f2097a72eccc93012ea079e8fe7}{m\_bDeposit}};}
+\DoxyCodeLine{00084\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a6c3152c781a1f3f6005938b0b462140e}{m\_bEDeposit}};}
+\DoxyCodeLine{00085\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a206b7879c6de75d963231cb8eff62e1a}{m\_bSOD}};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ade6468fb38a88e316af43d27219b41f7}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a0dac31351629b4301c90eac303a4fb6d}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a774e3fbaec1cab449bf72717c7908da9}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a3f6e07481a9ed62e871435fba42ed668}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a56cbce7922ed1f35e68b6837b650ce87}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a04b3c492a1f3f9e33af9de928e65709c}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a2435c4d86743bd58d086d02de6eaf1d9}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a401e2f7e6831c758391457586049e1d5}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a7b9e4df6a7555603a5713c1dd9f932d7}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ab9a2faddfd7daba3c014957d48d93f37}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aec38d99295081d8d3bbc6481722642de}{OnObjectSelendok}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectSetfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectKillfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ada05591524d8bf9c166a7339ac71230f}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectAddNew();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ad69cb4a5efd388118676fae7732cf09a}{OnOrderBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a0e2619186df1980a0c9ce331b1854b02}{OnOrderBySelendok}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderBySetfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByKillfocus();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aa09e704a4d4dc6b1e85f4499aac427bc}{OnOrderByLoadData}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByAddNew();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a562a6c9d2b94661f92a070e3122cbb15}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a0a84bed09df5cc64e2ff8ee82bbb75b3}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a13b0979c5517f30c16c87251cce9adc8}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a58fd22aaec9d569682947b39650e9573}{OnListLoadData}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_af91f2c2a892dbbaf809c5adb4d1177c1}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a984067152a32036ad4618b4eb317a618}{OnListDblClick}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ab7f0da0c07e6a633e451489fcdf99586}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aca7f0714fe2fda8df37498ceb85b59e9}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ae7bce5676e20c2a594d4a709e5ef5af8}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a5ea250d615ac6dcb5762774e92b20e7c}{OnExportSelect}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a8f29a82c5a2adf0c08213af4eff3492b}{OnMarkAllSelect}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ac9a2b77b4849b6b23bf949a2233ae81c}{OnUnMarkSelect}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a2744ad318a8194e73d8f948d174a98a3}{OnSODSelect}}();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a378e356c264657367dda4cacbe03ce53}{OnPrint1stver}}();}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a51a3bfeffb2582998a8ee1634d60a015}{OnPrint2ndver}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a6bf9a598b4d5043a6bae3e35022a2cd7}{OnPrint3rdver}}();}
+\DoxyCodeLine{00142\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a4e6473344aea576faa2fac2c2a8515b3}{GetQueryString}}();}
+\DoxyCodeLine{00143\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a335ff69061c02a2376226b06aac64f0f}{GetQueryString2}}();}
+\DoxyCodeLine{00144\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a7bbf5d111508cefdadbfd35d6ca65c00}{GetQueryString3}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a9ea2be189e8a5fdd47652b913a16e5b9}{OnPrintSummaryReceipt}}(\textcolor{keywordtype}{double}\ nTotalAmount);}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ac4c1840d2e3ed3e94e68808081f1ddc9}{OnPrintFooterUser}}(CReportSection\ *rptFooter);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a36b1ff4fb5073bd6a8bc8fd02a87a8d0}{CFMInsurancePostedReceiptVoucherListSOM}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a86f11e3645b8134145e919f6de476f25}{\string~CFMInsurancePostedReceiptVoucherListSOM}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ac0c1eb2882de39341630a49675b45641}{OnCreateComponents}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a57198df59bb446303a1552d8393575a2}{OnInitializeComponents}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a584b126fbe4193a2ad1889eaf7dffbb5}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aa09e648f97bf9300ad5b5310c43fe9d7}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a7110f46cc6ead9240ac5dd8966ed875e}{GetDataToScreen}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a4095fe6237248278078478d124e91e62}{GetScreenToData}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a9824027b4eec7c2ee0ea674d0e2affdb}{SetDefaultValues}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ab359024b7040132a021a197f88654dd3}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_ad3bfc180f5e79d4247a5e1acdc9d365d}{OnAddFMInsurancePostedReceiptVoucherList}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a816bbf70988c8ca35e81fe3f3c3c29a7}{OnEditFMInsurancePostedReceiptVoucherList}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_aa6349b273be7d8b6cc22e04f963ce1e9}{OnDeleteFMInsurancePostedReceiptVoucherList}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a9ace23170128f93aa753ce96eeb995bc}{OnSaveFMInsurancePostedReceiptVoucherList}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_af2e6101c8f631f984b603b099b824710}{OnCancelFMInsurancePostedReceiptVoucherList}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_insurance_posted_receipt_voucher_list_s_o_m_a8a7a4df447d410b4875a137f6dc66fd9}{OnFMInsurancePostedReceiptVoucherListListLoadData}}();\ }
+\DoxyCodeLine{00164\ \};}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

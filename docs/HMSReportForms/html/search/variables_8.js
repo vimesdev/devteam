@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['sum_0',['sum',['../structtag_group_info3.html#a7bab00c2e20b5fd2551d1f24556d4f04',1,'tagGroupInfo3::sum'],['../structtag_group_info2.html#a040502779aa73d0ae0141d7e4fe832bf',1,'tagGroupInfo2::sum'],['../structtag_group_info.html#aea9c9357b5887a99477d4cc1123877d1',1,'tagGroupInfo::sum'],['../structtag_group_infor.html#a60a39effa6b6f01c1beb434b5ffe31c4',1,'tagGroupInfor::sum'],['../structtag_group_info4.html#a07170a6994eabe2c91cfaa97adef05fb',1,'tagGroupInfo4::sum']]],
+  ['sum_5fcolumn_5findex_1',['SUM_COLUMN_INDEX',['../_p_m_s_general_department_usage__108_old_8h.html#a7559249d1c348d52790156e6535ef459',1,'PMSGeneralDepartmentUsage_108Old.h']]],
+  ['szdept_2',['szDept',['../class_c_rpt_machine_inventory_record.html#a85b461b29943305bab891e25a369f2fb',1,'CRptMachineInventoryRecord::szDept'],['../class_c_r_p_t_i_t_s_asset_inventory.html#a032f562007b48c34ac687a657d23f9bb',1,'CRPTITSAssetInventory::szDept']]],
+  ['szdeptid_3',['szDeptID',['../class_c_s_r_m_thuthapthongtin_c_l_s.html#af9fa24ae4a6a9bc425253e5d8b0cc82e',1,'CSRMThuthapthongtinCLS']]],
+  ['szdiagnosis_4',['szDiagnosis',['../structtag_p_a_r_a_i_t_e_m.html#aa2cf9520d3bb806c81e7fd4303009c47',1,'tagPARAITEM']]],
+  ['szgroup_5',['szGroup',['../structtag_p_a_r_a_i_t_e_m.html#aa631a3f1d6d942e416f5c256b02abc9b',1,'tagPARAITEM::szGroup'],['../structtag_p_a_r_a_s_u_b_i_t_e_m.html#a6537f6c3189065cfaf9c624c5fd10c9f',1,'tagPARASUBITEM::szGroup']]],
+  ['szid_6',['szID',['../struct_c_p_m_s_summary_import_export_instock_for_stocks_report_dialog_1_1_d_r_u_g_i_t_e_m.html#ac09d1c62b29ef963f9ceed5b83a9762a',1,'CPMSSummaryImportExportInstockForStocksReportDialog::DRUGITEM::szID'],['../structtag_p_a_r_a_i_t_e_m.html#ac2475df686c6ab2e3462dc97a6254109',1,'tagPARAITEM::szID'],['../structtag_p_a_r_a_s_u_b_i_t_e_m.html#a64254137883b3ba85b9e08d64938e837',1,'tagPARASUBITEM::szID']]],
+  ['szinsprice_7',['szInsPrice',['../structtag_p_a_r_a_i_t_e_m.html#a88aedf401c634a2360119e1df4bbeb0f',1,'tagPARAITEM']]],
+  ['szname_8',['szName',['../structtag_p_a_r_a_i_t_e_m.html#a1cbf5759d11b9c2bfd2e486ee15753b4',1,'tagPARAITEM::szName'],['../structtag_p_a_r_a_s_u_b_i_t_e_m.html#af664b35fad0dbf990f2cd91ea75a1925',1,'tagPARASUBITEM::szName']]],
+  ['sznote_9',['szNote',['../structtag_p_a_r_a_i_t_e_m.html#a3bb38b4f011c6c04769e1a5b1ba123cf',1,'tagPARAITEM']]],
+  ['szpolprice_10',['szPolPrice',['../structtag_p_a_r_a_i_t_e_m.html#ae0d195acf1ffcc09389fa26345410b4b',1,'tagPARAITEM']]],
+  ['szposteddate_11',['szPostedDate',['../structs_item.html#a7397149d6dcb34fd1bc05ff6777c12e1',1,'sItem']]],
+  ['szprice_12',['szPrice',['../struct_c_p_m_s_summary_import_export_instock_for_stocks_report_dialog_1_1_d_r_u_g_i_t_e_m.html#a494a7b00a7810d006f25cbc76cfb064b',1,'CPMSSummaryImportExportInstockForStocksReportDialog::DRUGITEM']]],
+  ['szqty_13',['szQty',['../structtag_p_a_r_a_i_t_e_m.html#a6fb55709e12027f4f62e2b95166e0da1',1,'tagPARAITEM']]],
+  ['szreqapply_14',['szReqApply',['../structtag_p_a_r_a_i_t_e_m.html#a1e635777de6ff1d3cf9b71f0013239e1',1,'tagPARAITEM']]],
+  ['szreqprice_15',['szReqPrice',['../structtag_p_a_r_a_i_t_e_m.html#aae0750d5d14fab31f24ac36b79811652',1,'tagPARAITEM']]],
+  ['szsample_16',['szSample',['../structtag_p_a_r_a_i_t_e_m.html#a17fa40b36431ab63bf84f28fe0e60506',1,'tagPARAITEM']]],
+  ['szservprice_17',['szServPrice',['../structtag_p_a_r_a_i_t_e_m.html#af78757be4fa105939fb3b39f4e80d894',1,'tagPARAITEM']]],
+  ['szsubitem_18',['szSubItem',['../structtag_p_a_r_a_i_t_e_m.html#af6e4bd2d7d8a8ea0f8534f2c774a0fc1',1,'tagPARAITEM']]],
+  ['sztype_19',['szType',['../struct_c_p_m_s_summary_import_export_instock_for_stocks_report_dialog_1_1_d_r_u_g_i_t_e_m.html#aeeafb38bfed0402ac45434cd8c2bfe27',1,'CPMSSummaryImportExportInstockForStocksReportDialog::DRUGITEM']]]
+];

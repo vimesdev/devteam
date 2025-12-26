@@ -1,0 +1,224 @@
+\doxysection{HMSUpdate\+Patient\+Infor\+Dialog.\+h}
+\hypertarget{_h_m_s_update_patient_infor_dialog_8h_source}{}\label{_h_m_s_update_patient_infor_dialog_8h_source}\index{Include/HMSCore/HMSUpdatePatientInforDialog.h@{Include/HMSCore/HMSUpdatePatientInforDialog.h}}
+\mbox{\hyperlink{_h_m_s_update_patient_infor_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHMSUPDATEPATIENTINFORDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHMSUPDATEPATIENTINFORDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a4afeb103303c4077053391e96f82b140}{CHMSUpdatePatientInforDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a81626f02cc5a32d10e45c3bb0779b4ac}{m\_wndDocumentNoLabel}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a7cefd6aa96053137b53979ad0b97786f}{m\_wndDocumentNo}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a308d146fb380666cf079b7bbeed7af59}{m\_wndPatientNoLabel}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aed3502beb99419f00d3b5ec94bd94415}{m\_wndPatientProfiles}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aa7f19a767160d72a1255dbe3d7d97c92}{m\_wndPatientNo}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a7e0deb1d64d356702dcea8b4490bfebf}{m\_wndPatientNameLabel}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a8a4e87b8716d9844403a1037686ccc98}{m\_wndPatientName}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a78235f5740daf9f46ba7627fd2120a89}{m\_wndBirthDateLabel}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab2573f46448538647959b110c80c236e}{m\_wndBirthDate}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a9b212fd074b2d576166df804d0ee0340}{m\_wndSexLabel}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae754c8b5631b1be307020c0f107b9bfd}{m\_wndSex}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_af66a3f9e75b9c2599feeeb5505e94da5}{m\_wndEthnicLabel}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a341356691788afe3389edf814173b5b9}{m\_wndEthnic}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab48fdb953d5a64c9b097cf46c6b7dbb8}{m\_wndOccupationLabel}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae76a3176edf05804c39d40fcfb07c8d5}{m\_wndOccupation}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ac9cfa9b6c6f0814182f5218d95836d8f}{m\_wndProvinceLabel}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ad0d9c9be7521e0b2aa658e9abffc805e}{m\_wndProvince}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a5d6e5170a3b66aaba8ceea7acc8a60b2}{m\_wndDistrictLabel}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab8a450ef8eb668eafccbf76703316d2e}{m\_wndDistrict}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a59b4ed455aaa71c30b192f8b6e119a18}{m\_wndVillageLabel}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ad8504530031fa80a4cfa94f3db448286}{m\_wndVillage}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a652b30924162f7e788bfecddc6ff4970}{m\_wndDetailAddress}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab70090301241443135b4a16f50300b66}{m\_wndDetailAddressLabel}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a79f4ff4e7a124e856d95edc8251b1611}{m\_wndWorkplaceLabel}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a27ab03f624e9b50655331538280a2807}{m\_wndWorkplace}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a91e23826bad27d4a4031e12655cebf8e}{m\_wndArmObjectLabel}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_afff0e9d5e563ceec10473a4cb1c09912}{m\_wndArmObject}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae8c945747eb7c2aa875c36b85835719c}{m\_wndRankLabel}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a2c3104d6fca22970f216ac48148d3898}{m\_wndRank}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a871bd4dccb49e6e659e78fcc18f208d1}{m\_wndPositionLabel}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae939eaa93ca2e749fab9e473249efa03}{m\_wndPosition}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_abac5b9e6f844a5e7c7d68e0cb8cea95a}{m\_wndRelativeLabel}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aca94668c99e9e15bb3bee0edf94cfb10}{m\_wndRelative}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a222390602f096f5d811b7f72c2917260}{m\_wndRelationLabel}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae4cef1c71b3375eda6913b566c4d8ea9}{m\_wndRelation}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a83abc3744df5bdb1e42f8bc83b92012b}{m\_wndContactAddressLabel}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a6d6092245120e14eb767eb57a59ce38b}{m\_wndContactAddress}};\ }
+\DoxyCodeLine{00084\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a62fa1dc54d3a2cac8464d94d09248b6f}{m\_wndContactPhoneLabel}};\ }
+\DoxyCodeLine{00085\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a34b1107b8160a09b8deeebc3973454a8}{m\_wndContactPhone}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ac60f769efacf3bf1a2ccb615aa352d3e}{m\_wndSave}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a54cc82d3bd60df1a23c30b86ee3017b4}{m\_wndCancel}};\ }
+\DoxyCodeLine{00088\ \ \ \ \ CGuiLabel\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aaef2c17978aae48b72a357b64f7b493e}{m\_wndIDNumberDate}};\ }
+\DoxyCodeLine{00089\ \ \ \ \ CGuiDateCtrl\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a840b0e64f4a73f855c824e2a8952b105}{m\_wndIssueDate}};\ }
+\DoxyCodeLine{00090\ \ \ \ \ CGuiLabel\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab0cd6082ee6e2dbd5d9d5263df3381a3}{m\_wndIDNumberLabel}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ CGuiTextCtrl\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab7e1ba9f1c0137ce96ca71ad6063cdf1}{m\_wndIDNumber}};\ }
+\DoxyCodeLine{00092\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a563dcf44222ce2af5811e00e4587885e}{m\_szIssueDate}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a5b2d33f8bc637e21e59a93a4e8f6c54a}{m\_szIDNumber}};\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a0cbe1ac3cdfcde1f1ae3ff00e798bcc2}{m\_hms\_patientTbl}};\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a6b6cad82a65d66732ee3d7ad907541e8}{m\_nDocumentNo}};\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a5e23a4a96fb7c1b4b0536437ece90404}{m\_nPatientNo}};\ }
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a86ab096feeb0cb888b53e4aa54f6aece}{m\_szPatientName}};\ }
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a6fd81c537c156f8f42e51682dd117ff5}{m\_szBirthDate}};\ }
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aa785ade031928d7c3069a58c377ad854}{m\_szSexKey}};\ }
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a35f5c4955a765defd8558f48e22f4ba5}{m\_szEthnicKey}};\ }
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ad3dd845032597aafe84a8b303a58fdc3}{m\_szOccupationKey}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a223352b535c6723c8f026eac0f2dfd8a}{m\_szProvinceKey}};\ }
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a61256d0ca371cf15a0929b1fc139b946}{m\_szDistrictKey}};\ }
+\DoxyCodeLine{00105\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a8ff5992fec2d37b82ef088a55ca0776e}{m\_szVillageKey}};\ }
+\DoxyCodeLine{00106\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a02004e5ecc6a6a94b7e025e69cc27960}{m\_szDetailAddress}};\ }
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_afbc9ebefd8e04dec3686e2b2478ce443}{m\_szWorkplace}};\ }
+\DoxyCodeLine{00108\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a2a54b27e3e334ca3380f5da931264443}{m\_szRankKey}};\ }
+\DoxyCodeLine{00109\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a75a2bde0bb1c9b7fc1741d17d58f6c3c}{m\_szPositionKey}};\ }
+\DoxyCodeLine{00110\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae9bfc473d4b27f3754803ddade99d9e7}{m\_szRelative}};\ }
+\DoxyCodeLine{00111\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae26878ee6264d6a4ffcafc3767d7a014}{m\_szRelationKey}};\ }
+\DoxyCodeLine{00112\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a206c2d975058defe98317dcbdca3796e}{m\_szContactAddress}};\ }
+\DoxyCodeLine{00113\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a7ea0b951e5da8b0cb658fc6823e1c2ef}{m\_szContactPhone}};\ }
+\DoxyCodeLine{00114\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_af391b6ca3edfbe57a27667dab4aa2846}{m\_szArmObjectKey}};\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a0d5a9a575089280c16d10d2babb1c40c}{OnIssueDateCheckValue}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnIDNumberChange();}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnIDNumberSetfocus();}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnIDNumberKillfocus();}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_add8dc43c9252641dd2086df4e892daba}{OnIDNumberCheckValue}}();\ }
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoChange();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoSetfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoKillfocus();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aee4845e88e12a72382b8929e6c6e82ff}{OnDocumentNoCheckValue}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNoChange();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNoSetfocus();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNoKillfocus();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a69ecd81d82f6b7abd5f04fc2c87d8f0d}{OnPatientNoCheckValue}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameChange();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameSetfocus();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameKillfocus();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aebaa555853f7acc382a866e6d589655c}{OnPatientNameCheckValue}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBirthDateChange();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBirthDateSetfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBirthDateKillfocus();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a01954a85fe95081c8bef56cffb0481e2}{OnBirthDateCheckValue}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aff6b3e485fcdd66d0bf5ef66f47ceeb1}{OnSexSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a0ad6d836d1e3a5a41e7d572a379d8aad}{OnSexSelendok}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexSetfocus();\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexKillfocus();\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a76af8537bf8961653fc6751506ace395}{OnSexLoadData}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexAddNew();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a1be4709feda891a3414ab2e7053ed2de}{OnEthnicSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ac8cd7d572eabfe646621cc71410f1fa7}{OnEthnicSelendok}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEthnicSetfocus();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEthnicKillfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a95b542aba725c56731695bf9eb2355ab}{OnEthnicLoadData}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEthnicAddNew();\ }}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae49c53be6a0fd40f06332824979c81d5}{OnOccupationSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a172cbae3e0152121ac92e9fa3ec61762}{OnOccupationSelendok}}();\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOccupationSetfocus();\ }}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOccupationKillfocus();\ }}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae7fcd00b250407f130f24d81a52ddd6e}{OnOccupationLoadData}}();\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOccupationAddNew();\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a88952bb132c98c9f502492cf96be016e}{OnProvinceSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab4eeb05f193fdd03d237f301cce4e563}{OnProvinceSelendok}}();\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProvinceSetfocus();\ }}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProvinceKillfocus();\ }}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ad30dc586df2e567a3f1db7002f3a0840}{OnProvinceLoadData}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProvinceAddNew();\ }}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a9ef86b068e3ff76482cb8df740049402}{OnDistrictSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a8b3eaa99c70d1b9eb410f5041bc7746d}{OnDistrictSelendok}}();\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDistrictSetfocus();\ }}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDistrictKillfocus();\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a7ec7234f21680f7594bc1b8cc16fe056}{OnDistrictLoadData}}();\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDistrictAddNew();\ }}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a92871b48c711db28264de163a89eafd2}{OnVillageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_af6c051aa7eaf65fe28e74ad8b504588e}{OnVillageSelendok}}();\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVillageSetfocus();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVillageKillfocus();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a4533c6f0c61628f05c3139279c1d86ac}{OnVillageLoadData}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVillageAddNew();\ }}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDetailAddressChange();\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDetailAddressSetfocus();\ }}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDetailAddressKillfocus();\ }}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a230795697d9f318227a532c0cfcf32bf}{OnDetailAddressCheckValue}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnWorkplaceChange();\ }}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnWorkplaceSetfocus();\ }}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnWorkplaceKillfocus();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a2a8873ced65c3f74812b1d9fb8b28b3e}{OnWorkplaceCheckValue}}();\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a5a0db40b63c903bcc16914e3f50e37f9}{OnRankSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_afcd6e8caf92f708f2a7fb83a61f46777}{OnRankSelendok}}();\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRankSetfocus();\ }}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRankKillfocus();\ }}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a058e0bde311b1409fe2772bda27049d0}{OnRankLoadData}}();\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRankAddNew();\ }}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a556bcedf9971d6abbe2fc75da25ad22f}{OnPositionSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a32ac3da75c606402e0e55e2703c60a6e}{OnPositionSelendok}}();\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPositionSetfocus();\ }}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPositionKillfocus();\ }}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a3f87ca4e593bf212a3320ff4de69d4d1}{OnPositionLoadData}}();\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPositionAddNew();\ }}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRelativeChange();\ }}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRelativeSetfocus();\ }}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRelativeKillfocus();\ }}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aa2c14af402304714d40d2f7cd802d9c9}{OnRelativeCheckValue}}();\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab70e8637ed6860e0224db112eea7a20d}{OnRelationSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ac32eae7a6fa203b9ac887f7212203e72}{OnRelationSelendok}}();\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRelationSetfocus();\ }}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRelationKillfocus();\ }}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ace8a5b85caa79574d343dd86c7dfd6cd}{OnRelationLoadData}}();\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRelationAddNew();\ }}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContactAddressChange();\ }}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContactAddressSetfocus();\ }}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContactAddressKillfocus();\ }}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a182769914836c373dd51cd9bb3e70640}{OnContactAddressCheckValue}}();\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContactPhoneChange();\ }}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContactPhoneSetfocus();\ }}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContactPhoneKillfocus();\ }}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a912f567bd7e08fc8ebdee2facc86558a}{OnContactPhoneCheckValue}}();\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ac775f9599ed89fae929eb12625f72b23}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ae0fc4806189bda1a3b0a37ecf9b49df6}{OnCancelSelect}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a099bed53ed1d0b26452721c11eed2d6f}{OnArmObjectLoadData}}();}
+\DoxyCodeLine{00215\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a4afeb103303c4077053391e96f82b140}{CHMSUpdatePatientInforDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00216\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab3fb72f901efd826c072feeb9edbdc29}{\string~CHMSUpdatePatientInforDialog}}();}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aef5bd75712768f4156334d81e4cdb01b}{OnCreateComponents}}();}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a3e30fdd1ce93417f85b7df21b9597005}{OnInitializeComponents}}();}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a3c91ecc48589ae10767d6575ff1ddfce}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_abe7426efe3f2960f0b3648f99e7b857b}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a845909e5be8092ce204dcf884f594028}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ad42fd516b5bf80992890de552da7df4e}{GetDataToScreen}}();}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_abd1e2a27490ba734dc405907cbe4f3e9}{GetScreenToData}}();}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a57fb4c16695a3555bce90a0ae83e72a3}{SetDefaultValues}}();}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ad9defc42bdbba3b25705dbd6b8453601}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a96723e5419cf6d8ec58061635536c32a}{OnAddCHMSUpdatePatientInforDialog}}();\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_aa83a443bb648aa5292f0b3f6ebd5063a}{OnEditCHMSUpdatePatientInforDialog}}();\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_af3edc0c4949381463652d3aaca4d2335}{OnDeleteCHMSUpdatePatientInforDialog}}();\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_ab296f9db250329a13018fd5d8b3be9db}{OnSaveCHMSUpdatePatientInforDialog}}();\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_af271c834fbfdac531cd78502a2dcd6e2}{OnCancelCHMSUpdatePatientInforDialog}}();\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_update_patient_infor_dialog_a6fe6c8351d4ad6ab9067e8aeb3c23064}{OnCHMSUpdatePatientInforDialogListLoadData}}();\ }
+\DoxyCodeLine{00232\ \};}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

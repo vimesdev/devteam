@@ -1,0 +1,99 @@
+\doxysection{Ole\+Rich\+Edit\+Ctrl.\+h}
+\hypertarget{_ole_rich_edit_ctrl_8h_source}{}\label{_ole_rich_edit_ctrl_8h_source}\index{Include/HMSCore/OleRichEditCtrl.h@{Include/HMSCore/OleRichEditCtrl.h}}
+\mbox{\hyperlink{_ole_rich_edit_ctrl_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#if\ !defined(AFX\_OLERICHEDITCTRL\_H\_\_3DFF15EE\_7336\_4297\_9620\_7F00B611DAA1\_\_INCLUDED\_)}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AFX\_OLERICHEDITCTRL\_H\_\_3DFF15EE\_7336\_4297\_9620\_7F00B611DAA1\_\_INCLUDED\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#if\ \_MSC\_VER\ >\ 1000}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_MSC\_VER\ >\ 1000}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ OleRichEditCtrl.h\ :\ header\ file}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <richole.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ COleRichEditCtrl\ window}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a320a35d074d1807a89520a704caed91c}{COleRichEditCtrl}}\ :\ \textcolor{keyword}{public}\ CRichEditCtrl}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Construction}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a320a35d074d1807a89520a704caed91c}{COleRichEditCtrl}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a8fd5f321a322cdb1c1596847523d7204}{\string~COleRichEditCtrl}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a59e0b7136fcb6a7a8ad8e239561b53a1}{StreamInFromResource}}(\textcolor{keywordtype}{int}\ iRes,\ LPCTSTR\ sType);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ DWORD\ CALLBACK\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_ada30ba278b7b7623a024856005ca9ea2}{readFunction}}(DWORD\ dwCookie,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ LPBYTE\ lpBuf,\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ buffer\ to\ fill}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ LONG\ nCount,\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ number\ of\ bytes\ to\ read}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ LONG*\ nRead);\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ number\ of\ bytes\ actually\ read}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{interface\ }IExRichEditOleCallback;\ \ \ \textcolor{comment}{//\ forward\ declaration\ (see\ below\ in\ this\ header\ file)}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ IExRichEditOleCallback*\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a29a93d30932447c0e1c497514917f195}{m\_pIRichEditOleCallback}};}
+\DoxyCodeLine{00037\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_adb97a81569439ccf029e0d2e0f6cef07}{m\_bCallbackSet}};}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{interface\ }IExRichEditOleCallback\ :\ \textcolor{keyword}{public}\ IRichEditOleCallback}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ IExRichEditOleCallback();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a6899c26eefa0d621bac1137a12bdef80}{\string~IExRichEditOleCallback}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a82b098e91fd37b47a8906115c3374276}{m\_iNumStorages}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ IStorage*\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_ac55c0a045d16bc832f8ec1099f87b1a1}{pStorage}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ DWORD\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_aee2f80e192915cafb65013c34ba638c7}{m\_dwRef}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a69c4ff24d3179be99135f3b68b3e1ce9}{GetNewStorage}}(LPSTORAGE*\ lplpstg);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_ae3d9f5ea3ddacaf996fe98ead05fb8e7}{QueryInterface}}(REFIID\ iid,\ \textcolor{keywordtype}{void}\ **\ ppvObject);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ ULONG\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a9da6ed85433bf3dbffc8e4512dd8aa7d}{AddRef}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ ULONG\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_af7ee57d606a909737ebf1130fdbf8939}{Release}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a488e7442b3bf87a1d40ed58352a849c1}{GetInPlaceContext}}(LPOLEINPLACEFRAME\ FAR\ *lplpFrame,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ LPOLEINPLACEUIWINDOW\ FAR\ *lplpDoc,\ LPOLEINPLACEFRAMEINFO\ lpFrameInfo);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a22e2ed99a73a7b0ff6977b939db73664}{ShowContainerUI}}(BOOL\ fShow);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_adcffdf1dc005a15a7f708f52934c88a5}{QueryInsertObject}}(LPCLSID\ lpclsid,\ LPSTORAGE\ lpstg,\ LONG\ cp);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_aeac43c95adff655b277fc2aa80cf5740}{DeleteObject}}(LPOLEOBJECT\ lpoleobj);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a7fd5e682a027f63c4d3e7abbb8f95dbc}{QueryAcceptData}}(LPDATAOBJECT\ lpdataobj,\ CLIPFORMAT\ FAR\ *lpcfFormat,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ DWORD\ reco,\ BOOL\ fReally,\ HGLOBAL\ hMetaPict);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_aa18ee8f991b03f8146797cc7b36b66a7}{ContextSensitiveHelp}}(BOOL\ fEnterMode);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a92badd8056d5d5552dfdd738dc93bdaa}{GetClipboardData}}(CHARRANGE\ FAR\ *lpchrg,\ DWORD\ reco,\ LPDATAOBJECT\ FAR\ *lplpdataobj);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_ad85e7d70f67679cb4a8ed7cc19bb4369}{GetDragDropEffect}}(BOOL\ fDrag,\ DWORD\ grfKeyState,\ LPDWORD\ pdwEffect);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ HRESULT\ STDMETHODCALLTYPE\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_aba760d70b217a87dd449e20fedab5e08}{GetContextMenu}}(WORD\ seltyp,\ LPOLEOBJECT\ lpoleobj,\ CHARRANGE\ FAR\ *lpchrg,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ HMENU\ FAR\ *lphmenu);}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ \ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ Overrides}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ ClassWizard\ generated\ virtual\ function\ overrides}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\{\{AFX\_VIRTUAL(COleRichEditCtrl)}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a5f4f8b9a369884704c9023090475381f}{PreSubclassWindow}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\}\}AFX\_VIRTUAL}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00078\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ Generated\ message\ map\ functions}}
+\DoxyCodeLine{00082\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\{\{AFX\_MSG(COleRichEditCtrl)}}
+\DoxyCodeLine{00084\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ole_rich_edit_ctrl_a0a3ebe40127210b5fc30f6416a2801e8}{OnCreate}}(LPCREATESTRUCT\ lpCreateStruct);}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\}\}AFX\_MSG}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{comment}{//\{\{AFX\_INSERT\_LOCATION\}\}}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//\ Microsoft\ Visual\ C++\ will\ insert\ additional\ declarations\ immediately\ before\ the\ previous\ line.}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !defined(AFX\_OLERICHEDITCTRL\_H\_\_3DFF15EE\_7336\_4297\_9620\_7F00B611DAA1\_\_INCLUDED\_)}}
+
+\end{DoxyCode}

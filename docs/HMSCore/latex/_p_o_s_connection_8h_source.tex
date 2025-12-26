@@ -1,0 +1,116 @@
+\doxysection{POSConnection.\+h}
+\hypertarget{_p_o_s_connection_8h_source}{}\label{_p_o_s_connection_8h_source}\index{Include/HMSCore/POSConnection.h@{Include/HMSCore/POSConnection.h}}
+\mbox{\hyperlink{_p_o_s_connection_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ POSCONNECTION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ POSCONNECTION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <afxinet.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ DEVICE\_ACTIVE\ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DEVICE\_PAYMENT\ \ \ \ \ \ 2}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ URL\_CUSTOMERINFO\ \ \ \ \_T("{}api/v1/retrieveCustomer"{})}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ URL\_ACTIVECARD\ \ \ \ \ \ \_T("{}api/v1/activateCard"{})}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ URL\_GETSESSIONCODE\ \ \_T("{}api/v1/getDeviceSessionCode"{})}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ URL\_PAYMENT\_INVOKE\ \ \_T("{}api/v1/invoke"{})}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ URL\_UNPAY\_INVOKE\ \ \ \ \_T("{}api/v1/invoke"{})}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o}{tagCUSTOMERINFO}}\{}
+\DoxyCodeLine{00019\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_adea54cd8035053ddea4cf78b84388dc6}{FullName}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_aa1a1aa8b9fc42c826368c14d93fb9c12}{BirthDate}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_ab383031bf9ad0713f121293255f7512e}{Gender}};}
+\DoxyCodeLine{00022\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_a15b71e7c33122573e637be53e9eb5c8c}{IdentityNumber}};}
+\DoxyCodeLine{00023\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_a2a4d558fddb3da7b1aab5ae1b12be420}{GuaranteeIdentityNumber}};}
+\DoxyCodeLine{00024\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_a5e5c8b172b229947cfcd9a282e1e3739}{IdentityIssuePlace}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_a2c7d1dc5f7cac58c159b825520974089}{IdentityNumberIssueDate}};}
+\DoxyCodeLine{00026\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_ab91ebf44d7d191f5f602473016861327}{Phone}};}
+\DoxyCodeLine{00027\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_a24baa1e5a958da17420c961eb9aa33f3}{Email}};}
+\DoxyCodeLine{00028\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_a72badc42d3eb73b43810641c70d3bd60}{Address}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_aecfb5f3396180a87f79f0fc11660b7fa}{BankNoPinLimit}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_a1ec58e575e2d2dffcf4b10ac79d72030}{OnelinkNoPinLimit}};}
+\DoxyCodeLine{00031\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_c_u_s_t_o_m_e_r_i_n_f_o_ab41aaae816ac394b2146deaf870a3242}{WithBankCode}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \}\mbox{\hyperlink{_p_o_s_connection_8h_a3a8c0822c7ed2608ed7480e9febd0eb5}{CUSTOMERINFO}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_p_o_s_comm_8h}{POSComm.h}}"{}}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#ifndef\ HAVE\_POS}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ \#define\ HAVE\_POS\ \ \ \ 1}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_p_o_s_connection_a3bbb2652a33510e8606d2534b8b4f6b5}{CPOSConnection}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \ \ \ \ CInternetSession*\ \mbox{\hyperlink{class_c_p_o_s_connection_a4b3e9262b8b9e73edb29e43b57564633}{m\_session}};}
+\DoxyCodeLine{00047\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a404dac721f40f12526c1310f9cb7bce9}{ConvertJson}}(\mbox{\hyperlink{_p_o_s_connection_8h_a3a8c0822c7ed2608ed7480e9febd0eb5}{CUSTOMERINFO}}\ customer);}
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a398559997592b3172069859cc8a3f3a1}{ToDataSignature}}(\mbox{\hyperlink{_p_o_s_connection_8h_a3a8c0822c7ed2608ed7480e9febd0eb5}{CUSTOMERINFO}}\ customer);}
+\DoxyCodeLine{00049\ \ \ \ \ CStringA\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a5d9f5a544a612aedda1371686d33b736}{UTF8Encode}}(LPCTSTR\ lpszData,\ \textcolor{keywordtype}{int}\ nLength);}
+\DoxyCodeLine{00050\ \ \ \ \ CStringW\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a91a854b8a5a314f59c4a1f9552737d95}{UTF8Decode}}(LPCSTR\ lpszData,\ \textcolor{keywordtype}{int}\ nLength);}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a78ddfab49235b95ae4fff663fd5bc6f7}{SHA256Encode}}(LPCTSTR\ szData);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a209e17f23e85615fe9e9953dd49c51d3}{m\_szData}};}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_comm}{CPOSComm}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a87edbd5c6b83bddc3159a7e7054ba8d2}{m\_CommPort}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ CStringArray\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a1671d87f3e58d0af0563eccba84ebcf7}{m\_resCodes}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a46e102e45ad8204705e8129ff873350f}{m\_szHost}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_acb333486b4a60fb65163083c6f0ad5da}{m\_nPort}};}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_ab3a5eeb0f89b98e49516f27d7673eed0}{m\_szAPIFunction}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_afbad749b949580d4c512b373d6e8d2d7}{m\_szClientID}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a2f8feb8336475cbac7d88f0d4212b180}{m\_szSecretKey}};}
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a7dbe996ea960a8b9881f8d543e45ebc6}{m\_szError}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_ab09d653e978efd58ef7655c266fb0969}{m\_szDeviceSessionCode}};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a5caac34aff0ed71d696c25c30f9a79a6}{m\_bHasCommPort}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a3bbb2652a33510e8606d2534b8b4f6b5}{CPOSConnection}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a2e9197aaf77a51a75dbcaeaef956b71c}{\string~CPOSConnection}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a6d387ebdc633344d7e8567b921dfe02d}{Init}}(LPCTSTR\ szHost,\ \textcolor{keywordtype}{int}\ nPort,\ \ LPCTSTR\ szClientID,\ LPCTSTR\ szSecretKey);}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_adcae5ecd256be72e0c8e598a91d31f99}{GetLastError}}();}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_afd40f01b25770a2f8b216b02c4d2d04a}{GetData}}();}
+\DoxyCodeLine{00080\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a11731cca54d9cd15db85c1743b867a9e}{SendRequest}}(LPCTSTR\ szURL,\ CString\ szArgs,\ CString\&\ szResponse,\ \textcolor{keywordtype}{int}\ nType=CHttpConnection::HTTP\_VERB\_GET);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a8635e7a33a5804276a945a403a126910}{GetHost}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_p_o_s_connection_a46e102e45ad8204705e8129ff873350f}{m\_szHost}};\}\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a0540edac3553ce4a73f5327c78c3be0e}{GetPort}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_p_o_s_connection_acb333486b4a60fb65163083c6f0ad5da}{m\_nPort}};\ \}}
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a8946cc409cfa91056e19e8d20bcd0e64}{GetClientID}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_p_o_s_connection_afbad749b949580d4c512b373d6e8d2d7}{m\_szClientID}};\ \}}
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a8c7773e85f086c89c394b244326d45c1}{GetSecretKey}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_p_o_s_connection_a2f8feb8336475cbac7d88f0d4212b180}{m\_szSecretKey}};\ \}}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//Ham\ lay\ ma\ ket\ noi\ thiet\ bi\ hien\ tai}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//Ma\ duoc\ lay\ truoc\ do\ va\ luu\ vao\ registry}}
+\DoxyCodeLine{00089\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a67e40ccb5a26eca91ce782a1981817b9}{GetDeviceSessionCode}}();}
+\DoxyCodeLine{00090\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_o_s_connection_a27c71c4d14de1e96d074dc754faa5b29}{GetNewDeviceSessionCode}}(\textcolor{keywordtype}{int}\ nDeviceType\ =\ \mbox{\hyperlink{_p_o_s_connection_8h_a39eb45e74103cd12040f759708c982e7}{DEVICE\_ACTIVE}});}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//HAM\ PHAT\ HANH\ THE\ KHACH\ HANG}}
+\DoxyCodeLine{00094\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_aad475f481815c37b42ee13ad2c31c7d3}{ActiveCard}}(\mbox{\hyperlink{_p_o_s_connection_8h_a3a8c0822c7ed2608ed7480e9febd0eb5}{CUSTOMERINFO}}\ customer);}
+\DoxyCodeLine{00095\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a950a14a9c36c221cbb7845205b0e75e1}{GetCustomerInformation}}(CString\ szCardCode,\ CString\ szServiceCode,\ CString\ szIdentifyNumber);}
+\DoxyCodeLine{00096\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a729619b910d186c41f93aa670105c759}{Invoke}}(CString\ szDescription);}
+\DoxyCodeLine{00097\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a4c31c9d1af8e2b6d4cace9e60854b27b}{OnActiveNewCard}}(\mbox{\hyperlink{_p_o_s_connection_8h_a3a8c0822c7ed2608ed7480e9febd0eb5}{CUSTOMERINFO}}\ customer);}
+\DoxyCodeLine{00098\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_ab496789a0a3b7a004faae21321682042}{Payment}}(CString\ szTransactionID,\ \textcolor{keywordtype}{double}\ nAmount,\ CString\ szDescription);}
+\DoxyCodeLine{00099\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_ace06c9b0fa0eedea52749f74ca5743a6}{CancelPayment}}(CString\ szTransactioID,\ \textcolor{keywordtype}{double}\ nAmount,\ CString\ szDescription,\ CString\ szBillCode);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_ae84d89b21cda568c04bb0f1d13d542f6}{ParseResponse}}(LPCTSTR\ lpszResponse);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a84e1e10446d6579501b313d08bf654c3}{OpenPort}}(LPCTSTR\ lpszPort);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_p_o_s_connection_a5cedc3155cb95b63392c9290d0c99f99}{ClosePort}}();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ CString\ \mbox{\hyperlink{_p_o_s_connection_8h_a53abdf3091ede4be7b7f02d200de8f09}{Date2Number}}(LPCTSTR\ lpszDate);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,186 @@
+\doxysection{HMSTreatment\+Care\+Input\+Dialog.\+h}
+\hypertarget{_h_m_s_treatment_care_input_dialog_8h_source}{}\label{_h_m_s_treatment_care_input_dialog_8h_source}\index{Include/HMSCore/HMSTreatmentCareInputDialog.h@{Include/HMSCore/HMSTreatmentCareInputDialog.h}}
+\mbox{\hyperlink{_h_m_s_treatment_care_input_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSTreatmentCareInputDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSTreatmentCareInputDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a829081e234827958897ce15e37f98c5f}{CHMSTreatmentCareInputDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a085e80b34bcd15eebbf8c0d1f5db052d}{m\_nDocumentNo}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a0b82da22714ac4ea87edff274c481628}{m\_nTreatIdx}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a771407a0bdd22f757f76e55705b363c5}{m\_nPrintCount}};}
+\DoxyCodeLine{00037\ \ \ \ \ CDbfMap\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a4e799d38b5951aae08ed721ff20f7ca5}{m\_hms\_careinfoTbl}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ac98f21b806d130928bd56f028d1a55c0}{m\_szCreatedBy}};}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a9b7f20f8315254766d71e41523c4ec59}{m\_wndDateLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ae56a903d96fe818fd18ce9344ac099d6}{m\_wndDate}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_afcf810b53c5364dd0ef658ee312bebe5}{m\_wndNormal}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a569ad74c11bc9061c5f39eacc41038c9}{m\_wnd6h}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a374d7aa64ae2070cd53fbcce11e8d32f}{m\_wnd18h}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a7ebb66c026dd3c7fae60df276ceea717}{m\_wnd25h}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa70bcc67df98170ccc49ba8be7570455}{m\_wndOperationNameLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a061e2f996392d90cad1da34fe89564a9}{m\_wndOperationName}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_af803320253bc76b09f3da28cd0d7a795}{m\_wndDiseaseTrackingLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa5feffcb893728a4d142de8a4307f206}{m\_wndDiseaseTracking}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa2f4f8ee4d65d39755168ec4a9d4fb7c}{m\_wndPatientTakeCareGroup}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a3ca6c04fd5fa9d6f9a41954a3e667e30}{m\_wndPatientTakeCare}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//CGuiCheckBox\ \ m\_wndInputPulseTemperature;}}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a35a8ed865c42e15842c45dc735e4a0db}{m\_wndPulseLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aabd110505e8fe9b0a7e6fa2e86252299}{m\_wndPulse}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a862f663641cec9062268b4d04e79b437}{m\_wndTemperatureLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ab7b74e46ad27f24d4e9ab66358f31fb8}{m\_wndTemperature}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a9fe6459d851d04b7c86515da2298cc04}{m\_wndBloodPressureLabel}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a9ae2b91019fc49c19d3dfdbf120ebe9b}{m\_wndBloodPressure}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a3a00fd4cb18cdabbfb3211580b4f02b3}{m\_wndLabelSpec}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_afdc98b904ab12d1c0bc79a4b73aa5969}{m\_wndBloodPressureHight}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a4cdc58faa497053aca36db6d8f7cc27f}{m\_wndBreathingRateLabel}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_af3a9809163f3b35d30cb2db6b5c7426a}{m\_wndBreathingRate}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ad48a8540e4d0098dd133fad8624a1a74}{m\_wndSP02Label}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a22838637396cb59aaff27c30c8e53715}{m\_wndSP02}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a34d877e50109dfc37b3567e21e386793}{m\_wndSauPT}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a72b1d4b260faeb9818eca219da19e476}{m\_wndDauhieunhiemkhuanLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a429b7788b2993b9042631040b8c97933}{m\_wndDauhieunhiemkhuan}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a866d159e0706311eff1c5fff97f9c7c7}{m\_wndYes}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a839473168287530efa44d96066f19fb3}{m\_wndNo}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ae5a675b79b719a9cd6e01247fe2e3e7c}{m\_wndDaitienLabel}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a2486a25d1f8b5e3ae55f485c34b7de9a}{m\_wndDaitien}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aeabf98087d6a9f76c209a5d1dc08dfc9}{m\_wndTieutienLabel}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a09e6e3a27612bf40a68f86a8d4f244df}{m\_wndTieutien}};}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a43c66f8dc250003bfc97feb017bf5057}{m\_wndSave}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_acbf3bc645cdcab0388a38c5114e36e03}{m\_wndClose}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a49f0fadc2047074a01be00d2ca900c04}{m\_wnddanhmucnhiemkhuan108}};}
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ac397ea059b192ed0dce943b850dce2f4}{m\_szDate}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aed15f8eb40072a70712fc34968bd9cce}{m\_nNumberDate}};}
+\DoxyCodeLine{00080\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a9e09543a90e266a835f05bdd7d8da3d7}{m\_bNumberDateSelect}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a0578df2bcefb4b9bd260d3dffd11db85}{m\_szDiseaseTracking}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a9f40be2fc10bf4be537d67e894705ed5}{m\_szPatientTakeCare}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a7d802979c9d5407beed1c89daca63bae}{m\_szCare}};}
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a02c8f5e5260dbdb640a87d121cda0bcb}{m\_szDauhieunhiemkhuan}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aee5155ea404e4b108c334a237fa2d626}{m\_nYes}};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a82919021fbed235e325e37751600cb47}{m\_nNo}};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//BOOL\ \ m\_bInputPulseTemperature;}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a7f8505102e3f4707a090561dc04ec22a}{m\_nPulse}};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ae637d21986541e07ce358eca1a49c82a}{m\_nTemperature}};}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a383eadfdd62256c37b4d0832ae165501}{m\_nBloodPressure}};}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a8e60a1156a8eee688adc3d437dc75016}{m\_nBloodPressureHight}};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a7d2560e7307d25f140a726269b7482c6}{m\_nBreathingRate}};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a52a6df2a67deb1b8a4ed2db276728d1c}{m\_nSP02}};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a22b348ad5bb9069273f9a5f1dfd75bc7}{m\_n6h}};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a527fe218eb6bdc761b3ecf792f2d685f}{m\_n18h}};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a3a0f3359dffb3f1fb4f39ff9001c8aef}{m\_n25h}};}
+\DoxyCodeLine{00097\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a8cb43ec30c0070ea3a29ec4bb8523cb7}{m\_szOperationNameKey}};}
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a87c113802cb80ca541c3a0c7b35fd30e}{m\_szRefCode}};}
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_adaf8cce0cb87856d388e9fe76482fc7e}{m\_szRefType}};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a77bb94e0ba3e29f70e3024cf62dcc564}{m\_nNormal}};}
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a9c9a8c1f4156dfb08c9ab34f7b370395}{m\_szDaitien}};}
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ad42544f5280c7cf3c6528ecbf3922c46}{m\_szTieutien}};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_afbf308a930414b9bd3e84b4b12450a76}{OnDaitienCheckValue}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa721199cd33e7a75c252ab35c7c9ef8e}{OnTieutienCheckValue}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDateChange();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDateSetfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDateKillfocus();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a184a1afb4c7a06cdec81fdc96e6b536e}{OnDateCheckValue}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a2833fe696b6a3c81f45d9e897d74736f}{OnNormalSelect}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a29ed6b9fd131613b682de3394991dc67}{On6hSelect}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa2abc210af83db1a67e584b49722bb2b}{On18hSelect}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a4de0a510b2aa963f07b812304d6df1b7}{On25hSelect}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_adaefde46320203e73c3065ef67c7e0c7}{OnOperationNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a2b1582f058631e8a6f0b0a15689dc217}{OnOperationNameSelendok}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationNameSetfocus();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationNameKillfocus();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a109496a0cb07fbe57b7f002f36c2f502}{OnOperationNameLoadData}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationNameAddNew();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a5c26494b3c3eb83842dab819b53643bd}{OnNumberDateLabelClick}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a344c4ab4b22925e2357fae409efaf296}{OnNumberDateCheckValue}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiseaseTrackingChange();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiseaseTrackingSetfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiseaseTrackingKillfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ae8b32e7195870c165f02b8d555c97bd4}{OnDiseaseTrackingCheckValue}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientTakeCareChange();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientTakeCareSetfocus();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientTakeCareKillfocus();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_acba351138937497c58b09ce8be527e3c}{OnPatientTakeCareCheckValue}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCareChange();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCareSetfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCareKillfocus();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a2b3da9036fd73a747feb3b8ab78a2180}{OnCareCheckValue}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInputPulseTemperatureSelect();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPulseChange();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPulseSetfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPulseKillfocus();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa5d71fd90f5c71580710357e88905b68}{OnPulseCheckValue}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTemperatureChange();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTemperatureSetfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTemperatureKillfocus();\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a64147a053cfb7b99df23177396480a55}{OnTemperatureCheckValue}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBloodPressureChange();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBloodPressureSetfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBloodPressureKillfocus();\ }}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a9249062ed3721086dd95cac36ba8f27c}{OnBloodPressureCheckValue}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBloodPressureHightChange();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBloodPressureHightSetfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBloodPressureHightKillfocus();\ }}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_adf3213e907a4c9d956833073621304e5}{OnBloodPressureHightCheckValue}}();\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBreathingRateChange();\ }}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBreathingRateSetfocus();\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBreathingRateKillfocus();\ }}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a7862ab5ec60c0913a112ee44d3001b8e}{OnBreathingRateCheckValue}}();\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSP02Change();\ }}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSP02Setfocus();\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSP02Killfocus();\ }}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ad8257e68b6859d2a216b9550af293071}{OnSP02CheckValue}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_af5bdbca9c098908bcca019458959553b}{OnDauhieunhiemkhuanCheckValue}}();}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa163b01cf31b6a88976eda62f9c49e12}{OnYesSelect}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ad198d95c4e747426bc10aa72e0977b80}{OnNoSelect}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a0b668b962eb3f4cf8c8d1fbb0c422246}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a7cbe478c2ff6e2c87fd74865000054c1}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a829081e234827958897ce15e37f98c5f}{CHMSTreatmentCareInputDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nUID=0);}
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a1accc2edab02622ddf17a122400f2479}{\string~CHMSTreatmentCareInputDialog}}();}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a58dc0ef2e95ef6dda6ed47836ebd3dcb}{OnCreateComponents}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a2a921fcfcb744a8132ebb5fa46fded05}{OnInitializeComponents}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ae5d39293e09b0e1913c811335a952202}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aaa14874354425ce4702d44eee528a7c7}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a1e2ebd3c6242cbd59f9f04502f311ef9}{GetDataToScreen}}();}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_aa8d3bbbbc8e81d16e58ce6ef7a4602b4}{GetScreenToData}}();}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a7e3e76d80fd064e431591baa4fe10ec5}{SetDefaultValues}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a521bc319b07978821bfb161a9a367a76}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a5793395af77bd3725d589314fb60acdb}{Ondanhmucnhiemkhuan108Select}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//void\ \ EnableInputPulse(BOOL\ bFlag);}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ae4040b8df0d5ff843720ebe0588af43a}{OnAddHMSTreatmentCareInputDialog}}();\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a46d72543ccfd4c77133c0a20db256746}{OnEditHMSTreatmentCareInputDialog}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a255685788ead5330990d9c9c273d6247}{OnDeleteHMSTreatmentCareInputDialog}}();\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a4315637bc26dfb96a4f3829e74ff1f20}{OnSaveHMSTreatmentCareInputDialog}}();\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_a48496c82de2dab034151e24c855d5bd6}{OnCancelHMSTreatmentCareInputDialog}}();\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_care_input_dialog_ad9d265f9e1917ae75cacacd97c2cec70}{OnHMSTreatmentCareInputDialogListLoadData}}();\ }
+\DoxyCodeLine{00182\ \};}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,119 @@
+\doxysection{HMSModify\+Fee\+Item\+Info\+Dialog.\+h}
+\hypertarget{_h_m_s_modify_fee_item_info_dialog_8h_source}{}\label{_h_m_s_modify_fee_item_info_dialog_8h_source}\index{Include/HMSCore/HMSModifyFeeItemInfoDialog.h@{Include/HMSCore/HMSModifyFeeItemInfoDialog.h}}
+\mbox{\hyperlink{_h_m_s_modify_fee_item_info_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSMODIFYFEEITEMINFODIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSMODIFYFEEITEMINFODIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_abb12880c2de248f88a5da6ad3e6efd8a}{CHMSModifyFeeItemInfoDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_acbd507bbc7f15b0c6251f2b8e17387d7}{m\_nOrderID}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a34687b93793ec45f872346c0daf03807}{m\_nProductID}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a137d58a49dc12a58843d356014d9e708}{m\_szClass}};\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a4f5e31ebc39db8885864e6042c50e24b}{m\_wndModifyFeeInformations}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ae17dc15a63b761f4ab3e46efd6e6d105}{m\_wndStent}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ac54ffc8b10b5a439bfd23bd0d158f72c}{m\_wndQuantityLabel}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_afa5a18849f3f1a164215b49fd1ce5495}{m\_wndQuantity}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a6bd3f15472d3f3365a337a09887e2e08}{m\_wndInsideOperationLabel}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a6ea4a647a4c22d8b9ce366b6d0490eaf}{m\_wndInsideOperation}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a67adbb3437ffc22c543a89795fc475dd}{m\_wndOutsideOperationLabel}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a0cec1193ac34d528833b8bafd358f05d}{m\_wndOutsideOperation}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a6b90091ca76aa59ef49c8b568d89ea54}{m\_wndApplyAssessInsurance}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_af3829d21c4e257b4a06f52122043bdbb}{m\_wndAssessInsurance}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a0264ec26df9a8dc7d7287a77cb956f1d}{m\_wndInsurancePaid}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ab77c6e1d3e69ad04b84be20110b3f942}{m\_wndQtyInsurance}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a9e84d6256116de1c805db0622eb2a1be}{m\_wndPatPaid}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a0cf659b8f0f7d8c1c227d1698bd14970}{m\_wndQtyDiff}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a83c3586e6846a508dac2956d5776aba9}{m\_wndApply}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_adf737ff60a0a2b4f90e685b63d98ec56}{m\_wndClose}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a5ef5ba2f909ab66dfcf28c35aa5453dd}{m\_wndKhongtinhtran}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a4c3fdb67565ff5f719006cb924cd9d3e}{m\_nQuantity}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a969a960c6c38af8ff1fbbbe89979375f}{m\_nInsideOperation}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a216112664f50a4309fa520d344460587}{m\_nOutsideOperation}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ad727e7cb600da98df54cbc95d4ccc208}{m\_nInsurancePaid}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a76c90d00f596fac973daf361406fb18e}{m\_bApplyAssessInsurance}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ac98261d51d135188150a89b3444c3309}{m\_bKhongtinhtran}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ab1a6a9adb8169affda5eea2dd4523bcb}{m\_nAssessInsurance}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a8bddad2063da5c720ab3e701ade83568}{m\_nQtyInsurance}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a92cd4452040831f63c2d2195dc64233e}{m\_nQtyDiff}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantityChange();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantitySetfocus();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantityKillfocus();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a90873e9353cb497ad679ace3c5c01daa}{OnQuantityCheckValue}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInsideOperationChange();\ }}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInsideOperationSetfocus();\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInsideOperationKillfocus();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a7d299c8bc6a90c6ec73c9e4268dc5526}{OnInsideOperationCheckValue}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOutsideOperationChange();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOutsideOperationSetfocus();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOutsideOperationKillfocus();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a8c97a78708c604fa032f14b9563f7659}{OnOutsideOperationCheckValue}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a50edc8be72f645c554f9fefb8171f17d}{OnApplyAssessInsuranceSelect}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssessInsuranceChange();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssessInsuranceSetfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssessInsuranceKillfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_af45032bb26ff8e9f610eae3f3b07695d}{OnAssessInsuranceCheckValue}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a8d9559af9db7915a0ab9809934cbc4a8}{OnInsurancePaidSelect}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyInsuranceChange();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyInsuranceSetfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyInsuranceKillfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_aff7e0f2393df69c47f8ea677d61cd1de}{OnQtyInsuranceCheckValue}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a91fe91ad7123ceb8947a8992b8431ba1}{OnPatPaidSelect}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyDiffChange();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyDiffSetfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyDiffKillfocus();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a1efd630b281de8495c73969b7ec07bef}{OnQtyDiffCheckValue}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a985d333bd14814b2a56de73a0ad2e4a5}{OnTime1Select}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_aeba6b1fd173e4ee7fff1b8f0b11da418}{OnTime2Select}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_af97144cea32bde3b5f7eadfee83bd2af}{OnTime3Select}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a35170f4c9fc5639d511740a8e3b8d474}{OnApplySelect}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a5e09594484e2c584fc7187cd25dab804}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_abb12880c2de248f88a5da6ad3e6efd8a}{CHMSModifyFeeItemInfoDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ac1d466f9dfb0f5e56db122f3b304aadd}{\string~CHMSModifyFeeItemInfoDialog}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_aa7420291d1c5cf8c37c1a66711995a88}{OnCreateComponents}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_add84ba2561d0222343f74d9ef5abf061}{OnInitializeComponents}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a0294658506d229a80d6e669186473d91}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_add90fc992edaccf144a9c8977ddcd0ca}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_aaa7d11a64a98535ce602d7ad0d33284a}{GetDataToScreen}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a660a34c264c898ab46e2ffb60b24e187}{GetScreenToData}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ac61b3348ba6d25d254b8b05c0b2f75f9}{SetDefaultValues}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a10ebd575152c6046af8807abf5cddc99}{OnKhongtinhtranSelect}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a2e2e41febe6722b4f8563e7100d6f5fa}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a0ef6367de2c42b4dd1af6232a3c15017}{OnAddHMSModifyFeeItemInfoDialog}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_ae049a95842f4032d635f7d30d81ca466}{OnEditHMSModifyFeeItemInfoDialog}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a8a52b7e7c2da41c66eaf77f884fe5fe0}{OnDeleteHMSModifyFeeItemInfoDialog}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a3de2a44d5b2cbc258397a7f34433546d}{OnSaveHMSModifyFeeItemInfoDialog}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a11ea138e4a08d59f0f906125e15b5faa}{OnCancelHMSModifyFeeItemInfoDialog}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_modify_fee_item_info_dialog_a89b5b11bdb2f3e90544d4a447c4b38dd}{OnHMSModifyFeeItemInfoDialogListLoadData}}();\ }
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

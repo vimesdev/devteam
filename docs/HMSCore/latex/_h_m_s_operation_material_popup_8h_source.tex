@@ -1,0 +1,160 @@
+\doxysection{HMSOperation\+Material\+Popup.\+h}
+\hypertarget{_h_m_s_operation_material_popup_8h_source}{}\label{_h_m_s_operation_material_popup_8h_source}\index{Include/HMSCore/HMSOperationMaterialPopup.h@{Include/HMSCore/HMSOperationMaterialPopup.h}}
+\mbox{\hyperlink{_h_m_s_operation_material_popup_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSInpatientPrescriptionPOPUP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSInpatientPrescriptionPOPUP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Storage\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiPopup.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a5f60a152d1ba5bee15c0b2984f4ebc9f}{CHMSOperationMaterialPopup}}\ :\ \textcolor{keyword}{public}\ CGuiPopup\{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a4e03752ddfbb1b3dcd4fe1b658b8206d}{m\_bInpaient}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a03a7337ccb3adfea292d79f047959be8}{m\_nOrderID}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ac3697c8d37edaa671dba2ffe3eb8985b}{m\_nOperationID}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a17f1a24e72d8e906a5af18a8a8016464}{m\_szItemID}};}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a75924a3aea33ce7635862fed1bddbea9}{m\_szOrders}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ae9ec1e31db570f4505d757731fc48cf1}{m\_nLevel}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a99c410b87cf868bf30bff4cfb347a8d1}{m\_wndInpatientPrescriptionInput}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a02425732143ba04f41d960494b190038}{m\_wndStorageLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a9dec43784a3d9b77132e77269122d245}{m\_wndStorage}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a48a80c4bdaa5cf54d2f6dc64c770aa43}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a8819d316c7e57f4ca728cdb9a0979df0}{m\_wndOrderDate}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_abc157d1f485b29c31170df2b13316be0}{m\_wndDrugReplaced}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a5816e835f30934d48b9fc21de646c66e}{m\_wndNameLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a77fed4d64aa9b1801292dd71d7953412}{m\_wndPrincipleActive}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aadfc86426bf9ed3ac1ffe03592ba8f7c}{m\_wndName}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a53832cde363f5142d5877445f678d968}{m\_wndQuantityLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_abc52f8b58a67e4193a92a4d25074c629}{m\_wndQty}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a96e03443857d78b37d9e84944c7af6b8}{m\_wndOnHandLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aee1e988650171cd5cc23ff0bc02fd89a}{m\_wndMaxQuantity}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aec0a3e793a15e0b87680dc6c2183a13e}{m\_wndUsageLabel}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a9a0b8f9956fb82d62551622223ed96b2}{m\_wndUsage}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a230cfab215f537db52b0784f4c27ca87}{m\_wndDescription}};}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a8453ee9d685727cfbca55d68ecc1174e}{m\_wndSave}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a674347428b2819434c3336ceb9632eca}{m\_wndClose}};}
+\DoxyCodeLine{00064\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a84e8364c47c8f9556cffaf8e61a471f4}{m\_szStorageKey}};}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a4a8e32d3b8e8db6beaf6061dccc8d6b8}{m\_szOrderDate}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ade42be486640ed71dc63cc6d53cf4a61}{m\_szNameKey}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aab46c90e12af0d52f846c991c1ba2dec}{m\_szUnit}};}
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a3b3a803eac6eb78374aaf45cb08ffe13}{m\_szProdCountry}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a0a78884d97e6c9bd962ae020cfa3e924}{m\_szIndicationKey}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a52fc2822c4644528e9ec154f95bb977a}{m\_szTimeDay}};}
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ab115f9f9054202321b93892294e800b7}{m\_szTimeQty}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a55ac689c64b38fd13d766d8e1e1b38a5}{m\_nQty}};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a58d3bba04ec5e4a14b85437e3b68a127}{m\_nMaxQuantity}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_adee9b72bb35382ef69c0455ce0d8d546}{m\_szUsage}};}
+\DoxyCodeLine{00077\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a16a50eb898d02d7f866d8a1f06d5fdb1}{m\_bPrincipleActive}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a4e42a0c6a06c6bae3928d784bf9ba2c1}{m\_nTotalCost}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_af8d519c5f0b6e6c88c13295fdbc6c502}{m\_nPatientPaid}};}
+\DoxyCodeLine{00080\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aca693af293afaab9d33655599438c9b5}{m\_hms\_pharmaorderTbl}};}
+\DoxyCodeLine{00081\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ad934e99b12a916334ac5bd31e0297587}{m\_hms\_pharmaorder\_lineTbl}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a6e4a4eb55b0bc894d7406c7769e09e3f}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_af8f96cc4ff85aa15b60c3f4dc92f43f2}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a04f56c8cf37a2a7c615da080f06c5ce1}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a0466ef9eba2b1c4e724e9321a2e3e1df}{OnStorageAddNew}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ad1eb87fbced51322b3e1ab1622b50425}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ac61815efbc89737e18613b2a7172101a}{OnNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ac1f19e7f024dcd542cff38abf927bbac}{OnNameSelendok}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ae7602225f123bcaa6fe135ae0741bf84}{OnNameLoadData}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a7751e69e277cd5318c06ff40c3562a67}{OnNameAddNew}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitChange();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitSetfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitKillfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a0571135eed230e2235f48d8ba3682696}{OnUnitCheckValue}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProdCountryChange();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProdCountrySetfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProdCountryKillfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a1263b830ddb0a967f4b6092c13079bb4}{OnProdCountryCheckValue}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyChange();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtySetfocus();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQtyKillfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a05ac120748faca1a2ac4df80fca395d0}{OnQtyCheckValue}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantityChange();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantitySetfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMaxQuantityKillfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aae84960a71fa7e41616d5071a02c34f5}{OnMaxQuantityCheckValue}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageChange();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageSetfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUsageKillfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_af42754948f24fe751bb496799698e88e}{OnUsageCheckValue}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a6e5b3ef6f0ea8078ef9d5f96a2cca430}{OnPrincipleActiveSelect}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aa380963b0c33de886e977ddc93504a05}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_adfcc68b9a251fbf3995c512660533333}{OnConfirmSelect}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a0cc7452dd56609d7812a58765717e56a}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalCostChange();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalCostSetfocus();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalCostKillfocus();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_af69e3801f891e4ca32c81cae3821ff14}{OnTotalCostCheckValue}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientPaidChange();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientPaidSetfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientPaidKillfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a43944b10e8bffe382c76c07111d2a1bd}{OnPatientPaidCheckValue}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a5f60a152d1ba5bee15c0b2984f4ebc9f}{CHMSOperationMaterialPopup}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a63f1a90fd78459bad6c3c5107e4cb9f0}{CHMSOperationMaterialPopup}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a158041e47ddd94596413539949243e50}{\string~CHMSOperationMaterialPopup}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ab95761d63aa3282e969bfe07d083c588}{OnCreateComponents}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a74116d3186273ef812ce015e7ecd67a3}{OnInitializeComponents}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a7d008dff7113a4931dbd5f8d91a9bb2d}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a7534b6c301d900a26e8227b384cc4190}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a6af0c204a9686941113c71e1c6117a2e}{GetDataToScreen}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_af276e185d27bf7867a7e00e326514972}{GetScreenToData}}();}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a6e714900dff16804677746e33c6a3300}{SetDefaultValues}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_ab671db541d6f092d804339be04487353}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aa657eebab73d3be67feb831a7681576f}{OnAddHMSOperationMaterialPopup}}();\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aa36540845c2144f1eb13a4ec2d195299}{OnEditHMSOperationMaterialPopup}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_afbf7b11611849f5995305c6d9562f996}{OnDeleteHMSOperationMaterialPopup}}();\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aa539461b3bacdb923b7a2ec51e0ec151}{OnSaveHMSOperationMaterialPopup}}();\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a0c2044238e81d12f7bf62f5c792ad8a0}{OnCancelHMSOperationMaterialPopup}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_aa3611cf4a7630cdb7f640abebd950efe}{OnHMSOperationMaterialPopupListLoadData}}();\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//Ham\ ket\ thua\ tu\ lop\ CGuiPopup;}}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a8925645faf99432347cde2913224e272}{ShowPopup}}(CWnd*\ pWndRef,\ \textcolor{keywordtype}{int}\ nShowPopup=WPS\_BOTTOM);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_material_popup_a7faa4354a91ce5fd9837e4a232349bb7}{ClosePopup}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \};}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

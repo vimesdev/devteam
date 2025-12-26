@@ -1,0 +1,162 @@
+\doxysection{FMFood\+Policy\+Posted\+Receipt\+List.\+h}
+\hypertarget{_f_m_food_policy_posted_receipt_list_8h_source}{}\label{_f_m_food_policy_posted_receipt_list_8h_source}\index{Include/HMSReportForms/HospitalFee/FMFoodPolicyPostedReceiptList.h@{Include/HMSReportForms/HospitalFee/FMFoodPolicyPostedReceiptList.h}}
+\mbox{\hyperlink{_f_m_food_policy_posted_receipt_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMFoodPolicyPostedReceiptList\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMFoodPolicyPostedReceiptList\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a74ae21c82fbd02bb0410ddc16630ff64}{CFMFoodPolicyPostedReceiptList}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aa1fce77e0acecec06491dc8af4eebf13}{m\_mIndex}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a1d13c06a4cc9313fb3a58d93a847c189}{m\_nEAmount}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a546635f70dfc7b82258ea5bd55809f80}{m\_nIAmount}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aefc733c512c086ee081426ef5ca598b2}{m\_szCashIDS}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ae3d7ecd5f5dca29d9fa5e55842acb405}{m\_wndReportCondition}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a51d30455c556e10ed091084763c923fd}{m\_wndDeptInfo}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_acbba6369a6599ecd8547742b886ae8ad}{m\_wndPaymentSheet}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aadf1ac1a2dfd4857cb06a7a571201393}{m\_wndYearLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aface2a589e1c8eacc6c891ea79057039}{m\_wndYear}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a4670965c5367fdc0d9e939f1b96237dd}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a884f47fa51725599890fcc9bff77a43e}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ad51e313b64d9175de715742facf99314}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a893a5a2d305b80e784d5c44d42f9a2e2}{m\_wndFromDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a6180c40b531842f1b7df6823530641eb}{m\_wndToDate}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a94c689f9885bee346deee592c90d3cdc}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a880ccd00a8483d37cf22df993b704e9e}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a2e2a0e491514de3854195e88a81452be}{m\_wndClerk}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a813b45cb036788541a57378b52ff4dfb}{m\_wndObjectLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a5013bb92719ce0fbb6026e5c4ae079d0}{m\_wndObject}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aad5ebc21bf261dcecd1162c62f94156b}{m\_wndGroupByLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aa71e02407a1b08925455dc566b4b6b82}{m\_wndGroupBy}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a197278c7150a562de4b45c99d93b6ac2}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_adb9935ec969f323a6b6375c41b42953e}{m\_wndStatus}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ada2bcdf278ab83c7b38c5c4420c205e1}{m\_wndList}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a550d196e044fbd5b50b175ae28fd2a36}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a84f0012ff478da4cc0903d105c20bdd7}{m\_wndMarkAll}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_af88e1249dcf79591fbbd3b8b66ab94f0}{m\_wndUnMark}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a648655c41e81913e0c19eaf324fb40fd}{m\_wndPrint}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ad637f3f431c3e0bc716557b6e5022894}{m\_wndExport}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a821c851274eb2916f76f9f29861528b1}{m\_wndServicePackage}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a46e14d6e94458973bcbffc632256edba}{m\_wndOtherFee}};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a876f9997ddb9c80802d078c1f4ae0204}{m\_nYear}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aeadc1f9c056b729b30b2870cedd8251d}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8f1f9ea4fa9f0430d4e94e8d37f6a166}{m\_szFromDate}};}
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a75ebf48062c330ee6abd5bb58402d617}{m\_szToDate}};}
+\DoxyCodeLine{00072\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aab67aca39a601abb430a61c74ac2a7ad}{m\_szClerkKey}};}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8c61f1fd33cd2760eff5b32d39ffb8fb}{m\_szObjectKey}};}
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a250fac26c86b7da8d29e75764a84c548}{m\_szGroupByKey}};}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a96dcda6e5c627d9067b966a81cc9f7ab}{m\_szStatusKey}};}
+\DoxyCodeLine{00076\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ab778d2bde6d281c1cc15229aba45ee8a}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00077\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a5a8f515d63fd03ca0dea035665dd3bf3}{m\_bServicePackage}};}
+\DoxyCodeLine{00078\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a7a344bf416f871510b3c21ab26d6ed04}{m\_bOtherFee}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_afbdfdaf5af2440eecc8d92ec8ee7aea8}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ad26b674bd4eb3b69617d0b58fd30e5c4}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a5e8c582d26f42f57e6b93ba2ee5bb052}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8bc091cd97ca1701d473d117815c7229}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a43089375a496f47fe48f88b38c8edc3a}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aa918498cab4d47aad7bf57f2c7959b7f}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a592dc3f7facede365771db35917a9a7f}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a3cba391fe48f67f3cde70b039218833d}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ae26a1274859b91bd3859362f35607f0a}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a81deb90a9b75c8adafcbada5453c84e0}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ae1404cf8aa8cd462cee3354aef1e6d5d}{OnObjectSelendok}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectSetfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectKillfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aeb6d345cde30356fd878891b75e85fc2}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectAddNew();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a6f37f62d03062f255d9ac50f4307c6a9}{OnGroupBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a9a0ac5139210f6323861519439ee9131}{OnGroupBySelendok}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupBySetfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupByKillfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a16d66839abc33e68a57ffd351087dc69}{OnGroupByLoadData}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupByAddNew();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a9305fdba23f0f11d82b60eb420a144ab}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ae46ee16696a8ecbc025d063864a59bf2}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8af2df4c3dd3af3985bc8acd424b22f7}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a4d43164b2ed734ab02c491424f9a393a}{OnListLoadData}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a7a43408c76665c3785b97bbeefc07ccc}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ad3f0f5a16370823a21c9e5055c4ea305}{OnListDblClick}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a1bd72cd74f943b25b6b2998a8d9e07f4}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_aab7866e53e38ddc193f7d376b8918904}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a7985f8d76597f85f35202dac17e6ff87}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a776162bbfed810bd9cb8e5bf30e201fe}{OnExportSelect}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_adb28de9359aed6876cbd60615e9a0f2d}{OnMarkAllSelect}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_af96196add334b68dfdbfa73850d30471}{OnUnMarkSelect}}();}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a7226504de1e3694abd3810b6738f55eb}{OnServicePackageSelect}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a74552804cf4f0b3dae40f99669c387ef}{OnOtherFeeSelect}}();\ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_afb0e8576b8bbac84adb0931f0a8a53fd}{OnPrint1stver}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a2be4409dd104900cf433dda726b1b183}{OnPrint2ndver}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a5dfe7d2bd602695d5f3d807f6fe87340}{GetQueryString}}();}
+\DoxyCodeLine{00137\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a0e76a06c1cf5e916956970dbfaf3df0f}{GetQueryString2}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8edd797f654cb2c5f3b685f90f5d6525}{OnPrintSummaryReceipt}}(\textcolor{keywordtype}{double}\ nTotalAmount);}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_ab853de6aeae8ff933d42e1f49d3aadd1}{OnPrintFooterUser}}(CReportSection\ *rptFooter);}
+\DoxyCodeLine{00140\ \ \ \ \ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a74ae21c82fbd02bb0410ddc16630ff64}{CFMFoodPolicyPostedReceiptList}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8e772b1e06d175508f3ddd35eb7e7468}{\string~CFMFoodPolicyPostedReceiptList}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a79c8b0716e065940f2e313637d132fbb}{OnCreateComponents}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a174dca808289dfa196e09f4cf80fcb14}{OnInitializeComponents}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a5d32b35759f825a43cb37b62383f9491}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8360c28e4db515925fbd52d989bac1fd}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a8f01b3235483fd3960804b971f9381c5}{GetDataToScreen}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a50ef6c9d58688f79e67d5c28b4c0c35b}{GetScreenToData}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a6658c82dfba7068d467b1944f4b6d11a}{SetDefaultValues}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a00082da1e146888f0937e1b6123cb717}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a6d160f37310f88df94881d890638c7d4}{OnAddFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a16e29852e44a18fc4e63d679c6680a87}{OnEditFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a2256e7478bfb422e62540ce296556486}{OnDeleteFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_abf700aa6ade3461fc3a23d15cc3bc0b4}{OnSaveFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a07a00acd2ee05f5d7d8c0451cc695606}{OnCancelFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_food_policy_posted_receipt_list_a69fc97acd401497112b2ae503e202d13}{OnFMInsurancePostedPaymentVoucherListListLoadData}}();\ }
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

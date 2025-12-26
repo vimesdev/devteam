@@ -1,0 +1,25 @@
+var struct_c_h_m_s_fee_manager_1_1_c_fee_item =
+[
+    [ "CFeeItem", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ae20a73a147bcb64b83756e6535f8ce0e", null ],
+    [ "m_nCoPayment", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#aabd4b4dfc3e8ad6b4db442c3e9c47f03", null ],
+    [ "m_nCost", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a6e11f7d5a4e1af553a3e6370e74f025a", null ],
+    [ "m_nDiffCost", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ad950c1aaa63f5a6145bd52b91cfd842d", null ],
+    [ "m_nDiscount", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a933c4e9705af2741e23d111482736ab4", null ],
+    [ "m_nInsCost", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ad849f227cd0f002d2a5cd2bf0de5e29d", null ],
+    [ "m_nInsPrice", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a0f1c53ea747a93b2bf3b451489f35563", null ],
+    [ "m_nOtherPaid", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ada46b013d3d8ea02d12da18041df56f2", null ],
+    [ "m_nPatPaid", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a523e6dd63257192314a64e6f6dd24e1a", null ],
+    [ "m_nQty", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ac4e1890ef6c50cafa9f4a47e66ff4267", null ],
+    [ "m_nUnitPrice", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a34af8f1963f44b466ae3552cb1510359", null ],
+    [ "m_szExtInsPaid", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a7f3672d15ed695c5c2240911107ab07f", null ],
+    [ "m_szFeeType", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a7b445cf709e0736ca317823449a9ee24", null ],
+    [ "m_szGroup", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ac6ce278ddb01cab12b738f4964186a26", null ],
+    [ "m_szID", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a191dd17e378ac17fe7cc818e1ef68265", null ],
+    [ "m_szInsRate", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a1b08b33c9a9b613dae0fccfb1d1e8f87", null ],
+    [ "m_szItemID", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#aa6c8d0b95ea1b4e1b58c5475bf2a4dfe", null ],
+    [ "m_szName", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a362d3f625885bce1790c5e2130244f3e", null ],
+    [ "m_szNguonTT", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ac0d01510055fdf145473151a4b59ffa2", null ],
+    [ "m_szPayrate", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a1dd191b101c3192ce490e523d6c7cf69", null ],
+    [ "m_szType", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#ab1dcbc8f1510b08d5a94b6ae6e3a5b0c", null ],
+    [ "m_szUnit", "struct_c_h_m_s_fee_manager_1_1_c_fee_item.html#a7eb5c1a6d9caa1cbfaadfe49a4095406", null ]
+];

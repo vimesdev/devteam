@@ -1,0 +1,116 @@
+\doxysection{PACSMaterial\+Balancesheet.\+h}
+\hypertarget{_p_a_c_s_material_balancesheet_8h_source}{}\label{_p_a_c_s_material_balancesheet_8h_source}\index{Include/HMSReportForms/PACS/PACSMaterialBalancesheet.h@{Include/HMSReportForms/PACS/PACSMaterialBalancesheet.h}}
+\mbox{\hyperlink{_p_a_c_s_material_balancesheet_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PACSMaterialBalancesheet\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PACSMaterialBalancesheet\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_adbe3f15d6be4a31c809e136e1089f176}{CPACSMaterialBalancesheet}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a61bff5e2374f18a4fa33b4eb4aff96e1}{m\_wndReportCondition}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_abc39c6865009d13cae275337af9dc71b}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a85bd77e19fcbba550ea2480c10fd83af}{m\_wndFromDate}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a31b59ba37d03a80c4a6d22191f15387a}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_aa94cc4c1b03679be7b1f94ae15f49b97}{m\_wndToDate}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a1d39fa60a7a999851dea3748b1941873}{m\_wndStockLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a500c17c01d92699e68247b7d687068b8}{m\_wndStock}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a67942438a11e37cb2d8fad5a651bcffb}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a3be36d4e76eeb7caa6b65efe067103ea}{m\_wndType}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ace0a6167cc4a165d4f219e7faf3cbb7a}{m\_wndOriginalLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a468a90bfa3d7555cda88203f4e626dd3}{m\_wndOriginal}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a4ec95b8a5d51941d5f956757f616e3f0}{m\_wndCheck}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a6c48443cdc66b4d531cc92ce56e3abd8}{m\_wndPrintPreview}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_acce82126eee2b44718cc136a52723fee}{m\_wndPrint}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a8dc97d597c1e0af3ad1f202c7916081e}{m\_wndExport}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a53622fb54ff9bb6bc6c05ca9be204298}{m\_wndClose}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_af7da736e18bf6bf7a5c2ebd97f280df1}{m\_wndListFac}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a68a3446b26f7e09116a0e56a89cb15f2}{m\_szFromDate}};}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a948d66f860c704745a1b27c7aa12a413}{m\_szToDate}};}
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_aa5a29aee038bc81d25509c029162f476}{m\_szStockKey}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a1668a66cddd1e1c4e507c08db50317b1}{m\_szTypeKey}};}
+\DoxyCodeLine{00054\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a3c4689b07a054998148ccf4b8898e44b}{m\_szOriginalKey}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a5719d8c4ed22e7519e6321b7bb65ecce}{m\_bCheck}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ad2600934eace9218de80211bfa3a59c4}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ad4ac73ddc619e034ee2ce15a8676da6b}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a64d31116967cd7617aaba1c9f0e17b95}{OnStockSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_aad293569b846530ab4bac3abe5be68c2}{OnStockSelendok}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStockSetfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStockKillfocus();\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a88184a248d8b2047d54ac6d5c5fe66e3}{OnStockLoadData}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a78ab556f82747d1dd99ccf91cd6d8203}{OnStockAddNew}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a171e9fca72caaeaae4ba04ef2bdc1512}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ad068631b38b5391418e76f947f188a23}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a18577e7443249926990b2ee5eced0f0b}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a4c5c0dfe9793cada1660207ed6f74027}{OnTypeAddNew}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a463d7d09bd675e156640d90fad8ce578}{OnOriginalSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a85e5456e9119fee3b247dbf779d545e2}{OnOriginalSelendok}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOriginalSetfocus();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOriginalKillfocus();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a7b769b86f345815abed12d5bda337efb}{OnOriginalLoadData}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ae8c72e553a9e3df5fb9f9e0bc4fd0a0d}{OnOriginalAddNew}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a72398b74c851e050cd4e6e6096e75882}{OnPrintPreviewSelect}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_aa22b1dfe5201db535b3e27ea01a37a0e}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a88edde504128994c3e685f47fb0b134e}{OnExportSelect}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_af723fe74dcc5b9181e1d9797e49c5d91}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a450b9288356b6c1c3f8b353fb658d818}{OnListFacLoadData}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a067a3e823e9010c0b454a70addf95b1d}{OnListFacSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a2101ec4c60c1dd9decf025d9ba4d426d}{OnListFacDblClick}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_abf645f570c72000be1fcd90dc04b6a02}{OnListFacDeleteItem}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_acc6d07e6e2f553bce20b3568f298b572}{OnCheckAll}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ac2a95bf0cd9c0883b50bb8779db1f764}{OnUnCheckAll}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_adbe3f15d6be4a31c809e136e1089f176}{CPACSMaterialBalancesheet}}(CWnd\ *pParent);}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a9776c1f6cd0a773d5b38601acccbebd6}{\string~CPACSMaterialBalancesheet}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a770e944d42b5ca27c9d62ac6dc054263}{OnCreateComponents}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a8193bb9a2e160adc5fdad9abd6dfd7f8}{OnInitializeComponents}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a60e3625f554dafc5eadc38502b0a2588}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a7b3bd3b415029f509066cd2380791194}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ab13bb7e7f97fe2d3a1ad8a7baccc555c}{GetDataToScreen}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a34265ba1a537445cc6f2bd0b21d7b088}{GetScreenToData}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a979159dad6846fd2cec1e541821b3e9c}{SetDefaultValues}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ab096197bb500e7882fee3f238622641f}{OnExportBaocaoxuathuocchokhoatheodoituong}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a80272ff44d5611f336fea44ee5be75fa}{OnPrintBaocaoxuathuocchokhoatheodoituong}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ac93833cdd4b7703d604a050ca83995b0}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_adc5cbfea09294884461b09a6c9b651b1}{OnAddPACSMaterialBalancesheet}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_ad550bb0a90009d2a8832c9528cbcc217}{OnEditPACSMaterialBalancesheet}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_af0663d8de7df94ac49b9e580a19598f7}{OnDeletePACSMaterialBalancesheet}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a7c5d8c6ab03f22182896970167283d7f}{OnSavePACSMaterialBalancesheet}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a0e0ebc96cf2b41bdcd11ffe8de0a7fd5}{OnCancelPACSMaterialBalancesheet}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a40dd6b5818cdf04b22070f05e155f683}{OnPACSMaterialBalancesheetListLoadData}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00111\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_a_c_s_material_balancesheet_a431c66e9c8c5017bdb1e32fa5a945999}{OnSetFocus}}(CWnd*\ pOldWnd);}
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

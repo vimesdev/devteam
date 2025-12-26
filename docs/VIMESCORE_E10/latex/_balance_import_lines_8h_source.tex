@@ -1,0 +1,72 @@
+\doxysection{Balance\+Import\+Lines.\+h}
+\hypertarget{_balance_import_lines_8h_source}{}\label{_balance_import_lines_8h_source}\index{Include/VIMESCORE\_E10/BalanceImportLines.h@{Include/VIMESCORE\_E10/BalanceImportLines.h}}
+\mbox{\hyperlink{_balance_import_lines_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BALANCEIMPORTLINES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BALANCEIMPORTLINES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_balance_import_lines_a76e2136066c147ab887500d74ed31242}{CBalanceImportLines}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_ad2b791dd26cb34c311f15df96c23a608}{m\_nOrderID}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a6ff271a785e61a15afac86977f957fab}{m\_nOrderLine}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a74e6218fb1dd6aad48be433e44775c9c}{m\_nStorageID}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a683a622f3547f927aa122eda01749e96}{m\_nTaxID}};}
+\DoxyCodeLine{00038\ \ \ \ \ CWnd*\ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a70c408c9081e127d7780c7e3b29ea9d3}{m\_pWndOrder}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a884950413b71848c5626b975a7219a2d}{m\_wndList}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a5934b8345ae7e57871396f85206910f6}{OnListLoadData}}();\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_ae7e07639868da0bf05b33ecedf6452ab}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a689b81f2e7284a4e93e06a96fbba352a}{OnListDblClick}}();\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a464a1cfaefd3d5ab414efed250379041}{OnListAddItem}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a43828179fd2d3b5f994c0d519457d5da}{OnListEditItem}}();\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_ab3a0064e8668dc2a2d212c33b55229a1}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_a76e2136066c147ab887500d74ed31242}{CBalanceImportLines}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_afd08a553f3163fe20dfabc9517f07ecb}{\string~CBalanceImportLines}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_balance_import_lines_a01ead9081e8b988021efa72d2a0192b2}{OnCreateComponents}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_balance_import_lines_a76a68b34b05762a13e718ec291846425}{OnInitializeComponents}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_balance_import_lines_a17d8f340e37de277f45a05369118a5cf}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_balance_import_lines_ae728e9a0f1e8b8f7da5f501b01ede177}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_balance_import_lines_af539f10cd6978e662e48bd54e835a3a3}{GetDataToScreen}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_balance_import_lines_ab15e8119f36f1a9d0c86df03a21c1296}{GetScreenToData}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_balance_import_lines_a35e903feed712277fe235c7c5a06d650}{SetDefaultValues}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_balance_import_lines_a4ed7e3ad7480b8451d45fee95a42dd99}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_balance_import_lines_acd046ae617641c0503cd5795d84b88e0}{OnAddBalanceImportLines}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_balance_import_lines_a542c818e0454b7ea92517144fa27f5f3}{OnEditBalanceImportLines}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_balance_import_lines_a22bc5c66ae13fe44e0be2c3fbb89b2c8}{OnDeleteBalanceImportLines}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_balance_import_lines_a60898d207d764edcfde930d0bc9540a2}{OnSaveBalanceImportLines}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_balance_import_lines_a6b937b0f570567a20ded73daf02322ee}{OnCancelBalanceImportLines}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_balance_import_lines_a426410b6c27e121f3a58e0540d27d07f}{OnBalanceImportLinesListLoadData}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_balance_import_lines_acb21edc2e35fe2044437127ebba7239b}{Refresh}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_balance_import_lines_a3015154396ad898cdaf545e5d9205d85}{GetOrderStatus}}();}
+\DoxyCodeLine{00066\ \ \ \ \ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

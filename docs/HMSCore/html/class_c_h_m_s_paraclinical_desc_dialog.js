@@ -1,0 +1,28 @@
+var class_c_h_m_s_paraclinical_desc_dialog =
+[
+    [ "CHMSParaclinicalDescDialog", "class_c_h_m_s_paraclinical_desc_dialog.html#a37d2ffdd5b8f9936f8037b7cacb19ca3", null ],
+    [ "~CHMSParaclinicalDescDialog", "class_c_h_m_s_paraclinical_desc_dialog.html#a13502b9e4d417826dbedf6bcbda29985", null ],
+    [ "GetDataToScreen", "class_c_h_m_s_paraclinical_desc_dialog.html#a0be2c1bab31d0f8947bf58849547f66c", null ],
+    [ "GetScreenToData", "class_c_h_m_s_paraclinical_desc_dialog.html#ad867aa8bc50ef3c55f7b82b7cc0ebe72", null ],
+    [ "OnAddHMSParaclinicalDescDialog", "class_c_h_m_s_paraclinical_desc_dialog.html#a47950263f3c5d698e6c2baecf10c5b2e", null ],
+    [ "OnCancelHMSParaclinicalDescDialog", "class_c_h_m_s_paraclinical_desc_dialog.html#ad6e4ad3b11da1e5f53644615af7d3da5", null ],
+    [ "OnCreateComponents", "class_c_h_m_s_paraclinical_desc_dialog.html#aa6b542831d0aa2e8cb4d3d3e65152c08", null ],
+    [ "OnDeleteHMSParaclinicalDescDialog", "class_c_h_m_s_paraclinical_desc_dialog.html#a613355d067de58ca695ed5e0aee710a9", null ],
+    [ "OnDescCheckValue", "class_c_h_m_s_paraclinical_desc_dialog.html#a8553dd76cbe609cbda02985720436b12", null ],
+    [ "OnDoDataExchange", "class_c_h_m_s_paraclinical_desc_dialog.html#ad9cfd7b70ada3a50918bcaee358b57c3", null ],
+    [ "OnEditHMSParaclinicalDescDialog", "class_c_h_m_s_paraclinical_desc_dialog.html#a535c4adb6ddf8614c5ed550d223761b7", null ],
+    [ "OnHMSParaclinicalDescDialogListLoadData", "class_c_h_m_s_paraclinical_desc_dialog.html#aac09accf18addbf0823a263e66fe9f48", null ],
+    [ "OnInitializeComponents", "class_c_h_m_s_paraclinical_desc_dialog.html#ab4a4127aa28c35d34f4c58373e62ef31", null ],
+    [ "OnOkSelect", "class_c_h_m_s_paraclinical_desc_dialog.html#a1219c87845aa04b19bec1e949044a567", null ],
+    [ "OnSaveHMSParaclinicalDescDialog", "class_c_h_m_s_paraclinical_desc_dialog.html#ad01689e2d3a2fd9c4e3760a34115b9eb", null ],
+    [ "OnSetWindowEvents", "class_c_h_m_s_paraclinical_desc_dialog.html#acfc8544df4eb3b776732f88de2dfddf7", null ],
+    [ "SetDefaultValues", "class_c_h_m_s_paraclinical_desc_dialog.html#acd111e692f3eae4b4ece480d33c191f5", null ],
+    [ "SetMode", "class_c_h_m_s_paraclinical_desc_dialog.html#a3f12b8e65825d36b88ecd7518cfd8528", null ],
+    [ "m_nOrderID", "class_c_h_m_s_paraclinical_desc_dialog.html#a46ea341494c1059bf6103f1a0a1c29de", null ],
+    [ "m_szDesc", "class_c_h_m_s_paraclinical_desc_dialog.html#aef8298784e1b0891855c9181ddb47ecf", null ],
+    [ "m_szItems", "class_c_h_m_s_paraclinical_desc_dialog.html#a893ea4ee3108aca7ae80b900f79f83f9", null ],
+    [ "m_wndDesc", "class_c_h_m_s_paraclinical_desc_dialog.html#a7ac9d35507c5be279a4aadad5f2f90b1", null ],
+    [ "m_wndDescLabel", "class_c_h_m_s_paraclinical_desc_dialog.html#a1a7c9a76c98cb59fde98baca5984a0ab", null ],
+    [ "m_wndInformation", "class_c_h_m_s_paraclinical_desc_dialog.html#a88edc45aff0f5f59a1aa73aacf0b8bcb", null ],
+    [ "m_wndOk", "class_c_h_m_s_paraclinical_desc_dialog.html#a46c4fad0b5064cd625d86e38faf04d92", null ]
+];

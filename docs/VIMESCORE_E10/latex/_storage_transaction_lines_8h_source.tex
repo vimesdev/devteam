@@ -1,0 +1,73 @@
+\doxysection{Storage\+Transaction\+Lines.\+h}
+\hypertarget{_storage_transaction_lines_8h_source}{}\label{_storage_transaction_lines_8h_source}\index{Include/VIMESCORE\_E10/StorageTransactionLines.h@{Include/VIMESCORE\_E10/StorageTransactionLines.h}}
+\mbox{\hyperlink{_storage_transaction_lines_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STORAGETRANSACTIONLINES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STORAGETRANSACTIONLINES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_storage_transaction_lines_ae2bbd8c03e020474699fd8dd8c5ce958}{CStorageTransactionLines}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a69cee12eb9ee10719c185b919506ae43}{m\_nOrderID}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_af0b55345a6584b7d73c5978b0ad61858}{m\_nOrderLine}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a62b4fbd46342bf094834de2cc2b00b51}{m\_nStorageID}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a516c5e238edc259266461528bf754a41}{m\_nStorageToID}};}
+\DoxyCodeLine{00038\ \ \ \ \ CWnd*\ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a8c4bab0d65ac4b16a9b41ddd93cd368a}{m\_pWndOrder}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a3b1043fd8b93e9a4d9793dcc919cdf58}{m\_wndList}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a8e3f8de043c35100850f00ee6045e1e4}{OnListLoadData}}();\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a5cab0d450487793de7cd9ec559718021}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_adfd6e929daaebe4c16ecc201a59039cf}{OnListDblClick}}();\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a877970016888f800df60df67ba2db46e}{OnListAddItem}}();\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a6b17151b2b63ea1e8e277b5405585b01}{OnListEditItem}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a5a55303f3a7ece4b8699627014569440}{OnListDeleteItem}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_ace52d612e2b8dad6635a467117374e30}{OnListDeleteAllItem}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_ae2bbd8c03e020474699fd8dd8c5ce958}{CStorageTransactionLines}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a6864a8fc524667b9aff421bc64dd3ca0}{\string~CStorageTransactionLines}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_lines_ad8d5137ebfcddb90f9865a21eb61813b}{OnCreateComponents}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a7c22b899a489657e5650e9b1f9951c85}{OnInitializeComponents}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a3d3819150d7116df6685b48080efc393}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_lines_af5b8a065bf43018b6dbcb5107b2a03e0}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_lines_afa275ecfb452a4705472e12efbc82b14}{GetDataToScreen}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a877391efa98502b840d171cdc233ce86}{GetScreenToData}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a97b43653168150b737a834a81ed4165f}{SetDefaultValues}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_aa61e15411b046d734b4a2dbab161f72f}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a02b770431511e67287d718cae4f3fc1d}{OnAddStorageTransactionLines}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_af197853ec37f26d0fbd415726ec87e6b}{OnEditStorageTransactionLines}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_afcdb9e1b6a24a253a76cac726d9ea35b}{OnDeleteStorageTransactionLines}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a6b2eceb03a591615154e64321a4c0973}{OnDeleteStorageTransactionAllLines}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_af5d4cc2de7cb729b4333df0ae94f7654}{OnSaveStorageTransactionLines}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_af70cd8fa4b9c4c9bef8fd0ff68aa0311}{OnCancelStorageTransactionLines}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a795fc09dcacb3d5956d9d6433b5e8c63}{OnStorageTransactionLinesListLoadData}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_lines_a9af21eaff956b7f31962db102b593c78}{OnPreviewDeliveryDetail}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_lines_a88636a4f90a49ff61fd11343d20b3f81}{Refresh}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_lines_a1bd81352193d89c4d3ba433e56cd92f1}{GetOrderStatus}}();}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

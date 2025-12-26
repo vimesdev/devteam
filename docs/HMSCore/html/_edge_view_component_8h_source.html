@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/EdgeViewComponent.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_edge_view_component_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EdgeViewComponent.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_edge_view_component_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (C) Microsoft Corporation. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="stdafx_8h.html">stdafx.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_edge_browser_dlg_8h.html">EdgeBrowserDlg.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;dcomp.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifdef USE_WEBVIEW2_WIN10</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;winrt/Windows.UI.Composition.Desktop.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// This component handles commands from the View menu, as well as the ZoomFactorChanged</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// event, and any functionality related to sizing and visibility of the WebView.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// It also manages interaction with the compositor if running in windowless mode.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>DCompTargetImpl;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_edge_view_component.html">   21</a></span><span class="keyword">class </span><a class="code hl_function" href="class_edge_view_component.html#a983df73ff98e76838f2f5ad3da298569">EdgeViewComponent</a> : <span class="keyword">public</span> ComponentBase</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a7a1d1060ff5818358176b080457fb868">   23</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_edge_view_component.html#a7a1d1060ff5818358176b080457fb868">DCompTargetImpl</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a983df73ff98e76838f2f5ad3da298569">   26</a></span>    <a class="code hl_function" href="class_edge_view_component.html#a983df73ff98e76838f2f5ad3da298569">EdgeViewComponent</a>(</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        CEdgeBrowserAppDlg* appWindow,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        IDCompositionDevice* dcompDevice,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>#ifdef <a class="code hl_define" href="_edge_browser_dlg_8h.html#a981fc68460c4e85608c4402c2c3c50e0">USE_WEBVIEW2_WIN10</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        winrtComp::Compositor wincompCompositor,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>#endif</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">bool</span> isDCompTargetMode</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    );</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ada70002359e3978447627674023db1a8">   35</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_edge_view_component.html#ada70002359e3978447627674023db1a8">HandleWindowMessage</a>(</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        HWND hWnd,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        UINT message,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        WPARAM wParam,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        LPARAM lParam,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        LRESULT* result) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#acfaa822cf5d4e6c3c0ff934cba33280f">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#acfaa822cf5d4e6c3c0ff934cba33280f">SetBounds</a>(RECT bounds);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ac7646f526438700258380ac309a332e2">   44</a></span>    <a class="code hl_function" href="class_edge_view_component.html#ac7646f526438700258380ac309a332e2">~EdgeViewComponent</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950">   47</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950">TransformType</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950ac7c5a181d7cc5f5733d84dd9bd778967">   49</a></span>        <a class="code hl_enumvalue" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950ac7c5a181d7cc5f5733d84dd9bd778967">kIdentity</a> = 0,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950a01cabc0c2b4dd3bdcaa8c9e21796c00d">   50</a></span>        <a class="code hl_enumvalue" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950a01cabc0c2b4dd3bdcaa8c9e21796c00d">kScale2X</a>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950acd26c3908b1876dbb807801b0f0df1f2">   51</a></span>        <a class="code hl_enumvalue" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950acd26c3908b1876dbb807801b0f0df1f2">kRotate30Deg</a>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950a3101e0b985e9f59c4a93d40f94e8d270">   52</a></span>        <a class="code hl_enumvalue" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950a3101e0b985e9f59c4a93d40f94e8d270">kRotate60DegDiagonally</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a4d111b07fecb0aae486c6072a455b429">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a4d111b07fecb0aae486c6072a455b429">ResizeWebView</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a154474d91a856e3ea7856025b97d9b99">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a154474d91a856e3ea7856025b97d9b99">ToggleVisibility</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#aaef2f0c97eb85bc430278abb8f92b111">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#aaef2f0c97eb85bc430278abb8f92b111">SetSizeRatio</a>(<span class="keywordtype">float</span> ratio);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a8a702f28fe5397b3d5fc9ba23a7f4ad5">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a8a702f28fe5397b3d5fc9ba23a7f4ad5">SetZoomFactor</a>(<span class="keywordtype">float</span> zoom);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ae8a13a18c0ff3b643a42c08ee87e2e58">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#ae8a13a18c0ff3b643a42c08ee87e2e58">SetScale</a>(<span class="keywordtype">float</span> scale);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a11dafa4b0438046688bfae4fb4c7684b">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a11dafa4b0438046688bfae4fb4c7684b">SetTransform</a>(<a class="code hl_enumeration" href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950">TransformType</a> transformType);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ad689413e4fdb812a95a1da75f9e54c2e">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#ad689413e4fdb812a95a1da75f9e54c2e">ShowWebViewBounds</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a30c1584afcf31d6e06c8d72186c7aa70">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a30c1584afcf31d6e06c8d72186c7aa70">ShowWebViewZoom</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//Browser* m_appWindow = nullptr;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ab78e8566856a4e54d1322606b940d082">   64</a></span>    CEdgeBrowserAppDlg* <a class="code hl_variable" href="class_edge_view_component.html#ab78e8566856a4e54d1322606b940d082">m_appWindow</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a6ddff2a394b956c05cf4927988ecf95e">   65</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2Controller&gt; <a class="code hl_variable" href="class_edge_view_component.html#a6ddff2a394b956c05cf4927988ecf95e">m_controller</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a8c36fd3b49d07137a0b602f29e09ced9">   66</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2&gt; <a class="code hl_variable" href="class_edge_view_component.html#a8c36fd3b49d07137a0b602f29e09ced9">m_webView</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#abb49b5835f8c3abab9b2063d610d2063">   68</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_edge_view_component.html#abb49b5835f8c3abab9b2063d610d2063">m_isDcompTargetMode</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#affb748c8c3800197cc38786bca6da9c1">   69</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_edge_view_component.html#affb748c8c3800197cc38786bca6da9c1">m_isVisible</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#afb09cfa5c40d733724998bfb30c5b6e9">   70</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_edge_view_component.html#afb09cfa5c40d733724998bfb30c5b6e9">m_webViewRatio</a> = 1.0f;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a0a108fecefa7912c5a0a4e12c8a9ed00">   71</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_edge_view_component.html#a0a108fecefa7912c5a0a4e12c8a9ed00">m_webViewZoomFactor</a> = 1.0f;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ac2db6a24fddead17c30acf3bf10d234f">   72</a></span>    RECT <a class="code hl_variable" href="class_edge_view_component.html#ac2db6a24fddead17c30acf3bf10d234f">m_webViewBounds</a> = {};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ac0db7c1f6f349e5c070024aacd56749b">   73</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_edge_view_component.html#ac0db7c1f6f349e5c070024aacd56749b">m_webViewScale</a> = 1.0f;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a34e179cb78def040f3c5ebb2e919afb0">   74</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_edge_view_component.html#a34e179cb78def040f3c5ebb2e919afb0">m_useCursorId</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a024cefd2d4d31822223e94731708bbfc">   75</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_edge_view_component.html#a024cefd2d4d31822223e94731708bbfc">m_zoomFactorChangedToken</a> = {};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a82d0df87f536ef8a0b1d01975bff9cd4">   77</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_edge_view_component.html#a82d0df87f536ef8a0b1d01975bff9cd4">OnMouseMessage</a>(UINT message, WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a4c814f225a3faf4b59e628cb913edb41">   78</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_edge_view_component.html#a4c814f225a3faf4b59e628cb913edb41">OnPointerMessage</a>(UINT message, WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a2cc370125fe91603ed7c329092910cc3">   79</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a2cc370125fe91603ed7c329092910cc3">TrackMouseEvents</a>(DWORD mouseTrackingFlags);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ae4d962040c7a99501e574d44635649f9">   80</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_edge_view_component.html#ae4d962040c7a99501e574d44635649f9">m_isTrackingMouse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a401e98febbef329d0a8e27c3e0a5653e">   81</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_edge_view_component.html#a401e98febbef329d0a8e27c3e0a5653e">m_isCapturingMouse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#aa1b428515a635274e5efb59b8c6e7098">   82</a></span>    std::unordered_set&lt;UINT&gt; <a class="code hl_variable" href="class_edge_view_component.html#aa1b428515a635274e5efb59b8c6e7098">m_pointerIdsStartingInWebView</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ab090357d736e81aabf576de79e0e656a">   84</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#ab090357d736e81aabf576de79e0e656a">BuildDCompTreeUsingVisual</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a9d88b554699d137a0ddaf2ab23fe0ff5">   85</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a9d88b554699d137a0ddaf2ab23fe0ff5">DestroyDCompVisualTree</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a239f89d1ac592b24546c5009fcc564e0">   87</a></span>    Microsoft::WRL::ComPtr&lt;IDCompositionDevice&gt; <a class="code hl_variable" href="class_edge_view_component.html#a239f89d1ac592b24546c5009fcc564e0">m_dcompDevice</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a175e70e44cdb211b3bdc153a13d22b84">   88</a></span>    Microsoft::WRL::ComPtr&lt;IDCompositionTarget&gt; <a class="code hl_variable" href="class_edge_view_component.html#a175e70e44cdb211b3bdc153a13d22b84">m_dcompHwndTarget</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#abe0a35f753ab2f86dfaf9e064ecf0daf">   89</a></span>    Microsoft::WRL::ComPtr&lt;IDCompositionVisual&gt; <a class="code hl_variable" href="class_edge_view_component.html#abe0a35f753ab2f86dfaf9e064ecf0daf">m_dcompRootVisual</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a8e84049453d273c1c953e911a7921c90">   90</a></span>    Microsoft::WRL::ComPtr&lt;IDCompositionVisual&gt; <a class="code hl_variable" href="class_edge_view_component.html#a8e84049453d273c1c953e911a7921c90">m_dcompWebViewVisual</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#ifdef USE_WEBVIEW2_WIN10</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a915689d5b29703a5c5a8f63e2c129004">   93</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a915689d5b29703a5c5a8f63e2c129004">BuildWinCompVisualTree</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a08816217d8acf22fcf3163e9462637a3">   94</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_edge_view_component.html#a08816217d8acf22fcf3163e9462637a3">DestroyWinCompVisualTree</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#ad23288d05b17aba8d7d870c77dda563f">   96</a></span>    winrt::Windows::UI::Composition::Compositor <a class="code hl_variable" href="class_edge_view_component.html#ad23288d05b17aba8d7d870c77dda563f">m_wincompCompositor</a>{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#af8a04abc68bdeb38ea71780a36193137">   97</a></span>    winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget <a class="code hl_variable" href="class_edge_view_component.html#af8a04abc68bdeb38ea71780a36193137">m_wincompHwndTarget</a>{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#afe7dcd6753391030ed2071265427c643">   98</a></span>    winrt::Windows::UI::Composition::ContainerVisual <a class="code hl_variable" href="class_edge_view_component.html#afe7dcd6753391030ed2071265427c643">m_wincompRootVisual</a>{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a2ddc22ba42aeeb3c622937b1235c6255">   99</a></span>    winrt::Windows::UI::Composition::ContainerVisual <a class="code hl_variable" href="class_edge_view_component.html#a2ddc22ba42aeeb3c622937b1235c6255">m_wincompWebViewVisual</a>{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_edge_view_component.html#a764a26dacf1529e27ae3d37f51f4448e">  103</a></span>    EventRegistrationToken <a class="code hl_variable" href="class_edge_view_component.html#a764a26dacf1529e27ae3d37f51f4448e">m_cursorChangedToken</a> = {};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+</div>
+<div class="ttc" id="a_edge_browser_dlg_8h_html"><div class="ttname"><a href="_edge_browser_dlg_8h.html">EdgeBrowserDlg.h</a></div></div>
+<div class="ttc" id="a_edge_browser_dlg_8h_html_a981fc68460c4e85608c4402c2c3c50e0"><div class="ttname"><a href="_edge_browser_dlg_8h.html#a981fc68460c4e85608c4402c2c3c50e0">USE_WEBVIEW2_WIN10</a></div><div class="ttdeci">#define USE_WEBVIEW2_WIN10</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:21</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a024cefd2d4d31822223e94731708bbfc"><div class="ttname"><a href="class_edge_view_component.html#a024cefd2d4d31822223e94731708bbfc">EdgeViewComponent::m_zoomFactorChangedToken</a></div><div class="ttdeci">EventRegistrationToken m_zoomFactorChangedToken</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:75</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a08816217d8acf22fcf3163e9462637a3"><div class="ttname"><a href="class_edge_view_component.html#a08816217d8acf22fcf3163e9462637a3">EdgeViewComponent::DestroyWinCompVisualTree</a></div><div class="ttdeci">void DestroyWinCompVisualTree()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a0a108fecefa7912c5a0a4e12c8a9ed00"><div class="ttname"><a href="class_edge_view_component.html#a0a108fecefa7912c5a0a4e12c8a9ed00">EdgeViewComponent::m_webViewZoomFactor</a></div><div class="ttdeci">float m_webViewZoomFactor</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:71</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a11dafa4b0438046688bfae4fb4c7684b"><div class="ttname"><a href="class_edge_view_component.html#a11dafa4b0438046688bfae4fb4c7684b">EdgeViewComponent::SetTransform</a></div><div class="ttdeci">void SetTransform(TransformType transformType)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a154474d91a856e3ea7856025b97d9b99"><div class="ttname"><a href="class_edge_view_component.html#a154474d91a856e3ea7856025b97d9b99">EdgeViewComponent::ToggleVisibility</a></div><div class="ttdeci">void ToggleVisibility()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a175e70e44cdb211b3bdc153a13d22b84"><div class="ttname"><a href="class_edge_view_component.html#a175e70e44cdb211b3bdc153a13d22b84">EdgeViewComponent::m_dcompHwndTarget</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; IDCompositionTarget &gt; m_dcompHwndTarget</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:88</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a239f89d1ac592b24546c5009fcc564e0"><div class="ttname"><a href="class_edge_view_component.html#a239f89d1ac592b24546c5009fcc564e0">EdgeViewComponent::m_dcompDevice</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; IDCompositionDevice &gt; m_dcompDevice</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:87</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a2cc370125fe91603ed7c329092910cc3"><div class="ttname"><a href="class_edge_view_component.html#a2cc370125fe91603ed7c329092910cc3">EdgeViewComponent::TrackMouseEvents</a></div><div class="ttdeci">void TrackMouseEvents(DWORD mouseTrackingFlags)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a2ddc22ba42aeeb3c622937b1235c6255"><div class="ttname"><a href="class_edge_view_component.html#a2ddc22ba42aeeb3c622937b1235c6255">EdgeViewComponent::m_wincompWebViewVisual</a></div><div class="ttdeci">winrt::Windows::UI::Composition::ContainerVisual m_wincompWebViewVisual</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:99</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a30c1584afcf31d6e06c8d72186c7aa70"><div class="ttname"><a href="class_edge_view_component.html#a30c1584afcf31d6e06c8d72186c7aa70">EdgeViewComponent::ShowWebViewZoom</a></div><div class="ttdeci">void ShowWebViewZoom()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a30c4c53a410628093a9c3b8c3a83c950"><div class="ttname"><a href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950">EdgeViewComponent::TransformType</a></div><div class="ttdeci">TransformType</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:48</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a30c4c53a410628093a9c3b8c3a83c950a01cabc0c2b4dd3bdcaa8c9e21796c00d"><div class="ttname"><a href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950a01cabc0c2b4dd3bdcaa8c9e21796c00d">EdgeViewComponent::TransformType::kScale2X</a></div><div class="ttdeci">@ kScale2X</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:50</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a30c4c53a410628093a9c3b8c3a83c950a3101e0b985e9f59c4a93d40f94e8d270"><div class="ttname"><a href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950a3101e0b985e9f59c4a93d40f94e8d270">EdgeViewComponent::TransformType::kRotate60DegDiagonally</a></div><div class="ttdeci">@ kRotate60DegDiagonally</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:52</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a30c4c53a410628093a9c3b8c3a83c950ac7c5a181d7cc5f5733d84dd9bd778967"><div class="ttname"><a href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950ac7c5a181d7cc5f5733d84dd9bd778967">EdgeViewComponent::TransformType::kIdentity</a></div><div class="ttdeci">@ kIdentity</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:49</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a30c4c53a410628093a9c3b8c3a83c950acd26c3908b1876dbb807801b0f0df1f2"><div class="ttname"><a href="class_edge_view_component.html#a30c4c53a410628093a9c3b8c3a83c950acd26c3908b1876dbb807801b0f0df1f2">EdgeViewComponent::TransformType::kRotate30Deg</a></div><div class="ttdeci">@ kRotate30Deg</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:51</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a34e179cb78def040f3c5ebb2e919afb0"><div class="ttname"><a href="class_edge_view_component.html#a34e179cb78def040f3c5ebb2e919afb0">EdgeViewComponent::m_useCursorId</a></div><div class="ttdeci">bool m_useCursorId</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:74</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a401e98febbef329d0a8e27c3e0a5653e"><div class="ttname"><a href="class_edge_view_component.html#a401e98febbef329d0a8e27c3e0a5653e">EdgeViewComponent::m_isCapturingMouse</a></div><div class="ttdeci">bool m_isCapturingMouse</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:81</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a4c814f225a3faf4b59e628cb913edb41"><div class="ttname"><a href="class_edge_view_component.html#a4c814f225a3faf4b59e628cb913edb41">EdgeViewComponent::OnPointerMessage</a></div><div class="ttdeci">bool OnPointerMessage(UINT message, WPARAM wParam, LPARAM lParam)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a4d111b07fecb0aae486c6072a455b429"><div class="ttname"><a href="class_edge_view_component.html#a4d111b07fecb0aae486c6072a455b429">EdgeViewComponent::ResizeWebView</a></div><div class="ttdeci">void ResizeWebView()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a6ddff2a394b956c05cf4927988ecf95e"><div class="ttname"><a href="class_edge_view_component.html#a6ddff2a394b956c05cf4927988ecf95e">EdgeViewComponent::m_controller</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2Controller &gt; m_controller</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:65</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a764a26dacf1529e27ae3d37f51f4448e"><div class="ttname"><a href="class_edge_view_component.html#a764a26dacf1529e27ae3d37f51f4448e">EdgeViewComponent::m_cursorChangedToken</a></div><div class="ttdeci">EventRegistrationToken m_cursorChangedToken</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:103</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a7a1d1060ff5818358176b080457fb868"><div class="ttname"><a href="class_edge_view_component.html#a7a1d1060ff5818358176b080457fb868">EdgeViewComponent::DCompTargetImpl</a></div><div class="ttdeci">friend class DCompTargetImpl</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:23</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a82d0df87f536ef8a0b1d01975bff9cd4"><div class="ttname"><a href="class_edge_view_component.html#a82d0df87f536ef8a0b1d01975bff9cd4">EdgeViewComponent::OnMouseMessage</a></div><div class="ttdeci">bool OnMouseMessage(UINT message, WPARAM wParam, LPARAM lParam)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a8a702f28fe5397b3d5fc9ba23a7f4ad5"><div class="ttname"><a href="class_edge_view_component.html#a8a702f28fe5397b3d5fc9ba23a7f4ad5">EdgeViewComponent::SetZoomFactor</a></div><div class="ttdeci">void SetZoomFactor(float zoom)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a8c36fd3b49d07137a0b602f29e09ced9"><div class="ttname"><a href="class_edge_view_component.html#a8c36fd3b49d07137a0b602f29e09ced9">EdgeViewComponent::m_webView</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2 &gt; m_webView</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:66</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a8e84049453d273c1c953e911a7921c90"><div class="ttname"><a href="class_edge_view_component.html#a8e84049453d273c1c953e911a7921c90">EdgeViewComponent::m_dcompWebViewVisual</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; IDCompositionVisual &gt; m_dcompWebViewVisual</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:90</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a915689d5b29703a5c5a8f63e2c129004"><div class="ttname"><a href="class_edge_view_component.html#a915689d5b29703a5c5a8f63e2c129004">EdgeViewComponent::BuildWinCompVisualTree</a></div><div class="ttdeci">void BuildWinCompVisualTree()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a983df73ff98e76838f2f5ad3da298569"><div class="ttname"><a href="class_edge_view_component.html#a983df73ff98e76838f2f5ad3da298569">EdgeViewComponent::EdgeViewComponent</a></div><div class="ttdeci">EdgeViewComponent(CEdgeBrowserAppDlg *appWindow, IDCompositionDevice *dcompDevice, winrtComp::Compositor wincompCompositor, bool isDCompTargetMode)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_a9d88b554699d137a0ddaf2ab23fe0ff5"><div class="ttname"><a href="class_edge_view_component.html#a9d88b554699d137a0ddaf2ab23fe0ff5">EdgeViewComponent::DestroyDCompVisualTree</a></div><div class="ttdeci">void DestroyDCompVisualTree()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_aa1b428515a635274e5efb59b8c6e7098"><div class="ttname"><a href="class_edge_view_component.html#aa1b428515a635274e5efb59b8c6e7098">EdgeViewComponent::m_pointerIdsStartingInWebView</a></div><div class="ttdeci">std::unordered_set&lt; UINT &gt; m_pointerIdsStartingInWebView</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:82</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_aaef2f0c97eb85bc430278abb8f92b111"><div class="ttname"><a href="class_edge_view_component.html#aaef2f0c97eb85bc430278abb8f92b111">EdgeViewComponent::SetSizeRatio</a></div><div class="ttdeci">void SetSizeRatio(float ratio)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ab090357d736e81aabf576de79e0e656a"><div class="ttname"><a href="class_edge_view_component.html#ab090357d736e81aabf576de79e0e656a">EdgeViewComponent::BuildDCompTreeUsingVisual</a></div><div class="ttdeci">void BuildDCompTreeUsingVisual()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ab78e8566856a4e54d1322606b940d082"><div class="ttname"><a href="class_edge_view_component.html#ab78e8566856a4e54d1322606b940d082">EdgeViewComponent::m_appWindow</a></div><div class="ttdeci">CEdgeBrowserAppDlg * m_appWindow</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:64</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_abb49b5835f8c3abab9b2063d610d2063"><div class="ttname"><a href="class_edge_view_component.html#abb49b5835f8c3abab9b2063d610d2063">EdgeViewComponent::m_isDcompTargetMode</a></div><div class="ttdeci">bool m_isDcompTargetMode</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:68</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_abe0a35f753ab2f86dfaf9e064ecf0daf"><div class="ttname"><a href="class_edge_view_component.html#abe0a35f753ab2f86dfaf9e064ecf0daf">EdgeViewComponent::m_dcompRootVisual</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; IDCompositionVisual &gt; m_dcompRootVisual</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:89</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ac0db7c1f6f349e5c070024aacd56749b"><div class="ttname"><a href="class_edge_view_component.html#ac0db7c1f6f349e5c070024aacd56749b">EdgeViewComponent::m_webViewScale</a></div><div class="ttdeci">float m_webViewScale</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:73</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ac2db6a24fddead17c30acf3bf10d234f"><div class="ttname"><a href="class_edge_view_component.html#ac2db6a24fddead17c30acf3bf10d234f">EdgeViewComponent::m_webViewBounds</a></div><div class="ttdeci">RECT m_webViewBounds</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:72</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ac7646f526438700258380ac309a332e2"><div class="ttname"><a href="class_edge_view_component.html#ac7646f526438700258380ac309a332e2">EdgeViewComponent::~EdgeViewComponent</a></div><div class="ttdeci">~EdgeViewComponent() override</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_acfaa822cf5d4e6c3c0ff934cba33280f"><div class="ttname"><a href="class_edge_view_component.html#acfaa822cf5d4e6c3c0ff934cba33280f">EdgeViewComponent::SetBounds</a></div><div class="ttdeci">void SetBounds(RECT bounds)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ad23288d05b17aba8d7d870c77dda563f"><div class="ttname"><a href="class_edge_view_component.html#ad23288d05b17aba8d7d870c77dda563f">EdgeViewComponent::m_wincompCompositor</a></div><div class="ttdeci">winrt::Windows::UI::Composition::Compositor m_wincompCompositor</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:96</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ad689413e4fdb812a95a1da75f9e54c2e"><div class="ttname"><a href="class_edge_view_component.html#ad689413e4fdb812a95a1da75f9e54c2e">EdgeViewComponent::ShowWebViewBounds</a></div><div class="ttdeci">void ShowWebViewBounds()</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ada70002359e3978447627674023db1a8"><div class="ttname"><a href="class_edge_view_component.html#ada70002359e3978447627674023db1a8">EdgeViewComponent::HandleWindowMessage</a></div><div class="ttdeci">bool HandleWindowMessage(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam, LRESULT *result) override</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ae4d962040c7a99501e574d44635649f9"><div class="ttname"><a href="class_edge_view_component.html#ae4d962040c7a99501e574d44635649f9">EdgeViewComponent::m_isTrackingMouse</a></div><div class="ttdeci">bool m_isTrackingMouse</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:80</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_ae8a13a18c0ff3b643a42c08ee87e2e58"><div class="ttname"><a href="class_edge_view_component.html#ae8a13a18c0ff3b643a42c08ee87e2e58">EdgeViewComponent::SetScale</a></div><div class="ttdeci">void SetScale(float scale)</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_af8a04abc68bdeb38ea71780a36193137"><div class="ttname"><a href="class_edge_view_component.html#af8a04abc68bdeb38ea71780a36193137">EdgeViewComponent::m_wincompHwndTarget</a></div><div class="ttdeci">winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget m_wincompHwndTarget</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:97</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_afb09cfa5c40d733724998bfb30c5b6e9"><div class="ttname"><a href="class_edge_view_component.html#afb09cfa5c40d733724998bfb30c5b6e9">EdgeViewComponent::m_webViewRatio</a></div><div class="ttdeci">float m_webViewRatio</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:70</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_afe7dcd6753391030ed2071265427c643"><div class="ttname"><a href="class_edge_view_component.html#afe7dcd6753391030ed2071265427c643">EdgeViewComponent::m_wincompRootVisual</a></div><div class="ttdeci">winrt::Windows::UI::Composition::ContainerVisual m_wincompRootVisual</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:98</div></div>
+<div class="ttc" id="aclass_edge_view_component_html_affb748c8c3800197cc38786bca6da9c1"><div class="ttname"><a href="class_edge_view_component.html#affb748c8c3800197cc38786bca6da9c1">EdgeViewComponent::m_isVisible</a></div><div class="ttdeci">bool m_isVisible</div><div class="ttdef"><b>Definition</b> EdgeViewComponent.h:69</div></div>
+<div class="ttc" id="astdafx_8h_html"><div class="ttname"><a href="stdafx_8h.html">stdafx.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_edge_view_component_8h.html">EdgeViewComponent.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

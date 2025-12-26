@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - VIMESCORE_E10 Documentation: Include/VIMESCORE_E10/PaymentOrderList.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - VIMESCORE_E10 Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_payment_order_list_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PaymentOrderList.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_payment_order_list_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PaymentOrderList_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PaymentOrderList_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiView.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//DANH SÁCH PHIẾU ĐỀ NGHỊ THANH TOÁN</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html">   35</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_payment_order_list.html#a0aa388f4da7b1fadf2bbc28b40f6d6e3">CPaymentOrderList</a> : <span class="keyword">public</span> CGuiView{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a48a62922434d6a39817568bf5a9bbce8">   37</a></span>    <span class="keywordtype">long</span>            <a class="code hl_variable" href="class_c_payment_order_list.html#a48a62922434d6a39817568bf5a9bbce8">m_nID</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a6b766d65784e98558e9268c293645364">   38</a></span>    CStringArray    <a class="code hl_variable" href="class_c_payment_order_list.html#a6b766d65784e98558e9268c293645364">m_arFilters</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ad5c45ed083f5165532d4feaa30864cf4">   39</a></span>    <span class="keywordtype">int</span>             <a class="code hl_variable" href="class_c_payment_order_list.html#ad5c45ed083f5165532d4feaa30864cf4">m_nSearchID</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#acaaf42013e1f84f1d2ac25e04376ec6c">   40</a></span>    CString         <a class="code hl_variable" href="class_c_payment_order_list.html#acaaf42013e1f84f1d2ac25e04376ec6c">m_szStatus</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#aaf4cddef90ce79b9f460f20e09067e44">   42</a></span>    CString         <a class="code hl_variable" href="class_c_payment_order_list.html#aaf4cddef90ce79b9f460f20e09067e44">m_szType</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#acfa3f148ee9e7f7dcde59ecadcccc11c">   44</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_payment_order_list.html#acfa3f148ee9e7f7dcde59ecadcccc11c">m_wndSearchInformation</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a372a8a30edf9d7e0533e478bf9926529">   45</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_payment_order_list.html#a372a8a30edf9d7e0533e478bf9926529">m_wndPaymentOrderInfo</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ae723fc250ad2e1937c9d4e95d11cfcc4">   46</a></span>    CGuiDateCtrl    <a class="code hl_variable" href="class_c_payment_order_list.html#ae723fc250ad2e1937c9d4e95d11cfcc4">m_wndFromDate</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a913d75df90a276c541af4f2da8409c09">   47</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_payment_order_list.html#a913d75df90a276c541af4f2da8409c09">m_wndFromDateLabel</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#af653be637da2c41ad1ed02afd8481a80">   48</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_payment_order_list.html#af653be637da2c41ad1ed02afd8481a80">m_wndToDateLabel</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a7a27951922b14db90a6f2509dc754d68">   49</a></span>    CGuiDateCtrl    <a class="code hl_variable" href="class_c_payment_order_list.html#a7a27951922b14db90a6f2509dc754d68">m_wndToDate</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#aaeaecfadbd406b0a193a89aedbf41253">   50</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_payment_order_list.html#aaeaecfadbd406b0a193a89aedbf41253">m_wndSearchLabel</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#aa858d2e29bc14c682639411abe611cc5">   51</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_payment_order_list.html#aa858d2e29bc14c682639411abe611cc5">m_wndSearch</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a78ee64bdc15e06e0cf9735d3e9d74b3b">   52</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_payment_order_list.html#a78ee64bdc15e06e0cf9735d3e9d74b3b">m_wndOption</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ac2740561bc7c7ccadb6e61416a758e75">   53</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_payment_order_list.html#ac2740561bc7c7ccadb6e61416a758e75">m_wndList</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a3128157f73074cc629a2d2db79cbf5cb">   54</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_payment_order_list.html#a3128157f73074cc629a2d2db79cbf5cb">m_wndView</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a1b55f7e0534b418df374c883aa268b19">   55</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_payment_order_list.html#a1b55f7e0534b418df374c883aa268b19">m_wndAdd</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ad5891d71895a741f8e0a24957db418b5">   56</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_payment_order_list.html#ad5891d71895a741f8e0a24957db418b5">m_wndEdit</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a91b10242f4330cd5ea5c94b1b5f1570d">   57</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_payment_order_list.html#a91b10242f4330cd5ea5c94b1b5f1570d">m_wndDelete</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a397dfd25e1e87f65ed72d0fdc29e0959">   58</a></span>    CString <a class="code hl_variable" href="class_c_payment_order_list.html#a397dfd25e1e87f65ed72d0fdc29e0959">m_szFromDate</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a96275cc60d92cfb617ac4b0041d79a14">   59</a></span>    CString <a class="code hl_variable" href="class_c_payment_order_list.html#a96275cc60d92cfb617ac4b0041d79a14">m_szToDate</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ad8c1a71116acae0fe470fe2a4bff1478">   60</a></span>    CString <a class="code hl_variable" href="class_c_payment_order_list.html#ad8c1a71116acae0fe470fe2a4bff1478">m_szSearch</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">//void          OnFromDateChange(); </span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">//void          OnFromDateSetfocus(); </span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//void          OnFromDateKillfocus(); </span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a0bac290303238a46c892f38d813cb75f">   64</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#a0bac290303238a46c892f38d813cb75f">OnFromDateCheckValue</a>(); </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//void          OnToDateChange(); </span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">//void          OnToDateSetfocus(); </span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">//void          OnToDateKillfocus(); </span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a992e6af6d81a980926e4f74914811fd4">   68</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#a992e6af6d81a980926e4f74914811fd4">OnToDateCheckValue</a>(); </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">//void          OnSearchChange(); </span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">//void          OnSearchSetfocus(); </span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">//void          OnSearchKillfocus(); </span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ab43a9a1cb00c88cbfcfcf60afd1e6ef1">   72</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#ab43a9a1cb00c88cbfcfcf60afd1e6ef1">OnSearchCheckValue</a>(); </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ade76e478b3504cda119409d13cbcc7d3">   73</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_payment_order_list.html#ade76e478b3504cda119409d13cbcc7d3">OnOptionSelect</a>(); </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ae85bcceeb0ec839062b1cf4bdb3bce97">   74</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_payment_order_list.html#ae85bcceeb0ec839062b1cf4bdb3bce97">OnListLoadData</a>(); </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ad0078fc36ab9d241425d7b8fe13ddbbe">   75</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_payment_order_list.html#ad0078fc36ab9d241425d7b8fe13ddbbe">OnListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a02389de8f4606357ab5d85f0f1490f0d">   76</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_payment_order_list.html#a02389de8f4606357ab5d85f0f1490f0d">OnListDblClick</a>(); </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#af5dd59031999ee507415a78ea1185035">   77</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#af5dd59031999ee507415a78ea1185035">OnListDeleteItem</a>(); </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a09395fd877cae2a6487b6acc616bc1d1">   78</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#a09395fd877cae2a6487b6acc616bc1d1">OnListAddItem</a>(); </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a459cb9abbef2773a3e9699213bb8776b">   79</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#a459cb9abbef2773a3e9699213bb8776b">OnListEditItem</a>(); </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a941ad5a6ecd4375ff4f26683aa7b2402">   80</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#a941ad5a6ecd4375ff4f26683aa7b2402">OnListViewItem</a>(); </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a4ed5cb1674e5a88aefb15a800e5a42e9">   81</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_payment_order_list.html#a4ed5cb1674e5a88aefb15a800e5a42e9">OnListRollbackItem</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a46b352fbeb5ace3351739ecf583ffd3b">   82</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_payment_order_list.html#a46b352fbeb5ace3351739ecf583ffd3b">OnViewSelect</a>(); </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a003057be03ac67d5f3a84145f235573e">   83</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_payment_order_list.html#a003057be03ac67d5f3a84145f235573e">OnAddSelect</a>(); </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a828f0bae2fdcd4ce26867c784e5fbccd">   84</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_payment_order_list.html#a828f0bae2fdcd4ce26867c784e5fbccd">OnEditSelect</a>(); </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a4bd9ca2bad8423f4462115cd8a9342f1">   85</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_payment_order_list.html#a4bd9ca2bad8423f4462115cd8a9342f1">OnDeleteSelect</a>(); </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">//Ham in phiếu đề nghị thanh toán</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#adeb15fc127cfe55d5e56cf773b311496">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#adeb15fc127cfe55d5e56cf773b311496">OnPrint</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#afe731d286430d55b1ec9d62a80228770">   88</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#afe731d286430d55b1ec9d62a80228770">OnSend</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a0aa388f4da7b1fadf2bbc28b40f6d6e3">   90</a></span>    <a class="code hl_function" href="class_c_payment_order_list.html#a0aa388f4da7b1fadf2bbc28b40f6d6e3">CPaymentOrderList</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a88b08a267636f18586c8ae0d36a6e036">   91</a></span>    <a class="code hl_function" href="class_c_payment_order_list.html#a88b08a267636f18586c8ae0d36a6e036">~CPaymentOrderList</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ac810b8c938255ad7605e5d5708e5dee6">   92</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#ac810b8c938255ad7605e5d5708e5dee6">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a6e15f5b5e36b44008eff9f860a34d411">   93</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#a6e15f5b5e36b44008eff9f860a34d411">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#aa74d17b19e38f6b03d55be308f963b3c">   94</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#aa74d17b19e38f6b03d55be308f963b3c">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a844dc8aa20548913426c82435250650b">   95</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#a844dc8aa20548913426c82435250650b">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ab7e375553b2a01531100be0f4d6a8dbe">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#ab7e375553b2a01531100be0f4d6a8dbe">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a1ab952544c3ba27f5240630e66ab05a8">   97</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#a1ab952544c3ba27f5240630e66ab05a8">GetScreenToData</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a24626286821412a1846294b2aea4d290">   98</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#a24626286821412a1846294b2aea4d290">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a8c846f6674a2521bea82e7ea1967bc8d">   99</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_payment_order_list.html#a8c846f6674a2521bea82e7ea1967bc8d">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a54bdbeeeb9778d3cb199fee45977dd68">  100</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_payment_order_list.html#a54bdbeeeb9778d3cb199fee45977dd68">OnAddPaymentOrderList</a>(); </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a2b396795d4121e8c5a9097254b1a607d">  101</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_payment_order_list.html#a2b396795d4121e8c5a9097254b1a607d">OnEditPaymentOrderList</a>(); </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a7ba0868e1ab96848868cd8bfdf347eb1">  102</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_payment_order_list.html#a7ba0868e1ab96848868cd8bfdf347eb1">OnDeletePaymentOrderList</a>(); </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#ae38c0a6b789c315613d0afb291b52a53">  103</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_payment_order_list.html#ae38c0a6b789c315613d0afb291b52a53">OnSavePaymentOrderList</a>(); </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#af737b4d2f16a934ca8bee413aa67f6a0">  104</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_payment_order_list.html#af737b4d2f16a934ca8bee413aa67f6a0">OnCancelPaymentOrderList</a>(); </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a4c740b21e4e225138c41ba27c2de6f41">  105</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_payment_order_list.html#a4c740b21e4e225138c41ba27c2de6f41">OnPaymentOrderListListLoadData</a>(); </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a59302886958bbb88622795d75852a800">  106</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#a59302886958bbb88622795d75852a800">Refresh</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a45c69c0de06ebe20a61690a5095dce87">  107</a></span>    CString <a class="code hl_function" href="class_c_payment_order_list.html#a45c69c0de06ebe20a61690a5095dce87">GetCurrentStatus</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a654da164cb73486ba18c9e3d79f39f11">  108</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#a654da164cb73486ba18c9e3d79f39f11">OnResizeLayout</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    DECLARE_MESSAGE_MAP()</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_c_payment_order_list.html#a12582fec947324dcc2a130ce07d8f273">  111</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_payment_order_list.html#a12582fec947324dcc2a130ce07d8f273">OnSetFocus</a>(CWnd* pOldWnd);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a003057be03ac67d5f3a84145f235573e"><div class="ttname"><a href="class_c_payment_order_list.html#a003057be03ac67d5f3a84145f235573e">CPaymentOrderList::OnAddSelect</a></div><div class="ttdeci">void OnAddSelect()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a02389de8f4606357ab5d85f0f1490f0d"><div class="ttname"><a href="class_c_payment_order_list.html#a02389de8f4606357ab5d85f0f1490f0d">CPaymentOrderList::OnListDblClick</a></div><div class="ttdeci">void OnListDblClick()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a09395fd877cae2a6487b6acc616bc1d1"><div class="ttname"><a href="class_c_payment_order_list.html#a09395fd877cae2a6487b6acc616bc1d1">CPaymentOrderList::OnListAddItem</a></div><div class="ttdeci">int OnListAddItem()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a0aa388f4da7b1fadf2bbc28b40f6d6e3"><div class="ttname"><a href="class_c_payment_order_list.html#a0aa388f4da7b1fadf2bbc28b40f6d6e3">CPaymentOrderList::CPaymentOrderList</a></div><div class="ttdeci">CPaymentOrderList()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a0bac290303238a46c892f38d813cb75f"><div class="ttname"><a href="class_c_payment_order_list.html#a0bac290303238a46c892f38d813cb75f">CPaymentOrderList::OnFromDateCheckValue</a></div><div class="ttdeci">int OnFromDateCheckValue()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a12582fec947324dcc2a130ce07d8f273"><div class="ttname"><a href="class_c_payment_order_list.html#a12582fec947324dcc2a130ce07d8f273">CPaymentOrderList::OnSetFocus</a></div><div class="ttdeci">afx_msg void OnSetFocus(CWnd *pOldWnd)</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a1ab952544c3ba27f5240630e66ab05a8"><div class="ttname"><a href="class_c_payment_order_list.html#a1ab952544c3ba27f5240630e66ab05a8">CPaymentOrderList::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a1b55f7e0534b418df374c883aa268b19"><div class="ttname"><a href="class_c_payment_order_list.html#a1b55f7e0534b418df374c883aa268b19">CPaymentOrderList::m_wndAdd</a></div><div class="ttdeci">CGuiButton m_wndAdd</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:55</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a24626286821412a1846294b2aea4d290"><div class="ttname"><a href="class_c_payment_order_list.html#a24626286821412a1846294b2aea4d290">CPaymentOrderList::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a2b396795d4121e8c5a9097254b1a607d"><div class="ttname"><a href="class_c_payment_order_list.html#a2b396795d4121e8c5a9097254b1a607d">CPaymentOrderList::OnEditPaymentOrderList</a></div><div class="ttdeci">int OnEditPaymentOrderList()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a3128157f73074cc629a2d2db79cbf5cb"><div class="ttname"><a href="class_c_payment_order_list.html#a3128157f73074cc629a2d2db79cbf5cb">CPaymentOrderList::m_wndView</a></div><div class="ttdeci">CGuiButton m_wndView</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:54</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a372a8a30edf9d7e0533e478bf9926529"><div class="ttname"><a href="class_c_payment_order_list.html#a372a8a30edf9d7e0533e478bf9926529">CPaymentOrderList::m_wndPaymentOrderInfo</a></div><div class="ttdeci">CGuiGroupBox m_wndPaymentOrderInfo</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:45</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a397dfd25e1e87f65ed72d0fdc29e0959"><div class="ttname"><a href="class_c_payment_order_list.html#a397dfd25e1e87f65ed72d0fdc29e0959">CPaymentOrderList::m_szFromDate</a></div><div class="ttdeci">CString m_szFromDate</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:58</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a459cb9abbef2773a3e9699213bb8776b"><div class="ttname"><a href="class_c_payment_order_list.html#a459cb9abbef2773a3e9699213bb8776b">CPaymentOrderList::OnListEditItem</a></div><div class="ttdeci">int OnListEditItem()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a45c69c0de06ebe20a61690a5095dce87"><div class="ttname"><a href="class_c_payment_order_list.html#a45c69c0de06ebe20a61690a5095dce87">CPaymentOrderList::GetCurrentStatus</a></div><div class="ttdeci">CString GetCurrentStatus()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a46b352fbeb5ace3351739ecf583ffd3b"><div class="ttname"><a href="class_c_payment_order_list.html#a46b352fbeb5ace3351739ecf583ffd3b">CPaymentOrderList::OnViewSelect</a></div><div class="ttdeci">void OnViewSelect()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a48a62922434d6a39817568bf5a9bbce8"><div class="ttname"><a href="class_c_payment_order_list.html#a48a62922434d6a39817568bf5a9bbce8">CPaymentOrderList::m_nID</a></div><div class="ttdeci">long m_nID</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:37</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a4bd9ca2bad8423f4462115cd8a9342f1"><div class="ttname"><a href="class_c_payment_order_list.html#a4bd9ca2bad8423f4462115cd8a9342f1">CPaymentOrderList::OnDeleteSelect</a></div><div class="ttdeci">void OnDeleteSelect()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a4c740b21e4e225138c41ba27c2de6f41"><div class="ttname"><a href="class_c_payment_order_list.html#a4c740b21e4e225138c41ba27c2de6f41">CPaymentOrderList::OnPaymentOrderListListLoadData</a></div><div class="ttdeci">int OnPaymentOrderListListLoadData()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a4ed5cb1674e5a88aefb15a800e5a42e9"><div class="ttname"><a href="class_c_payment_order_list.html#a4ed5cb1674e5a88aefb15a800e5a42e9">CPaymentOrderList::OnListRollbackItem</a></div><div class="ttdeci">int OnListRollbackItem()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a54bdbeeeb9778d3cb199fee45977dd68"><div class="ttname"><a href="class_c_payment_order_list.html#a54bdbeeeb9778d3cb199fee45977dd68">CPaymentOrderList::OnAddPaymentOrderList</a></div><div class="ttdeci">int OnAddPaymentOrderList()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a59302886958bbb88622795d75852a800"><div class="ttname"><a href="class_c_payment_order_list.html#a59302886958bbb88622795d75852a800">CPaymentOrderList::Refresh</a></div><div class="ttdeci">void Refresh()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a654da164cb73486ba18c9e3d79f39f11"><div class="ttname"><a href="class_c_payment_order_list.html#a654da164cb73486ba18c9e3d79f39f11">CPaymentOrderList::OnResizeLayout</a></div><div class="ttdeci">void OnResizeLayout()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a6b766d65784e98558e9268c293645364"><div class="ttname"><a href="class_c_payment_order_list.html#a6b766d65784e98558e9268c293645364">CPaymentOrderList::m_arFilters</a></div><div class="ttdeci">CStringArray m_arFilters</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:38</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a6e15f5b5e36b44008eff9f860a34d411"><div class="ttname"><a href="class_c_payment_order_list.html#a6e15f5b5e36b44008eff9f860a34d411">CPaymentOrderList::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a78ee64bdc15e06e0cf9735d3e9d74b3b"><div class="ttname"><a href="class_c_payment_order_list.html#a78ee64bdc15e06e0cf9735d3e9d74b3b">CPaymentOrderList::m_wndOption</a></div><div class="ttdeci">CGuiButton m_wndOption</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:52</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a7a27951922b14db90a6f2509dc754d68"><div class="ttname"><a href="class_c_payment_order_list.html#a7a27951922b14db90a6f2509dc754d68">CPaymentOrderList::m_wndToDate</a></div><div class="ttdeci">CGuiDateCtrl m_wndToDate</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:49</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a7ba0868e1ab96848868cd8bfdf347eb1"><div class="ttname"><a href="class_c_payment_order_list.html#a7ba0868e1ab96848868cd8bfdf347eb1">CPaymentOrderList::OnDeletePaymentOrderList</a></div><div class="ttdeci">int OnDeletePaymentOrderList()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a828f0bae2fdcd4ce26867c784e5fbccd"><div class="ttname"><a href="class_c_payment_order_list.html#a828f0bae2fdcd4ce26867c784e5fbccd">CPaymentOrderList::OnEditSelect</a></div><div class="ttdeci">void OnEditSelect()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a844dc8aa20548913426c82435250650b"><div class="ttname"><a href="class_c_payment_order_list.html#a844dc8aa20548913426c82435250650b">CPaymentOrderList::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a88b08a267636f18586c8ae0d36a6e036"><div class="ttname"><a href="class_c_payment_order_list.html#a88b08a267636f18586c8ae0d36a6e036">CPaymentOrderList::~CPaymentOrderList</a></div><div class="ttdeci">~CPaymentOrderList()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a8c846f6674a2521bea82e7ea1967bc8d"><div class="ttname"><a href="class_c_payment_order_list.html#a8c846f6674a2521bea82e7ea1967bc8d">CPaymentOrderList::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a913d75df90a276c541af4f2da8409c09"><div class="ttname"><a href="class_c_payment_order_list.html#a913d75df90a276c541af4f2da8409c09">CPaymentOrderList::m_wndFromDateLabel</a></div><div class="ttdeci">CGuiLabel m_wndFromDateLabel</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:47</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a91b10242f4330cd5ea5c94b1b5f1570d"><div class="ttname"><a href="class_c_payment_order_list.html#a91b10242f4330cd5ea5c94b1b5f1570d">CPaymentOrderList::m_wndDelete</a></div><div class="ttdeci">CGuiButton m_wndDelete</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:57</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a941ad5a6ecd4375ff4f26683aa7b2402"><div class="ttname"><a href="class_c_payment_order_list.html#a941ad5a6ecd4375ff4f26683aa7b2402">CPaymentOrderList::OnListViewItem</a></div><div class="ttdeci">int OnListViewItem()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a96275cc60d92cfb617ac4b0041d79a14"><div class="ttname"><a href="class_c_payment_order_list.html#a96275cc60d92cfb617ac4b0041d79a14">CPaymentOrderList::m_szToDate</a></div><div class="ttdeci">CString m_szToDate</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:59</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_a992e6af6d81a980926e4f74914811fd4"><div class="ttname"><a href="class_c_payment_order_list.html#a992e6af6d81a980926e4f74914811fd4">CPaymentOrderList::OnToDateCheckValue</a></div><div class="ttdeci">int OnToDateCheckValue()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_aa74d17b19e38f6b03d55be308f963b3c"><div class="ttname"><a href="class_c_payment_order_list.html#aa74d17b19e38f6b03d55be308f963b3c">CPaymentOrderList::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_aa858d2e29bc14c682639411abe611cc5"><div class="ttname"><a href="class_c_payment_order_list.html#aa858d2e29bc14c682639411abe611cc5">CPaymentOrderList::m_wndSearch</a></div><div class="ttdeci">CGuiTextCtrl m_wndSearch</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:51</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_aaeaecfadbd406b0a193a89aedbf41253"><div class="ttname"><a href="class_c_payment_order_list.html#aaeaecfadbd406b0a193a89aedbf41253">CPaymentOrderList::m_wndSearchLabel</a></div><div class="ttdeci">CGuiLabel m_wndSearchLabel</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:50</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_aaf4cddef90ce79b9f460f20e09067e44"><div class="ttname"><a href="class_c_payment_order_list.html#aaf4cddef90ce79b9f460f20e09067e44">CPaymentOrderList::m_szType</a></div><div class="ttdeci">CString m_szType</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:42</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ab43a9a1cb00c88cbfcfcf60afd1e6ef1"><div class="ttname"><a href="class_c_payment_order_list.html#ab43a9a1cb00c88cbfcfcf60afd1e6ef1">CPaymentOrderList::OnSearchCheckValue</a></div><div class="ttdeci">int OnSearchCheckValue()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ab7e375553b2a01531100be0f4d6a8dbe"><div class="ttname"><a href="class_c_payment_order_list.html#ab7e375553b2a01531100be0f4d6a8dbe">CPaymentOrderList::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ac2740561bc7c7ccadb6e61416a758e75"><div class="ttname"><a href="class_c_payment_order_list.html#ac2740561bc7c7ccadb6e61416a758e75">CPaymentOrderList::m_wndList</a></div><div class="ttdeci">CGuiListCtrl m_wndList</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:53</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ac810b8c938255ad7605e5d5708e5dee6"><div class="ttname"><a href="class_c_payment_order_list.html#ac810b8c938255ad7605e5d5708e5dee6">CPaymentOrderList::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_acaaf42013e1f84f1d2ac25e04376ec6c"><div class="ttname"><a href="class_c_payment_order_list.html#acaaf42013e1f84f1d2ac25e04376ec6c">CPaymentOrderList::m_szStatus</a></div><div class="ttdeci">CString m_szStatus</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:40</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_acfa3f148ee9e7f7dcde59ecadcccc11c"><div class="ttname"><a href="class_c_payment_order_list.html#acfa3f148ee9e7f7dcde59ecadcccc11c">CPaymentOrderList::m_wndSearchInformation</a></div><div class="ttdeci">CGuiGroupBox m_wndSearchInformation</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:44</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ad0078fc36ab9d241425d7b8fe13ddbbe"><div class="ttname"><a href="class_c_payment_order_list.html#ad0078fc36ab9d241425d7b8fe13ddbbe">CPaymentOrderList::OnListSelectChange</a></div><div class="ttdeci">void OnListSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ad5891d71895a741f8e0a24957db418b5"><div class="ttname"><a href="class_c_payment_order_list.html#ad5891d71895a741f8e0a24957db418b5">CPaymentOrderList::m_wndEdit</a></div><div class="ttdeci">CGuiButton m_wndEdit</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:56</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ad5c45ed083f5165532d4feaa30864cf4"><div class="ttname"><a href="class_c_payment_order_list.html#ad5c45ed083f5165532d4feaa30864cf4">CPaymentOrderList::m_nSearchID</a></div><div class="ttdeci">int m_nSearchID</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:39</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ad8c1a71116acae0fe470fe2a4bff1478"><div class="ttname"><a href="class_c_payment_order_list.html#ad8c1a71116acae0fe470fe2a4bff1478">CPaymentOrderList::m_szSearch</a></div><div class="ttdeci">CString m_szSearch</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:60</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ade76e478b3504cda119409d13cbcc7d3"><div class="ttname"><a href="class_c_payment_order_list.html#ade76e478b3504cda119409d13cbcc7d3">CPaymentOrderList::OnOptionSelect</a></div><div class="ttdeci">void OnOptionSelect()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_adeb15fc127cfe55d5e56cf773b311496"><div class="ttname"><a href="class_c_payment_order_list.html#adeb15fc127cfe55d5e56cf773b311496">CPaymentOrderList::OnPrint</a></div><div class="ttdeci">void OnPrint()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ae38c0a6b789c315613d0afb291b52a53"><div class="ttname"><a href="class_c_payment_order_list.html#ae38c0a6b789c315613d0afb291b52a53">CPaymentOrderList::OnSavePaymentOrderList</a></div><div class="ttdeci">int OnSavePaymentOrderList()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ae723fc250ad2e1937c9d4e95d11cfcc4"><div class="ttname"><a href="class_c_payment_order_list.html#ae723fc250ad2e1937c9d4e95d11cfcc4">CPaymentOrderList::m_wndFromDate</a></div><div class="ttdeci">CGuiDateCtrl m_wndFromDate</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:46</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_ae85bcceeb0ec839062b1cf4bdb3bce97"><div class="ttname"><a href="class_c_payment_order_list.html#ae85bcceeb0ec839062b1cf4bdb3bce97">CPaymentOrderList::OnListLoadData</a></div><div class="ttdeci">long OnListLoadData()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_af5dd59031999ee507415a78ea1185035"><div class="ttname"><a href="class_c_payment_order_list.html#af5dd59031999ee507415a78ea1185035">CPaymentOrderList::OnListDeleteItem</a></div><div class="ttdeci">int OnListDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_af653be637da2c41ad1ed02afd8481a80"><div class="ttname"><a href="class_c_payment_order_list.html#af653be637da2c41ad1ed02afd8481a80">CPaymentOrderList::m_wndToDateLabel</a></div><div class="ttdeci">CGuiLabel m_wndToDateLabel</div><div class="ttdef"><b>Definition</b> PaymentOrderList.h:48</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_af737b4d2f16a934ca8bee413aa67f6a0"><div class="ttname"><a href="class_c_payment_order_list.html#af737b4d2f16a934ca8bee413aa67f6a0">CPaymentOrderList::OnCancelPaymentOrderList</a></div><div class="ttdeci">int OnCancelPaymentOrderList()</div></div>
+<div class="ttc" id="aclass_c_payment_order_list_html_afe731d286430d55b1ec9d62a80228770"><div class="ttname"><a href="class_c_payment_order_list.html#afe731d286430d55b1ec9d62a80228770">CPaymentOrderList::OnSend</a></div><div class="ttdeci">void OnSend()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_bf016c3c43d37998710d5d1e08bd38a2.html">VIMESCORE_E10</a></li><li class="navelem"><a href="_payment_order_list_8h.html">PaymentOrderList.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

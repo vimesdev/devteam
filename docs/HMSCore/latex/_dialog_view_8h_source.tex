@@ -1,0 +1,69 @@
+\doxysection{Dialog\+View.\+h}
+\hypertarget{_dialog_view_8h_source}{}\label{_dialog_view_8h_source}\index{Include/HMSCore/DialogView.h@{Include/HMSCore/DialogView.h}}
+\mbox{\hyperlink{_dialog_view_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DIALOGVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DIALOGVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GuiMiniFrame.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_dialog_view_a8051e1efa596f2192597f936d890c8ef}{CDialogView}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ CGuiView*\ \mbox{\hyperlink{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892}{m\_pView}};\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_c_dialog_view_a8051e1efa596f2192597f936d890c8ef}{CDialogView}}(CWnd*\ pParent,\ CGuiView*\ pView)\ :CGuiDialog(pParent),\ \mbox{\hyperlink{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892}{m\_pView}}(pView)}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_c_dialog_view_a69ea17691cfc41a524555748c4ba1603}{\string~CDialogView}}()\ \{}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_dialog_view_a2bc9bab41edd9fa363bf23d85236613a}{OnCreateComponents}}()}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892}{m\_pView}}-\/>Create(\textcolor{keyword}{this},\ CRect(0,\ 0,\ 960,\ 600));}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892}{m\_pView}}-\/>OnInitDialog();}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_dialog_view_a323ef4e5224c3f9d95a8fbaf1b252b50}{OnSize}}(UINT\ nType,\ \textcolor{keywordtype}{int}\ cx,\ \textcolor{keywordtype}{int}\ cy)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ CRect\ rect;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ GetClientRect(rect);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892}{m\_pView}}-\/>MoveWindow(rect);}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_frame_view_dialog_ac9779734f9a246a531b5bff13fea6091}{CFrameViewDialog}}:\ \textcolor{keyword}{public}\ CGuiMiniFrame\ \{}
+\DoxyCodeLine{00074\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiView*\ \mbox{\hyperlink{class_c_frame_view_dialog_ad495a0f76f3f0efbd7b6fb29cc281454}{m\_pView}};\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_c_frame_view_dialog_ac9779734f9a246a531b5bff13fea6091}{CFrameViewDialog}}():\mbox{\hyperlink{class_c_frame_view_dialog_ad495a0f76f3f0efbd7b6fb29cc281454}{m\_pView}}(NULL)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_c_frame_view_dialog_af8967b557596156cf021732ddcc7a765}{\string~CFrameViewDialog}}()\ \{\}}
+\DoxyCodeLine{00089\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_frame_view_dialog_a3b0c114de292e400a90e2f8a06a4ce08}{CreateAndShow}}(CGuiView*\ pView)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_frame_view_dialog_ad495a0f76f3f0efbd7b6fb29cc281454}{m\_pView}}\ =\ pView;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!CGuiMiniFrame::Create(NULL,\ \_T(\textcolor{stringliteral}{"{}"{}}),\ WS\_OVERLAPPEDWINDOW\ ,\ CRect(0,\ 0,\ 1024,\ 720),\ GetDesktopWindow(),\ 0))}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ FALSE;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ ShowWindow(SW\_SHOWDEFAULT);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ UpdateWindow();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ SetActiveWindow();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ SetFocus();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TRUE;}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00113\ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_frame_view_dialog_ac3afd805ad759d8313f7f240ce8a0d75}{OnCreate}}(LPCREATESTRUCT\ lpCreateStruct);}
+\DoxyCodeLine{00121\ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_frame_view_dialog_a3cb9526bbea09a26c9192f415a60989f}{OnSize}}(UINT\ nType,\ \textcolor{keywordtype}{int}\ cx,\ \textcolor{keywordtype}{int}\ cy);}
+\DoxyCodeLine{00130\ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_frame_view_dialog_ac6ffa54faa393248473e7d7af700143e}{OnNcDestroy}}();}
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

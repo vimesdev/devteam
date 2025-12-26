@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/ATMHtmlView.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_a_t_m_html_view_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ATMHtmlView.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_t_m_html_view_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ATMHTMLVIEW_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ATMHTMLVIEW_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright � Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiView.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;HTMLayoutCtrl.h&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html">   32</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_a_t_m_html_view.html#a2baad200b049616bf0d599ad69dad7c5">CATMHtmlView</a> : <span class="keyword">public</span> CGuiView{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a86df0a535eed72226dd06878e274cb16">   34</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_a_t_m_html_view.html#a86df0a535eed72226dd06878e274cb16">m_nDocumentNo</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#afc5daea104635eecd6649a46fd1e0420">   36</a></span>    CString <a class="code hl_variable" href="class_c_a_t_m_html_view.html#afc5daea104635eecd6649a46fd1e0420">m_szType</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a3a7460a6e0086cb257c20d8d738e9453">   37</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_a_t_m_html_view.html#a3a7460a6e0086cb257c20d8d738e9453">m_wndPrint</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#ad780b3262f389dd69a2d73f6e10d7613">   38</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_a_t_m_html_view.html#ad780b3262f389dd69a2d73f6e10d7613">m_wndClose</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a71438f871021a28e8e6095949ad3b064">   39</a></span>    <a class="code hl_class" href="class_c_h_t_m_layout_ctrl.html">CHTMLayoutCtrl</a>  <a class="code hl_variable" href="class_c_a_t_m_html_view.html#a71438f871021a28e8e6095949ad3b064">m_wndView</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#abb17ff315faa3fc2b79c6f0d9bf53eb2">   40</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_html_view.html#abb17ff315faa3fc2b79c6f0d9bf53eb2">OnPrintSelect</a>(); </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a5dc7c4155b45a054dc0a2141575a25e2">   41</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_html_view.html#a5dc7c4155b45a054dc0a2141575a25e2">OnCloseSelect</a>(); </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a45c4df35cd327b78939ca4a04db1c898">   42</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_a_t_m_html_view.html#a45c4df35cd327b78939ca4a04db1c898">OnViewLoadData</a>(); </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#aefc132c0ba2eb1848532ba66c848a841">   43</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_html_view.html#aefc132c0ba2eb1848532ba66c848a841">OnViewSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a7ecacd277308e427b7590aaa1777ae4a">   44</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_html_view.html#a7ecacd277308e427b7590aaa1777ae4a">OnViewDblClick</a>(); </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a09608a994002f41c09c8e4a5183f569e">   45</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_a_t_m_html_view.html#a09608a994002f41c09c8e4a5183f569e">OnViewDeleteItem</a>(); </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a2baad200b049616bf0d599ad69dad7c5">   46</a></span>    <a class="code hl_function" href="class_c_a_t_m_html_view.html#a2baad200b049616bf0d599ad69dad7c5">CATMHtmlView</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a1287d3adfe22bde0a75a3a96237103ea">   47</a></span>    <a class="code hl_function" href="class_c_a_t_m_html_view.html#a1287d3adfe22bde0a75a3a96237103ea">~CATMHtmlView</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a675fc51ded89f4c2b3c461160b8c609b">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a675fc51ded89f4c2b3c461160b8c609b">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a097d13ccdac78f7af574df092601cad5">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a097d13ccdac78f7af574df092601cad5">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a8fe26b561fb66b6cd1f48ec98677acb1">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a8fe26b561fb66b6cd1f48ec98677acb1">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a3f0f1da88807be1a70c1d04dbdf6d912">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a3f0f1da88807be1a70c1d04dbdf6d912">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#ae8a34110315f4b670ace76589b2ec1a1">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#ae8a34110315f4b670ace76589b2ec1a1">UpdateJson</a>(BOOL bSaveAndValidate);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#ab9c5a0be8a08958b9961e0bf4d467160">   53</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#ab9c5a0be8a08958b9961e0bf4d467160">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#aa6a8eb39bdfd947133aeb4cfaeaacd86">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#aa6a8eb39bdfd947133aeb4cfaeaacd86">GetScreenToData</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a3aebd65503c0232818f95111808bf233">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a3aebd65503c0232818f95111808bf233">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a96215501a7802d09da4704fdda658e61">   56</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a96215501a7802d09da4704fdda658e61">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a20084a542bd37cb18785d581208b14c5">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a20084a542bd37cb18785d581208b14c5">OnAddATMHtmlDialog</a>(); </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#abc7d888a62911847892a530cea1d1c74">   58</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#abc7d888a62911847892a530cea1d1c74">OnEditATMHtmlDialog</a>(); </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#aecb80c4c818dcd33266900fbd76b3378">   59</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#aecb80c4c818dcd33266900fbd76b3378">OnDeleteATMHtmlDialog</a>(); </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a244328f98ff7c5830d9487093f2d5e8b">   60</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a244328f98ff7c5830d9487093f2d5e8b">OnSaveATMHtmlDialog</a>(); </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a5fe947682e3d26308975673551562597">   61</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a5fe947682e3d26308975673551562597">OnCancelATMHtmlDialog</a>(); </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a201301c840141b12c3e825e9b31f8e6d">   62</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a201301c840141b12c3e825e9b31f8e6d">OnATMHtmlDialogListLoadData</a>(); </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a2dfdda1ff954906ea5a0fa69ecb779df">   63</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a2dfdda1ff954906ea5a0fa69ecb779df">PrintExamSheet</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#ac8c19e4be36201e2edca17935af26423">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#ac8c19e4be36201e2edca17935af26423">PrintExamSheet_v2</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a580b2a0f589a2e000810e05f5ef8a7b4">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#a580b2a0f589a2e000810e05f5ef8a7b4">PrintExamSheet_v3</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#ac7ad0e9fbde7c3d1834192f8e3a14f43">   66</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_html_view.html#ac7ad0e9fbde7c3d1834192f8e3a14f43">GetPaymentInfo</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    DECLARE_MESSAGE_MAP()</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_a_t_m_html_view.html#a2d2e6ade50db29c4b1e3790d026bc69a">   68</a></span>    void <a class="code hl_function" href="class_c_a_t_m_html_view.html#a2d2e6ade50db29c4b1e3790d026bc69a">OnSize</a>(UINT nType, <span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a09608a994002f41c09c8e4a5183f569e"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a09608a994002f41c09c8e4a5183f569e">CATMHtmlView::OnViewDeleteItem</a></div><div class="ttdeci">int OnViewDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a097d13ccdac78f7af574df092601cad5"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a097d13ccdac78f7af574df092601cad5">CATMHtmlView::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a1287d3adfe22bde0a75a3a96237103ea"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a1287d3adfe22bde0a75a3a96237103ea">CATMHtmlView::~CATMHtmlView</a></div><div class="ttdeci">~CATMHtmlView()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a20084a542bd37cb18785d581208b14c5"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a20084a542bd37cb18785d581208b14c5">CATMHtmlView::OnAddATMHtmlDialog</a></div><div class="ttdeci">int OnAddATMHtmlDialog()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a201301c840141b12c3e825e9b31f8e6d"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a201301c840141b12c3e825e9b31f8e6d">CATMHtmlView::OnATMHtmlDialogListLoadData</a></div><div class="ttdeci">int OnATMHtmlDialogListLoadData()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a244328f98ff7c5830d9487093f2d5e8b"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a244328f98ff7c5830d9487093f2d5e8b">CATMHtmlView::OnSaveATMHtmlDialog</a></div><div class="ttdeci">int OnSaveATMHtmlDialog()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a2baad200b049616bf0d599ad69dad7c5"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a2baad200b049616bf0d599ad69dad7c5">CATMHtmlView::CATMHtmlView</a></div><div class="ttdeci">CATMHtmlView()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a2d2e6ade50db29c4b1e3790d026bc69a"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a2d2e6ade50db29c4b1e3790d026bc69a">CATMHtmlView::OnSize</a></div><div class="ttdeci">void OnSize(UINT nType, int cx, int cy)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a2dfdda1ff954906ea5a0fa69ecb779df"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a2dfdda1ff954906ea5a0fa69ecb779df">CATMHtmlView::PrintExamSheet</a></div><div class="ttdeci">void PrintExamSheet()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a3a7460a6e0086cb257c20d8d738e9453"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a3a7460a6e0086cb257c20d8d738e9453">CATMHtmlView::m_wndPrint</a></div><div class="ttdeci">CGuiButton m_wndPrint</div><div class="ttdef"><b>Definition</b> ATMHtmlView.h:37</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a3aebd65503c0232818f95111808bf233"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a3aebd65503c0232818f95111808bf233">CATMHtmlView::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a3f0f1da88807be1a70c1d04dbdf6d912"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a3f0f1da88807be1a70c1d04dbdf6d912">CATMHtmlView::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a45c4df35cd327b78939ca4a04db1c898"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a45c4df35cd327b78939ca4a04db1c898">CATMHtmlView::OnViewLoadData</a></div><div class="ttdeci">long OnViewLoadData()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a580b2a0f589a2e000810e05f5ef8a7b4"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a580b2a0f589a2e000810e05f5ef8a7b4">CATMHtmlView::PrintExamSheet_v3</a></div><div class="ttdeci">void PrintExamSheet_v3()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a5dc7c4155b45a054dc0a2141575a25e2"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a5dc7c4155b45a054dc0a2141575a25e2">CATMHtmlView::OnCloseSelect</a></div><div class="ttdeci">void OnCloseSelect()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a5fe947682e3d26308975673551562597"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a5fe947682e3d26308975673551562597">CATMHtmlView::OnCancelATMHtmlDialog</a></div><div class="ttdeci">int OnCancelATMHtmlDialog()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a675fc51ded89f4c2b3c461160b8c609b"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a675fc51ded89f4c2b3c461160b8c609b">CATMHtmlView::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a71438f871021a28e8e6095949ad3b064"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a71438f871021a28e8e6095949ad3b064">CATMHtmlView::m_wndView</a></div><div class="ttdeci">CHTMLayoutCtrl m_wndView</div><div class="ttdef"><b>Definition</b> ATMHtmlView.h:39</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a7ecacd277308e427b7590aaa1777ae4a"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a7ecacd277308e427b7590aaa1777ae4a">CATMHtmlView::OnViewDblClick</a></div><div class="ttdeci">void OnViewDblClick()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a86df0a535eed72226dd06878e274cb16"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a86df0a535eed72226dd06878e274cb16">CATMHtmlView::m_nDocumentNo</a></div><div class="ttdeci">long m_nDocumentNo</div><div class="ttdef"><b>Definition</b> ATMHtmlView.h:34</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a8fe26b561fb66b6cd1f48ec98677acb1"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a8fe26b561fb66b6cd1f48ec98677acb1">CATMHtmlView::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_a96215501a7802d09da4704fdda658e61"><div class="ttname"><a href="class_c_a_t_m_html_view.html#a96215501a7802d09da4704fdda658e61">CATMHtmlView::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_aa6a8eb39bdfd947133aeb4cfaeaacd86"><div class="ttname"><a href="class_c_a_t_m_html_view.html#aa6a8eb39bdfd947133aeb4cfaeaacd86">CATMHtmlView::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_ab9c5a0be8a08958b9961e0bf4d467160"><div class="ttname"><a href="class_c_a_t_m_html_view.html#ab9c5a0be8a08958b9961e0bf4d467160">CATMHtmlView::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_abb17ff315faa3fc2b79c6f0d9bf53eb2"><div class="ttname"><a href="class_c_a_t_m_html_view.html#abb17ff315faa3fc2b79c6f0d9bf53eb2">CATMHtmlView::OnPrintSelect</a></div><div class="ttdeci">void OnPrintSelect()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_abc7d888a62911847892a530cea1d1c74"><div class="ttname"><a href="class_c_a_t_m_html_view.html#abc7d888a62911847892a530cea1d1c74">CATMHtmlView::OnEditATMHtmlDialog</a></div><div class="ttdeci">int OnEditATMHtmlDialog()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_ac7ad0e9fbde7c3d1834192f8e3a14f43"><div class="ttname"><a href="class_c_a_t_m_html_view.html#ac7ad0e9fbde7c3d1834192f8e3a14f43">CATMHtmlView::GetPaymentInfo</a></div><div class="ttdeci">void GetPaymentInfo()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_ac8c19e4be36201e2edca17935af26423"><div class="ttname"><a href="class_c_a_t_m_html_view.html#ac8c19e4be36201e2edca17935af26423">CATMHtmlView::PrintExamSheet_v2</a></div><div class="ttdeci">void PrintExamSheet_v2()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_ad780b3262f389dd69a2d73f6e10d7613"><div class="ttname"><a href="class_c_a_t_m_html_view.html#ad780b3262f389dd69a2d73f6e10d7613">CATMHtmlView::m_wndClose</a></div><div class="ttdeci">CGuiButton m_wndClose</div><div class="ttdef"><b>Definition</b> ATMHtmlView.h:38</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_ae8a34110315f4b670ace76589b2ec1a1"><div class="ttname"><a href="class_c_a_t_m_html_view.html#ae8a34110315f4b670ace76589b2ec1a1">CATMHtmlView::UpdateJson</a></div><div class="ttdeci">void UpdateJson(BOOL bSaveAndValidate)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_aecb80c4c818dcd33266900fbd76b3378"><div class="ttname"><a href="class_c_a_t_m_html_view.html#aecb80c4c818dcd33266900fbd76b3378">CATMHtmlView::OnDeleteATMHtmlDialog</a></div><div class="ttdeci">int OnDeleteATMHtmlDialog()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_aefc132c0ba2eb1848532ba66c848a841"><div class="ttname"><a href="class_c_a_t_m_html_view.html#aefc132c0ba2eb1848532ba66c848a841">CATMHtmlView::OnViewSelectChange</a></div><div class="ttdeci">void OnViewSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_html_view_html_afc5daea104635eecd6649a46fd1e0420"><div class="ttname"><a href="class_c_a_t_m_html_view.html#afc5daea104635eecd6649a46fd1e0420">CATMHtmlView::m_szType</a></div><div class="ttdeci">CString m_szType</div><div class="ttdef"><b>Definition</b> ATMHtmlView.h:36</div></div>
+<div class="ttc" id="aclass_c_h_t_m_layout_ctrl_html"><div class="ttname"><a href="class_c_h_t_m_layout_ctrl.html">CHTMLayoutCtrl</a></div><div class="ttdef"><b>Definition</b> HTMLayoutCtrlX.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_a_t_m_html_view_8h.html">ATMHtmlView.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/HMSMessageDialog.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_h_m_s_message_dialog_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">HMSMessageDialog.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_h_m_s_message_dialog_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef HMSMESSAGEDIALOG_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define HMSMESSAGEDIALOG_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiDialog.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html">   30</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a6f55b347ab34a214fa7d33e2069d1d74">CHMSMessageDialog</a> : <span class="keyword">public</span> CGuiDialog{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#aa5fdcc9bf46b166fe376311799acdaaf">   33</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_message_dialog.html#aa5fdcc9bf46b166fe376311799acdaaf">m_wndMessage</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#aa910716f7396cf93137ce60dd82685bb">   34</a></span>    CString     <a class="code hl_variable" href="class_c_h_m_s_message_dialog.html#aa910716f7396cf93137ce60dd82685bb">m_szMessage</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a1bb39bceb9204200e7fff7db6d338507">   35</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_message_dialog.html#a1bb39bceb9204200e7fff7db6d338507">m_wndSeen</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a53fe2e7a4df5b371455c616a1579f45d">   36</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a53fe2e7a4df5b371455c616a1579f45d">OnListLoadData</a>(); </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a2c1ee1da6aa6f1ce369b02898bfb28c7">   37</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a2c1ee1da6aa6f1ce369b02898bfb28c7">OnListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a89bf739667e0970b60a5a9d089bcdf17">   38</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a89bf739667e0970b60a5a9d089bcdf17">OnListDblClick</a>(); </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a1cffcaec9170bbf9c5c93348d632aea3">   39</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a1cffcaec9170bbf9c5c93348d632aea3">OnListDeleteItem</a>(); </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#aa2749dd3ae80f7d26ec0393d10f9b683">   40</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#aa2749dd3ae80f7d26ec0393d10f9b683">OnSeenSelect</a>(); </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a6f55b347ab34a214fa7d33e2069d1d74">   41</a></span>    <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a6f55b347ab34a214fa7d33e2069d1d74">CHMSMessageDialog</a>(CWnd *pParent, CString szMessage=_T(<span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#ad324ffd2196f2fd3cfd8ce0fc69c7e47">   42</a></span>    <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#ad324ffd2196f2fd3cfd8ce0fc69c7e47">~CHMSMessageDialog</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a9b3c1faf934937fa6edb54d544722e59">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a9b3c1faf934937fa6edb54d544722e59">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a9abc4304ca1bd9a666783831503784bf">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a9abc4304ca1bd9a666783831503784bf">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a306b70e8e3e57badd9f199a6ce52ead3">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a306b70e8e3e57badd9f199a6ce52ead3">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#acbacc5051d8d8e0b28dd4a270cc910aa">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#acbacc5051d8d8e0b28dd4a270cc910aa">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a70b49b5e9d4ccfa6288fd763399c4526">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a70b49b5e9d4ccfa6288fd763399c4526">UpdateJson</a>(BOOL bSaveAndValidate);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a15a607da711ffc2689e99d59300707ae">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a15a607da711ffc2689e99d59300707ae">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a31b9a5021ad46b5ab2dccd00a42eb643">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a31b9a5021ad46b5ab2dccd00a42eb643">GetScreenToData</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#aab625dd552fc83d2581b218281976f67">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#aab625dd552fc83d2581b218281976f67">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a357ed0f1153f87d94056e5e3268d3107">   51</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a357ed0f1153f87d94056e5e3268d3107">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a2f779ad693add656d54cb003666a58ee">   52</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a2f779ad693add656d54cb003666a58ee">OnAddHMSMessageDialog</a>(); </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#aad031f990ca495d34fb5b6fd1c7b2a34">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#aad031f990ca495d34fb5b6fd1c7b2a34">OnEditHMSMessageDialog</a>(); </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#ac358dd9d04e351b4f3c51f5b4dde8cc2">   54</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#ac358dd9d04e351b4f3c51f5b4dde8cc2">OnDeleteHMSMessageDialog</a>(); </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a38b17dbb42a6a05f960191f8e6b54107">   55</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a38b17dbb42a6a05f960191f8e6b54107">OnSaveHMSMessageDialog</a>(); </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a7419876e04e507c6a89950afbbf84bb3">   56</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a7419876e04e507c6a89950afbbf84bb3">OnCancelHMSMessageDialog</a>(); </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_h_m_s_message_dialog.html#a30abf71c931fbb3ed8f35f8c853ee782">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_message_dialog.html#a30abf71c931fbb3ed8f35f8c853ee782">OnHMSMessageDialogListLoadData</a>(); </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a15a607da711ffc2689e99d59300707ae"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a15a607da711ffc2689e99d59300707ae">CHMSMessageDialog::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a1bb39bceb9204200e7fff7db6d338507"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a1bb39bceb9204200e7fff7db6d338507">CHMSMessageDialog::m_wndSeen</a></div><div class="ttdeci">CGuiButton m_wndSeen</div><div class="ttdef"><b>Definition</b> HMSMessageDialog.h:35</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a1cffcaec9170bbf9c5c93348d632aea3"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a1cffcaec9170bbf9c5c93348d632aea3">CHMSMessageDialog::OnListDeleteItem</a></div><div class="ttdeci">int OnListDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a2c1ee1da6aa6f1ce369b02898bfb28c7"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a2c1ee1da6aa6f1ce369b02898bfb28c7">CHMSMessageDialog::OnListSelectChange</a></div><div class="ttdeci">void OnListSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a2f779ad693add656d54cb003666a58ee"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a2f779ad693add656d54cb003666a58ee">CHMSMessageDialog::OnAddHMSMessageDialog</a></div><div class="ttdeci">int OnAddHMSMessageDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a306b70e8e3e57badd9f199a6ce52ead3"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a306b70e8e3e57badd9f199a6ce52ead3">CHMSMessageDialog::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a30abf71c931fbb3ed8f35f8c853ee782"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a30abf71c931fbb3ed8f35f8c853ee782">CHMSMessageDialog::OnHMSMessageDialogListLoadData</a></div><div class="ttdeci">int OnHMSMessageDialogListLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a31b9a5021ad46b5ab2dccd00a42eb643"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a31b9a5021ad46b5ab2dccd00a42eb643">CHMSMessageDialog::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a357ed0f1153f87d94056e5e3268d3107"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a357ed0f1153f87d94056e5e3268d3107">CHMSMessageDialog::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a38b17dbb42a6a05f960191f8e6b54107"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a38b17dbb42a6a05f960191f8e6b54107">CHMSMessageDialog::OnSaveHMSMessageDialog</a></div><div class="ttdeci">int OnSaveHMSMessageDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a53fe2e7a4df5b371455c616a1579f45d"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a53fe2e7a4df5b371455c616a1579f45d">CHMSMessageDialog::OnListLoadData</a></div><div class="ttdeci">long OnListLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a6f55b347ab34a214fa7d33e2069d1d74"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a6f55b347ab34a214fa7d33e2069d1d74">CHMSMessageDialog::CHMSMessageDialog</a></div><div class="ttdeci">CHMSMessageDialog(CWnd *pParent, CString szMessage=_T(&quot;&quot;))</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a70b49b5e9d4ccfa6288fd763399c4526"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a70b49b5e9d4ccfa6288fd763399c4526">CHMSMessageDialog::UpdateJson</a></div><div class="ttdeci">void UpdateJson(BOOL bSaveAndValidate)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a7419876e04e507c6a89950afbbf84bb3"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a7419876e04e507c6a89950afbbf84bb3">CHMSMessageDialog::OnCancelHMSMessageDialog</a></div><div class="ttdeci">int OnCancelHMSMessageDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a89bf739667e0970b60a5a9d089bcdf17"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a89bf739667e0970b60a5a9d089bcdf17">CHMSMessageDialog::OnListDblClick</a></div><div class="ttdeci">void OnListDblClick()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a9abc4304ca1bd9a666783831503784bf"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a9abc4304ca1bd9a666783831503784bf">CHMSMessageDialog::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_a9b3c1faf934937fa6edb54d544722e59"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#a9b3c1faf934937fa6edb54d544722e59">CHMSMessageDialog::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_aa2749dd3ae80f7d26ec0393d10f9b683"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#aa2749dd3ae80f7d26ec0393d10f9b683">CHMSMessageDialog::OnSeenSelect</a></div><div class="ttdeci">void OnSeenSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_aa5fdcc9bf46b166fe376311799acdaaf"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#aa5fdcc9bf46b166fe376311799acdaaf">CHMSMessageDialog::m_wndMessage</a></div><div class="ttdeci">CGuiTextCtrl m_wndMessage</div><div class="ttdef"><b>Definition</b> HMSMessageDialog.h:33</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_aa910716f7396cf93137ce60dd82685bb"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#aa910716f7396cf93137ce60dd82685bb">CHMSMessageDialog::m_szMessage</a></div><div class="ttdeci">CString m_szMessage</div><div class="ttdef"><b>Definition</b> HMSMessageDialog.h:34</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_aab625dd552fc83d2581b218281976f67"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#aab625dd552fc83d2581b218281976f67">CHMSMessageDialog::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_aad031f990ca495d34fb5b6fd1c7b2a34"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#aad031f990ca495d34fb5b6fd1c7b2a34">CHMSMessageDialog::OnEditHMSMessageDialog</a></div><div class="ttdeci">int OnEditHMSMessageDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_ac358dd9d04e351b4f3c51f5b4dde8cc2"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#ac358dd9d04e351b4f3c51f5b4dde8cc2">CHMSMessageDialog::OnDeleteHMSMessageDialog</a></div><div class="ttdeci">int OnDeleteHMSMessageDialog()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_acbacc5051d8d8e0b28dd4a270cc910aa"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#acbacc5051d8d8e0b28dd4a270cc910aa">CHMSMessageDialog::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_message_dialog_html_ad324ffd2196f2fd3cfd8ce0fc69c7e47"><div class="ttname"><a href="class_c_h_m_s_message_dialog.html#ad324ffd2196f2fd3cfd8ce0fc69c7e47">CHMSMessageDialog::~CHMSMessageDialog</a></div><div class="ttdeci">~CHMSMessageDialog()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_h_m_s_message_dialog_8h.html">HMSMessageDialog.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

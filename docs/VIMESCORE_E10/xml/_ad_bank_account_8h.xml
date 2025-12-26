@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_bank_account_8h" kind="file" language="C++">
+    <compoundname>AdBankAccount.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_ad_bank_account_popup_8h" local="yes">AdBankAccountPopup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdBankAccount.h</label>
+        <link refid="_ad_bank_account_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AdBankAccountPopup.h</label>
+        <link refid="_ad_bank_account_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_ad_bank_account" prot="public">CAdBankAccount</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADBANKACCOUNT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADBANKACCOUNT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ad_bank_account_popup_8h" kindref="compound">AdBankAccountPopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_ad_bank_account" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_ad_bank_account_1aca596f8c5a9b0a7df159c4b2c400971c" kindref="member">CAdBankAccount</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_bank_account_1a630be16b38634f98a322616a7f8c1d97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_popup" kindref="compound">CAdBankAccountPopup</ref><sp/><ref refid="class_c_ad_bank_account_1a630be16b38634f98a322616a7f8c1d97" kindref="member">m_wndPopup</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_bank_account_1a7373f184a38514dc2e07d62f69861594" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a7373f184a38514dc2e07d62f69861594" kindref="member">m_arFilters</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_bank_account_1a57a939ab831caa2679494fb7cfedbba5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a57a939ab831caa2679494fb7cfedbba5" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_bank_account_1a3ba7d6ba62699b5637176c8570bef439" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a3ba7d6ba62699b5637176c8570bef439" kindref="member">m_nSearchID</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="class_c_ad_bank_account_1aa6f6548797dbd620456fd58767734c11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1aa6f6548797dbd620456fd58767734c11" kindref="member">m_wndBankInformation</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_bank_account_1adf67a3913976a5cea2fbb288c772e05f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1adf67a3913976a5cea2fbb288c772e05f" kindref="member">m_wndSearchLabel</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_bank_account_1adc9f87cc42c5875e5a83830cff3ef554" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1adc9f87cc42c5875e5a83830cff3ef554" kindref="member">m_wndSearch</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_bank_account_1a7ace2c7162d072e28925a41881e27636" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a7ace2c7162d072e28925a41881e27636" kindref="member">m_wndTypeOfFilter</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_bank_account_1aee8da5b18e56cddbed8f0b3ff6ea566a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1aee8da5b18e56cddbed8f0b3ff6ea566a" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_bank_account_1a56b39f94377a320084a3640f7e9da9eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a56b39f94377a320084a3640f7e9da9eb" kindref="member">m_wndAdd</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_bank_account_1af4909712625dc9870f9405752ba324f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1af4909712625dc9870f9405752ba324f9" kindref="member">m_wndEdit</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_ad_bank_account_1a154018d2ed0abbbd4ec716c6de71d15d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a154018d2ed0abbbd4ec716c6de71d15d" kindref="member">m_wndDelete</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_ad_bank_account_1a2d8a3489ff89aa8ed1beefe10ab3abc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a2d8a3489ff89aa8ed1beefe10ab3abc8" kindref="member">m_wndTypeOfFilterDesc</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_ad_bank_account_1af855a83daf397be51d3e7f46c0632f89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_bank_account_1af855a83daf397be51d3e7f46c0632f89" kindref="member">m_szSearch</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_c_ad_bank_account_1a3c22aaeef2b35b0cadca0d1faf71ec8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a3c22aaeef2b35b0cadca0d1faf71ec8b" kindref="member">OnSearchCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_bank_account_1a501411d160cc5bee27e289ce422d2c0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a501411d160cc5bee27e289ce422d2c0f" kindref="member">OnTypeOfFilterSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_bank_account_1a38736de9f4c5519b83af087822129c39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a38736de9f4c5519b83af087822129c39" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_bank_account_1a8a457c47861bd1ba5d2e76bb78ac842e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a8a457c47861bd1ba5d2e76bb78ac842e" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_bank_account_1a4bf0ae56bd3d99a86bf7278f36b697cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a4bf0ae56bd3d99a86bf7278f36b697cb" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_bank_account_1ae305359ead42a7161237991e217e1d95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1ae305359ead42a7161237991e217e1d95" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_bank_account_1a71b8ad1accab1fa2df61fafe320a3ff2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a71b8ad1accab1fa2df61fafe320a3ff2" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_bank_account_1ab8e7a3ab0eba964f52885a31aafa3e39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1ab8e7a3ab0eba964f52885a31aafa3e39" kindref="member">OnEditSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_bank_account_1a020243670fc2c806d34f0b560749ba0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a020243670fc2c806d34f0b560749ba0b" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_bank_account_1aca596f8c5a9b0a7df159c4b2c400971c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1aca596f8c5a9b0a7df159c4b2c400971c" kindref="member">CAdBankAccount</ref>();</highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_bank_account_1a7c16109fba68e41b98b0e84434e17677" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_bank_account_1a7c16109fba68e41b98b0e84434e17677" kindref="member">~CAdBankAccount</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_bank_account_1a2ec1b1aa46bb86d47da942817179ae0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a2ec1b1aa46bb86d47da942817179ae0b" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_bank_account_1ad676256fca3608c17ee1cf46a5c360d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1ad676256fca3608c17ee1cf46a5c360d1" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_bank_account_1a334a8d3ade03727c287230314667eb4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a334a8d3ade03727c287230314667eb4f" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_bank_account_1a8eae1ff61df8bd5cc79a7dc4d3ef122d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a8eae1ff61df8bd5cc79a7dc4d3ef122d" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_bank_account_1a5586435ffda3e0f080e99d5ecfc11bd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a5586435ffda3e0f080e99d5ecfc11bd5" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_bank_account_1a25dd8e4ba58f8815e5490d4deb0bcd77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a25dd8e4ba58f8815e5490d4deb0bcd77" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_bank_account_1a6a320516921723d2c889260daacd62fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a6a320516921723d2c889260daacd62fb" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_bank_account_1a93a4d5f7a6329b9166e83e3df0c7c5e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a93a4d5f7a6329b9166e83e3df0c7c5e8" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_bank_account_1a41a10c33ed034d24b21daa26de36e308" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a41a10c33ed034d24b21daa26de36e308" kindref="member">OnAddAdBankAccount</ref>();<sp/></highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_bank_account_1a9d6def89cd20e51f8ae209141df95695" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a9d6def89cd20e51f8ae209141df95695" kindref="member">OnEditAdBankAccount</ref>();<sp/></highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_bank_account_1a629b47a0e079e2aebe03b088cf1ce430" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a629b47a0e079e2aebe03b088cf1ce430" kindref="member">OnDeleteAdBankAccount</ref>();<sp/></highlight></codeline>
+<codeline lineno="73" refid="class_c_ad_bank_account_1ab485e22e9e1dc7914737b59afacd939d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1ab485e22e9e1dc7914737b59afacd939d" kindref="member">OnSaveAdBankAccount</ref>();<sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_ad_bank_account_1a8264e5ad1dcf4f02fda1f14855f35e7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a8264e5ad1dcf4f02fda1f14855f35e7e" kindref="member">OnCancelAdBankAccount</ref>();<sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_ad_bank_account_1a75b384791078a427df788e5511550ad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_bank_account_1a75b384791078a427df788e5511550ad4" kindref="member">OnAdBankAccountListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdBankAccount.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,129 @@
+\doxysection{CDialog\+View Class Tham chiếu}
+\hypertarget{class_c_dialog_view}{}\label{class_c_dialog_view}\index{CDialogView@{CDialogView}}
+
+
+Lớp dialog wrapper để hiển thị CGui\+View trong dialog.  
+
+
+
+
+{\ttfamily \#include $<$Dialog\+View.\+h$>$}
+
+Sơ đồ kế thừa cho CDialog\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_dialog_view}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Các hàm thành viên Public}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_dialog_view_a8051e1efa596f2192597f936d890c8ef}{CDialog\+View}} (CWnd \texorpdfstring{$\ast$}{*}p\+Parent, CGui\+View \texorpdfstring{$\ast$}{*}p\+View)
+\begin{DoxyCompactList}\small\item\em Constructor với tham số \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_dialog_view_a69ea17691cfc41a524555748c4ba1603}{\texorpdfstring{$\sim$}{\string~}\+CDialog\+View}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_dialog_view_a2bc9bab41edd9fa363bf23d85236613a}{On\+Create\+Components}} ()
+\begin{DoxyCompactList}\small\item\em Tạo các thành phần giao diện. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_dialog_view_a323ef4e5224c3f9d95a8fbaf1b252b50}{On\+Size}} (UINT n\+Type, int cx, int cy)
+\begin{DoxyCompactList}\small\item\em Xử lý khi dialog thay đổi kích thước. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Các thuộc tính Private}
+\begin{DoxyCompactItemize}
+\item 
+CGui\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892}{m\+\_\+p\+View}}
+\begin{DoxyCompactList}\small\item\em Con trỏ đến view được chứa trong dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Mô tả chi tiết}
+Lớp dialog wrapper để hiển thị CGui\+View trong dialog. 
+
+Class này kế thừa từ CGui\+Dialog, cung cấp wrapper\+:
+\begin{DoxyItemize}
+\item Chứa một CGui\+View bên trong dialog
+\item Tự động resize view khi dialog thay đổi kích thước
+\item Quản lý lifecycle của view 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_c_dialog_view_doc-constructors}
+\doxysubsection{Thông tin về Constructor và Destructor}
+\Hypertarget{class_c_dialog_view_a8051e1efa596f2192597f936d890c8ef}\index{CDialogView@{CDialogView}!CDialogView@{CDialogView}}
+\index{CDialogView@{CDialogView}!CDialogView@{CDialogView}}
+\doxysubsubsection{\texorpdfstring{CDialogView()}{CDialogView()}}
+{\footnotesize\ttfamily \label{class_c_dialog_view_a8051e1efa596f2192597f936d890c8ef} 
+CDialog\+View\+::\+CDialog\+View (\begin{DoxyParamCaption}\item[{CWnd \texorpdfstring{$\ast$}{*}}]{p\+Parent}{, }\item[{CGui\+View \texorpdfstring{$\ast$}{*}}]{p\+View}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor với tham số 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em p\+Parent} & Con trỏ đến cửa sổ cha \\
+\hline
+{\em p\+View} & Con trỏ đến CGui\+View cần hiển thị trong dialog\\
+\hline
+\end{DoxyParams}
+Khởi tạo dialog với view được chỉ định. \Hypertarget{class_c_dialog_view_a69ea17691cfc41a524555748c4ba1603}\index{CDialogView@{CDialogView}!````~CDialogView@{\texorpdfstring{$\sim$}{\string~}CDialogView}}
+\index{````~CDialogView@{\texorpdfstring{$\sim$}{\string~}CDialogView}!CDialogView@{CDialogView}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CDialogView()}{\string~CDialogView()}}
+{\footnotesize\ttfamily \label{class_c_dialog_view_a69ea17691cfc41a524555748c4ba1603} 
+CDialog\+View\+::\texorpdfstring{$\sim$}{\string~}\+CDialog\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Giải phóng tài nguyên. View sẽ được giải phóng bởi caller. 
+
+\label{doc-func-members}
+\Hypertarget{class_c_dialog_view_doc-func-members}
+\doxysubsection{Thông tin về hàm thành viên}
+\Hypertarget{class_c_dialog_view_a2bc9bab41edd9fa363bf23d85236613a}\index{CDialogView@{CDialogView}!OnCreateComponents@{OnCreateComponents}}
+\index{OnCreateComponents@{OnCreateComponents}!CDialogView@{CDialogView}}
+\doxysubsubsection{\texorpdfstring{OnCreateComponents()}{OnCreateComponents()}}
+{\footnotesize\ttfamily \label{class_c_dialog_view_a2bc9bab41edd9fa363bf23d85236613a} 
+void CDialog\+View\+::\+On\+Create\+Components (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tạo các thành phần giao diện. 
+
+Tạo view với kích thước mặc định (960x600) và khởi tạo dialog. \Hypertarget{class_c_dialog_view_a323ef4e5224c3f9d95a8fbaf1b252b50}\index{CDialogView@{CDialogView}!OnSize@{OnSize}}
+\index{OnSize@{OnSize}!CDialogView@{CDialogView}}
+\doxysubsubsection{\texorpdfstring{OnSize()}{OnSize()}}
+{\footnotesize\ttfamily \label{class_c_dialog_view_a323ef4e5224c3f9d95a8fbaf1b252b50} 
+afx\+\_\+msg void CDialog\+View\+::\+On\+Size (\begin{DoxyParamCaption}\item[{UINT}]{n\+Type}{, }\item[{int}]{cx}{, }\item[{int}]{cy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Xử lý khi dialog thay đổi kích thước. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em n\+Type} & Loại thay đổi kích thước (SIZE\+\_\+\+MINIMIZED, SIZE\+\_\+\+MAXIMIZED, SIZE\+\_\+\+RESTORED) \\
+\hline
+{\em cx} & Chiều rộng mới \\
+\hline
+{\em cy} & Chiều cao mới\\
+\hline
+\end{DoxyParams}
+Tự động resize view để khớp với kích thước dialog. 
+
+\label{doc-variable-members}
+\Hypertarget{class_c_dialog_view_doc-variable-members}
+\doxysubsection{Thông tin về Member Data}
+\Hypertarget{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892}\index{CDialogView@{CDialogView}!m\_pView@{m\_pView}}
+\index{m\_pView@{m\_pView}!CDialogView@{CDialogView}}
+\doxysubsubsection{\texorpdfstring{m\_pView}{m\_pView}}
+{\footnotesize\ttfamily \label{class_c_dialog_view_a209b155f5ea6e0fb5dbf238719b59892} 
+CGui\+View\texorpdfstring{$\ast$}{*} CDialog\+View\+::m\+\_\+p\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Con trỏ đến view được chứa trong dialog. 
+
+
+
+Thông tin cho class được biên soạn từ các file sau đây\+:\begin{DoxyCompactItemize}
+\item 
+Include/\+HMSCore/\mbox{\hyperlink{_dialog_view_8h}{Dialog\+View.\+h}}\end{DoxyCompactItemize}

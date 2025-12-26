@@ -1,0 +1,129 @@
+\doxysection{HMSExm\+Contract\+List\+View.\+h}
+\hypertarget{_h_m_s_exm_contract_list_view_8h_source}{}\label{_h_m_s_exm_contract_list_view_8h_source}\index{Include/HMSCore/HMSExmContractListView.h@{Include/HMSCore/HMSExmContractListView.h}}
+\mbox{\hyperlink{_h_m_s_exm_contract_list_view_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSEXMCONTRACTLISTVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSEXMCONTRACTLISTVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a6b4ebff0f7b4ad3d673c6f0670978ee1}{CHMSExmContractListView}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a1c4ecf8597a7a0905517634069d65756}{m\_nContractId}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a9083e974a67c5dd1d8254e295ffa5111}{m\_nRowSel}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a5a990e5b4601493b3a1237f6f9ed0bd2}{m\_pEmployeeList}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a44d38da695d5f0384cd50163bd0be63c}{m\_pServicePackageList}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a23c7d313b50bd82033ef88c2614373b0}{m\_wndSearchInformation}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a53347a7d373a01d1e9df3d8d9cf27bb3}{m\_wndFromDateLabel}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a7ce74798adadfb0baf0915291a0b5a74}{m\_wndFromDate}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_aa0b80be09543453a3dc02e6b94825ca3}{m\_wndToDateLabel}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a8634181770dae2456f3a48b724c7922a}{m\_wndToDate}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a1f5490ed4e83ed72d75270f1e26895eb}{m\_wndNameLabel}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a8daddd70e058ee673071ad721a598266}{m\_wndName}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a25a20b10d2b7ba0adf6314bd20ef257d}{m\_wndSearch}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGridListView\ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a479e015350f45907859ede4fc064cc1b}{m\_wndList}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a314181dea5c55ee9bd57844c7385006e}{m\_wndAddContract}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_aae91244930d17f495bceec527ef64441}{m\_wndEditContract}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_aabf11919d5b48b43cc748eb33b35feb6}{m\_wndDeleteContract}};\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a3d8f87962f4a69c97002f3f62549120b}{m\_szFromDate}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a9a712a71ec44e8434a1d6fbd5b8775eb}{m\_szToDate}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a36f7f64f4269d8be9e53c15af9a022ae}{m\_szName}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a9388dd3a3def95c1725971a7c8f4c8f0}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_af0958ce8ac5fbfc8dbd065f863df4d53}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_ad509b807face545d63b71d38db3078e5}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_aef07730f8cf22847205c7cc74de97e60}{OnSearchSelect}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a74e4688213b88c7246acb26802720f29}{OnListLoadData}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_ad7ef0b34749b3c6d209dfb12f7fd3893}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00112\ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_ac9841e354f09366aa676d9bb87394816}{OnListDblClick}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a101f63797eed6ebddef7c0df3b426051}{OnListAddItem}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a8d51e899e3a49bb7c7745aa1e609f938}{OnListEditItem}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_ad5a9e3936498d3d6e1e4a7e40fb80e2e}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a6c1e6f6ed7876c1d4bc2204f1f8ffd9b}{OnAddContractSelect}}();\ }
+\DoxyCodeLine{00145\ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a225568ff9a52b07442fd3866a5f5171b}{OnEditContractSelect}}();\ }
+\DoxyCodeLine{00151\ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a1aca9cf1690ba8dd9e02ba24721d85af}{OnDeleteContractSelect}}();\ }
+\DoxyCodeLine{00157\ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a6b4ebff0f7b4ad3d673c6f0670978ee1}{CHMSExmContractListView}}();}
+\DoxyCodeLine{00163\ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a8541d2ef82c11767208208d4da1d03aa}{\string~CHMSExmContractListView}}();}
+\DoxyCodeLine{00169\ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a0404eb917fbc12c5c5ae0033fa363b92}{OnCreateComponents}}();}
+\DoxyCodeLine{00175\ \ \ \ \ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a1661af6b091d59b23db3930be931eb4e}{OnInitializeComponents}}();}
+\DoxyCodeLine{00181\ \ \ \ \ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a081df3801cb5e46177bac1e4cc366a00}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00187\ \ \ \ \ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a78c81e8d5eacffdff5c7a83123439393}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00194\ \ \ \ \ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a4047cc48da71b8b430c2d002682c139a}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00201\ \ \ \ \ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a887fe0afb10dc812c13cd883c24a465d}{GetDataToScreen}}();}
+\DoxyCodeLine{00207\ \ \ \ \ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a7354578b4384a958239e7d35568e2303}{GetScreenToData}}();}
+\DoxyCodeLine{00213\ \ \ \ \ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a7908943a7acbbe39043ca93c7b2386e5}{SetDefaultValues}}();}
+\DoxyCodeLine{00219\ \ \ \ \ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a9804a9bd15d7488d678ba649caca2437}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00227\ \ \ \ \ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a0fb92eaaa9accea10994191fc88d7070}{OnAddHMSExmContractListView}}();\ }
+\DoxyCodeLine{00234\ \ \ \ \ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a6b4126d3ffc1850cda6012506dd44f3a}{OnEditHMSExmContractListView}}();\ }
+\DoxyCodeLine{00241\ \ \ \ \ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_aca428d960e0eab2aa0d23a0bd9a35817}{OnDeleteHMSExmContractListView}}();\ }
+\DoxyCodeLine{00248\ \ \ \ \ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_aaad5bf95cffe1315aeb95a1099d3ffc7}{OnSaveHMSExmContractListView}}();\ }
+\DoxyCodeLine{00255\ \ \ \ \ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_ae30fcac5270a3fa113c1a239c53c3903}{OnCancelHMSExmContractListView}}();\ }
+\DoxyCodeLine{00262\ \ \ \ \ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a5b8dc58c966d895a5b7405c5562bd43c}{OnHMSExmContractListViewListLoadData}}();\ }
+\DoxyCodeLine{00270\ \ \ \ \ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a6add8f87660113f235654e5effa09558}{OnPrintGuideExam}}();\ }
+\DoxyCodeLine{00277\ \ \ \ \ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_af555cb1a59dd7cd00c3076efa8ba389e}{OnExportToExcel}}();}
+\DoxyCodeLine{00284\ \ \ \ \ }
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_a46159f5b80e6abf3214a8f77e8c47dff}{OnResetOnlinePassWord}}();}
+\DoxyCodeLine{00291\ \ \ \ \ }
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_contract_list_view_aa33eec7785240d9624d3c566afe9f970}{ExportListToExcel}}();}
+\DoxyCodeLine{00299\ \};}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,128 @@
+\doxysection{Ad\+Cost\+Accumulation.\+h}
+\hypertarget{_ad_cost_accumulation_8h_source}{}\label{_ad_cost_accumulation_8h_source}\index{Include/VIMESCORE\_E10/AdCostAccumulation.h@{Include/VIMESCORE\_E10/AdCostAccumulation.h}}
+\mbox{\hyperlink{_ad_cost_accumulation_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SMCOSTACCUMULATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SMCOSTACCUMULATION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiPopup.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_ad_cost_accumulation_aa7b09288a46f9355489f5006c71fea11}{CAdCostAccumulation}}\ :\ \textcolor{keyword}{public}\ CGuiPopup\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a7e4b7d9e19ad348229ab9fee4667b345}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a76ecb0339bc64c9dafb6d506398db417}{m\_wndCostAccumulationObject}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a9324dfd4dd5a7c930b144b2a531a97de}{m\_wndType}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a6f99e51ff53716c0a14550badd6d9e0e}{m\_wndIDLabel}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_ac725fd5264a12d010d39566311dcff20}{m\_wndID}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a9e4c18383960ccac91e81f9f84f08bc8}{m\_wndNameLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a4bfa0d9326c2715b58e40ec75160e9cc}{m\_wndName}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_ae9b9d43d399d21d79e0d13b0ac4ba1ef}{m\_wndParentLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_adbbdaf01359499e12acd7b578e26dc71}{m\_wndParent}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_aa1296d8cba5cf88dc6b78c87eadaf810}{m\_wndCustomerLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_ac944a0b766c5e884970334d32f6486bc}{m\_wndCustomer}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_acb782298290ce2c32620f7bd55d655be}{m\_wndStartDateLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_aca63e5cdf050e95c7dc7079fd9d873c1}{m\_wndStartDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a60607a14c7e42764df97ff6e3a1ed173}{m\_wndEndDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_af5d6a201821d0d7c9c8d5c00f10a5976}{m\_wndEndDate}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_ab5cd443020bad3091a11ec5e1a013664}{m\_wndContractValueLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_add4669c35a0cedbe44f7ef054b01bd0f}{m\_wndContractValue}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_ac910b66a42a103a0bc8488cb5092df64}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a6150b8dbc8a4391c5996ad96457aa2b0}{m\_wndDescription}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a2461f424035fa7e6c16d2c8c493f073a}{m\_wndSave}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a7655ff7703dd9621494c060535ad556f}{m\_szTypeKey}};}
+\DoxyCodeLine{00054\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a4cce53d6b2841804f46b205abdebf99b}{m\_szID}};}
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a21e58d3b14008c21a8959f7bc767480b}{m\_szName}};}
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_aebe64f3b98abf877e0f75bb5db1aefce}{m\_szParentKey}};}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_ad588da1a1c49a5ee3ddd487d04dc4644}{m\_szCustomerKey}};}
+\DoxyCodeLine{00058\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a49e739c7bdf54da71018ca404aa2d25a}{m\_szStartDate}};}
+\DoxyCodeLine{00059\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a5cbef2f9e59f2fd3b4a2b11f95b45727}{m\_szEndDate}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a645711624af55d5166d162c046421f2f}{m\_nContractValue}};}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_cost_accumulation_ae9ed98174c633c2da3dec2f88d537f75}{m\_szDescription}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a2d17579c25b4b34a0c9ed15ab0ed0fad}{m\_nMode}};}
+\DoxyCodeLine{00063\ \ \ \ \ CDbfMap\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_aa2e4e060bf2841281366d139f76c943e}{m\_acc\_cost\_accumulationTbl}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a48d607483623476eab67c19b8547ff7d}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_af83388188f322a2e078d80522b4d6840}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a92a3f13ed92dc0ae566a873cb6e20d80}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_ad13c5830711e8c694117fb4eb4c453e8}{OnTypeAddNew}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIDChange();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIDSetfocus();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIDKillfocus();\ }}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a204020b472e701ab8d5a2654e3122ff7}{OnIDCheckValue}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameChange();\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_af8da548a7c1510036e7d41b4f059106c}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a5b77eec32c12a495a508e22db67ab953}{OnParentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a3498a21f7534f459b95d4a5f56f79e2f}{OnParentSelendok}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnParentSetfocus();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnParentKillfocus();\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a0c743c0dc42fa6d886bb9438574cea84}{OnParentLoadData}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a3fc2da747866cacc450dd53d92acaabc}{OnParentAddNew}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a0370b1e8b2d1466a53233af7ebcedace}{OnCustomerSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a3505c549500eaf26e6fddf2ae870a7a7}{OnCustomerSelendok}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCustomerSetfocus();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCustomerKillfocus();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a9a76880badd24d6710205c124a0a2725}{OnCustomerLoadData}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_af4bd0e9f626522e14a13e0ea6916fe19}{OnCustomerAddNew}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStartDateChange();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStartDateSetfocus();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStartDateKillfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a0a73730299d2880dbd8b602ed8c39e08}{OnStartDateCheckValue}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEndDateChange();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEndDateSetfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEndDateKillfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a2118aa0e5d431d229c7a521d11e0f751}{OnEndDateCheckValue}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractValueChange();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractValueSetfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractValueKillfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_af283335814a60f8b40d0c58b0bd36922}{OnContractValueCheckValue}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a2d60bbccd688bb67fe6abc664b60f5b6}{OnDescriptionCheckValue}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_a7c20961cea615a124e4f2e6c0410b7ed}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_aa7b09288a46f9355489f5006c71fea11}{CAdCostAccumulation}}(CWnd\ *pParent);}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{class_c_ad_cost_accumulation_abc565aae6c698465a768659a95352ae9}{\string~CAdCostAccumulation}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_aade68dd89c1169e13ca3704a69d4abc0}{OnCreateComponents}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a8d5d1126e0facce994e8c0fd118430f6}{OnInitializeComponents}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_afeb92e793270c0f52a8a56e924c28840}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_ad0440c914741ca2bb50a77c0d54916dc}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_acea6675bb9714928995ca32bcf0866de}{GetDataToScreen}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_af3787ebd3fad5cc3c4911594b7ad909c}{GetScreenToData}}();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a8d789c9c33731d45b9028c7b1696a899}{SetDefaultValues}}();}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a07fa776783352ca7e836c9d06020dce1}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a88b6c617da6bad6f50b61dd1f4263738}{OnAddAdCostAccumulation}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a950c247a685398408238c946ab082940}{OnEditAdCostAccumulation}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_ad702a60594c03a9e6cdece81bba3f0aa}{OnDeleteAdCostAccumulation}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_abef49e03b691230cf215e926ae707407}{OnSaveAdCostAccumulation}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a94f48568ebba583d9cf99f42187e4ea9}{OnCancelAdCostAccumulation}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_a98f8ed0ac9253db207ad93611dd9d2e3}{OnAdCostAccumulationListLoadData}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_cost_accumulation_ab4e4b925d224dc0bc2841530489cdfe7}{ClosePopup}}();}
+\DoxyCodeLine{00124\ \};}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

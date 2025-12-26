@@ -1,0 +1,351 @@
+\doxysection{HMSOperation\+Schedule\+Detail\+Dialog.\+h}
+\hypertarget{_h_m_s_operation_schedule_detail_dialog_8h_source}{}\label{_h_m_s_operation_schedule_detail_dialog_8h_source}\index{Include/HMSCore/HMSOperationScheduleDetailDialog.h@{Include/HMSCore/HMSOperationScheduleDetailDialog.h}}
+\mbox{\hyperlink{_h_m_s_operation_schedule_detail_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSOperationScheduleDetailDialog\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSOperationScheduleDetailDialog\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9ba5e544f8b49939438c7f5418dd0e67}{CHMSOperationScheduleDetailDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae95f447dff6f5b8b4195d23e71629833}{m\_nReforderid\_old}};}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6e6e0b61234b20e92fe968402d1d1df4}{m\_nPatientNo}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a2e2b275b2ca439214c029a62c3f421e2}{m\_nDocumentNo}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a140bb054f792774b2c38be4d0e910384}{m\_nOperationID}};}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aaede2cde5042bce227c731cc0e34cb1a}{m\_szMatStatus}};}
+\DoxyCodeLine{00041\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a747a8afda618b3165653b9030ef6e1f0}{m\_szObjectType}};}
+\DoxyCodeLine{00042\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a61848ec8593a2f5f4a9dfd77ae834310}{m\_szOldOrderDate}};}
+\DoxyCodeLine{00043\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a654b045e6f78b712b47df2feb0e96080}{m\_szOpStatus}};}
+\DoxyCodeLine{00044\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a93f424b900c880d77a1b9c6f6832ed4a}{m\_szPOrder}};}
+\DoxyCodeLine{00045\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a2308aed391cb2c535cf715ff807218d3}{m\_szIsOrdering}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a7107334a8b041d934eba32c52fee1ff0}{m\_nTreatIdx}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a64781dfe67dd26983bb28d8299168b72}{m\_nMaterialOID}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ CDbfMap\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a183be07c7fa319e0f9b9fddbaf1a614e}{m\_hms\_operation\_Tbl}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a25ec3b48cf6a8f0fd75ecf28c0ebf568}{m\_wndSurgeryInfor}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa9e3c92e8e3640faa869179524bfc6b7}{m\_wndPerformPlaceLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aeb11449d0d071fe799173e9796fb5895}{m\_wndPerformPlace}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa46adca6ef1ee6d72e753c7dcf5e9c10}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a8428598f720a9e6fa9d9a642a54389bb}{m\_wndOrderDate}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afde49b2805e5da65a26279abbf40d161}{m\_wndPerformDeptLabel}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a368c714203eee2d79c2bc5bf10a9f4f1}{m\_wndPerformDept}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4ab832dcaf177dbf2afe3a0128db19b3}{m\_wndPerformDateLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a45f9fa2a38425890499ff2cf9cd301ad}{m\_wndPerformDate}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afcb3c35e235a59ff732c2a372ce7257c}{m\_wndTableLabel}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa74c790163ad9746864b54929076c52c}{m\_wndTable}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ad69342c577fdbe71ae6d1f24a1b65fe8}{m\_wndIndexLabel}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab686fb025df6ec89fd778b34d2df8269}{m\_wndIndex}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a76e0767f3ffd6fd02d909c40781fa011}{m\_wndDiagnosticLabel}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a02235dbffadb9269013f0c4f24d0f6cb}{m\_wndDiagnostic}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a30f2a7972c1830bf25330d5e62df10ba}{m\_wndSurgeryNameLabel}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a900d6f3fec96512801b7c916589d6c77}{m\_wndSurgeryName}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a05fb9c4ed181e1ff3adceb456eeadcd6}{m\_wndCommentLabel}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_af7f47a3c5f54462a3bb7686abb2c8b5f}{m\_wndComment}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a20f77e3014ca53f77dc9c500922270a9}{m\_wndBeforeSurgeryLabel}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a7150e1e4c36c97ad15fb4675dda98c69}{m\_wndBeforeSurgery}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a1f6368e37ce1af97f35b405c39c51abd}{m\_wndAntibioticBackup}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a561e7edc103448350452c681f5d9ffdc}{m\_wndYes}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab1f94c5415029df14211912c7cd7b751}{m\_wndNo}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ad866f52625d2471369f4363ae63bcd3f}{m\_wndNotUse}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a368ee1e3546b0a4b2be9696014664ae7}{m\_wndTenKSDP\_Label}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae990a366a7e562b4e654c59aef70ba03}{m\_wndTen\_KSDP}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afd4cd55e8d50092a681bcec19cded3c4}{m\_wndLieu\_KSDP\_Label}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab17df192d8dc0ac6206d1665d0efbec9}{m\_wndLieu\_KSDP}};}
+\DoxyCodeLine{00081\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a8bb39ff14feba8a469feecd8238b2401}{m\_wndDuong\_dung\_Label}};}
+\DoxyCodeLine{00082\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a81a82566353f87fbff8c32c1c3673726}{m\_wndDuong\_dung}};}
+\DoxyCodeLine{00083\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0903b89aafa55b3b316d691543acaeb4}{m\_wndThoiGianCho\_KSDP\_Truocmo\_Label}};}
+\DoxyCodeLine{00084\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a51743a540cd1d98495ec485f291d99d2}{m\_wndThoiGianCho\_KSDP\_Truocmo}};}
+\DoxyCodeLine{00085\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_adf83b2d01618faab444517e3a681d9ba}{m\_wndTieptuc\_dung\_ksdp\_truocmo\_Label}};}
+\DoxyCodeLine{00086\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a29a9dc268b113d512b62624119f5a66c}{m\_wndTieptuc\_dung\_ksdp\_truocmo}};}
+\DoxyCodeLine{00087\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9c51120f1c46096c3bdf5a77e5a355c8}{m\_wndAnesthesiaMethodLabel}};}
+\DoxyCodeLine{00088\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afa654eb2c3f064f94db63cc3770480a0}{m\_wndAnesthesiaMethod}};}
+\DoxyCodeLine{00089\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0a8855fee873ce70d8b03a8058941dc6}{m\_wndSurgeonLabel}};}
+\DoxyCodeLine{00090\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_acef86fb1f175471c6dc35a8ff2215df8}{m\_wndSurgeon}};}
+\DoxyCodeLine{00091\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6e7a0b233012fbe60acce248d6d6426d}{m\_wndAssistLabel}};}
+\DoxyCodeLine{00092\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a320101a842f11dc0a5f5cb3ddffc650c}{m\_wndAssist}};}
+\DoxyCodeLine{00093\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a5a8ff3cea481ad812858811b87ab937e}{m\_wndAssist2Label}};}
+\DoxyCodeLine{00094\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_abb97d43946e1c48e12bda4e33aa069ab}{m\_wndAssist2}};}
+\DoxyCodeLine{00095\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a8e58459cfcda77bc7ce8fda661be8bef}{m\_wndBeginTimeLabel}};}
+\DoxyCodeLine{00096\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a10e582a1ad42e53fd8ce8dc41d11299d}{m\_wndBeginTime}};}
+\DoxyCodeLine{00097\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae1c138c6fe537b7f2c72be37b047dc5b}{m\_wndEndTimeLabel}};}
+\DoxyCodeLine{00098\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6ec24bff51f45864c9645e7e3a2bb1b0}{m\_wndEndTime}};}
+\DoxyCodeLine{00099\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab4a694fcdf063151743e69d8cb2ae8a3}{m\_wndTGDukienLabel}};}
+\DoxyCodeLine{00100\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0f762d3e07517c2955c1311d8749c40c}{m\_wndTGDukien}};}
+\DoxyCodeLine{00101\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a7acf96ee1ad770ef7a332e96a4c76412}{m\_wndQuantityLabel}};}
+\DoxyCodeLine{00102\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_abbe23db248891f33c30680a96fa381f8}{m\_wndQuantity}};}
+\DoxyCodeLine{00103\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a2cb5d17241346265b3c90a9dbe54128b}{m\_wndRateLabel}};}
+\DoxyCodeLine{00104\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae9d82279b2bddbd2259d6288b8b345d7}{m\_wndRate}};}
+\DoxyCodeLine{00105\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a77d50e572a18b739e0c28aeca14fea01}{m\_wndMachineLabel}};}
+\DoxyCodeLine{00106\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_adb116575d3a7114acf8d6d7796c886fb}{m\_wndMachine}};}
+\DoxyCodeLine{00107\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4ef9afdaa520e8d8b0f8eb811f17dde9}{m\_wndAdd}};}
+\DoxyCodeLine{00108\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa0e90846122bd9250a4592e7045148c5}{m\_wndEdit}};}
+\DoxyCodeLine{00109\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aec27395eaa9d019edf6193407c2d6d1d}{m\_wndDelete}};}
+\DoxyCodeLine{00110\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a19bb798bef4c467191134e4583e92837}{m\_wndSave}};}
+\DoxyCodeLine{00111\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aae9ab8204e624aab452e046b4e3db455}{m\_wndCancel}};}
+\DoxyCodeLine{00112\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab4c62565470a8a306be6d95cced9b829}{m\_wndAddDrugMaterial}};}
+\DoxyCodeLine{00113\ \ \ \ \ CGridListView\ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa58dc3656ac79f6c37a1431515cf1571}{m\_wndDrugList}};}
+\DoxyCodeLine{00114\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a98d1650b5c15c0f02a502eb986283d4f}{m\_wndDescription}};}
+\DoxyCodeLine{00115\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a12a7c7cc57887bf2b61c2a711dc32b5f}{m\_wndPaySourceLabel}};}
+\DoxyCodeLine{00116\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a34283ee82d43e52a7af32cbd4f47a5c1}{m\_wndPaySource}};}
+\DoxyCodeLine{00117\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa6732b185691dfbf71c126bb75f383eb}{m\_wndReferenceOperationLabel}};}
+\DoxyCodeLine{00118\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afda2a4f08f7fbd9af7da69058b3386cf}{m\_wndReferenceOperation}};}
+\DoxyCodeLine{00119\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aed6ab5ef1264142b4379e339873e2ae7}{m\_wndMaterialGroup}};}
+\DoxyCodeLine{00120\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae8ed0d2429423f26a23223681a69d0cc}{m\_wndNhanLucLabel}};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a57e3849c2e983d2b232a7102f00513ef}{m\_szReferenceOperationKey}};}
+\DoxyCodeLine{00123\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a358f39f83bee21b166f6cd0cf2dc8d02}{m\_szPaySourceKey}};}
+\DoxyCodeLine{00124\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab801336946e162b36590201a1534bae4}{m\_szPerformPlaceKey}};}
+\DoxyCodeLine{00125\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae283ed1c4f62b8575fdcc35401ace8f1}{m\_szOrderDate}};}
+\DoxyCodeLine{00126\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4103dea1ea21734a15ea2bb454c9a878}{m\_szPerformDeptKey}};}
+\DoxyCodeLine{00127\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4a3e681accbdc8d8cbf01b0f97143a0b}{m\_szPerformDate}};}
+\DoxyCodeLine{00128\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a1f5a30f89331dcb6d63649ec67f8069d}{m\_szTableKey}};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0d91742a9d845804748441cd1b61570b}{m\_nIndex}};}
+\DoxyCodeLine{00130\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a364e1b5bf8465389cb52be4247a88692}{m\_szDiagnostic}};}
+\DoxyCodeLine{00131\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa591ffb6de72f4dfcaaa4ca75d4fd3e7}{m\_szSurgeryNameKey}};}
+\DoxyCodeLine{00132\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a3a00fbbeb39ff06a600e7db17ef039f1}{m\_szComment}};}
+\DoxyCodeLine{00133\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afcb95aabb9b74c2f2532e019ef9db809}{m\_szBeforeSurgeryKey}};}
+\DoxyCodeLine{00134\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a154e5898dc780725ee006aa6f40530b4}{m\_szFeeStatus}};}
+\DoxyCodeLine{00135\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ade3e704213bfe1ff8c460c63e25a50cd}{m\_szPayment}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a084668c8cca2acee2b778faf84f39140}{m\_bNo}};}
+\DoxyCodeLine{00138\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0f3061349a5fc655b04e33598c0dff17}{m\_bYes}};}
+\DoxyCodeLine{00139\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa168c7ba7791f303a80321011f96abaa}{m\_bNotUse}};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a538daef10279ef9309933a23cf9fb4a7}{m\_szTen\_KSDPKey}};}
+\DoxyCodeLine{00142\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae157732718f6c064504479d218d5b5f8}{m\_szLieu\_KSDPKey}};}
+\DoxyCodeLine{00143\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0d19debfe0c764ed629cb6e919049532}{m\_szDuong\_dungKey}};}
+\DoxyCodeLine{00144\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a33de6efb739216cd23d8e9cc4c7bc18e}{m\_szThoiGianCho\_KSDP\_TruocmoKey}};}
+\DoxyCodeLine{00145\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4f9b189160ed6235dc5bc90c4eab5e6c}{m\_szTieptuc\_dung\_ksdp\_truocmoKey}};}
+\DoxyCodeLine{00146\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a174cdd7d117cb6d5fe642e0ae6381858}{m\_szAnesthesiaMethodKey}};}
+\DoxyCodeLine{00147\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a79c4d03af81051b25b5d05661b101959}{m\_szSurgeonKey}};}
+\DoxyCodeLine{00148\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a992ca9512751f351bda83b803020496d}{m\_szAssistKey}};}
+\DoxyCodeLine{00149\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aec95ecf4198580f2e4ab01e09e958f5c}{m\_szAssist2Key}};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a2ad23aae929c1caf5b482a9f20258fd4}{m\_szBeginTime}};}
+\DoxyCodeLine{00152\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0fa64fc97cefd28393ebc3d740df3f82}{m\_szEndTime}};}
+\DoxyCodeLine{00153\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a280a861e8c37030363a6b35507b4ea6e}{m\_szTGDukien}};}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae24c21def4d18e15ec25950fa5aa578f}{m\_nQuantity}};}
+\DoxyCodeLine{00155\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a29335231d79e76fc1612856ec6f7366d}{m\_szRateKey}};}
+\DoxyCodeLine{00156\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a29c69cc421054b103f52845b5d846913}{m\_szMachineKey}};}
+\DoxyCodeLine{00157\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a7c383080c5861e5e90139e1ce2c57008}{m\_szDescription}};}
+\DoxyCodeLine{00158\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a19fba9ff8a17c04992dac58239826e0d}{m\_szphanloaicovid}};}
+\DoxyCodeLine{00159\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab21ec8036a015fe30d5985c247dee663}{m\_szModality}};}
+\DoxyCodeLine{00160\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a515a62e8119d3c079623c3594b7d7f9b}{m\_szItemOld}};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a974e071ad5575212d8d86b935e65ef2b}{OnPerformPlaceSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a5153afacf7d77b5302c382f1b46ef063}{OnPerformPlaceSelendok}}();}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformPlaceSetfocus();\ }}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformPlaceKillfocus();\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0bc3ca132ffabed19ca353be1d52742e}{OnPerformPlaceLoadData}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformPlaceAddNew();\ }}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_add736cc26b81db584ecbd180e6e6ddf4}{OnOrderDateCheckValue}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a774f7d4a55127a7a1afd0d34ae8a97bc}{OnPerformDeptSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a04bd27c5a597243011b27b719c360a53}{OnPerformDeptSelendok}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptSetfocus();\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptKillfocus();\ }}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa5e8192ac1673ad5eac87ddf6cd45e48}{OnPerformDeptLoadData}}();}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptAddNew();\ }}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDateChange();\ }}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDateSetfocus();\ }}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDateKillfocus();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4229931d7cd7fa9dc677957376cd0845}{OnPerformDateCheckValue}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae866baffa1116a8e938ba73eb39ce9ce}{OnTableSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a45345675f611b77546cd7c4305ed3349}{OnTableSelendok}}();}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTableSetfocus();\ }}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTableKillfocus();\ }}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afb3305549e4dc17b7a7de694cba8b7fc}{OnTableLoadData}}();}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTableAddNew();\ }}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIndexChange();\ }}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIndexSetfocus();\ }}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIndexKillfocus();\ }}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a03c0fa554372a65109f586b92b6ba66c}{OnIndexCheckValue}}();}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticChange();\ }}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticSetfocus();\ }}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticKillfocus();\ }}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a694ff01c7153233ee0ca3ac9376ee77f}{OnDiagnosticCheckValue}}();}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ad617e04e5ece8296941ef9715d69bbe8}{OnSurgeryNameLabelSelect}}();}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6d50a573efba7ba26e0038e6117e61de}{OnSurgeryNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a034e11294cedf60323a09901a9e7a2d9}{OnSurgeryNameSelendok}}();}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryNameSetfocus();\ }}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryNameKillfocus();\ }}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_af23f7c37872b94f89233c35b3b772c4e}{OnSurgeryNameLoadData}}();}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryNameAddNew();}}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCommentChange();\ }}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCommentSetfocus();\ }}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnCommentKillfocus();\ }}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab0cd5044173d23501e4e2bb3d2934367}{OnCommentCheckValue}}();}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a14292a64f2ae9d6b6386c9b0c9d73198}{OnBeforeSurgerySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a3eaf2a8c6d9c9c083be4a34abc14ac63}{OnBeforeSurgerySelendok}}();}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeforeSurgerySetfocus();\ }}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeforeSurgeryKillfocus();\ }}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a1b30f99f809c984fe4b4667135bab05a}{OnBeforeSurgeryLoadData}}();}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeforeSurgeryAddNew();\ }}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a77ba49f8765123117a25831819b3fcf7}{OnYesSelect}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a1d123f8ed9bd5ac5d38a08015b0d9cb6}{OnNoSelect}}();}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a971e5e6b76815f1c0785e327b6d7a8eb}{OnNotUseSelect}}();}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a8e78117679361c8ce4b1e69e50ede52a}{OnTenKSDP\_LabelSelect}}();}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a25027f944e7762a41136a5db5df26786}{OnLieuKSDP\_LabelSelect}}();}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aeef7baca3e8c87c365b88316adb79377}{OnDuong\_DungKSDP\_LabelSelect}}();}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6aaeafe2dbbea9d086b5caccf3fdaf7f}{OnThoiGianCho\_KSDP\_Truocmo\_LabelSelect}}();}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6a99054daa83312f16ec0a3000c2dad8}{OnTieptuc\_dung\_ksdp\_truocmo\_LabelSelect}}();}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a5ebe2f721be34695bbe8993e1d353652}{OnTen\_KSDPSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aaea7e6458bb7d27b52d0886ca3c5d768}{OnTen\_KSDPSelendok}}();}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTen\_KSDPSetfocus();\ }}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTen\_KSDPKillfocus();\ }}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a3fa4e3e144073425595ba91ef599c3f5}{OnTen\_KSDPLoadData}}();}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTen\_KSDPAddNew();\ }}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab8f556fc353f5ddd520c06ba9eaf0c1b}{OnLieu\_KSDPSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab8738d35fb0ae0596f366486cd017ac6}{OnLieu\_KSDPSelendok}}();}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnLieu\_KSDPSetfocus();\ }}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnLieu\_KSDPKillfocus();\ }}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a89484d394497bd5e43c4d66846b3c48b}{OnLieu\_KSDPLoadData}}();}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnLieu\_KSDPAddNew();\ }}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a8ee7e43331a63c75997730c44533aba3}{OnDuong\_dungSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ad0b75a250a2dcc422a69423d5ae10cc5}{OnDuong\_dungSelendok}}();}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDuong\_dungSetfocus();\ }}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDuong\_dungKillfocus();\ }}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_af048788900ce320f7f5bbd643cc80e9b}{OnDuong\_dungLoadData}}();}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDuong\_dungAddNew();\ }}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6daf534eb4925f0bfee5bd7b24725d16}{OnThoiGianCho\_KSDP\_TruocmoSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9bc3baa4dd239ec170f5822022620d7a}{OnThoiGianCho\_KSDP\_TruocmoSelendok}}();}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnThoiGianCho\_KSDP\_TruocmoSetfocus();\ }}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnThoiGianCho\_KSDP\_TruocmoKillfocus();\ }}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a302380c9fd7fc3356ae451f58a8ba659}{OnThoiGianCho\_KSDP\_TruocmoLoadData}}();}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnThoiGianCho\_KSDP\_TruocmoAddNew();\ }}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a1f0f6eba86098b244c33c9e5de65444a}{OnTieptuc\_dung\_ksdp\_truocmoSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae432ec65f3c7bab89eb7bf3f3f143610}{OnTieptuc\_dung\_ksdp\_truocmoSelendok}}();}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTieptuc\_dung\_ksdp\_truocmoSetfocus();\ }}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTieptuc\_dung\_ksdp\_truocmoKillfocus();\ }}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa1b1dbc03c5bd6f784784bcbcad80ece}{OnTieptuc\_dung\_ksdp\_truocmoLoadData}}();}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTieptuc\_dung\_ksdp\_truocmoAddNew();\ }}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a3ef9f71e68d6f5e4bb5113077f736fd3}{OnAnesthesiaMethodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aabe576fa7b2ce19ace01e23732cd454e}{OnAnesthesiaMethodSelendok}}();}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthesiaMethodSetfocus();\ }}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthesiaMethodKillfocus();\ }}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a8add921f15a91226d97b10ac62f94f3e}{OnAnesthesiaMethodLoadData}}();}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthesiaMethodAddNew();\ }}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6a9b15a45eea0c92587854f17243b091}{OnSurgeonSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6deed3df2eaedf0540c733d930020561}{OnSurgeonSelendok}}();}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeonSetfocus();\ }}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeonKillfocus();\ }}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ad5a6ccf7f70f353ab1c1a0e2319981cf}{OnSurgeonLoadData}}();}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeonAddNew();\ }}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a98e66a3db797239348df473bc59d0368}{OnAssistSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa1672182b09006a964f1d82e4d163815}{OnAssistSelendok}}();}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistSetfocus();\ }}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistKillfocus();\ }}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a86f79ce47b1724b07488f85d7a78ba58}{OnAssistLoadData}}();}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistAddNew();\ }}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a06d9be9b761f35a8391ca749378bcf54}{OnAssist2SelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a7e41a7fbd4932aa54b3be623a7b8f7f0}{OnAssist2Selendok}}();}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssist2Setfocus();\ }}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssist2Killfocus();\ }}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9c048a71d1ff55038c8f1e599e5c9b05}{OnAssist2LoadData}}();}
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssist2AddNew();\ }}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeginTimeChange();\ }}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeginTimeSetfocus();\ }}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnBeginTimeKillfocus();\ }}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab5c502f3b4dbd802f15906b9254421dd}{OnBeginTimeCheckValue}}();}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEndTimeChange();\ }}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEndTimeSetfocus();\ }}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnEndTimeKillfocus();\ }}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a838577bfa66ded388a0836bc77c00c17}{OnEndTimeCheckValue}}();}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTGDukienChange();\ }}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTGDukienSetfocus();\ }}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTGDukienKillfocus();\ }}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6b7c5100c3327a843290fcf16f94fe41}{OnTGDukienCheckValue}}();}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantityChange();\ }}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantitySetfocus();\ }}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuantityKillfocus();\ }}
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a15d263637e1a13a60b2a26fe9b257e59}{OnQuantityCheckValue}}();}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4b7c148a04b4666abf9e1db3312d1bcb}{OnRateSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6892b906aa77d7ee88c7fc3bba0c598c}{OnRateSelendok}}();}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRateSetfocus();\ }}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRateKillfocus();\ }}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9232ddbebe7a0336603fc9711b3350c5}{OnRateLoadData}}();}
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRateAddNew();\ }}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4daf22615114b178e5a46544daecb626}{OnMachineSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab8b62f1179eef67fb6f794eeab1d1fef}{OnMachineSelendok}}();}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMachineSetfocus();\ }}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMachineKillfocus();\ }}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6117963fd7961496b63a417a1eb4c9ce}{OnMachineLoadData}}();}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMachineAddNew();\ }}
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aae1d208edcf83657fbeb45e22b3b620e}{OnAddSelect}}();}
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a742f51206d3ed575e5e437877d42b8f6}{OnEditSelect}}();}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a28b2b3f58ff51c90ca8daba4cf0aa0e4}{OnDeleteSelect}}();}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a38e67086447064c0c5892076e8d2de51}{OnSaveSelect}}();}
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a34425fd3197022d8a3d54a62365e453f}{OnCancelSelect}}();}
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a1b0c36087652f51cf9d58caebd3e7457}{OnAddDrugMaterialSelect}}();}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ab6366c13a65589784b161c8a49e7efcb}{OnDrugListLoadData}}();}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a47c4bc19f7cba56e3d6cbe6ebf5ceee2}{OnDrugListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);}
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a0dc59ec869f4a9948f50354e43536fb0}{OnDrugListDblClick}}();}
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a3377ac482f48569ab82492850cf5975b}{OnDrugListDeleteItem}}();}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a4ed4e4687621a11189c4ffaf5a2136ff}{OnRefreshDrugList}}();}
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a2dc9d0d2a8fd34b05328840c2ed9357e}{OnPaySourceLoadData}}();}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_af547a7d67c3f675961e52a5d462329c7}{OnReferenceOperationLoadData}}();}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a080a46e0ae7a9f748f2a27534ed585c9}{OnDescriptionCheckValue}}();}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9ba5e544f8b49939438c7f5418dd0e67}{CHMSOperationScheduleDetailDialog}}(CWnd*\ pParent,\ \textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00324\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a6c8378bdc841f91e5d907f98604a1fa8}{\string~CHMSOperationScheduleDetailDialog}}();}
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_af64ba04d3f4a3b74ae35039628099ac1}{OnCreateComponents}}();}
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_af787eaa5896cf371a673f2379e11b844}{OnInitializeComponents}}();}
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a95b5efc7a982f121dbd864cab8d66d6e}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ac81ce3e4f0db8b806594e8dc0cb64219}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ad6412a35862f52c7298182d7d961a2b9}{GetDataToScreen}}();}
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_aa93126a3b5f0e66ec510255ff704b27f}{GetScreenToData}}();}
+\DoxyCodeLine{00331\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a2515d9b69854fce9c2cf94fb190477f9}{SetDefaultValues}}();}
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae697745d79880fe933cadc4cad5c4711}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9e42d23a6514a388aef590bb1b10d68a}{OnAddHMSOperationScheduleDetailDialog}}();}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afa6fdd2fb5cb83a634c1cf92c21f2cf4}{OnEditHMSOperationScheduleDetailDialog}}();}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a101e8b349eb9bc2677c06b3182451028}{OnDeleteHMSOperationScheduleDetailDialog}}();}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a23e974d0381404042c97b55e4dad2a79}{OnSaveHMSOperationScheduleDetailDialog}}();}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_af97a6761c739b75d6d8d8ada2af76374}{OnCancelHMSOperationScheduleDetailDialog}}();}
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a7a02db4fa347aa42b77d3de5cdefd7c9}{OnHMSOperationScheduleDetailDialogListLoadData}}();}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_afd8ed9e734ab69d144f1d743637f9f57}{OnMaterialGroupSelect}}();}
+\DoxyCodeLine{00340\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ae9e6c70c987444b9bb1a0728367eb1d6}{GetOrderStatus}}();}
+\DoxyCodeLine{00341\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a92848d53b7436086a1ef8244bb484812}{GetCategory}}(CString\ szId);}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_a9f0d8ec77c746fed5e3b92438c49862f}{OnNhanLucLabelSelect}}();}
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_operation_schedule_detail_dialog_ad1167aa63a4f73113cbb071b0ad839c7}{SetModeEx}}();}
+\DoxyCodeLine{00344\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00345\ \ \ \ \ \textcolor{comment}{//\ \ virtual\ LRESULT\ WindowProc(UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam);}}
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{comment}{//\ \ virtual\ BOOL\ OnCommand(WPARAM\ wParam,\ LPARAM\ lParam);}}
+\DoxyCodeLine{00347\ \};}
+\DoxyCodeLine{00348\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

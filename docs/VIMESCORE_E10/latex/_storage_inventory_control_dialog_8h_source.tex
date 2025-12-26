@@ -1,0 +1,128 @@
+\doxysection{Storage\+Inventory\+Control\+Dialog.\+h}
+\hypertarget{_storage_inventory_control_dialog_8h_source}{}\label{_storage_inventory_control_dialog_8h_source}\index{Include/VIMESCORE\_E10/StorageInventoryControlDialog.h@{Include/VIMESCORE\_E10/StorageInventoryControlDialog.h}}
+\mbox{\hyperlink{_storage_inventory_control_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STORAGEINVENTORYCONTROLDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STORAGEINVENTORYCONTROLDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_storage_inventory_control_dialog_a847297921de6a1a0ad261f788d0a2c3e}{CStorageInventoryControlDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ada4046626b03275723f965d064a982b5}{m\_wndInventoryInformation}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a8ad3c7dd046167b9cbfb9d2983d7927c}{m\_wndStorageLabel}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a4c2053f8cb0f8ca93d90e8c86d551d79}{m\_wndStorage}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a2b189199a4c55df65cfd276187d46ff4}{m\_wndInventoyDateLabel}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a5e2e88d7784881e24c258e29c98e7db1}{m\_wndInventoyDate}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_aea2366a40803bc9e5fd2a9fc31d70470}{m\_wndIncreaseAccountingLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a3bcacf32f0b3eb2ddac4a89b1ae7ac79}{m\_wndIncreaseAccounting}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a8cc17d94fff515c339c9f7fd6c21adf3}{m\_wndDecreaseAccountingLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a7f6c0b30f80170b71ef593aaa930ea13}{m\_wndDecreaseAccounting}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ab7293cf02ff6e3c4ed8810668458fa26}{m\_wndIncludingValues}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a462f4d2c595db1247c89af90bd89641c}{m\_wndAllInStorage}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ac7e61d4506573853bc334e1ba2f51a89}{m\_wndLoadData}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_aff222374678409b7bbb2a7404346abb0}{m\_wndList}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ac138e2efa825ef6bc9c589d7bd06975f}{m\_wndLotNoLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ae3acbb6cf364714f12804f55f5072237}{m\_wndLotNo}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_aa0819e39e64060ea7435fb8ef9246c69}{m\_wndExpDateLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a85ebee9c30b55a20bf32112b9e8896db}{m\_wndExpDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a2c835f6b26b0a0fc87aab1407a098dc4}{m\_wndManufactureLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_af8cea19a84ca81da6336d4e8011b5aca}{m\_wndManufacture}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a1a5866ec7f698fbcf2d2634510f233fc}{m\_wndAdjustment}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_acccaa171dd8aa8a43f2ffbf128dc3219}{m\_wndPrint}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ab0506f522c3e77c2f782ac5777cdc42e}{m\_wndClose}};}
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_acc1ae5174272cb57535f20926d042943}{m\_szStorageKey}};}
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a0d67da858b9ca63295c6823825f5af65}{m\_szInventoyDate}};}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ae205caff2981573639474e59997b797a}{m\_szIncreaseAccountingKey}};}
+\DoxyCodeLine{00058\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_aae1c0330c948a008f0f531c17de5527f}{m\_szDecreaseAccountingKey}};}
+\DoxyCodeLine{00059\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a81c35f80ebb3bdd2cb9da02a95a38687}{m\_bIncludingValues}};}
+\DoxyCodeLine{00060\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_acfa9e9f28bc7872446aeea1eedad0e69}{m\_bAllInStorage}};}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a723a1d5066b09541f41081a44ef96222}{m\_szLotNo}};}
+\DoxyCodeLine{00062\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a50c53c75b3c33b924b991be75b320316}{m\_szExpDate}};}
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ad0f9cc73baee7f9888d8eb22f61b5095}{m\_szManufacture}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a8b1dc4a5dd4c9504628da66be2f4665f}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a48d16b6b999a1a6846e4a572d217f60e}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a3f00c5ad0bab84b264436ffc0774bd2d}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageAddNew();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInventoyDateChange();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInventoyDateSetfocus();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInventoyDateKillfocus();\ }}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ab7f7994a7d15c9b37b03c5eb64916929}{OnInventoyDateCheckValue}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a7a1a356a02f1ef0e7214ba2202d1c41c}{OnIncreaseAccountingSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a3b38ac756b82f21156e552931381a8a0}{OnIncreaseAccountingSelendok}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIncreaseAccountingSetfocus();\ }}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIncreaseAccountingKillfocus();\ }}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a9a97bdb3eb5905bab230b2d6792e8b1a}{OnIncreaseAccountingLoadData}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIncreaseAccountingAddNew();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a0e9fdccb7ccf59a9cf2660feee71c6cf}{OnDecreaseAccountingSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_abe3c9c21d506552265a844089dc44fc6}{OnDecreaseAccountingSelendok}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDecreaseAccountingSetfocus();\ }}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDecreaseAccountingKillfocus();\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a0b0f09695a47509286aa3fe587572e49}{OnDecreaseAccountingLoadData}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDecreaseAccountingAddNew();\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ad69390d74fbf97f876712318131098a0}{OnIncludingValuesSelect}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ae9945a3ec35dd9622be7bce8e42063ac}{OnAllInStorageSelect}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a0d0c7718610dca95cece24845eda7f12}{OnLoadDataSelect}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a555cf6ec680b28e88edfc5dcc021c91e}{OnListLoadData}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ac0b788337baf46f36cb0504e35ca839a}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a0686b98afc1fd05e1d7f7007f45244c5}{OnListDblClick}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ae322c2a98539b0f92e02a7e14f4eab0b}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnLotNoChange();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnLotNoSetfocus();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnLotNoKillfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a671a82d39ea0b16edbd688698e71277b}{OnLotNoCheckValue}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnExpDateChange();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnExpDateSetfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnExpDateKillfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a983da92baec1d17b6d054d245ec94db6}{OnExpDateCheckValue}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnManufactureChange();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnManufactureSetfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnManufactureKillfocus();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ad5bb434d614e94f36a6a657be4ffde39}{OnManufactureCheckValue}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a79d9ca256d7a71200a6bb1fc71a71f84}{OnAdjustmentSelect}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a7e9b5a21d08b01fc174ef23ccd812064}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_aec4d20bc173adcc5d5b9ec12c4592ae2}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a847297921de6a1a0ad261f788d0a2c3e}{CStorageInventoryControlDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a6767739a04de37d493f27149ec9234c3}{\string~CStorageInventoryControlDialog}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a43908ab2523ce06d44862f29f205e148}{OnCreateComponents}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_aae6a6ee1a39328cc5f49fede1c6f3ac5}{OnInitializeComponents}}();}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ac46e2b28da8828c2f81f592230c095d1}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a2c8b1b7799187f21200802b88c5a0833}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a27fcecf74678309e90f6a86b9264a7a0}{GetDataToScreen}}();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ae7ecbced153bbe9b4a4dcb0589d0a574}{GetScreenToData}}();}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a8bcee44a5009bb95f32ff8ae6bc5a0d3}{SetDefaultValues}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ab5d46bc1a2a5c93cc03ffe67d3f335ca}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a18f9e6623557d76e544e1cd8c302ef3a}{OnAddStorageInventoryControlDialog}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a1cb7b2909d51f1febf54a4d2d72a91a0}{OnEditStorageInventoryControlDialog}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_adc49b4c4e474a6459e2fe0558e39cb0b}{OnDeleteStorageInventoryControlDialog}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a2a2bd877f4fcb61c594276f62728831b}{OnSaveStorageInventoryControlDialog}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_ac417f030a8cd70a574b4e28412b59a20}{OnCancelStorageInventoryControlDialog}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_inventory_control_dialog_a2a9786efe1918b6574a4b11a7da67eb7}{OnStorageInventoryControlDialogListLoadData}}();\ }
+\DoxyCodeLine{00124\ \};}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

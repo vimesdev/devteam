@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/ATMRecordTracker.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_a_t_m_record_tracker_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ATMRecordTracker.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_t_m_record_tracker_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ATMRECORDTRACKER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ATMRECORDTRACKER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright � Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiView.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;GridListView.h&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;HTMLayoutCtrl.h&quot;</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html">   32</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a3501d0f6a2212beb4bab4cffd3643317">CATMRecordTracker</a> : <span class="keyword">public</span> CGuiView{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#ad340b3bf6d92bee30f4a9d71b23a7d9e">   34</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#ad340b3bf6d92bee30f4a9d71b23a7d9e">m_nPatientNo</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#abd10996f8b7044379fca949e887e9651">   35</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#abd10996f8b7044379fca949e887e9651">m_nDocumentNo</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a03e9dcb4ea49ddbdb62f3b31aeb99f4d">   37</a></span>    <a class="code hl_class" href="class_c_h_t_m_layout_ctrl.html">CHTMLayoutCtrl</a>  <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#a03e9dcb4ea49ddbdb62f3b31aeb99f4d">m_wndHTMLInfo</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#aeaf63d91542948e6f4ea1e259db8d7a6">   38</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#aeaf63d91542948e6f4ea1e259db8d7a6">m_wndFilterByLabel</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a6b37a86c337dc92b34050c903b1d3d8f">   39</a></span>    CGuiComboBox    <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#a6b37a86c337dc92b34050c903b1d3d8f">m_wndFilterBy</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#ad2b5985be7750c26ac4d5dba6ff37747">   40</a></span>    CGridListView   <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#ad2b5985be7750c26ac4d5dba6ff37747">m_wndList</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">//CGuiListCtrl  m_wndList;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#af10508216de75bc8482a5919649797ff">   42</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#af10508216de75bc8482a5919649797ff">m_wndReceipts</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#aa141e58cabc8ada1755d6f1075b0354f">   43</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#aa141e58cabc8ada1755d6f1075b0354f">m_wndExamSheet</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a5b106a47833ac9425b668666c83c2b9b">   44</a></span>    CString <a class="code hl_variable" href="class_c_a_t_m_record_tracker.html#a5b106a47833ac9425b668666c83c2b9b">m_szFilterByKey</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#af31d8be8dfbf4d7c7601690eb9a183ff">   45</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#af31d8be8dfbf4d7c7601690eb9a183ff">OnFilterBySelectChange</a>(<span class="keywordtype">int</span> nOldItemSel, <span class="keywordtype">int</span> nNewItemSel); </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#abf5b546dcdf39039bbab4fef7373a6d3">   46</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#abf5b546dcdf39039bbab4fef7373a6d3">OnFilterBySelendok</a>(); </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">//void          OnFilterBySetfocus(); </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">//void          OnFilterByKillfocus(); </span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#ae13e882737d369c768d2b10a0346793e">   49</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#ae13e882737d369c768d2b10a0346793e">OnFilterByLoadData</a>(); </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//void          OnFilterByAddNew(); </span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a26d47ab031a65a77993c11c57c7571d9">   51</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a26d47ab031a65a77993c11c57c7571d9">OnListLoadData</a>(); </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a64dbe4c6435f8c541ec14ad1547544c3">   52</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a64dbe4c6435f8c541ec14ad1547544c3">OnListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a3821516e58fea86219ba96275a0a49a0">   53</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a3821516e58fea86219ba96275a0a49a0">OnListDblClick</a>(); </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a3f15a0695776134a70948f395cf316f0">   54</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a3f15a0695776134a70948f395cf316f0">OnListDeleteItem</a>(); </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#ad22bdd50454fa8fddb130de93334c22d">   55</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#ad22bdd50454fa8fddb130de93334c22d">OnReceiptsSelect</a>(); </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#af1ca8780357da4512d8c75509549f3d3">   56</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#af1ca8780357da4512d8c75509549f3d3">OnExamSheetSelect</a>(); </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a3501d0f6a2212beb4bab4cffd3643317">   57</a></span>    <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a3501d0f6a2212beb4bab4cffd3643317">CATMRecordTracker</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a26c4ac3269bf20e567ea85fc64159985">   58</a></span>    <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a26c4ac3269bf20e567ea85fc64159985">~CATMRecordTracker</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a4f162e4b310a19f6bb53656d43022471">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a4f162e4b310a19f6bb53656d43022471">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a056bc551654244768b295a92a129c3ff">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a056bc551654244768b295a92a129c3ff">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a3050c0d068b7dc51b79186daa791df1f">   61</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a3050c0d068b7dc51b79186daa791df1f">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a0cf933a7cbdc8560087e9fb0a6bd03be">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a0cf933a7cbdc8560087e9fb0a6bd03be">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a5b18d19a1d654324cc6178f0723c42ed">   63</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a5b18d19a1d654324cc6178f0723c42ed">UpdateJson</a>(BOOL bSaveAndValidate);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a5e2cf884f58c943e0e52bdca777e3bf4">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a5e2cf884f58c943e0e52bdca777e3bf4">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a57919cadc4066fa0ae40dca0b8f52057">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a57919cadc4066fa0ae40dca0b8f52057">GetScreenToData</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#aa3682a9e08bd329d81569bbee4a5809c">   66</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#aa3682a9e08bd329d81569bbee4a5809c">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a04f2eb2245c3476d13ce404e4c304f3b">   67</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a04f2eb2245c3476d13ce404e4c304f3b">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a1377b1190fbbdf9e9490ee811c3bfd4e">   68</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a1377b1190fbbdf9e9490ee811c3bfd4e">OnAddATMRecordTracker</a>(); </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a154a508d5d9a53f9215bc9e6fc721b5f">   69</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a154a508d5d9a53f9215bc9e6fc721b5f">OnEditATMRecordTracker</a>(); </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#aff4d200faa98e823381f942677373b19">   70</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#aff4d200faa98e823381f942677373b19">OnDeleteATMRecordTracker</a>(); </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#acb9311f19789b8768cf9514eca685db4">   71</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#acb9311f19789b8768cf9514eca685db4">OnSaveATMRecordTracker</a>(); </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#aabcc6213bfa13f034cdda3693aef5ba1">   72</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#aabcc6213bfa13f034cdda3693aef5ba1">OnCancelATMRecordTracker</a>(); </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#ae95e288775d3dc3666f04d484f229474">   73</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#ae95e288775d3dc3666f04d484f229474">OnATMRecordTrackerListLoadData</a>(); </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a1599da199ca56ca2ddc92f8a5c85879f">   74</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a1599da199ca56ca2ddc92f8a5c85879f">LoadInfo</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    DECLARE_MESSAGE_MAP()</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_c_a_t_m_record_tracker.html#a7cecfc4b0c561ebd6dfeb77f949e595f">   76</a></span>    void <a class="code hl_function" href="class_c_a_t_m_record_tracker.html#a7cecfc4b0c561ebd6dfeb77f949e595f">OnSize</a>(UINT nType, <span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a03e9dcb4ea49ddbdb62f3b31aeb99f4d"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a03e9dcb4ea49ddbdb62f3b31aeb99f4d">CATMRecordTracker::m_wndHTMLInfo</a></div><div class="ttdeci">CHTMLayoutCtrl m_wndHTMLInfo</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:37</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a04f2eb2245c3476d13ce404e4c304f3b"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a04f2eb2245c3476d13ce404e4c304f3b">CATMRecordTracker::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a056bc551654244768b295a92a129c3ff"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a056bc551654244768b295a92a129c3ff">CATMRecordTracker::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a0cf933a7cbdc8560087e9fb0a6bd03be"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a0cf933a7cbdc8560087e9fb0a6bd03be">CATMRecordTracker::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a1377b1190fbbdf9e9490ee811c3bfd4e"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a1377b1190fbbdf9e9490ee811c3bfd4e">CATMRecordTracker::OnAddATMRecordTracker</a></div><div class="ttdeci">int OnAddATMRecordTracker()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a154a508d5d9a53f9215bc9e6fc721b5f"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a154a508d5d9a53f9215bc9e6fc721b5f">CATMRecordTracker::OnEditATMRecordTracker</a></div><div class="ttdeci">int OnEditATMRecordTracker()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a1599da199ca56ca2ddc92f8a5c85879f"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a1599da199ca56ca2ddc92f8a5c85879f">CATMRecordTracker::LoadInfo</a></div><div class="ttdeci">void LoadInfo()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a26c4ac3269bf20e567ea85fc64159985"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a26c4ac3269bf20e567ea85fc64159985">CATMRecordTracker::~CATMRecordTracker</a></div><div class="ttdeci">~CATMRecordTracker()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a26d47ab031a65a77993c11c57c7571d9"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a26d47ab031a65a77993c11c57c7571d9">CATMRecordTracker::OnListLoadData</a></div><div class="ttdeci">long OnListLoadData()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a3050c0d068b7dc51b79186daa791df1f"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a3050c0d068b7dc51b79186daa791df1f">CATMRecordTracker::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a3501d0f6a2212beb4bab4cffd3643317"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a3501d0f6a2212beb4bab4cffd3643317">CATMRecordTracker::CATMRecordTracker</a></div><div class="ttdeci">CATMRecordTracker()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a3821516e58fea86219ba96275a0a49a0"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a3821516e58fea86219ba96275a0a49a0">CATMRecordTracker::OnListDblClick</a></div><div class="ttdeci">void OnListDblClick()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a3f15a0695776134a70948f395cf316f0"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a3f15a0695776134a70948f395cf316f0">CATMRecordTracker::OnListDeleteItem</a></div><div class="ttdeci">int OnListDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a4f162e4b310a19f6bb53656d43022471"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a4f162e4b310a19f6bb53656d43022471">CATMRecordTracker::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a57919cadc4066fa0ae40dca0b8f52057"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a57919cadc4066fa0ae40dca0b8f52057">CATMRecordTracker::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a5b106a47833ac9425b668666c83c2b9b"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a5b106a47833ac9425b668666c83c2b9b">CATMRecordTracker::m_szFilterByKey</a></div><div class="ttdeci">CString m_szFilterByKey</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:44</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a5b18d19a1d654324cc6178f0723c42ed"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a5b18d19a1d654324cc6178f0723c42ed">CATMRecordTracker::UpdateJson</a></div><div class="ttdeci">void UpdateJson(BOOL bSaveAndValidate)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a5e2cf884f58c943e0e52bdca777e3bf4"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a5e2cf884f58c943e0e52bdca777e3bf4">CATMRecordTracker::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a64dbe4c6435f8c541ec14ad1547544c3"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a64dbe4c6435f8c541ec14ad1547544c3">CATMRecordTracker::OnListSelectChange</a></div><div class="ttdeci">void OnListSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a6b37a86c337dc92b34050c903b1d3d8f"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a6b37a86c337dc92b34050c903b1d3d8f">CATMRecordTracker::m_wndFilterBy</a></div><div class="ttdeci">CGuiComboBox m_wndFilterBy</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:39</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_a7cecfc4b0c561ebd6dfeb77f949e595f"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#a7cecfc4b0c561ebd6dfeb77f949e595f">CATMRecordTracker::OnSize</a></div><div class="ttdeci">void OnSize(UINT nType, int cx, int cy)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_aa141e58cabc8ada1755d6f1075b0354f"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#aa141e58cabc8ada1755d6f1075b0354f">CATMRecordTracker::m_wndExamSheet</a></div><div class="ttdeci">CGuiButton m_wndExamSheet</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:43</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_aa3682a9e08bd329d81569bbee4a5809c"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#aa3682a9e08bd329d81569bbee4a5809c">CATMRecordTracker::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_aabcc6213bfa13f034cdda3693aef5ba1"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#aabcc6213bfa13f034cdda3693aef5ba1">CATMRecordTracker::OnCancelATMRecordTracker</a></div><div class="ttdeci">int OnCancelATMRecordTracker()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_abd10996f8b7044379fca949e887e9651"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#abd10996f8b7044379fca949e887e9651">CATMRecordTracker::m_nDocumentNo</a></div><div class="ttdeci">long m_nDocumentNo</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:35</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_abf5b546dcdf39039bbab4fef7373a6d3"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#abf5b546dcdf39039bbab4fef7373a6d3">CATMRecordTracker::OnFilterBySelendok</a></div><div class="ttdeci">void OnFilterBySelendok()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_acb9311f19789b8768cf9514eca685db4"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#acb9311f19789b8768cf9514eca685db4">CATMRecordTracker::OnSaveATMRecordTracker</a></div><div class="ttdeci">int OnSaveATMRecordTracker()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_ad22bdd50454fa8fddb130de93334c22d"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#ad22bdd50454fa8fddb130de93334c22d">CATMRecordTracker::OnReceiptsSelect</a></div><div class="ttdeci">void OnReceiptsSelect()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_ad2b5985be7750c26ac4d5dba6ff37747"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#ad2b5985be7750c26ac4d5dba6ff37747">CATMRecordTracker::m_wndList</a></div><div class="ttdeci">CGridListView m_wndList</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:40</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_ad340b3bf6d92bee30f4a9d71b23a7d9e"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#ad340b3bf6d92bee30f4a9d71b23a7d9e">CATMRecordTracker::m_nPatientNo</a></div><div class="ttdeci">long m_nPatientNo</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:34</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_ae13e882737d369c768d2b10a0346793e"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#ae13e882737d369c768d2b10a0346793e">CATMRecordTracker::OnFilterByLoadData</a></div><div class="ttdeci">long OnFilterByLoadData()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_ae95e288775d3dc3666f04d484f229474"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#ae95e288775d3dc3666f04d484f229474">CATMRecordTracker::OnATMRecordTrackerListLoadData</a></div><div class="ttdeci">int OnATMRecordTrackerListLoadData()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_aeaf63d91542948e6f4ea1e259db8d7a6"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#aeaf63d91542948e6f4ea1e259db8d7a6">CATMRecordTracker::m_wndFilterByLabel</a></div><div class="ttdeci">CGuiLabel m_wndFilterByLabel</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:38</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_af10508216de75bc8482a5919649797ff"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#af10508216de75bc8482a5919649797ff">CATMRecordTracker::m_wndReceipts</a></div><div class="ttdeci">CGuiButton m_wndReceipts</div><div class="ttdef"><b>Definition</b> ATMRecordTracker.h:42</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_af1ca8780357da4512d8c75509549f3d3"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#af1ca8780357da4512d8c75509549f3d3">CATMRecordTracker::OnExamSheetSelect</a></div><div class="ttdeci">void OnExamSheetSelect()</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_af31d8be8dfbf4d7c7601690eb9a183ff"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#af31d8be8dfbf4d7c7601690eb9a183ff">CATMRecordTracker::OnFilterBySelectChange</a></div><div class="ttdeci">void OnFilterBySelectChange(int nOldItemSel, int nNewItemSel)</div></div>
+<div class="ttc" id="aclass_c_a_t_m_record_tracker_html_aff4d200faa98e823381f942677373b19"><div class="ttname"><a href="class_c_a_t_m_record_tracker.html#aff4d200faa98e823381f942677373b19">CATMRecordTracker::OnDeleteATMRecordTracker</a></div><div class="ttdeci">int OnDeleteATMRecordTracker()</div></div>
+<div class="ttc" id="aclass_c_h_t_m_layout_ctrl_html"><div class="ttname"><a href="class_c_h_t_m_layout_ctrl.html">CHTMLayoutCtrl</a></div><div class="ttdef"><b>Definition</b> HTMLayoutCtrlX.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_a_t_m_record_tracker_8h.html">ATMRecordTracker.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

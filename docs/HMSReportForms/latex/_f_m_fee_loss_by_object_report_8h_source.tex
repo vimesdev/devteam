@@ -1,0 +1,102 @@
+\doxysection{FMFee\+Loss\+By\+Object\+Report.\+h}
+\hypertarget{_f_m_fee_loss_by_object_report_8h_source}{}\label{_f_m_fee_loss_by_object_report_8h_source}\index{Include/HMSReportForms/HospitalFee/FMFeeLossByObjectReport.h@{Include/HMSReportForms/HospitalFee/FMFeeLossByObjectReport.h}}
+\mbox{\hyperlink{_f_m_fee_loss_by_object_report_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMFEELOSSBYOBJECTREPORT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMFEELOSSBYOBJECTREPORT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a61c24d20fc0b4ee1c36071242685d488}{CFMFeeLossByObjectReport}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a205f10c443818618706d0a659b7eaa73}{m\_wndReportCondition}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a330ce0171ddcfce7bc82fd3017c12622}{m\_wndYearLabel}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a679dcc1a27005f5f30d4eacbde7fd310}{m\_wndYear}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a3c0c8fa0da6d987ca37bebd13c71a861}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a222090f135ecdb5e658d20b3758d6bcb}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ae28500f677d20f411ddb5c888bdcbe9b}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a6e01c405403e37c19a57362aee2098e4}{m\_wndFromDate}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_acb0ac65c2705bce9f655c5a2ea03c630}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a8e3260c527303101d3599a94cf09f9bf}{m\_wndToDate}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a6f13e42a3fb3549d74ae1d6f2b221983}{m\_wndPrint}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_adf42f5385998c46e51f55f5b2d56dfa3}{m\_wndInsurance}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ae74936e7eff7f3e1d90f57e3342b21da}{m\_wndService}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_aa094cae97408dfe156a6ad7f9f0a8399}{m\_wndPolicy}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a9ac1eecdcbfc05d14322a77f57d76506}{m\_wndExport}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ab10a7f508707b2cf8d6d62b7ac9c4662}{m\_nYear}};}
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a5751fc37f789cd6faf37b854b550613a}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a17519438dc0527f7be2bc09856cfcac9}{m\_szFromDate}};}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a795c652b5ac498ed78d9215d05c7484c}{m\_szToDate}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a9759082f43a5b2051572efdc01c8f7da}{OnYearCheckValue}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a6024686d94e10c644bae075fdd7b952b}{m\_nInsurance}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_adbee9df30f95129f2678fadf281b2e19}{m\_nService}};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a5ad27f453820f396e257db38ac50b387}{m\_nPolicy}};}
+\DoxyCodeLine{00059\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a126bd258ba3c6d40849be9fe620f54c9}{m\_bThatthu}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_abaa80f8750f49c37b1fd0003e84fef9a}{m\_wndThatthu}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_af7f52ba03cdd7fe32e2e1e3007acf401}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a12bf6d53e713668602216ce083bedb1d}{OnReportPeriodSelendok}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ac193caf487723238bc2e36f545826b83}{OnThatthuSelect}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a66e1eab762024ff2cd35862fba5b9f71}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a0fdd8cff1a6587c1f8f0a37b57546229}{OnReportPeriodAddNew}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a6d64337011fb1d0dc557178869ae4c60}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a070e43355742cf3995a353b7cdb0a2d4}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a677f41cd7ecc850a686805803770c393}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a71afc7533237eaf6e6690577aee6ccd6}{OnExportSelect}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a4706018dbb4c7b2176e341d9c3e9cc26}{OnInsuranceSelect}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_af21a4b75d3348edb1a4b0da7eb02ac57}{OnServiceSelect}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a508aea1f2dec8dacdf44f99dc895129d}{OnPolicySelect}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a61c24d20fc0b4ee1c36071242685d488}{CFMFeeLossByObjectReport}}(CWnd*\ pParent);}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ad04aa00f8772be68f7a1231db6c323a5}{\string~CFMFeeLossByObjectReport}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ad8c7a04edb5129090e6b926a071c11f3}{OnCreateComponents}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_aa575a37a158706fdaa67db30fb75ab71}{OnInitializeComponents}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a926a680e70e33af7a3d3dbba71e216b7}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ade5eeed1ed2a9756380f5deb5c8e0a36}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a63621677a19796edc8d42dd0866c0b70}{GetDataToScreen}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a73554a7f870db54b55e401ab5ea4bcf6}{GetScreenToData}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_ad44dd7b1b68bee57b9e5f0816ddc9ee1}{SetDefaultValues}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a0f0cbfeec71b49a2039f0f21fcd345b0}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_acc115a96413286897c41995e0ca60d9f}{OnAddFMInsuranceFeeLossReport}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a9531ec290d18c65261164ff0714d283e}{OnEditFMInsuranceFeeLossReport}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a86bee803eb198a179797efa7ab1a7e62}{OnDeleteFMInsuranceFeeLossReport}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_abe0c3499b69df2e47949f1086366280f}{OnSaveFMInsuranceFeeLossReport}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a6551275408d4f153ef051dd388b9d92e}{OnCancelFMInsuranceFeeLossReport}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_fee_loss_by_object_report_a3c06df7c3c176270446b43921191f038}{OnFMInsuranceFeeLossReportListLoadData}}();\ }
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

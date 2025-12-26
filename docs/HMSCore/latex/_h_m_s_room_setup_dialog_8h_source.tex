@@ -1,0 +1,99 @@
+\doxysection{HMSRoom\+Setup\+Dialog.\+h}
+\hypertarget{_h_m_s_room_setup_dialog_8h_source}{}\label{_h_m_s_room_setup_dialog_8h_source}\index{Include/HMSCore/HMSRoomSetupDialog.h@{Include/HMSCore/HMSRoomSetupDialog.h}}
+\mbox{\hyperlink{_h_m_s_room_setup_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSRoomSetupDialog\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSRoomSetupDialog\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Medical\ Informatics\ Technology\ and\ Equipment\ Join\ Stock\ Company\ 2008-\/2010.\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Thiet\ Bi\ Va\ Cong\ Nghe\ Tin\ Hoc\ Y\ Te\ MITECO.,\ JSC.\ 2006-\/2008.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a37b25f4622974c371667880d64ecc5e3}{CHMSRoomSetupDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a4ae460142610ff65bee7deba494b7722}{m\_wndAdd}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ac92a6a659dc14401c254ee280e2e4e26}{m\_wndEdit}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a1d5055454e360f34793a22d459a925b2}{m\_wndDelete}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ad77af0b65e9a36f1f9b3d749948a0cdf}{m\_wndSave}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_aa12c2d6f7b073a6cf238cde2351fee24}{m\_wndCancel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a43b488f2f688f5c7bb8757de6b255800}{m\_wndRoomList}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ad8048b0b7452259d743d1f54d2abd3ff}{m\_wndNameLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_abde84d93a5b13275138db63b152d484e}{m\_wndName}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a3519ad33184462c8a1f2791fe88cc1bd}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a2a9d6b91052bf590b525e490797e76d7}{m\_wndType}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a0f32b465fe5c95b59fa7664ee4d313dd}{m\_wndSectionLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a8f6fa720c76e06701b82aeb8252b2484}{m\_wndSection}};}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_aa0b9b5f68d967bfc3ef4d1ceacd4f5e1}{m\_nID}};}
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ac85a7528845f87bec46b4b42e6b0ffdd}{m\_szDeptID}};}
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a5c47c64745c458f5f5c5d7cba63efa3a}{m\_szName}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a696c96088ee892b16dfad55ca1950e60}{m\_szTypeKey}};}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a1311616204bf412d20e4a1faa16e6c93}{m\_szSection}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a6146c81dc32944c32807abe4e72260a0}{m\_hms\_roomlistTbl}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a354907cbf0574291e9fc6aa2085ebd48}{OnAddSelect}}();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a050b8f11fa6d41b8f60aa41aba8a5e95}{OnEditSelect}}();\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a7847ca716ff6608789cefb1f565c88e1}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ab0540c5ccda8f0881c80e0b00d3f4bb2}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a76bf45f11e02158ac3c6ecc02854538e}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ab071c39f13727719a2887123ab6c3dd8}{OnRoomListLoadData}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a03001adc66a28b00aa3de4066520d419}{OnRoomListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_aec5d850c4a7eb5719f712dcce18cb5fd}{OnRoomListDblClick}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a2bf6a4e43f055478125122e16c8fbb68}{OnRoomListDeleteItem}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameChange();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a91e07f7b7cc423d5d3a192207f98fa2f}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a29d903afce5af0fd0eb4356e26d45962}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a98099774486b9b15a1c10d77913eb4ae}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a8c12c265017e22809885b7d3451ae6ef}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ab373dfdc97ce52d3679ff5e67ac94a62}{OnTypeAddNew}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSectionChange();\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSectionSetfocus();\ }}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSectionKillfocus();\ }}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ab6ef8ef38c503ccd50a46d5ad384be57}{OnSectionCheckValue}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a37b25f4622974c371667880d64ecc5e3}{CHMSRoomSetupDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a4ddcf281ba2dfdec8acf926b169eaa33}{\string~CHMSRoomSetupDialog}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a3c52cc45684c33fe6f6704d1378087ef}{OnCreateComponents}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a18760262972f4f4fdd8ad4f35b4cc0f4}{OnInitializeComponents}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_aeaf1c5341f739caf84119ac9be2e5180}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a9e747c25bb5de4d47baec0249ccd59a5}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ab32689ea2d5de86f7f83f95fd89878e3}{GetDataToScreen}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a61372b5f56eb8d659810bbb66b673c2f}{GetScreenToData}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a9c5bafa2cb9ede9a9ab0271ffc1672fe}{SetDefaultValues}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a821bc21707eb8c06549a201b0e0e45d3}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a2c4981e10415775d43a57fb067cef7ab}{OnAddHMSRoomSetupDialog}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a7a54e3a21a3570338b9052dc88025ff1}{OnEditHMSRoomSetupDialog}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a30eed9e0caf6f32323e5cadb41c39f2f}{OnDeleteHMSRoomSetupDialog}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_af1f4d29cb7dd2f0a87c08ceb3f14d5c8}{OnSaveHMSRoomSetupDialog}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_ad7f75a22ef0a1ece33a0957de0d5e853}{OnCancelHMSRoomSetupDialog}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_room_setup_dialog_a645d9d6d9a355ec1b2f56fd4587afe64}{OnHMSRoomSetupDialogListLoadData}}();\ }
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

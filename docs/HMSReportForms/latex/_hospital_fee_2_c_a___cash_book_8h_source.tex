@@ -1,0 +1,140 @@
+\doxysection{CA\+\_\+\+Cash\+Book.\+h}
+\hypertarget{_hospital_fee_2_c_a___cash_book_8h_source}{}\label{_hospital_fee_2_c_a___cash_book_8h_source}\index{Include/HMSReportForms/HospitalFee/CA\_CashBook.h@{Include/HMSReportForms/HospitalFee/CA\_CashBook.h}}
+\mbox{\hyperlink{_hospital_fee_2_c_a___cash_book_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CA\_CASHBOOK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CA\_CASHBOOK\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_c_a___cash_book_a104f496ba5b498ba070549245f0c70de}{CCA\_CashBook}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_aa85a4ad8c94ab6c7e2970da885b72c93}{m\_szCashBook}};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a8f7f3949299e268e179d45e83070b995}{m\_wndReportCondition}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a20aef843e260f50bbf96ab4d4f22c01b}{m\_wndYearLabel}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_c_a___cash_book_a43335641fa365a6ee8da38694ff67dea}{m\_wndYear}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a7e54038087018fbf0cfa0498f5507bfb}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a01a4a04fdbc1c39d68dad75580651264}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a5768dffd48f8f3d08fefbcf9d3a88a36}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a910bb40f0678587d51261c88c9f6654c}{m\_wndFromDate}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_abf80b335ecbeec154b333582f6c454d4}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ac9da8f0d25e7b4e022e44af9e4a04de1}{m\_wndToDate}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a3503cb04167b82566b5268284e3669d7}{m\_wndPaymentMethodLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_abf68a5558f2111853d06fdcd4d996868}{m\_wndPaymentMethod}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ad32807b84a1e0ca3880852187e40260d}{m\_wndObjectLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a51a8e5db452d881a483a28da6abddf91}{m\_wndObject}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_acda2fca5fc0eac1cbc312e3431423534}{m\_wndOrderByLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a848c3d3a16bf86dd2dfb20fd807db17c}{m\_wndOrderBy}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aacc97343304a4a6b1e75480c9b7fe31e}{m\_wndPosterLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a1eebe1dae7934966bb2f002c6a1c8178}{m\_wndPoster}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a37c9e41ed0847538ce0d977ba207b072}{m\_wndSOD}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a33246b0ccc0d4f3eabcc16b12952f02f}{m\_wndPrint}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a01b6826f5a06426b8775cd3cb7bd0933}{m\_wndAccountList}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a05c98a5f9501a51df8a6690d074fad8b}{m\_wndABZone}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aedbdf4ba8daa7d76e2167414e5942133}{m\_wndInsABZone}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a43c642bb778859ea847d402c41590656}{m\_wndByMoney}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aeeed2b8cfebfe693f12d5ffcfbf16043}{m\_wndByATM}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_abcfe01bbebd2e975f08ce9dfd2d787ae}{m\_wndByMoneyTransfer}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a8a3f8f4ced02fa2243c6eba6bcebd862}{m\_nYear}};}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_a9191f4cc15a208a115b395f02b73c517}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00062\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_ae64f91146b5c1d60a67f915c3f82a180}{m\_szFromDate}};}
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_afdfbf35f6cb070ce47cefafd100c0930}{m\_szToDate}};}
+\DoxyCodeLine{00064\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_a7ef79373e374461c383a78733d9f5da0}{m\_szPaymentMethodKey}};}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_a323b9971734ae0acac2be7317dc91cfc}{m\_szObjectKey}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_a8e1995bb9f00195ee076ed0dcc7e8af8}{m\_szOrderByKey}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_a6f8b1b8f9657fe3588d5cc172cc9d60d}{m\_szPosterKey}};}
+\DoxyCodeLine{00068\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ac95c752695d1d5d06445aad6860b6484}{m\_bSOD}};}
+\DoxyCodeLine{00069\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a5c1fda3b4bfb545f2b2ec7617d8a1fff}{m\_bABZone}};}
+\DoxyCodeLine{00070\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a4a520a0d727240fcf9ffc8b7deb958fa}{m\_bInsABZone}};}
+\DoxyCodeLine{00071\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ac3177f532bd6f4018178e997e4062ffd}{m\_bByMoney}};}
+\DoxyCodeLine{00072\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a0325f566c747ac5c3186934591fb41e7}{m\_bByATM}};}
+\DoxyCodeLine{00073\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ac9b7b08fc823e0a2fafc9fc05657525f}{m\_bByMoneyTransfer}};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ae41cb76582d76c560ecaff80ec29cd6f}{OnByMoneySelect}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a7e572d0d8dee2c290ef48a82ec38bc4f}{OnByATMSelect}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a6419b3e56e4d2ec8d2e2453d2c149366}{OnByMoneyTransferSelect}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a84f7fbc4827427bf113d14d2da4a58b5}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a25866eadd6e480a6f25c42fcb6c4b73c}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aa59f33ec119735b743a4716448a29aa0}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a3232aa11784a2a9c5128f01bc5014cbe}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_afb5e9620e8bf1fa2683e2913631aef57}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a51f1e9b25fb0a686065c1fed71bedb99}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a0ef21fa30b51d1588dea02d6c9ff679d}{OnPaymentMethodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aefff2b7b931d24a02dec7d50a87de83f}{OnPaymentMethodSelendok}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentMethodSetfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentMethodKillfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aed0a1796c5a293aed1d0a09875b6af60}{OnPaymentMethodLoadData}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPaymentMethodAddNew();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aaf0790225dc017633cefcb5d5e547ce0}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a568d720c19409da1c2d92ee435a05c57}{OnObjectSelendok}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectSetfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectKillfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a5419a0395bb625122856aba470e18c60}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectAddNew();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a9a7dde64ea981f077ff93dde10ac5b5c}{OnOrderBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a0b8bfeb3a00b9de932f9588eaf1aa63e}{OnOrderBySelendok}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderBySetfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByKillfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a2fb61fbf278d284347f31e915c038372}{OnOrderByLoadData}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByAddNew();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_aa71d25c6bbcdd3cd4e97ca0d8234e3d9}{OnPosterSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a08acfc04ba29fec075a08ea8eb17dd26}{OnPosterSelendok}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPosterSetfocus();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPosterKillfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ab66e582b563afa2ccb2818bae77fd137}{OnPosterLoadData}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPosterAddNew();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a7606ca9820509fc724df15af40bff009}{OnPrintSelect}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ab87d275b8397e22352deb848e2527ab1}{OnABZoneSelect}}();}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a1df325b67c1b73564b880acbfd4ef988}{OnInsABZoneSelect}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ae53daf0e39dee865411d738586974af1}{OnAccountListLoadData}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_afd36b61affe67583af05011a4430e6ab}{OnAccountListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a6b1444917b0bfbaeb14dd5e91f7e8fe0}{OnAccountListDblClick}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a7f34986232e73b6a77dbf4c8170e4be6}{OnAccountListDeleteItem}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_a104f496ba5b498ba070549245f0c70de}{CCA\_CashBook}}(CWnd\ *pParent);}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_c_c_a___cash_book_ad6d5234351054da2c6c2a4e3402f8463}{\string~CCA\_CashBook}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_c_a___cash_book_a96d08b1d252cbbcc7d73a43da99e212c}{OnCreateComponents}}();}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_c_a___cash_book_a45e433f6b5166f99caa8acf8e71f2a0c}{OnInitializeComponents}}();}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_c_a___cash_book_a8618883a360f7f52e8d9489ab4c23a92}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_c_a___cash_book_a8ecc3e5aa46cd6771e7b67f474054f8a}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_c_a___cash_book_ab22d581d3792a8722488ef7bd8a04538}{SetDefaultValues}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_c_a___cash_book_a443d43fba33a7e70548ff05e05f90a7a}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00135\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_c_a___cash_book_a8420e57f994ee68e500abcc1ca9ec17e}{GetQueryString}}();}
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

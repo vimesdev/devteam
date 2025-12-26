@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_h_m_s_exm_contract_list_view_8h" kind="file" language="C++">
+    <compoundname>HMSExmContractListView.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes local="yes">GridListView.h</includes>
+    <includedby refid="_h_m_s_benh_an_h_t_m_l_dialog_8h" local="yes">Include/HMSCore/HMSBenhAnHTMLDialog.h</includedby>
+    <includedby refid="_h_m_s_exm_contract_setting_dialog_8h" local="yes">Include/HMSCore/HMSExmContractSettingDialog.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/HMSCore/HMSExmContractListView.h</label>
+        <link refid="_h_m_s_exm_contract_list_view_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="5">
+        <label>GridListView.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Include/HMSCore/HMSBenhAnHTMLDialog.h</label>
+        <link refid="_h_m_s_benh_an_h_t_m_l_dialog_8h"/>
+      </node>
+      <node id="1">
+        <label>Include/HMSCore/HMSExmContractListView.h</label>
+        <link refid="_h_m_s_exm_contract_list_view_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Include/HMSCore/HMSExmContractSettingDialog.h</label>
+        <link refid="_h_m_s_exm_contract_setting_dialog_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_h_m_s_exm_contract_list_view" prot="public">CHMSExmContractListView</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HMSEXMCONTRACTLISTVIEW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMSEXMCONTRACTLISTVIEW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>�<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GridListView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_c_h_m_s_exm_contract_list_view" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_h_m_s_exm_contract_list_view_1a6b4ebff0f7b4ad3d673c6f0670978ee1" kindref="member">CHMSExmContractListView</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49" refid="class_c_h_m_s_exm_contract_list_view_1a1c4ecf8597a7a0905517634069d65756" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a1c4ecf8597a7a0905517634069d65756" kindref="member">m_nContractId</ref>;<sp/></highlight></codeline>
+<codeline lineno="50" refid="class_c_h_m_s_exm_contract_list_view_1a9083e974a67c5dd1d8254e295ffa5111" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a9083e974a67c5dd1d8254e295ffa5111" kindref="member">m_nRowSel</ref>;<sp/></highlight></codeline>
+<codeline lineno="51" refid="class_c_h_m_s_exm_contract_list_view_1a5a990e5b4601493b3a1237f6f9ed0bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CWnd*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a5a990e5b4601493b3a1237f6f9ed0bd2" kindref="member">m_pEmployeeList</ref>;<sp/></highlight></codeline>
+<codeline lineno="52" refid="class_c_h_m_s_exm_contract_list_view_1a44d38da695d5f0384cd50163bd0be63c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CWnd*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a44d38da695d5f0384cd50163bd0be63c" kindref="member">m_pServicePackageList</ref>;<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_h_m_s_exm_contract_list_view_1a23c7d313b50bd82033ef88c2614373b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a23c7d313b50bd82033ef88c2614373b0" kindref="member">m_wndSearchInformation</ref>;<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_h_m_s_exm_contract_list_view_1a53347a7d373a01d1e9df3d8d9cf27bb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a53347a7d373a01d1e9df3d8d9cf27bb3" kindref="member">m_wndFromDateLabel</ref>;<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_h_m_s_exm_contract_list_view_1a7ce74798adadfb0baf0915291a0b5a74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiDateCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a7ce74798adadfb0baf0915291a0b5a74" kindref="member">m_wndFromDate</ref>;<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_h_m_s_exm_contract_list_view_1aa0b80be09543453a3dc02e6b94825ca3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1aa0b80be09543453a3dc02e6b94825ca3" kindref="member">m_wndToDateLabel</ref>;<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_h_m_s_exm_contract_list_view_1a8634181770dae2456f3a48b724c7922a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiDateCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a8634181770dae2456f3a48b724c7922a" kindref="member">m_wndToDate</ref>;<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_h_m_s_exm_contract_list_view_1a1f5490ed4e83ed72d75270f1e26895eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a1f5490ed4e83ed72d75270f1e26895eb" kindref="member">m_wndNameLabel</ref>;<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_h_m_s_exm_contract_list_view_1a8daddd70e058ee673071ad721a598266" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a8daddd70e058ee673071ad721a598266" kindref="member">m_wndName</ref>;<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_h_m_s_exm_contract_list_view_1a25a20b10d2b7ba0adf6314bd20ef257d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a25a20b10d2b7ba0adf6314bd20ef257d" kindref="member">m_wndSearch</ref>;<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_h_m_s_exm_contract_list_view_1a479e015350f45907859ede4fc064cc1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGridListView<sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a479e015350f45907859ede4fc064cc1b" kindref="member">m_wndList</ref>;<sp/></highlight></codeline>
+<codeline lineno="62" refid="class_c_h_m_s_exm_contract_list_view_1a314181dea5c55ee9bd57844c7385006e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a314181dea5c55ee9bd57844c7385006e" kindref="member">m_wndAddContract</ref>;<sp/></highlight></codeline>
+<codeline lineno="63" refid="class_c_h_m_s_exm_contract_list_view_1aae91244930d17f495bceec527ef64441" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1aae91244930d17f495bceec527ef64441" kindref="member">m_wndEditContract</ref>;<sp/></highlight></codeline>
+<codeline lineno="64" refid="class_c_h_m_s_exm_contract_list_view_1aabf11919d5b48b43cc748eb33b35feb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1aabf11919d5b48b43cc748eb33b35feb6" kindref="member">m_wndDeleteContract</ref>;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_c_h_m_s_exm_contract_list_view_1a3d8f87962f4a69c97002f3f62549120b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a3d8f87962f4a69c97002f3f62549120b" kindref="member">m_szFromDate</ref>;<sp/></highlight></codeline>
+<codeline lineno="67" refid="class_c_h_m_s_exm_contract_list_view_1a9a712a71ec44e8434a1d6fbd5b8775eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a9a712a71ec44e8434a1d6fbd5b8775eb" kindref="member">m_szToDate</ref>;<sp/></highlight></codeline>
+<codeline lineno="68" refid="class_c_h_m_s_exm_contract_list_view_1a36f7f64f4269d8be9e53c15af9a022ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a36f7f64f4269d8be9e53c15af9a022ae" kindref="member">m_szName</ref>;<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_h_m_s_exm_contract_list_view_1a9388dd3a3def95c1725971a7c8f4c8f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a9388dd3a3def95c1725971a7c8f4c8f0" kindref="member">OnFromDateCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="class_c_h_m_s_exm_contract_list_view_1af0958ce8ac5fbfc8dbd065f863df4d53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1af0958ce8ac5fbfc8dbd065f863df4d53" kindref="member">OnToDateCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="class_c_h_m_s_exm_contract_list_view_1ad509b807face545d63b71d38db3078e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1ad509b807face545d63b71d38db3078e5" kindref="member">OnNameCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="class_c_h_m_s_exm_contract_list_view_1aef07730f8cf22847205c7cc74de97e60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1aef07730f8cf22847205c7cc74de97e60" kindref="member">OnSearchSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="class_c_h_m_s_exm_contract_list_view_1a74e4688213b88c7246acb26802720f29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a74e4688213b88c7246acb26802720f29" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="class_c_h_m_s_exm_contract_list_view_1ad7ef0b34749b3c6d209dfb12f7fd3893" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1ad7ef0b34749b3c6d209dfb12f7fd3893" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="class_c_h_m_s_exm_contract_list_view_1ac9841e354f09366aa676d9bb87394816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1ac9841e354f09366aa676d9bb87394816" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="class_c_h_m_s_exm_contract_list_view_1a101f63797eed6ebddef7c0df3b426051" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a101f63797eed6ebddef7c0df3b426051" kindref="member">OnListAddItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="class_c_h_m_s_exm_contract_list_view_1a8d51e899e3a49bb7c7745aa1e609f938" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a8d51e899e3a49bb7c7745aa1e609f938" kindref="member">OnListEditItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="class_c_h_m_s_exm_contract_list_view_1ad5a9e3936498d3d6e1e4a7e40fb80e2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1ad5a9e3936498d3d6e1e4a7e40fb80e2e" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144" refid="class_c_h_m_s_exm_contract_list_view_1a6c1e6f6ed7876c1d4bc2204f1f8ffd9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a6c1e6f6ed7876c1d4bc2204f1f8ffd9b" kindref="member">OnAddContractSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="class_c_h_m_s_exm_contract_list_view_1a225568ff9a52b07442fd3866a5f5171b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a225568ff9a52b07442fd3866a5f5171b" kindref="member">OnEditContractSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156" refid="class_c_h_m_s_exm_contract_list_view_1a1aca9cf1690ba8dd9e02ba24721d85af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a1aca9cf1690ba8dd9e02ba24721d85af" kindref="member">OnDeleteContractSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162" refid="class_c_h_m_s_exm_contract_list_view_1a6b4ebff0f7b4ad3d673c6f0670978ee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a6b4ebff0f7b4ad3d673c6f0670978ee1" kindref="member">CHMSExmContractListView</ref>();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="class_c_h_m_s_exm_contract_list_view_1a8541d2ef82c11767208208d4da1d03aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a8541d2ef82c11767208208d4da1d03aa" kindref="member">~CHMSExmContractListView</ref>();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="class_c_h_m_s_exm_contract_list_view_1a0404eb917fbc12c5c5ae0033fa363b92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a0404eb917fbc12c5c5ae0033fa363b92" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180" refid="class_c_h_m_s_exm_contract_list_view_1a1661af6b091d59b23db3930be931eb4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a1661af6b091d59b23db3930be931eb4e" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186" refid="class_c_h_m_s_exm_contract_list_view_1a081df3801cb5e46177bac1e4cc366a00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a081df3801cb5e46177bac1e4cc366a00" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193" refid="class_c_h_m_s_exm_contract_list_view_1a78c81e8d5eacffdff5c7a83123439393" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a78c81e8d5eacffdff5c7a83123439393" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="200" refid="class_c_h_m_s_exm_contract_list_view_1a4047cc48da71b8b430c2d002682c139a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a4047cc48da71b8b430c2d002682c139a" kindref="member">UpdateJson</ref>(BOOL<sp/>bSaveAndValidate);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206" refid="class_c_h_m_s_exm_contract_list_view_1a887fe0afb10dc812c13cd883c24a465d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a887fe0afb10dc812c13cd883c24a465d" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212" refid="class_c_h_m_s_exm_contract_list_view_1a7354578b4384a958239e7d35568e2303" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a7354578b4384a958239e7d35568e2303" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="class_c_h_m_s_exm_contract_list_view_1a7908943a7acbbe39043ca93c7b2386e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a7908943a7acbbe39043ca93c7b2386e5" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226" refid="class_c_h_m_s_exm_contract_list_view_1a9804a9bd15d7488d678ba649caca2437" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a9804a9bd15d7488d678ba649caca2437" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233" refid="class_c_h_m_s_exm_contract_list_view_1a0fb92eaaa9accea10994191fc88d7070" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a0fb92eaaa9accea10994191fc88d7070" kindref="member">OnAddHMSExmContractListView</ref>();<sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="240" refid="class_c_h_m_s_exm_contract_list_view_1a6b4126d3ffc1850cda6012506dd44f3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a6b4126d3ffc1850cda6012506dd44f3a" kindref="member">OnEditHMSExmContractListView</ref>();<sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247" refid="class_c_h_m_s_exm_contract_list_view_1aca428d960e0eab2aa0d23a0bd9a35817" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1aca428d960e0eab2aa0d23a0bd9a35817" kindref="member">OnDeleteHMSExmContractListView</ref>();<sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254" refid="class_c_h_m_s_exm_contract_list_view_1aaad5bf95cffe1315aeb95a1099d3ffc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1aaad5bf95cffe1315aeb95a1099d3ffc7" kindref="member">OnSaveHMSExmContractListView</ref>();<sp/></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261" refid="class_c_h_m_s_exm_contract_list_view_1ae30fcac5270a3fa113c1a239c53c3903" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1ae30fcac5270a3fa113c1a239c53c3903" kindref="member">OnCancelHMSExmContractListView</ref>();<sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269" refid="class_c_h_m_s_exm_contract_list_view_1a5b8dc58c966d895a5b7405c5562bd43c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a5b8dc58c966d895a5b7405c5562bd43c" kindref="member">OnHMSExmContractListViewListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="276" refid="class_c_h_m_s_exm_contract_list_view_1a6add8f87660113f235654e5effa09558" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a6add8f87660113f235654e5effa09558" kindref="member">OnPrintGuideExam</ref>();<sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="283" refid="class_c_h_m_s_exm_contract_list_view_1af555cb1a59dd7cd00c3076efa8ba389e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1af555cb1a59dd7cd00c3076efa8ba389e" kindref="member">OnExportToExcel</ref>();</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290" refid="class_c_h_m_s_exm_contract_list_view_1a46159f5b80e6abf3214a8f77e8c47dff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1a46159f5b80e6abf3214a8f77e8c47dff" kindref="member">OnResetOnlinePassWord</ref>();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="298" refid="class_c_h_m_s_exm_contract_list_view_1aa33eec7785240d9624d3c566afe9f970" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_exm_contract_list_view_1aa33eec7785240d9624d3c566afe9f970" kindref="member">ExportListToExcel</ref>();</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/HMSCore/HMSExmContractListView.h"/>
+  </compounddef>
+</doxygen>

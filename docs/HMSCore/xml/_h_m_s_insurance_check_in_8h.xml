@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_h_m_s_insurance_check_in_8h" kind="file" language="C++">
+    <compoundname>HMSInsuranceCheckIn.h</compoundname>
+    <includes local="yes">HTTPClient.h</includes>
+    <includes local="yes">DbMap.h</includes>
+    <includedby refid="_a_t_m_patient_info_view_8h" local="yes">Include/HMSCore/ATMPatientInfoView.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/HMSCore/HMSInsuranceCheckIn.h</label>
+        <link refid="_h_m_s_insurance_check_in_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DbMap.h</label>
+      </node>
+      <node id="2">
+        <label>HTTPClient.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Include/HMSCore/ATMInformationDialog.h</label>
+        <link refid="_a_t_m_information_dialog_8h"/>
+      </node>
+      <node id="2">
+        <label>Include/HMSCore/ATMPatientInfoView.h</label>
+        <link refid="_a_t_m_patient_info_view_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Include/HMSCore/ATMRegistrationDialog.h</label>
+        <link refid="_a_t_m_registration_dialog_8h"/>
+      </node>
+      <node id="1">
+        <label>Include/HMSCore/HMSInsuranceCheckIn.h</label>
+        <link refid="_h_m_s_insurance_check_in_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_h_m_s_insurance_check_in" prot="public">CHMSInsuranceCheckIn</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HMSINSURANCECHECKIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMSINSURANCECHECKIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright(C)<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Join<sp/>Stock<sp/>Company.<sp/>2005-2010.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hay<sp/>Hoang<sp/>Van,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2010.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;HTTPClient.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbMap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_c_h_m_s_insurance_check_in" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_h_m_s_insurance_check_in_1af46c4e3427668edc26c2917e9216a3db" kindref="member">CHMSInsuranceCheckIn</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CHttpClient{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="class_c_h_m_s_insurance_check_in_1a837b5c5c274c78de28c2e97c600fc95f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a837b5c5c274c78de28c2e97c600fc95f" kindref="member">m_szUserName</ref>;<sp/></highlight></codeline>
+<codeline lineno="46" refid="class_c_h_m_s_insurance_check_in_1ae1ce08708b7d123bd9278725c50b4cc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ae1ce08708b7d123bd9278725c50b4cc8" kindref="member">m_szPassword</ref>;<sp/></highlight></codeline>
+<codeline lineno="47" refid="class_c_h_m_s_insurance_check_in_1ad3bd0b7dad7da17b3e109dbbfba79f0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ad3bd0b7dad7da17b3e109dbbfba79f0d" kindref="member">m_szHospitalID</ref>;<sp/></highlight></codeline>
+<codeline lineno="48" refid="class_c_h_m_s_insurance_check_in_1a3b97dfa1273af776dae59e1f7f788124" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a3b97dfa1273af776dae59e1f7f788124" kindref="member">m_szURL</ref>;<sp/></highlight></codeline>
+<codeline lineno="49" refid="class_c_h_m_s_insurance_check_in_1a68e7ca08533a785f20f7924b3c578c98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a68e7ca08533a785f20f7924b3c578c98" kindref="member">m_nProvinceID</ref>;<sp/></highlight></codeline>
+<codeline lineno="50" refid="class_c_h_m_s_insurance_check_in_1a3ea90bbbb506b3e56169c11f5a675a63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a3ea90bbbb506b3e56169c11f5a675a63" kindref="member">m_szAccess_token</ref>;<sp/></highlight></codeline>
+<codeline lineno="51" refid="class_c_h_m_s_insurance_check_in_1ab25ef47bddf56a1eaf8736143c512024" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ab25ef47bddf56a1eaf8736143c512024" kindref="member">m_szToken_ID</ref>;<sp/></highlight></codeline>
+<codeline lineno="52" refid="class_c_h_m_s_insurance_check_in_1a242da8822b2785455831037f5618553f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a242da8822b2785455831037f5618553f" kindref="member">m_szMahoso</ref>;<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_c_h_m_s_insurance_check_in_1a821978f3f898ce32346e247423ba55ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a821978f3f898ce32346e247423ba55ba" kindref="member">m_bh_xml1Tbl</ref>;<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_h_m_s_insurance_check_in_1a1c334ef2b56e1efb4e57f12f649821c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a1c334ef2b56e1efb4e57f12f649821c8" kindref="member">m_bh_xml2Tbl</ref>;<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_h_m_s_insurance_check_in_1a2a905fe907ec8208d589b7d3a3922987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a2a905fe907ec8208d589b7d3a3922987" kindref="member">m_bh_xml3Tbl</ref>;<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_h_m_s_insurance_check_in_1a67ac55d0cd104c7762a4f328e8a0a7f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a67ac55d0cd104c7762a4f328e8a0a7f5" kindref="member">m_bh_xml4Tbl</ref>;<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_h_m_s_insurance_check_in_1a2ef2a0f2a03385a9f25f33f8782e7e3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap<sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a2ef2a0f2a03385a9f25f33f8782e7e3c" kindref="member">m_bh_xml5Tbl</ref>;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60" refid="class_c_h_m_s_insurance_check_in_1af46c4e3427668edc26c2917e9216a3db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1af46c4e3427668edc26c2917e9216a3db" kindref="member">CHMSInsuranceCheckIn</ref>();</highlight></codeline>
+<codeline lineno="61" refid="class_c_h_m_s_insurance_check_in_1a98bd66b4c8b57f6df5a4c5a10b4511fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a98bd66b4c8b57f6df5a4c5a10b4511fe" kindref="member">~CHMSInsuranceCheckIn</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_h_m_s_insurance_check_in_1ad130c07804d31e8d9df4d9772e7a55f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ad130c07804d31e8d9df4d9772e7a55f4" kindref="member">SetUserName</ref>(LPCTSTR<sp/>lpszUserName){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a837b5c5c274c78de28c2e97c600fc95f" kindref="member">m_szUserName</ref><sp/>=<sp/>lpszUserName;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65" refid="class_c_h_m_s_insurance_check_in_1a2a9b42e077a94adea094191dc03ba8b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a2a9b42e077a94adea094191dc03ba8b3" kindref="member">SetPassword</ref>(LPCTSTR<sp/>lpszPassword){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ae1ce08708b7d123bd9278725c50b4cc8" kindref="member">m_szPassword</ref><sp/>=<sp/>lpszPassword;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68" refid="class_c_h_m_s_insurance_check_in_1a6f0a5090621bde254ea6d2b7b00101ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a6f0a5090621bde254ea6d2b7b00101ca" kindref="member">SetProvinceID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nProvID){</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a68e7ca08533a785f20f7924b3c578c98" kindref="member">m_nProvinceID</ref><sp/>=<sp/>nProvID;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71" refid="class_c_h_m_s_insurance_check_in_1a9b5d118387acc1cd4863215cb5a293e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a9b5d118387acc1cd4863215cb5a293e3" kindref="member">SetHospitalID</ref>(LPCTSTR<sp/>lpszHospitalID)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ad3bd0b7dad7da17b3e109dbbfba79f0d" kindref="member">m_szHospitalID</ref><sp/>=<sp/>lpszHospitalID;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75" refid="class_c_h_m_s_insurance_check_in_1a7a8b29516b6031207d5ac6cee7c09dc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a7a8b29516b6031207d5ac6cee7c09dc3" kindref="member">GetProviceID</ref>(){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a68e7ca08533a785f20f7924b3c578c98" kindref="member">m_nProvinceID</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="class_c_h_m_s_insurance_check_in_1ab4db0feebd487fc97dadfa15be30004a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ab4db0feebd487fc97dadfa15be30004a" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="80" refid="class_c_h_m_s_insurance_check_in_1a4d826540d088e9c0cee021dbeb0af26d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a4d826540d088e9c0cee021dbeb0af26d" kindref="member">Laythongtinketnoi</ref>();</highlight></codeline>
+<codeline lineno="81" refid="class_c_h_m_s_insurance_check_in_1ad8fa7f044dad908649dcc370745ce1d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ad8fa7f044dad908649dcc370745ce1d9" kindref="member">GetToken</ref>(JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="82" refid="class_c_h_m_s_insurance_check_in_1a166c44cfe426c5f51a8f3bf576213280" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a166c44cfe426c5f51a8f3bf576213280" kindref="member">NhanLichSuKCB</ref>(CString<sp/>szJsonData,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="83" refid="class_c_h_m_s_insurance_check_in_1a323bb98e1021d8d80c8dd291ddfc3394" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a323bb98e1021d8d80c8dd291ddfc3394" kindref="member">NhanLichSuChiTietKCB</ref>(CString<sp/>szMahoso<sp/>,JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="84" refid="class_c_h_m_s_insurance_check_in_1a165622559b57412587aa926dda434128" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a165622559b57412587aa926dda434128" kindref="member">KiemTraThongTinKhamChuaBenh</ref>(LPCTSTR<sp/>lpszMathe,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nSongay,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="85" refid="class_c_h_m_s_insurance_check_in_1a9f0a6148e53961b1b13f057e7056cc16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a9f0a6148e53961b1b13f057e7056cc16" kindref="member">KiemTraTrangThaiHoSo</ref>(LPCTSTR<sp/>lpszMaLienKet,<sp/>LPCTSTR<sp/>lpszNgayravien,<sp/>LPCTSTR<sp/>lpszKey,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="86" refid="class_c_h_m_s_insurance_check_in_1a99041e315b13b80bfcc1b614e255a9d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a99041e315b13b80bfcc1b614e255a9d6" kindref="member">LamMoiThongTin</ref>(LPCTSTR<sp/>lpszKey,<sp/>LPCTSTR<sp/>lpszType,<sp/>JSONVALUE*<sp/>jsonRequest,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="87" refid="class_c_h_m_s_insurance_check_in_1a1400afdb591598a2543a58bb582f9951" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a1400afdb591598a2543a58bb582f9951" kindref="member">ThemHoSoBenhAn</ref>(LPCTSTR<sp/>lpszTimeSendRequest,<sp/>JSONVALUE*<sp/>jsonRequest,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="88" refid="class_c_h_m_s_insurance_check_in_1a57593346d288c4c7fa954a4161f83576" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1a57593346d288c4c7fa954a4161f83576" kindref="member">ThemHoSoBenhAnDangString</ref>(LPCTSTR<sp/>lpszKey,<sp/>LPCTSTR<sp/>lpszTimeSendRequest,<sp/>JSONVALUE*<sp/>jsonRequest,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="89" refid="class_c_h_m_s_insurance_check_in_1ae874ca2f46f2ed43f12dc1b84020ba89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ae874ca2f46f2ed43f12dc1b84020ba89" kindref="member">ThemThongTinVaoKham</ref>(LPCTSTR<sp/>lpszTimeSendRequest,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bXoathongtin,<sp/>JSONVALUE*<sp/>jsonRequest,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="90" refid="class_c_h_m_s_insurance_check_in_1aa829b459e9ebf6db57fce2535d2f97bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1aa829b459e9ebf6db57fce2535d2f97bc" kindref="member">ThongTinTrangThaiTienTrinh</ref>(LPCTSTR<sp/>lpszIP,<sp/>LPCTSTR<sp/>lpszTimeSendRequest,<sp/>LPCTSTR<sp/>lpszComment,<sp/>LPCTSTR<sp/>lpszKey,<sp/>JSONVALUE*<sp/>jsonRequest,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="91" refid="class_c_h_m_s_insurance_check_in_1ad3f370588cb609d593daca6f776712bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ad3f370588cb609d593daca6f776712bf" kindref="member">NhanThongTinHanhChinhCuaThe</ref>(CString<sp/>szJsonData,<sp/>JSONVALUE*<sp/>jsonResponse,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nGetWay);</highlight></codeline>
+<codeline lineno="92" refid="class_c_h_m_s_insurance_check_in_1ab552d26f8f979224f529b1a1c11e5554" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_insurance_check_in_1ab552d26f8f979224f529b1a1c11e5554" kindref="member">NhanLichSuKCB2018</ref>(CString<sp/>szJsonData,<sp/>JSONVALUE*<sp/>jsonResponse);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/HMSCore/HMSInsuranceCheckIn.h"/>
+  </compounddef>
+</doxygen>

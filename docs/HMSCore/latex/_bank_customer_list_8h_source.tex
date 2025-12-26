@@ -1,0 +1,88 @@
+\doxysection{Bank\+Customer\+List.\+h}
+\hypertarget{_bank_customer_list_8h_source}{}\label{_bank_customer_list_8h_source}\index{Include/HMSCore/BankCustomerList.h@{Include/HMSCore/BankCustomerList.h}}
+\mbox{\hyperlink{_bank_customer_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BANKCUSTOMERLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BANKCUSTOMERLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ ©\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_bank_customer_list_ad96d7c6d73f6fc6333d358cf5e85699d}{CBankCustomerList}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_aecd7542251990d7767468e8ae4007898}{m\_wndSearchLabel}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a1bf1de6afd4e104fcc089624c9c901c6}{m\_wndSearch}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a15f639fd4962a844e93645bc971149d6}{m\_wndFind}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a5479c3ad111190f56ac69e283c495dc6}{m\_wndList}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a6edb1dcefd1d10a7e47e72bc7bdbde9a}{m\_wndRegistration}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a67828b3b31bdef4e04503fbb8de7787b}{m\_wndLock}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a69848c56c6f35f762af8330bd931c3d3}{m\_wndUnLock}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_acc2b210d104be91d70938d5715b27123}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_aa670fc000f40002433cdb6894eb9edf4}{m\_wndFromDate}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a20df8928dea6ad0cd9599093979fb3dd}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a7a1fbb843736352b21596eeec9a5f0c0}{m\_wndToDate}};}
+\DoxyCodeLine{00044\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_bank_customer_list_a0430fbeab06f185d8ca9649dfc6b6bd4}{m\_szSearch}};}
+\DoxyCodeLine{00045\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_bank_customer_list_a4f514ec01f9ce26af9c7ff8a0bf09daf}{m\_szFromDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_bank_customer_list_ad892bd5f3e21caafee27379c56104ad6}{m\_szToDate}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchChange();\ }}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchSetfocus();\ }}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchKillfocus();\ }}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a58e5815ac79a8d76be06ec3e04d36565}{OnSearchCheckValue}}();\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_af67f82cf34d7a36d3951b0dcc9794dfe}{OnFindSelect}}();\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a710fd65e7ebf23e361b802fa69eedd98}{OnListLoadData}}();\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a9ef79bfbd1be09a7ef4a8453c5184051}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a65b0ea59ea8722a6d8dbccd652587a24}{OnListDblClick}}();\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a4b0ce39fd92e91e837d9deca646cea09}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_acf2ad658fd9f0517964964a45c8388f4}{OnRegistrationSelect}}();\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a0e7bab90b13a0c8d90d1143b4f5803a2}{OnLockSelect}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a9ee3817a3b84eacc84909493999589f9}{OnUnLockSelect}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_ab7db33c1ba23587d220f6d7fec25506d}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_a0237dcf0db1609de28c889207f54831e}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_ad96d7c6d73f6fc6333d358cf5e85699d}{CBankCustomerList}}(CWnd\ *pParent);}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_c_bank_customer_list_ae4f62a76b06b93724c7ad61b3ca7adb6}{\string~CBankCustomerList}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_aff3910059d42900720c49b8f2d4a044d}{OnCreateComponents}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_af69d57e4644d8b0c2d5469d69ba0a5ff}{OnInitializeComponents}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_ac9c9564f506e4ceef8e5e917b73b5ca3}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_afc94f00cd4959fcab3321dc6508c680a}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_a0e793c0bfa6e3da2031e4d4ee3040bb7}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_a927394273dad12a27548914d7df0f43f}{GetDataToScreen}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_a26097291b7e0165125c4c489fa8c647e}{GetScreenToData}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_bank_customer_list_acbba8683775aa8589ebf2ddcea51dd83}{SetDefaultValues}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_bank_customer_list_a2343b22540f84b3ddaf1a879cef28258}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_bank_customer_list_ac683775e17220ce526cbd35d2bca2101}{OnAddBankCustomerList}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_bank_customer_list_a00c6e42b1aa95d6be174b564d6b299dd}{OnEditBankCustomerList}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_bank_customer_list_a2a3bf286efc86b5d9fe57eadfbe61446}{OnDeleteBankCustomerList}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_bank_customer_list_a813707f24413e98013488466d33508d5}{OnSaveBankCustomerList}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_bank_customer_list_ae7bbe3eed58a3850ad14cb97093a6444}{OnCancelBankCustomerList}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_bank_customer_list_a3bb4fea99deee36aea9ee64b480d058e}{OnBankCustomerListListLoadData}}();\ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

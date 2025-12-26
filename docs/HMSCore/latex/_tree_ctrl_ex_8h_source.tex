@@ -1,0 +1,75 @@
+\doxysection{Tree\+Ctrl\+Ex.\+h}
+\hypertarget{_tree_ctrl_ex_8h_source}{}\label{_tree_ctrl_ex_8h_source}\index{Include/HMSCore/TreeCtrlEx.h@{Include/HMSCore/TreeCtrlEx.h}}
+\mbox{\hyperlink{_tree_ctrl_ex_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TREECTRLEX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TREECTRLEX\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{const}\ UINT\ \mbox{\hyperlink{_tree_ctrl_ex_8h_ae10f0b19dcae3fd87d8a3ae1d146dfa6}{WMU\_ENABLETREEITEM}}\ =\ ::RegisterWindowMessage(\_T(\textcolor{stringliteral}{"{}WMU\_TPS\_ENABLETREEITEM"{}}));}
+\DoxyCodeLine{00007\ \ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_tree_ctrl_ex_ad7ae182f62805c933475be360bc25f79}{CTreeCtrlEx}}\ :\ \textcolor{keyword}{public}\ CTreeCtrl}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Construction/Destruction}}
+\DoxyCodeLine{00011\ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{class_c_tree_ctrl_ex_ad7ae182f62805c933475be360bc25f79}{CTreeCtrlEx}})}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{class_c_tree_ctrl_ex_ad7ae182f62805c933475be360bc25f79}{CTreeCtrlEx}}();}
+\DoxyCodeLine{00015\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a08655f2211e58fb5ab01882b283cf8e2}{\string~CTreeCtrlEx}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Properties}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_ae5b4a45022a92106b244178999d25d65}{SetItemID}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem,\ LPCTSTR\ szID);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a774d97ae03563984461a432fef954ab5}{SetItemFace}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem,\ LPCTSTR\ face);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a7fcc66f60c988ce89bbcdad1b15a79e6}{SetItemSize}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a2ec32d095e7b099fdc3209cab8a19e14}{SetItemBold}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ bBold);}
+\DoxyCodeLine{00022\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a66127c68f3749bdcaf2e5bc995f8b116}{GetItemBold}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a01b3b55346b36c015e3b843a46c56f54}{SetItemColor}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem,\ \textcolor{keyword}{const}\ COLORREF\ color);}
+\DoxyCodeLine{00024\ \ \ \ \ COLORREF\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a7bfe8a162ee8ea4edb31cd52e490ae9e}{GetItemColor}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ LPCTSTR\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a18d48b510cd48725e9c71dccd62ed277}{GetItemID}}(\textcolor{keyword}{const}\ HTREEITEM\ hItem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_aae8cb18c64be1361153f5b14b7609ae7}{ExpandItem}}(HTREEITEM\ hti,\ UINT\ nCode);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a00e7c34951e082a93b8c635c3b2a15e6}{SetSelChangeCallback}}(\textcolor{keywordtype}{void}\ (*\_selChangefnc)(CWnd\ *pWnd,\ HTREEITEM\ oldItem,\ HTREEITEM\ newItem));}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_ae96f27bcc9de7c068626d0956cb776cd}{SetDblClickCallback}}(\textcolor{keywordtype}{void}\ (*\_DblClickFnc)(CWnd\ *pWnd,\ HTREEITEM\ hItem));}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Members}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \textcolor{comment}{//\ Inner\ class\ storing\ individual\ tree\ item.}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_ae923180b6ffff4223c7058c391fb90ba}{sTreeItemProperties}}}
+\DoxyCodeLine{00034\ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_ae923180b6ffff4223c7058c391fb90ba}{sTreeItemProperties}}()}
+\DoxyCodeLine{00036\ \ \ \ \ \ :\ \mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_a53c4bba11a9b070f71cf0d04b4ed2435}{color}}((COLORREF)0xFFFFFFFF)}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ memset(\mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_a1e38f1faa3ab9e397af6960ecb17416d}{face}},\ 0,\ 35);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \_tcscpy(\mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_a1e38f1faa3ab9e397af6960ecb17416d}{face}},\ GetFaceName());}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_ac8369683058c19cfea088f88c4f2be8f}{facesize}}=10;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ COLORREF\ \ \ \ \mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_a53c4bba11a9b070f71cf0d04b4ed2435}{color}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ TCHAR\ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_a1e38f1faa3ab9e397af6960ecb17416d}{face}}[35];}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_tree_ctrl_ex_1_1s_tree_item_properties_ac8369683058c19cfea088f88c4f2be8f}{facesize}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ TCHAR\ \ \ \ \ \ \ \textcolor{keywordtype}{id}[35];}
+\DoxyCodeLine{00048\ \ \ \ \ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keyword}{typedef}\ std::map<HTREEITEM,\ sTreeItemProperties>\ \mbox{\hyperlink{class_c_tree_ctrl_ex_aa4deed78eb52361fd99760b31a23ceba}{tTreeItemProperties}};}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_c_tree_ctrl_ex_aa4deed78eb52361fd99760b31a23ceba}{tTreeItemProperties}}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_aa7928e0d49011ba9f3e02c07683bf64b}{m\_mapTreeItemProperties}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ void\ (*\mbox{\hyperlink{class_c_tree_ctrl_ex_a16b24a5de8858cfda9bfaf25580bce40}{\_OnSelItemChangeFnc}})(CWnd\ *pCtrl,\ HTREEITEM\ oldItem,\ HTREEITEM\ newItem);}
+\DoxyCodeLine{00054\ \ \ \ \ void\ (*\mbox{\hyperlink{class_c_tree_ctrl_ex_ac5be7494e6ff203b59919ef72530259a}{\_OnDblClickFnc}})(CWnd\ *pCtrl,\ HTREEITEM\ hItem);}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00057\ \ \ \textcolor{comment}{//\{\{AFX\_MSG(CTreeCtrlEx)}}
+\DoxyCodeLine{00058\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_ad1d474d5691b34b60ffa2866eff80a0a}{OnPaint}}();}
+\DoxyCodeLine{00059\ \ \ \ \ afx\_msg\ LRESULT\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a2866eb768cf1729fcafb0c518b706b71}{OnSetItemColor}}(WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00060\ \ \textcolor{comment}{//\}\}AFX\_MSG}}
+\DoxyCodeLine{00061\ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00062\ public:}
+\DoxyCodeLine{00063\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_adfe7c42ee804614133b6032edabefa54}{OnCreate}}(LPCREATESTRUCT\ lpCreateStruct);}
+\DoxyCodeLine{00064\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_ab743b628a7e05c489ba9a6970118403e}{OnTvnSelchanged}}(NMHDR\ *pNMHDR,\ LRESULT\ *pResult);}
+\DoxyCodeLine{00065\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a35de5f8ef932b53c94082387f5a687a1}{OnNMDblclk}}(NMHDR\ *pNMHDR,\ LRESULT\ *pResult);}
+\DoxyCodeLine{00066\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a30e673deec49f962a68d09cbc3bb4f10}{OnContextMenu}}(CWnd*\ \textcolor{comment}{/*pWnd*/},\ CPoint\ \textcolor{comment}{/*point*/});}
+\DoxyCodeLine{00067\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_tree_ctrl_ex_a00f2734896e2c0ffb8a7846c832ffdd1}{OnRButtonDown}}(UINT\ nFlags,\ CPoint\ point);}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

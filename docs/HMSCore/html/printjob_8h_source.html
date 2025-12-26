@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/printjob.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('printjob_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">printjob.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="printjob_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (C) 2017, David PHAM-VAN &lt;dev.nfet.net@gmail.com&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * You may obtain a copy of the License at</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * See the License for the specific language governing permissions and</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * limitations under the License.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef PRINTING_PLUGIN_PRINT_JOB_H_</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define PRINTING_PLUGIN_PRINT_JOB_H_</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="printjob_8h.html#aba7bc1797add20fe3efdf37ced1182c5">   27</a></span><span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_typedef" href="printjob_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_printer.html">   31</a></span><span class="keyword">struct </span><a class="code hl_function" href="struct_printer.html#a6d6f75fd42b79eda7011610e20a8e7bb">Printer</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_printer.html#a6f6750de13ae64cc047270e07133c2d8">   32</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="struct_printer.html#a6f6750de13ae64cc047270e07133c2d8">name</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_printer.html#ad6254c06c7485fa8d703c5673918f9ed">   33</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="struct_printer.html#ad6254c06c7485fa8d703c5673918f9ed">url</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_printer.html#a8528fa72762e5681c423ad581a12a293">   34</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="struct_printer.html#a8528fa72762e5681c423ad581a12a293">model</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_printer.html#aa647a6c89672288465547a81e90f257e">   35</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="struct_printer.html#aa647a6c89672288465547a81e90f257e">location</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_printer.html#acab6db8548a24cb9ba128e99f16a98e7">   36</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="struct_printer.html#acab6db8548a24cb9ba128e99f16a98e7">comment</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_printer.html#a62beab82f3b5e19860a96784464944e7">   37</a></span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_printer.html#a62beab82f3b5e19860a96784464944e7">defaults</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_printer.html#a1ebb9d0d8eaecccbc094956efe083ad4">   38</a></span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_printer.html#a1ebb9d0d8eaecccbc094956efe083ad4">available</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_printer.html#a6d6f75fd42b79eda7011610e20a8e7bb">   40</a></span>  <a class="code hl_function" href="struct_printer.html#a6d6f75fd42b79eda7011610e20a8e7bb">Printer</a>(std::string <a class="code hl_variable" href="struct_printer.html#a6f6750de13ae64cc047270e07133c2d8">name</a>,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>          std::string <a class="code hl_variable" href="struct_printer.html#ad6254c06c7485fa8d703c5673918f9ed">url</a>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>          std::string <a class="code hl_variable" href="struct_printer.html#a8528fa72762e5681c423ad581a12a293">model</a>,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>          std::string <a class="code hl_variable" href="struct_printer.html#aa647a6c89672288465547a81e90f257e">location</a>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>          std::string <a class="code hl_variable" href="struct_printer.html#acab6db8548a24cb9ba128e99f16a98e7">comment</a>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>          <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_printer.html#a62beab82f3b5e19860a96784464944e7">defaults</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>          <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_printer.html#a1ebb9d0d8eaecccbc094956efe083ad4">available</a>)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      : <a class="code hl_variable" href="struct_printer.html#a6f6750de13ae64cc047270e07133c2d8">name</a>(<a class="code hl_variable" href="struct_printer.html#a6f6750de13ae64cc047270e07133c2d8">name</a>),</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_variable" href="struct_printer.html#ad6254c06c7485fa8d703c5673918f9ed">url</a>(<a class="code hl_variable" href="struct_printer.html#ad6254c06c7485fa8d703c5673918f9ed">url</a>),</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="struct_printer.html#a8528fa72762e5681c423ad581a12a293">model</a>(<a class="code hl_variable" href="struct_printer.html#a8528fa72762e5681c423ad581a12a293">model</a>),</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="struct_printer.html#aa647a6c89672288465547a81e90f257e">location</a>(<a class="code hl_variable" href="struct_printer.html#aa647a6c89672288465547a81e90f257e">location</a>),</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="struct_printer.html#acab6db8548a24cb9ba128e99f16a98e7">comment</a>(<a class="code hl_variable" href="struct_printer.html#acab6db8548a24cb9ba128e99f16a98e7">comment</a>),</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_variable" href="struct_printer.html#a62beab82f3b5e19860a96784464944e7">defaults</a>(<a class="code hl_variable" href="struct_printer.html#a62beab82f3b5e19860a96784464944e7">defaults</a>),</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="struct_printer.html#a1ebb9d0d8eaecccbc094956efe083ad4">available</a>(<a class="code hl_variable" href="struct_printer.html#a1ebb9d0d8eaecccbc094956efe083ad4">available</a>) {}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_print_job.html">   56</a></span><span class="keyword">class </span><a class="code hl_function" href="class_print_job.html#a4297d46368ff50d61f65e236ba68587d">PrintJob</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_print_job.html#a64e910c0bacf95083c2af3ab55c7810c">   59</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="class_print_job.html#a64e910c0bacf95083c2af3ab55c7810c">index</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_print_job.html#a6a51d4906a6cc35b9408c47b41782e2e">   60</a></span>  HGLOBAL <a class="code hl_variable" href="class_print_job.html#a6a51d4906a6cc35b9408c47b41782e2e">hDevMode</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_print_job.html#a2733fc640e3b5e5c367cf02b59447343">   61</a></span>  HGLOBAL <a class="code hl_variable" href="class_print_job.html#a2733fc640e3b5e5c367cf02b59447343">hDevNames</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_print_job.html#acfd0bca919264c426c8a0f3311b5fa6f">   62</a></span>  HDC <a class="code hl_variable" href="class_print_job.html#acfd0bca919264c426c8a0f3311b5fa6f">hDC</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_print_job.html#a10b0198e7e4ad4a10e0a0f44a55dc222">   63</a></span>  std::string <a class="code hl_variable" href="class_print_job.html#a10b0198e7e4ad4a10e0a0f44a55dc222">documentName</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_print_job.html#a4297d46368ff50d61f65e236ba68587d">   66</a></span>  <a class="code hl_function" href="class_print_job.html#a4297d46368ff50d61f65e236ba68587d">PrintJob</a>( <span class="keywordtype">int</span> <a class="code hl_variable" href="class_print_job.html#a64e910c0bacf95083c2af3ab55c7810c">index</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_print_job.html#a94ee2c624a3b994bb2305ccdccb2b7dc">   68</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="class_print_job.html#a94ee2c624a3b994bb2305ccdccb2b7dc">id</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_print_job.html#a64e910c0bacf95083c2af3ab55c7810c">index</a>; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_print_job.html#acdec9cd4a623e70775786f2401a3c243">   70</a></span>  std::vector&lt;Printer&gt; <a class="code hl_function" href="class_print_job.html#acdec9cd4a623e70775786f2401a3c243">listPrinters</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_print_job.html#a89f22099331460eb829ea492e0a7434d">   72</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_print_job.html#a89f22099331460eb829ea492e0a7434d">printPdf</a>(std::wstring name,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                std::wstring printer,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordtype">double</span> width,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordtype">double</span> height,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                LPBYTE data, </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordtype">int</span> size</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                );</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_print_job.html#a72de6f69d4957abf149ed2b2d1f17474">   80</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_print_job.html#a72de6f69d4957abf149ed2b2d1f17474">writeJob</a>(LPBYTE data, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_print_job.html#a78bf65521596029212e7ebf4833f1d4c">   82</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_print_job.html#a78bf65521596029212e7ebf4833f1d4c">cancelJob</a>(std::string error);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_print_job.html#a83aa2c2b8ff7b5c3e37b4896f70bf227">   84</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_print_job.html#a83aa2c2b8ff7b5c3e37b4896f70bf227">sharePdf</a>(std::vector&lt;uint8_t&gt; data, std::string name);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_print_job.html#afbe0b7007c6b01db3031c8bdec777961">   86</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_print_job.html#afbe0b7007c6b01db3031c8bdec777961">pickPrinter</a>(<span class="keywordtype">void</span>* result);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_print_job.html#a325955f80c02b35f7471971650af8ebb">   88</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_print_job.html#a325955f80c02b35f7471971650af8ebb">rasterPdf</a>(std::vector&lt;uint8_t&gt; data,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                 std::vector&lt;int&gt; pages,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                 <span class="keywordtype">double</span> scale);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_print_job.html#ab4c6722deca699722dd43c7b1db349ed">   92</a></span>  std::map&lt;std::string, bool&gt; <a class="code hl_function" href="class_print_job.html#ab4c6722deca699722dd43c7b1db349ed">printingInfo</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif  </span><span class="comment">// PRINTING_PLUGIN_PRINT_JOB_H_</span></div>
+<div class="ttc" id="aclass_print_job_html_a10b0198e7e4ad4a10e0a0f44a55dc222"><div class="ttname"><a href="class_print_job.html#a10b0198e7e4ad4a10e0a0f44a55dc222">PrintJob::documentName</a></div><div class="ttdeci">std::string documentName</div><div class="ttdef"><b>Definition</b> printjob.h:63</div></div>
+<div class="ttc" id="aclass_print_job_html_a2733fc640e3b5e5c367cf02b59447343"><div class="ttname"><a href="class_print_job.html#a2733fc640e3b5e5c367cf02b59447343">PrintJob::hDevNames</a></div><div class="ttdeci">HGLOBAL hDevNames</div><div class="ttdef"><b>Definition</b> printjob.h:61</div></div>
+<div class="ttc" id="aclass_print_job_html_a325955f80c02b35f7471971650af8ebb"><div class="ttname"><a href="class_print_job.html#a325955f80c02b35f7471971650af8ebb">PrintJob::rasterPdf</a></div><div class="ttdeci">void rasterPdf(std::vector&lt; uint8_t &gt; data, std::vector&lt; int &gt; pages, double scale)</div></div>
+<div class="ttc" id="aclass_print_job_html_a4297d46368ff50d61f65e236ba68587d"><div class="ttname"><a href="class_print_job.html#a4297d46368ff50d61f65e236ba68587d">PrintJob::PrintJob</a></div><div class="ttdeci">PrintJob(int index)</div></div>
+<div class="ttc" id="aclass_print_job_html_a64e910c0bacf95083c2af3ab55c7810c"><div class="ttname"><a href="class_print_job.html#a64e910c0bacf95083c2af3ab55c7810c">PrintJob::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> printjob.h:59</div></div>
+<div class="ttc" id="aclass_print_job_html_a6a51d4906a6cc35b9408c47b41782e2e"><div class="ttname"><a href="class_print_job.html#a6a51d4906a6cc35b9408c47b41782e2e">PrintJob::hDevMode</a></div><div class="ttdeci">HGLOBAL hDevMode</div><div class="ttdef"><b>Definition</b> printjob.h:60</div></div>
+<div class="ttc" id="aclass_print_job_html_a72de6f69d4957abf149ed2b2d1f17474"><div class="ttname"><a href="class_print_job.html#a72de6f69d4957abf149ed2b2d1f17474">PrintJob::writeJob</a></div><div class="ttdeci">void writeJob(LPBYTE data, int size)</div></div>
+<div class="ttc" id="aclass_print_job_html_a78bf65521596029212e7ebf4833f1d4c"><div class="ttname"><a href="class_print_job.html#a78bf65521596029212e7ebf4833f1d4c">PrintJob::cancelJob</a></div><div class="ttdeci">void cancelJob(std::string error)</div></div>
+<div class="ttc" id="aclass_print_job_html_a83aa2c2b8ff7b5c3e37b4896f70bf227"><div class="ttname"><a href="class_print_job.html#a83aa2c2b8ff7b5c3e37b4896f70bf227">PrintJob::sharePdf</a></div><div class="ttdeci">bool sharePdf(std::vector&lt; uint8_t &gt; data, std::string name)</div></div>
+<div class="ttc" id="aclass_print_job_html_a89f22099331460eb829ea492e0a7434d"><div class="ttname"><a href="class_print_job.html#a89f22099331460eb829ea492e0a7434d">PrintJob::printPdf</a></div><div class="ttdeci">bool printPdf(std::wstring name, std::wstring printer, double width, double height, LPBYTE data, int size)</div></div>
+<div class="ttc" id="aclass_print_job_html_a94ee2c624a3b994bb2305ccdccb2b7dc"><div class="ttname"><a href="class_print_job.html#a94ee2c624a3b994bb2305ccdccb2b7dc">PrintJob::id</a></div><div class="ttdeci">int id()</div><div class="ttdef"><b>Definition</b> printjob.h:68</div></div>
+<div class="ttc" id="aclass_print_job_html_ab4c6722deca699722dd43c7b1db349ed"><div class="ttname"><a href="class_print_job.html#ab4c6722deca699722dd43c7b1db349ed">PrintJob::printingInfo</a></div><div class="ttdeci">std::map&lt; std::string, bool &gt; printingInfo()</div></div>
+<div class="ttc" id="aclass_print_job_html_acdec9cd4a623e70775786f2401a3c243"><div class="ttname"><a href="class_print_job.html#acdec9cd4a623e70775786f2401a3c243">PrintJob::listPrinters</a></div><div class="ttdeci">std::vector&lt; Printer &gt; listPrinters()</div></div>
+<div class="ttc" id="aclass_print_job_html_acfd0bca919264c426c8a0f3311b5fa6f"><div class="ttname"><a href="class_print_job.html#acfd0bca919264c426c8a0f3311b5fa6f">PrintJob::hDC</a></div><div class="ttdeci">HDC hDC</div><div class="ttdef"><b>Definition</b> printjob.h:62</div></div>
+<div class="ttc" id="aclass_print_job_html_afbe0b7007c6b01db3031c8bdec777961"><div class="ttname"><a href="class_print_job.html#afbe0b7007c6b01db3031c8bdec777961">PrintJob::pickPrinter</a></div><div class="ttdeci">void pickPrinter(void *result)</div></div>
+<div class="ttc" id="aprintjob_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="printjob_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> printjob.h:27</div></div>
+<div class="ttc" id="astruct_printer_html_a1ebb9d0d8eaecccbc094956efe083ad4"><div class="ttname"><a href="struct_printer.html#a1ebb9d0d8eaecccbc094956efe083ad4">Printer::available</a></div><div class="ttdeci">const bool available</div><div class="ttdef"><b>Definition</b> printjob.h:38</div></div>
+<div class="ttc" id="astruct_printer_html_a62beab82f3b5e19860a96784464944e7"><div class="ttname"><a href="struct_printer.html#a62beab82f3b5e19860a96784464944e7">Printer::defaults</a></div><div class="ttdeci">const bool defaults</div><div class="ttdef"><b>Definition</b> printjob.h:37</div></div>
+<div class="ttc" id="astruct_printer_html_a6d6f75fd42b79eda7011610e20a8e7bb"><div class="ttname"><a href="struct_printer.html#a6d6f75fd42b79eda7011610e20a8e7bb">Printer::Printer</a></div><div class="ttdeci">Printer(std::string name, std::string url, std::string model, std::string location, std::string comment, bool defaults, bool available)</div><div class="ttdef"><b>Definition</b> printjob.h:40</div></div>
+<div class="ttc" id="astruct_printer_html_a6f6750de13ae64cc047270e07133c2d8"><div class="ttname"><a href="struct_printer.html#a6f6750de13ae64cc047270e07133c2d8">Printer::name</a></div><div class="ttdeci">const std::string name</div><div class="ttdef"><b>Definition</b> printjob.h:32</div></div>
+<div class="ttc" id="astruct_printer_html_a8528fa72762e5681c423ad581a12a293"><div class="ttname"><a href="struct_printer.html#a8528fa72762e5681c423ad581a12a293">Printer::model</a></div><div class="ttdeci">const std::string model</div><div class="ttdef"><b>Definition</b> printjob.h:34</div></div>
+<div class="ttc" id="astruct_printer_html_aa647a6c89672288465547a81e90f257e"><div class="ttname"><a href="struct_printer.html#aa647a6c89672288465547a81e90f257e">Printer::location</a></div><div class="ttdeci">const std::string location</div><div class="ttdef"><b>Definition</b> printjob.h:35</div></div>
+<div class="ttc" id="astruct_printer_html_acab6db8548a24cb9ba128e99f16a98e7"><div class="ttname"><a href="struct_printer.html#acab6db8548a24cb9ba128e99f16a98e7">Printer::comment</a></div><div class="ttdeci">const std::string comment</div><div class="ttdef"><b>Definition</b> printjob.h:36</div></div>
+<div class="ttc" id="astruct_printer_html_ad6254c06c7485fa8d703c5673918f9ed"><div class="ttname"><a href="struct_printer.html#ad6254c06c7485fa8d703c5673918f9ed">Printer::url</a></div><div class="ttdeci">const std::string url</div><div class="ttdef"><b>Definition</b> printjob.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="printjob_8h.html">printjob.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

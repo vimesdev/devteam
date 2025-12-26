@@ -1,0 +1,165 @@
+\doxysection{IVFReport\+Condition\+Dialog.\+h}
+\hypertarget{_i_v_f_report_condition_dialog_8h_source}{}\label{_i_v_f_report_condition_dialog_8h_source}\index{Include/HMSReportForms/IVF/IVFReportConditionDialog.h@{Include/HMSReportForms/IVF/IVFReportConditionDialog.h}}
+\mbox{\hyperlink{_i_v_f_report_condition_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ IVFREPORTCONDITIONDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ IVFREPORTCONDITIONDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ \ \ \ \ IMPORT\_EXPORT\ \ \ \ \ \ \ \ \ \ \ 1}\textcolor{comment}{//General\ Import\ \ Export\ \ Report}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ \ \ \ \ IMPORT\_EXPORT\_INSTOCK\ \ \ 2}\textcolor{comment}{//General\ Import\ Export\ Instock\ Report}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ \ \ \ \ IMPORT\_EXPORT\_INSTOCK\_DETAILFORMONEY\ \ \ \ 3}\textcolor{comment}{//General\ Import\ Export\ Instock\ For\ Money\ Report}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ \ \ \ \ DRUG\_USER\ \ \ 4}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ \ \ \ \ INSTOCK\ 5\ }\textcolor{comment}{//Bien\ ban\ Kiem\ ke\ kho}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ \ \ \ \ IMPORT\_EXPORT\_INSTOCK\_DETAIL\_PROFESSIONAL\ 6\ }\textcolor{comment}{//Tong\ hap\ nhap\ xuat\ ton\ kho\ chi\ tiet\ theo\ nghiep\ vu}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ \ \ \ \ THUOC\_HET\_HAN\ 7\ }\textcolor{comment}{//Danh\ sach\ thuoc\ het\ han}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ \ \ \ \ SU\_DUNG\_THUOC\_THEO\_QUY\ 8\ }\textcolor{comment}{//Tinh\ hinh\ su\ dung\ thuoc\ theo\ quy}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a1ce535857918117eb0777de657e99c66}{CIVFReportConditionDialog}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a22a03231fd66910d7263558917656b5a}{m\_szStockName}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a6fb3bf295dc26154adf1cad2a51badfd}{m\_nType}};}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a1c501802c9e88c983160705cde9ed180}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a57f623a075ab0c205d3794a4674239b4}{m\_wndFromDate}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_afb20c6fa09772d32ad11a80ae2736dc2}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_af33ccb94cdc4875a29271cda05a79e27}{m\_wndToDate}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a52b0728dc2b3489a962b6e3b29733e52}{m\_wndReportCondition}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a7c811771d1cb8a961903b37da986f120}{m\_wndStockLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a0ea24f9742975abf022a80ccb6f99918}{m\_wndStock}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a09988e89b5a99dbb584ce258db5d2b68}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_aee0d4ada501c1ab2893d7e530345012e}{m\_wndType}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a83e235471cee3d9681294bcb714b2282}{m\_wndSupplierLabel}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_afabdae6b6e8da974c309c1d478a777bb}{m\_wndSupplier}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a7719a8a1681651d3a13734d64cd44218}{m\_wndGroupLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a3d943b6a2550e1d0e0eb669e66e8b8e2}{m\_wndGroup}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_aa582e75a5c2794751231a46a013fc3cb}{m\_wndSourceLabel}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ab63171e1637571ddec19b4517c5ff84e}{m\_wndSource}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a77416ce8216a0a671f7c124b6edfbb7c}{m\_wndPrintPreviewIns}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a0ad2c234b760f290b6d932788c43280d}{m\_wndPrintPreview}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a6cd5f7b354fee1cb700af6c7c71abfbb}{m\_wndPrint}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_abe0e86aa2fc34db65592b68fe14297cf}{m\_wndPrint1}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a6f182d6cdc5baf1f732069bd51ef4995}{m\_wndExportIns}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a4fbe9048dc8e55b3a5ec1472fa3961c8}{m\_wndExport}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a68cbe8a505fec9b98fef7c6c2d49294d}{m\_wndClose}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a11da3242af74e1cb4b5fd27e778b3310}{m\_wndCheck}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a9fe70348a80f39e96db745647673b818}{m\_wndCat}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a40d20dc18c8649034b52e9f2032ed24b}{m\_wndServPrice}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ae74d0aca36ef30ce784e05467169e912}{m\_wndAvgPrice}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a4debd0c6de702d945f12c6096be1f3d5}{m\_wndSortByType}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_adb3240543ff976494a57228ac102de78}{m\_wndBillPrice}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a84ad4952221b1d680292077c6af900ac}{m\_szFromDate}};}
+\DoxyCodeLine{00077\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a2c33d6ceb604fc8800c2ae92e1db6672}{m\_szToDate}};}
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a018d54b7e7c1c63713254f84033ccdc7}{m\_szStockKey}};}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a030fc7dafb53e85e815729c47053df0e}{m\_szTypeKey}};}
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a131c7e55ffd8eac32e60db1fe3fb0a1d}{m\_szSupplierKey}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ad0347fac2464de0cc3d1779ea9a105a9}{m\_szGroupKey}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a6cb8397d3cccfe11104824fe13c1563d}{m\_szSourceKey}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a973ade81819707bc86448f7e416b5ba2}{m\_bCheck}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ac259f9a1c4856f3fc7838179060e3f4c}{m\_bServPrice}};}
+\DoxyCodeLine{00085\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_afe65b48970fade478cf88b86d5bf57c8}{m\_bBillPrice}};}
+\DoxyCodeLine{00086\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a18271d3d213efcaaec9956372e4b96e3}{m\_bAvgPrice}};}
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a8953fb9339dd524a42817bcfd6e26483}{m\_szSort}};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_aa5342b24d0eabd802502f1f1bdad7dca}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a82d34895aaac50d477df353b1e532ca5}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ae773ad06ec8029ec7f656eec5f63f544}{OnStockSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ab6aa0b8ac34a4df1f38bcccd95125cbc}{OnStockSelendok}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStockSetfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStockKillfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_afc2b7508de5c00429dc5c5fd397ebcdc}{OnStockLoadData}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a528eb9cb54e44493f41fb621a25b9b17}{OnStockAddNew}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_acb379097895bcae9d4331e133b01025d}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a014fb489caa9f5f96eaa033240f1cc01}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a7a1152df52e1ce3c7cfdfc3ad6499bcd}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a9991f74e44d99691e074225cab9d2663}{OnTypeAddNew}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a99ad18be57c85939b028ee1cb8809de2}{OnSupplierLoadData}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a800120038539fbff6a53aae07f83014c}{OnGroupSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a84567e32d7c7c1a6ef1a2f40db408c2b}{OnGroupSelendok}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupSetfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupKillfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a5102dc936346bf57a001da41f79848f3}{OnGroupLoadData}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a81a0c02937c95d565013172298d4c360}{OnGroupAddNew}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a11e5c89ddb9e82092cd90f9daf373186}{OnSourceSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a6bedc20513a98348217cd9c553b59a24}{OnSourceSelendok}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSourceSetfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSourceKillfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a0c97392efe4b9d7859428399e5ea0dfd}{OnSourceLoadData}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a700a276c16431600bd708fa730c20943}{OnSourceAddNew}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_afeb361b1a713c1b79811520e17ba42b7}{OnSortByTypeSelect}}();}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a7410bcb7ab7d374285c898a41ea96aed}{OnCatSelect}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a81b0c9b9e6f123fa003e817be9ef2fc9}{OnPrintPreviewInsSelect}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a0cb6b0f1b53c7fb956810ed6f2945554}{OnPrint1Select}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_abd104456142abe33d70e844fbf8bdb5f}{OnPrintPreviewSelect}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a718f5e53a63783500ce993a2af16f0d2}{OnPrintSelect}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a390fb977c0b200446efa45b416e547d8}{OnExportInsSelect}}();}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a9a9aeeda01aa63bd854152145f857a97}{OnExportSelect}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a73c9abff4316a94fb9458fa63b5f1aad}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a1ce535857918117eb0777de657e99c66}{CIVFReportConditionDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nType);}
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a7d92f443ad37f6b7c9832cce8629d96f}{\string~CIVFReportConditionDialog}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_abe84df5a702e2584be0f8802754e102a}{OnCreateComponents}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a25683bb4f5147c24ec87facf113e157e}{OnInitializeComponents}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a1866895b5d77205f29e07868bcb24c81}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a2cd4ed1a8d3c9a5189a9d37cef115fcd}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ae696cce27e14e07a0a1ab9f46e6a40f3}{GetDataToScreen}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ac32ceb7e961939d1ae9a8c2a3ee18aac}{GetScreenToData}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_af25f86c581a8c366e9197a1a7f5ca986}{SetDefaultValues}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a6be60258653161479b4797c58ad0224e}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a0f99338c38932370d3a58d08e7da0089}{OnAddPMSReportConditionDialog}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_aed2eb705e5fe2e2464016fe54c3bad62}{OnEditPMSReportConditionDialog}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a8347866d5be89215a243a078842b8662}{OnDeletePMSReportConditionDialog}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ae06b667ae7f76397146a588236a4fe04}{OnSavePMSReportConditionDialog}}();\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_af80ed16e3f6b69774fb6cefae33caeef}{OnCancelPMSReportConditionDialog}}();\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a9142baac6cf346041c97cab61efffc6f}{OnPMSReportConditionDialogListLoadData}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a8e23cf531fd370f855b8b044b0cc411d}{OnPrintImportExportReport}}(\textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_acc24716ff178a511bf68ff5a692951e7}{OnPrintImportExportAndInstockReport}}(\textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ac3fedaeebbb2a98935e1b5752ca05864}{OnExcell\_ImportExportReport}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ad5aad241a41c130010571c3796d5628e}{OnExcell\_ImportExportAndInstockReport}}();\ \textcolor{comment}{//Ham\ Export\ To\ Excell}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a8ea3476c477fe8f8d3b221ce6564a1f3}{OnPrintInstockReport}}(\textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a095a02ce4f96c0388fa33fd6460838ec}{OnExportInstockReport}}(\textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a100624f102780120d8dd85d2b41f6849}{OnPrint\_Danhsachthuochethan}}(\textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ OnPrint1\_Cuahang(bool\ bPreview);}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a1fb1b0739079f6a09901bef445bb80fc}{OnExport\_Danhsachthuochethan}}(\textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ae9a5696fbd93aadadb667fc52177fe85}{OnPrintImportExportAndInstockForDetailMoneyReport}}(\textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_ae2d35bf8dac8ebf388b8a8a469a70ac4}{OnExcell\_ImportExportAndInstockForDetailMoneyReport}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a51e55cbf8573fa1cd35e62c45c0c4150}{OnPrintTonghopnhapxuattonchitiettheonghiepvu}}(\textcolor{keywordtype}{bool}\ bPreview);\ \textcolor{comment}{//Bao\ cao\ tong\ hop\ nhap\ xuat\ ton\ chi\ tiet\ theo\ nghiep\ vu}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a4df3ec25434e07c63cb00acf582acdce}{OnExcell\_Baocaotonghopnhapxuattonchitiettheonghiepvu}}();\ \textcolor{comment}{//Xuat\ ra\ Excell\ Bao\ cao\ tong\ hop\ nhap\ xuat\ ton\ chi\ tiet\ theo\ nghiep\ vu}}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_i_v_f_report_condition_dialog_a90bd7384ad79fc96278c694789ec1eb0}{OnPrintBaocaosudungthuoctheoquy}}(\textcolor{keywordtype}{bool}\ bPreview);\ }
+\DoxyCodeLine{00160\ \ \ \ \ }
+\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

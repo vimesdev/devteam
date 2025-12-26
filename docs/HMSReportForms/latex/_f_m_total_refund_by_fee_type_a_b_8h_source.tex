@@ -1,0 +1,202 @@
+\doxysection{FMTotal\+Refund\+By\+Fee\+Type\+AB.\+h}
+\hypertarget{_f_m_total_refund_by_fee_type_a_b_8h_source}{}\label{_f_m_total_refund_by_fee_type_a_b_8h_source}\index{Include/HMSReportForms/HospitalFee/FMTotalRefundByFeeTypeAB.h@{Include/HMSReportForms/HospitalFee/FMTotalRefundByFeeTypeAB.h}}
+\mbox{\hyperlink{_f_m_total_refund_by_fee_type_a_b_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMTotalRefundByFeeTypeAB\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMTotalRefundByFeeTypeAB\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a9258141f606a0643cee0531a70dec8ef}{CFMTotalRefundByFeeTypeAB}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a51ce389449cecf72d39b80e0dd3263d2}{m\_mIndex}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ac03e2b7866b5ce0ef5e848217eb733c5}{m\_nTotal}}[18],\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a9ae357a53d5a0c5ab9e1e569d6c0674d}{m\_nDaySum}}[18],\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_adc63fae5fa138c9b1630c614dbdbdc3d}{m\_nDeptSum}}[18];}
+\DoxyCodeLine{00038\ \ \ \ \ CStringArray\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a45d8b292f6c1eb56790b9d5dda5b85ad}{m\_arr\_data\_name}};}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_adddec361dceb09e41ce6b668acd03b7f}{m\_szPrevDate}},\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa477f7d1652d956ff2d6d73e08d1d624}{m\_szPrevDept}};}
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a7763ebd25a9070dd968a0640ec56a7f5}{m\_szCashIDS}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a74466c7782e4ed05bfc37b54a591d66c}{m\_wndReportCondition}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a90739a227ed82484fb4577cfa7e39c36}{m\_wndYearLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ae01990790a7820299c71b4d6fe7fe599}{m\_wndYear}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a623851ea8bb6be3149fed190f5ade7aa}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a7849b05eaa8365a37010cc1d4ebe074d}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ab75d711b1e0840c3ac7ed1036028f6d1}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa49e82d1149a03050eef9996f05b0375}{m\_wndFromDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ad273b40e169ccfcba99f2f53f801d323}{m\_wndToDate}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a4401ebe7a6a1663f2726cfe927830a95}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a9b13b9dcb14d2f3bd84dfeed709a8aaa}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a83f6e70a47abc7caec6a580a6ea04bfd}{m\_wndDoctorLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a63c49c7d362bec5323478c174a562474}{m\_wndDoctor}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a22f3faaa203549a1774cd546b7d955b9}{m\_wndRoomLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a38544838f5653c55118fad9262766a82}{m\_wndRoom}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aece6b6c8e1af74deb6d7f726d4dfd2e5}{m\_wndClerk}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_afb29aed2e3a60df4397e5665d082f298}{m\_wndOrderByLabel}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a95fb691b78294b20ba7c4fdc00221f2a}{m\_wndOrderBy}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa0df755f7535362e69f0ce781b1d44d5}{m\_wndDeptLabel}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a88964fa9ca11558be26487c9426b867a}{m\_wndDept}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aaf4e264f8e6804ab56b7c6137a5ba1a4}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8e3548211a8062e603e897cb4159c728}{m\_wndStatus}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a0bc06b573a6925c47b37c3675c27e3f3}{m\_wndList}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ab34599e26ea79795bbe9fc2803efe0d9}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aba1da9763283d7622fd00354c958814f}{m\_wndMarkAll}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aafca7314f4e02c90ff44eddda82e9e5d}{m\_wndUnMark}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a0958f6cb14a879eec8ebe23579c62f83}{m\_wndPrint}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ad16bac5a4dc168ad6dd71a1392a1f469}{m\_wndExport}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ace2e78a43dc0712511ebc3e608e1a9df}{m\_wndInpatient}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a408f173aeadc08d7fb4de5225c085712}{m\_wndOutpatient}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aeb8df2abb6f548996a4fbdb7972aada3}{m\_wndDeposit}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aae3cdb05fe3acc7c1d09ffd4bee4f69f}{m\_wndAll}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a78b41c573dff6743547634822ab91e02}{m\_wndSOD}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a27d91baa39629223631999e2ed3fb9d8}{m\_wndSoldier}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a98c61a5bce0052a741d321dbbe8411ff}{m\_wndLoadAll}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_acd9596eb0392b65af09b01228895dd0d}{m\_wndLoadCLCzone}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ad173fdc7f3d880ba637f95de15dac045}{m\_nYear}};}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aea5fb6c3ea7dadee12aea6ea2409af2a}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a84726cb45ecb360bee2887f88fe18315}{m\_szFromDate}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a6612b815c53d91d4b74c338442f9ec4f}{m\_szToDate}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aad7ffccbfdfa15b31abb817d1aa3773f}{m\_szClerkKey}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa48f4daa673e14202db645c729975f80}{m\_szDoctorKey}};}
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a0f53a14972797cb44ee5ad5091f4212a}{m\_szOrderByKey}};}
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_afdc752099ca7d5fe93bf9ea3b122b4cb}{m\_szStatusKey}};}
+\DoxyCodeLine{00086\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a25f6fef8e8612ad882beecf460068cba}{m\_szDeptKey}};}
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a88c433b7f5dac5744779f4d732ed265c}{m\_szRoomKey}};}
+\DoxyCodeLine{00088\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ab20eb30f366c71a5477ee424fda885fe}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a473d743fda3205a5bd052d455d687e66}{m\_nPatientType}};}
+\DoxyCodeLine{00090\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa5d43533af18ebde9e861d67386cd24d}{m\_bSOD}};}
+\DoxyCodeLine{00091\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa64ab090bf0d522b9a1d51cd0c01e615}{m\_bSoldier}};}
+\DoxyCodeLine{00092\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8de19c886e1fe831b48615c1ab485f24}{m\_bLoadAll}};}
+\DoxyCodeLine{00093\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a534764fc2638c560790b87fccf3b447d}{m\_bLoadCLCzone}};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a04d674c12d4a6229c6641a805ed4de86}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa39b985961597610a9a2fe427a8d1d9d}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_acdcfb1cfd21219733317f0e676ec3390}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_af13f97eceb1bddb8c3944342823f714f}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ae7227e0ea1f8cc4a225586e364941efa}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ad6886e404e86f0a8128f24987a545088}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ac245b75c91f513001566530fca02456b}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a5495795ac4e8476c3a2169b244343678}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a3d79a0efad9b34f3bdf241c2e422c517}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa742cbdcb1df00e4bbc4bbeae51e24f5}{OnDoctorLoadData}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ad3d4702b925c2ab17b6d2bf4b4ff0e57}{OnRoomLoadData}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aaab096fc4358a2d544dfe56e83553a6a}{OnOrderBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a55a9b3ac11ca85dfb8a15c2094a8b623}{OnOrderBySelendok}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderBySetfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByKillfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a25df25bb4c166eed5fc7dde1c3d602c1}{OnOrderByLoadData}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByAddNew();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_af95508a20a29b98683b01a6269b8025c}{OnDeptLoadData}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a6c11e9146bf980ce6e39449f51072549}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a4939be6687511ceb18cc1808c0bf7243}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ac3021332c7b5941d4ab3e0d7c253635f}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a6fbf3414a5f457838b7d156a00ee2e01}{OnListLoadData}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a34231d14ad4470a913dbd5a0f7c47a97}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a850beeda9ba877d72c4e0fe5c96b26bf}{OnListDblClick}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ae731e592c69d77020ecd18dc2f5ccdb1}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a74ca2b35ef7636c317e02daa1bce8927}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a96ee3a07b51a4ec7cb9cbb71aefc952e}{OnMarkAllSelect}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a182d2b3e12a7658101819ad059e8f3b3}{OnUnMarkSelect}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a42c3b33844f13f4ac92e1d571f9e22c4}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a29de7989805ea20ca4615b3b686dca7d}{OnExportSelect}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a15e8c8b853a35bb18356c68f6b918205}{OnExportDetail}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ace08906941083ceb591fbedb81e42e6b}{OnExportTotal}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_af3be10acc0b8cf796327cc8ec594d85f}{OnExportTotalAll}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ab915c571841f5da934fda76a341125ad}{OnInpatientSelect}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a0aee662624f7173e8fa5b20317dff082}{OnOutpatientSelect}}();\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a59acce568fbd968772fee09eca3915df}{OnDepositSelect}}();\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a285712117cefec3486c58b7be9f691bb}{OnAllSelect}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa445063da224f0cf2d3b4ad615a492f4}{OnSODSelect}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a331952114c86a0f6851d11405f38c6fd}{OnSoldierSelect}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_acc63b7294353587d0f5352b2c35df1e8}{OnPrint1stver}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a2a03fb2a95740ba1c34065321c4bb05a}{OnPrint2ndver}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_af2091cecc3bd14e2de32721bda3453e5}{OnPrint2ndver\_}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a480619a42c55604d91a5658e763e0b41}{OnCheckBeforePrint}}(CReport*\ rpt,\ CRecord\&\ rs);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a500932f647e525ec17f36266d3a742cb}{OnPrintOther}}(CReport*\ rpt);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ IsNewGroup(CReport*\ rpt,\ CRecord*\ rs,\ bool\&\ bNewDate,\ bool\&\ bNewDept,\ CReportSection*\&\ rpDateGroup,\ CReportSection*\&\ rpDeptGroup);}}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8e586849e05a6604ef3bae48ce9463d2}{IsNewGroup}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept,\ CReportSection**\ ppDateGroup,\ CReportSection**\ ppDeptGroup);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a47736d86b87912c9f716a2e0a5ca6689}{IsNewGroup}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept);}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ae99cc0ccf99493e8f7629174e8715dd4}{OnPrintGroupSummary}}(CReport*\ rpt,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept,\ CReportSection*\ pDateGroup,\ CReportSection*\ pDeptGroup);}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ae789ad4babe093585376ce68073abe35}{OnPrintGroupSummary}}(CReport*\ rpt,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept);}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8e40bd7950e1885d96a3e6490f401c79}{OnPrintGroupDescr}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept);}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_af25007768a890df7b41c9fa3594c6b84}{OnPrintGroupDescr}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept,\ CReportSection**\ ppDateGroup,\ CReportSection**\ ppDeptGroup);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a06dbf0802d9e0390609d3d60ac6b906b}{OnPrintDetail}}(CReport*\ rpt,\ CRecord*\ rs);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a9fc7d9dfa6e9537074747eba1b11e7b8}{OnPrintDetail}}(CReport*\ rpt,\ CReportSection*\ pDetail,\ CRecord*\ rs);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a9f93ed506b067c717e6d4d41548ab5ae}{OnCalcData}}(CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept);}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a985de141e4c9db8813c1f9fca72ecdfa}{ResetVar}}();}
+\DoxyCodeLine{00167\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a012cec72edd20ccc9f3f0badfa8acdda}{GetQueryStringDetail}}();}
+\DoxyCodeLine{00168\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a04696fc5a10ec44379dacaa26feb9aa7}{GetQueryStringTotal}}();}
+\DoxyCodeLine{00169\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a9c4557e47ff054643fd580396f8c9386}{GetQueryStringTotalAll}}();}
+\DoxyCodeLine{00170\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a6b7920011c4136da0b330b9cee6d6e39}{GetQueryString2}}();}
+\DoxyCodeLine{00171\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a165d0fed81e860061c6ac9292289ee39}{GetQueryString}}();}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a9258141f606a0643cee0531a70dec8ef}{CFMTotalRefundByFeeTypeAB}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a0fd31fb2cf5ca670bee226f6ea7f261a}{\string~CFMTotalRefundByFeeTypeAB}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a3256d07088d4a66c6ccb28f3607b7ffb}{OnCreateComponents}}();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a5838ed242c8e9f70222ab2bc2380ec0d}{OnInitializeComponents}}();}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8d33302d06a5620f702011211bf04a38}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aef1fc84d40cc62c8ad07fc27ce8dabb5}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8eb906066bc7fb9328ed531836248135}{GetDataToScreen}}();}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a7f53e462d789407765e85db5d2ab6690}{GetScreenToData}}();}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a08d9c68cf3c6f89101ed2bc2790f329f}{SetDefaultValues}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_adb2627070c97059368998914b0e5fcbd}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a56df9cd24a53e777f83797dfb23b95a2}{OnAddFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ad59677a04a21522b69fa6088b330847b}{OnEditFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a464cfe4db1ec65abb6c2e38f165cda7b}{OnDeleteFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a5edf9e478cc10131f338e6804bc1dc25}{OnSaveFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aa3179f7814977e50e7fa924ce681e589}{OnCancelFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ac9ba344719c7bcd71a2f3e5f949e6a05}{OnFMInsuranceReceiptSummaryListLoadData}}();\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a25cdb4b15774739969ff613cd8fcf735}{OnRound}}(\textcolor{keywordtype}{double}\ nToRound);}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a86c1b99109c5613d2c46f48a0d01eab6}{OnListCheckAllTYC}}();}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8d978612ff63a03de5f73b8c564622ed}{OnListCheckAllPTTYC}}();}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_ac25fcdb1053b716bf278d4c082febc46}{OnListCheckAllBHAB}}();}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aee568004d40748e1116b6e134ea9f2ab}{OnListCheckAllDVAB}}();}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a8969faac3b89a3384f3683a3d1e6b672}{OnListCheckAllQUANAB}}();}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a5a582183800b4f4f311987567a1e3c03}{OnListSearchItem}}();}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_aaa92b7dcf37fb91c1a442a5a1696cb67}{OnLoadCLCzoneSelect}}();\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_refund_by_fee_type_a_b_a325506ff65368f58d4eeb57cfc0d9147}{OnLoadAllSelect}}();\ }
+\DoxyCodeLine{00198\ \};}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_job_popup_8h" kind="file" language="C++">
+    <compoundname>AdJobPopup.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiPopup.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includedby refid="_ad_job_8h" local="yes">Include/VIMESCORE_E10/AdJob.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdJobPopup.h</label>
+        <link refid="_ad_job_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="3">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Include/VIMESCORE_E10/AdJob.h</label>
+        <link refid="_ad_job_8h"/>
+      </node>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdJobPopup.h</label>
+        <link refid="_ad_job_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_ad_job_popup" prot="public">CAdJobPopup</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADJOBPOPUP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADJOBPOPUP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiPopup.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_c_ad_job_popup" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_ad_job_popup_1a2c6655e7209dba341ba9ddf688adf868" kindref="member">CAdJobPopup</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiPopup{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_job_popup_1a3963c92c3769698ff39028cc5ceb282a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a3963c92c3769698ff39028cc5ceb282a" kindref="member">m_wndIDLabel</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_job_popup_1ac3ed8741bb85cf4eaf69c3ce8b5f574f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1ac3ed8741bb85cf4eaf69c3ce8b5f574f" kindref="member">m_wndID</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_job_popup_1a1b816867eb4e2ff09eee3ef064baf6e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a1b816867eb4e2ff09eee3ef064baf6e8" kindref="member">m_wndDescriptionLabel</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_job_popup_1a0c0c89bcbf4a0145606a616dff004ccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a0c0c89bcbf4a0145606a616dff004ccd" kindref="member">m_wndDescription</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_c_ad_job_popup_1adf4499c1fc248edf1ad603ee86ede7dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiCheckBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1adf4499c1fc248edf1ad603ee86ede7dd" kindref="member">m_wndActive</ref>;</highlight></codeline>
+<codeline lineno="38" refid="class_c_ad_job_popup_1a556a7d8f212de4afc564f78761069757" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a556a7d8f212de4afc564f78761069757" kindref="member">m_wndSave</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_job_popup_1ae5ea89fafb141b9236c8c1942e0d57ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1ae5ea89fafb141b9236c8c1942e0d57ce" kindref="member">m_wndEntry</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_job_popup_1a7a6127eeab62e70b81d239aff8677d52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_job_popup_1a7a6127eeab62e70b81d239aff8677d52" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_job_popup_1ae7c98154e07c34b1d94dd6eb1abc8dd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_job_popup_1ae7c98154e07c34b1d94dd6eb1abc8dd6" kindref="member">m_szDescription</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_job_popup_1a820a86529f2ecc3f6c1f6443ccd50092" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a820a86529f2ecc3f6c1f6443ccd50092" kindref="member">m_bActive</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_job_popup_1ab0ecec543658c8189219a2cc67ebeb3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1ab0ecec543658c8189219a2cc67ebeb3f" kindref="member">m_nMode</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_job_popup_1af46f075df19a6d4e083a8ea5e5de7baa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDbfMap<sp/><ref refid="class_c_ad_job_popup_1af46f075df19a6d4e083a8ea5e5de7baa" kindref="member">m_ad_job_classTbl</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnIDChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnIDSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnIDKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_c_ad_job_popup_1af8e26dc36003012341de69143949b6e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1af8e26dc36003012341de69143949b6e8" kindref="member">OnIDCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnDescriptionChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnDescriptionSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnDescriptionKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_job_popup_1aff636e7e24a2a98b54b3f033cfa8579e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1aff636e7e24a2a98b54b3f033cfa8579e" kindref="member">OnDescriptionCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_job_popup_1a5db17e648d4a03e2e483525a10a88f67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a5db17e648d4a03e2e483525a10a88f67" kindref="member">OnActiveSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_job_popup_1a6c6c204b6fe6651eaff7e1c63858be40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a6c6c204b6fe6651eaff7e1c63858be40" kindref="member">OnSaveSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_job_popup_1a2c6655e7209dba341ba9ddf688adf868" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a2c6655e7209dba341ba9ddf688adf868" kindref="member">CAdJobPopup</ref>();</highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_job_popup_1a4f136835d7d838c41d5548918089d120" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1a4f136835d7d838c41d5548918089d120" kindref="member">CAdJobPopup</ref>(CWnd<sp/>*pParent);</highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_job_popup_1ad4455dd69ce08c5a8af66892ce8628b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_job_popup_1ad4455dd69ce08c5a8af66892ce8628b2" kindref="member">~CAdJobPopup</ref>();</highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_job_popup_1a7e22d3e3e44f066cd030ac17e027cae7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a7e22d3e3e44f066cd030ac17e027cae7" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_job_popup_1a16b868f04802d2e08893cbfbf619d7f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a16b868f04802d2e08893cbfbf619d7f6" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_job_popup_1a48117c387ac1fbed8da3572ec3fa6561" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a48117c387ac1fbed8da3572ec3fa6561" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_job_popup_1a40c31182920d44986454a5c6f2aaad40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a40c31182920d44986454a5c6f2aaad40" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_job_popup_1a50ef0dce760b92c2ea90c735d497d76d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a50ef0dce760b92c2ea90c735d497d76d" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_job_popup_1a928a5409c94ec7ed82dcd61974271f4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a928a5409c94ec7ed82dcd61974271f4e" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_job_popup_1addb3c0947b4738011926ee37cf138095" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1addb3c0947b4738011926ee37cf138095" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_job_popup_1a21ced0d5372b36e5abf6ff001c939fcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a21ced0d5372b36e5abf6ff001c939fcb" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_job_popup_1ac507488dcebc4da321bd42c65623f977" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1ac507488dcebc4da321bd42c65623f977" kindref="member">OnAddAdJobPopup</ref>();<sp/></highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_job_popup_1a330cc9e956d65002d6d70786cdd9bb34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a330cc9e956d65002d6d70786cdd9bb34" kindref="member">OnEditAdJobPopup</ref>();<sp/></highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_job_popup_1a363f87e1a720cd6fd4f917c425516602" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a363f87e1a720cd6fd4f917c425516602" kindref="member">OnDeleteAdJobPopup</ref>();<sp/></highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_job_popup_1a06236e9ca8a80e70ef5f7031d16b2685" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1a06236e9ca8a80e70ef5f7031d16b2685" kindref="member">OnSaveAdJobPopup</ref>();<sp/></highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_job_popup_1aa17af4941688bfe6bca4eef89b75b661" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1aa17af4941688bfe6bca4eef89b75b661" kindref="member">OnCancelAdJobPopup</ref>();<sp/></highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_job_popup_1afce56bbe5e533df5e982169900951d58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1afce56bbe5e533df5e982169900951d58" kindref="member">OnAdJobPopupListLoadData</ref>();</highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_job_popup_1ab438c9042e69d687b64cc61198d6960e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_job_popup_1ab438c9042e69d687b64cc61198d6960e" kindref="member">ClosePopup</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdJobPopup.h"/>
+  </compounddef>
+</doxygen>

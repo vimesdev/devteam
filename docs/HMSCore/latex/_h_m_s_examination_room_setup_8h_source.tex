@@ -1,0 +1,81 @@
+\doxysection{HMSExamination\+Room\+Setup.\+h}
+\hypertarget{_h_m_s_examination_room_setup_8h_source}{}\label{_h_m_s_examination_room_setup_8h_source}\index{Include/HMSCore/HMSExaminationRoomSetup.h@{Include/HMSCore/HMSExaminationRoomSetup.h}}
+\mbox{\hyperlink{_h_m_s_examination_room_setup_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSEXAMINATIONROOMSETUP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSEXAMINATIONROOMSETUP\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a41cc7a221c159ed5810680b0375d589a}{CHMSExaminationRoomSetup}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a5c0ec41f486aad6868324a36c8a80476}{m\_wndExaminationRoomsList}};}
+\DoxyCodeLine{00010\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a10c2c95dcbb09090e9681f75611d278d}{m\_wndList}};}
+\DoxyCodeLine{00011\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a4fd93ee12b0d632eb534ac4761887af8}{m\_wndDepartmentLabel}};}
+\DoxyCodeLine{00012\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_ab82231520c474ad63d506456d7007740}{m\_wndDepartment}};}
+\DoxyCodeLine{00013\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_ab11f5b079f48aebb427f87328b07657f}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00014\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a10519885ccb092cfad0757105552a3d9}{m\_wndType}};}
+\DoxyCodeLine{00015\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a6938da2eace5134145e392ca00496c08}{m\_wndIDLabel}};}
+\DoxyCodeLine{00016\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a4802959a052d8a034cd653fbc9e9ff9d}{m\_wndID}};}
+\DoxyCodeLine{00017\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a55081516c7fa09e76c620201a2ed7d2a}{m\_wndNameLabel}};}
+\DoxyCodeLine{00018\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a293df431aafd61caa7db50c084a72a8c}{m\_wndName}};}
+\DoxyCodeLine{00019\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_afe42524e45b05b917fbff689a1f7a972}{m\_wndAdd}};}
+\DoxyCodeLine{00020\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a74bd7457226936991dd40c3b0c844028}{m\_wndEdit}};}
+\DoxyCodeLine{00021\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a833e5ee9c74b4820a5ee8ba75291b1f8}{m\_wndDelete}};}
+\DoxyCodeLine{00022\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a2fd9b8172db5d4a2017b03ed868a00e9}{m\_wndSave}};}
+\DoxyCodeLine{00023\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a09d53116650adc5e6d67a245be53f2b4}{m\_wndCancel}};}
+\DoxyCodeLine{00024\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a324fb4a321d61e30cb3ce7bcb7885bdf}{m\_szDepartmentKey}};}
+\DoxyCodeLine{00025\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a1aa065fabfced99f1cf346785c038d53}{m\_szTypeKey}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a31bd1224ab28fdaab7187b2082af106d}{m\_nID}};}
+\DoxyCodeLine{00027\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_acad26247aca129535c36c2c93cc56a9b}{m\_szName}};}
+\DoxyCodeLine{00028\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a1ea80b1d9b50a99b7f399708fe40d183}{m\_hms\_examroomTbl}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a6cc44c2bcaa48b55d3204ab51a2c0b26}{OnListLoadData}}();\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_af75393b0392803a3c13d936c9e92cb25}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a6cd0a226761c0704ade99b32569a143d}{OnListDblClick}}();\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a649ccd7bd1138db1ec42503d0ce4f385}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_ae5406027acb759640abfbc92d134dac5}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a1fecc550c57d8bb8c7dce3fb82bd78c0}{OnDepartmentSelendok}}();\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnDepartmentSetfocus();\ }}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnDepartmentKillfocus();\ }}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a4519abd1b42fb6933f697ee3801e7ee9}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a3596ceff59f96435b97c653ef969838f}{OnDepartmentAddNew}}();\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a063aec2b1eb57b961a8c1a9405040fc3}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a4bf1b2b3fd774f9bd4698fe184195a6b}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a981cbc4c86dacd737daca19b2533c663}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a7fda0285f15787116aa76d3947f2f5e3}{OnTypeAddNew}}();\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnIDChange();\ }}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnIDSetfocus();\ }}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnIDKillfocus();\ }}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a3597cff862c44e9e5be5a445c854e5af}{OnIDCheckValue}}();\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnNameChange();\ }}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_acc5e0c0a38d3ebafd03fc3545d0a55f4}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a830babbcb7b50e08946f53b2fa9ca7ac}{OnAddSelect}}();\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a039e5e51676f4b7eb5e8bb3e94000e7b}{OnEditSelect}}();\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_ae12a17a6a6739c7212acec4ca5de4a91}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a58edf9bc33e8d5bfc4c6fd3ba308fd51}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a60e21ca93b3eb56619cf3f98739cb53c}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a41cc7a221c159ed5810680b0375d589a}{CHMSExaminationRoomSetup}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_ac4033248c39161b48f7ee4320a08b323}{\string~CHMSExaminationRoomSetup}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a96501d66542cba5d86c1d3bdf5c05888}{OnCreateComponents}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a59e91e9f31a030951f495a65d8a6179a}{OnInitializeComponents}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a8386a5ffb403f7504d099d92f856e74e}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a26407cad2d4f4950aea71b8ef8dc6be0}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a801aaf8fcb9cc833f6c44298832c51ab}{GetDataToScreen}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_aac60b86df8b2a6226452a0447845c790}{GetScreenToData}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a4a7e99ae3f0eb63ce70c920f60de4cfa}{SetDefaultValues}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_afae939d40720bf28a7b48a372764639e}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_af966bc1c32ea725d5914ed93bdfa0684}{OnAddHMSExaminationRoomSetup}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a4a19124f2bef6631cae485415d28396e}{OnEditHMSExaminationRoomSetup}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a0106846011bc790d8903435d8404cb71}{OnDeleteHMSExaminationRoomSetup}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a6b3e48ccd0f9876009e5790b397ab329}{OnSaveHMSExaminationRoomSetup}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_a8ffd4a57db5c24b3081d781f34750327}{OnCancelHMSExaminationRoomSetup}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_examination_room_setup_af2ad07c2be3bf33dab1329100da0d2cb}{OnHMSExaminationRoomSetupListLoadData}}();\ }
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,836 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="class_edge_view_component" kind="class" language="C++" prot="public">
+    <compoundname>EdgeViewComponent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ComponentBase</basecompoundref>
+    <includes refid="_edge_view_component_8h" local="no">EdgeViewComponent.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_edge_view_component_1a30c4c53a410628093a9c3b8c3a83c950" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>TransformType</name>
+        <qualifiedname>EdgeViewComponent::TransformType</qualifiedname>
+        <enumvalue id="class_edge_view_component_1a30c4c53a410628093a9c3b8c3a83c950ac7c5a181d7cc5f5733d84dd9bd778967" prot="private">
+          <name>kIdentity</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_edge_view_component_1a30c4c53a410628093a9c3b8c3a83c950a01cabc0c2b4dd3bdcaa8c9e21796c00d" prot="private">
+          <name>kScale2X</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_edge_view_component_1a30c4c53a410628093a9c3b8c3a83c950acd26c3908b1876dbb807801b0f0df1f2" prot="private">
+          <name>kRotate30Deg</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_edge_view_component_1a30c4c53a410628093a9c3b8c3a83c950a3101e0b985e9f59c4a93d40f94e8d270" prot="private">
+          <name>kRotate60DegDiagonally</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="47" column="5" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="48" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_edge_view_component_1a7a1d1060ff5818358176b080457fb868" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DCompTargetImpl</definition>
+        <argsstring></argsstring>
+        <name>DCompTargetImpl</name>
+        <qualifiedname>EdgeViewComponent::DCompTargetImpl</qualifiedname>
+        <param>
+          <type>DCompTargetImpl</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="23" column="18" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_edge_view_component_1ab78e8566856a4e54d1322606b940d082" prot="private" static="no" mutable="no">
+        <type>CEdgeBrowserAppDlg *</type>
+        <definition>CEdgeBrowserAppDlg* EdgeViewComponent::m_appWindow</definition>
+        <argsstring></argsstring>
+        <name>m_appWindow</name>
+        <qualifiedname>EdgeViewComponent::m_appWindow</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="64" column="24" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a6ddff2a394b956c05cf4927988ecf95e" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2Controller &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2Controller&gt; EdgeViewComponent::m_controller</definition>
+        <argsstring></argsstring>
+        <name>m_controller</name>
+        <qualifiedname>EdgeViewComponent::m_controller</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="65" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a8c36fd3b49d07137a0b602f29e09ced9" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2 &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2&gt; EdgeViewComponent::m_webView</definition>
+        <argsstring></argsstring>
+        <name>m_webView</name>
+        <qualifiedname>EdgeViewComponent::m_webView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="66" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1abb49b5835f8c3abab9b2063d610d2063" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::m_isDcompTargetMode</definition>
+        <argsstring></argsstring>
+        <name>m_isDcompTargetMode</name>
+        <qualifiedname>EdgeViewComponent::m_isDcompTargetMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="68" column="10" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1affb748c8c3800197cc38786bca6da9c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::m_isVisible</definition>
+        <argsstring></argsstring>
+        <name>m_isVisible</name>
+        <qualifiedname>EdgeViewComponent::m_isVisible</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="69" column="10" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1afb09cfa5c40d733724998bfb30c5b6e9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float EdgeViewComponent::m_webViewRatio</definition>
+        <argsstring></argsstring>
+        <name>m_webViewRatio</name>
+        <qualifiedname>EdgeViewComponent::m_webViewRatio</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="70" column="11" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a0a108fecefa7912c5a0a4e12c8a9ed00" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float EdgeViewComponent::m_webViewZoomFactor</definition>
+        <argsstring></argsstring>
+        <name>m_webViewZoomFactor</name>
+        <qualifiedname>EdgeViewComponent::m_webViewZoomFactor</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="71" column="11" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1ac2db6a24fddead17c30acf3bf10d234f" prot="private" static="no" mutable="no">
+        <type>RECT</type>
+        <definition>RECT EdgeViewComponent::m_webViewBounds</definition>
+        <argsstring></argsstring>
+        <name>m_webViewBounds</name>
+        <qualifiedname>EdgeViewComponent::m_webViewBounds</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="72" column="10" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1ac0db7c1f6f349e5c070024aacd56749b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float EdgeViewComponent::m_webViewScale</definition>
+        <argsstring></argsstring>
+        <name>m_webViewScale</name>
+        <qualifiedname>EdgeViewComponent::m_webViewScale</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="73" column="11" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a34e179cb78def040f3c5ebb2e919afb0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::m_useCursorId</definition>
+        <argsstring></argsstring>
+        <name>m_useCursorId</name>
+        <qualifiedname>EdgeViewComponent::m_useCursorId</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="74" column="10" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a024cefd2d4d31822223e94731708bbfc" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken EdgeViewComponent::m_zoomFactorChangedToken</definition>
+        <argsstring></argsstring>
+        <name>m_zoomFactorChangedToken</name>
+        <qualifiedname>EdgeViewComponent::m_zoomFactorChangedToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="75" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1ae4d962040c7a99501e574d44635649f9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::m_isTrackingMouse</definition>
+        <argsstring></argsstring>
+        <name>m_isTrackingMouse</name>
+        <qualifiedname>EdgeViewComponent::m_isTrackingMouse</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="80" column="10" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a401e98febbef329d0a8e27c3e0a5653e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::m_isCapturingMouse</definition>
+        <argsstring></argsstring>
+        <name>m_isCapturingMouse</name>
+        <qualifiedname>EdgeViewComponent::m_isCapturingMouse</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="81" column="10" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1aa1b428515a635274e5efb59b8c6e7098" prot="private" static="no" mutable="no">
+        <type>std::unordered_set&lt; UINT &gt;</type>
+        <definition>std::unordered_set&lt;UINT&gt; EdgeViewComponent::m_pointerIdsStartingInWebView</definition>
+        <argsstring></argsstring>
+        <name>m_pointerIdsStartingInWebView</name>
+        <qualifiedname>EdgeViewComponent::m_pointerIdsStartingInWebView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="82" column="24" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a239f89d1ac592b24546c5009fcc564e0" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; IDCompositionDevice &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;IDCompositionDevice&gt; EdgeViewComponent::m_dcompDevice</definition>
+        <argsstring></argsstring>
+        <name>m_dcompDevice</name>
+        <qualifiedname>EdgeViewComponent::m_dcompDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="87" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a175e70e44cdb211b3bdc153a13d22b84" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; IDCompositionTarget &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;IDCompositionTarget&gt; EdgeViewComponent::m_dcompHwndTarget</definition>
+        <argsstring></argsstring>
+        <name>m_dcompHwndTarget</name>
+        <qualifiedname>EdgeViewComponent::m_dcompHwndTarget</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="88" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1abe0a35f753ab2f86dfaf9e064ecf0daf" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; IDCompositionVisual &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;IDCompositionVisual&gt; EdgeViewComponent::m_dcompRootVisual</definition>
+        <argsstring></argsstring>
+        <name>m_dcompRootVisual</name>
+        <qualifiedname>EdgeViewComponent::m_dcompRootVisual</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="89" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a8e84049453d273c1c953e911a7921c90" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; IDCompositionVisual &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;IDCompositionVisual&gt; EdgeViewComponent::m_dcompWebViewVisual</definition>
+        <argsstring></argsstring>
+        <name>m_dcompWebViewVisual</name>
+        <qualifiedname>EdgeViewComponent::m_dcompWebViewVisual</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="90" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1ad23288d05b17aba8d7d870c77dda563f" prot="private" static="no" mutable="no">
+        <type>winrt::Windows::UI::Composition::Compositor</type>
+        <definition>winrt::Windows::UI::Composition::Compositor EdgeViewComponent::m_wincompCompositor</definition>
+        <argsstring></argsstring>
+        <name>m_wincompCompositor</name>
+        <qualifiedname>EdgeViewComponent::m_wincompCompositor</qualifiedname>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="96" column="49" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1af8a04abc68bdeb38ea71780a36193137" prot="private" static="no" mutable="no">
+        <type>winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget</type>
+        <definition>winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget EdgeViewComponent::m_wincompHwndTarget</definition>
+        <argsstring></argsstring>
+        <name>m_wincompHwndTarget</name>
+        <qualifiedname>EdgeViewComponent::m_wincompHwndTarget</qualifiedname>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="97" column="67" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1afe7dcd6753391030ed2071265427c643" prot="private" static="no" mutable="no">
+        <type>winrt::Windows::UI::Composition::ContainerVisual</type>
+        <definition>winrt::Windows::UI::Composition::ContainerVisual EdgeViewComponent::m_wincompRootVisual</definition>
+        <argsstring></argsstring>
+        <name>m_wincompRootVisual</name>
+        <qualifiedname>EdgeViewComponent::m_wincompRootVisual</qualifiedname>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="98" column="54" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a2ddc22ba42aeeb3c622937b1235c6255" prot="private" static="no" mutable="no">
+        <type>winrt::Windows::UI::Composition::ContainerVisual</type>
+        <definition>winrt::Windows::UI::Composition::ContainerVisual EdgeViewComponent::m_wincompWebViewVisual</definition>
+        <argsstring></argsstring>
+        <name>m_wincompWebViewVisual</name>
+        <qualifiedname>EdgeViewComponent::m_wincompWebViewVisual</qualifiedname>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="99" column="54" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edge_view_component_1a764a26dacf1529e27ae3d37f51f4448e" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken EdgeViewComponent::m_cursorChangedToken</definition>
+        <argsstring></argsstring>
+        <name>m_cursorChangedToken</name>
+        <qualifiedname>EdgeViewComponent::m_cursorChangedToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="103" column="28" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_edge_view_component_1a983df73ff98e76838f2f5ad3da298569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EdgeViewComponent::EdgeViewComponent</definition>
+        <argsstring>(CEdgeBrowserAppDlg *appWindow, IDCompositionDevice *dcompDevice, winrtComp::Compositor wincompCompositor, bool isDCompTargetMode)</argsstring>
+        <name>EdgeViewComponent</name>
+        <qualifiedname>EdgeViewComponent::EdgeViewComponent</qualifiedname>
+        <param>
+          <type>CEdgeBrowserAppDlg *</type>
+          <declname>appWindow</declname>
+        </param>
+        <param>
+          <type>IDCompositionDevice *</type>
+          <declname>dcompDevice</declname>
+        </param>
+        <param>
+          <type>winrtComp::Compositor</type>
+          <declname>wincompCompositor</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isDCompTargetMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1ada70002359e3978447627674023db1a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::HandleWindowMessage</definition>
+        <argsstring>(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam, LRESULT *result) override</argsstring>
+        <name>HandleWindowMessage</name>
+        <qualifiedname>EdgeViewComponent::HandleWindowMessage</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <param>
+          <type>LRESULT *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1acfaa822cf5d4e6c3c0ff934cba33280f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::SetBounds</definition>
+        <argsstring>(RECT bounds)</argsstring>
+        <name>SetBounds</name>
+        <qualifiedname>EdgeViewComponent::SetBounds</qualifiedname>
+        <param>
+          <type>RECT</type>
+          <declname>bounds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1ac7646f526438700258380ac309a332e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EdgeViewComponent::~EdgeViewComponent</definition>
+        <argsstring>() override</argsstring>
+        <name>~EdgeViewComponent</name>
+        <qualifiedname>EdgeViewComponent::~EdgeViewComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="44" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_edge_view_component_1a4d111b07fecb0aae486c6072a455b429" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::ResizeWebView</definition>
+        <argsstring>()</argsstring>
+        <name>ResizeWebView</name>
+        <qualifiedname>EdgeViewComponent::ResizeWebView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="54" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a154474d91a856e3ea7856025b97d9b99" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::ToggleVisibility</definition>
+        <argsstring>()</argsstring>
+        <name>ToggleVisibility</name>
+        <qualifiedname>EdgeViewComponent::ToggleVisibility</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1aaef2f0c97eb85bc430278abb8f92b111" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::SetSizeRatio</definition>
+        <argsstring>(float ratio)</argsstring>
+        <name>SetSizeRatio</name>
+        <qualifiedname>EdgeViewComponent::SetSizeRatio</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="56" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a8a702f28fe5397b3d5fc9ba23a7f4ad5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::SetZoomFactor</definition>
+        <argsstring>(float zoom)</argsstring>
+        <name>SetZoomFactor</name>
+        <qualifiedname>EdgeViewComponent::SetZoomFactor</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>zoom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1ae8a13a18c0ff3b643a42c08ee87e2e58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::SetScale</definition>
+        <argsstring>(float scale)</argsstring>
+        <name>SetScale</name>
+        <qualifiedname>EdgeViewComponent::SetScale</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a11dafa4b0438046688bfae4fb4c7684b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::SetTransform</definition>
+        <argsstring>(TransformType transformType)</argsstring>
+        <name>SetTransform</name>
+        <qualifiedname>EdgeViewComponent::SetTransform</qualifiedname>
+        <param>
+          <type><ref refid="class_edge_view_component_1a30c4c53a410628093a9c3b8c3a83c950" kindref="member">TransformType</ref></type>
+          <declname>transformType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1ad689413e4fdb812a95a1da75f9e54c2e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::ShowWebViewBounds</definition>
+        <argsstring>()</argsstring>
+        <name>ShowWebViewBounds</name>
+        <qualifiedname>EdgeViewComponent::ShowWebViewBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a30c1584afcf31d6e06c8d72186c7aa70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::ShowWebViewZoom</definition>
+        <argsstring>()</argsstring>
+        <name>ShowWebViewZoom</name>
+        <qualifiedname>EdgeViewComponent::ShowWebViewZoom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a82d0df87f536ef8a0b1d01975bff9cd4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::OnMouseMessage</definition>
+        <argsstring>(UINT message, WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>OnMouseMessage</name>
+        <qualifiedname>EdgeViewComponent::OnMouseMessage</qualifiedname>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="77" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a4c814f225a3faf4b59e628cb913edb41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EdgeViewComponent::OnPointerMessage</definition>
+        <argsstring>(UINT message, WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>OnPointerMessage</name>
+        <qualifiedname>EdgeViewComponent::OnPointerMessage</qualifiedname>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a2cc370125fe91603ed7c329092910cc3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::TrackMouseEvents</definition>
+        <argsstring>(DWORD mouseTrackingFlags)</argsstring>
+        <name>TrackMouseEvents</name>
+        <qualifiedname>EdgeViewComponent::TrackMouseEvents</qualifiedname>
+        <param>
+          <type>DWORD</type>
+          <declname>mouseTrackingFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="79" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1ab090357d736e81aabf576de79e0e656a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::BuildDCompTreeUsingVisual</definition>
+        <argsstring>()</argsstring>
+        <name>BuildDCompTreeUsingVisual</name>
+        <qualifiedname>EdgeViewComponent::BuildDCompTreeUsingVisual</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="84" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a9d88b554699d137a0ddaf2ab23fe0ff5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::DestroyDCompVisualTree</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyDCompVisualTree</name>
+        <qualifiedname>EdgeViewComponent::DestroyDCompVisualTree</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="85" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a915689d5b29703a5c5a8f63e2c129004" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::BuildWinCompVisualTree</definition>
+        <argsstring>()</argsstring>
+        <name>BuildWinCompVisualTree</name>
+        <qualifiedname>EdgeViewComponent::BuildWinCompVisualTree</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="93" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edge_view_component_1a08816217d8acf22fcf3163e9462637a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EdgeViewComponent::DestroyWinCompVisualTree</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyWinCompVisualTree</name>
+        <qualifiedname>EdgeViewComponent::DestroyWinCompVisualTree</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/EdgeViewComponent.h" line="94" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ComponentBase</label>
+      </node>
+      <node id="1">
+        <label>EdgeViewComponent</label>
+        <link refid="class_edge_view_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ComponentBase</label>
+      </node>
+      <node id="1">
+        <label>EdgeViewComponent</label>
+        <link refid="class_edge_view_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Include/HMSCore/EdgeViewComponent.h" line="21" column="1" bodyfile="Include/HMSCore/EdgeViewComponent.h" bodystart="22" bodyend="104"/>
+    <listofallmembers>
+      <member refid="class_edge_view_component_1ab090357d736e81aabf576de79e0e656a" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>BuildDCompTreeUsingVisual</name></member>
+      <member refid="class_edge_view_component_1a915689d5b29703a5c5a8f63e2c129004" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>BuildWinCompVisualTree</name></member>
+      <member refid="class_edge_view_component_1a7a1d1060ff5818358176b080457fb868" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>DCompTargetImpl</name></member>
+      <member refid="class_edge_view_component_1a9d88b554699d137a0ddaf2ab23fe0ff5" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>DestroyDCompVisualTree</name></member>
+      <member refid="class_edge_view_component_1a08816217d8acf22fcf3163e9462637a3" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>DestroyWinCompVisualTree</name></member>
+      <member refid="class_edge_view_component_1a983df73ff98e76838f2f5ad3da298569" prot="public" virt="non-virtual"><scope>EdgeViewComponent</scope><name>EdgeViewComponent</name></member>
+      <member refid="class_edge_view_component_1ada70002359e3978447627674023db1a8" prot="public" virt="non-virtual"><scope>EdgeViewComponent</scope><name>HandleWindowMessage</name></member>
+      <member refid="class_edge_view_component_1ab78e8566856a4e54d1322606b940d082" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_appWindow</name></member>
+      <member refid="class_edge_view_component_1a6ddff2a394b956c05cf4927988ecf95e" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_controller</name></member>
+      <member refid="class_edge_view_component_1a764a26dacf1529e27ae3d37f51f4448e" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_cursorChangedToken</name></member>
+      <member refid="class_edge_view_component_1a239f89d1ac592b24546c5009fcc564e0" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_dcompDevice</name></member>
+      <member refid="class_edge_view_component_1a175e70e44cdb211b3bdc153a13d22b84" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_dcompHwndTarget</name></member>
+      <member refid="class_edge_view_component_1abe0a35f753ab2f86dfaf9e064ecf0daf" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_dcompRootVisual</name></member>
+      <member refid="class_edge_view_component_1a8e84049453d273c1c953e911a7921c90" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_dcompWebViewVisual</name></member>
+      <member refid="class_edge_view_component_1a401e98febbef329d0a8e27c3e0a5653e" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_isCapturingMouse</name></member>
+      <member refid="class_edge_view_component_1abb49b5835f8c3abab9b2063d610d2063" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_isDcompTargetMode</name></member>
+      <member refid="class_edge_view_component_1ae4d962040c7a99501e574d44635649f9" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_isTrackingMouse</name></member>
+      <member refid="class_edge_view_component_1affb748c8c3800197cc38786bca6da9c1" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_isVisible</name></member>
+      <member refid="class_edge_view_component_1aa1b428515a635274e5efb59b8c6e7098" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_pointerIdsStartingInWebView</name></member>
+      <member refid="class_edge_view_component_1a34e179cb78def040f3c5ebb2e919afb0" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_useCursorId</name></member>
+      <member refid="class_edge_view_component_1a8c36fd3b49d07137a0b602f29e09ced9" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_webView</name></member>
+      <member refid="class_edge_view_component_1ac2db6a24fddead17c30acf3bf10d234f" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_webViewBounds</name></member>
+      <member refid="class_edge_view_component_1afb09cfa5c40d733724998bfb30c5b6e9" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_webViewRatio</name></member>
+      <member refid="class_edge_view_component_1ac0db7c1f6f349e5c070024aacd56749b" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_webViewScale</name></member>
+      <member refid="class_edge_view_component_1a0a108fecefa7912c5a0a4e12c8a9ed00" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_webViewZoomFactor</name></member>
+      <member refid="class_edge_view_component_1ad23288d05b17aba8d7d870c77dda563f" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_wincompCompositor</name></member>
+      <member refid="class_edge_view_component_1af8a04abc68bdeb38ea71780a36193137" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_wincompHwndTarget</name></member>
+      <member refid="class_edge_view_component_1afe7dcd6753391030ed2071265427c643" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_wincompRootVisual</name></member>
+      <member refid="class_edge_view_component_1a2ddc22ba42aeeb3c622937b1235c6255" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_wincompWebViewVisual</name></member>
+      <member refid="class_edge_view_component_1a024cefd2d4d31822223e94731708bbfc" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>m_zoomFactorChangedToken</name></member>
+      <member refid="class_edge_view_component_1a82d0df87f536ef8a0b1d01975bff9cd4" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>OnMouseMessage</name></member>
+      <member refid="class_edge_view_component_1a4c814f225a3faf4b59e628cb913edb41" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>OnPointerMessage</name></member>
+      <member refid="class_edge_view_component_1a4d111b07fecb0aae486c6072a455b429" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>ResizeWebView</name></member>
+      <member refid="class_edge_view_component_1acfaa822cf5d4e6c3c0ff934cba33280f" prot="public" virt="non-virtual"><scope>EdgeViewComponent</scope><name>SetBounds</name></member>
+      <member refid="class_edge_view_component_1ae8a13a18c0ff3b643a42c08ee87e2e58" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>SetScale</name></member>
+      <member refid="class_edge_view_component_1aaef2f0c97eb85bc430278abb8f92b111" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>SetSizeRatio</name></member>
+      <member refid="class_edge_view_component_1a11dafa4b0438046688bfae4fb4c7684b" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>SetTransform</name></member>
+      <member refid="class_edge_view_component_1a8a702f28fe5397b3d5fc9ba23a7f4ad5" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>SetZoomFactor</name></member>
+      <member refid="class_edge_view_component_1ad689413e4fdb812a95a1da75f9e54c2e" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>ShowWebViewBounds</name></member>
+      <member refid="class_edge_view_component_1a30c1584afcf31d6e06c8d72186c7aa70" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>ShowWebViewZoom</name></member>
+      <member refid="class_edge_view_component_1a154474d91a856e3ea7856025b97d9b99" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>ToggleVisibility</name></member>
+      <member refid="class_edge_view_component_1a2cc370125fe91603ed7c329092910cc3" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>TrackMouseEvents</name></member>
+      <member refid="class_edge_view_component_1a30c4c53a410628093a9c3b8c3a83c950" prot="private" virt="non-virtual"><scope>EdgeViewComponent</scope><name>TransformType</name></member>
+      <member refid="class_edge_view_component_1ac7646f526438700258380ac309a332e2" prot="public" virt="non-virtual"><scope>EdgeViewComponent</scope><name>~EdgeViewComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

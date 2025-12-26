@@ -1,0 +1,79 @@
+\doxysection{RPTSelection\+List\+Dialog.\+h}
+\hypertarget{_r_p_t_selection_list_dialog_8h_source}{}\label{_r_p_t_selection_list_dialog_8h_source}\index{Include/HMSCore/RPTSelectionListDialog.h@{Include/HMSCore/RPTSelectionListDialog.h}}
+\mbox{\hyperlink{_r_p_t_selection_list_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RPTSelectionDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RPTSelectionDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@miteco.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.miteco.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@miteco.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.miteco.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a7eb306e017e4a9bce586aab762992c45}{CRPTSelectionListDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_r_p_t_selection_list_dialog_1_1tag_selection_list}{tagSelectionList}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_r_p_t_selection_list_dialog_1_1tag_selection_list_a6df7edaabee2cf2f6f89270b505d9aca}{szID}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_r_p_t_selection_list_dialog_1_1tag_selection_list_af62dad3af930d8de7c6031c27e254f28}{szName}};}
+\DoxyCodeLine{00038\ \ \ \ \ \}\mbox{\hyperlink{struct_s_e_l_i_t_e_m}{SELITEM}};}
+\DoxyCodeLine{00039\ \ \ \ \ CArray<SELITEM,\ SELITEM\&>\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a3dc20d98226f82183f4153d3f2af7e23}{m\_arraySelection}};}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_ae9893967ffeac1464d318456de031298}{m\_szSQL}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a52bad3fe76cf4060a9ea3dbcfddd5b87}{m\_wndSelectionList}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a929d6f8d34c9f8575ef51e31f592ba9f}{m\_wndList}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_ab7d53e56c22eb044fb6af726686d73eb}{m\_wndApply}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a51c7a0d2d57fdf4251487ccd68b8913d}{m\_wndClose}};}
+\DoxyCodeLine{00045\ \ \ \ \ BOOL\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a6fc8affda411165a77191c36b12d3164}{m\_bSetCheckBox}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a6186e897cc8b71242e60f00b2cea088e}{m\_szSelectedDesc}};}
+\DoxyCodeLine{00047\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a011b82f243953818efb8bd3137b13c66}{m\_szArrSelectedStr}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a010d5ee58525ab85da1fee91904ef3da}{OnListLoadData}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a4d0bcde7383ecb28a886738dbbc000ae}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a92678b3c9b64ce657854455c12822ab8}{OnListDblClick}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a02bab0764c05f20f0c6499cbef623d3d}{OnListSelectAllItem}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_af60a6e2a8ea207d3ef2055644185e906}{OnListUnSelectAllItem}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a55986c467d8e7b91fa2113d140a645c3}{OnApplySelect}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a35c38eadfc54fdc3438cfabcd98e083c}{OnCloseSelect}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a7eb306e017e4a9bce586aab762992c45}{CRPTSelectionListDialog}}(CWnd*\ pParent,\ \textcolor{keywordtype}{bool}\ bIsSetCheckBox=\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a42e3545c2b7cdef9c0e37cd64d2f6312}{\string~CRPTSelectionListDialog}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_adbeb7c258a5bb2d64648b67c7e207766}{OnCreateComponents}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a0060a3cbafc88857d625dcbf64e05e04}{OnInitializeComponents}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_ad88a9d372ccf055c077fb6b2839fd402}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_ae288bf0d2a7231e0d61227c932b22bd0}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a19b2bfbb8dab481adb4cb47fc98e8bde}{GetDataToScreen}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a2352ac62b6c6910e7f86e67f626351fd}{GetScreenToData}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a616219d68ba220d1c9d29263adfcfbd9}{SetDefaultValues}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a42ecea826953e7178372cc02ef1116e3}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_ad9c06efece56d80091be70a1e56f33c4}{OnAddHMSSelectionDialog}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a75662aa4a7403c05c412c74d4b6500e8}{OnEditHMSSelectionDialog}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a278dbdfc425959c135320ff48cf22f86}{OnDeleteHMSSelectionDialog}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a574c458e0bbdcb9b68d2436a0cb06d68}{OnSaveHMSSelectionDialog}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a34a577523ca179b2bbe64a258bd0c66c}{OnCancelHMSSelectionDialog}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a099c90b7ec321ea66aab72ba980b469c}{OnHMSSelectionDialogListLoadData}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a5e8c7680beff023132eb43341956b156}{SELITEM}}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a80d37e5b1090dac070c4a3ccbfc8f1c5}{GetSelectionAt}}(\textcolor{keywordtype}{int}\ nIndex);}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a6cfc5cf82f2d9d4aa20f2e801d39c723}{GetSelectionCount}}();}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_r_p_t_selection_list_dialog_a3cc45737f9aae62921570d66b4beedbf}{GetSelectionName}}(\textcolor{keywordtype}{int}\ nIndex);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

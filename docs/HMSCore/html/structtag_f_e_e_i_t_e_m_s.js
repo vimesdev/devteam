@@ -1,0 +1,26 @@
+var structtag_f_e_e_i_t_e_m_s =
+[
+    [ "tagFEEITEMS", "structtag_f_e_e_i_t_e_m_s.html#a8f85a24fa7ac8ace7648847c6e8d4e93", null ],
+    [ "bVisible", "structtag_f_e_e_i_t_e_m_s.html#ab547aa57232cb87c0830829746d1f4e0", null ],
+    [ "nCopayment", "structtag_f_e_e_i_t_e_m_s.html#a281f0bc212366f25cbf670a2e5f21cc2", null ],
+    [ "nCost", "structtag_f_e_e_i_t_e_m_s.html#a9fdcbc2510b919d321e7dbce1775f7a0", null ],
+    [ "nDiffPaid", "structtag_f_e_e_i_t_e_m_s.html#a5e655b203edce67fafe86aafabba0357", null ],
+    [ "nDiscount", "structtag_f_e_e_i_t_e_m_s.html#a894d6704fa463c5dca30354a482d838e", null ],
+    [ "nFreeAmount", "structtag_f_e_e_i_t_e_m_s.html#aee34ebf679704b357cc5ec5256fbe7ee", null ],
+    [ "nInsCost", "structtag_f_e_e_i_t_e_m_s.html#a3b90e9479c4d40d122e156a471f2e2f3", null ],
+    [ "nInsPaid", "structtag_f_e_e_i_t_e_m_s.html#aaa2d3428d42567596a40b1a8f2aa5c6e", null ],
+    [ "nInsPrice", "structtag_f_e_e_i_t_e_m_s.html#a59e1f94ecb713c4b217d2268089d9455", null ],
+    [ "nPatDebt", "structtag_f_e_e_i_t_e_m_s.html#a157576e111841c62a4a5c7177f672db2", null ],
+    [ "nPatPaid", "structtag_f_e_e_i_t_e_m_s.html#ad70fb97d867f0f773e26ec7dd9c31489", null ],
+    [ "nPrice", "structtag_f_e_e_i_t_e_m_s.html#aa080e9027194a291d147e18a7ec58d2e", null ],
+    [ "nQuantity", "structtag_f_e_e_i_t_e_m_s.html#a7bd14ad8760f1fa3e4fadc11ed1a614e", null ],
+    [ "nUnpaid", "structtag_f_e_e_i_t_e_m_s.html#a0713b6b5b38b17ed5cde6dabf874bea9", null ],
+    [ "szDisrate", "structtag_f_e_e_i_t_e_m_s.html#a16b079afd83d2d8d62cec9fa5a1da1af", null ],
+    [ "szFeeType", "structtag_f_e_e_i_t_e_m_s.html#a4b2ea17c2dae3240e1b9ce248ddb4ce3", null ],
+    [ "szGroupID", "structtag_f_e_e_i_t_e_m_s.html#af330382fe25dcaee6a10d12a70c1d357", null ],
+    [ "szID", "structtag_f_e_e_i_t_e_m_s.html#a0b659a30149c63c2781d60a67b6974dd", null ],
+    [ "szName", "structtag_f_e_e_i_t_e_m_s.html#a1cd5e7fe2803c5a6052f763308f506f4", null ],
+    [ "szPayrate", "structtag_f_e_e_i_t_e_m_s.html#a6916c6c5d37d243e36e1e475929d3c5c", null ],
+    [ "szStatus", "structtag_f_e_e_i_t_e_m_s.html#a35711a81b6c34db66fa44e6297bca749", null ],
+    [ "szUnit", "structtag_f_e_e_i_t_e_m_s.html#a962012bc33ce0b8fb7087691209123f8", null ]
+];

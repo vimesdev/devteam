@@ -1,0 +1,88 @@
+\doxysection{Pipe\+Service.\+h}
+\hypertarget{_pipe_service_8h_source}{}\label{_pipe_service_8h_source}\index{Include/HMSCore/PipeService.h@{Include/HMSCore/PipeService.h}}
+\mbox{\hyperlink{_pipe_service_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PipeSERVICE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PipeSERVICE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <afxwin.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d}{eStatus}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da405da0d107497b3596a3818a48478c9f}{status\_error}}\ =\ -\/1,}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23dad52787b0cfb0da2c053a68bcdc54bc6f}{status\_ok}}\ =\ 0,}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23da19b3a09cf2291e62dc01cf90b9c17f45}{status\_cancel}}\ =\ 2}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5e}{eFinger}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea23e8755dca2afce79b8702f1d02c6145}{finger\_none}}\ =\ 0,}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea9e17e01aa447afeeec502628be0b3235}{finger\_enrollment}},}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ead81ae66f9a26f69db621d2e52eb99911}{finger\_verification}},}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea17147a53e3ea6dd8a0feb510fbbffc78}{finger\_add}},}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea8396d17316110342bfbf7b80d6aaf084}{finger\_delete}},}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea55996ee9d5571899be851cd33b81a673}{finger\_save}},}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaf13267fd815ba64fe89bdffee54ab023}{finger\_read}},}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5eaa383bd6e63b589015963701cc4160fcc}{finger\_bitmap}},}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{_pipe_service_8h_a0a8d6f3ead0e8db26271d5ce099bfe5ea03ee9808e992750eee883f86c694299a}{pipe\_write}}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ PM\_CARD\ \ 0x100000}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pipe_message_afb2946d3d7ea62ad097a1adb150a67a8}{PipeMessage}}\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00041\ \ \ \ \ UINT\ \ \ \ \mbox{\hyperlink{class_pipe_message_ab62c4edfc0f7127ddef2564635969a1c}{m\_message}};\ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_pipe_message_a4c265cbf97770c2d7da9aee37b3af7ee}{m\_status}};\ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ std::string\ \mbox{\hyperlink{class_pipe_message_ac46ef39892dfe462de8e42916aa9d03b}{m\_data}};\ \ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_pipe_message_afb2946d3d7ea62ad097a1adb150a67a8}{PipeMessage}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_pipe_message_a43be5399ecec9c51cff3045d3cafe0be}{PipeMessage}}(UINT\ message);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_pipe_message_a0d303d64a00d6f7a9964f2e53ef84774}{\string~PipeMessage}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipe_message_a166bab048e9631c240a7088233cf4e37}{SetStatus}}(\mbox{\hyperlink{_pipe_service_8h_a98f62c57ed523529b59eaed90540d23d}{eStatus}}\ status)\ \{\ \mbox{\hyperlink{class_pipe_message_a4c265cbf97770c2d7da9aee37b3af7ee}{m\_status}}\ =\ status;\ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_pipe_message_a4d54da55daf9b28e1464cb4b34b965d8}{GetStatus}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_pipe_message_a4c265cbf97770c2d7da9aee37b3af7ee}{m\_status}};\ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipe_message_aa2ec32a7996b6a2ee8788c8d788c1402}{SetMessage}}(UINT\ message)\ \{\ \mbox{\hyperlink{class_pipe_message_ab62c4edfc0f7127ddef2564635969a1c}{m\_message}}\ =\ message;\ \}}
+\DoxyCodeLine{00054\ \ \ \ \ UINT\ \mbox{\hyperlink{class_pipe_message_ab4f7c80bf8fe4d0dd0e866c792a3bbe0}{GetMessage}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_pipe_message_ab62c4edfc0f7127ddef2564635969a1c}{m\_message}};\ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipe_message_a0289995f9fe89dab046ec9f1d8e3f763}{SetData}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ data)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pipe_message_ac46ef39892dfe462de8e42916aa9d03b}{m\_data}}\ =\ data;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ std::string\ \mbox{\hyperlink{class_pipe_message_aef7a1377062e0d295d3fc1949d6002f6}{GetData}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_pipe_message_ac46ef39892dfe462de8e42916aa9d03b}{m\_data}};\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ std::wstring\ \mbox{\hyperlink{class_pipe_message_a6bf5b7ad68565ba1aa8a692336f58e29}{ToString}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pipe_message_a3fcd31fa5d60569dd769ed2b3a71c666}{Parse}}(LPCTSTR\ lpszData);}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \ \mbox{\hyperlink{_pipe_service_8h_a876f7ef90651d73d99cd5ab050baf6ff}{kPipeRunning}};}
+\DoxyCodeLine{00065\ \textcolor{keyword}{extern}\ CWnd*\ \mbox{\hyperlink{_pipe_service_8h_af13dab293f1bfd6a62bcb0043cd6e6d0}{kMainWnd}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#pragma\ once}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00079\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_pipe_service_a37939b85ca2552e1a0c4ffdaa3d1c1d3}{PipeService}}}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ TCHAR\ \mbox{\hyperlink{class_pipe_service_aa1c42ca175e067245cfd81c5e2156250}{m\_szPipeName}}[64];}
+\DoxyCodeLine{00082\ \ \ \ \ HANDLE\ \mbox{\hyperlink{class_pipe_service_ae5df91a42cdd7cadbe725d05feef7f2b}{hPipe}};}
+\DoxyCodeLine{00083\ \ \ \ \ HANDLE\ \mbox{\hyperlink{class_pipe_service_af00f9b104e714865e3f593338be46d8f}{hThread}};}
+\DoxyCodeLine{00084\ \ \ \ \ HANDLE\ \mbox{\hyperlink{class_pipe_service_ae17e871325ddf752fb06b28b6d19c4e2}{hStopEvent}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_pipe_service_a37939b85ca2552e1a0c4ffdaa3d1c1d3}{PipeService}}(LPCTSTR\ lpszNamed\ =\ \_T(\textcolor{stringliteral}{"{}card\_named"{}}));}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{class_pipe_service_a3bde8afde70ad408fb1aa1944a4fa233}{\string~PipeService}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pipe_service_a9e2d7853264cccdf5d2690ef19f60e7c}{StartServer}}(CWnd*\ pMain,\ LPCTSTR\ lpszNamed=NULL);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pipe_service_a0f32288ae7210847e0ade832afa03086}{Stop}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//VOID\ GetAnswerToRequest(LPTSTR,\ LPTSTR,\ LPDWORD);}}
+\DoxyCodeLine{00094\ \ \ \ \ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

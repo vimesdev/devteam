@@ -1,0 +1,81 @@
+\doxysection{Gui\+Input\+Data\+Dialog.\+h}
+\hypertarget{_gui_input_data_dialog_8h_source}{}\label{_gui_input_data_dialog_8h_source}\index{Include/HMSCore/GuiInputDataDialog.h@{Include/HMSCore/GuiInputDataDialog.h}}
+\mbox{\hyperlink{_gui_input_data_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GUIINPUTDATADIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GUIINPUTDATADIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_gui_input_data_dialog_a714886b8236c9d382d8d2e59312bc76b}{CGuiInputDataDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ae41ccbf9f417d825aca891ab7275a772}{m\_bNumberCtrl}};\ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ab2a1bf2ff3d9c78b8bb7bf7503a7e8d3}{m\_bCheckValue}};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ae8e9f93a10810ad12270e7f9ecbe3604}{m\_szTooltip}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a09e76b6b0f41e74b550178a70086602e}{m\_wndInputData}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a75f504d41277640f9187c2fdceff0a5b}{m\_wndValueLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a00a03d1c4c70316699ce4d42595eaf66}{m\_wndNumberValue}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a37fa998238ff093291bc3cad0b0bab3a}{m\_wndTextValue}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ae68192bbdfde717cdf62b9c9a35d77f3}{m\_wndOK}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a5ea89de24cd9beb49e4950a2ac7ac213}{m\_wndClose}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a8d87acec83543dfa017a42cae1921bda}{m\_nNumberValue}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_aaa61b6a173cb7109b4536098b0380e0f}{m\_nLimit}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ab4fb95ce2a3859e7c3824cd9a6707760}{m\_nMin}},\ \mbox{\hyperlink{class_c_gui_input_data_dialog_aa94bb20ad89bc47d1ffaa5f23a6d30aa}{m\_nMax}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a33b28568a9fc3e823de663d383d1fd64}{m\_szTextValue}};}
+\DoxyCodeLine{00047\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a3a427f4f0ccd3dcc106695f148554ed6}{m\_szGroupName}};}
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a4a73eac33309451456fd6321d0e03fe1}{m\_szValueName}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnValueChange();\ }}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnValueSetfocus();\ }}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnValueKillfocus();\ }}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a54383e795005962f8f2c4adbd98b83e9}{OnNumberValueCheckValue}}();\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_aad505c52958af420ff75524b17466251}{OnTextValueCheckValue}}();\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a33f3b47885f4b26987a6cf815bb7ae44}{OnOKSelect}}();\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_af3ad266c4cd447a79fd7eb293573b814}{OnCloseSelect}}();}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//Call\ before\ DoModal();}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ad9dfd0eb8da996f92e1cce0571a8e6ec}{SetTextLimit}}(\textcolor{keywordtype}{int}\ nLimit);}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a43a45b489107789ae606272af865f53b}{GetNumberValue}}();}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ab540fb62c0096c18bb7f3b3f41ef0aa2}{GetTextValue}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a714886b8236c9d382d8d2e59312bc76b}{CGuiInputDataDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{bool}\ bNumber=\textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ bCheckValue=\textcolor{keyword}{true});}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_ae06f5c164b9cbfdf2b15131e5b915ba5}{\string~CGuiInputDataDialog}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_aa8073ea2f17547c1583529d0170d200d}{OnCreateComponents}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_ab1928505915c049ea384d76dfd99b166}{OnInitializeComponents}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_a44e6b30b887e8e6e29aecb643612c6e1}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_a83748493057872a630050b308c070d48}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_a0693b9af44e80a6ea0fd1f7446c71813}{GetDataToScreen}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_a2ea733b6e992278dd5720650949f8cfb}{GetScreenToData}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_afd5df6e2cc2b86adbcd9d3be2a4ffc07}{SetDefaultValues}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_gui_input_data_dialog_a9b367a62b90138fe6656d4a9b2840acf}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//Su\ dung\ voi\ kieu\ control\ so}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_gui_input_data_dialog_a2600c673ced7ee086c0d3b9e24835fc3}{SetMinMax}}(\textcolor{keywordtype}{double}\ nMin,\ \textcolor{keywordtype}{double}\ nMax);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

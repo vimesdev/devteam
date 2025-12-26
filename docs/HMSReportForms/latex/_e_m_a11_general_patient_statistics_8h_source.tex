@@ -1,0 +1,97 @@
+\doxysection{EMA11\+General\+Patient\+Statistics.\+h}
+\hypertarget{_e_m_a11_general_patient_statistics_8h_source}{}\label{_e_m_a11_general_patient_statistics_8h_source}\index{Include/HMSReportForms/Examination/EMA11GeneralPatientStatistics.h@{Include/HMSReportForms/Examination/EMA11GeneralPatientStatistics.h}}
+\mbox{\hyperlink{_e_m_a11_general_patient_statistics_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EMA11GeneralPatientStatistics\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EMA11GeneralPatientStatistics\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ Q\_SYNTHESIS\ 0}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ Q\_DETAIL\ \ \ \ 1}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a07cedebca16381aefebb9675df00cb47}{CEMA11GeneralPatientStatistics}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a1ae9167e75573c62537bae21d335635a}{m\_wndReportCondition}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ab5db1acbba226fde9182b3699f184d1a}{m\_wndYearLabel}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_af07c3c8c92820ffee875d25c800ee8b5}{m\_wndYear}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a098898095fe6d48d51968fc05ae0ab5d}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_af957870970cf79e1e29463108edfd756}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ac6f8a54d56c17173ab08e6ee2395b8af}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a4655a99c3e0be7bff0a877c092157907}{m\_wndFromDate}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a56b133ba81996f3aba53e520d536ed31}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a61e3f139c4a83d918448d806fb299a79}{m\_wndToDate}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_aaf3030a176e7a3ec1b30a4cb343ab9f2}{m\_wndPrint}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a0bacfe594c88bd9b2012a83120049965}{m\_wndExport}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_afa414e9f6d7a8b5625ef9e53ae8cb009}{m\_wndClose}};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a39d9305a32fff3469dd84b8d8beea0cd}{m\_nYear}};}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a06f8cec39d4960cbfaf4395fd39128df}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_afcfeb669702e4491fe55f0a31b099d67}{m\_szFromDate}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a9e3a2df8015e1ff06cf8da5e452442af}{m\_szToDate}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a2935c397044dc4616de602a4f2534dc9}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a5e74808353fa9aaa8635a9cce3a33595}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a2ac9f995a8d0fbd961fc234665b93859}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a0a54386ba44185aa3df96a0d5a5854d9}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a502510c84336242c6f6890bc7b96a7bd}{OnReportPeriodAddNew}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ad1a3100fb51f240214493908bda359d4}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a481c4bfb5fea16b03d45d1bb8bfae405}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a0d41ee7f381ebd085f157b55a01de90b}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a885e38a883bb804ea2fa1318c0762df8}{OnExportSelect}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a6b2b64a629e7ea584ed6af0afcea4e56}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a07cedebca16381aefebb9675df00cb47}{CEMA11GeneralPatientStatistics}}(CWnd\ *pParent);}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ac8e59ff0b5ab6189ce1e5ff04e04f3f7}{\string~CEMA11GeneralPatientStatistics}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ae84e882a48697bfc05719e60acbe420c}{OnCreateComponents}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_af2615eb51ef73f71cf4d07d8e7d6ca4e}{OnInitializeComponents}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a61593dddff7451578af5a5cc5ff5cdb8}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a9f94301d0a354589a4a532fb3261bd01}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_aab69de08be3dce5285403d22f0dde13f}{GetDataToScreen}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a14103717d22ea21babd15f81abca093e}{GetScreenToData}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ac1e82139d6889a7ca566f1b2c2972c54}{SetDefaultValues}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a6c0cdb8e5a897c5cd348e8db5e04e467}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ad69ed1f2deec333347ff73498b83a852}{OnAddEMStatisticsGeneralPatientReport}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_aa8f36004817386f53e5c9a886bffd18e}{OnEditEMStatisticsGeneralPatientReport}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a9bd8f58b7a30153f805a7d98f8bc8a85}{OnDeleteEMStatisticsGeneralPatientReport}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a41dbce9dd9106b118cf035bab8eb682a}{OnSaveEMStatisticsGeneralPatientReport}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_ad0dc5dfc6190931d541bb57a4f949f4f}{OnCancelEMStatisticsGeneralPatientReport}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_accd798cf69caa044d3e5b00ea3766169}{OnEMStatisticsGeneralPatientReportListLoadData}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a394ea7cad6c6598aabc14ea23b20cf3f}{GetQueryString}}(\textcolor{keywordtype}{int}\ nQueryID=0);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_a11_general_patient_statistics_a4f161d78b40070bc9524816ecd835372}{FillData}}(CExcel*\ pXls,\ CRecord\ *pRs);}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

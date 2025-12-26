@@ -1,0 +1,80 @@
+\doxysection{HL7\+Export\+Dialog.\+h}
+\hypertarget{_h_l7_export_dialog_8h_source}{}\label{_h_l7_export_dialog_8h_source}\index{Include/HMSCore/HL7ExportDialog.h@{Include/HMSCore/HL7ExportDialog.h}}
+\mbox{\hyperlink{_h_l7_export_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HL7EXPORTDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HL7EXPORTDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_l7_export_dialog_ad53a18178732783788bd59fc40482ab6}{CHL7ExportDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a7ef7ca10b612f0bbe020efdfd51f9f84}{m\_nDocumentNo}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a9de0295049d14a8cafbfe5ca9de9cc77}{m\_wndMessageTypeLabel}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_afd9bfb314c15a9d0aed8c7d892e3a2e3}{m\_wndMessageType}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_ac65af8fd86762646f2305b89e20b9578}{m\_wndRefresh}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a3f1606f4950658865769a39a3316081b}{m\_wndExport}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a49300e3bab11fb825d193c41d0c042ab}{m\_wndMessageTrigger}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_ae390bc759c919f405a410e5f00a927f4}{m\_wndData}};}
+\DoxyCodeLine{00042\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a1bd0441b1866ea001621a4f3d32ee85f}{m\_szMessageTypeKey}};}
+\DoxyCodeLine{00043\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a6148ced96322e3198064e5eba741429e}{m\_szData}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_ac03d6144e76b5bb40853b2e42a101dfc}{OnMessageTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_afea439358971cdfbf6d9a7f9747deb3c}{OnMessageTypeSelendok}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMessageTypeSetfocus();\ }}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMessageTypeKillfocus();\ }}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a6788fa933bc633dfc0ca5ad10cb6079c}{OnMessageTypeLoadData}}();\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnMessageTypeAddNew();\ }}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_aaef799b943046f76eeffebed2222be34}{OnRefreshSelect}}();\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_aba97464e277ee7313a31eeb7ca0c6d90}{OnExportSelect}}();\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a7227cc60c73db236cedc38897cbfbb98}{OnMessageTriggerLoadData}}();\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a8cbed55552acbc162051cfacd349271f}{OnMessageTriggerSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a8d3ec8146565f7e68219b20dafcfceb5}{OnMessageTriggerDblClick}}();\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_a549ab95639dd978b4ca4031767b1640b}{OnMessageTriggerDeleteItem}}();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDataChange();\ }}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDataSetfocus();\ }}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDataKillfocus();\ }}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_aa4ebcab0630f3a73b5ad8b61c53c9e55}{OnDataCheckValue}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_ad53a18178732783788bd59fc40482ab6}{CHL7ExportDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{long}\ nDocumentNo);}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_c_h_l7_export_dialog_accf0f4db77dd0235b3a348c5e95f15a9}{\string~CHL7ExportDialog}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a9c5987f1d512629535702b506a68283f}{OnCreateComponents}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a1257ba10294ed3cd3be285c0d47c7cb7}{OnInitializeComponents}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_aeb988047f8ac514329983c13c5e7e3ca}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a6b759c78068bba255d196d5522a50476}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a3cdd0b1e707266de2569e93d7fa9edf7}{GetDataToScreen}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a3008859493e5d54bcbef20c712041b80}{GetScreenToData}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a0cc835e9dd6c4ed747aa32beaab68a71}{SetDefaultValues}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a3432ef2db76776ec40550143a45895bd}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a8113f79bf7da1877269cc3a3c15fcd98}{OnAddHL7ExportDialog}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a983d705bd18f3127de1d3936e69618c7}{OnEditHL7ExportDialog}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_ab5a5222dc64849b84840aea149793747}{OnDeleteHL7ExportDialog}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a213dc902ec265f9d99c1fead622fb7d0}{OnSaveHL7ExportDialog}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a46feafa7f184864a2e10cf76ec546b34}{OnCancelHL7ExportDialog}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_l7_export_dialog_a6270eb113446766c0ba31a1511129391}{OnHL7ExportDialogListLoadData}}();\ }
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

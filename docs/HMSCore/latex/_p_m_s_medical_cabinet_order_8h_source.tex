@@ -1,0 +1,169 @@
+\doxysection{PMSMedical\+Cabinet\+Order.\+h}
+\hypertarget{_p_m_s_medical_cabinet_order_8h_source}{}\label{_p_m_s_medical_cabinet_order_8h_source}\index{Include/HMSCore/PMSMedicalCabinetOrder.h@{Include/HMSCore/PMSMedicalCabinetOrder.h}}
+\mbox{\hyperlink{_p_m_s_medical_cabinet_order_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PMSMedicalCabinetOrder\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PMSMedicalCabinetOrder\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@miteco.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.miteco.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@miteco.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.miteco.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_p_m_s_medical_cabinet_order_entry_8h}{PMSMedicalCabinetOrderEntry.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ade69da0b65f7e617fc75087c4b49edc0}{CPMSMedicalCabinetOrder}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a93f104b251d05820d21953ebfd263ea6}{m\_szOrderTime}};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{/*\ \ m\_szType:\ Luu\ gia\ tri\ cac\ loai\ phieu\ bao\ gom:}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ A:\ Dieu\ chuyen\ kho}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ B:\ Cap\ phat\ hang\ ngay}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ C:\ Cap\ phat\ tu\ truc}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ D:\ Xuat\ thanh\ ly}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ E:\ Xuat\ het\ han}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ F:\ Xuat\ hong\ vo}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ G:\ Xuat\ dieu\ chinh}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ H:\ Xuat\ tuyen\ xa}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ O:\ Xuat\ khac}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aba27b04e451519e7e7ebb97610ae6896}{m\_nOID}};}
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a4abf319fbacb7662c98c216f477613be}{m\_szStockList}};}
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_abddf88d4a123dbef6628cc05b67ef5dd}{m\_szDepartments}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a30855e7ec1053cf91b6d2dde296bf025}{m\_szCreatedBy}};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_af012fb0467833d0e0ed9fe5e47aa0862}{ShowInput}}(\textcolor{keywordtype}{bool}\ bShow);}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a4c2e95c056c0aadc445a9fdc86e35830}{m\_wndOrderInformation}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a01230266f0a0f59e84d54441417fb1ed}{m\_wndList}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a71046117d912c1a9159bd9b79ddae43c}{m\_wndIDLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a2f254e6724a6e9d556329864737a397c}{m\_wndID}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_af06eb3569909011ba6f8ca51b2d7ed8f}{m\_wndIDButton}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_abbc1d5b62c9a9d4f29929b5baa61f566}{m\_wndReturnOrder}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a67177d386494059b9a7b5c240b4802b6}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a2508dfe4a0e9f5556911efbd6ad8d27b}{m\_wndOrderDate}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a48960da993cc27891eaad7cd9e5b6d30}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aa5dbdc061a3648fe4752a7c16754e85d}{m\_wndStatus}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a78610888218fc6f7712b2bcc91016fb1}{m\_wndFromStockLabel}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a0441efebf64aa5c03b342b4d2fee0911}{m\_wndFromStock}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aefd5eb144de904a30c3eb51224df3aea}{m\_wndToStockLabel}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a93c7e764d7d91c9b6d7981307400c556}{m\_wndToStock}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_adbdf7ece5b171e9deb8290005a00521b}{m\_wndDelivererLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a9634f672fae1b34006665eb23d2e5d44}{m\_wndDeliverer}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aefd7a1554de536bbbdb84e8de45e01aa}{m\_wndReceiverLabel}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ad0bc3de8b50a88cc1d46340b8a422127}{m\_wndReceiver}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a259e63eff36b6bb9f5516c3618f9509b}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a87de57d15cbb588f312562dcf1f6d3eb}{m\_wndDescription}};}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a30f3f9328347b5d6384770347fbad25f}{m\_wndAdd}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a39c8fb7759a4110a312b0d95fc0c335c}{m\_wndEdit}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a3598cf057230cb2d061b597803990ab1}{m\_wndDelete}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aaee9b872abf693c23bb5c677184c269a}{m\_wndSave}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a2ef2b17a1c11ea5ebdb0fd1538983258}{m\_wndCancel}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_adb6f7da1215f7dbd28da2767e73f36b0}{m\_wndPrint}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ad4f52113d7c18cbb5d4ed8b5e79b5451}{m\_wndConfirm}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aa0d1b07d4630dc325fb73c6717f7206a}{m\_wndAddEntry}};}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_entry}{CPMSMedicalCabinetOrderEntry}}\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a64a98717a74b56d5976a1ad60b379641}{m\_wndInputEntry}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a161e0580905719160e57d45750b79875}{m\_szType}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a2202276c3b64d4e0bda1778d3d7e5993}{m\_szID}};}
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a2d3387b2b385de53496118eda3354dee}{m\_szOrderDate}};}
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a08e7e60d8f487ac68b84427d8df5b2a4}{m\_szStatus}};}
+\DoxyCodeLine{00086\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a738f9a6a3ebc731983b4760cd3ac98c3}{m\_szStatusDesc}};}
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a9cedbc1e6b7e48de6181410454a6c6da}{m\_szFromStockKey}};}
+\DoxyCodeLine{00088\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a1ca2633e4b94d85063f8763753fab615}{m\_szToStockKey}};}
+\DoxyCodeLine{00089\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a7ec8ea6634e246d01f66d8efde250844}{m\_szDeliverer}};}
+\DoxyCodeLine{00090\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a7911ee5d6803d8aaf680bc97b7efa9b0}{m\_szReceiver}};}
+\DoxyCodeLine{00091\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_adaa712d8eda25ba131fe0b525a67defc}{m\_szDescription}};}
+\DoxyCodeLine{00092\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a09a1c2ef845a78ad71288c6367bb2295}{m\_szDeptID}};}
+\DoxyCodeLine{00093\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a8f0451f34a496decb616222947966b40}{m\_szOrderType}};\ \ \textcolor{comment}{//P:\ Pharmacy\ department,\ T:\ Treatment\ Department}}
+\DoxyCodeLine{00094\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a2d7a84b321976729b5a740edd2f24af2}{m\_szCurrentOrderType}};}
+\DoxyCodeLine{00095\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a1408f9eacf7fcdcca7f9455353f391ae}{m\_transactionTbl}};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a853cf244a4caaec5b7171e6bd800ff4d}{OnListLoadData}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a33f03996f26c72709470bba08a9dec96}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ae6b87311fb39acdf94e9df80c6d39c72}{OnListDblClick}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a050069d45544408fe6f1e57f94daf7d1}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a197109a2920848c905cd8513cf5fe753}{OnListSupplementDrugIssued}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIDChange();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIDSetfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnIDKillfocus();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_acc043ea2089ee428f3a71ef1c1d9d537}{OnIDCheckValue}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a393ac6e479f65b8080c226e7fc739e7a}{OnIDButtonSelect}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a52b711ac05eeae0bdf3b94774a424c21}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusChange();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aef6a170131457a9008cf73c218a18751}{OnStatusCheckValue}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aa338b718089068a9517c3b2cd0d6a225}{OnFromStockSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ab4f168354242e50e600d3daebd597f0e}{OnFromStockSelendok}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStockSetfocus();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStockKillfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a20dad207800a5349db1e55e2d38bb05c}{OnFromStockLoadData}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ab0c2f950a1b5aec16bead779187a952e}{OnFromStockAddNew}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a58812e0229bbe7d78663d35293eb2d56}{OnToStockSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a9db2fe2b6fce4f1b13ce952c8564f3b3}{OnToStockSelendok}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToStockSetfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToStockKillfocus();\ }}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a75ebf35f833a91d4a4689bf42786d973}{OnToStockLoadData}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aff4d1bc68181a64c967a7afb517a1936}{OnToStockAddNew}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererChange();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererSetfocus();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererKillfocus();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aa98f7a6b6d0b7a4eedbdc3313631fb8b}{OnDelivererCheckValue}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverChange();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverSetfocus();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverKillfocus();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ab594ef77de67d09dc70db67e177cdb58}{OnReceiverCheckValue}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a43f319b5821b0bfb1c0c42cf3e32565a}{OnDescriptionCheckValue}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a16849d8036a3a28df6d3892007e02ce4}{OnAddSelect}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a81b34aaebaa9d3d6bcaa66fc594ead90}{OnEditSelect}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_afb056c2babf7408a8be4899f5761e1d2}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a0dbf1ac5ecf3ac4a31e35c51babcb45c}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_af3ff7f4a2f5762f4ef7be478aca9007c}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_aa277d8528c2a20f15c8cd25ff6a8469b}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_add5e5356f37993ef663f335a9ea82d6a}{OnConfirmSelect}}();\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ad92cec3702130341b4ced47930a569c6}{OnAddEntrySelect}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ae06681803371c4e88be72a3752ed7506}{OnPrintDelivery}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a669983f3579e570a11ba8bdaa347b9eb}{OnCancelOrder}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ade69da0b65f7e617fc75087c4b49edc0}{CPMSMedicalCabinetOrder}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ae05bc7a8850d56422a54377b1409db1d}{\string~CPMSMedicalCabinetOrder}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a1794cbb09bb0110ca7c1fce529851339}{OnCreateComponents}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_acb7a65f85c59e36921683d9dd78e57fe}{OnInitializeComponents}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a47fb528cd1aa34cc5c018d5e7ac5ac60}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ab9f51b54610e3509c043fca3753cdb4a}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a6f7cd67b0797be00f4615e98491b5ab4}{GetDataToScreen}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_af83464cf5eed732d12f9129a2a5fe0f8}{GetScreenToData}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a41e9f89e3b4d8a282213ca1750c96178}{SetDefaultValues}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ab011d4e5b8a2fa6e61f498edb3d5dcd6}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a65a4eae18ac464f5c88134bed6709e0e}{OnAddPMSMedicalCabinetOrder}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ac4ba6bd29ff779394de8f5e15adae5d1}{OnEditPMSMedicalCabinetOrder}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ae84e1faad9fdad84a954ede3fd7ca9ce}{OnDeletePMSMedicalCabinetOrder}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a1d130c84dbfb217ae65e28ce24985f0e}{OnSavePMSMedicalCabinetOrder}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_ac3332192b3dac5444c7192b2de6ccd05}{OnCancelPMSMedicalCabinetOrder}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_medical_cabinet_order_a66082521e8e3a9c1874f5913d74fde2e}{OnPMSMedicalCabinetOrderListLoadData}}();\ }
+\DoxyCodeLine{00164\ \ \ \ \ }
+\DoxyCodeLine{00165\ \};}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

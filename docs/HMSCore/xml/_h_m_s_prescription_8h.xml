@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_h_m_s_prescription_8h" kind="file" language="C++">
+    <compoundname>HMSPrescription.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_h_m_s_prescription_popup_8h" local="yes">HMSPrescriptionPopup.h</includes>
+    <includes refid="_taskbar_notifier_8h" local="yes">TaskbarNotifier.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>HMSDrugOrdering.h</label>
+        <link refid="_h_m_s_drug_ordering_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Include/HMSCore/HMSPrescription.h</label>
+        <link refid="_h_m_s_prescription_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>HMSPrescriptionPopup.h</label>
+        <link refid="_h_m_s_prescription_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>TaskbarNotifier.h</label>
+        <link refid="_taskbar_notifier_8h"/>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="7">
+        <label>GuiAutoTextCtrl.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_h_m_s_prescription" prot="public">CHMSPrescription</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HMSPRESCRIPTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMSPRESCRIPTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright(C)<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Join<sp/>Stock<sp/>Company.<sp/>2005-2010.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hay<sp/>Hoang<sp/>Van,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@miteco.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.miteco.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2010.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@miteco.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.miteco.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_h_m_s_prescription_popup_8h" kindref="compound">HMSPrescriptionPopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_taskbar_notifier_8h" kindref="compound">TaskbarNotifier.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_c_h_m_s_prescription" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_h_m_s_prescription_1a41d59f33173fc32577fee3dc51f32d6b" kindref="member">CHMSPrescription</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_h_m_s_prescription_1a52b1270de68d4e9ab9859a781605bb1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_taskbar_notifier" kindref="compound">CTaskbarNotifier</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a52b1270de68d4e9ab9859a781605bb1f" kindref="member">m_wndNotification</ref>;<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_h_m_s_prescription_1ae74d7932a867fc6eead15cb24263e713" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CDialogBar<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ae74d7932a867fc6eead15cb24263e713" kindref="member">m_wndDlgBar</ref>;<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_h_m_s_prescription_1a37946e959e802b2ce783a7e43e15cc53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_popup" kindref="compound">CHMSPrescriptionPopup</ref><sp/><ref refid="class_c_h_m_s_prescription_1a37946e959e802b2ce783a7e43e15cc53" kindref="member">m_wndPopup</ref>;<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_h_m_s_prescription_1a855a5a3d8f62e557d561389529e6900d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a855a5a3d8f62e557d561389529e6900d" kindref="member">m_bIsFunctionalFoods</ref>;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_c_h_m_s_prescription_1ad4289cf7561fcc6817d2e51e533abd8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ad4289cf7561fcc6817d2e51e533abd8e" kindref="member">m_bAddEntry</ref>;<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_h_m_s_prescription_1a819a532ceac688d0aaf2298ad246dc0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a819a532ceac688d0aaf2298ad246dc0a" kindref="member">m_nStockID</ref>;<sp/></highlight></codeline>
+<codeline lineno="61" refid="class_c_h_m_s_prescription_1af730d1b2e3a1b55c13b877943771cc24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1af730d1b2e3a1b55c13b877943771cc24" kindref="member">m_nItem</ref>;<sp/></highlight></codeline>
+<codeline lineno="62" refid="class_c_h_m_s_prescription_1a2cb4282a2d5bab41f7644f969c40cb87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a2cb4282a2d5bab41f7644f969c40cb87" kindref="member">m_nOrderID</ref>;<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_c_h_m_s_prescription_1a7162237b24747e175f2d2654cd9c5165" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a7162237b24747e175f2d2654cd9c5165" kindref="member">m_szStatus</ref>;<sp/></highlight></codeline>
+<codeline lineno="65" refid="class_c_h_m_s_prescription_1ab33990c87d2b3654693b09c4872496c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ab33990c87d2b3654693b09c4872496c4" kindref="member">m_szoperaID</ref>;<sp/></highlight></codeline>
+<codeline lineno="66" refid="class_c_h_m_s_prescription_1a4e1c0520de46215b2337b23bd99fe292" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a4e1c0520de46215b2337b23bd99fe292" kindref="member">m_szCreatedBy</ref>;<sp/></highlight></codeline>
+<codeline lineno="67" refid="class_c_h_m_s_prescription_1a518251bc4a21e84772842a5c8daa4b28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a518251bc4a21e84772842a5c8daa4b28" kindref="member">m_szDoctor</ref>;<sp/></highlight></codeline>
+<codeline lineno="68" refid="class_c_h_m_s_prescription_1ab9d6a8f169b00bf1acfda2adf8ee7d57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ab9d6a8f169b00bf1acfda2adf8ee7d57" kindref="member">m_szIsPaid</ref>;<sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_h_m_s_prescription_1a3e3acaf1408c3ac9c9c8383b3f070e4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a3e3acaf1408c3ac9c9c8383b3f070e4f" kindref="member">RefreshData</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_c_h_m_s_prescription_1a626689b8435547f639afe5eaf733231d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a626689b8435547f639afe5eaf733231d" kindref="member">m_wndPrescriptionInformation</ref>;<sp/></highlight></codeline>
+<codeline lineno="77" refid="class_c_h_m_s_prescription_1a883c95071c6efc74d7c28fc6088b4f50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a883c95071c6efc74d7c28fc6088b4f50" kindref="member">m_wndOrderList</ref>;<sp/></highlight></codeline>
+<codeline lineno="78" refid="class_c_h_m_s_prescription_1a3dea479843b96796fa5f22e41700e158" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a3dea479843b96796fa5f22e41700e158" kindref="member">m_wndList</ref>;<sp/></highlight></codeline>
+<codeline lineno="79" refid="class_c_h_m_s_prescription_1a28aed8860b5594aa7fd834d05b799156" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a28aed8860b5594aa7fd834d05b799156" kindref="member">m_wndAdviceLabel</ref>;<sp/></highlight></codeline>
+<codeline lineno="80" refid="class_c_h_m_s_prescription_1ace45c0f3b487e213905da9ec85872249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ace45c0f3b487e213905da9ec85872249" kindref="member">m_wndAdvice</ref>;<sp/></highlight></codeline>
+<codeline lineno="81" refid="class_c_h_m_s_prescription_1af77f46e8185a74ca7771a191452a2b77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1af77f46e8185a74ca7771a191452a2b77" kindref="member">m_wndAdd</ref>;<sp/></highlight></codeline>
+<codeline lineno="82" refid="class_c_h_m_s_prescription_1a8398e8151692eee9ae84a07985a92500" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a8398e8151692eee9ae84a07985a92500" kindref="member">m_wndDelete</ref>;<sp/></highlight></codeline>
+<codeline lineno="83" refid="class_c_h_m_s_prescription_1a53abcc51a3cb5689470a97e0e4269d94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a53abcc51a3cb5689470a97e0e4269d94" kindref="member">m_wndSend</ref>;<sp/></highlight></codeline>
+<codeline lineno="84" refid="class_c_h_m_s_prescription_1a7338c7c5cbb9ae88f1c6427abab851fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a7338c7c5cbb9ae88f1c6427abab851fb" kindref="member">m_wndPrint</ref>;<sp/></highlight></codeline>
+<codeline lineno="85" refid="class_c_h_m_s_prescription_1aa4923e0ab4c514913a3deaabf17fb042" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1aa4923e0ab4c514913a3deaabf17fb042" kindref="member">m_wndAddFoods</ref>;<sp/></highlight></codeline>
+<codeline lineno="86" refid="class_c_h_m_s_prescription_1a7bc296b8afa7f2b567c22a552ef9986c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a7bc296b8afa7f2b567c22a552ef9986c" kindref="member">m_wndTestResultWaring</ref>;<sp/></highlight></codeline>
+<codeline lineno="87" refid="class_c_h_m_s_prescription_1ac50c182c46bb4d02f58332dbf217ee12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ac50c182c46bb4d02f58332dbf217ee12" kindref="member">m_wndShowLog</ref>;<sp/></highlight></codeline>
+<codeline lineno="88" refid="class_c_h_m_s_prescription_1af997dd370b38d60ca7b00a2b8dc5fee6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_h_m_s_prescription_1af997dd370b38d60ca7b00a2b8dc5fee6" kindref="member">m_szTestResultWaring</ref>;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_c_h_m_s_prescription_1a957b9945199cffa489c9411f0e657a4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a957b9945199cffa489c9411f0e657a4b" kindref="member">m_wndDrugInfoList</ref>;<sp/></highlight></codeline>
+<codeline lineno="91" refid="class_c_h_m_s_prescription_1a57106564009a3ca27e46b15fd0fa5851" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a57106564009a3ca27e46b15fd0fa5851" kindref="member">m_szAdvice</ref>;<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="class_c_h_m_s_prescription_1a3349ba3a0f5423e09bb8c694ff97c093" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a3349ba3a0f5423e09bb8c694ff97c093" kindref="member">OnOrderListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="class_c_h_m_s_prescription_1a6a7960d4561022dcda5a847286f71c74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a6a7960d4561022dcda5a847286f71c74" kindref="member">OnOrderListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="class_c_h_m_s_prescription_1ad42c30d966118ac399ace64a52defa95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ad42c30d966118ac399ace64a52defa95" kindref="member">OnOrderListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="class_c_h_m_s_prescription_1adc501378f40e99db9dc21a442a3092af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1adc501378f40e99db9dc21a442a3092af" kindref="member">OnOrderListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126" refid="class_c_h_m_s_prescription_1a6e4d75a007117fbca8cbd1df7242d1f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a6e4d75a007117fbca8cbd1df7242d1f4" kindref="member">OnOrderListSmartPrescription</ref>();<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="class_c_h_m_s_prescription_1a5eaab272f928cd2590a486b68458eb27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a5eaab272f928cd2590a486b68458eb27" kindref="member">OnOldPrescriprion</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="class_c_h_m_s_prescription_1a5d1e30d2f362f38878f0a7fab48df00b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a5d1e30d2f362f38878f0a7fab48df00b" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148" refid="class_c_h_m_s_prescription_1af50445596cadcf45999c732b7e462417" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1af50445596cadcf45999c732b7e462417" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154" refid="class_c_h_m_s_prescription_1a94b863df6906f9d5f4a762bea4ec201d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a94b863df6906f9d5f4a762bea4ec201d" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161" refid="class_c_h_m_s_prescription_1a5e283347cbb187dca5b6cdc3cce57d4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a5e283347cbb187dca5b6cdc3cce57d4d" kindref="member">OnRecalOrderQty</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="class_c_h_m_s_prescription_1ad42bd87847bb93419c2f876547fb2566" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ad42bd87847bb93419c2f876547fb2566" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175" refid="class_c_h_m_s_prescription_1aa7309b5ecd076b2a2b79c01b79cdc5cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1aa7309b5ecd076b2a2b79c01b79cdc5cf" kindref="member">OnListEditQuantityItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182" refid="class_c_h_m_s_prescription_1ace3c11c940f389f026e21985f2cc9921" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ace3c11c940f389f026e21985f2cc9921" kindref="member">OnListAddMaterialItem</ref>();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="class_c_h_m_s_prescription_1a0da0d9d9c92f31fc19399c826fc85d9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a0da0d9d9c92f31fc19399c826fc85d9d" kindref="member">OnTestResultWaringCheckValue</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="class_c_h_m_s_prescription_1a67b3f2d18cc6991dc21e586d4997fded" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a67b3f2d18cc6991dc21e586d4997fded" kindref="member">OnAddExternalPrescription</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201" refid="class_c_h_m_s_prescription_1a15451b2d1d85dda366fec353de7f0800" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a15451b2d1d85dda366fec353de7f0800" kindref="member">OnAddAdvice</ref>();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207" refid="class_c_h_m_s_prescription_1ade638f3ef026d486b959020d8bb384f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ade638f3ef026d486b959020d8bb384f0" kindref="member">OnListEditDrugUsage</ref>();<sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="class_c_h_m_s_prescription_1adcb4d79e0dffd2dae1683459cad0246c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1adcb4d79e0dffd2dae1683459cad0246c" kindref="member">OnAdviceCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215" refid="class_c_h_m_s_prescription_1a093bd9b9be39fbde4a6a90d0fabce89c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a093bd9b9be39fbde4a6a90d0fabce89c" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221" refid="class_c_h_m_s_prescription_1a6535b547dbe81debcf687fc6ae3baf65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a6535b547dbe81debcf687fc6ae3baf65" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227" refid="class_c_h_m_s_prescription_1adae0355b7d72df868fd989f7b34364b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1adae0355b7d72df868fd989f7b34364b4" kindref="member">OnSendSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233" refid="class_c_h_m_s_prescription_1adc207170e9f3d781dc3c5229b72f9e80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1adc207170e9f3d781dc3c5229b72f9e80" kindref="member">OnPrintSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="239" refid="class_c_h_m_s_prescription_1abc456ba5a63d4506e3537ffd842e44dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1abc456ba5a63d4506e3537ffd842e44dd" kindref="member">OnPrintPreview</ref>();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="245" refid="class_c_h_m_s_prescription_1a22d5dfaa164412ccc7735d51f0245196" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a22d5dfaa164412ccc7735d51f0245196" kindref="member">OnPrintPreviewDeliveryOrder</ref>();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251" refid="class_c_h_m_s_prescription_1abf37116e158092a13abdd4899b4975b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1abf37116e158092a13abdd4899b4975b6" kindref="member">OnAddFunctionalFoodsSelect</ref>();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257" refid="class_c_h_m_s_prescription_1a4e3cc3c1c19ac4de978a5bd4f86931f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a4e3cc3c1c19ac4de978a5bd4f86931f5" kindref="member">OnShowLogSelect</ref>();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263" refid="class_c_h_m_s_prescription_1ac8cd9681c21dd8908f56a5c95d624c6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ac8cd9681c21dd8908f56a5c95d624c6b" kindref="member">OnPrintPreview2</ref>();</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269" refid="class_c_h_m_s_prescription_1a41d59f33173fc32577fee3dc51f32d6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a41d59f33173fc32577fee3dc51f32d6b" kindref="member">CHMSPrescription</ref>();</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="275" refid="class_c_h_m_s_prescription_1aa9e3dea008c49a3c964b50a1e04238a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1aa9e3dea008c49a3c964b50a1e04238a7" kindref="member">~CHMSPrescription</ref>();</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="281" refid="class_c_h_m_s_prescription_1a17620b9eb068089f4e9338d3e101df7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a17620b9eb068089f4e9338d3e101df7b" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287" refid="class_c_h_m_s_prescription_1a811bcf20b9b547d8fa807fd13e45bc5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a811bcf20b9b547d8fa807fd13e45bc5d" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293" refid="class_c_h_m_s_prescription_1a0b7dd2c2a963020a1a46e44a0084d19c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a0b7dd2c2a963020a1a46e44a0084d19c" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300" refid="class_c_h_m_s_prescription_1a85993818c693a1fb4cc5645a2b4db259" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a85993818c693a1fb4cc5645a2b4db259" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306" refid="class_c_h_m_s_prescription_1aaf21b8e8c73a855098a4b52147bc12ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1aaf21b8e8c73a855098a4b52147bc12ad" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="312" refid="class_c_h_m_s_prescription_1a5a00597184fc5d1dfe02c7fd306551e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a5a00597184fc5d1dfe02c7fd306551e5" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="318" refid="class_c_h_m_s_prescription_1a8da1c7e741ecc39db721fb5c78096f04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a8da1c7e741ecc39db721fb5c78096f04" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="324" refid="class_c_h_m_s_prescription_1aa75fa7162796b6b19a5949357edeb1ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1aa75fa7162796b6b19a5949357edeb1ab" kindref="member">ShowPopup</ref>();</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="330" refid="class_c_h_m_s_prescription_1aae7b28033d3a07e0a3ece4437f3d04fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1aae7b28033d3a07e0a3ece4437f3d04fa" kindref="member">HidePopup</ref>();</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="338" refid="class_c_h_m_s_prescription_1a6be41c4de04b5c1bb46874e69278aa83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a6be41c4de04b5c1bb46874e69278aa83" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="345" refid="class_c_h_m_s_prescription_1a9e47f4a5c4815318ca60cc20a42bd8f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a9e47f4a5c4815318ca60cc20a42bd8f0" kindref="member">OnAddHMSPrescription</ref>();<sp/></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="352" refid="class_c_h_m_s_prescription_1a3295ad85a6a07bba53265b409a626b3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a3295ad85a6a07bba53265b409a626b3e" kindref="member">OnEditHMSPrescription</ref>();<sp/></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="359" refid="class_c_h_m_s_prescription_1a1a1ab99ba160956c867ec80e3b6f1ca4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a1a1ab99ba160956c867ec80e3b6f1ca4" kindref="member">OnDeleteHMSPrescription</ref>();<sp/></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="366" refid="class_c_h_m_s_prescription_1a5bbe349da7a220edcae0229797edf522" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a5bbe349da7a220edcae0229797edf522" kindref="member">OnSaveHMSPrescription</ref>();<sp/></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="373" refid="class_c_h_m_s_prescription_1a10f9976ca5648ecbf14dd84c5ad198c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a10f9976ca5648ecbf14dd84c5ad198c1" kindref="member">OnCancelHMSPrescription</ref>();<sp/></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="380" refid="class_c_h_m_s_prescription_1a93b47832a78d02c748a28ab327c524f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a93b47832a78d02c748a28ab327c524f6" kindref="member">OnHMSPrescriptionListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="387" refid="class_c_h_m_s_prescription_1a5cc2e55427f458f1333f1423b32a1e57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a5cc2e55427f458f1333f1423b32a1e57" kindref="member">OnPrescriptionApproved</ref>();</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="393" refid="class_c_h_m_s_prescription_1a5d9b1bef56bb7d0443b613be311b3dd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a5d9b1bef56bb7d0443b613be311b3dd2" kindref="member">OnAfterClosePopup</ref>();</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="400" refid="class_c_h_m_s_prescription_1abc88b50e717d466c87c33c3f8fbd727e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_h_m_s_prescription_1abc88b50e717d466c87c33c3f8fbd727e" kindref="member">GetOrderStatus</ref>();</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="407" refid="class_c_h_m_s_prescription_1a6715a3154c6c5862fed699100fce5172" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a6715a3154c6c5862fed699100fce5172" kindref="member">CheckBeforePrint</ref>();</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="413" refid="class_c_h_m_s_prescription_1ab125014a6445d6897962f59159bf2ad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1ab125014a6445d6897962f59159bf2ad4" kindref="member">OnConfirmIssueDrug</ref>();</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="419" refid="class_c_h_m_s_prescription_1a53ffeefc08a8e2a85ba9cfca645bec04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_h_m_s_prescription_1a53ffeefc08a8e2a85ba9cfca645bec04" kindref="member">PrintPrescription</ref>();</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="426" refid="class_c_h_m_s_prescription_1a48d8e12e8be3bd0088442033ca89a8cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a48d8e12e8be3bd0088442033ca89a8cb" kindref="member">Refresh</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nOrderID);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434" refid="class_c_h_m_s_prescription_1ac347616c32e60cd2f6d93dc0b4614683" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>BOOL<sp/><ref refid="class_c_h_m_s_prescription_1ac347616c32e60cd2f6d93dc0b4614683" kindref="member">PreTranslateMessage</ref>(MSG<sp/>*pMsg);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440" refid="class_c_h_m_s_prescription_1a8ff848ce1f6d7a1e706da6a02d7c78e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a8ff848ce1f6d7a1e706da6a02d7c78e8" kindref="member">OnResizeLayout</ref>();</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="446" refid="class_c_h_m_s_prescription_1a14fc551c01fe1582acd50d58212d5005" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1a14fc551c01fe1582acd50d58212d5005" kindref="member">InVongDeoTay</ref>();</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="452" refid="class_c_h_m_s_prescription_1af3440666c5046432fe3b96a00e7b4ad6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_h_m_s_prescription_1af3440666c5046432fe3b96a00e7b4ad6" kindref="member">OnOrderListPrintConsultancy</ref>();</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="459" refid="class_c_h_m_s_prescription_1ac95dd5af360ca0d9e2e5278edda41d0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_h_m_s_prescription_1ac95dd5af360ca0d9e2e5278edda41d0c" kindref="member">IsA11Patient</ref>();</highlight></codeline>
+<codeline lineno="460"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/HMSCore/HMSPrescription.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,125 @@
+\doxysection{Ad\+Contract\+List.\+h}
+\hypertarget{_ad_contract_list_8h_source}{}\label{_ad_contract_list_8h_source}\index{Include/VIMESCORE\_E10/AdContractList.h@{Include/VIMESCORE\_E10/AdContractList.h}}
+\mbox{\hyperlink{_ad_contract_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AdContractList\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AdContractList\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ad_contract_info_view_8h}{AdContractInfoView.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ad_contract_appendix_view_8h}{AdContractAppendixView.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_ad_contract_list_a7314986d3a42ee591347e36af14da771}{CAdContractList}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ CStringArray\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a5482565e8de4697a289a1c9be284f430}{m\_arFilters}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a1235c998b422ba758c2a19107bf8eceb}{m\_nPackageId}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ac306c7ea9921624e2b89d2ace83de36d}{m\_nContractId}};\ \ }
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_contract_list_a352c0ed957ed12be5c997d41d04d499b}{m\_szAppendixID}};}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_aa19ccea6227d8e62ebc8dec24d6df785}{m\_szPartnerID}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ae1657f93d72b379435e54a0f751ddf09}{m\_nSearchID}};}
+\DoxyCodeLine{00041\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a81279d352e1f5aad8bee1ecb1a9e89e3}{m\_szSearchCode}};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_accb65c4c3e314239382173155ae6d560}{m\_wndContractInformation}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a0402097a0b7a1c29a21e201b12dd12cd}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ae274f1a49db67cc0ef6de3f4d90fcccd}{m\_wndFromDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a3a134ba0c37dfc6dcba1828334694b9e}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a319fc43e901d62c6b84a36fe605cb57e}{m\_wndToDate}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a13291a70f0a7b980bedd2045a4d3be58}{m\_wndSearchLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ac1fedfa3d659d8a2473a051dfb7142e9}{m\_wndSearch}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ad57423e020b6c920524da5554e4a3f66}{m\_wndRefresh}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ab9f2f6a5f2a8eddfd962473a03ce6896}{m\_wndList}};}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a55a0c7fa4f85b7277dcd4e90d9187f78}{m\_wndInvoices}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a50091ec41bad629053895eef009ec788}{m\_wndItems}};}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_appendix_view}{CAdContractAppendixView}}\ \mbox{\hyperlink{class_c_ad_contract_list_af93ea604bfefecfd706b28e919cfeefc}{m\_wndAppendixView}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiTabCtrl\ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_adc80bcd31093b8f6fface5f275358065}{m\_wndTab}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ace732327950056a8ef81b576614b49da}{m\_wndAdd}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a6b232dc356e4c7b62f6395eb3cea001e}{m\_wndEdit}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a9481e0b27b0bde619f9949bcf59cf60a}{m\_wndDelete}};}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_contract_list_a08aa10f69b8da911bbbce12ec960bc8b}{m\_szFromDate}};}
+\DoxyCodeLine{00062\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_contract_list_acc870fba9493fd36494e9c46940a44bb}{m\_szToDate}};}
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_contract_list_a9008a9528218cece129ff389574c9a1f}{m\_szSearch}};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a3127b07f5148057bf56246bf61e9f26f}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_aa97b5d14d0a1bad32689421e5e030685}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchChange();\ }}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchSetfocus();\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchKillfocus();\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a7b4ee4960e1dcb3ce90315e476098236}{OnSearchCheckValue}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_aa97347036211b02f9cce6bbb0ddf4af3}{OnRefreshSelect}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_adae9129138d55e77750ab3bddd82aa45}{OnListLoadData}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a8eb6f69249497fd8c94e759fcf345020}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ac9e05b58e8b3067d303e952eb029b3ee}{OnListDblClick}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a12523c6a3624b54ef6573bf7af4689e7}{OnListAddItem}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a74e8f2f9d2eae19f791825dd084e2ef8}{OnListEditItem}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a678ca0157f1ccdfe87dbb47c018310fc}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a7a7ac4ba983beacf43f5c21c83eb1899}{OnImportItems}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_abcf3a61c188e88dee4754491f7764d88}{OnItemsSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a05df090c6c88214777033cc77904e1ec}{OnItemsDblClick}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a41593d46605ec6c3a48f00ad5c6f6fb2}{OnItemsAddItem}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ae00e8138483f77b39f55953d736b2d0b}{OnItemsEditItem}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a8afcced50db123577430e60ae4ab8411}{OnItemsDeleteItem}}();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ad3df41e2e6196865e934c5291c3d8b38}{OnInvoicesLoadData}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a11f62dbc612822f1e6929902e1122ac0}{OnItemsLoadData}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_ac129e18a11510f6f747a4d54466904d5}{OnAddSelect}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a981c3389eef065596cc07a3a5c42f0f8}{OnEditSelect}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_aeba36887490d1030ff738fa70c12aa2c}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a068fcd88c7dcb678351cb084165a8e77}{OnListCreateLiquidation}}();}
+\DoxyCodeLine{00098\ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a7314986d3a42ee591347e36af14da771}{CAdContractList}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_list_a16f675a562df344dd202e0f2a0f1041f}{\string~CAdContractList}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_ab67146bebe4164b48037089168b083d7}{OnCreateComponents}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_a9e082f3f31f5bd8c38c4ff0826242afa}{OnInitializeComponents}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_a597557e36b1409fadd42efedbe45d1a1}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_a42fca41c950fa2277a2d569e302b87d5}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_ab2ced48e8301828581aabcc3a14c13f6}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_a712315f7bcd954444688da83cbe9c3e2}{GetDataToScreen}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_a5de72644854727bb313f16a6892bff7c}{GetScreenToData}}();}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_ad6dd066d23344df87074ed176f2770b7}{SetDefaultValues}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_list_a7e8c8260fccd2426a5d30ef0d6fdeed7}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_list_aa0a7a9a88b00d6ac7992ca575f174372}{OnAddAdContractList}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_list_acad3fe9cca58b840f3bb453d23b98243}{OnEditAdContractList}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_list_a4471f052da014eb5b81cbb182c2652b7}{OnDeleteAdContractList}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_list_a5cbb5befdd92226978d15332415de22e}{OnSaveAdContractList}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_list_a271b828a35ea3253dfaf8341193860ea}{OnCancelAdContractList}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_list_a5b2714176a6d61d221e20e55bf4b40bb}{OnAdContractListListLoadData}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00117\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_a6f33dff37c7e73c9bb374f29ac0f2273}{OnSetFocus}}(CWnd*\ pOldWnd);}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_list_a53734c7a7033394529e3de3e203d3998}{OnResizeLayout}}();}
+\DoxyCodeLine{00119\ \ \ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_ad_contract_list_a390b49d576e1c9f7513847657ca903e2}{OnCommand}}(WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00120\ \ \ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_ad_contract_list_a82f06500ca4c6dfcd86979ca8958d6c6}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

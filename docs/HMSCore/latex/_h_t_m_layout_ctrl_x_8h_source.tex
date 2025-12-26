@@ -1,0 +1,198 @@
+\doxysection{HTMLayout\+Ctrl\+X.\+h}
+\hypertarget{_h_t_m_layout_ctrl_x_8h_source}{}\label{_h_t_m_layout_ctrl_x_8h_source}\index{Include/HMSCore/HTMLayoutCtrlX.h@{Include/HMSCore/HTMLayoutCtrlX.h}}
+\mbox{\hyperlink{_h_t_m_layout_ctrl_x_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HTMLAYOUTCTRLX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HTMLAYOUTCTRLX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmprint.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_behavior.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_dom.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}htmlayout/behaviors/notifications.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}htmlayout/value.h"{}}\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_dom.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_value.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}htmlayout/htmlayout\_aux.h"{}}\ \textcolor{comment}{//\ utf8\ }}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ namespace\ }htmlayout;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ CHTMLayoutCtrl}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_h_t_m_layout_ctrl_x_8h_a769b3b58a4884b0e61a025a04ad9ecd2}{GetHtmlResource}}(LPCTSTR\ pszName,\ \textcolor{comment}{/*out*/}PBYTE\&\ pb,\ \textcolor{comment}{/*out*/}DWORD\&\ cb,\ HMODULE\ hModule);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aa1168241067d85512213e7ff0160aaa0}{CHTMLayoutCtrl}}\ :\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}\ CView,\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}\ htmlayout::event\_handler}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aa1168241067d85512213e7ff0160aaa0}{CHTMLayoutCtrl}})}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ PrintEx*\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a68b58716e15fa35dd040398d4f4d0365}{m\_pPrinter}};\ \textcolor{comment}{//HTMLLayout\ print\ manager}}
+\DoxyCodeLine{00037\ \ \ CRect\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a736c1c9d5b18e31f214738d2c1366802}{m\_rcPrintArea}};\ \textcolor{comment}{//print\ area\ in\ printer\ device\ units}}
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aff841f86e3ca8d199f82d4a55a19c17f}{m\_scaled\_width}};\ \ \textcolor{comment}{//scaled\ width\ of\ the\ print\ area\ for\ 1:1\ scale}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_ad89779196fdef210e3609c96d51a96cf}{m\_margin\_left}};\ \textcolor{comment}{//page\ margins\ in\ inches}}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a356c14bc4e9a2d85330a22e3b3cc74b4}{m\_margin\_top}};}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a4ae06473195c8196e2d9db36d7cc3679}{m\_margin\_right}};}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a126c4ba374fa83f22ed5c97e2534f6f1}{m\_margin\_bottom}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ CSize\ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_ae6dceb2d0a308b714ce8fddf9850f42e}{m\_measured}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ LPCBYTE\ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a7e3deb62d139522a52eed3b340c735ab}{m\_pcb}};}
+\DoxyCodeLine{00048\ \ \ DWORD\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a1197b55f134564286b530da729bc8b56}{m\_dataSize}};}
+\DoxyCodeLine{00049\ \ \ CString\ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a35cd40be428af8df659267fc40288dfc}{m\_szFile}};}
+\DoxyCodeLine{00050\ public:}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a6c389903efdab48bae1104ff12cd8b64}{m\_szType}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a53dc6f82a5b31be8a9f32cdb6cdec5cd}{m\_nDocumentNo}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a888e2367bc9bc0c8f9c13201412394bb}{m\_szDeptID}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a573a594a6f82a805e8eb488ffdc23cc1}{m\_nRefIndex}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a02085c7b15a8eaa1ea35d4f7631896c1}{m\_nRoomID}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_ad5c0c95b2e71066ff69bb3922ee21f01}{m\_nOptIdx}};}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_ae744b3b831232046d198f3d37a22432a}{m\_szForm}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aa1168241067d85512213e7ff0160aaa0}{CHTMLayoutCtrl}}();}
+\DoxyCodeLine{00060\ \ \ \ \ virtual\ \string~\mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aa1168241067d85512213e7ff0160aaa0}{CHTMLayoutCtrl}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a9eb47e9b882e00b88d3d6330c141df78}{OnDraw}}(CDC*\ pDC);\ \ \textcolor{comment}{//\ overridden\ to\ draw\ this\ view}}
+\DoxyCodeLine{00063\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a7f31431cc861c74a30abb4591d477dc3}{OnPrepareDC}}(CDC*\ pDC,\ CPrintInfo*\ pInfo\ =\ NULL);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_ad2c0c6e1aa391e3a4ed5b844863357d1}{OnFilePrintPreview}}();}
+\DoxyCodeLine{00066\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_afda8567218eb4bb2318b5b864aba99c2}{OnFilePrint}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aaf2db57717bef01ad4fe9dd3953dcc1c}{EnableControls}}(\textcolor{keywordtype}{bool}\ bFlag=true);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a990298ed01b2479bbab06b44c068acb7}{EnableControl}}(LPCTSTR\ lpszName,\ \textcolor{keywordtype}{bool}\ bEnable);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_afd7bc06654d853a610f42d22645a49fe}{UpdateData}}(\textcolor{keywordtype}{bool}\ baveAndValidate=true);}
+\DoxyCodeLine{00070\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aa21bf49397627541bdea80d676f26e71}{LoadData}}(\textcolor{keywordtype}{long}\ nDocumentNo);}
+\DoxyCodeLine{00071\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a100e6cd636dcad03e595b7f9ad9d94e7}{SaveData}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{bool}\ bSaveAll\ =\ true);}
+\DoxyCodeLine{00072\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a3e8717b7cc4df1af4cae7d1e083140d9}{SaveAsJson}}(\textcolor{keywordtype}{long}\ nDocumentNo);}
+\DoxyCodeLine{00073\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_ae59aea089e936c51c60af48bc29c3c5a}{Save}}(LPCTSTR\ lpszFile);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a119037bca3f308913c12e4aafb98d996}{OnAfterLoadData}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a9ceaf28b80aca97383fe59a8ac74f0b8}{SetValue}}(LPCTSTR\ lpszName,\ CString\ szValue);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a33a04d60ea074a80f1ca4c50dcc877b9}{GetValue}}(LPCTSTR\ lpszName,\ CString\&\ szValue);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a5e03d37107e1760ca2ef2a0c028668bd}{Load}}(LPCTSTR\ lpszFile);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aa21bf49397627541bdea80d676f26e71}{LoadData}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//Hàm\ load\ từ\ dữ\ liệu\ bệnh\ án\ chuyên\ khoa}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aeca49bccdbe8a12f667ae19c91b3729d}{LoadData\_V2}}();}
+\DoxyCodeLine{00082\ \ \ \ \ dom::element\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a5258451188292fc5c851bb667c9933b5}{Find}}(LPCTSTR\ lpszName);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_ab9dd1e0f1f2dd76e658bac6916b2d4bf}{PostAndPrintDocx}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ protected:}
+\DoxyCodeLine{00087\ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a24ce9428f054f27dbd2b4530a88f3132}{OnPreparePrinting}}(CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00088\ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a89b5468770b02b2f2a8a33c783c4c48e}{OnBeginPrinting}}(CDC*\ pDC,\ CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00089\ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a2f59473ca2e509e4d15eb52f24a121a6}{OnEndPrinting}}(CDC*\ pDC,\ CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00090\ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_acc6fe5fb555784ed58e469717f265a75}{OnPrint}}(CDC*\ pDC,\ CPrintInfo*\ pInfo);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ public:}
+\DoxyCodeLine{00096\ \ \ \textcolor{comment}{//\ Generic\ creator}}
+\DoxyCodeLine{00097\ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_af8212bede996941eddb1a82ddb22174c}{Create}}(DWORD\ dwStyle,\ const\ RECT\&\ rect,\ CWnd*\ pParentWnd,\ UINT\ nID);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{comment}{//\ Generic\ creator\ allowing\ extended\ style\ bits}}
+\DoxyCodeLine{00100\ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a1891ab3e4f6d0cb479eaae92dccb465d}{CreateEx}}(DWORD\ dwExStyle,\ DWORD\ dwStyle,\ const\ RECT\&\ rect,}
+\DoxyCodeLine{00101\ \ \ \ \ CWnd*\ pParentWnd,\ UINT\ nID);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \textcolor{comment}{//\ Load\ html\ from\ memory\ buffer}}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a944329ddbf0b8caf0dad78977e78ed55}{LoadHtml}}(LPCBYTE\ pb,\ DWORD\ nBytes);}
+\DoxyCodeLine{00105\ \ \ \textcolor{comment}{//\ load\ html\ from\ resource\ by\ name}}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_af110227d384de795bf39cab0de26eb64}{LoadHtmlResource}}(LPCTSTR\ pszName,\ HMODULE\ hModule\ =\ NULL);}
+\DoxyCodeLine{00107\ \ \ \textcolor{comment}{//\ load\ html\ from\ resource\ by\ id}}
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_af110227d384de795bf39cab0de26eb64}{LoadHtmlResource}}(DWORD\ resID,\ HMODULE\ hModule\ =\ NULL);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \textcolor{comment}{//\ Overridables}}
+\DoxyCodeLine{00111\ \ \ }
+\DoxyCodeLine{00112\ \ \ \textcolor{comment}{//\ custom\ behavior\ notifications,\ see\ behaviors/notifications.h}}
+\DoxyCodeLine{00113\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aad5a8610cb0494354dc2a472e891f26c}{OnBehaviorNotify}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \textcolor{comment}{//\ non-\/HTMLayout\ notifications}}
+\DoxyCodeLine{00116\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a05779f6f675df5d7995513715228d6af}{OnHtmlGenericNotifications}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00117\ \ \ }
+\DoxyCodeLine{00118\ \ \ \textcolor{comment}{//\ create\ control\ for\ <INPUT>,\ <WIDGET>,\ <TEXTAREA>,\ <SELECT>}}
+\DoxyCodeLine{00119\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a68aa87ca73b6defe361dd0bd63df4ba2}{OnCreateControl}}(LPNMHL\_CREATE\_CONTROL\ pnmcc);}
+\DoxyCodeLine{00120\ \ \ }
+\DoxyCodeLine{00121\ \ \ \textcolor{comment}{//\ post-\/control-\/creation\ notification.\ Good\ place\ to\ set\ additional\ styles\ for\ builtin\ controls}}
+\DoxyCodeLine{00122\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aa07c65ebc3be0caeccc0002951151cbf}{OnControlCreated}}(LPNMHL\_CREATE\_CONTROL\ pnmcc);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \textcolor{comment}{//\ your\ chance\ to\ destroy\ child\ control\ in\ your\ own\ way.\ ::DestroyWindow\ used\ by\ default}}
+\DoxyCodeLine{00125\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a3fb849196a8b1327b6ee8385be1a64e6}{OnDestroyControl}}(LPNMHL\_DESTROY\_CONTROL\ pnmhl);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \textcolor{comment}{//\ All\ hyperlink\ notifications\ generated\ by\ the\ hyperlink\ behavior.}}
+\DoxyCodeLine{00128\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a025a62b063bd40fd7c66a38d70fa69b2}{OnHyperLink}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00129\ \ \ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a47205880f2316fc1d4c003430d206bac}{OnHyperLinkEnter}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00130\ \ \ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a411bb1a43a29d931b090b4c5748f2400}{OnHyperLinkLeave}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00131\ \ \ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a715b7048b23ccbb47bb20e5413c31a09}{OnHyperLinkClick}}(NMHL\_HYPERLINK*\ pnmhl);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \textcolor{comment}{//\ Override\ this\ to\ load\ data\ (images\ or\ css\ sheets)\ from\ places\ other\ than\ this\ app\ resources.}}
+\DoxyCodeLine{00134\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_acf9e2d170d7c492d9bfc4074806162ac}{OnLoadData}}(LPNMHL\_LOAD\_DATA\ pnmld);}
+\DoxyCodeLine{00135\ \ \ }
+\DoxyCodeLine{00136\ \ \ \textcolor{comment}{//\ Data\ arrived.\ Handle\ this\ if\ you\ want\ to\ store\ them\ somewhere\ for\ future\ use.}}
+\DoxyCodeLine{00137\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a330df4fe59b1af239e4f16c07b2dc101}{OnDataLoaded}}(LPNMHL\_DATA\_LOADED\ pnmld);}
+\DoxyCodeLine{00138\ \ \ }
+\DoxyCodeLine{00139\ \ \ \textcolor{comment}{//\ All\ resources\ are\ in\ place.}}
+\DoxyCodeLine{00140\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a5da436e205379551d38011bce60251d9}{OnDocumentComplete}}();}
+\DoxyCodeLine{00141\ \ \ }
+\DoxyCodeLine{00142\ \ \ \textcolor{comment}{//\ Attach\ your\ own\ behavior\ to\ the\ element}}
+\DoxyCodeLine{00143\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_aaf4442dbf4dedae48ea7f7265a2d51b0}{OnAttachBehavior}}(\ LPNMHL\_ATTACH\_BEHAVIOR\ lpab\ );}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{//\ DOM\ helpers}}
+\DoxyCodeLine{00148\ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a9ebcca86add1bbdef88fd5b0bacf6ef7}{GetAttrInt}}(HELEMENT\ he,\ LPCSTR\ attrName,\ \textcolor{keywordtype}{int}\ defaultValue\ =\ 0);}
+\DoxyCodeLine{00149\ \ \ CString\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a514be3f49cc1004264950f8188c28039}{GetElementType}}(HELEMENT\ he);}
+\DoxyCodeLine{00150\ \ \ CString\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a7932b9c41deeb692ee70da2f8ad2b024}{GetAttr}}(HELEMENT\ he,\ LPCSTR\ attrName);}
+\DoxyCodeLine{00151\ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a92f2be80933604cc4a311eef0abcc48a}{HasAttr}}(HELEMENT\ he,\ LPCSTR\ attrName);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ protected:}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \textcolor{comment}{//\ HTMLayout\ callback}}
+\DoxyCodeLine{00156\ \ \ static\ LRESULT\ CALLBACK\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a8b8bf1e1c05535447e14b82d03091302}{callback}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam,\ LPVOID\ vParam);}
+\DoxyCodeLine{00157\ \ \ }
+\DoxyCodeLine{00158\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a9bcecdd9dce34fb8b4a6db565f71a929}{SetCallback}}();}
+\DoxyCodeLine{00159\ \ }
+\DoxyCodeLine{00160\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a8af5f7d41e7acfd23e8a1b425918fbe7}{WindowProc}}(\ UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00161\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a8a1d9d8600eb0b0f8ae76e3472d7ac59}{OnHtmlNotify}}(UINT\ uMsg,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00162\ \ \ }
+\DoxyCodeLine{00163\ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a27205a16e2621527e7761e57c576b472}{OnHtmlCommand}}(NMHL\_COMMAND\_CLICK\ *pnmCommand)\ ;}
+\DoxyCodeLine{00164\ \ \ }
+\DoxyCodeLine{00165\ \ \ LRESULT\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a916cf8bd9cb220b754c31513ef66c370}{LoadResourceData}}(LPNMHL\_LOAD\_DATA\ pnmld);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ virtual\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a1f4608e5a609128bbb268a29e2a2e55c}{on\_event}}\ (HELEMENT\ he,\ HELEMENT\ target,\ BEHAVIOR\_EVENTS\ type,\ UINT\_PTR\ reason\ );\ }
+\DoxyCodeLine{00168\ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a0e8a934b4b19c5217dbebff3024c27a7}{OnElementEvent}}(dom::element\ el)\{\};}
+\DoxyCodeLine{00169\ \ \ }
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00172\ \ \ \ \ HELEMENT\ \ \ \ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a122e4f1cfb40b78b0302a4be8596e6bb}{GetRootElement}}();}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_af0596dfe8340ccb22766ca9f0ce71b79}{PreTranslateMessage}}(\ MSG*\ pMsg\ );}
+\DoxyCodeLine{00174\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a0b96b1c4b744bf09be0dcc1f7cc22546}{OnCreate}}(LPCREATESTRUCT\ lpCreateStruct);}
+\DoxyCodeLine{00175\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_a5bc6244071b0ca73c9491bc5835ab162}{OnDestroy}}();}
+\DoxyCodeLine{00176\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_t_m_layout_ctrl_adf270c6fc225897188ca9a14bc667351}{OnNcDestroy}}();}
+\DoxyCodeLine{00177\ \};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{comment}{//\ HTML\ command\ map\ macros:}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ BEGIN\_HTML\_COMMAND\_MAP\ \(\backslash\)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ virtual\ LRESULT\ OnHtmlCommand(NMHL\_COMMAND\_CLICK\ *pnmCommand)\ \{}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ ON\_HTML\_COMMAND(WStrHtmlElementId,\ Proc)\ \(\backslash\)}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ if(\ wcscmp(WStrHtmlElementId,pnmCommand-\/>szElementID)\ ==\ 0\ )\ \(\backslash\)}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \{\ \ Proc();\ return\ 0;\ \}}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ END\_HTML\_COMMAND\_MAP\ \(\backslash\)}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ return\ 0;\ \}}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#pragma\ comment(lib,\ "{}../lib/HTMLayout.lib"{})}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

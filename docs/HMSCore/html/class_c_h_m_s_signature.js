@@ -1,0 +1,25 @@
+var class_c_h_m_s_signature =
+[
+    [ "CHMSSignature", "class_c_h_m_s_signature.html#aee88c38a01a942182c47e21236339cf3", null ],
+    [ "~CHMSSignature", "class_c_h_m_s_signature.html#ae494f443db7071822d656395bae497d4", null ],
+    [ "DownloadFile", "class_c_h_m_s_signature.html#a6b9e7f2d1d145f9121fd4304147009e1", null ],
+    [ "FptConfig", "class_c_h_m_s_signature.html#a90ab8af0bb0011c5eb4cb338a7475bad", null ],
+    [ "FtpDownload", "class_c_h_m_s_signature.html#a3572e551af82156f7f5e8aeb86a5bd3d", null ],
+    [ "FtpUpload", "class_c_h_m_s_signature.html#a1c74a7fc67cb192def1181a45439be52", null ],
+    [ "ReSignatureDocPDFNextUser", "class_c_h_m_s_signature.html#a270f58d6526785582c829ad78879852f", null ],
+    [ "SavePDF", "class_c_h_m_s_signature.html#a8ac7b46216c2753eba465d82a74f8dd3", null ],
+    [ "SignatureDocPDF", "class_c_h_m_s_signature.html#aaf1ebce03b7be2ac4f1fa27c7049be7c", null ],
+    [ "SignatureFeeInvoice", "class_c_h_m_s_signature.html#a48c0411ac3db33bbfeb92893ebfeec59", null ],
+    [ "SignatureFeeInvoiceView", "class_c_h_m_s_signature.html#a8f5240129019466132c7c3528b96f5ac", null ],
+    [ "SignaturePDF", "class_c_h_m_s_signature.html#a61b43a90a51a6913a3f91ef60ddd5160", null ],
+    [ "SignaturePDF2", "class_c_h_m_s_signature.html#afa11821b8fda109af78bad3400067b32", null ],
+    [ "SignaturePDF2WithSignFielName", "class_c_h_m_s_signature.html#aa7a89775eec73ede6b6582ebd5f0484f", null ],
+    [ "SignatureSheet", "class_c_h_m_s_signature.html#acf4334b17c97f208eb19e78ddb75e10d", null ],
+    [ "SignatureXMLFile", "class_c_h_m_s_signature.html#a9a4e18643b15e3ed595d207f15b49478", null ],
+    [ "UploadFile", "class_c_h_m_s_signature.html#a7ab2ddc72f04b08de8216f1a622e7b95", null ],
+    [ "m_nPort", "class_c_h_m_s_signature.html#a3890c82f9ddf658e530d8630542a833a", null ],
+    [ "m_szHost", "class_c_h_m_s_signature.html#a10df2877018f2d97a9f7c3f1afc491ad", null ],
+    [ "m_szPassword", "class_c_h_m_s_signature.html#ab5bd120607fe31c8ed1e499cd747d61b", null ],
+    [ "m_szPath", "class_c_h_m_s_signature.html#a51adaab857538584db4f92ae0edc31ec", null ],
+    [ "m_szUserName", "class_c_h_m_s_signature.html#a2bafd7d86e1a6fe98de57b581bb33294", null ]
+];

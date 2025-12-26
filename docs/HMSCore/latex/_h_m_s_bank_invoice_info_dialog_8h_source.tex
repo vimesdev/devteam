@@ -1,0 +1,227 @@
+\doxysection{HMSBank\+Invoice\+Info\+Dialog.\+h}
+\hypertarget{_h_m_s_bank_invoice_info_dialog_8h_source}{}\label{_h_m_s_bank_invoice_info_dialog_8h_source}\index{Include/HMSCore/HMSBankInvoiceInfoDialog.h@{Include/HMSCore/HMSBankInvoiceInfoDialog.h}}
+\mbox{\hyperlink{_h_m_s_bank_invoice_info_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSBankInvoiceInfoDialog\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSBankInvoiceInfoDialog\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_af215d9d5a558e41b1e3600ce0645fc98}{CHMSBankInvoiceInfoDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a803213014a134f07867c23b5d9c1c908}{m\_szBirthDate}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a3e1ada65da6a1a772c9eab1382ca5792}{m\_bEnterPatient}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a8af76526cff4c2c7ca3cf4dd6afcb008}{m\_nFlag}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a80e32187a8464afef81244e99ca619c1}{m\_nCurrentDocNo}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aefedcd5abfc5dce5d70c6c9eea3f2397}{m\_nCurrentRecordNo}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aae3b024b1cde8432877eb7f99d773d94}{m\_wndDepositInformation}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ab955f5c436cf755999a604661a847a25}{m\_wndDocumentNoLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a448400c9525cdf48d5e91e312d844d68}{m\_wndDocumentNo}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ab1ca5daea870ac9e5218ae04a4620d9a}{m\_wndRecordNo}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a329a7feafafc4f52842c4df99c18e2c7}{m\_wndAdmitDateLabel}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a0b599626eea4f605f6651421cd8e46e6}{m\_wndAdmitDate}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a5b5a42f16f375d9e7b442c7702d17b44}{m\_wndDepartmentLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ac66324772be328af9e74d043e33cb33a}{m\_wndDepartment}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a5be95110385b88c956b813fcd2928189}{m\_wndPatientNameLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ac1eef3894f83f7e5c71f27b109d161bf}{m\_wndPatientName}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad1572db0689cb7a54fd74f82fb35338b}{m\_wndYOBLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a364f5666573683e8d4ace5a8fec0ca0e}{m\_wndYOB}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a9d3e9f2049d2076e148479b3a1fedf30}{m\_wndSexLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aaf76852956a0437b90c866c675ae45f7}{m\_wndSex}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_abff08abde657bc13aed873912d81e98b}{m\_wndObjectLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aca4c5a9c52ae3811654f984713b43941}{m\_wndObject}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aa057082aec7402efb1bdd72446661ed8}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a58a0b103b76cf7367c3cb5f9d2cf83bd}{m\_wndStatus}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aa871116ad85c857e758a1f3208b3a5e6}{m\_wndSerialNoLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a117c2da6d2224f75b714c74a272609f3}{m\_wndSerialNo}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad7fb7f2c3524aa98d1acda07cda679b5}{m\_wndReceiptNoLabel}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_abe4c25887fbf94bc30b1341999df3b58}{m\_wndReceiptNo}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a76c9fe9a3bff74f4cc1ef7a1e105a682}{m\_wndReceiptDateLabel}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a831cb17ed288ad4b962ad8aa3ca1a73f}{m\_wndReceiptDate}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad8ae5c3926a863ceba7b5530dc8262cd}{m\_wndAmountLabel}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a982f086b1d69c1fb1bc9758a6d04aff9}{m\_wndAmount}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a13facfa1f841365d7f4e9f592db5546f}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aabeb4a93d3a27d0dc4b83e5f1f31864d}{m\_wndDescription}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a4422d4791d190864859a16a33bc0c4b1}{m\_wndReturnDateLabel}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a47321583ba406e13b8953f5093c86ed6}{m\_wndReturnDate}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a1477b58961ea11848efd6d3a34172b07}{m\_wndList}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a8b6385382b4ef88b2f2a8a1e6ce66001}{m\_wndTamung}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a8df140e7f8c0b545c436a33517a69669}{m\_wndDichvu}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a43ca08d73bed067ae9de5462f8ad6770}{m\_wndTTRavien}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_acf717f72a2be864c260fd60bc1869be4}{m\_wndAdd}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ace4e9d0928d7ae814f3d033a1f383670}{m\_wndSave}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a3f624d2db5b531b11b274f2974e1ef63}{m\_wndPrint}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aa5348d4b47656068c4a26fe7f7affd4f}{m\_wndClose}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a5cbf07e4e8a26a793fbf850cd6689cd5}{m\_nOrderID}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aaf4e4ff063411c5bea0a5d4e4ffd5abf}{m\_nDocumentNo}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ab551e397f9b6be4107da35e4b0051b93}{m\_nType}};}
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a8f1bc2ed931b04f8863f6478ad6bac10}{m\_szRecordNo}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a5a7af9c6158c70a3f4029e04c90e76c9}{m\_szAdmitDate}};}
+\DoxyCodeLine{00088\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a162ef0a13867ce44679c8dc25c0f03f9}{m\_szDepartmentKey}};}
+\DoxyCodeLine{00089\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_af2a07829cdae5ae7e245c5fce8848b4a}{m\_szPatientName}};}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ac4ac9e00f358424c0c53797cef0ade5c}{m\_nYOB}};}
+\DoxyCodeLine{00091\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a0c1a96fbb6c40c6b4037f47fbd381a05}{m\_szSexKey}};}
+\DoxyCodeLine{00092\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a8273243b0905e536bf40505e37b94095}{m\_szObjectKey}};}
+\DoxyCodeLine{00093\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a7153ea53b9bd82906a028f32d9603f95}{m\_szStatus}};}
+\DoxyCodeLine{00094\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a99040534e95df5dee5ebdb3e15670758}{m\_szSerialNo}};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_afec9f6f5591f71ee3bd53fbd99936cae}{m\_nReceiptNo}};}
+\DoxyCodeLine{00096\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ae9d0d8265af8f5d47f35f2d6af8c2efb}{m\_szReceiptDate}};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad084924a6c52dbc8aa33fffc3d895008}{m\_nAmount}};}
+\DoxyCodeLine{00098\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ac7724e1bb9e7171b2a59a520fa72efe1}{m\_szDescription}};}
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a6a4ce1d7e58982a5a504ca4b2045e25a}{m\_szReturnDate}};}
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ac39879e4f20d1ff58e79feb44fa84839}{m\_szUrlBank}};}
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a2d049b5b5b172423b5b7cf2ce16e090e}{m\_szDocStatus}};}
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_addc7127ce7d42b9441a66e0b9c13e760}{m\_szTID}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a61afb2344a58772d2028b35af8c1cda5}{m\_nInvoiceNo}};}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a81157f9987011bda462e52f998b19b44}{m\_nKey}};}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a90b1d489e1009809e0f3ff76cf8e8efb}{m\_bRefund}};}
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ab659516d94ab63481e88b57154b009fd}{m\_szRefSerialNo}};}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a4a2037cb356ec6b1b6a5bdebf2b4a63a}{m\_nRefReceiptNo}};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aa6e9af832e5d3a0c1c2afa037de7ef1e}{m\_nRefundInvoice}};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ae1a81c4fd7fa8eea68857987e87972b2}{m\_nDepositInvoice}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//Table\ hms\_patientTbl:\ Thong\ tin\ benh\ nhan}}
+\DoxyCodeLine{00113\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aa70177879aa19a06b5a9718d405326e0}{m\_hms\_patientTbl}};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//Table\ hms\_doc:\ Thong\ tin\ ho\ so\ benh\ nhan}}
+\DoxyCodeLine{00115\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a3e4aca9437a4f4f65c968f5a3ac3a13f}{m\_hms\_docTbl}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a3d1048f848ed7c15d3ab5ef2fe987379}{m\_hms\_fee\_depositTbl}};}
+\DoxyCodeLine{00118\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a0411ed17771d6251d194d28a964ace83}{m\_hms\_fee\_refundTbl}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoChange();\ }}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoSetfocus();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoKillfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ab2715da99838889fd70eb44655b4497d}{OnDocumentNoCheckValue}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRecordNoChange();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRecordNoSetfocus();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRecordNoKillfocus();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a61ad6f01afdf22f8eb169661b74e5631}{OnRecordNoCheckValue}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAdmitDateChange();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAdmitDateSetfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAdmitDateKillfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a103d037e7838576154e3197e96c9c437}{OnAdmitDateCheckValue}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a691335b475f3a3d991c554b733c4a1e9}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a83e33fd77ec1297ffebae5c7ecbfec2e}{OnDepartmentSelendok}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentSetfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentKillfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_acb45b5f71cf676cf9d63725e1d17c7e7}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a7b9de062740aae41d2155e688e203a9c}{OnDepartmentAddNew}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameChange();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameSetfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameKillfocus();\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad0c6bd23f8daa508a27ea4b8acd7819f}{OnPatientNameCheckValue}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYOBChange();\ }}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYOBSetfocus();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYOBKillfocus();\ }}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a82ebbaec3fd7970e27f8f3a26e182e47}{OnYOBCheckValue}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a4810c27cc0c2707fa6a361ca304c7f39}{OnSexSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a22d04b3b5397b444926e25e0ccbef020}{OnSexSelendok}}();\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexSetfocus();\ }}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexKillfocus();\ }}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a961c698abb0739ec40fa7cd37d48fff2}{OnSexLoadData}}();\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSexAddNew();\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad4aad4330da9bf909ab338388711c42d}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ac5e0f19cafe4fbfcb5182b8a8e168346}{OnObjectSelendok}}();\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectSetfocus();\ }}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectKillfocus();\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a3d85efc1b58123a5af2a872dd69ccbd5}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectAddNew();\ }}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusChange();\ }}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad53d9e03085993f69ea4eb7d8ceb05e5}{OnStatusCheckValue}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSerialNoChange();\ }}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSerialNoSetfocus();\ }}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSerialNoKillfocus();\ }}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a62f2037d28293bb302b380195d6e34e5}{OnSerialNoCheckValue}}();\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptNoChange();\ }}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptNoSetfocus();\ }}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptNoKillfocus();\ }}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_afac9e46f672e6a2e0364fc4a0d3f8c0f}{OnReceiptNoCheckValue}}();\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptDateChange();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptDateSetfocus();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiptDateKillfocus();\ }}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a271ad2eed0d44105edb80199015290de}{OnReceiptDateCheckValue}}();\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAmountChange();\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAmountSetfocus();\ }}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAmountKillfocus();\ }}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_af1bb8b8db63d7e5e8e9ceea4ed24fd57}{OnAmountCheckValue}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aa1241f68407cb2e8cbbca6d6f064453d}{OnDescriptionCheckValue}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReturnDateChange();\ }}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReturnDateSetfocus();\ }}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReturnDateKillfocus();\ }}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a80ca1ec26f8a33d40eb0cdf6431b0b17}{OnReturnDateCheckValue}}();}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a27192dcf81ba3e70b73aa765e9b95822}{OnListLoadData}}();}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a1d80e369e194047b3378079b8d3e3519}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a354cd0231fada99521c16cb783d0552c}{OnListDblClick}}();\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a6e44bfa9f2163e5b5d5bfd2797f99d53}{OnListAddItem}}();\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ae7738e3145a1a55cbb3989814901e2d7}{OnListDeleteItem}}();}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a589c15e3fa17f14c9f03988cf1ff8206}{OnListPrintItem}}();\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a9045bb4daab885f6b9c171d097e3e2dd}{OnListPaymentItem}}();\ }
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a1a5bf9534a93c33e3238f5bf0be9069a}{OnVCBBankGenQRpay}}(\textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{long}\ nDocumentNo,\ CString\ szMID,\ CString\ szTID,\ CString\ szBillNumber,\ CString\ szDescription,\ CString\ szDeptID,\ CString\ szUserID,\ CString\ szType,\ \textcolor{keywordtype}{long}\ nAmount);}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a0d3672310e4e5e29af146875cb347713}{PrintQRCodeSheet}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{long}\ nKey);}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ae9d6c8ce2a68a333ef033a467852db16}{PrintDeposit}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ \textcolor{keywordtype}{bool}\ bPreview);}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aca26c0a9fe9e3e182a7a44e1c6dba8ff}{OnDichvuSelect}}();\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ad74750ea3bdc324d1faab0cb5e10d7dc}{OnTamungSelect}}();\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a1d9ed8fb7e32e30f4443903ac02e0d4b}{OnTTRavienSelect}}();\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a88b5d304062c9758d6e2a00e2d3d2a74}{OnAddSelect}}();\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_ab1629bf62d0c22111ddc21df9792ec62}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a7f03d2b7f174cc3bcccad97a9ac2de42}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a824de616735fff2819fd9fa62ad3ca7a}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_af215d9d5a558e41b1e3600ce0645fc98}{CHMSBankInvoiceInfoDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a4720459a43980c64f6c5d0a85dcf51c1}{\string~CHMSBankInvoiceInfoDialog}}();}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a4a67ebea0bdbc6256e7e4d7ae62909b1}{OnCreateComponents}}();}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a247cb0e41014206d01c9fa9f9cf7c44d}{OnInitializeComponents}}();}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a50c01afe982b32d2379e361603b3caa3}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a1bb244a7070d65a336c4ed3270b9ee4f}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aac8a712789d8d86c2f005745aa7ddef8}{GetDataToScreen}}();}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a6697be3bd47ce565cb0496e7b09ff18d}{GetScreenToData}}();}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_adcf00d3632a6a18821ae119e06bae544}{SetDefaultValues}}();}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a00e5b444bb08c8ca58d5aa64fcabb07c}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aaf43bc697f0dbf19309872dd17142790}{OnAddHMSBankInvoiceInfoDialog}}();\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a18bba57eb8f6dbaaafaaf8183181775b}{OnEditHMSBankInvoiceInfoDialog}}();\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a252a7e76cb8fb3ca5f9cfc487c6103ab}{OnDeleteHMSBankInvoiceInfoDialog}}();\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_adbf1a23d58067a97733293f875d95f0f}{OnSaveHMSBankInvoiceInfoDialog}}();\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_a062fceb99d01fcf9e49139cd964fb1b4}{OnCancelHMSBankInvoiceInfoDialog}}();\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aac71e928142ea8d90f0dde4ae0ed858b}{OnHMSBankInvoiceInfoDialogListLoadData}}();\ }
+\DoxyCodeLine{00221\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00222\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_bank_invoice_info_dialog_aeee12293a199c5278326e62016b2a0f2}{OnTimer}}(UINT\ nIDEvent);}
+\DoxyCodeLine{00223\ \};}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

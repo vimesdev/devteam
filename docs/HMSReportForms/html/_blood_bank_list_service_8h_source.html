@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSReportForms Documentation: Include/HMSReportForms/BB/BloodBankListService.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSReportForms Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_blood_bank_list_service_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BloodBankListService.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_blood_bank_list_service_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BLOODBANKLISTSERVICE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BLOODBANKLISTSERVICE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright � Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiView.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html">   30</a></span><span class="keyword">class </span><a class="code hl_function" href="class_c_blood_bank_list_service.html#af5fe53f623f3d806a63d5f245803b762">CBloodBankListService</a> : <span class="keyword">public</span> CGuiView{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aaccdddc6e5490be8673b4d0089ebf3d2">   33</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_blood_bank_list_service.html#aaccdddc6e5490be8673b4d0089ebf3d2">m_wndFromDateLabel</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a05b3a34c69389c6ce1e68cac438b2dd2">   34</a></span>    CGuiDateTimeCtrl    <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a05b3a34c69389c6ce1e68cac438b2dd2">m_wndFromDate</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a8482df0d622bd2684a270f40a7f40559">   35</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a8482df0d622bd2684a270f40a7f40559">m_wndToDateLabel</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a2a8adb406514f2caf36f8302cd7ace9d">   36</a></span>    CGuiDateTimeCtrl    <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a2a8adb406514f2caf36f8302cd7ace9d">m_wndToDate</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ac74a3ad19bdc2aa53937c81810be36bd">   37</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_blood_bank_list_service.html#ac74a3ad19bdc2aa53937c81810be36bd">m_wndReportCondition</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a16e5ae8a320cbce017299d2d627d8486">   38</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a16e5ae8a320cbce017299d2d627d8486">m_wndObject</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a88af62ac55bb3fd71cd3d3aeb2965622">   39</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a88af62ac55bb3fd71cd3d3aeb2965622">m_wndDepartment</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a4461f6c800f7bf4b4312a14e5a6afbbc">   40</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a4461f6c800f7bf4b4312a14e5a6afbbc">m_wndList</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a2feb5cb167b5fa61dad88fe711383926">   41</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a2feb5cb167b5fa61dad88fe711383926">m_wndListProduct</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a0004604040cd7481295779a200dd6c55">   42</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a0004604040cd7481295779a200dd6c55">m_wndPrintPreview</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ab25231b8d0592cd8b4e543fc3509f11c">   43</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_blood_bank_list_service.html#ab25231b8d0592cd8b4e543fc3509f11c">m_wndExport</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a7516d736dc5b0579b550e590abcb1b65">   44</a></span>    CString <a class="code hl_variable" href="class_c_blood_bank_list_service.html#a7516d736dc5b0579b550e590abcb1b65">m_szFromDate</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#acbedbdd32443bb8ec2f1049e1101bec8">   45</a></span>    CString <a class="code hl_variable" href="class_c_blood_bank_list_service.html#acbedbdd32443bb8ec2f1049e1101bec8">m_szToDate</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//void          OnFromDateChange(); </span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">//void          OnFromDateSetfocus(); </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">//void          OnFromDateKillfocus(); </span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ab58ebdb15c085e969b39087db9878354">   49</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#ab58ebdb15c085e969b39087db9878354">OnFromDateCheckValue</a>(); </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//void          OnToDateChange(); </span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">//void          OnToDateSetfocus(); </span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">//void          OnToDateKillfocus(); </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ac1537d611bd202ed6d76a257b792f23a">   53</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#ac1537d611bd202ed6d76a257b792f23a">OnToDateCheckValue</a>(); </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ae790a8d8f448e6036b0d23e2a78a80fa">   55</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#ae790a8d8f448e6036b0d23e2a78a80fa">OnObjectCheckAll</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ae1cc63c9def5733c3f472f96a4d982b6">   56</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#ae1cc63c9def5733c3f472f96a4d982b6">OnObjectUncheckAll</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ac692aca6838d0c54cdea953b05a0a54b">   58</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#ac692aca6838d0c54cdea953b05a0a54b">OnDeptCheckAll</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aa77248dca3c37967f3268279c654cc24">   59</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#aa77248dca3c37967f3268279c654cc24">OnDeptUncheckAll</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a54fff216005a4a48bcf4db09959af294">   61</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#a54fff216005a4a48bcf4db09959af294">OnListCheckAll</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#adf8f1d3b52a3f5617ac1f38c7b8b6533">   62</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#adf8f1d3b52a3f5617ac1f38c7b8b6533">OnListUncheckAll</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a338791c212dd8a66f5557f1d326acc80">   64</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#a338791c212dd8a66f5557f1d326acc80">OnObjectLoadData</a>(); </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ade2eea7c4c6fd8bbc491b21072b80462">   65</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#ade2eea7c4c6fd8bbc491b21072b80462">OnObjectSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aa34fe42051ec38ce772c44daaed0c46b">   66</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#aa34fe42051ec38ce772c44daaed0c46b">OnObjectDblClick</a>(); </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a02f531532a4a9370b2a250ceddfdce31">   67</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#a02f531532a4a9370b2a250ceddfdce31">OnObjectDeleteItem</a>(); </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a563780018c3465129c96332c1bd5b878">   68</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#a563780018c3465129c96332c1bd5b878">OnDepartmentLoadData</a>(); </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a4d871439f4465e3ab113014e0ee92fa3">   69</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#a4d871439f4465e3ab113014e0ee92fa3">OnDepartmentSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ab5cf24311445904a3c5ed86bed7f276d">   70</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#ab5cf24311445904a3c5ed86bed7f276d">OnDepartmentDblClick</a>(); </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ab319959737c84e003ec345a403849308">   71</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#ab319959737c84e003ec345a403849308">OnDepartmentDeleteItem</a>(); </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a55f1b24485d9e7946623a36265d52d7d">   72</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#a55f1b24485d9e7946623a36265d52d7d">OnListLoadData</a>(); </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aaf1cf49825314bec8305a14f4e24a3fb">   73</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#aaf1cf49825314bec8305a14f4e24a3fb">OnListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a09c5c628b0698a0f28929ba171c72189">   74</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#a09c5c628b0698a0f28929ba171c72189">OnListDblClick</a>(); </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#acc1a280dd1607d8d7f6447eb31c1f351">   75</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_blood_bank_list_service.html#acc1a280dd1607d8d7f6447eb31c1f351">OnListDeleteItem</a>(); </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ac3182010dd053bf87e3bbcb2ac1a6dec">   76</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#ac3182010dd053bf87e3bbcb2ac1a6dec">OnPrintPreviewSelect</a>(); </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a990cbaa32ece68b99d47cb98a014b2e7">   77</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_blood_bank_list_service.html#a990cbaa32ece68b99d47cb98a014b2e7">OnExportSelect</a>(); </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#af5fe53f623f3d806a63d5f245803b762">   78</a></span>    <a class="code hl_function" href="class_c_blood_bank_list_service.html#af5fe53f623f3d806a63d5f245803b762">CBloodBankListService</a>(CWnd *pParent);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a6b15d0792ee54e225ea527e54a923359">   79</a></span>    <a class="code hl_function" href="class_c_blood_bank_list_service.html#a6b15d0792ee54e225ea527e54a923359">~CBloodBankListService</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aab1e5f00b71de7a44b4d169decfacd5c">   80</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#aab1e5f00b71de7a44b4d169decfacd5c">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#ab87ab9a52721c7e888716473dbe670ae">   81</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#ab87ab9a52721c7e888716473dbe670ae">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a39a6528a6019454e0977c97750069a1b">   82</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#a39a6528a6019454e0977c97750069a1b">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aed9654c495e0e4a98f088135f3c999cf">   83</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#aed9654c495e0e4a98f088135f3c999cf">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a01e7f50972213a4b4ad9ab99785ea65e">   84</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#a01e7f50972213a4b4ad9ab99785ea65e">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#af7d67a5d1fb8474d68deb3687150b455">   85</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#af7d67a5d1fb8474d68deb3687150b455">GetScreenToData</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aa41b0d2bbb0c4af6d5f13c03e709c134">   86</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#aa41b0d2bbb0c4af6d5f13c03e709c134">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#aac31feed409a481f09b589085cbf5e04">   87</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#aac31feed409a481f09b589085cbf5e04">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#acc2a8a80438f6a25a6597fbd76bed5b2">   88</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#acc2a8a80438f6a25a6597fbd76bed5b2">OnAddBloodBankListService</a>(); </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a4666bb00c29cc407e391909559eb3f4c">   89</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#a4666bb00c29cc407e391909559eb3f4c">OnEditBloodBankListService</a>(); </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#abc1b4b22ea86970f70a32977a5c42607">   90</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#abc1b4b22ea86970f70a32977a5c42607">OnDeleteBloodBankListService</a>(); </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a7b64bf9407adabfb05443b25e3c78490">   91</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#a7b64bf9407adabfb05443b25e3c78490">OnSaveBloodBankListService</a>(); </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a7c2506681ea921f1060e0acb956d7f71">   92</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#a7c2506681ea921f1060e0acb956d7f71">OnCancelBloodBankListService</a>(); </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a110e70bc0237bdda431e03a925359c05">   93</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_blood_bank_list_service.html#a110e70bc0237bdda431e03a925359c05">OnBloodBankListServiceListLoadData</a>(); </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_c_blood_bank_list_service.html#a57c19f6c691d344edf9093828cfef701">   94</a></span>    CString <a class="code hl_function" href="class_c_blood_bank_list_service.html#a57c19f6c691d344edf9093828cfef701">GetQueryString</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a0004604040cd7481295779a200dd6c55"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a0004604040cd7481295779a200dd6c55">CBloodBankListService::m_wndPrintPreview</a></div><div class="ttdeci">CGuiButton m_wndPrintPreview</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:42</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a01e7f50972213a4b4ad9ab99785ea65e"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a01e7f50972213a4b4ad9ab99785ea65e">CBloodBankListService::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a02f531532a4a9370b2a250ceddfdce31"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a02f531532a4a9370b2a250ceddfdce31">CBloodBankListService::OnObjectDeleteItem</a></div><div class="ttdeci">int OnObjectDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a05b3a34c69389c6ce1e68cac438b2dd2"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a05b3a34c69389c6ce1e68cac438b2dd2">CBloodBankListService::m_wndFromDate</a></div><div class="ttdeci">CGuiDateTimeCtrl m_wndFromDate</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:34</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a09c5c628b0698a0f28929ba171c72189"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a09c5c628b0698a0f28929ba171c72189">CBloodBankListService::OnListDblClick</a></div><div class="ttdeci">void OnListDblClick()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a110e70bc0237bdda431e03a925359c05"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a110e70bc0237bdda431e03a925359c05">CBloodBankListService::OnBloodBankListServiceListLoadData</a></div><div class="ttdeci">int OnBloodBankListServiceListLoadData()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a16e5ae8a320cbce017299d2d627d8486"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a16e5ae8a320cbce017299d2d627d8486">CBloodBankListService::m_wndObject</a></div><div class="ttdeci">CGuiListCtrl m_wndObject</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:38</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a2a8adb406514f2caf36f8302cd7ace9d"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a2a8adb406514f2caf36f8302cd7ace9d">CBloodBankListService::m_wndToDate</a></div><div class="ttdeci">CGuiDateTimeCtrl m_wndToDate</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:36</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a2feb5cb167b5fa61dad88fe711383926"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a2feb5cb167b5fa61dad88fe711383926">CBloodBankListService::m_wndListProduct</a></div><div class="ttdeci">CGuiListCtrl m_wndListProduct</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:41</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a338791c212dd8a66f5557f1d326acc80"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a338791c212dd8a66f5557f1d326acc80">CBloodBankListService::OnObjectLoadData</a></div><div class="ttdeci">long OnObjectLoadData()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a39a6528a6019454e0977c97750069a1b"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a39a6528a6019454e0977c97750069a1b">CBloodBankListService::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a4461f6c800f7bf4b4312a14e5a6afbbc"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a4461f6c800f7bf4b4312a14e5a6afbbc">CBloodBankListService::m_wndList</a></div><div class="ttdeci">CGuiListCtrl m_wndList</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:40</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a4666bb00c29cc407e391909559eb3f4c"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a4666bb00c29cc407e391909559eb3f4c">CBloodBankListService::OnEditBloodBankListService</a></div><div class="ttdeci">int OnEditBloodBankListService()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a4d871439f4465e3ab113014e0ee92fa3"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a4d871439f4465e3ab113014e0ee92fa3">CBloodBankListService::OnDepartmentSelectChange</a></div><div class="ttdeci">void OnDepartmentSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a54fff216005a4a48bcf4db09959af294"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a54fff216005a4a48bcf4db09959af294">CBloodBankListService::OnListCheckAll</a></div><div class="ttdeci">int OnListCheckAll()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a55f1b24485d9e7946623a36265d52d7d"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a55f1b24485d9e7946623a36265d52d7d">CBloodBankListService::OnListLoadData</a></div><div class="ttdeci">long OnListLoadData()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a563780018c3465129c96332c1bd5b878"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a563780018c3465129c96332c1bd5b878">CBloodBankListService::OnDepartmentLoadData</a></div><div class="ttdeci">long OnDepartmentLoadData()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a57c19f6c691d344edf9093828cfef701"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a57c19f6c691d344edf9093828cfef701">CBloodBankListService::GetQueryString</a></div><div class="ttdeci">CString GetQueryString()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a6b15d0792ee54e225ea527e54a923359"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a6b15d0792ee54e225ea527e54a923359">CBloodBankListService::~CBloodBankListService</a></div><div class="ttdeci">~CBloodBankListService()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a7516d736dc5b0579b550e590abcb1b65"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a7516d736dc5b0579b550e590abcb1b65">CBloodBankListService::m_szFromDate</a></div><div class="ttdeci">CString m_szFromDate</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:44</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a7b64bf9407adabfb05443b25e3c78490"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a7b64bf9407adabfb05443b25e3c78490">CBloodBankListService::OnSaveBloodBankListService</a></div><div class="ttdeci">int OnSaveBloodBankListService()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a7c2506681ea921f1060e0acb956d7f71"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a7c2506681ea921f1060e0acb956d7f71">CBloodBankListService::OnCancelBloodBankListService</a></div><div class="ttdeci">int OnCancelBloodBankListService()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a8482df0d622bd2684a270f40a7f40559"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a8482df0d622bd2684a270f40a7f40559">CBloodBankListService::m_wndToDateLabel</a></div><div class="ttdeci">CGuiLabel m_wndToDateLabel</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:35</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a88af62ac55bb3fd71cd3d3aeb2965622"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a88af62ac55bb3fd71cd3d3aeb2965622">CBloodBankListService::m_wndDepartment</a></div><div class="ttdeci">CGuiListCtrl m_wndDepartment</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:39</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_a990cbaa32ece68b99d47cb98a014b2e7"><div class="ttname"><a href="class_c_blood_bank_list_service.html#a990cbaa32ece68b99d47cb98a014b2e7">CBloodBankListService::OnExportSelect</a></div><div class="ttdeci">void OnExportSelect()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aa34fe42051ec38ce772c44daaed0c46b"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aa34fe42051ec38ce772c44daaed0c46b">CBloodBankListService::OnObjectDblClick</a></div><div class="ttdeci">void OnObjectDblClick()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aa41b0d2bbb0c4af6d5f13c03e709c134"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aa41b0d2bbb0c4af6d5f13c03e709c134">CBloodBankListService::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aa77248dca3c37967f3268279c654cc24"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aa77248dca3c37967f3268279c654cc24">CBloodBankListService::OnDeptUncheckAll</a></div><div class="ttdeci">int OnDeptUncheckAll()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aab1e5f00b71de7a44b4d169decfacd5c"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aab1e5f00b71de7a44b4d169decfacd5c">CBloodBankListService::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aac31feed409a481f09b589085cbf5e04"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aac31feed409a481f09b589085cbf5e04">CBloodBankListService::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aaccdddc6e5490be8673b4d0089ebf3d2"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aaccdddc6e5490be8673b4d0089ebf3d2">CBloodBankListService::m_wndFromDateLabel</a></div><div class="ttdeci">CGuiLabel m_wndFromDateLabel</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:33</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aaf1cf49825314bec8305a14f4e24a3fb"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aaf1cf49825314bec8305a14f4e24a3fb">CBloodBankListService::OnListSelectChange</a></div><div class="ttdeci">void OnListSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ab25231b8d0592cd8b4e543fc3509f11c"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ab25231b8d0592cd8b4e543fc3509f11c">CBloodBankListService::m_wndExport</a></div><div class="ttdeci">CGuiButton m_wndExport</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:43</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ab319959737c84e003ec345a403849308"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ab319959737c84e003ec345a403849308">CBloodBankListService::OnDepartmentDeleteItem</a></div><div class="ttdeci">int OnDepartmentDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ab58ebdb15c085e969b39087db9878354"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ab58ebdb15c085e969b39087db9878354">CBloodBankListService::OnFromDateCheckValue</a></div><div class="ttdeci">int OnFromDateCheckValue()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ab5cf24311445904a3c5ed86bed7f276d"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ab5cf24311445904a3c5ed86bed7f276d">CBloodBankListService::OnDepartmentDblClick</a></div><div class="ttdeci">void OnDepartmentDblClick()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ab87ab9a52721c7e888716473dbe670ae"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ab87ab9a52721c7e888716473dbe670ae">CBloodBankListService::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_abc1b4b22ea86970f70a32977a5c42607"><div class="ttname"><a href="class_c_blood_bank_list_service.html#abc1b4b22ea86970f70a32977a5c42607">CBloodBankListService::OnDeleteBloodBankListService</a></div><div class="ttdeci">int OnDeleteBloodBankListService()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ac1537d611bd202ed6d76a257b792f23a"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ac1537d611bd202ed6d76a257b792f23a">CBloodBankListService::OnToDateCheckValue</a></div><div class="ttdeci">int OnToDateCheckValue()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ac3182010dd053bf87e3bbcb2ac1a6dec"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ac3182010dd053bf87e3bbcb2ac1a6dec">CBloodBankListService::OnPrintPreviewSelect</a></div><div class="ttdeci">void OnPrintPreviewSelect()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ac692aca6838d0c54cdea953b05a0a54b"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ac692aca6838d0c54cdea953b05a0a54b">CBloodBankListService::OnDeptCheckAll</a></div><div class="ttdeci">int OnDeptCheckAll()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ac74a3ad19bdc2aa53937c81810be36bd"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ac74a3ad19bdc2aa53937c81810be36bd">CBloodBankListService::m_wndReportCondition</a></div><div class="ttdeci">CGuiGroupBox m_wndReportCondition</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:37</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_acbedbdd32443bb8ec2f1049e1101bec8"><div class="ttname"><a href="class_c_blood_bank_list_service.html#acbedbdd32443bb8ec2f1049e1101bec8">CBloodBankListService::m_szToDate</a></div><div class="ttdeci">CString m_szToDate</div><div class="ttdef"><b>Definition</b> BloodBankListService.h:45</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_acc1a280dd1607d8d7f6447eb31c1f351"><div class="ttname"><a href="class_c_blood_bank_list_service.html#acc1a280dd1607d8d7f6447eb31c1f351">CBloodBankListService::OnListDeleteItem</a></div><div class="ttdeci">int OnListDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_acc2a8a80438f6a25a6597fbd76bed5b2"><div class="ttname"><a href="class_c_blood_bank_list_service.html#acc2a8a80438f6a25a6597fbd76bed5b2">CBloodBankListService::OnAddBloodBankListService</a></div><div class="ttdeci">int OnAddBloodBankListService()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ade2eea7c4c6fd8bbc491b21072b80462"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ade2eea7c4c6fd8bbc491b21072b80462">CBloodBankListService::OnObjectSelectChange</a></div><div class="ttdeci">void OnObjectSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_adf8f1d3b52a3f5617ac1f38c7b8b6533"><div class="ttname"><a href="class_c_blood_bank_list_service.html#adf8f1d3b52a3f5617ac1f38c7b8b6533">CBloodBankListService::OnListUncheckAll</a></div><div class="ttdeci">int OnListUncheckAll()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ae1cc63c9def5733c3f472f96a4d982b6"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ae1cc63c9def5733c3f472f96a4d982b6">CBloodBankListService::OnObjectUncheckAll</a></div><div class="ttdeci">int OnObjectUncheckAll()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_ae790a8d8f448e6036b0d23e2a78a80fa"><div class="ttname"><a href="class_c_blood_bank_list_service.html#ae790a8d8f448e6036b0d23e2a78a80fa">CBloodBankListService::OnObjectCheckAll</a></div><div class="ttdeci">int OnObjectCheckAll()</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_aed9654c495e0e4a98f088135f3c999cf"><div class="ttname"><a href="class_c_blood_bank_list_service.html#aed9654c495e0e4a98f088135f3c999cf">CBloodBankListService::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_af5fe53f623f3d806a63d5f245803b762"><div class="ttname"><a href="class_c_blood_bank_list_service.html#af5fe53f623f3d806a63d5f245803b762">CBloodBankListService::CBloodBankListService</a></div><div class="ttdeci">CBloodBankListService(CWnd *pParent)</div></div>
+<div class="ttc" id="aclass_c_blood_bank_list_service_html_af7d67a5d1fb8474d68deb3687150b455"><div class="ttname"><a href="class_c_blood_bank_list_service.html#af7d67a5d1fb8474d68deb3687150b455">CBloodBankListService::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_a5ceae35217094b70b8ef22f8edda6a5.html">HMSReportForms</a></li><li class="navelem"><a href="dir_919600ca2378aa567ff6b0773f7e0855.html">BB</a></li><li class="navelem"><a href="_blood_bank_list_service_8h.html">BloodBankListService.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

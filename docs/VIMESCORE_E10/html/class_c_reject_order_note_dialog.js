@@ -1,0 +1,28 @@
+var class_c_reject_order_note_dialog =
+[
+    [ "CRejectOrderNoteDialog", "class_c_reject_order_note_dialog.html#ae32f876ded59e66ac6e696c7f999e32c", null ],
+    [ "~CRejectOrderNoteDialog", "class_c_reject_order_note_dialog.html#a10507d3c8698ea443bb4bc45d2e8af0e", null ],
+    [ "GetDataToScreen", "class_c_reject_order_note_dialog.html#a0cdead51f558d3dc1dad1993b8b2f280", null ],
+    [ "GetScreenToData", "class_c_reject_order_note_dialog.html#a248dd6861bd3618a056ec69ca6d9b2d7", null ],
+    [ "OnAddRejectOrderNoteDialog", "class_c_reject_order_note_dialog.html#a6534f4f5869ecc2cc159f9ea9fada9a9", null ],
+    [ "OnCancelRejectOrderNoteDialog", "class_c_reject_order_note_dialog.html#a6295fa11303948514e9222b07e12e779", null ],
+    [ "OnCancelSelect", "class_c_reject_order_note_dialog.html#a9bcabae92eff598167382a1cbdbefe45", null ],
+    [ "OnCreateComponents", "class_c_reject_order_note_dialog.html#a4a95ec3506894df3a20ceaedaf84f558", null ],
+    [ "OnDeleteRejectOrderNoteDialog", "class_c_reject_order_note_dialog.html#a6ff68da8410bfb4dd668b47333ea7eb6", null ],
+    [ "OnDoDataExchange", "class_c_reject_order_note_dialog.html#a68c0ebc2e12609a862bc637a8b987456", null ],
+    [ "OnEditRejectOrderNoteDialog", "class_c_reject_order_note_dialog.html#a515f5dcf52ee04ec6e7a36e08008b03b", null ],
+    [ "OnInitializeComponents", "class_c_reject_order_note_dialog.html#a03a3f19d4e548bd46b410eaae3e15482", null ],
+    [ "OnNoteCheckValue", "class_c_reject_order_note_dialog.html#a5fe3b75ce602bd713d0595d9dba5a018", null ],
+    [ "OnRejectOrderNoteDialogListLoadData", "class_c_reject_order_note_dialog.html#aef9db72a26c18660c6f52ad72df4a9bd", null ],
+    [ "OnRejectSelect", "class_c_reject_order_note_dialog.html#a1b17569752bc75d5d9f00aa7265e95f2", null ],
+    [ "OnSaveRejectOrderNoteDialog", "class_c_reject_order_note_dialog.html#a2ff6dfe3200364207f26d9b91ee3b8a8", null ],
+    [ "OnSetWindowEvents", "class_c_reject_order_note_dialog.html#ada4c2e2a2ad44b135066c4135b453103", null ],
+    [ "SetDefaultValues", "class_c_reject_order_note_dialog.html#a6d67881b2895b6c6bc497bebf410d514", null ],
+    [ "SetMode", "class_c_reject_order_note_dialog.html#aa9fa32328758a32302e6187aaf9241bb", null ],
+    [ "m_szNote", "class_c_reject_order_note_dialog.html#a0c2aeca83e55937d302a7dc94b84e5db", null ],
+    [ "m_szSubmitedBy", "class_c_reject_order_note_dialog.html#aa684d11b9c6378286f865c933576d8d9", null ],
+    [ "m_wndCancel", "class_c_reject_order_note_dialog.html#a82f3ad29f78850ec6d908f5eebfa298f", null ],
+    [ "m_wndNote", "class_c_reject_order_note_dialog.html#ae326684745eab366221060e639b37e28", null ],
+    [ "m_wndNoteLabel", "class_c_reject_order_note_dialog.html#a5d982a8fe21f72ac91b492344a9d0f90", null ],
+    [ "m_wndReject", "class_c_reject_order_note_dialog.html#a1db38312f2ff897bb4e8f229a0c36787", null ]
+];

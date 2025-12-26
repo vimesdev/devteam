@@ -1,0 +1,149 @@
+\doxysection{HMSExm\+Employee\+List\+View.\+h}
+\hypertarget{_h_m_s_exm_employee_list_view_8h_source}{}\label{_h_m_s_exm_employee_list_view_8h_source}\index{Include/HMSCore/HMSExmEmployeeListView.h@{Include/HMSCore/HMSExmEmployeeListView.h}}
+\mbox{\hyperlink{_h_m_s_exm_employee_list_view_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSEXMEMPLOYEELISTVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSEXMEMPLOYEELISTVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_add3c388bee570737873993b2d30e7113}{CHMSExmEmployeeListView}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_af0426c559650a2b1524abdf16d43264c}{m\_pContractView}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aa5eed91d25e02118b5cc86da1f83fd98}{m\_pParaclinicalView}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ac970b6aa30bb8150724a48e3ce0d172d}{m\_pOperationView}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a4e69c4fd60904628fcfb3bb8346f4b3a}{m\_nContractId}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a8da22b92afeced59d872fe9b204df566}{m\_szCompanyId}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a57c4df725c6f460bea29c930373855e2}{m\_nEmployeeId}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a59769e6e7bc00747f5bf904f26673128}{m\_wndSearchInformation}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_af7050ed173d6ea1b617caca8380f7712}{m\_wndNameLabel}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a672e4f7ad6119301a4a0b3c2bdd774b1}{m\_wndName}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aac0315ccd922b81ef0be8aefd086930a}{m\_wndFromLabel}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a287613e46c84510a16514e283d7f9994}{m\_wndFrom}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a8a3049a778135a56c121274b54b4dbb3}{m\_wndToLabel}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ac9c8a8a6c61e5749a30b749116b8a0aa}{m\_wndTo}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a6d4621008edcae6a935caf3c6885be97}{m\_wndGenderLabel}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a5c829bbfe7bef97d2cc2632887952b51}{m\_wndGender}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a1fe6e07409b86e8531cfe7e29e85c7ac}{m\_wndSearch}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGridListView\ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ac7d1f07c517f4cb4fb94880dd577c0cc}{m\_wndList}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a6ad73cda272af22f17b078352cade3e7}{m\_wndDeptLabel}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ab60fe0a39adf195ca66aa44642b35593}{m\_wndDeptName}};\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aca0ecf86f10741ef0924a3ba9eb4cfd1}{m\_wndMark}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a1ad878cee4215952a420fe55108762fc}{m\_wndUnMark}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_af2c3120571ebef551ca2c22d71a38d6f}{m\_wndAdd}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a7526b76e7d4d46de8503c5920ae64c29}{m\_wndEdit}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a3b3555aa08a70007eb0e3045b4d90e10}{m\_wndDelete}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ae16335690f742851240af09525e0c4f6}{m\_szName}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a9a47b25789496ae561aa7ad7b069b4a6}{m\_nFrom}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a9a598f40aca384b35b5ff50ec5acbf06}{m\_nTo}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ad02499aa380906cf2f5682c500a5c483}{m\_szGenderKey}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aff855fdfe80b5e322ec67e00b96631f1}{m\_szDeptName}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameChange();\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a029cab5816e163bfc785b4fc85308b13}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromChange();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromSetfocus();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromKillfocus();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a1ff76dbe958a359837337198483c61f2}{OnFromCheckValue}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToChange();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToSetfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToKillfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a874e648dbd3a54f313e2e538472abaee}{OnToCheckValue}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a2c0ea2f984ace86d6f79c8383179972f}{OnGenderSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a64980aa5bd264da42d440c73d1345c69}{OnGenderSelendok}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGenderSetfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGenderKillfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a91ad4383eb109a36b709c6d01a07a177}{OnGenderLoadData}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGenderAddNew();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ae6f573705d699a67a6b56b4781a65153}{OnSearchSelect}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a1e78e0752fc3353f5b343461c3707b4a}{OnListLoadData}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a87f910cb71f0e62bf64512eead3bc661}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a4d993036e976c1b4994cd1ff840e4db6}{OnListDblClick}}();\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aeda07bb3d1577182324d1a7772676526}{OnListAddItem}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aa5302295930838f84ed5c259c4bbead3}{OnListEditItem}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a6d817b61749a526e1e0aa61af1030a2f}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a12294924f0f774107115682627525c54}{OnMarkSelect}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a5b275d7006c71e4d66f9d1d8e0d79fe9}{OnUnMarkSelect}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a93edbc04e18d934185a76be6646344ed}{OnAddSelect}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ad9437b4b733a05c6937b16d092ca845c}{OnEditSelect}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ac4416d57b6cd796023324bb757026e8a}{OnDeleteSelect}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aa4dd484d7dbed4e250e4e9f53f11339d}{OnAddFromList}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a94eb51d48d30f7b78aeb9957a07b1258}{OnRegistration}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a0151dc037f1e5f0b0065cd8825cb3e10}{OnRollback}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a679baf0bcb2a245cd5de69c6ad90848f}{OnPrintRegistration}}();}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a05b3e2232bd27efb1d99c150d84c0f48}{OnTerminate}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a075a8152ab80e0b0ac864bc34f06c747}{OnImportSelect}}();}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_adfe9016c2b1c3ea42be9d914a3ed92ca}{OnAddParaclinicOrder}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a23dcf875f0b37b0e5be0c34c521dbb0d}{OnGeneratePendingNumber}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ae302efc602f788bb1451f5de0e54ffc9}{OnPrintOrder}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a031307bb44ce61e3eaecd46f027f93e4}{OnPrintOrder2}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ae1a4c8c744906684956b921b22044da5}{OnPrintOperationOrder}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a3f6d713f75c6105d08848b44fd2c4090}{OnExportToExcel}}();}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ab0fe10a175a59e3f84c82d747419c530}{OnExportToExcelOnline}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a7ee84664dee01bef27ac990a28c7c8de}{OnExportToExcelDetail}}();}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a1fbd2f8c6c48e3b1b38735cdc00444e9}{OnDeptNameCheckValue}}();\ }
+\DoxyCodeLine{00131\ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ae809f1d0011454a6f128ab8d10b3386f}{PrintOrder}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{bool}\ bPreview,\ \textcolor{keywordtype}{bool}\ bDirect);}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a399de5e07e86eda6a9d45aaebc7add32}{PrintOrder2}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{bool}\ bPreview,\ \textcolor{keywordtype}{bool}\ bDirect);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a935093cbcb2d42ca94e9c141a3cf77c4}{PrintOperationOrder}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{bool}\ bPreview,\ \textcolor{keywordtype}{bool}\ bDirect);}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ad925aacf653b92e55cc2881e41006322}{PrintReceptionSelected}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a451fbb1e8b864a0ed7837d056f99bfcc}{OnPrintSummarizeExaminationSheet}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_add3c388bee570737873993b2d30e7113}{CHMSExmEmployeeListView}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a9e48e973d4a17b931060247b5e99d066}{\string~CHMSExmEmployeeListView}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_afc872b4906f44f7bbb5bacdcfd8addc5}{OnCreateComponents}}();}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a7df2f22953f793c198f67164e729b2fb}{OnInitializeComponents}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a055db2fd401f9abfda4558c3f7bc7786}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a1e83d5fadd33106b89ec22ad0a6c6b87}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a783f96c529f7331d20f13dea48864192}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ab5991cabaa11d3c74612b7f4e313adc0}{GetDataToScreen}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a3b60d07112250524b4bda282fd968687}{GetScreenToData}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_accbbaa29bfb3b99066b406406b40bbd2}{SetDefaultValues}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a198e2fd3f9b2deb3bbfbd070d2440345}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aa46bc339beb96cd74b957835f41bc834}{OnAddHMSExmEmployeeListView}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_afd190ad437713febe5d825150aebb8ff}{OnEditHMSExmEmployeeListView}}();\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ae07e1d12b1b233f11539127c1ea88712}{OnDeleteHMSExmEmployeeListView}}();\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a227a8f4555a030311f0784f5d68a4c61}{OnSaveHMSExmEmployeeListView}}();\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_a9c08d979008b5dfdcdc62c0ed2b7d857}{OnCancelHMSExmEmployeeListView}}();\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_aedaf064a82118112c114dc5a272bf7fe}{OnHMSExmEmployeeListViewListLoadData}}();\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ab6d24bd7756fcaf7041a52ca83e77805}{Load}}(\textcolor{keywordtype}{long}\ nContractId,\ CString\ szCompanyId);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_ae6e0f512f67152506b0c2d36b924f558}{GetQueryString\_v2}}(CString\&\ index\_query,\ CString\&\ result\_query);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_exm_employee_list_view_acbc106c69dbdcb51aa31a8c272dcf8e3}{OnPrintGuideExam}}();\ }
+\DoxyCodeLine{00157\ \};}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

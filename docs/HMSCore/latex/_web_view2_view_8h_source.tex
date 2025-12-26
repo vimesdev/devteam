@@ -1,0 +1,170 @@
+\doxysection{Web\+View2\+View.\+h}
+\hypertarget{_web_view2_view_8h_source}{}\label{_web_view2_view_8h_source}\index{Include/HMSCore/WebView2View.h@{Include/HMSCore/WebView2View.h}}
+\mbox{\hyperlink{_web_view2_view_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WEBVIEW2VIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WEBVIEW2VIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ WebView2BrowserView.h\ :\ interface\ of\ the\ CWebView2View\ class}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <afxwin.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <wil/com.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <WebView2.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <wil/wrl.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{extern}\ std::atomic<long>\ \mbox{\hyperlink{_web_view2_view_8h_ac741b008de9413be6ffaf47605c64c81}{g\_views}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{extern}\ std::atomic<long>\ \mbox{\hyperlink{_web_view2_view_8h_a89ed52b8c54228bb680fd480c657ae60}{g\_browsers}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ wil::com\_ptr<ICoreWebView2Environment>\ \mbox{\hyperlink{_web_view2_view_8h_ac42018664dac2ab5234a6d87dc51bfd7}{g\_webViewEnvironment}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_web_view2_view_a9d19014fc4ff8d8335b51077661c8fe2}{CWebView2View}}\ :\ \textcolor{keyword}{public}\ CView}
+\DoxyCodeLine{00036\ \{\ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_web_view2_view_a63f94e35cbb24cc928e5da9f0340e16e}{m\_Id}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ WebView2\ members\ merged\ from\ BrowserWindowEdge}}
+\DoxyCodeLine{00040\ \ \ \ \ wil::com\_ptr<ICoreWebView2Controller>\ \mbox{\hyperlink{class_c_web_view2_view_a35fd301e2be8c19a4540a3c151162686}{m\_webViewController}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ wil::com\_ptr<ICoreWebView2>\ \mbox{\hyperlink{class_c_web_view2_view_a0e84286a701ae99eed74ef8bab7bf45a}{m\_webView}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::wstring\ \mbox{\hyperlink{class_c_web_view2_view_ac39c85fab5eadab0dcbacd93fff55e96}{m\_initialUri}};\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_web_view2_view_a639228ae23fba6709d01dc63b655d4e3}{m\_isWebViewReady}};\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ std::function<void()>\ \mbox{\hyperlink{class_c_web_view2_view_abe260e6fb4c142294f155570e6c38cb3}{m\_onWebViewFirstInitialized}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ Event\ tokens}}
+\DoxyCodeLine{00048\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_c_web_view2_view_a8b58f50ffde68f0b2ce2cdab13df0952}{m\_WebMessageReceivedToken}}\ =\ \{\};\ }
+\DoxyCodeLine{00049\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_c_web_view2_view_a3552f5150f2366097c0007d5aa96cfec}{m\_NavigationStartingToken}}\ =\ \{\};\ }
+\DoxyCodeLine{00050\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_c_web_view2_view_a08254859ecf8f4746f03a0d1bc42b130}{m\_NavigationCompletedToken}}\ =\ \{\};\ }
+\DoxyCodeLine{00051\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_c_web_view2_view_a284edeed3eb43b3df15f7901369b4130}{m\_ProcessFailedToken}}\ =\ \{\};\ }
+\DoxyCodeLine{00052\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_c_web_view2_view_a68ac50346c42c0491aabb2135d64a434}{m\_DevToolsSecurityToken}}\ =\ \{\};\ }
+\DoxyCodeLine{00053\ \ \ \ \ EventRegistrationToken\ \mbox{\hyperlink{class_c_web_view2_view_a2f3b95234196ab416d0ad28ab9b1a0a9}{m\_DevToolsLogToken}}\ =\ \{\};\ }
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Event\ brokers}}
+\DoxyCodeLine{00056\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2WebMessageReceivedEventHandler>\ \mbox{\hyperlink{class_c_web_view2_view_a44689b5fe752fafdd3ab4edfee065929}{m\_MessageBroker}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2NavigationStartingEventHandler>\ \mbox{\hyperlink{class_c_web_view2_view_a34c8f6f0c2b98122cff074a20d9c5cf0}{m\_NavigationStartingBroker}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2NavigationCompletedEventHandler>\ \mbox{\hyperlink{class_c_web_view2_view_a5d0ad016ae0f4f4cc10fdec29b5ceb22}{m\_NavigationCompletedBroker}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2ProcessFailedEventHandler>\ \mbox{\hyperlink{class_c_web_view2_view_a647df5e9c9929b32078336ac2812d7a7}{m\_ProcessFailedBroker}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2DevToolsProtocolEventReceivedEventHandler>\ \mbox{\hyperlink{class_c_web_view2_view_af8b62fe6dbd9c59ab92ea96aca87d7f0}{m\_devToolsSecurityBroker}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2DevToolsProtocolEventReceivedEventHandler>\ \mbox{\hyperlink{class_c_web_view2_view_a1bfc92bbc4ed9977a46ad4f2fcae34cc}{m\_devToolsLogBroker}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ Microsoft::WRL::Wrappers::Event\ \mbox{\hyperlink{class_c_web_view2_view_ad0efa6e32d08934909e269196199366a}{NavigationCompletedEvent}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a37932b296ece8ce68d6eecf24f72325e}{Init}}(std::wstring\ initialUri\ =\ L\textcolor{stringliteral}{"{}https://www.bing.com/"{}},\ std::function<\textcolor{keywordtype}{void}()>\ webviewCreatedCallback\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_web_view2_view_a308f89e0a32b06550803787768be2a97}{InitWebView}}();}
+\DoxyCodeLine{00079\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_ac4718481ed0d99b50b328a4bee865f26}{SetEventsAndBrokers}}();}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_a7e9d01135aab5154f4427f6998f9974f}{OnCreateEnvironmentCompleted}}(HRESULT\ result,\ ICoreWebView2Environment\ *env);}
+\DoxyCodeLine{00095\ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_a6de1c0f7e92d7f1ca6b566eb86b303b2}{OnCreateControllerCompleted}}(HRESULT\ result,\ ICoreWebView2Controller\ *controller);}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_ada273c6359428b54cd8f2f2ecff85a4b}{RunAsync}}(std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{void})>\ callback);}
+\DoxyCodeLine{00111\ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ afx\_msg\ LRESULT\ \mbox{\hyperlink{class_c_web_view2_view_a453587d7f4794240d53540d32c483bc0}{OnRunAsync}}(WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ create\ from\ serialization\ only}}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_c_web_view2_view_a9d19014fc4ff8d8335b51077661c8fe2}{CWebView2View}}(LPCTSTR\ lpszUrl=NULL);}
+\DoxyCodeLine{00128\ \ \ \ \ DECLARE\_DYNCREATE(\mbox{\hyperlink{class_c_web_view2_view_a9d19014fc4ff8d8335b51077661c8fe2}{CWebView2View}})}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ Attributes}}
+\DoxyCodeLine{00132\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{//\ Operations}}
+\DoxyCodeLine{00135\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_web_view2_view_a1ccba81dd200d7a45455bbfe2dde5116}{Initialize}}();}
+\DoxyCodeLine{00142\ \ \ \ \ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_web_view2_view_a696f28f217326ba6e161352bb160c366}{IsInited}}();}
+\DoxyCodeLine{00149\ \ \ \ \ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a81786d2a9f0bfe47450dd50d89132586}{Cleanup}}();}
+\DoxyCodeLine{00155\ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_abc4adb69e4c742f562a47f7bbf327243}{Browser}}(HWND\ hWnd,\ std::wstring\ url,\ \textcolor{keywordtype}{int}\ nShow\ =\ SW\_SHOW);}
+\DoxyCodeLine{00165\ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_ace54359d7f18fd8384f4dddf9e7dd011}{CreateWebView}}(HWND\ m\_hWnd,\ CRect\ rect,\ std::wstring\ userDataFolder);}
+\DoxyCodeLine{00175\ \ \ \ \ }
+\DoxyCodeLine{00182\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_a4cf65a427a4999c248e3a69fa4c68579}{Navigate}}(std::wstring\ url);}
+\DoxyCodeLine{00183\ \ \ \ \ }
+\DoxyCodeLine{00190\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_ad4bee7586e39c7814ecd984f5a278ea4}{NavigateToString}}(std::wstring\ content);}
+\DoxyCodeLine{00191\ \ \ \ \ }
+\DoxyCodeLine{00198\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_a77f0f98d54671c6903bfc2882dfe3e67}{GoRoute}}(std::wstring\ url);}
+\DoxyCodeLine{00199\ \ \ \ \ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a29897e36d082f9fa627942d304ed0fdf}{ExecuteScriptWithResult}}(std::wstring\ script,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::function<\textcolor{keywordtype}{void}(\textcolor{keyword}{const}\ std::wstring\ \&)>\ callback);}
+\DoxyCodeLine{00208\ \ \ \ \ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a4da8b855dfa27a28f568fd88251f0794}{SendStringWebMessage}}(std::wstring\ message);}
+\DoxyCodeLine{00215\ \ \ \ \ }
+\DoxyCodeLine{00223\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_a361b98eb90657ad501ca065707082825}{AddInitializeScript}}(std::wstring\ script,\ Microsoft::WRL::ComPtr<ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler>\ handler\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00224\ \ \ \ \ }
+\DoxyCodeLine{00232\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_web_view2_view_adffd88831640a668c79babdaaf822579}{InjectScript}}(std::wstring\ script,\ Microsoft::WRL::ComPtr<ICoreWebView2ExecuteScriptCompletedHandler>\ handler\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00233\ \ \ \ \ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_web_view2_view_af68d028c52a6cca5adda492f8e42f314}{Login}}(LPCTSTR\ lpszMod\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00241\ \ \ \ \ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_web_view2_view_a70034237b8f39460f506e9915a087538}{IsLoging}}();}
+\DoxyCodeLine{00248\ \ \ \ \ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a5845c46a98c704deb6f8af6cf415e896}{Resize}}(CRect\ rect);}
+\DoxyCodeLine{00255\ \ \ \ \ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_ad4128ad94a24bae52fa476b41ddd97ae}{Resize}}(RECT\ bounds\ =\ RECT());}
+\DoxyCodeLine{00262\ \ \ \ \ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_ab768a5823343588fd8fa13b04433636b}{Show}}(BOOL\ bShow);}
+\DoxyCodeLine{00269\ \ \ \ \ }
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a4032f07c06a249da31b1355a8061fa49}{ClearCache}}();}
+\DoxyCodeLine{00275\ \ \ \ \ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_abbbebe7d7130c9d557e3d9a43c67ebc3}{SetHighDPIAwareness}}();}
+\DoxyCodeLine{00281\ \ \ \ \ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{comment}{//\ Static\ methods\ from\ BrowserWindowEdge}}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keyword}{static}\ BOOL\ \mbox{\hyperlink{class_c_web_view2_view_aef4156e296350e1a7d936c68afa65b80}{InitInstance}}(HINSTANCE\ hInstance);}
+\DoxyCodeLine{00290\ \ \ \ \ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keyword}{static}\ std::wstring\ \mbox{\hyperlink{class_c_web_view2_view_ae0b0ce143d54737e4ed264544441f1c9}{s2ws}}(\textcolor{keyword}{const}\ std::string\&\ str);}
+\DoxyCodeLine{00298\ \ \ \ \ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_c_web_view2_view_ad8194c8da0bc8da9ac4f22bf81f8789b}{ws2s}}(\textcolor{keyword}{const}\ std::wstring\&\ wstr);}
+\DoxyCodeLine{00306\ \ \ \ \ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_ac8376d5ac85d2af8736d1a39c20afa8c}{CheckFailure}}(HRESULT\ hr,\ LPCWSTR\ errorMessage);}
+\DoxyCodeLine{00314\ \ \ \ \ }
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keyword}{static}\ std::wstring\ \mbox{\hyperlink{class_c_web_view2_view_a1c36bad4303098234f7dbb2a724289a7}{GetAppDataDirectory}}();}
+\DoxyCodeLine{00321\ \ \ \ \ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keyword}{static}\ std::wstring\ \mbox{\hyperlink{class_c_web_view2_view_a356c8502d79af1cbfa698c6af528dc4a}{GetFullPathFor}}(LPCWSTR\ relativePath);}
+\DoxyCodeLine{00329\ \ \ \ \ }
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keyword}{static}\ std::wstring\ \mbox{\hyperlink{class_c_web_view2_view_a67b2aee2a86f0ffbeefa28c1945376b1}{GetFilePathAsURI}}(std::wstring\ fullPath);}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{comment}{//\ Overrides}}
+\DoxyCodeLine{00339\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_web_view2_view_a7177b07534b79ade8b65c7697bb8623c}{PreCreateWindow}}(CREATESTRUCT\&\ cs);}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a64fd99c92156716a36f8def1c88e82f0}{OnDraw}}(CDC\ *\ \textcolor{comment}{/*pDC*/});}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_abccb1728c217230b3197e423266eeca0}{OnInitialUpdate}}();\ \textcolor{comment}{//\ called\ first\ time\ after\ construct}}
+\DoxyCodeLine{00344\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00345\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a2820acd53c5242df89410e7723478ef4}{DoDataExchange}}(CDataExchange*\ pDX);\ \ \ \ \textcolor{comment}{//\ DDX/DDV\ support}}
+\DoxyCodeLine{00346\ \ \ \ \ }
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00349\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_c_web_view2_view_a99b719c25fca66e9fd914d11e15b0984}{\string~CWebView2View}}();}
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\#ifdef\ \_DEBUG}}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AssertValid()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Dump(CDumpContext\&\ dc)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00354\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \textcolor{comment}{//\ Generated\ message\ map\ functions}}
+\DoxyCodeLine{00359\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00360\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_ae5214d64e01d5eb42a4f27699ca86423}{OnFilePrintPreview}}();}
+\DoxyCodeLine{00361\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a65523fd6d2401502bf7c415c8e3eac53}{OnRButtonUp}}(UINT\ nFlags,\ CPoint\ point);}
+\DoxyCodeLine{00362\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_af3c5f911010a26961c492c1db836eaa5}{OnContextMenu}}(CWnd*\ pWnd,\ CPoint\ point);}
+\DoxyCodeLine{00363\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00364\ public:}
+\DoxyCodeLine{00365\ \ \ \ \ CStatic\ \mbox{\hyperlink{class_c_web_view2_view_a0a16e898210d209520ebf8b5f92c4fd1}{m\_Label\_View}};}
+\DoxyCodeLine{00366\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a5362435dafe2f3b8d8e3eac743d33c6c}{OnSize}}(UINT\ nType,\ \textcolor{keywordtype}{int}\ cx,\ \textcolor{keywordtype}{int}\ cy);}
+\DoxyCodeLine{00367\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_ad0192479e4a7956c8e93489def7f90de}{OnShowWindow}}(BOOL\ bShow,\ UINT\ nStatus);}
+\DoxyCodeLine{00368\ \ \ \ \ virtual\ LRESULT\ \mbox{\hyperlink{class_c_web_view2_view_a5984aeb3a21f7aecc3e3b07a97e5a2d4}{WindowProc}}(UINT\ message,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00369\ \textcolor{comment}{//\ \ afx\_msg\ void\ OnActivate(UINT\ nState,\ CWnd*\ pWndOther,\ BOOL\ bMinimized);}}
+\DoxyCodeLine{00370\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a2ab4a8e2176f28b7748b847b8122b76b}{OnActivateView}}(BOOL\ bActivate,\ CView*\ pActivateView,\ CView*\ pDeactiveView);}
+\DoxyCodeLine{00371\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_a9fc0ad4eabaf3e1d743baf113e1b85e1}{PostNcDestroy}}();}
+\DoxyCodeLine{00372\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_web_view2_view_ac7be093b880a4cbdd8977b954feb95a6}{OnDestroy}}();}
+\DoxyCodeLine{00373\ \};}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

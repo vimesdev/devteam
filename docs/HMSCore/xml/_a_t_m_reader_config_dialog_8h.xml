@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_a_t_m_reader_config_dialog_8h" kind="file" language="C++">
+    <compoundname>ATMReaderConfigDialog.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiDialog.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_a_t_m_8h" local="yes">ATM.h</includes>
+    <includes refid="_a_t_m_card_reader_8h" local="yes">ATMCardReader.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>ATM.h</label>
+        <link refid="_a_t_m_8h"/>
+      </node>
+      <node id="6">
+        <label>ATMCardReader.h</label>
+        <link refid="_a_t_m_card_reader_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Include/HMSCore/ATMReaderConfigDialog.h</label>
+        <link refid="_a_t_m_reader_config_dialog_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="3">
+        <label>GuiDialog.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="7">
+        <label>winscard.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_a_t_m_reader_config_dialog" prot="public">CATMReaderConfigDialog</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ATMREADERCONFIGDIALOG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ATMREADERCONFIGDIALOG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiDialog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_t_m_8h" kindref="compound">ATM.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_t_m_card_reader_8h" kindref="compound">ATMCardReader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_c_a_t_m_reader_config_dialog" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_t_m_reader_config_dialog_1aa8f48cb70200d325c2d05046edd24168" kindref="member">CATMReaderConfigDialog</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiDialog{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="class_c_a_t_m_reader_config_dialog_1aacb2be33ddd676d6ad7fead8356e3807" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_a_t_m" kindref="compound">ATM</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1aacb2be33ddd676d6ad7fead8356e3807" kindref="member">m_atm</ref>;</highlight></codeline>
+<codeline lineno="38" refid="class_c_a_t_m_reader_config_dialog_1a98ef12e81217cff652e5f1efdd1948aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_a_t_m_card_reader" kindref="compound">ATMCardReader</ref>*<sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a98ef12e81217cff652e5f1efdd1948aa" kindref="member">m_cardReader</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_c_a_t_m_reader_config_dialog_1a8c595eba1948c086ac7623db5b2b292f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a8c595eba1948c086ac7623db5b2b292f" kindref="member">m_szReaderName</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_c_a_t_m_reader_config_dialog_1ad3792c7d0c9e72e80bf383594ce7b10a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1ad3792c7d0c9e72e80bf383594ce7b10a" kindref="member">m_wndSmartcardConfiguration</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_a_t_m_reader_config_dialog_1a188735f95e760a5419d0365def07406a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a188735f95e760a5419d0365def07406a" kindref="member">m_wndReaderSelectionLabel</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_a_t_m_reader_config_dialog_1ae89167d5be137ee3e53d3d554f67e2e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiComboBox<sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1ae89167d5be137ee3e53d3d554f67e2e1" kindref="member">m_wndReaderSelection</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_a_t_m_reader_config_dialog_1afd978c8c5c5388ef26fd8351a7275904" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiCheckBox<sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1afd978c8c5c5388ef26fd8351a7275904" kindref="member">m_wndActive</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_a_t_m_reader_config_dialog_1a67162f80c3daa5aa31da97e0741826ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a67162f80c3daa5aa31da97e0741826ee" kindref="member">m_wndStatusLabel</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_a_t_m_reader_config_dialog_1a3b6a94a9c58c8b6c30dcd47216758d83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a3b6a94a9c58c8b6c30dcd47216758d83" kindref="member">m_wndStatus</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_a_t_m_reader_config_dialog_1a615846530f027b64330a6dd1af788677" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a615846530f027b64330a6dd1af788677" kindref="member">m_wndEstablishContext</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_c_a_t_m_reader_config_dialog_1afa17e3d87c2b33c341533b470ea438ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1afa17e3d87c2b33c341533b470ea438ed" kindref="member">m_wndReleaseContext</ref>;</highlight></codeline>
+<codeline lineno="49" refid="class_c_a_t_m_reader_config_dialog_1a9af13e5c49a368925dc9a63160feb6e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a9af13e5c49a368925dc9a63160feb6e0" kindref="member">m_wndApply</ref>;</highlight></codeline>
+<codeline lineno="50" refid="class_c_a_t_m_reader_config_dialog_1a27f50cd08ae3624749fcb213da925441" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a27f50cd08ae3624749fcb213da925441" kindref="member">m_wndClose</ref>;</highlight></codeline>
+<codeline lineno="51" refid="class_c_a_t_m_reader_config_dialog_1a03b218a6c624aa74a8f3b039162abe78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a03b218a6c624aa74a8f3b039162abe78" kindref="member">m_szReaderSelectionKey</ref>;</highlight></codeline>
+<codeline lineno="52" refid="class_c_a_t_m_reader_config_dialog_1ad9fe2460927d8ec1a0396623b59962b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1ad9fe2460927d8ec1a0396623b59962b9" kindref="member">m_bActive</ref>;</highlight></codeline>
+<codeline lineno="53" refid="class_c_a_t_m_reader_config_dialog_1ace996de7710142573b1efa3e8760a4c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_a_t_m_reader_config_dialog_1ace996de7710142573b1efa3e8760a4c1" kindref="member">m_szStatus</ref>;</highlight></codeline>
+<codeline lineno="54" refid="class_c_a_t_m_reader_config_dialog_1a3f418ae00e8ed0c4c39c8f7f3ee975a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a3f418ae00e8ed0c4c39c8f7f3ee975a6" kindref="member">OnReaderSelectionSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItemSel,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItemSel);<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_a_t_m_reader_config_dialog_1a2e4bacfd184cf43d241d4794f822aae9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a2e4bacfd184cf43d241d4794f822aae9" kindref="member">OnReaderSelectionSelendok</ref>();<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnReaderSelectionSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnReaderSelectionKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_c_a_t_m_reader_config_dialog_1a45d142d9126ea570752f0d20173fab07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a45d142d9126ea570752f0d20173fab07" kindref="member">OnReaderSelectionLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnReaderSelectionAddNew();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_c_a_t_m_reader_config_dialog_1a5058da3990141e66ae55abd39cf646d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a5058da3990141e66ae55abd39cf646d8" kindref="member">OnActiveSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnStatusChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnStatusSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnStatusKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_c_a_t_m_reader_config_dialog_1a8c2e3e30c42831760afa70bafd882767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a8c2e3e30c42831760afa70bafd882767" kindref="member">OnStatusCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="65" refid="class_c_a_t_m_reader_config_dialog_1aa015c4b5079286761b71a8763b7fc51f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1aa015c4b5079286761b71a8763b7fc51f" kindref="member">OnEstablishContextSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="66" refid="class_c_a_t_m_reader_config_dialog_1a46104531fc7bbb7d38357eeb0484a8f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a46104531fc7bbb7d38357eeb0484a8f8" kindref="member">OnReleaseContextSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="67" refid="class_c_a_t_m_reader_config_dialog_1a555d77889dd0c58920487105dd1df72b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a555d77889dd0c58920487105dd1df72b" kindref="member">OnApplySelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="68" refid="class_c_a_t_m_reader_config_dialog_1a5546cf9c8df9d98c1c6b65fa9ba1a962" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a5546cf9c8df9d98c1c6b65fa9ba1a962" kindref="member">OnCloseSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="69" refid="class_c_a_t_m_reader_config_dialog_1aa8f48cb70200d325c2d05046edd24168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1aa8f48cb70200d325c2d05046edd24168" kindref="member">CATMReaderConfigDialog</ref>(CWnd<sp/>*pParent,<sp/><ref refid="class_a_t_m" kindref="compound">ATM</ref>*<sp/>pAmt);</highlight></codeline>
+<codeline lineno="70" refid="class_c_a_t_m_reader_config_dialog_1ab6e8691ca88f13d96a275e1a2f7977f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1ab6e8691ca88f13d96a275e1a2f7977f5" kindref="member">~CATMReaderConfigDialog</ref>();</highlight></codeline>
+<codeline lineno="71" refid="class_c_a_t_m_reader_config_dialog_1a8a495ca1f05db06a96a196f4a9ed7b76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a8a495ca1f05db06a96a196f4a9ed7b76" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="72" refid="class_c_a_t_m_reader_config_dialog_1a962bab0e1d8c6974eb7466b2b11fb9e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a962bab0e1d8c6974eb7466b2b11fb9e6" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="73" refid="class_c_a_t_m_reader_config_dialog_1a6bf036a053418743262c6ead721028e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a6bf036a053418743262c6ead721028e9" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="74" refid="class_c_a_t_m_reader_config_dialog_1a80e33ea17733ad436503abb243033208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a80e33ea17733ad436503abb243033208" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="75" refid="class_c_a_t_m_reader_config_dialog_1a7e633b2047093f3a677a98f67027afb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a7e633b2047093f3a677a98f67027afb5" kindref="member">UpdateJson</ref>(BOOL<sp/>bSaveAndValidate);</highlight></codeline>
+<codeline lineno="76" refid="class_c_a_t_m_reader_config_dialog_1aba72ab8967f70a82971984160cb201e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1aba72ab8967f70a82971984160cb201e1" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="77" refid="class_c_a_t_m_reader_config_dialog_1a36247f12c596a0914154a5dab5e010e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a36247f12c596a0914154a5dab5e010e3" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="78" refid="class_c_a_t_m_reader_config_dialog_1a6402349574f1c09f2ef212ad90b24299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a6402349574f1c09f2ef212ad90b24299" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="79" refid="class_c_a_t_m_reader_config_dialog_1a679189655dcd830b56ed1de64055cdf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a679189655dcd830b56ed1de64055cdf3" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="80" refid="class_c_a_t_m_reader_config_dialog_1a55418facd4e13ec86463d143a6fc1e32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a55418facd4e13ec86463d143a6fc1e32" kindref="member">OnAddATMReaderConfigDialog</ref>();<sp/></highlight></codeline>
+<codeline lineno="81" refid="class_c_a_t_m_reader_config_dialog_1ad45473fd1da3141075f16883e0acd3f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1ad45473fd1da3141075f16883e0acd3f1" kindref="member">OnEditATMReaderConfigDialog</ref>();<sp/></highlight></codeline>
+<codeline lineno="82" refid="class_c_a_t_m_reader_config_dialog_1a2941eade134905c5dda1054163a02073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a2941eade134905c5dda1054163a02073" kindref="member">OnDeleteATMReaderConfigDialog</ref>();<sp/></highlight></codeline>
+<codeline lineno="83" refid="class_c_a_t_m_reader_config_dialog_1a6171dcabf653f6da5d3f104c5cf2d4a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1a6171dcabf653f6da5d3f104c5cf2d4a9" kindref="member">OnSaveATMReaderConfigDialog</ref>();<sp/></highlight></codeline>
+<codeline lineno="84" refid="class_c_a_t_m_reader_config_dialog_1ae7c3de9165b37ca29e07fc671f9845ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1ae7c3de9165b37ca29e07fc671f9845ce" kindref="member">OnCancelATMReaderConfigDialog</ref>();<sp/></highlight></codeline>
+<codeline lineno="85" refid="class_c_a_t_m_reader_config_dialog_1abbd40b47b1dab5317c5557eee461ef1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_t_m_reader_config_dialog_1abbd40b47b1dab5317c5557eee461ef1b" kindref="member">OnATMReaderConfigDialogListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/HMSCore/ATMReaderConfigDialog.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,139 @@
+\doxysection{PMSImport\+Sheet\+List.\+h}
+\hypertarget{_pharmacy_2_p_m_s_import_sheet_list_8h_source}{}\label{_pharmacy_2_p_m_s_import_sheet_list_8h_source}\index{Include/HMSReportForms/Pharmacy/PMSImportSheetList.h@{Include/HMSReportForms/Pharmacy/PMSImportSheetList.h}}
+\mbox{\hyperlink{_pharmacy_2_p_m_s_import_sheet_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PMSIMPORTSHEETLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PMSIMPORTSHEETLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_p_m_s_import_sheet_list_acce2051bf05e37f7b683f74356b0ce5b}{CPMSImportSheetList}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a87f725c8688d800099b7dfa4b38fff36}{m\_wndItemGroupLabel}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_af258e6051bcffb62a10fe4ed04be688b}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a8c6e6fd3499597d8895c0a47f87a0042}{m\_wndFromDate}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_aef4158e15e9d3ab850c9234c4ad1f171}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1445b2d2f4bba9867daf95471c1d138b}{m\_wndGeneralDepartmentUsage}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a32491f3de2e66e9d6a45f8b798a56283}{m\_wndToDate}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a8542518c4bd0699107611e08c63e0b91}{m\_wndStorageLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a7fe36a46eea527fb160827a929d48636}{m\_wndStorage}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a405063f1484642fd0a9838691fccc6fe}{m\_wndItemGroup}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a18da400d27fe9d836a181be6d41fa0b7}{m\_wndSupplierLabel}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ae805adf697e5f0ec8a878fbb45989b68}{m\_wndSupplier}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a654a373a0bc4480dc2716571f8bfb194}{m\_wndAll}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a30fdb8bde469e21060512ea870e6423f}{m\_wndInternal}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ab3182e2e35a278c78ed0c547b5527d9a}{m\_wndKho708}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_acffbb39503243ac6084175937e669b7c}{m\_wndPaid}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a60e6af97b49feafd5b72618a4a7d2e7d}{m\_wndGroupByType}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a36bb6b0e59aa5b4f565e01d7e14e2c0c}{m\_wndGeneralReports}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a22cc9d55871c17cfa6a69e3f03f2fcb6}{m\_wndPrintPreview}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a87b228a010daf9e3c04392e03460da4b}{m\_wndExport}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a879985e15ef90cc14eedf3d2124fb4a2}{m\_wndContractLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_aef41d48686943f1c2bf50800c25a8dc9}{m\_wndContract}};}
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a9a765a7f741da1d2eeae9f96b3a19508}{m\_szFromDate}};}
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1a5574e6cc78cf17938a532f1b60db81}{m\_szToDate}};}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a5599d31e8b0488729e8979280de41072}{m\_szStorageKey}};}
+\DoxyCodeLine{00058\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_aa5d9ebb957ecdb165d30a3882c6dcc01}{m\_szItemGroupKey}};}
+\DoxyCodeLine{00059\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a50deb73866167fee09ef26d719d63aeb}{m\_szSupplierKey}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a6fd56822cf8f04f49592569bcba4568e}{m\_nAll}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a32d5ef7a2e3d64d41817d7b23b1518a0}{m\_nInternal}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a4693686e1d3764392d51d3dc074a0d73}{m\_nKho708}};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a75d7e395feb33e444056287e28cbe15f}{m\_nPaid}};}
+\DoxyCodeLine{00064\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1d8b5ac51f1b2b800b3e48b61e466679}{m\_bGroupByType}};}
+\DoxyCodeLine{00065\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a55efb6fc58a0776da28434d8a65e5e35}{m\_bGeneralReports}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a421ced16f575413be4907b6e63bf93e4}{m\_szContractKey}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a270ad4c6b8905353fe89fdb6e30fe8d8}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ae44e7f895bb29091bc828be5b46a0805}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a8af9c64375d6683766c44c23c8ffb607}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1c94dbe9b0776ba16fe61bc3ed0d2cf9}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a6fa03d7497055aed02774bbb7a9105c7}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageAddNew();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a11ca82a015c2bdd69b542993d9628000}{OnItemGroupSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1b0b267b39f1014542495fe816db1348}{OnItemGroupSelendok}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemGroupSetfocus();\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemGroupKillfocus();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ae8f735316b5d3a0662e4e01cd9442a5d}{OnItemGroupLoadData}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnItemGroupAddNew();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a2b90bc48f9a403b6ceae60142532adb9}{OnSupplierSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a2174d7db7be21d9647b2a43c91fe301c}{OnSupplierSelendok}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierSetfocus();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierKillfocus();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a8f28fced3ebdce773fa159716a4f7b3c}{OnSupplierLoadData}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierAddNew();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_aefdb859cf7e17a726ee025844db5c65c}{OnAllSelect}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a8ed465db3555014d56813a6bb50d7f7f}{OnInternalSelect}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ab9ff354dfc79d3b9335816bfba3cff1d}{OnKho708Select}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a3ab33293034ebda9352a02892ba29771}{OnPaidSelect}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ac99cf7cb49364283a49be7f06c2b0bec}{OnGroupByTypeSelect}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_abf3189078d5c6499ade40036b9873866}{OnGeneralReportsSelect}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a2324018722555ebbab89e25aa0a1e2c6}{OnPrintPreviewSelect}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_aeea5a544807933e4b9b602c3ac747bdb}{OnExportSelect}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1ac5a9f409be4a44c004314e0574b3bd}{OnPrint}}(BOOL\ bLandscape\ =\ FALSE);}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a0c89456d7fd424829afe86f0b2ab282f}{OnPrint1}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a0b2ac7056fac150ef9ccfdbe154ba8d9}{OnExport}}();}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a78e7232e7863eae9bf7a60e51e7a3c74}{OnExport1}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1b92585b74e70a2d1af8d2ea2fa8324c}{OnExportDrugDetail}}(\textcolor{keywordtype}{bool}\ bOpen=\textcolor{keyword}{true});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a30b20f0611f4437eda71d1e8cdbbbcf3}{OnContractSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a2aefab3bab5970f9708fd1387f7ed5d1}{OnContractSelendok}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractSetfocus();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractKillfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a5a17b3b989b00a3e73d6b09628411bb4}{OnContractLoadData}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractAddNew();\ }}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_acce2051bf05e37f7b683f74356b0ce5b}{CPMSImportSheetList}}(CWnd\ *pParent);}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_aa0eda9007013a2001b3de5c3e276992f}{\string~CPMSImportSheetList}}();}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a6c65e68ed65b1f2c70bd4a6ddf9fa990}{OnCreateComponents}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a8eb06beb9a7af11f2277577e9657802d}{OnInitializeComponents}}();}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_af0437ee814ff3b20b70d787edacfc69c}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a42fc680b90bf20d2c5c65f8e9eb211f7}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a42fabe842d73a1d7afe8a6703760ae7f}{GetDataToScreen}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_abc0f6d030a6a296d5c34f279d0a860ae}{GetScreenToData}}();}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a6c3ec770db55c19b88e2f658bd11c0ae}{SetDefaultValues}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_aef3a3d62f5451e26552ffe971934f80b}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a6748c04ef356b107b4e2bd675fee898d}{OnAddPMSImportSheetList}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_adb4bd32dd69e50dbaff3f35cf495f090}{OnEditPMSImportSheetList}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a7be3b1672669dd92e5b798b28f2139a3}{OnDeletePMSImportSheetList}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a29943c9ef97b0f4c927b3b9779dcda82}{OnSavePMSImportSheetList}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a47b722ec794c782376018c3ed36a1eee}{OnCancelPMSImportSheetList}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ab6a9f5de8e9d743b43f9317d04ebfe30}{OnPMSImportSheetListListLoadData}}();}
+\DoxyCodeLine{00130\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a373093b2dd6f1308137a6b2854866115}{GetQueryString}}();}
+\DoxyCodeLine{00131\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a1a96b69397c07825354b8cdd6a5350a4}{GetQueryString1}}();}
+\DoxyCodeLine{00132\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a75a9f73b58b9d7bb06ae47f4d17e7416}{GetQueryString2}}();}
+\DoxyCodeLine{00133\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_a6c1f504252da6d9b5f6c1e7b6e305fb2}{GetQueryString3}}();}
+\DoxyCodeLine{00134\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_import_sheet_list_ad4b34108943c65fcac5d31c7354606dd}{GetQueryString\_DrugDetail}}();}
+\DoxyCodeLine{00135\ \};}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

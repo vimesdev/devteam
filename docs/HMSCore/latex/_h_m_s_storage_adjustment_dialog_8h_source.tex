@@ -1,0 +1,117 @@
+\doxysection{HMSStorage\+Adjustment\+Dialog.\+h}
+\hypertarget{_h_m_s_storage_adjustment_dialog_8h_source}{}\label{_h_m_s_storage_adjustment_dialog_8h_source}\index{Include/HMSCore/HMSStorageAdjustmentDialog.h@{Include/HMSCore/HMSStorageAdjustmentDialog.h}}
+\mbox{\hyperlink{_h_m_s_storage_adjustment_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STORAGEADJUSTMENTDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STORAGEADJUSTMENTDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ac024e97b6bae4fe12bcc5ae0527f57b3}{CHMSStorageAdjustmentDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ac1754061c31bac99d4f2ec1ba01a9ea9}{m\_nID}};}
+\DoxyCodeLine{00034\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a20361bd08c05fde41ef82d0c574a303c}{m\_szOrderNo}};}
+\DoxyCodeLine{00035\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a4521d8574f19d3a7599f766dd66fe1e0}{m\_szDescription}};}
+\DoxyCodeLine{00036\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a66ae23d8d7331d401e89809a98fc06ea}{m\_szStatus}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ac13e4412f9683b0598e13f6eb3eab901}{m\_wndInventoryInformation}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a1d9bb41a0306f786106cc0e0c7e79822}{m\_wndInventoryItems}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ae7381c263148eeee941d2675bff92a03}{m\_wndStorageLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a7df4efd9df097375c566e378ced43d57}{m\_wndStorage}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_acedc668cbcb7df6c6b00bc2d144e1660}{m\_wndInventoryDateLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ae29fae0baa49425bb1ba3cd822144cc4}{m\_wndInventoryDate}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a62148e93bee38bb6ffe2adb1e7968a81}{m\_wndLoadData}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiListCtrlEx\ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_af104b5d32989a399c103ac1c8b544ba4}{m\_wndList}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_aac7ce2e7ffb22b0021fafa36ed75e9fd}{m\_wndNameLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a7b991a6f1c4fcd554f75f7d1269d32dc}{m\_wndName}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ae730b0e3fe0a1f41dd261a1d2461037e}{m\_wndDelete}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a6c67a8f5713efc88e0d7606d3b889462}{m\_wndAdjustment}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a183ba84d061127c0970e5a7acea17e66}{m\_wndPrintStockExport}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a4cf3e09e600533555c38fd3bcc69742a}{m\_wndPrintStockImport}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_abe847fd7f9af5e91dd5b20160517c763}{m\_wndPrint}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a7c10a53fc6f484f490ec51e5292b2044}{m\_wndClose}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ad728d6de0f4968c78b70ef0dda32dd7f}{m\_wndGetLastInventory}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a9e4a26d62309a026282f9a3fd4e11ae8}{m\_szStorageKey}};}
+\DoxyCodeLine{00057\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a19556eef8d6985319d6034da3768cf5f}{m\_szInventoryDate}};}
+\DoxyCodeLine{00058\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ab79e2607a6e80976a60c1700238ec794}{m\_szName}};}
+\DoxyCodeLine{00059\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a0c8c029a9fe7882432a29cf404789802}{m\_bCheckLastInventory}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ab9b4d3aef6be3278bd58d90895d82681}{m\_m\_inventoryTbl}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a45205b88c8e229397efbaa0dd3716d78}{OnStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a58ab13e30c75566c7b20cd3cfc71a4b2}{OnStorageSelendok}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageSetfocus();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageKillfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_addc31b194d811237a3f59713c023caf3}{OnStorageLoadData}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStorageAddNew();\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInventoryDateChange();\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInventoryDateSetfocus();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInventoryDateKillfocus();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_aa811a80e5da87f207e20ddfeed36fd90}{OnInventoryDateCheckValue}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_af18148cb0c427b4710cb5061e00e6d98}{OnLoadDataSelect}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ad374957bc3cedc0b43934b02a8aee1ee}{OnListLoadData}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a14e1f27b92abbdb7b813bda5baeaf23c}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_aa55d28dc0300df3215d1f5ddf6faaf5d}{OnListDblClick}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_adcb86dca4386a66addd5f501e97e03ab}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a672e4a0c3027056b5cebd4087d7f1618}{OnNameChange}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_abe8f3b5f88b164d28fa781c8876ee35d}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a5c117bcb9d194110a599a7a1f6ccdac7}{OnAdjQuantityChange}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAdjQuantitySetfocus();\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAdjQuantityKillfocus();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a43f341982d660dbbdb271b006c5ec0ba}{OnAdjQuantityCheckValue}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_adaf8696b78c5c1c0d3595cac3a7a9c57}{OnCheckLastInventory}}();\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a26818ea8e3f594211ec95f0020c9bf5a}{OnAdjustmentSelect}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a2fbd2e2d3dfdc1fa76eefc71097db9af}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a38078ddf0edda5f5a907d2c2102427a4}{OnPrintStockExportSelect}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ab6cffde310fe0272f5eacb1bd3284964}{OnPrintStockImportSelect}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ac7cdd3d64740a55a2cf816c31354e0e5}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ac024e97b6bae4fe12bcc5ae0527f57b3}{CHMSStorageAdjustmentDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a6ff81c4ac0fa147dc4c7f76e2981beba}{\string~CHMSStorageAdjustmentDialog}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a905cebbdf388373145124c32394f549f}{OnCreateComponents}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a028c912517d19f06fcae5d8090621a75}{OnInitializeComponents}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a7062a392ebcfbe1753052f59b5384b99}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_affae56e5f5ca317ad231d785957b7efd}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ae9644248b9889f823f9f17ad1dcce5fc}{GetDataToScreen}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a2f4b10ca695c2f39be5814844f1628a3}{GetScreenToData}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a74e0842d6429e2fbdbcaf564688cac08}{SetDefaultValues}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_acbf9bb5c460e4a377d887c8769c07435}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a45c9cb14c14a2fbab4f01d30028515ca}{OnAddStorageAdjustmentDialog}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_aaa366ed4c76be0849de5a7011cd4a37f}{OnEditStorageAdjustmentDialog}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_ac4fb72c53e83487d9f8cd4a67667a4c1}{OnDeleteStorageAdjustmentDialog}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a72112516c3097e664a779f67df1dce6f}{OnSaveStorageAdjustmentDialog}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a6c77d13b972f2ff760a7a3c7f0f070f3}{OnCancelStorageAdjustmentDialog}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a5e34e9b7f26124b88556a94fc7d610d3}{OnStorageAdjustmentDialogListLoadData}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a453cc9d24dfa18cfa9b85387ef160886}{AdjustmentQty}}();}
+\DoxyCodeLine{00111\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a471a087cba921331800d0efd0aae4726}{GetOrderStatus}}();}
+\DoxyCodeLine{00112\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_h_m_s_storage_adjustment_dialog_a3f035b2153e021bbd11dd25b597ea482}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

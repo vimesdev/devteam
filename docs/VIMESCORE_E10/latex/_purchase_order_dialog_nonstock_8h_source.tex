@@ -1,0 +1,255 @@
+\doxysection{Purchase\+Order\+Dialog\+Nonstock.\+h}
+\hypertarget{_purchase_order_dialog_nonstock_8h_source}{}\label{_purchase_order_dialog_nonstock_8h_source}\index{Include/VIMESCORE\_E10/PurchaseOrderDialogNonstock.h@{Include/VIMESCORE\_E10/PurchaseOrderDialogNonstock.h}}
+\mbox{\hyperlink{_purchase_order_dialog_nonstock_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PurchaseOrderNonstockDialog\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PurchaseOrderNonstockDialog\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_purchase_order_lines_ex_8h}{PurchaseOrderLinesEx.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3a8c789cb0b060e246b47c2a04622ea0}{CPurchaseOrderNonstockDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a4979c9fd702e399a8b0ec77609b331b8}{m\_bRefresh}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a79234b9ed41b9bf632e84ca410ffc897}{m\_bNonStock}};}
+\DoxyCodeLine{00037\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ad1d68b9239cf88868964ccd0294fb878}{m\_szIsConsign}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_lines_ex}{CPurchaseOrderLinesEx}}\ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab93dd2235c1eb20b46eb6dcfcf4f73b1}{m\_wndLines}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ CDbfMap\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a9a5012d4e2e05a350d6fb612fe307e2a}{m\_purchase\_orderTbl}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a8b815c99c1a014fb841fb1c59de96ee1}{m\_nID}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a7d01b4b9601cdb04360b503a27079dcd}{m\_nLineIdx}};}
+\DoxyCodeLine{00045\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aa7189840c72242354568a2bea240bacd}{m\_szStatus}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a93cd3dc3a138b904c6b375f25ab859cf}{m\_szPosted}};}
+\DoxyCodeLine{00047\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ac47d54dadbceab1a6275521e75612ce4}{m\_szType}};}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a9d293c8674023d244f1c050fcd1dd68c}{m\_wndGeneralInformation}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_abb937fcc231530368649e00384c77218}{m\_wndPurchaseOrderInformation}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a07fc6d1133d1af2138fca366180e62d0}{m\_wndWarehouseLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a21586b19d7b3bb60ca00183e407fe348}{m\_wndWarehouse}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab2fbfe328b8e8a1d0643b05633a5a14b}{m\_wndResourceLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ad0c81dd7dc43d8bb1c32a9a5534c4f28}{m\_wndResource}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6e2bbf11f9092916754ff6972b599b88}{m\_wndSupplierLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_afdba2a66d3704c32db3890eabf7fbf56}{m\_wndSupplier}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab5772f311056f9f6b90503b5c9f4ca34}{m\_wndDelivererLabel}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6282a2ceba0abe0766f9233f477460c2}{m\_wndDeliverer}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a83bc74b676fc896772c3d7af61f63fe6}{m\_wndReceiverLabel}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab9419ac0fdae81bf8a7f19461434d3f2}{m\_wndReceiver}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a23b693ed139bf5706379c4bd3fde9b1f}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a30004032de2891a39aeaa858012cd0bd}{m\_wndDescription}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab6d1434e94ca21ab877cba1b3fb23364}{m\_wndReferenceLabel}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3a6454c4994504967a36d7dd5ac93508}{m\_wndReference}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a19db3e126034499c5b8920cf3aede1c7}{m\_wndOriginalDocument}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aa21e48c60226297c248423f2778fd73c}{m\_wndInvoiceTypeLabel}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6027998540bba3cd644fd8e58717990d}{m\_wndInvoiceType}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a591ed3bb3aa36e2016834b5a0d6cf77a}{m\_wndContractPkgLabel}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_abaa6ceb2c3448968990092b06c52567e}{m\_wndContractPkg}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a4370e63fa9f019a1469885def13d3540}{m\_wndOrderNoLabel}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3f2f45c2d58a3b44fa1b5193100e5dfc}{m\_wndOrderNo}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a8b121381d92b56a13e17af6eadb3ac0f}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a48ff91c039b772371ff73f0ec4923873}{m\_wndOrderDate}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6263a902815fd99529b29819f29d90c1}{m\_wndInvoiceNoLabel}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a845dd79b76427016e9559aba3f35ec62}{m\_wndInvoiceNo}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ae4372881273dd44c8c8c03fde5265d83}{m\_wndInvoiceDateLabel}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a735ca7e8d3f8b841ebc63f3f3c93ba5c}{m\_wndInvoiceDate}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a73f79fc1bce781a8cd5ce48104667bf6}{m\_wndVATLabel}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ade8565dcc2dcbd662e4cf83ccfec7886}{m\_wndVAT}};}
+\DoxyCodeLine{00081\ \ \ \ \ CGuiTabCtrl\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a5e907c8268bb1f471bfa277ebc5d597c}{m\_wndTab}};}
+\DoxyCodeLine{00082\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_afaf187592e17bda32dbc7bc60a891c3b}{m\_wndTotalLinesLabel}};}
+\DoxyCodeLine{00083\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a728890863bf4df77b5cf2d21647f5fa4}{m\_wndTotalLines}};}
+\DoxyCodeLine{00084\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a7271e1ee51cef836f43e7439312e08d6}{m\_wndNetAmountLabel}};}
+\DoxyCodeLine{00085\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ad293f1e6504a3b928558f28506a3e34c}{m\_wndNetAmount}};}
+\DoxyCodeLine{00086\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_acd8a16d0863aae511ede68a7b6370d39}{m\_wndTaxesAmountLabel}};}
+\DoxyCodeLine{00087\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a28721b6c5e1e86e5fbc00173aad0c18f}{m\_wndTaxesAmount}};}
+\DoxyCodeLine{00088\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3dcc277c4460c08db25bcb8ba2d0b6cc}{m\_wndTotalAmountLabel}};}
+\DoxyCodeLine{00089\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_afbb6abc2f8f133d819643e1a39fc5258}{m\_wndTotalAmount}};}
+\DoxyCodeLine{00090\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab6e9ac6aa7702e006ecc55aaf65cbd85}{m\_wndAddLine}};}
+\DoxyCodeLine{00091\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3ae4b7c15b87ea593ac3a19058a14f87}{m\_wndAdd}};}
+\DoxyCodeLine{00092\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ae8b3479f6827bda9beec6420a6b0cb6e}{m\_wndEdit}};}
+\DoxyCodeLine{00093\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a1f9742d384994fd0b085434278b95b73}{m\_wndDelete}};}
+\DoxyCodeLine{00094\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_acff4e77916f17261e2be204706648148}{m\_wndSave}};}
+\DoxyCodeLine{00095\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a8f03dc732bf7156a943d26de0d1fd5c6}{m\_wndDiscard}};}
+\DoxyCodeLine{00096\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ac645d5b11acb772d7dc4f3cc7e9786e3}{m\_wndPrint}};}
+\DoxyCodeLine{00097\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ae6ab3b18e896dfa3f42acb18b9812967}{m\_wndPost}};}
+\DoxyCodeLine{00098\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aebe4f77d5a0f603e7773dd07fef811c2}{m\_wndClose}};}
+\DoxyCodeLine{00099\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3bf15f99195ea92c6b3756964dd5cf28}{m\_szWarehouseKey}};}
+\DoxyCodeLine{00100\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ada7f158cfa39f6781a5bbc14f872ac71}{m\_szResourceKey}};}
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a2291e528e510234dd74972c03e8b1373}{m\_szSupplierKey}};}
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_afd3c21d6cd54b66aa6397b9d4995704b}{m\_szDelivererKey}};}
+\DoxyCodeLine{00103\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a427ef7b58d196b6d662e692ea40e1988}{m\_szReceiverKey}};}
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a673970969dc0fde90c1bffbc9e39d27a}{m\_szDescription}};}
+\DoxyCodeLine{00105\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_afb319f9a677e57320eaace8a79fe799d}{m\_szReference}};}
+\DoxyCodeLine{00106\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_adf3cd0d745c2c67308d23a0d364fb739}{m\_szInvoiceTypeKey}};}
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_af5f74b173be7e7c1cf441fa004715467}{m\_szContractPkgKey}};}
+\DoxyCodeLine{00108\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a74d94d64bcc6a2930a2ac12ba713119c}{m\_szOrderNo}};}
+\DoxyCodeLine{00109\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a63ea8dec4e65816b97684668d66e95f8}{m\_szOrderDate}};}
+\DoxyCodeLine{00110\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ac08bead1eddd973259fb281608d74314}{m\_szInvoiceNo}};}
+\DoxyCodeLine{00111\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a5d63550cc51aed7a80d0887690d29d37}{m\_szInvoiceDate}};}
+\DoxyCodeLine{00112\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a5a6efbf24416aeec4eca53c6c9ab945f}{m\_szApprovedDate}};}
+\DoxyCodeLine{00113\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a8b1090475f4c53d05ac190e4bc9d4422}{m\_szCurrencyKey}};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a908957770c7416320b1bfd80cae9a98b}{m\_nExchangeRate}};}
+\DoxyCodeLine{00115\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a286b8e6cbddd0d4649ebf0ee2367b7d7}{m\_szAddress}};}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a7e06fd5fac6fc3e04165f3f35fabfffb}{m\_szVATKey}};}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a605f6848f447cfba63f83be697b4714d}{m\_nTotalLines}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a146fd9ad638237cc7c994e7737eea35e}{m\_nNetAmount}};}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_af2bd2504876b11460b685cb6c171af0a}{m\_nTaxesAmount}};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ad7f40ca7cc3e466f7fd9cc8134a17352}{m\_nTotalAmount}};}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aa310be1014b97becf856a6690a1c8435}{m\_nTotalExchangeAmount}};}
+\DoxyCodeLine{00123\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aadfcef96a04f1d278d579bca995aea7b}{m\_szDebitAcctKey}};}
+\DoxyCodeLine{00124\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a9814e2bd34e23b833e5434a101b23e83}{m\_szCreditAcctKey}};}
+\DoxyCodeLine{00125\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a08cfddd026fa1e5d678a90484c962ec7}{m\_szPaymentMethodKey}};}
+\DoxyCodeLine{00126\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3026a76782574571925ca8a85e50c1f3}{m\_szPaymentTermsKey}};}
+\DoxyCodeLine{00127\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a8d2c88c75019c929033942c8b3eb6379}{m\_szDeliveryMethodKey}};}
+\DoxyCodeLine{00128\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a92714292481d3bd26a299591406cbb15}{m\_szDeliveryDate}};}
+\DoxyCodeLine{00129\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a69484c8442c82ed7a001c77524256b48}{m\_szDeliveryAddress}};}
+\DoxyCodeLine{00130\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_af42d952665cdfcc87ce0ef4e350df89c}{m\_szPartnerType\_ID}};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a764311e5620766af5d160eacf5aeb996}{OnWarehouseSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_abbbbffadfa4a72f4916cc6b740e7f644}{OnWarehouseSelendok}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnWarehouseSetfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnWarehouseKillfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ad598ad4f05df5848527d378b5bd31fa2}{OnWarehouseLoadData}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnWarehouseAddNew();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a55b3189ca6a00723e8ce322fe40b3647}{OnResourceSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ad42c27dd44b63ee6c7f677045143e4e5}{OnResourceSelendok}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnResourceSetfocus();\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnResourceKillfocus();\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6ab45f27efdbccac45d71f257a04e901}{OnResourceLoadData}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnResourceAddNew();\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a17638e2226a801ad3059eafa136bf37b}{OnSupplierSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab658267a1197a79153ce56f884b4c9a6}{OnSupplierSelendok}}();\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierSetfocus();\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierKillfocus();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a8721a919a9d18f4320954b756032a83c}{OnSupplierLoadData}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSupplierAddNew();\ }}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererChange();\ }}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererSetfocus();\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDelivererKillfocus();\ }}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aa4b0488687d79be012c26556d1d87386}{OnDelivererCheckValue}}();\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a7eb2f474569b4717ccfb1cea47d506a5}{OnDelivererLoadData}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverChange();\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverSetfocus();\ }}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReceiverKillfocus();\ }}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3f4e991be07d2d73575dc1eba1b85d16}{OnReceiverCheckValue}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a2012d725623e207e547f11f0ba2d8b97}{OnReceiverLoadData}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6d5f23fd2584266d37f863dc2ddc0860}{OnDescriptionCheckValue}}();}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReferenceChange();\ }}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReferenceSetfocus();\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReferenceKillfocus();\ }}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a310a68873f7b91793f8c882e1b44cbaf}{OnReferenceCheckValue}}();\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a45928c3a061544237eabf8e07446fd69}{OnInvoiceTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_af1edb4e871933b3363e0aa8784e2afa5}{OnInvoiceTypeSelendok}}();\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceTypeSetfocus();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceTypeKillfocus();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a1a470681d97371351708361b0b49da89}{OnInvoiceTypeLoadData}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceTypeAddNew();\ }}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a858250a41e33cdd0a75df49ea1abe3fa}{OnContractPkgSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a31623ad171ea188109887bd794a3ee79}{OnContractPkgSelendok}}();\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractPkgSetfocus();\ }}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractPkgKillfocus();\ }}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3436ed35b7bc4ce70d394631f1c152a8}{OnContractPkgLoadData}}();\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnContractPkgAddNew();\ }}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoChange();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoSetfocus();\ }}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderNoKillfocus();\ }}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ac4e15ed9dd7c76d8ece46083808ddd5b}{OnOrderNoCheckValue}}();\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a53f30f16fad853ad70443ab1fa791c7b}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoChange();\ }}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoSetfocus();\ }}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoKillfocus();\ }}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a345f1bdbd67b1e69046fb19363e3a572}{OnInvoiceNoCheckValue}}();\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceDateChange();\ }}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceDateSetfocus();\ }}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceDateKillfocus();\ }}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab91f731cf8efd0a40b9686e2e2136cc3}{OnInvoiceDateCheckValue}}();\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ac28aad6b3a97cde22640b29c7e51f4f2}{OnVATSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_af08e9eb89545a8377a35039987d8db51}{OnVATSelendok}}();\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVATSetfocus();\ }}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVATKillfocus();\ }}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a43cbda75499cc791d488129e0f7f64c6}{OnVATLoadData}}();\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVATAddNew();\ }}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a49230c4ca66fee46a1a5705fb6e04fd4}{OnTabSelectChange}}(\textcolor{keywordtype}{int}\ nOld,\ \textcolor{keywordtype}{int}\ nNew);\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesChange();\ }}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesSetfocus();\ }}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalLinesKillfocus();\ }}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a4529459cfd17080725a1f25bbd4ae1c5}{OnTotalLinesCheckValue}}();\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNetAmountChange();\ }}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNetAmountSetfocus();\ }}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNetAmountKillfocus();\ }}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a0242db088dc56b77fb947d083e9f3bf2}{OnNetAmountCheckValue}}();\ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTaxesAmountChange();\ }}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTaxesAmountSetfocus();\ }}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTaxesAmountKillfocus();\ }}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a5b115a219cb36a610d0ac5819ad58c06}{OnTaxesAmountCheckValue}}();\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountChange();\ }}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountSetfocus();\ }}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTotalAmountKillfocus();\ }}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a642c958e6fce5c2bc3ab4d2bfb076fe0}{OnTotalAmountCheckValue}}();\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a9f360523ad78edd98280e94fd46f602f}{OnAddLineSelect}}();\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a54926296cf66b65076651505dcbc16a2}{OnAddSelect}}();\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab0ea47983ef0658939dc3d3e0bd18179}{OnEditSelect}}();\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a2ff72e6732e422f248dffc0f916b20bf}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a2c003e2391a23ca35c4aacd41212e0e2}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ad5debb2c2b8f68d5a09457628de54fe4}{OnDiscardSelect}}();\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6725c3b710ca413521acda4c52b529b0}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aa8692d30c8b6196b6d1423aef95040bb}{OnPostSelect}}();\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_af91cfb5893046f391d7c7f975486d49d}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aadeb08407b842a1ceab4d53c66dd228e}{IsNonStock}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a79234b9ed41b9bf632e84ca410ffc897}{m\_bNonStock}};\ \}}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_ab87472ed2daf2acab360a4c6298fa655}{IsConsign}}();}
+\DoxyCodeLine{00230\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a3a8c789cb0b060e246b47c2a04622ea0}{CPurchaseOrderNonstockDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode,\ \textcolor{keywordtype}{bool}\ bNonStock=\textcolor{keyword}{false});}
+\DoxyCodeLine{00231\ \ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a811a336f1d4dae10e0802aa3f00809ed}{\string~CPurchaseOrderNonstockDialog}}();}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aa7a33dfc3948b153d5b20d8da7909140}{OnCreateComponents}}();}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a190a208b8269e8173dda65d00597aaeb}{OnInitializeComponents}}();}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a7d2e6e312c3c6cad8fb8e9e92dd9c02a}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a6f478074c338d9234d175cdeb626c572}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aae1ec108f180dbbf8413b11081b70b4a}{GetDataToScreen}}();}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aba225e53325157221d2898a08dce4772}{GetScreenToData}}();}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a68c54452110c55277b89456115fb7547}{SetDefaultValues}}();}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a933f26c186b32391bbfe8ce77f25d6e4}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a557c410fe33e764cf941d4890b4a5354}{OnAddPurchaseOrderNonstockDialog}}();\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a47de3d36f0e7fec06e6b4358d00cf135}{OnEditPurchaseOrderNonstockDialog}}();\ }
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_acc91f2d7c26200a9a2d221c679c5c384}{OnDeletePurchaseOrderNonstockDialog}}();\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a1ed2d6a3893c5162829607ce4ed99087}{OnSavePurchaseOrderNonstockDialog}}();\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_aee8db67bf1b67dc59164afdee2722ae1}{OnDiscardPurchaseOrderNonstockDialog}}();\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a1cfd86a93d61cda5149b1830487e856d}{OnPurchaseOrderNonstockDialogListLoadData}}();\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a4cba97ce8c01a4de774b167a9e686caa}{CreateTabViews}}();}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a1ea3af3fbef46b425c96c692cd2b7e0e}{RecalcAmount}}();}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a69abe0d92efb075e3d3600ff2d6e4c0a}{Refresh}}();}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a48f64da56dfdb297082a0c6d42672b70}{GetDefaultPerson}}();}
+\DoxyCodeLine{00250\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_purchase_order_nonstock_dialog_a5fe21f8c01b287909c1142b0e85aceac}{PreTranslateMessage}}(MSG\ *pmsg);}
+\DoxyCodeLine{00251\ \};}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

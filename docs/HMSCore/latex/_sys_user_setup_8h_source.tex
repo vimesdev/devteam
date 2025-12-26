@@ -1,0 +1,167 @@
+\doxysection{Sys\+User\+Setup.\+h}
+\hypertarget{_sys_user_setup_8h_source}{}\label{_sys_user_setup_8h_source}\index{Include/HMSCore/SysUserSetup.h@{Include/HMSCore/SysUserSetup.h}}
+\mbox{\hyperlink{_sys_user_setup_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SYSUSERSETUP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SYSUSERSETUP\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Medical\ Informatics\ Technology\ and\ Equipment\ Join\ Stock\ Company\ 2008-\/2010.\ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Thiet\ Bi\ Va\ Cong\ Nghe\ Tin\ Hoc\ Y\ Te\ MITECO.,\ JSC.\ 2006-\/2008.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_sys_user_setup_a31638b0c9351fbf166c64753fc348b7b}{CSysUserSetup}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a88d98062e55fd799082b21894ab1e782}{m\_wndUserInformation}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a18f1272919005351c492517088a618a9}{m\_wndPermissionInformation}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a272d5e66da29d1cd43bba2037b75837f}{m\_wndUserList}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_af87863ac6d8c149e11542066f0d1086f}{m\_wndPermList}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a4df81ad33789d942dae648f6d1c56bc2}{m\_wndSearchDeptLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_af66b5687d2b10478a673a2c1f482c3db}{m\_wndSearchDept}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a8c877447c4d53f9d4b528d442cbaf16b}{m\_wndSearchNameLabel}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_acfda185d9ecd62cef3fb206150f55960}{m\_wndSearchName}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a105ede4c0e9bf66257dfdf33f6dbba9a}{m\_wndDepartmentLabel}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a68770dda868029ed5d9e90681bd16cef}{m\_wndDepartment}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_ae991395b58fffb92434b7fa486557f6c}{m\_wndRoomLabel}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a97f8bb9bb914c75cba378672f7cf7cb0}{m\_wndRoom}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a38c05e469cc4b5f2434a1ef6bb68b16e}{m\_wndUserIDLabel}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_afb0aa7dfc900b5159f7dcf1206c07245}{m\_wndUserID}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a0d0604233bf80f891ebcf924791aafeb}{m\_wndGroupLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_aa0065d96a721a0aabdd951861b896341}{m\_wndGroup}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a15a7ec8bde5dd0d58e1be60839de46bd}{m\_wndUserNameLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a9d3dc1ca3da7219cd2dff9df5905c206}{m\_wndUserName}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_ab7f9108ae1557a14d4d17b9bde4d0632}{m\_wndPasswordLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a2509972051a9fa29a0f19d605e77bfb6}{m\_wndPassword}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a5ca4844038bc2de68321de38192a4c73}{m\_wndConfirmLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a4afd338762d1982e63ebaabb60358800}{m\_wndConfirm}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a59dfb945eea131150d21483c8b6a75ed}{m\_wndAdd}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a3127d64250feca1fc5a9ad6d5650d900}{m\_wndEdit}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a9459f0a4329b76b57fee3b4bf288a5b6}{m\_wndDelete}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_af7c7f22738a803cb1876bfe4a1e4c93a}{m\_wndSave}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_aedeb8608bb187f97106f70be60d8b3f1}{m\_wndCancel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a598f20b7a98b874260382d376082ce50}{m\_wndApply}};}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a37aeede2b62fa0da76eaa5ec0c871a91}{m\_szSearchDeptKey}};}
+\DoxyCodeLine{00062\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_aa7299855b42f548856f287e0fdc5973a}{m\_szSearchName}};}
+\DoxyCodeLine{00063\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a9954d2baeb18a9f1799e7fc0dc234868}{m\_szDepartmentKey}};}
+\DoxyCodeLine{00064\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a63c187f4d9597c67fe2785ffecc4f7a6}{m\_szRoomKey}};}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_ae649df6fca2329e05ad7de752dcce60c}{m\_szUserID}};}
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a0798be5617c3c34c9aa2dee3fee2ae23}{m\_szGroupKey}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a2e51abd8c01439a7c965615f7cc12d71}{m\_szUserName}};}
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a5c8ba219978357916238b53000ca9466}{m\_szPassword}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a00464a9291ea8cc79328a2f99c2c89fd}{m\_szConfirm}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a0b89d7bf7c69ad595deabfadc5093c35}{m\_szModules}};}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a92f83ec4ae3d148ad4b3cd62b749b0fa}{m\_szEMModule}};}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a077e22398a127c6e0447d32a379e4f66}{m\_szRMModule}};}
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a478ab8c6d5759a8b6fe3695c79ca19c9}{m\_szTMModule}};}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a826dfe763df0a6f282b18199adb35a70}{m\_szHFModule}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a4e2ac6a80aff2cb71959a717cec56a10}{m\_szPMModule}};}
+\DoxyCodeLine{00077\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a8fe9328486f8cd173326eb9a37cf54bd}{m\_szPACSModule}};}
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a5d7449074d43438dd2739fdc9ad96927}{m\_szSysModule}};}
+\DoxyCodeLine{00079\ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_user_setup_a01d5ea744b1870f5ab54b1e48e191229}{m\_szLIMSModule}};}
+\DoxyCodeLine{00081\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_sys_user_setup_a9578631bec91c10a86f95e019c28b25b}{m\_sys\_userTbl}};}
+\DoxyCodeLine{00082\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_sys_user_setup_a0382bb4a36b335dd9bf1a3625fd4aa46}{m\_sys\_userpermTbl}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a721223479e8570ff99a3b810001b67e9}{OnUserListLoadData}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a1902f662cb2ae180089a86f2f239607a}{OnUserListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a613b87130b7fd37000fcaf4ac24a9977}{OnUserListDblClick}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a22c598554b38d5752b5e48e0a772a140}{OnUserListPermission}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a1fc0b6863b6b88565ab260a62352600e}{OnUserListAddSignature}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a7ef7b3e61da09007132f1b6b8f5d3473}{OnPermListLoadData}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_acb4e13ade47d1b60424c726d88de0a61}{OnPermListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a4cab21a4e0b3cdbcd57b47c368ce5d1a}{OnPermListDblClick}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a22c795731a18ac436631f5e956ca1c40}{OnPermListDeleteItem}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_ad826be4bcb706e0e827e6b726c712116}{OnPermListChange}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a3f799e53c775da9ff3ffe3304dff6daa}{OnSearchDeptSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a4cdcad07cb3d2fb396c2d059be50b44b}{OnSearchDeptSelendok}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchDeptSetfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchDeptKillfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a33d99e5b82e42fb9f90753e012a0d339}{OnSearchDeptLoadData}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a1050d5f3cc4629af8d7743eea98decf5}{OnSearchDeptAddNew}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchNameChange();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchNameSetfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchNameKillfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_afbfedd367b703db742d1a927c320434c}{OnSearchNameCheckValue}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a0cdaff8e6acdb558ac4096c970024dc4}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a8be93c93d4bba6cadf1a337778592527}{OnDepartmentSelendok}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentSetfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentKillfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a6c95ee2b170bb6363b885dd269b77b2b}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_aa454465b427f62a5fcfffddf769e15d1}{OnDepartmentAddNew}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_ab5708456885bbcc86e1199c5b75d2dcd}{OnRoomSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a03feee9fd9c8f8455ecc5268ddcb2a64}{OnRoomSelendok}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRoomSetfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnRoomKillfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_adf634a4d3b6bfe0ca7fb72c36200363a}{OnRoomLoadData}}();\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a29309e53863815fa7cad3515cf1ff2e7}{OnRoomAddNew}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUserIDChange();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUserIDSetfocus();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUserIDKillfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a4319795d58c2c8fff3e3f3bb56c574d1}{OnUserIDCheckValue}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a2e5dda2ab669bcbe2f007d2353832592}{OnGroupSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a59a7f6ac01ba853a57ac213a62bf58e3}{OnGroupSelendok}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupSetfocus();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupKillfocus();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_abfd00daaa49153c5aa7b2051b3e4915a}{OnGroupLoadData}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a8d399c762e62a2464206aa95d775b9c7}{OnGroupAddNew}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUserNameChange();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUserNameSetfocus();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUserNameKillfocus();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a5a717b562bd3dfcce02e5769c4fc30f0}{OnUserNameCheckValue}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPasswordChange();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPasswordSetfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPasswordKillfocus();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a6c9ab2d2825f5631e771e0370af82c1e}{OnPasswordCheckValue}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnConfirmChange();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnConfirmSetfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnConfirmKillfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_adeaa363cfbd4fb8c6cd2fc324d172136}{OnConfirmCheckValue}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a9295248733f12e98384327b9d2f6a4ff}{OnAddSelect}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_ae05ee7ca430597167e214c50b864b6af}{OnEditSelect}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a7f9ee83b4eaf9c0846fc39aef30065a6}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_ac38e38256930c4c428e2544b2c9a5189}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a0a3d7b9018cff24efa2855e22cfe744a}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a9483abd6fa71eff225a6016110c92adb}{OnApplySelect}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a6ccbdc916b6a856b667557dc232307f5}{OnUserAdditionPermission}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a31638b0c9351fbf166c64753fc348b7b}{CSysUserSetup}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{class_c_sys_user_setup_a4be41383f5be06b1818a0e87cfd27697}{\string~CSysUserSetup}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_ab271690eb229552dd2038c37c1c0deaf}{OnCreateComponents}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_a2a52f435b431fa59de96e9cc5653aed5}{OnInitializeComponents}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_ae636d6e31cc738eafb1d941d24001b74}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_a79a3afc72979b4e78459c5e58cc60a76}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_ad30ffa481834523cd8c0cc0cf68f886c}{GetDataToScreen}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_ad91cdf90951a2ec1e06a1b5fece95bf5}{GetScreenToData}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_a4908dd52805e808e34422a8ac87dfbad}{SetDefaultValues}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_user_setup_a6e4b217155457d26a51dbf2ef1d05ce8}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_user_setup_afc829fbd5afb33ccbb8dfc638a8cad8a}{OnAddSysUserSetup}}();\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_user_setup_a24a80a6b713375f05fae2c00b2718c6b}{OnEditSysUserSetup}}();\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_user_setup_a8454fcf168f11cc1084f49298a9e3526}{OnDeleteSysUserSetup}}();\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_user_setup_aa4a08ee63cb7c5ec63e64405691c8742}{OnSaveSysUserSetup}}();\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_user_setup_a21fcb36c8c033d465f9f94e94c022ac6}{OnCancelSysUserSetup}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_user_setup_ad1eab6be2a1277693cf224dc93606baa}{OnSysUserSetupListLoadData}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_a8e2d806e681ae6ad72a91c4add419cd6}{SetModules}}(LPCTSTR\ lpszModule)\ \{\ \mbox{\hyperlink{class_c_sys_user_setup_a0b89d7bf7c69ad595deabfadc5093c35}{m\_szModules}}\ =\ lpszModule;\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_user_setup_a5817c9df871ef26c66774f1d99315beb}{Refresh}}();}
+\DoxyCodeLine{00163\ \};}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

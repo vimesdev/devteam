@@ -1,0 +1,72 @@
+\doxysection{Sys\+Permission.\+h}
+\hypertarget{_sys_permission_8h_source}{}\label{_sys_permission_8h_source}\index{Include/HMSCore/SysPermission.h@{Include/HMSCore/SysPermission.h}}
+\mbox{\hyperlink{_sys_permission_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SYSPERMISSION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SYSPERMISSION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_sys_permission_setup_ac8f36e9b95dab05b72a42307622ab42e}{CSysPermissionSetup}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ac5a0649334dc5992ab965e25121c4b00}{m\_wndPermissionInformatioin}};}
+\DoxyCodeLine{00010\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a2e9a2a1194b0e696d5e3495f15cd0106}{m\_wndPermissionList}};}
+\DoxyCodeLine{00011\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ae6461f14e59624dec1c7075272eeedbe}{m\_wndIDLabel}};}
+\DoxyCodeLine{00012\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_abfaad875e4ec931fef674ca8720dfa64}{m\_wndID}};}
+\DoxyCodeLine{00013\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_aa04a7e82e7dd2108f371743181c325c2}{m\_wndModuleLabel}};}
+\DoxyCodeLine{00014\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ab823be70eb1104f4e44d584573452f93}{m\_wndModule}};}
+\DoxyCodeLine{00015\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a484981155ea888fb8bd8a363f7c722c3}{m\_wndDescriptionLabel}};}
+\DoxyCodeLine{00016\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a760f6bbac22e16db99fce59a54d8054e}{m\_wndDescription}};}
+\DoxyCodeLine{00017\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a98e198814d7cc94ca0efb90293d821aa}{m\_wndAdd}};}
+\DoxyCodeLine{00018\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a056ba49a0530119499ca6e01aef3e9b6}{m\_wndEdit}};}
+\DoxyCodeLine{00019\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ae3627cbd84a3a7863dafaaeb5886285f}{m\_wndDelete}};}
+\DoxyCodeLine{00020\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_aaffe94624a4aabcaa312e2bdb1c4d99f}{m\_wndSave}};}
+\DoxyCodeLine{00021\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ab52b2a3a2c31ae6129771b1853c6df10}{m\_wndCancel}};}
+\DoxyCodeLine{00022\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_permission_setup_af034c201f0b46edfce3ca7431d1d00d4}{m\_szID}};}
+\DoxyCodeLine{00023\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_permission_setup_a47b1dfa18cccfa17cdaf3af2f6b7256c}{m\_szModuleKey}};}
+\DoxyCodeLine{00024\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_sys_permission_setup_a89ed848d341d890e516e215fe46ec0d7}{m\_szDescription}};}
+\DoxyCodeLine{00025\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_sys_permission_setup_af0e247bd74073d4024594c1d7443e8ed}{m\_sys\_permissionTbl}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ad58fa25296827ba56b3cb9bd0c21e77e}{OnPermissionListLoadData}}();\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a1ab17806e3e01ee6c4673fcc8ff487da}{OnPermissionListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ae7842e7e1fee50cb3ef97be6174a9a02}{OnPermissionListDblClick}}();\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a37bfdad40cf0d507e0e2768f1ac5b923}{OnPermissionListDeleteItem}}();\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnIDChange();\ }}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnIDSetfocus();\ }}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnIDKillfocus();\ }}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a869a2b2c10ec3c019972e4818b708bcf}{OnIDCheckValue}}();\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a81306635de2576fe62dc1af32f6f30d0}{OnModuleSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a558a71966938cb49e62ba5084c818524}{OnModuleSelendok}}();\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnModuleSetfocus();\ }}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnModuleKillfocus();\ }}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a232581774e0b11d573853aec7b12d3e4}{OnModuleLoadData}}();\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_adee6d93a7dc80cafdd4d1299923eff56}{OnModuleAddNew}}();\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnDescriptionChange();\ }}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnDescriptionSetfocus();\ }}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnDescriptionKillfocus();\ }}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a538a6d149a96cc4ec9eff72199055406}{OnDescriptionCheckValue}}();\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ae8f91a490ab7083a26fe63f711879d79}{OnAddSelect}}();\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a8a93947710f14d1b529ae7533efca736}{OnEditSelect}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a4881c164351a14498e8e7d566c64b4af}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a8c1c6effe5442a9a7a723bdbbbb835ac}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a1c2e9ef995652b28d01031e4c4e23b63}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_ac8f36e9b95dab05b72a42307622ab42e}{CSysPermissionSetup}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_c_sys_permission_setup_a71d8d8c1bcc108d0be37f5f2cd8ac16b}{\string~CSysPermissionSetup}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_ae600e1da1be6f057422cc9ef94319cb3}{OnCreateComponents}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_a583d055688fc68241bc27ee672cc41d5}{OnInitializeComponents}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_aff6e6b19b2c88b972e56fbe649602a15}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_a267d6ebd284b74826231d07588b81a7f}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_a09b112dde45b7b2f77f8e3fdb6d62739}{GetDataToScreen}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_ae596156b03d145ffdee1ea85a28c3b14}{GetScreenToData}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_a15d917ca39077351c39ffa9c6142b5ee}{SetDefaultValues}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_permission_setup_a3c2950eaa72beed296fce3bae063d39d}{OnAddVIMESPermission}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_permission_setup_aaa948d11193d6834072b5319485e8f6d}{OnEditVIMESPermission}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_permission_setup_a97dd68dc973b1f1336dede78372b8ed2}{OnDeleteVIMESPermission}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_permission_setup_a5e40c733c5c173d749da6413b4cc48b6}{OnSaveVIMESPermission}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_permission_setup_a7f55afe9557b266fdfc28bfe9defc692}{OnCancelVIMESPermission}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_sys_permission_setup_ab53cced490e44f9dbfe53688d916a6ba}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sys_permission_setup_a44ed5d5ea8bd0881f78a7ab4842cea9a}{Refresh}}();}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

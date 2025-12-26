@@ -1,0 +1,88 @@
+\doxysection{Import\+Insurance\+List\+Dialog.\+h}
+\hypertarget{_import_insurance_list_dialog_8h_source}{}\label{_import_insurance_list_dialog_8h_source}\index{Include/HMSAdviseDrug/COM/ImportInsuranceListDialog.h@{Include/HMSAdviseDrug/COM/ImportInsuranceListDialog.h}}
+\mbox{\hyperlink{_import_insurance_list_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ImportInsuranceListDialog\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ImportInsuranceListDialog\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtag_map_column}{tagMapColumn}}\{}
+\DoxyCodeLine{00031\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_map_column_a48131446526485302f752a80a8fcfb64}{szFieldName}};}
+\DoxyCodeLine{00032\ \ \ \ \ CString\ \mbox{\hyperlink{structtag_map_column_a82ff160503abd107049521a7cccf5a66}{szExcelColName}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_map_column_ae388801d87ae1e37ea0bfe46ed364af7}{xlsColumn}};}
+\DoxyCodeLine{00034\ \ \ \ \ UINT\ \ \ \ \mbox{\hyperlink{structtag_map_column_ab3604c9f34807cfe18a9b09e961fed7b}{fmt}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{structtag_map_column_a699ae344c03ef25d78ace11e4b753fa8}{width}};}
+\DoxyCodeLine{00036\ \}\mbox{\hyperlink{_h_m_s_exm_import_excel_dialog_8h_ac3ff5bb1726881a16f4e9a099f595fb9}{MapColumn}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a765842ece79ec9d3939645c861d94761}{CImportInsuranceListDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a3d80b515aced6f943c6bdb227c3351bc}{IsMaped}}(\textcolor{keywordtype}{int}\ nCol);}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ CArray<MapColumn,\ MapColumn>\ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a04c5cc27e2fea461c3b3711f42caabc6}{m\_maps}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_af97de3a6c51393fc09106ad167b9cd64}{AddRefColumn}}(CString\ szField,\ CString\ szColName);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a07479b5810b1d797de8b785c196a12f2}{m\_nQuyetdinhIdx}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a93dc681dfc9325c1727e9428e4fa47b1}{m\_nSodangkyIdx}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_af21da70d046ddbd78f2673154cfaa197}{m\_nNgaycongboIdx}};}
+\DoxyCodeLine{00047\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a18f193c4feabc631b3b8423ffa4655d0}{m\_szCurrentDir}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a79e98f805be16aaa8348a8ac8e81d013}{m\_wndListPatients}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a3e5f683fb3e45bee30c9373543210679}{m\_wndBrowse}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a3afc3d1ac9e4407cb94e9f5b44254689}{m\_wndURL}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_adc0fca18badd76509ec8f10d762b7fb8}{m\_wndImport}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a55e5fdcf89bd2280116d8f17ed2c624b}{m\_wndList}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a21840f4cf5ef473cce18f53666aee7ba}{m\_szURL}};}
+\DoxyCodeLine{00054\ \ \ \ \ CStringArray\ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a3a52899882654ead406d5d3c701f79a4}{m\_arrList}};}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ CDbfMap\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a76751cc3d97f51ab3f4cf82ab3f27a20}{m\_m\_product\_extra\_infoTbl}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a538390da7c0ff75e82342b8239d26c93}{OnBrowseSelect}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnURLChange();\ }}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnURLSetfocus();\ }}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnURLKillfocus();\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a5a1019b32117e1ab08d2803c344ab3de}{OnURLCheckValue}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_ae6218945aa9849db16e86c82686f2715}{OnImportSelect}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a4aa56650a0fc0a21ce87c230cc8c2f3a}{OnListLoadData}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_ad4774746fd85716bf942e4dcc01c96e2}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a7ce0fa850fcd38158d780c014f73a5a8}{OnListDblClick}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a61a9cd4a1597567a5cf551dfc9d211d0}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a765842ece79ec9d3939645c861d94761}{CImportInsuranceListDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a47d68fb901fd1a3f21efe9f2e1b64416}{\string~CImportInsuranceListDialog}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_afc3a21acad108245f66aa18f96cd04ba}{OnCreateComponents}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a883e650a8c95d07b9839cba1754f8f6e}{OnInitializeComponents}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a7174c5b12bafdcd0faba56d99085d3b8}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_adf69d5ff51c6d11b479b460ff4f498a2}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a24197538e2a879b775dac6a5ec0098a8}{GetDataToScreen}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_aab6b47a31b09352ed3e4a70827671432}{GetScreenToData}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_ad9bd49849029a990c67cfa891e27c499}{SetDefaultValues}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a271d01830d2d00443f16dd823b220cc0}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a93d0a13e5ed86fb168a8116a06302534}{OnAddImportInsuranceListDialog}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_ab82b2883e952658a6486dbd59568c36a}{OnEditImportInsuranceListDialog}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a6e28682cb8d0c73ccb7f4e974ab56912}{OnDeleteImportInsuranceListDialog}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a979dc153134d1f2a99ad5d28ba70fade}{OnSaveImportInsuranceListDialog}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a88e124027d06fb3f99e8cec996bb418f}{OnCancelImportInsuranceListDialog}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_import_insurance_list_dialog_a997baee0b0c8b0669b0177611ac58ed3}{OnImportInsuranceListDialogListLoadData}}();\ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

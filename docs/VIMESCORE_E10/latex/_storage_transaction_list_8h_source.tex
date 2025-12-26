@@ -1,0 +1,150 @@
+\doxysection{Storage\+Transaction\+List.\+h}
+\hypertarget{_storage_transaction_list_8h_source}{}\label{_storage_transaction_list_8h_source}\index{Include/VIMESCORE\_E10/StorageTransactionList.h@{Include/VIMESCORE\_E10/StorageTransactionList.h}}
+\mbox{\hyperlink{_storage_transaction_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STORAGETRANSACTIONLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STORAGETRANSACTIONLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_storage_transaction_list_aa104ff5ac6e72b0842507727cb5fd824}{CStorageTransactionList}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a001c362c607e9fd5346896336758237e}{m\_wndOrder}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_aaadfdf2de90106bd3db57aa016da1954}{m\_bImportType}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a0ccbbd592f015908e007904c170784da}{m\_nID}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a969b3d3fbd9d7b4f7badd67d7d0e444f}{m\_wndZoneLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a64859a3d2522c1ab40732c5e624d85e1}{m\_wndZone}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ac8aa2542098f12e44c86c9655f9896c8}{m\_wndOrderList}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_af6202a66c8eb529df6a8d6c93c5e6002}{m\_wndSearchInformation}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a850e824e8c160c393e77a60efc5d31a1}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_aa2fc61f1a4198b8f1fb2fff3fe48e89e}{m\_wndFromDate}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a215b53043c7badef9610aa3a620b2cbf}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ae09988ee553b40cbd5d997b4062af202}{m\_wndToDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_afaff3d320cd85d0e210bca1acc75df60}{m\_wndTransactionTypeLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a3bbc6c90b27ecc349d1dfe22252d3521}{m\_wndTransactionType}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a7eb3fa1a98597ac47337bbe26bd4e1d6}{m\_wndFromStorageLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a1b07a9bb27adcfdea7a38004874a9df3}{m\_wndFromStorage}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_addcc64475fecc12346f1d18d32be9244}{m\_wndToDepartmentLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a5f7e4472c88d217b322510f6b7cf2968}{m\_wndToDepartment}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a2abf03617d2ae05aa6f410f24449a3ed}{m\_wndOrderNoLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ae60044a912372daabe6e7db49fec2798}{m\_wndOrderNo}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a5412a1ca0b7babe5bd8a1770a6456c96}{m\_wndRefresh}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_af680e9f7d2ed0a7e207ae502e575cc9b}{m\_wndList}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_storage_transaction_list_a88817319134e06851b66b13930825db6}{m\_wndAll}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_storage_transaction_list_a3ce1360dc3224e53f06c8ea51ae5b217}{m\_wndOpening}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_storage_transaction_list_ac0c20f5ecf7fd766e4f6ba1d724e46ad}{m\_wndSended}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_storage_transaction_list_afb80b489cee8571e474599e01e443546}{m\_wndApproved}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a3a000fd2316918c3e89f93332353566c}{m\_wndView}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ad14cc089bf3475ec2dc4b445867b1476}{m\_wndAdd}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a10e212ad0621355feae5be74c063cecb}{m\_wndEdit}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a380a46ef672bd7b70fa4d5327ae9f3c1}{m\_wndDelete}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_aa86c6ea632a3d8888dbbd074f3f62368}{m\_wndConfirm}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_list_a70e2614df70050f9aafe5ec458451324}{m\_szZoneKey}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_list_a1a0fc079b36336281b72e8768b7f4d9b}{m\_szFromDate}};}
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_list_a298bba1c0f5c4bb850178d46ca7dbd71}{m\_szToDate}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_list_a8a5f882bd9b268d44ba7a10525caf6ca}{m\_szTransactionTypeKey}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_list_a04083e6a1f65f516a121ba4f7863c936}{m\_szFromStorageKey}};}
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_list_a9e7141a85279f13cbf5810f4cb2f4703}{m\_szToDepartmentKey}};}
+\DoxyCodeLine{00072\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_storage_transaction_list_a441f8771be000ff644cf3a8fde06d59b}{m\_szOrderNo}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_a9038a06086984dd536a081028428f63f}{m\_nStatus}};}
+\DoxyCodeLine{00075\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a5f62b94489717c88b14bc17327e87e40}{m\_bConfirmed}};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_af157a7929ac2dc3af860504fc08a574a}{OnZoneLoadData}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_ae8d78478793914850d62a3b712697b29}{OnResizeLayout}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_af18a5ae4959f9acda71d4d1d30d8a2f9}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a8376ea8519f65170d45703c174bafece}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a2cd75b6255bf6c45a435bb8087940100}{OnTransactionTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ac2bdd94f3819feba17c5d4acb3a6db32}{OnTransactionTypeSelendok}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeSetfocus();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeKillfocus();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ab70a99ff8dd3c83352cd8d0fffd4f243}{OnTransactionTypeLoadData}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeAddNew();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_aea83a02830e30cea4bebcdede8c959b6}{OnFromStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ad72b78467e5e2614ab1e2a2b045dcfe1}{OnFromStorageSelendok}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageSetfocus();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageKillfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a9ab200dfc2134af9d0802e5081634d9c}{OnFromStorageLoadData}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a2462e83cb0fd4d98fd27d7358d3d3c1f}{OnFromStorageAddNew}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_add5134c7c25ea752a7886ca2ab751e5b}{OnToDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a204582c025ab3f67203bc73d985c8cd4}{OnToDepartmentSelendok}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentSetfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDepartmentKillfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a81bcd58a75ead40447dd7b4b4708cdcb}{OnToDepartmentLoadData}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a44bbf2ff4e1feedac2312d71b1105fcc}{OnToDepartmentAddNew}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_aac55f4abba8f11ac5090481a91b3f845}{OnOrderNOCheckValue}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a82e8c192aec6a8c9b7d3b86abd70c3cf}{OnRefreshSelect}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a309c1e3a6f682d373515336a573d691d}{OnListLoadData}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a1dfacc107566aed9289cb52aaafc1b1e}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a110d790e7641d0f558292f40259ec1e7}{OnListDblClick}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a6e9f126276425af82cd95235cee1bb1a}{OnListAddItem}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a689cf00da56c2156b047ba04c03391a4}{OnListEditItem}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_af43f99abdbbdc0dd6cc2293ce5a79034}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_aefa06e6c1e199e296ba4bf34d1c73b0f}{OnCancelOrder}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a6daed3b22a826d3e43e9cdb0c25cdc21}{OnRecalcOrder}}();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a5a52323c820f9ad424f51d825d9e7e01}{OnAllSelect}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a32650efa0d962274c5d7c1e0dff66f41}{OnOpeningSelect}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a1786e64f7d4ba291d1d17b13d069dee5}{OnSendedSelect}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ad3d8a11fc0a9c11b6bdaeea7a72107f5}{OnApprovedSelect}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ab3019d7e24953997b38c7685b68f9a5e}{OnViewSelect}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ada2f8bc6ce02c8359a1959e39b6499f7}{OnAddSelect}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a65f8f97383b4b368c5b09db537dd0f07}{OnAdd2Select}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a1f8c5c03b13a2304b5d4f48708dcf4e7}{OnEditSelect}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a84faa8b86aa3fbe437a4c82387c74fbd}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_aa104ff5ac6e72b0842507727cb5fd824}{CStorageTransactionList}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a8551b0a32880ff0db3b7b5f577a40021}{\string~CStorageTransactionList}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_a9c889686cf8c5153353fd07920acd90f}{OnCreateComponents}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_ae5d8ae098e861115a0e836f61fb48b39}{OnInitializeComponents}}();}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_a8b8531270ca899ec59ec86e0f7b10d02}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_a3c8c61616a019becaa01c938c1ee6cf2}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_adca864289c6da99dbc5ed9ffbfbfb56e}{GetDataToScreen}}();}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_a3110b24f8031a03f9bc061854291292b}{GetScreenToData}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_acfc02a00584e08eb9fdbb9f9923e30f3}{SetDefaultValues}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_af4d32a12d79f28a42dc7ba860d903e64}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_aab3492248dc9be7942a7da94cce92c0f}{OnAddStorageTransactionList}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_a386fd75a446931d54ee67216473fd7a6}{OnEditStorageTransactionList}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_ab7d1dedd1e919aa2b8e62549bb25c969}{OnDeleteStorageTransactionList}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_ab37988fe058bfff03f8b5adf620cc8af}{OnSaveStorageTransactionList}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_a951e85292d463d1cace2e103e807a344}{OnCancelStorageTransactionList}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_storage_transaction_list_a744f18a29614f8627d9aeed2b72932bd}{OnStorageTransactionListListLoadData}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a8ff127e224856de29ca3a7bebe22d943}{SetImportForm}}(\textcolor{keywordtype}{bool}\ bFlag);}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_a743ef20bc455b2055b5b9eaa6bd7ac11}{Refresh}}();}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_storage_transaction_list_ad8bf95aca470c9a569c1856f44ac34f5}{OnRollback}}();}
+\DoxyCodeLine{00143\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_storage_transaction_list_a6b841fbb7328b84dc4e106cdfa671613}{OnSetFocus}}(CWnd*\ pOldWnd);}
+\DoxyCodeLine{00144\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \};}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

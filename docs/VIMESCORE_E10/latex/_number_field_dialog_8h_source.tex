@@ -1,0 +1,73 @@
+\doxysection{Number\+Field\+Dialog.\+h}
+\hypertarget{_number_field_dialog_8h_source}{}\label{_number_field_dialog_8h_source}\index{Include/VIMESCORE\_E10/NumberFieldDialog.h@{Include/VIMESCORE\_E10/NumberFieldDialog.h}}
+\mbox{\hyperlink{_number_field_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NUMBERFIELDDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NUMBERFIELDDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_number_field_dialog_a9cda3ffc1ec5201c35c9c3ee5ddb30ba}{CNumberFieldDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a0b740d87ed159d3cde3fa20cc0bb7f78}{m\_szTitle}},\ \mbox{\hyperlink{class_c_number_field_dialog_afa6a3530e4a93122988fd2aabc65afea}{m\_szValueName}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_number_field_dialog_a71e67c11f5685881e2121eb1d7cfca8d}{m\_nMin}},\ \mbox{\hyperlink{class_c_number_field_dialog_a3b95d8ae39dd8ddb2cf8e8c22dff98df}{m\_nMax}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a69a85943eef93b0cd3e86687bb0875eb}{m\_bHasMin}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a7bf31085542d2a1baef9a087a218226a}{m\_bHasMax}};}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_ac2d4e7d45712ac5259fcc100e6082374}{m\_wndNumberFieldGroupBox}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a31e62cd198025561b06249c6c084b4c1}{m\_wndValueLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_number_field_dialog_af2bf9b9979d5ed295d92830bf7972519}{m\_wndValue}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a02b291350053e9d2f0e37ebdd791ed2b}{m\_wndOK}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_ae43d4959dd6bdb8e3c360d9fa494f65e}{m\_wndClose}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a99569e7ce3005618544ad0f7f419b355}{m\_nValue}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnValueChange();\ }}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnValueSetfocus();\ }}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnValueKillfocus();\ }}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a5e2fb59204d06a3956224515ea661722}{OnValueCheckValue}}();\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a6532f62999aa822e999e23f1a412cbe8}{OnOKSelect}}();\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a4d22021d5e0f40577bab7212f243aa10}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a44db73b3184013f3fb0ebcd785f504cc}{SetMin}}(\textcolor{keywordtype}{double}\ nMin)\{\ \mbox{\hyperlink{class_c_number_field_dialog_a71e67c11f5685881e2121eb1d7cfca8d}{m\_nMin}}\ =\ nMin;\ \mbox{\hyperlink{class_c_number_field_dialog_a69a85943eef93b0cd3e86687bb0875eb}{m\_bHasMin}}\ =\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a303b790b352338c092ca798f12f6b08d}{SetMax}}(\textcolor{keywordtype}{double}\ nMax)\{\ \mbox{\hyperlink{class_c_number_field_dialog_a3b95d8ae39dd8ddb2cf8e8c22dff98df}{m\_nMax}}\ =\ nMax;\ \mbox{\hyperlink{class_c_number_field_dialog_a7bf31085542d2a1baef9a087a218226a}{m\_bHasMax}}\ =\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a6a049f25bac522c7157cbcc4cdb3807d}{GetText}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a9cda3ffc1ec5201c35c9c3ee5ddb30ba}{CNumberFieldDialog}}(CWnd\ *pParent,\ CString\ szValueName\ =\ \_T(\textcolor{stringliteral}{"{}Value"{}}),\ CString\ szTitle\ =\ \_T(\textcolor{stringliteral}{"{}Input\ Number"{}}));}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_c_number_field_dialog_a149c82d3b10e04557153e40b4e70fb13}{\string~CNumberFieldDialog}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_number_field_dialog_ae2af63b63fb8c59b7fb8aea9e12ba6e0}{OnCreateComponents}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_number_field_dialog_af7f34c60f9ac780c222d0293eab235f5}{OnInitializeComponents}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_number_field_dialog_a78b9b9f24ad33bd926d463a44f24c57c}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_number_field_dialog_af3ce5b3f12ab4caf4fbd3fe38da228ca}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_number_field_dialog_a62a6549316b960df3936c21021fd6db1}{GetDataToScreen}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_number_field_dialog_a78bb42ad68066fc565db30ea45efe108}{GetScreenToData}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_number_field_dialog_ad2a19cc2cd5bd9be1e005066e0b9d80c}{SetDefaultValues}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_number_field_dialog_a2117e190daa28b1911c6b31b7b74e176}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_number_field_dialog_a458ebc14f9ff6a85299071fe96515aa3}{OnAddNumberFieldDialog}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_number_field_dialog_a249d6f799ecb62444c90eda809dde7d8}{OnEditNumberFieldDialog}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_number_field_dialog_a9b9782a67c77c8dda9dc451948a627ba}{OnDeleteNumberFieldDialog}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_number_field_dialog_acd8aa6dbd4172cd05a8e1cdf2fa913df}{OnSaveNumberFieldDialog}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_number_field_dialog_a4813446a58644d4f4890b7892fa9b384}{OnCancelNumberFieldDialog}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_number_field_dialog_a716d3cd5b001d782ac662132c8828da7}{OnNumberFieldDialogListLoadData}}();\ }
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

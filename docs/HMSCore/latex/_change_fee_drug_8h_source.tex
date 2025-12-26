@@ -1,0 +1,68 @@
+\doxysection{Change\+Fee\+Drug.\+h}
+\hypertarget{_change_fee_drug_8h_source}{}\label{_change_fee_drug_8h_source}\index{Include/HMSCore/ChangeFeeDrug.h@{Include/HMSCore/ChangeFeeDrug.h}}
+\mbox{\hyperlink{_change_fee_drug_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHANGEFEEDRUG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHANGEFEEDRUG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_change_fee_drug_a71a65e7940b2eb9d0b32db1699946b8f}{CChangeFeeDrug}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a18a00fb52d4746105f824a63f28d573b}{m\_wndDrugInformation}};}
+\DoxyCodeLine{00034\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a62c5ed57910b1612056af998a75b9cd7}{m\_wndDrugList}};}
+\DoxyCodeLine{00035\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_af19a1b1c250fa120ced3883d8fcf4f90}{m\_wndApply}};}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a0f5a8f3d11481441758e95d22f0b8b04}{m\_wndClose}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a834df15e035db8ca5682a2860eb9a1ee}{m\_wndPrint}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_af853444c6d89a7b3e68387d40a8634b1}{szDocNo}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a104aaca3e4eec3f8d64435252d05729b}{OnDrugListLoadData}}();\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a3c0e83e2b9a53392ed443a8fb5a852fd}{OnDrugListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a733b07068d6ffb2d55d0589ff406fa28}{OnDrugListDblClick}}();\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a6a8feb8a04241d1db7f770cde10ba2fd}{OnDrugListDeleteItem}}();\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a6befefa5c90e265afa28789d71f222c5}{OnApplySelect}}();\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a94279379dd290dda94144dc7ed411f1e}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a3b334a1ebd69cdd764be2e8e8db8389f}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_a71a65e7940b2eb9d0b32db1699946b8f}{CChangeFeeDrug}}(CWnd\ *pParent);}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_c_change_fee_drug_aa6e2e9103913d5d87f71df4439363f36}{\string~CChangeFeeDrug}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_change_fee_drug_ab29930e1792436336be893521f6cf9fe}{OnCreateComponents}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_change_fee_drug_a48a5e7e8461e0de72a4ff860d40fd9bc}{OnInitializeComponents}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_change_fee_drug_a4282a0aa61f5b37df7e2348b22372566}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_change_fee_drug_aa54b0b56eea3c0363a4475a0b62147b5}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_change_fee_drug_a849ec235508b84615409856bda854b16}{GetDataToScreen}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_change_fee_drug_ae28301391fb48f1e91498a5b87d9605f}{GetScreenToData}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_change_fee_drug_a795983e34715b4b6ade8596c752450c0}{SetDefaultValues}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_ae5faf2719ca0aca787a7d1a74b555bcd}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_aa63b86aa1d604aeb8c667261e13c568a}{OnAddChangeFeeDrug}}();\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_aee6aa20957b5aa529b8395481d2c420a}{OnEditChangeFeeDrug}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_a8194e056268ec2f1a7c9e54b4ca739d1}{OnDeleteChangeFeeDrug}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_a8f47227c80b0117ea1b68c69a8f56cfc}{OnSaveChangeFeeDrug}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_adb19b3e14b0635e501e143c931d21795}{OnCancelChangeFeeDrug}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_a9d63763e53cd855b4fb2e7cd20450477}{OnChangeFeeDrugListLoadData}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_ae7d8c5862caa7f87c25fe5947476aabc}{OnDrugListCheckAll}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_change_fee_drug_a60c34faa5a3d183ee2fa33f8f39cf24e}{OnDrugListUnCheckAll}}();}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,28 @@
+var class_c_h_m_s_extra_info_dialog =
+[
+    [ "CHMSExtraInfoDialog", "class_c_h_m_s_extra_info_dialog.html#ae6b3666322b55351a9f321c88b1930cc", null ],
+    [ "~CHMSExtraInfoDialog", "class_c_h_m_s_extra_info_dialog.html#a026b5b915e32b6a489a5b2e84cc2485d", null ],
+    [ "GetDataToScreen", "class_c_h_m_s_extra_info_dialog.html#aeca951fbbbba2356374b265ac11914ac", null ],
+    [ "GetScreenToData", "class_c_h_m_s_extra_info_dialog.html#a34216cc3955e8a45884664a3615b528f", null ],
+    [ "OnAddHMSExtraInfoDialog", "class_c_h_m_s_extra_info_dialog.html#a7d4b6f23bf810472b188b73c897065f4", null ],
+    [ "OnCancelHMSExtraInfoDialog", "class_c_h_m_s_extra_info_dialog.html#ae20d85e5c93a2c802470e0103c1f09b9", null ],
+    [ "OnCreateComponents", "class_c_h_m_s_extra_info_dialog.html#a5c3a63dd8e83a43c44d04dcffd2079cf", null ],
+    [ "OnDeleteHMSExtraInfoDialog", "class_c_h_m_s_extra_info_dialog.html#a68a765d69f20ccc1ed5a3298f6ca300c", null ],
+    [ "OnDoDataExchange", "class_c_h_m_s_extra_info_dialog.html#a076bacdbf3a9b71c8c21651b9c8ee4ca", null ],
+    [ "OnEditHMSExtraInfoDialog", "class_c_h_m_s_extra_info_dialog.html#ab3098ae79440577f9e55ab0ed279640a", null ],
+    [ "OnHMSExtraInfoDialogListLoadData", "class_c_h_m_s_extra_info_dialog.html#a3c6a233dfa3a465f3cf17240e036836c", null ],
+    [ "OnInitializeComponents", "class_c_h_m_s_extra_info_dialog.html#a9de8b218ab7a3674ce9781dcc62a2027", null ],
+    [ "OnSaveHMSExtraInfoDialog", "class_c_h_m_s_extra_info_dialog.html#ab64c3b2257cbecfbb5ff3bea9e4c4fd8", null ],
+    [ "OnSetWindowEvents", "class_c_h_m_s_extra_info_dialog.html#ad0beb78adf239fc6f671b30ccad029c6", null ],
+    [ "OnTabSelectChange", "class_c_h_m_s_extra_info_dialog.html#a44b8a3f130e4f2829c176d2f0e4b8648", null ],
+    [ "SetDefaultValues", "class_c_h_m_s_extra_info_dialog.html#a10b97ab7607df7a476a79acafc10e9e4", null ],
+    [ "SetMode", "class_c_h_m_s_extra_info_dialog.html#aa42443fd0372f9fa525ffce5782f18d6", null ],
+    [ "UpdateJson", "class_c_h_m_s_extra_info_dialog.html#a0e34b22aa3ba656fc372f451139fde68", null ],
+    [ "m_nDocumentNo", "class_c_h_m_s_extra_info_dialog.html#ae820b27bcab407fbfb3399722d09bfc3", null ],
+    [ "m_nPatientNo", "class_c_h_m_s_extra_info_dialog.html#a8f93333fddb13952955968b8009be8d4", null ],
+    [ "m_szDept", "class_c_h_m_s_extra_info_dialog.html#a21a333ac3c6c01ffa0708973df838022", null ],
+    [ "m_wndPatientCardView", "class_c_h_m_s_extra_info_dialog.html#a678dec78153aa84940a767a3328fbb35", null ],
+    [ "m_wndRelativeView", "class_c_h_m_s_extra_info_dialog.html#abf3cbf923fed84aa81e941a793262cfc", null ],
+    [ "m_wndServicePackageView", "class_c_h_m_s_extra_info_dialog.html#af58334fd9d87ca784e95e042d49d3483", null ],
+    [ "m_wndTab", "class_c_h_m_s_extra_info_dialog.html#a74ad2c9b98ded3eaddf7bd4bc7e1940d", null ]
+];

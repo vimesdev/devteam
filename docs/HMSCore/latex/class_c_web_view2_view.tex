@@ -1,0 +1,1043 @@
+\doxysection{CWeb\+View2\+View Class Tham chiếu}
+\hypertarget{class_c_web_view2_view}{}\label{class_c_web_view2_view}\index{CWebView2View@{CWebView2View}}
+
+
+Lớp view tích hợp Microsoft Web\+View2 để hiển thị web content trong ứng dụng.  
+
+
+
+
+{\ttfamily \#include $<$Web\+View2\+View.\+h$>$}
+
+Sơ đồ kế thừa cho CWeb\+View2\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_web_view2_view}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Các hàm thành viên Public}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_web_view2_view_a9d19014fc4ff8d8335b51077661c8fe2}{CWeb\+View2\+View}} (LPCTSTR lpsz\+Url=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor với URL. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_web_view2_view_a1ccba81dd200d7a45455bbfe2dde5116}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Khởi tạo Web\+View từ DLL. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_web_view2_view_a696f28f217326ba6e161352bb160c366}{Is\+Inited}} ()
+\begin{DoxyCompactList}\small\item\em Kiểm tra Web\+View đã được khởi tạo chưa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_a81786d2a9f0bfe47450dd50d89132586}{Cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Giải phóng Web\+View và DLL. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_abc4adb69e4c742f562a47f7bbf327243}{Browser}} (HWND h\+Wnd, std\+::wstring url, int n\+Show=SW\+\_\+\+SHOW)
+\begin{DoxyCompactList}\small\item\em Mở browser với URL. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_ace54359d7f18fd8384f4dddf9e7dd011}{Create\+Web\+View}} (HWND m\+\_\+h\+Wnd, CRect rect, std\+::wstring user\+Data\+Folder)
+\begin{DoxyCompactList}\small\item\em Tạo Web\+View. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_a4cf65a427a4999c248e3a69fa4c68579}{Navigate}} (std\+::wstring url)
+\begin{DoxyCompactList}\small\item\em Navigate đến URL. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_ad4bee7586e39c7814ecd984f5a278ea4}{Navigate\+To\+String}} (std\+::wstring content)
+\begin{DoxyCompactList}\small\item\em Navigate đến HTML content. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_a77f0f98d54671c6903bfc2882dfe3e67}{Go\+Route}} (std\+::wstring url)
+\begin{DoxyCompactList}\small\item\em Điều hướng đến route. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_a29897e36d082f9fa627942d304ed0fdf}{Execute\+Script\+With\+Result}} (std\+::wstring script, std\+::function$<$ void(const std\+::wstring \&)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Thực thi Java\+Script và nhận kết quả \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_a4da8b855dfa27a28f568fd88251f0794}{Send\+String\+Web\+Message}} (std\+::wstring message)
+\begin{DoxyCompactList}\small\item\em Gửi message string đến web content. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_a361b98eb90657ad501ca065707082825}{Add\+Initialize\+Script}} (std\+::wstring script, Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Add\+Script\+To\+Execute\+On\+Document\+Created\+Completed\+Handler $>$ handler=nullptr)
+\begin{DoxyCompactList}\small\item\em Thêm script khởi tạo. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_adffd88831640a668c79babdaaf822579}{Inject\+Script}} (std\+::wstring script, Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Execute\+Script\+Completed\+Handler $>$ handler=nullptr)
+\begin{DoxyCompactList}\small\item\em Inject script vào web page. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_web_view2_view_af68d028c52a6cca5adda492f8e42f314}{Login}} (LPCTSTR lpsz\+Mod=nullptr)
+\begin{DoxyCompactList}\small\item\em Đăng nhập. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_web_view2_view_a70034237b8f39460f506e9915a087538}{Is\+Loging}} ()
+\begin{DoxyCompactList}\small\item\em Kiểm tra đang đăng nhập. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_a5845c46a98c704deb6f8af6cf415e896}{Resize}} (CRect rect)
+\begin{DoxyCompactList}\small\item\em Resize Web\+View với CRect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_ad4128ad94a24bae52fa476b41ddd97ae}{Resize}} (RECT bounds=RECT())
+\begin{DoxyCompactList}\small\item\em Resize Web\+View với RECT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_ab768a5823343588fd8fa13b04433636b}{Show}} (BOOL b\+Show)
+\begin{DoxyCompactList}\small\item\em Hiển thị/ẩn Web\+View. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_a4032f07c06a249da31b1355a8061fa49}{Clear\+Cache}} ()
+\begin{DoxyCompactList}\small\item\em Xóa cache. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_abbbebe7d7130c9d557e3d9a43c67ebc3}{Set\+High\+DPIAwareness}} ()
+\begin{DoxyCompactList}\small\item\em Thiết lập High DPI awareness. \end{DoxyCompactList}\item 
+virtual BOOL \mbox{\hyperlink{class_c_web_view2_view_a7177b07534b79ade8b65c7697bb8623c}{Pre\+Create\+Window}} (CREATESTRUCT \&cs)
+\item 
+virtual void \mbox{\hyperlink{class_c_web_view2_view_a64fd99c92156716a36f8def1c88e82f0}{On\+Draw}} (CDC \texorpdfstring{$\ast$}{*})
+\item 
+virtual void \mbox{\hyperlink{class_c_web_view2_view_abccb1728c217230b3197e423266eeca0}{On\+Initial\+Update}} ()
+\item 
+virtual \mbox{\hyperlink{class_c_web_view2_view_a99b719c25fca66e9fd914d11e15b0984}{\texorpdfstring{$\sim$}{\string~}\+CWeb\+View2\+View}} ()
+\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_web_view2_view_a5362435dafe2f3b8d8e3eac743d33c6c}{On\+Size}} (UINT n\+Type, int cx, int cy)
+\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_web_view2_view_ad0192479e4a7956c8e93489def7f90de}{On\+Show\+Window}} (BOOL b\+Show, UINT n\+Status)
+\item 
+virtual LRESULT \mbox{\hyperlink{class_c_web_view2_view_a5984aeb3a21f7aecc3e3b07a97e5a2d4}{Window\+Proc}} (UINT message, WPARAM w\+Param, LPARAM l\+Param)
+\item 
+virtual void \mbox{\hyperlink{class_c_web_view2_view_a2ab4a8e2176f28b7748b847b8122b76b}{On\+Activate\+View}} (BOOL b\+Activate, CView \texorpdfstring{$\ast$}{*}p\+Activate\+View, CView \texorpdfstring{$\ast$}{*}p\+Deactive\+View)
+\item 
+virtual void \mbox{\hyperlink{class_c_web_view2_view_a9fc0ad4eabaf3e1d743baf113e1b85e1}{Post\+Nc\+Destroy}} ()
+\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_web_view2_view_ac7be093b880a4cbdd8977b954feb95a6}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Các hàm Static Public}
+\begin{DoxyCompactItemize}
+\item 
+static BOOL \mbox{\hyperlink{class_c_web_view2_view_aef4156e296350e1a7d936c68afa65b80}{Init\+Instance}} (HINSTANCE h\+Instance)
+\begin{DoxyCompactList}\small\item\em Khởi tạo instance. \end{DoxyCompactList}\item 
+static std\+::wstring \mbox{\hyperlink{class_c_web_view2_view_ae0b0ce143d54737e4ed264544441f1c9}{s2ws}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Chuyển đổi string sang wstring. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_c_web_view2_view_ad8194c8da0bc8da9ac4f22bf81f8789b}{ws2s}} (const std\+::wstring \&wstr)
+\begin{DoxyCompactList}\small\item\em Chuyển đổi wstring sang string. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_c_web_view2_view_ac8376d5ac85d2af8736d1a39c20afa8c}{Check\+Failure}} (HRESULT hr, LPCWSTR error\+Message)
+\begin{DoxyCompactList}\small\item\em Kiểm tra lỗi HRESULT. \end{DoxyCompactList}\item 
+static std\+::wstring \mbox{\hyperlink{class_c_web_view2_view_a1c36bad4303098234f7dbb2a724289a7}{Get\+App\+Data\+Directory}} ()
+\begin{DoxyCompactList}\small\item\em Lấy thư mục App\+Data. \end{DoxyCompactList}\item 
+static std\+::wstring \mbox{\hyperlink{class_c_web_view2_view_a356c8502d79af1cbfa698c6af528dc4a}{Get\+Full\+Path\+For}} (LPCWSTR relative\+Path)
+\begin{DoxyCompactList}\small\item\em Lấy đường dẫn đầy đủ \end{DoxyCompactList}\item 
+static std\+::wstring \mbox{\hyperlink{class_c_web_view2_view_a67b2aee2a86f0ffbeefa28c1945376b1}{Get\+File\+Path\+As\+URI}} (std\+::wstring full\+Path)
+\begin{DoxyCompactList}\small\item\em Chuyển đổi file path sang URI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Các thuộc tính Public}
+\begin{DoxyCompactItemize}
+\item 
+CStatic \mbox{\hyperlink{class_c_web_view2_view_a0a16e898210d209520ebf8b5f92c4fd1}{m\+\_\+\+Label\+\_\+\+View}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Các hàm thành viên Protected}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_c_web_view2_view_a2820acd53c5242df89410e7723478ef4}{Do\+Data\+Exchange}} (CData\+Exchange \texorpdfstring{$\ast$}{*}p\+DX)
+\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_web_view2_view_ae5214d64e01d5eb42a4f27699ca86423}{On\+File\+Print\+Preview}} ()
+\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_web_view2_view_a65523fd6d2401502bf7c415c8e3eac53}{On\+RButton\+Up}} (UINT n\+Flags, CPoint point)
+\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_web_view2_view_af3c5f911010a26961c492c1db836eaa5}{On\+Context\+Menu}} (CWnd \texorpdfstring{$\ast$}{*}p\+Wnd, CPoint point)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Các hàm thành viên Private}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_web_view2_view_a37932b296ece8ce68d6eecf24f72325e}{Init}} (std\+::wstring initial\+Uri=L"{}https\+://www.\+bing.\+com/"{}, std\+::function$<$ void()$>$ webview\+Created\+Callback=nullptr)
+\begin{DoxyCompactList}\small\item\em Khởi tạo Web\+View2. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_web_view2_view_a308f89e0a32b06550803787768be2a97}{Init\+Web\+View}} ()
+\begin{DoxyCompactList}\small\item\em Khởi tạo Web\+View2. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_ac4718481ed0d99b50b328a4bee865f26}{Set\+Events\+And\+Brokers}} ()
+\begin{DoxyCompactList}\small\item\em Thiết lập các event và broker. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_a7e9d01135aab5154f4427f6998f9974f}{On\+Create\+Environment\+Completed}} (HRESULT result, ICore\+Web\+View2\+Environment \texorpdfstring{$\ast$}{*}env)
+\begin{DoxyCompactList}\small\item\em Xử lý khi tạo environment hoàn thành. \end{DoxyCompactList}\item 
+HRESULT \mbox{\hyperlink{class_c_web_view2_view_a6de1c0f7e92d7f1ca6b566eb86b303b2}{On\+Create\+Controller\+Completed}} (HRESULT result, ICore\+Web\+View2\+Controller \texorpdfstring{$\ast$}{*}controller)
+\begin{DoxyCompactList}\small\item\em Xử lý khi tạo controller hoàn thành. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_web_view2_view_ada273c6359428b54cd8f2f2ecff85a4b}{Run\+Async}} (std\+::function$<$ void(void)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Chạy callback bất đồng bộ \end{DoxyCompactList}\item 
+afx\+\_\+msg LRESULT \mbox{\hyperlink{class_c_web_view2_view_a453587d7f4794240d53540d32c483bc0}{On\+Run\+Async}} (WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Xử lý message chạy async. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Các thuộc tính Private}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{class_c_web_view2_view_a63f94e35cbb24cc928e5da9f0340e16e}{m\+\_\+\+Id}}
+\begin{DoxyCompactList}\small\item\em ID duy nhất của view. \end{DoxyCompactList}\item 
+wil\+::com\+\_\+ptr$<$ ICore\+Web\+View2\+Controller $>$ \mbox{\hyperlink{class_c_web_view2_view_a35fd301e2be8c19a4540a3c151162686}{m\+\_\+web\+View\+Controller}}
+\begin{DoxyCompactList}\small\item\em Web\+View2 controller để điều khiển Web\+View. \end{DoxyCompactList}\item 
+wil\+::com\+\_\+ptr$<$ ICore\+Web\+View2 $>$ \mbox{\hyperlink{class_c_web_view2_view_a0e84286a701ae99eed74ef8bab7bf45a}{m\+\_\+web\+View}}
+\begin{DoxyCompactList}\small\item\em Web\+View2 core object để hiển thị web content. \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{class_c_web_view2_view_ac39c85fab5eadab0dcbacd93fff55e96}{m\+\_\+initial\+Uri}}
+\begin{DoxyCompactList}\small\item\em URI ban đầu để load khi khởi tạo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_web_view2_view_a639228ae23fba6709d01dc63b655d4e3}{m\+\_\+is\+Web\+View\+Ready}}
+\begin{DoxyCompactList}\small\item\em Cờ xác định Web\+View đã sẵn sàng chưa. \end{DoxyCompactList}\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{class_c_web_view2_view_abe260e6fb4c142294f155570e6c38cb3}{m\+\_\+on\+Web\+View\+First\+Initialized}} = nullptr
+\begin{DoxyCompactList}\small\item\em Callback được gọi khi Web\+View được khởi tạo lần đầu. \end{DoxyCompactList}\item 
+Event\+Registration\+Token \mbox{\hyperlink{class_c_web_view2_view_a8b58f50ffde68f0b2ce2cdab13df0952}{m\+\_\+\+Web\+Message\+Received\+Token}} = \{\}
+\begin{DoxyCompactList}\small\item\em Token đăng ký event nhận message từ web. \end{DoxyCompactList}\item 
+Event\+Registration\+Token \mbox{\hyperlink{class_c_web_view2_view_a3552f5150f2366097c0007d5aa96cfec}{m\+\_\+\+Navigation\+Starting\+Token}} = \{\}
+\begin{DoxyCompactList}\small\item\em Token đăng ký event bắt đầu navigation. \end{DoxyCompactList}\item 
+Event\+Registration\+Token \mbox{\hyperlink{class_c_web_view2_view_a08254859ecf8f4746f03a0d1bc42b130}{m\+\_\+\+Navigation\+Completed\+Token}} = \{\}
+\begin{DoxyCompactList}\small\item\em Token đăng ký event hoàn thành navigation. \end{DoxyCompactList}\item 
+Event\+Registration\+Token \mbox{\hyperlink{class_c_web_view2_view_a284edeed3eb43b3df15f7901369b4130}{m\+\_\+\+Process\+Failed\+Token}} = \{\}
+\begin{DoxyCompactList}\small\item\em Token đăng ký event process failed. \end{DoxyCompactList}\item 
+Event\+Registration\+Token \mbox{\hyperlink{class_c_web_view2_view_a68ac50346c42c0491aabb2135d64a434}{m\+\_\+\+Dev\+Tools\+Security\+Token}} = \{\}
+\begin{DoxyCompactList}\small\item\em Token đăng ký event Dev\+Tools security. \end{DoxyCompactList}\item 
+Event\+Registration\+Token \mbox{\hyperlink{class_c_web_view2_view_a2f3b95234196ab416d0ad28ab9b1a0a9}{m\+\_\+\+Dev\+Tools\+Log\+Token}} = \{\}
+\begin{DoxyCompactList}\small\item\em Token đăng ký event Dev\+Tools log. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Web\+Message\+Received\+Event\+Handler $>$ \mbox{\hyperlink{class_c_web_view2_view_a44689b5fe752fafdd3ab4edfee065929}{m\+\_\+\+Message\+Broker}}
+\begin{DoxyCompactList}\small\item\em Event handler cho web message received. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Navigation\+Starting\+Event\+Handler $>$ \mbox{\hyperlink{class_c_web_view2_view_a34c8f6f0c2b98122cff074a20d9c5cf0}{m\+\_\+\+Navigation\+Starting\+Broker}}
+\begin{DoxyCompactList}\small\item\em Event handler cho navigation starting. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Navigation\+Completed\+Event\+Handler $>$ \mbox{\hyperlink{class_c_web_view2_view_a5d0ad016ae0f4f4cc10fdec29b5ceb22}{m\+\_\+\+Navigation\+Completed\+Broker}}
+\begin{DoxyCompactList}\small\item\em Event handler cho navigation completed. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Process\+Failed\+Event\+Handler $>$ \mbox{\hyperlink{class_c_web_view2_view_a647df5e9c9929b32078336ac2812d7a7}{m\+\_\+\+Process\+Failed\+Broker}}
+\begin{DoxyCompactList}\small\item\em Event handler cho process failed. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Dev\+Tools\+Protocol\+Event\+Received\+Event\+Handler $>$ \mbox{\hyperlink{class_c_web_view2_view_af8b62fe6dbd9c59ab92ea96aca87d7f0}{m\+\_\+dev\+Tools\+Security\+Broker}}
+\begin{DoxyCompactList}\small\item\em Event handler cho Dev\+Tools security. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Dev\+Tools\+Protocol\+Event\+Received\+Event\+Handler $>$ \mbox{\hyperlink{class_c_web_view2_view_a1bfc92bbc4ed9977a46ad4f2fcae34cc}{m\+\_\+dev\+Tools\+Log\+Broker}}
+\begin{DoxyCompactList}\small\item\em Event handler cho Dev\+Tools log. \end{DoxyCompactList}\item 
+Microsoft\+::\+WRL\+::\+Wrappers\+::\+Event \mbox{\hyperlink{class_c_web_view2_view_ad0efa6e32d08934909e269196199366a}{Navigation\+Completed\+Event}}
+\begin{DoxyCompactList}\small\item\em Event wrapper cho navigation completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Mô tả chi tiết}
+Lớp view tích hợp Microsoft Web\+View2 để hiển thị web content trong ứng dụng. 
+
+Class này kế thừa từ CView, cung cấp Web\+View2 integration\+:
+\begin{DoxyItemize}
+\item Hiển thị web content sử dụng Microsoft Edge Web\+View2
+\item Navigate đến URL hoặc HTML content
+\item Execute Java\+Script và nhận kết quả
+\item Gửi/nhận messages giữa ứng dụng và web content
+\item Hỗ trợ navigation events và process failure handling
+\item Inject script vào web page
+\item Login và authentication
+\item Clear cache và quản lý cookies
+\item High DPI awareness
+\item Static methods để khởi tạo environment và utility functions 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_c_web_view2_view_doc-constructors}
+\doxysubsection{Thông tin về Constructor và Destructor}
+\Hypertarget{class_c_web_view2_view_a9d19014fc4ff8d8335b51077661c8fe2}\index{CWebView2View@{CWebView2View}!CWebView2View@{CWebView2View}}
+\index{CWebView2View@{CWebView2View}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{CWebView2View()}{CWebView2View()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a9d19014fc4ff8d8335b51077661c8fe2} 
+CWeb\+View2\+View\+::\+CWeb\+View2\+View (\begin{DoxyParamCaption}\item[{LPCTSTR}]{lpsz\+Url}{ = {\ttfamily NULL}}\end{DoxyParamCaption})}
+
+
+
+Constructor với URL. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em lpsz\+Url} & URL ban đầu để load (mặc định NULL)\\
+\hline
+\end{DoxyParams}
+Khởi tạo view với URL được chỉ định. \Hypertarget{class_c_web_view2_view_a99b719c25fca66e9fd914d11e15b0984}\index{CWebView2View@{CWebView2View}!````~CWebView2View@{\texorpdfstring{$\sim$}{\string~}CWebView2View}}
+\index{````~CWebView2View@{\texorpdfstring{$\sim$}{\string~}CWebView2View}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CWebView2View()}{\string~CWebView2View()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a99b719c25fca66e9fd914d11e15b0984} 
+virtual CWeb\+View2\+View\+::\texorpdfstring{$\sim$}{\string~}\+CWeb\+View2\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_c_web_view2_view_doc-func-members}
+\doxysubsection{Thông tin về hàm thành viên}
+\Hypertarget{class_c_web_view2_view_a361b98eb90657ad501ca065707082825}\index{CWebView2View@{CWebView2View}!AddInitializeScript@{AddInitializeScript}}
+\index{AddInitializeScript@{AddInitializeScript}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{AddInitializeScript()}{AddInitializeScript()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a361b98eb90657ad501ca065707082825} 
+HRESULT CWeb\+View2\+View\+::\+Add\+Initialize\+Script (\begin{DoxyParamCaption}\item[{std\+::wstring}]{script}{, }\item[{Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Add\+Script\+To\+Execute\+On\+Document\+Created\+Completed\+Handler $>$}]{handler}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Thêm script khởi tạo. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em script} & Java\+Script code \\
+\hline
+{\em handler} & Completion handler (mặc định nullptr) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Thêm script được thực thi khi document được tạo. \Hypertarget{class_c_web_view2_view_abc4adb69e4c742f562a47f7bbf327243}\index{CWebView2View@{CWebView2View}!Browser@{Browser}}
+\index{Browser@{Browser}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Browser()}{Browser()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_abc4adb69e4c742f562a47f7bbf327243} 
+HRESULT CWeb\+View2\+View\+::\+Browser (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd}{, }\item[{std\+::wstring}]{url}{, }\item[{int}]{n\+Show}{ = {\ttfamily SW\+\_\+SHOW}}\end{DoxyParamCaption})}
+
+
+
+Mở browser với URL. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em h\+Wnd} & Handle của cửa sổ cha \\
+\hline
+{\em url} & URL cần load \\
+\hline
+{\em n\+Show} & Cách hiển thị cửa sổ (mặc định SW\+\_\+\+SHOW) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Tạo và hiển thị browser window với URL được chỉ định. \Hypertarget{class_c_web_view2_view_ac8376d5ac85d2af8736d1a39c20afa8c}\index{CWebView2View@{CWebView2View}!CheckFailure@{CheckFailure}}
+\index{CheckFailure@{CheckFailure}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{CheckFailure()}{CheckFailure()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ac8376d5ac85d2af8736d1a39c20afa8c} 
+void CWeb\+View2\+View\+::\+Check\+Failure (\begin{DoxyParamCaption}\item[{HRESULT}]{hr}{, }\item[{LPCWSTR}]{error\+Message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Kiểm tra lỗi HRESULT. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em hr} & HRESULT cần kiểm tra \\
+\hline
+{\em error\+Message} & Thông báo lỗi\\
+\hline
+\end{DoxyParams}
+Kiểm tra HRESULT và throw exception nếu có lỗi. \Hypertarget{class_c_web_view2_view_a81786d2a9f0bfe47450dd50d89132586}\index{CWebView2View@{CWebView2View}!Cleanup@{Cleanup}}
+\index{Cleanup@{Cleanup}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a81786d2a9f0bfe47450dd50d89132586} 
+void CWeb\+View2\+View\+::\+Cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Giải phóng Web\+View và DLL. 
+
+Cleanup Web\+View2 controller và environment, giải phóng tài nguyên. \Hypertarget{class_c_web_view2_view_a4032f07c06a249da31b1355a8061fa49}\index{CWebView2View@{CWebView2View}!ClearCache@{ClearCache}}
+\index{ClearCache@{ClearCache}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{ClearCache()}{ClearCache()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a4032f07c06a249da31b1355a8061fa49} 
+void CWeb\+View2\+View\+::\+Clear\+Cache (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Xóa cache. 
+
+Xóa cache của Web\+View2. \Hypertarget{class_c_web_view2_view_ace54359d7f18fd8384f4dddf9e7dd011}\index{CWebView2View@{CWebView2View}!CreateWebView@{CreateWebView}}
+\index{CreateWebView@{CreateWebView}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{CreateWebView()}{CreateWebView()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ace54359d7f18fd8384f4dddf9e7dd011} 
+HRESULT CWeb\+View2\+View\+::\+Create\+Web\+View (\begin{DoxyParamCaption}\item[{HWND}]{m\+\_\+h\+Wnd}{, }\item[{CRect}]{rect}{, }\item[{std\+::wstring}]{user\+Data\+Folder}{}\end{DoxyParamCaption})}
+
+
+
+Tạo Web\+View. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em m\+\_\+h\+Wnd} & Handle của cửa sổ cha \\
+\hline
+{\em rect} & Vùng hiển thị Web\+View \\
+\hline
+{\em user\+Data\+Folder} & Thư mục lưu user data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Tạo Web\+View2 controller và gắn vào cửa sổ cha với vùng hiển thị được chỉ định. \Hypertarget{class_c_web_view2_view_a2820acd53c5242df89410e7723478ef4}\index{CWebView2View@{CWebView2View}!DoDataExchange@{DoDataExchange}}
+\index{DoDataExchange@{DoDataExchange}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{DoDataExchange()}{DoDataExchange()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a2820acd53c5242df89410e7723478ef4} 
+virtual void CWeb\+View2\+View\+::\+Do\+Data\+Exchange (\begin{DoxyParamCaption}\item[{CData\+Exchange \texorpdfstring{$\ast$}{*}}]{p\+DX}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_c_web_view2_view_a29897e36d082f9fa627942d304ed0fdf}\index{CWebView2View@{CWebView2View}!ExecuteScriptWithResult@{ExecuteScriptWithResult}}
+\index{ExecuteScriptWithResult@{ExecuteScriptWithResult}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{ExecuteScriptWithResult()}{ExecuteScriptWithResult()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a29897e36d082f9fa627942d304ed0fdf} 
+void CWeb\+View2\+View\+::\+Execute\+Script\+With\+Result (\begin{DoxyParamCaption}\item[{std\+::wstring}]{script}{, }\item[{std\+::function$<$ void(const std\+::wstring \&)$>$}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Thực thi Java\+Script và nhận kết quả 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em script} & Java\+Script code cần thực thi \\
+\hline
+{\em callback} & Callback function nhận kết quả (chuỗi JSON)\\
+\hline
+\end{DoxyParams}
+Thực thi Java\+Script trong Web\+View và trả về kết quả qua callback. \Hypertarget{class_c_web_view2_view_a1c36bad4303098234f7dbb2a724289a7}\index{CWebView2View@{CWebView2View}!GetAppDataDirectory@{GetAppDataDirectory}}
+\index{GetAppDataDirectory@{GetAppDataDirectory}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{GetAppDataDirectory()}{GetAppDataDirectory()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a1c36bad4303098234f7dbb2a724289a7} 
+std\+::wstring CWeb\+View2\+View\+::\+Get\+App\+Data\+Directory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lấy thư mục App\+Data. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+Đường dẫn thư mục App\+Data
+\end{DoxyReturn}
+Lấy đường dẫn thư mục App\+Data của người dùng. \Hypertarget{class_c_web_view2_view_a67b2aee2a86f0ffbeefa28c1945376b1}\index{CWebView2View@{CWebView2View}!GetFilePathAsURI@{GetFilePathAsURI}}
+\index{GetFilePathAsURI@{GetFilePathAsURI}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{GetFilePathAsURI()}{GetFilePathAsURI()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a67b2aee2a86f0ffbeefa28c1945376b1} 
+std\+::wstring CWeb\+View2\+View\+::\+Get\+File\+Path\+As\+URI (\begin{DoxyParamCaption}\item[{std\+::wstring}]{full\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Chuyển đổi file path sang URI. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em full\+Path} & Đường dẫn file đầy đủ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+URI string
+\end{DoxyReturn}
+Chuyển đổi đường dẫn file thành URI để load trong Web\+View. \Hypertarget{class_c_web_view2_view_a356c8502d79af1cbfa698c6af528dc4a}\index{CWebView2View@{CWebView2View}!GetFullPathFor@{GetFullPathFor}}
+\index{GetFullPathFor@{GetFullPathFor}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{GetFullPathFor()}{GetFullPathFor()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a356c8502d79af1cbfa698c6af528dc4a} 
+std\+::wstring CWeb\+View2\+View\+::\+Get\+Full\+Path\+For (\begin{DoxyParamCaption}\item[{LPCWSTR}]{relative\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lấy đường dẫn đầy đủ 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em relative\+Path} & Đường dẫn tương đối \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+Đường dẫn đầy đủ
+\end{DoxyReturn}
+Chuyển đổi đường dẫn tương đối thành đường dẫn đầy đủ. \Hypertarget{class_c_web_view2_view_a77f0f98d54671c6903bfc2882dfe3e67}\index{CWebView2View@{CWebView2View}!GoRoute@{GoRoute}}
+\index{GoRoute@{GoRoute}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{GoRoute()}{GoRoute()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a77f0f98d54671c6903bfc2882dfe3e67} 
+HRESULT CWeb\+View2\+View\+::\+Go\+Route (\begin{DoxyParamCaption}\item[{std\+::wstring}]{url}{}\end{DoxyParamCaption})}
+
+
+
+Điều hướng đến route. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em url} & URL route \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Navigate đến route URL (có thể xử lý routing đặc biệt). \Hypertarget{class_c_web_view2_view_a37932b296ece8ce68d6eecf24f72325e}\index{CWebView2View@{CWebView2View}!Init@{Init}}
+\index{Init@{Init}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a37932b296ece8ce68d6eecf24f72325e} 
+void CWeb\+View2\+View\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::wstring}]{initial\+Uri}{ = {\ttfamily L"{}https\+://www.bing.com/"{}}, }\item[{std\+::function$<$ void()$>$}]{webview\+Created\+Callback}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Khởi tạo Web\+View2. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em initial\+Uri} & URI ban đầu để load (mặc định "{}https\+://www.\+bing.\+com/"{}) \\
+\hline
+{\em webview\+Created\+Callback} & Callback được gọi khi Web\+View được tạo (mặc định nullptr)\\
+\hline
+\end{DoxyParams}
+Khởi tạo Web\+View2 environment và controller, sau đó load URI ban đầu. \Hypertarget{class_c_web_view2_view_a1ccba81dd200d7a45455bbfe2dde5116}\index{CWebView2View@{CWebView2View}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a1ccba81dd200d7a45455bbfe2dde5116} 
+bool CWeb\+View2\+View\+::\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Khởi tạo Web\+View từ DLL. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu thành công, false nếu thất bại
+\end{DoxyReturn}
+Load Web\+View2 DLL và khởi tạo environment. \Hypertarget{class_c_web_view2_view_aef4156e296350e1a7d936c68afa65b80}\index{CWebView2View@{CWebView2View}!InitInstance@{InitInstance}}
+\index{InitInstance@{InitInstance}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{InitInstance()}{InitInstance()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_aef4156e296350e1a7d936c68afa65b80} 
+BOOL CWeb\+View2\+View\+::\+Init\+Instance (\begin{DoxyParamCaption}\item[{HINSTANCE}]{h\+Instance}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Khởi tạo instance. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em h\+Instance} & Handle của instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+TRUE nếu thành công, FALSE nếu thất bại
+\end{DoxyReturn}
+Khởi tạo Web\+View2 environment cho toàn bộ ứng dụng. \Hypertarget{class_c_web_view2_view_a308f89e0a32b06550803787768be2a97}\index{CWebView2View@{CWebView2View}!InitWebView@{InitWebView}}
+\index{InitWebView@{InitWebView}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{InitWebView()}{InitWebView()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a308f89e0a32b06550803787768be2a97} 
+bool CWeb\+View2\+View\+::\+Init\+Web\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Khởi tạo Web\+View2. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu thành công, false nếu thất bại
+\end{DoxyReturn}
+Tạo Web\+View2 controller và đăng ký các event handlers. \Hypertarget{class_c_web_view2_view_adffd88831640a668c79babdaaf822579}\index{CWebView2View@{CWebView2View}!InjectScript@{InjectScript}}
+\index{InjectScript@{InjectScript}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{InjectScript()}{InjectScript()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_adffd88831640a668c79babdaaf822579} 
+HRESULT CWeb\+View2\+View\+::\+Inject\+Script (\begin{DoxyParamCaption}\item[{std\+::wstring}]{script}{, }\item[{Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ICore\+Web\+View2\+Execute\+Script\+Completed\+Handler $>$}]{handler}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Inject script vào web page. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em script} & Java\+Script code \\
+\hline
+{\em handler} & Completion handler (mặc định nullptr) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Inject và thực thi Java\+Script trong web page hiện tại. \Hypertarget{class_c_web_view2_view_a696f28f217326ba6e161352bb160c366}\index{CWebView2View@{CWebView2View}!IsInited@{IsInited}}
+\index{IsInited@{IsInited}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{IsInited()}{IsInited()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a696f28f217326ba6e161352bb160c366} 
+bool CWeb\+View2\+View\+::\+Is\+Inited (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Kiểm tra Web\+View đã được khởi tạo chưa. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu đã khởi tạo, false nếu chưa
+\end{DoxyReturn}
+Kiểm tra m\+\_\+is\+Web\+View\+Ready để xác định Web\+View đã sẵn sàng chưa. \Hypertarget{class_c_web_view2_view_a70034237b8f39460f506e9915a087538}\index{CWebView2View@{CWebView2View}!IsLoging@{IsLoging}}
+\index{IsLoging@{IsLoging}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{IsLoging()}{IsLoging()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a70034237b8f39460f506e9915a087538} 
+bool CWeb\+View2\+View\+::\+Is\+Loging (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Kiểm tra đang đăng nhập. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu đang đăng nhập, false nếu không
+\end{DoxyReturn}
+Kiểm tra trạng thái đăng nhập hiện tại. \Hypertarget{class_c_web_view2_view_af68d028c52a6cca5adda492f8e42f314}\index{CWebView2View@{CWebView2View}!Login@{Login}}
+\index{Login@{Login}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_af68d028c52a6cca5adda492f8e42f314} 
+bool CWeb\+View2\+View\+::\+Login (\begin{DoxyParamCaption}\item[{LPCTSTR}]{lpsz\+Mod}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Đăng nhập. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em lpsz\+Mod} & Module name (mặc định nullptr) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+true nếu thành công, false nếu thất bại
+\end{DoxyReturn}
+Thực hiện đăng nhập vào hệ thống. \Hypertarget{class_c_web_view2_view_a4cf65a427a4999c248e3a69fa4c68579}\index{CWebView2View@{CWebView2View}!Navigate@{Navigate}}
+\index{Navigate@{Navigate}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Navigate()}{Navigate()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a4cf65a427a4999c248e3a69fa4c68579} 
+HRESULT CWeb\+View2\+View\+::\+Navigate (\begin{DoxyParamCaption}\item[{std\+::wstring}]{url}{}\end{DoxyParamCaption})}
+
+
+
+Navigate đến URL. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em url} & URL cần navigate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Load URL trong Web\+View. \Hypertarget{class_c_web_view2_view_ad4bee7586e39c7814ecd984f5a278ea4}\index{CWebView2View@{CWebView2View}!NavigateToString@{NavigateToString}}
+\index{NavigateToString@{NavigateToString}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{NavigateToString()}{NavigateToString()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ad4bee7586e39c7814ecd984f5a278ea4} 
+HRESULT CWeb\+View2\+View\+::\+Navigate\+To\+String (\begin{DoxyParamCaption}\item[{std\+::wstring}]{content}{}\end{DoxyParamCaption})}
+
+
+
+Navigate đến HTML content. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em content} & HTML content dạng string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Load HTML content trực tiếp vào Web\+View. \Hypertarget{class_c_web_view2_view_a2ab4a8e2176f28b7748b847b8122b76b}\index{CWebView2View@{CWebView2View}!OnActivateView@{OnActivateView}}
+\index{OnActivateView@{OnActivateView}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnActivateView()}{OnActivateView()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a2ab4a8e2176f28b7748b847b8122b76b} 
+virtual void CWeb\+View2\+View\+::\+On\+Activate\+View (\begin{DoxyParamCaption}\item[{BOOL}]{b\+Activate}{, }\item[{CView \texorpdfstring{$\ast$}{*}}]{p\+Activate\+View}{, }\item[{CView \texorpdfstring{$\ast$}{*}}]{p\+Deactive\+View}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_c_web_view2_view_af3c5f911010a26961c492c1db836eaa5}\index{CWebView2View@{CWebView2View}!OnContextMenu@{OnContextMenu}}
+\index{OnContextMenu@{OnContextMenu}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnContextMenu()}{OnContextMenu()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_af3c5f911010a26961c492c1db836eaa5} 
+afx\+\_\+msg void CWeb\+View2\+View\+::\+On\+Context\+Menu (\begin{DoxyParamCaption}\item[{CWnd \texorpdfstring{$\ast$}{*}}]{p\+Wnd}{, }\item[{CPoint}]{point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_c_web_view2_view_a6de1c0f7e92d7f1ca6b566eb86b303b2}\index{CWebView2View@{CWebView2View}!OnCreateControllerCompleted@{OnCreateControllerCompleted}}
+\index{OnCreateControllerCompleted@{OnCreateControllerCompleted}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnCreateControllerCompleted()}{OnCreateControllerCompleted()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a6de1c0f7e92d7f1ca6b566eb86b303b2} 
+HRESULT CWeb\+View2\+View\+::\+On\+Create\+Controller\+Completed (\begin{DoxyParamCaption}\item[{HRESULT}]{result}{, }\item[{ICore\+Web\+View2\+Controller \texorpdfstring{$\ast$}{*}}]{controller}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Xử lý khi tạo controller hoàn thành. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em result} & HRESULT kết quả \\
+\hline
+{\em controller} & Con trỏ đến ICore\+Web\+View2\+Controller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Callback được gọi khi Web\+View2 controller được tạo xong. \Hypertarget{class_c_web_view2_view_a7e9d01135aab5154f4427f6998f9974f}\index{CWebView2View@{CWebView2View}!OnCreateEnvironmentCompleted@{OnCreateEnvironmentCompleted}}
+\index{OnCreateEnvironmentCompleted@{OnCreateEnvironmentCompleted}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnCreateEnvironmentCompleted()}{OnCreateEnvironmentCompleted()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a7e9d01135aab5154f4427f6998f9974f} 
+HRESULT CWeb\+View2\+View\+::\+On\+Create\+Environment\+Completed (\begin{DoxyParamCaption}\item[{HRESULT}]{result}{, }\item[{ICore\+Web\+View2\+Environment \texorpdfstring{$\ast$}{*}}]{env}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Xử lý khi tạo environment hoàn thành. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em result} & HRESULT kết quả \\
+\hline
+{\em env} & Con trỏ đến ICore\+Web\+View2\+Environment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Callback được gọi khi Web\+View2 environment được tạo xong. \Hypertarget{class_c_web_view2_view_ac7be093b880a4cbdd8977b954feb95a6}\index{CWebView2View@{CWebView2View}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ac7be093b880a4cbdd8977b954feb95a6} 
+afx\+\_\+msg void CWeb\+View2\+View\+::\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_web_view2_view_a64fd99c92156716a36f8def1c88e82f0}\index{CWebView2View@{CWebView2View}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a64fd99c92156716a36f8def1c88e82f0} 
+virtual void CWeb\+View2\+View\+::\+On\+Draw (\begin{DoxyParamCaption}\item[{CDC \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_c_web_view2_view_ae5214d64e01d5eb42a4f27699ca86423}\index{CWebView2View@{CWebView2View}!OnFilePrintPreview@{OnFilePrintPreview}}
+\index{OnFilePrintPreview@{OnFilePrintPreview}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnFilePrintPreview()}{OnFilePrintPreview()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ae5214d64e01d5eb42a4f27699ca86423} 
+afx\+\_\+msg void CWeb\+View2\+View\+::\+On\+File\+Print\+Preview (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_c_web_view2_view_abccb1728c217230b3197e423266eeca0}\index{CWebView2View@{CWebView2View}!OnInitialUpdate@{OnInitialUpdate}}
+\index{OnInitialUpdate@{OnInitialUpdate}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnInitialUpdate()}{OnInitialUpdate()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_abccb1728c217230b3197e423266eeca0} 
+virtual void CWeb\+View2\+View\+::\+On\+Initial\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_c_web_view2_view_a65523fd6d2401502bf7c415c8e3eac53}\index{CWebView2View@{CWebView2View}!OnRButtonUp@{OnRButtonUp}}
+\index{OnRButtonUp@{OnRButtonUp}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnRButtonUp()}{OnRButtonUp()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a65523fd6d2401502bf7c415c8e3eac53} 
+afx\+\_\+msg void CWeb\+View2\+View\+::\+On\+RButton\+Up (\begin{DoxyParamCaption}\item[{UINT}]{n\+Flags}{, }\item[{CPoint}]{point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_c_web_view2_view_a453587d7f4794240d53540d32c483bc0}\index{CWebView2View@{CWebView2View}!OnRunAsync@{OnRunAsync}}
+\index{OnRunAsync@{OnRunAsync}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnRunAsync()}{OnRunAsync()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a453587d7f4794240d53540d32c483bc0} 
+afx\+\_\+msg LRESULT CWeb\+View2\+View\+::\+On\+Run\+Async (\begin{DoxyParamCaption}\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Xử lý message chạy async. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em w\+Param} & Tham số w\+Param \\
+\hline
+{\em l\+Param} & Tham số l\+Param (chứa callback function) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+Kết quả xử lý message
+\end{DoxyReturn}
+Thực thi callback function được truyền qua message. \Hypertarget{class_c_web_view2_view_ad0192479e4a7956c8e93489def7f90de}\index{CWebView2View@{CWebView2View}!OnShowWindow@{OnShowWindow}}
+\index{OnShowWindow@{OnShowWindow}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnShowWindow()}{OnShowWindow()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ad0192479e4a7956c8e93489def7f90de} 
+afx\+\_\+msg void CWeb\+View2\+View\+::\+On\+Show\+Window (\begin{DoxyParamCaption}\item[{BOOL}]{b\+Show}{, }\item[{UINT}]{n\+Status}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_web_view2_view_a5362435dafe2f3b8d8e3eac743d33c6c}\index{CWebView2View@{CWebView2View}!OnSize@{OnSize}}
+\index{OnSize@{OnSize}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{OnSize()}{OnSize()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a5362435dafe2f3b8d8e3eac743d33c6c} 
+afx\+\_\+msg void CWeb\+View2\+View\+::\+On\+Size (\begin{DoxyParamCaption}\item[{UINT}]{n\+Type}{, }\item[{int}]{cx}{, }\item[{int}]{cy}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_c_web_view2_view_a9fc0ad4eabaf3e1d743baf113e1b85e1}\index{CWebView2View@{CWebView2View}!PostNcDestroy@{PostNcDestroy}}
+\index{PostNcDestroy@{PostNcDestroy}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{PostNcDestroy()}{PostNcDestroy()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a9fc0ad4eabaf3e1d743baf113e1b85e1} 
+virtual void CWeb\+View2\+View\+::\+Post\+Nc\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_c_web_view2_view_a7177b07534b79ade8b65c7697bb8623c}\index{CWebView2View@{CWebView2View}!PreCreateWindow@{PreCreateWindow}}
+\index{PreCreateWindow@{PreCreateWindow}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{PreCreateWindow()}{PreCreateWindow()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a7177b07534b79ade8b65c7697bb8623c} 
+virtual BOOL CWeb\+View2\+View\+::\+Pre\+Create\+Window (\begin{DoxyParamCaption}\item[{CREATESTRUCT \&}]{cs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_c_web_view2_view_a5845c46a98c704deb6f8af6cf415e896}\index{CWebView2View@{CWebView2View}!Resize@{Resize}}
+\index{Resize@{Resize}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a5845c46a98c704deb6f8af6cf415e896} 
+void CWeb\+View2\+View\+::\+Resize (\begin{DoxyParamCaption}\item[{CRect}]{rect}{}\end{DoxyParamCaption})}
+
+
+
+Resize Web\+View với CRect. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em rect} & Vùng hiển thị mới\\
+\hline
+\end{DoxyParams}
+Thay đổi kích thước Web\+View controller. \Hypertarget{class_c_web_view2_view_ad4128ad94a24bae52fa476b41ddd97ae}\index{CWebView2View@{CWebView2View}!Resize@{Resize}}
+\index{Resize@{Resize}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ad4128ad94a24bae52fa476b41ddd97ae} 
+void CWeb\+View2\+View\+::\+Resize (\begin{DoxyParamCaption}\item[{RECT}]{bounds}{ = {\ttfamily RECT()}}\end{DoxyParamCaption})}
+
+
+
+Resize Web\+View với RECT. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em bounds} & Vùng hiển thị mới (mặc định RECT rỗng)\\
+\hline
+\end{DoxyParams}
+Thay đổi kích thước Web\+View controller. \Hypertarget{class_c_web_view2_view_ada273c6359428b54cd8f2f2ecff85a4b}\index{CWebView2View@{CWebView2View}!RunAsync@{RunAsync}}
+\index{RunAsync@{RunAsync}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{RunAsync()}{RunAsync()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ada273c6359428b54cd8f2f2ecff85a4b} 
+void CWeb\+View2\+View\+::\+Run\+Async (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(void)$>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Chạy callback bất đồng bộ 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em callback} & Callback function cần chạy\\
+\hline
+\end{DoxyParams}
+Post message để chạy callback trên UI thread. \Hypertarget{class_c_web_view2_view_ae0b0ce143d54737e4ed264544441f1c9}\index{CWebView2View@{CWebView2View}!s2ws@{s2ws}}
+\index{s2ws@{s2ws}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{s2ws()}{s2ws()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ae0b0ce143d54737e4ed264544441f1c9} 
+std\+::wstring CWeb\+View2\+View\+::s2ws (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Chuyển đổi string sang wstring. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em str} & Chuỗi string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+Chuỗi wstring
+\end{DoxyReturn}
+Utility function để chuyển đổi từ std\+::string sang std\+::wstring. \Hypertarget{class_c_web_view2_view_a4da8b855dfa27a28f568fd88251f0794}\index{CWebView2View@{CWebView2View}!SendStringWebMessage@{SendStringWebMessage}}
+\index{SendStringWebMessage@{SendStringWebMessage}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{SendStringWebMessage()}{SendStringWebMessage()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a4da8b855dfa27a28f568fd88251f0794} 
+void CWeb\+View2\+View\+::\+Send\+String\+Web\+Message (\begin{DoxyParamCaption}\item[{std\+::wstring}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Gửi message string đến web content. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em message} & Chuỗi message cần gửi\\
+\hline
+\end{DoxyParams}
+Gửi message từ native code đến Java\+Script trong Web\+View. \Hypertarget{class_c_web_view2_view_ac4718481ed0d99b50b328a4bee865f26}\index{CWebView2View@{CWebView2View}!SetEventsAndBrokers@{SetEventsAndBrokers}}
+\index{SetEventsAndBrokers@{SetEventsAndBrokers}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{SetEventsAndBrokers()}{SetEventsAndBrokers()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ac4718481ed0d99b50b328a4bee865f26} 
+HRESULT CWeb\+View2\+View\+::\+Set\+Events\+And\+Brokers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Thiết lập các event và broker. 
+
+\begin{DoxyReturn}{Giá trị trả về}
+HRESULT kết quả thao tác
+\end{DoxyReturn}
+Đăng ký các event handlers cho Web\+View2 (message received, navigation, process failed, etc.). \Hypertarget{class_c_web_view2_view_abbbebe7d7130c9d557e3d9a43c67ebc3}\index{CWebView2View@{CWebView2View}!SetHighDPIAwareness@{SetHighDPIAwareness}}
+\index{SetHighDPIAwareness@{SetHighDPIAwareness}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{SetHighDPIAwareness()}{SetHighDPIAwareness()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_abbbebe7d7130c9d557e3d9a43c67ebc3} 
+void CWeb\+View2\+View\+::\+Set\+High\+DPIAwareness (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Thiết lập High DPI awareness. 
+
+Thiết lập High DPI awareness cho Web\+View2. \Hypertarget{class_c_web_view2_view_ab768a5823343588fd8fa13b04433636b}\index{CWebView2View@{CWebView2View}!Show@{Show}}
+\index{Show@{Show}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ab768a5823343588fd8fa13b04433636b} 
+void CWeb\+View2\+View\+::\+Show (\begin{DoxyParamCaption}\item[{BOOL}]{b\+Show}{}\end{DoxyParamCaption})}
+
+
+
+Hiển thị/ẩn Web\+View. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em b\+Show} & TRUE để hiển thị, FALSE để ẩn\\
+\hline
+\end{DoxyParams}
+Thay đổi trạng thái hiển thị của Web\+View. \Hypertarget{class_c_web_view2_view_a5984aeb3a21f7aecc3e3b07a97e5a2d4}\index{CWebView2View@{CWebView2View}!WindowProc@{WindowProc}}
+\index{WindowProc@{WindowProc}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{WindowProc()}{WindowProc()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a5984aeb3a21f7aecc3e3b07a97e5a2d4} 
+virtual LRESULT CWeb\+View2\+View\+::\+Window\+Proc (\begin{DoxyParamCaption}\item[{UINT}]{message}{, }\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_c_web_view2_view_ad8194c8da0bc8da9ac4f22bf81f8789b}\index{CWebView2View@{CWebView2View}!ws2s@{ws2s}}
+\index{ws2s@{ws2s}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{ws2s()}{ws2s()}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ad8194c8da0bc8da9ac4f22bf81f8789b} 
+std\+::string CWeb\+View2\+View\+::ws2s (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{wstr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Chuyển đổi wstring sang string. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em wstr} & Chuỗi wstring \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+Chuỗi string
+\end{DoxyReturn}
+Utility function để chuyển đổi từ std\+::wstring sang std\+::string. 
+
+\label{doc-variable-members}
+\Hypertarget{class_c_web_view2_view_doc-variable-members}
+\doxysubsection{Thông tin về Member Data}
+\Hypertarget{class_c_web_view2_view_a1bfc92bbc4ed9977a46ad4f2fcae34cc}\index{CWebView2View@{CWebView2View}!m\_devToolsLogBroker@{m\_devToolsLogBroker}}
+\index{m\_devToolsLogBroker@{m\_devToolsLogBroker}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_devToolsLogBroker}{m\_devToolsLogBroker}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a1bfc92bbc4ed9977a46ad4f2fcae34cc} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ICore\+Web\+View2\+Dev\+Tools\+Protocol\+Event\+Received\+Event\+Handler$>$ CWeb\+View2\+View\+::m\+\_\+dev\+Tools\+Log\+Broker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event handler cho Dev\+Tools log. 
+
+\Hypertarget{class_c_web_view2_view_a2f3b95234196ab416d0ad28ab9b1a0a9}\index{CWebView2View@{CWebView2View}!m\_DevToolsLogToken@{m\_DevToolsLogToken}}
+\index{m\_DevToolsLogToken@{m\_DevToolsLogToken}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_DevToolsLogToken}{m\_DevToolsLogToken}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a2f3b95234196ab416d0ad28ab9b1a0a9} 
+Event\+Registration\+Token CWeb\+View2\+View\+::m\+\_\+\+Dev\+Tools\+Log\+Token = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Token đăng ký event Dev\+Tools log. 
+
+\Hypertarget{class_c_web_view2_view_af8b62fe6dbd9c59ab92ea96aca87d7f0}\index{CWebView2View@{CWebView2View}!m\_devToolsSecurityBroker@{m\_devToolsSecurityBroker}}
+\index{m\_devToolsSecurityBroker@{m\_devToolsSecurityBroker}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_devToolsSecurityBroker}{m\_devToolsSecurityBroker}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_af8b62fe6dbd9c59ab92ea96aca87d7f0} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ICore\+Web\+View2\+Dev\+Tools\+Protocol\+Event\+Received\+Event\+Handler$>$ CWeb\+View2\+View\+::m\+\_\+dev\+Tools\+Security\+Broker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event handler cho Dev\+Tools security. 
+
+\Hypertarget{class_c_web_view2_view_a68ac50346c42c0491aabb2135d64a434}\index{CWebView2View@{CWebView2View}!m\_DevToolsSecurityToken@{m\_DevToolsSecurityToken}}
+\index{m\_DevToolsSecurityToken@{m\_DevToolsSecurityToken}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_DevToolsSecurityToken}{m\_DevToolsSecurityToken}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a68ac50346c42c0491aabb2135d64a434} 
+Event\+Registration\+Token CWeb\+View2\+View\+::m\+\_\+\+Dev\+Tools\+Security\+Token = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Token đăng ký event Dev\+Tools security. 
+
+\Hypertarget{class_c_web_view2_view_a63f94e35cbb24cc928e5da9f0340e16e}\index{CWebView2View@{CWebView2View}!m\_Id@{m\_Id}}
+\index{m\_Id@{m\_Id}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_Id}{m\_Id}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a63f94e35cbb24cc928e5da9f0340e16e} 
+long CWeb\+View2\+View\+::m\+\_\+\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ID duy nhất của view. 
+
+\Hypertarget{class_c_web_view2_view_ac39c85fab5eadab0dcbacd93fff55e96}\index{CWebView2View@{CWebView2View}!m\_initialUri@{m\_initialUri}}
+\index{m\_initialUri@{m\_initialUri}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_initialUri}{m\_initialUri}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ac39c85fab5eadab0dcbacd93fff55e96} 
+std\+::wstring CWeb\+View2\+View\+::m\+\_\+initial\+Uri\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+URI ban đầu để load khi khởi tạo. 
+
+\Hypertarget{class_c_web_view2_view_a639228ae23fba6709d01dc63b655d4e3}\index{CWebView2View@{CWebView2View}!m\_isWebViewReady@{m\_isWebViewReady}}
+\index{m\_isWebViewReady@{m\_isWebViewReady}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_isWebViewReady}{m\_isWebViewReady}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a639228ae23fba6709d01dc63b655d4e3} 
+bool CWeb\+View2\+View\+::m\+\_\+is\+Web\+View\+Ready\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cờ xác định Web\+View đã sẵn sàng chưa. 
+
+\Hypertarget{class_c_web_view2_view_a0a16e898210d209520ebf8b5f92c4fd1}\index{CWebView2View@{CWebView2View}!m\_Label\_View@{m\_Label\_View}}
+\index{m\_Label\_View@{m\_Label\_View}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_Label\_View}{m\_Label\_View}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a0a16e898210d209520ebf8b5f92c4fd1} 
+CStatic CWeb\+View2\+View\+::m\+\_\+\+Label\+\_\+\+View}
+
+\Hypertarget{class_c_web_view2_view_a44689b5fe752fafdd3ab4edfee065929}\index{CWebView2View@{CWebView2View}!m\_MessageBroker@{m\_MessageBroker}}
+\index{m\_MessageBroker@{m\_MessageBroker}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_MessageBroker}{m\_MessageBroker}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a44689b5fe752fafdd3ab4edfee065929} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ICore\+Web\+View2\+Web\+Message\+Received\+Event\+Handler$>$ CWeb\+View2\+View\+::m\+\_\+\+Message\+Broker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event handler cho web message received. 
+
+\Hypertarget{class_c_web_view2_view_a5d0ad016ae0f4f4cc10fdec29b5ceb22}\index{CWebView2View@{CWebView2View}!m\_NavigationCompletedBroker@{m\_NavigationCompletedBroker}}
+\index{m\_NavigationCompletedBroker@{m\_NavigationCompletedBroker}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_NavigationCompletedBroker}{m\_NavigationCompletedBroker}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a5d0ad016ae0f4f4cc10fdec29b5ceb22} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ICore\+Web\+View2\+Navigation\+Completed\+Event\+Handler$>$ CWeb\+View2\+View\+::m\+\_\+\+Navigation\+Completed\+Broker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event handler cho navigation completed. 
+
+\Hypertarget{class_c_web_view2_view_a08254859ecf8f4746f03a0d1bc42b130}\index{CWebView2View@{CWebView2View}!m\_NavigationCompletedToken@{m\_NavigationCompletedToken}}
+\index{m\_NavigationCompletedToken@{m\_NavigationCompletedToken}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_NavigationCompletedToken}{m\_NavigationCompletedToken}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a08254859ecf8f4746f03a0d1bc42b130} 
+Event\+Registration\+Token CWeb\+View2\+View\+::m\+\_\+\+Navigation\+Completed\+Token = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Token đăng ký event hoàn thành navigation. 
+
+\Hypertarget{class_c_web_view2_view_a34c8f6f0c2b98122cff074a20d9c5cf0}\index{CWebView2View@{CWebView2View}!m\_NavigationStartingBroker@{m\_NavigationStartingBroker}}
+\index{m\_NavigationStartingBroker@{m\_NavigationStartingBroker}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_NavigationStartingBroker}{m\_NavigationStartingBroker}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a34c8f6f0c2b98122cff074a20d9c5cf0} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ICore\+Web\+View2\+Navigation\+Starting\+Event\+Handler$>$ CWeb\+View2\+View\+::m\+\_\+\+Navigation\+Starting\+Broker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event handler cho navigation starting. 
+
+\Hypertarget{class_c_web_view2_view_a3552f5150f2366097c0007d5aa96cfec}\index{CWebView2View@{CWebView2View}!m\_NavigationStartingToken@{m\_NavigationStartingToken}}
+\index{m\_NavigationStartingToken@{m\_NavigationStartingToken}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_NavigationStartingToken}{m\_NavigationStartingToken}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a3552f5150f2366097c0007d5aa96cfec} 
+Event\+Registration\+Token CWeb\+View2\+View\+::m\+\_\+\+Navigation\+Starting\+Token = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Token đăng ký event bắt đầu navigation. 
+
+\Hypertarget{class_c_web_view2_view_abe260e6fb4c142294f155570e6c38cb3}\index{CWebView2View@{CWebView2View}!m\_onWebViewFirstInitialized@{m\_onWebViewFirstInitialized}}
+\index{m\_onWebViewFirstInitialized@{m\_onWebViewFirstInitialized}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_onWebViewFirstInitialized}{m\_onWebViewFirstInitialized}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_abe260e6fb4c142294f155570e6c38cb3} 
+std\+::function$<$void()$>$ CWeb\+View2\+View\+::m\+\_\+on\+Web\+View\+First\+Initialized = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Callback được gọi khi Web\+View được khởi tạo lần đầu. 
+
+\Hypertarget{class_c_web_view2_view_a647df5e9c9929b32078336ac2812d7a7}\index{CWebView2View@{CWebView2View}!m\_ProcessFailedBroker@{m\_ProcessFailedBroker}}
+\index{m\_ProcessFailedBroker@{m\_ProcessFailedBroker}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_ProcessFailedBroker}{m\_ProcessFailedBroker}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a647df5e9c9929b32078336ac2812d7a7} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ICore\+Web\+View2\+Process\+Failed\+Event\+Handler$>$ CWeb\+View2\+View\+::m\+\_\+\+Process\+Failed\+Broker\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event handler cho process failed. 
+
+\Hypertarget{class_c_web_view2_view_a284edeed3eb43b3df15f7901369b4130}\index{CWebView2View@{CWebView2View}!m\_ProcessFailedToken@{m\_ProcessFailedToken}}
+\index{m\_ProcessFailedToken@{m\_ProcessFailedToken}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_ProcessFailedToken}{m\_ProcessFailedToken}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a284edeed3eb43b3df15f7901369b4130} 
+Event\+Registration\+Token CWeb\+View2\+View\+::m\+\_\+\+Process\+Failed\+Token = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Token đăng ký event process failed. 
+
+\Hypertarget{class_c_web_view2_view_a8b58f50ffde68f0b2ce2cdab13df0952}\index{CWebView2View@{CWebView2View}!m\_WebMessageReceivedToken@{m\_WebMessageReceivedToken}}
+\index{m\_WebMessageReceivedToken@{m\_WebMessageReceivedToken}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_WebMessageReceivedToken}{m\_WebMessageReceivedToken}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a8b58f50ffde68f0b2ce2cdab13df0952} 
+Event\+Registration\+Token CWeb\+View2\+View\+::m\+\_\+\+Web\+Message\+Received\+Token = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Token đăng ký event nhận message từ web. 
+
+\Hypertarget{class_c_web_view2_view_a0e84286a701ae99eed74ef8bab7bf45a}\index{CWebView2View@{CWebView2View}!m\_webView@{m\_webView}}
+\index{m\_webView@{m\_webView}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_webView}{m\_webView}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a0e84286a701ae99eed74ef8bab7bf45a} 
+wil\+::com\+\_\+ptr$<$ICore\+Web\+View2$>$ CWeb\+View2\+View\+::m\+\_\+web\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Web\+View2 core object để hiển thị web content. 
+
+\Hypertarget{class_c_web_view2_view_a35fd301e2be8c19a4540a3c151162686}\index{CWebView2View@{CWebView2View}!m\_webViewController@{m\_webViewController}}
+\index{m\_webViewController@{m\_webViewController}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{m\_webViewController}{m\_webViewController}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_a35fd301e2be8c19a4540a3c151162686} 
+wil\+::com\+\_\+ptr$<$ICore\+Web\+View2\+Controller$>$ CWeb\+View2\+View\+::m\+\_\+web\+View\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Web\+View2 controller để điều khiển Web\+View. 
+
+\Hypertarget{class_c_web_view2_view_ad0efa6e32d08934909e269196199366a}\index{CWebView2View@{CWebView2View}!NavigationCompletedEvent@{NavigationCompletedEvent}}
+\index{NavigationCompletedEvent@{NavigationCompletedEvent}!CWebView2View@{CWebView2View}}
+\doxysubsubsection{\texorpdfstring{NavigationCompletedEvent}{NavigationCompletedEvent}}
+{\footnotesize\ttfamily \label{class_c_web_view2_view_ad0efa6e32d08934909e269196199366a} 
+Microsoft\+::\+WRL\+::\+Wrappers\+::\+Event CWeb\+View2\+View\+::\+Navigation\+Completed\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Event wrapper cho navigation completed. 
+
+
+
+Thông tin cho class được biên soạn từ các file sau đây\+:\begin{DoxyCompactItemize}
+\item 
+Include/\+HMSCore/\mbox{\hyperlink{_web_view2_view_8h}{Web\+View2\+View.\+h}}\end{DoxyCompactItemize}

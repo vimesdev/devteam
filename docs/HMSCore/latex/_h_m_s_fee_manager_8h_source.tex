@@ -1,0 +1,175 @@
+\doxysection{HMSFee\+Manager.\+h}
+\hypertarget{_h_m_s_fee_manager_8h_source}{}\label{_h_m_s_fee_manager_8h_source}\index{Include/HMSCore/HMSFeeManager.h@{Include/HMSCore/HMSFeeManager.h}}
+\mbox{\hyperlink{_h_m_s_fee_manager_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSFEEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSFEEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ac81f805c58f2238943695adca853b861}{CHMSFeeManager}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a69db7ea1821f52c41df2aa90ad05ccc3}{m\_version}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ac8d0f2a1604d51a13d1a0a389f59fda9}{m\_HasInsAllInOne}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a8e9f0ae828a0ef64eb25fa55509931a8}{m\_FilterInsuranceFee}};}
+\DoxyCodeLine{00014\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a3102e5b6fdf377f438405a970f0ed367}{m\_szIsExtIns}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ae20a73a147bcb64b83756e6535f8ce0e}{CFeeItem}}\{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ae20a73a147bcb64b83756e6535f8ce0e}{CFeeItem}}()\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_aa6c8d0b95ea1b4e1b58c5475bf2a4dfe}{m\_szItemID}}.Empty();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a7b445cf709e0736ca317823449a9ee24}{m\_szFeeType}}.Empty();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ab1dcbc8f1510b08d5a94b6ae6e3a5b0c}{m\_szType}}.Empty();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a191dd17e378ac17fe7cc818e1ef68265}{m\_szID}}.Empty();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_aa6c8d0b95ea1b4e1b58c5475bf2a4dfe}{m\_szItemID}}.Empty();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a362d3f625885bce1790c5e2130244f3e}{m\_szName}}.Empty();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a7eb5c1a6d9caa1cbfaadfe49a4095406}{m\_szUnit}}.Empty();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ac6ce278ddb01cab12b738f4964186a26}{m\_szGroup}}.Empty();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ac4e1890ef6c50cafa9f4a47e66ff4267}{m\_nQty}}\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a34af8f1963f44b466ae3552cb1510359}{m\_nUnitPrice}}\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a0f1c53ea747a93b2bf3b451489f35563}{m\_nInsPrice}}\ =\ 0;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a6e11f7d5a4e1af553a3e6370e74f025a}{m\_nCost}}\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ad849f227cd0f002d2a5cd2bf0de5e29d}{m\_nInsCost}}\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a933c4e9705af2741e23d111482736ab4}{m\_nDiscount}}\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ad950c1aaa63f5a6145bd52b91cfd842d}{m\_nDiffCost}}\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_aabd4b4dfc3e8ad6b4db442c3e9c47f03}{m\_nCoPayment}}\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a523e6dd63257192314a64e6f6dd24e1a}{m\_nPatPaid}}\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a1dd191b101c3192ce490e523d6c7cf69}{m\_szPayrate}}\ =\ \_T(\textcolor{stringliteral}{"{}100"{}});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a1b08b33c9a9b613dae0fccfb1d1e8f87}{m\_szInsRate}}\ =\ \_T(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a7f3672d15ed695c5c2240911107ab07f}{m\_szExtInsPaid}}\ =\ \_T(\textcolor{stringliteral}{"{}N"{}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ac0d01510055fdf145473151a4b59ffa2}{m\_szNguonTT}}.Empty();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ada46b013d3d8ea02d12da18041df56f2}{m\_nOtherPaid}}\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a7b445cf709e0736ca317823449a9ee24}{m\_szFeeType}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ab1dcbc8f1510b08d5a94b6ae6e3a5b0c}{m\_szType}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ac6ce278ddb01cab12b738f4964186a26}{m\_szGroup}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a191dd17e378ac17fe7cc818e1ef68265}{m\_szID}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_aa6c8d0b95ea1b4e1b58c5475bf2a4dfe}{m\_szItemID}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a362d3f625885bce1790c5e2130244f3e}{m\_szName}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a7eb5c1a6d9caa1cbfaadfe49a4095406}{m\_szUnit}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a1dd191b101c3192ce490e523d6c7cf69}{m\_szPayrate}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a1b08b33c9a9b613dae0fccfb1d1e8f87}{m\_szInsRate}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a7f3672d15ed695c5c2240911107ab07f}{m\_szExtInsPaid}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ac0d01510055fdf145473151a4b59ffa2}{m\_szNguonTT}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ac4e1890ef6c50cafa9f4a47e66ff4267}{m\_nQty}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a34af8f1963f44b466ae3552cb1510359}{m\_nUnitPrice}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a0f1c53ea747a93b2bf3b451489f35563}{m\_nInsPrice}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a6e11f7d5a4e1af553a3e6370e74f025a}{m\_nCost}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ad849f227cd0f002d2a5cd2bf0de5e29d}{m\_nInsCost}};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a933c4e9705af2741e23d111482736ab4}{m\_nDiscount}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ad950c1aaa63f5a6145bd52b91cfd842d}{m\_nDiffCost}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_aabd4b4dfc3e8ad6b4db442c3e9c47f03}{m\_nCoPayment}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_a523e6dd63257192314a64e6f6dd24e1a}{m\_nPatPaid}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item_ada46b013d3d8ea02d12da18041df56f2}{m\_nOtherPaid}};}
+\DoxyCodeLine{00064\ \ \ \ \ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aa848eed1c15093ab33c0ce2f1a5cef41}{m\_nDocumentNo}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a77428c768c39287af658376c6bcdc739}{m\_nInvoiceNo}};}
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a7ef4fb5cd3c1693cf4defc1c22f570ff}{m\_szSQL}};}
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_affcbadbb32b9e5d6cebfbe56ebfe8ffb}{m\_szFilter}};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_af6e78538e06bc7b75ee18c68a202d1a5}{m\_bCancel}};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ab58a2b12d55fba3d3129807f30484a16}{m\_nDisrate}};}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a8b6474b54f77c0c5244f23b4fc049ea6}{m\_nTotalCost}};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a396d31f02eab6f64043d08e23c6c1353}{m\_nTotalInsCost}};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a821c4ac32538c80010c4336777ebe21e}{m\_nTotalDiscount}};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a7ae7400a04942114173acae2b565577a}{m\_nTotalDiffCost}};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a257a56c3752ec3730016b762caf6222f}{m\_nTotalCopayment}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a2f29af23b3257a5a14a080f14d28cbbc}{m\_nTotalPatPaid}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_afe74544a46dc3c3abb6f8b5a4ce49b5d}{m\_nTotalDeposit}};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a8e8013c1bd7f0dcd0ad25545ddd8a405}{m\_nTotalFree}};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a74808add0f1ab0138645f49e87c751fc}{m\_nTotalTaitro}};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_af67d444043e60c9e386a4639a5ce2c4c}{m\_nTotalBQP}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a771ca6c577f7e7bb0a51f221c4ce3e75}{m\_nTotalBHYTBQP}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a6c4533c872930a7167cdade8819c68ba}{m\_nTotalKhac}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a1b6aeb8221ea5491396625491dd26882}{m\_nTotalPayment}};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a239a3d6e7624b886ae65824a99633697}{m\_nTotalRefund}};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a8a39fca3d4efbc8d83e08270a89b4f41}{m\_nTotalExtInsPaid}};}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a488bba784af5eec16efc746267729405}{m\_nTotalOtherPaid}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_afc3532fb937e974875a3ddf6a2334c38}{m\_insTotalCost}};}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_afa0afb5daea0630027dc9823ce10028c}{m\_insTotalInsCost}};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a6e281813f3d81e3b4ce68096c9b6f95d}{m\_insTotalDiscount}};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a9524318e4d61af7eeec940834fa28b84}{m\_insTotalDiffCost}};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ac6594ecc08db5647941cab562f6ba57e}{m\_insTotalCopayment}};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aff7c185b481a87b060a9f80faeaeaaf4}{m\_insTotalPatPaid}};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//double\ \ m\_insTotalOtherPaid;}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a75305ac81137f1c2f375e81f228bf701}{m\_servTotalCost}};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a5e5f26f86f96076321ceccfa07b51887}{m\_servTotalInsCost}};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a8b3cbd471f5ba68da13c56b4e07dc037}{m\_servTotalDiscount}};}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a9e4cc6736904b6c86d68826e3c6c6d0a}{m\_servTotalDiffCost}};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ae0bf9c0062caaca8d5c29198109eb0bb}{m\_servTotalCopayment}};}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a589949a4ff8900ca8599c3107a2f9491}{m\_servTotalPatPaid}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ab4524deccd8cf7e948d0d090a9465363}{m\_nCardIdx}};}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ae4b26712808ee6adf3d3ddbda2d1217e}{m\_nxCardIdx}};}
+\DoxyCodeLine{00108\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a6c3537f6b3f81e044fc48e7392ae10d2}{m\_szCardNo}};}
+\DoxyCodeLine{00109\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a793d598440b125e3054d8368cf051c48}{m\_szCardNoEx}};}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a672b21bf609b492a1b25a79046e57336}{m\_nDisrate2}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aa89e6ecedb0305526a132da5fbb3a665}{m\_szRegDate}};}
+\DoxyCodeLine{00113\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aaa8a2d9c338feff07f54018e99a723ab}{m\_szExpDate}};}
+\DoxyCodeLine{00114\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_acb1ee9f026c595d72402a51844b35425}{m\_szRegDateEx}};}
+\DoxyCodeLine{00115\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a7284df3fda01e1f089a4dfd6af3461c8}{m\_szExpDateEx}};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ CArray<CFeeItem,CFeeItem>\ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aef7505d11bf7354903d1481f9dae63ea}{m\_arInsFees}};}
+\DoxyCodeLine{00118\ \ \ \ \ CArray<CFeeItem,CFeeItem>\ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a8f8cdf7302e16e47ab5a8e276868ce06}{m\_arServFees}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ac7a16f6549e0ad5b0d3a86bd69967755}{m\_nPrintReceiptNumberPage}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ac81f805c58f2238943695adca853b861}{CHMSFeeManager}}(\textcolor{keywordtype}{long}\ nDocumentNo,\ \textcolor{keywordtype}{bool}\ bCancel\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aabe2ac99cb884dc58fc1c33b502144fc}{\string~CHMSFeeManager}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aca434dd780fc6dc087a6c144b1cebd6b}{SetDefaultValues}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a7d0cb5a41276234495da72dc132e3699}{LoadData}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a0d6f7746c864e8d3720b71dd04935eaa}{LoadDataFromInvoices}}(CArray<long,long\&>\ \&invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a7bfa0301d40a5a9c01d29f41ede0209e}{LoadData\_v1}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a2b6152473ad4900b87e387f1ef25c7b8}{LoadDataFromInvoices\_v1}}(CArray<long,long\&>\ \&invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ae8ff27551729da6b36f7a0567fb6bebc}{LoadData\_v2}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_acda79b644cc4a1438759888385e2a34a}{LoadDataFromInvoices\_v2}}(CArray<long,long\&>\ \&invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a51b6ce440e70f0b35315b9eb1e996e0a}{LoadDataFromInvoices\_v3}}(CArray<long,long\&>\ \&invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ac191553dc58fa63bb2650bdae6039ff7}{LoadInsInvoice}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a500b72ec2b0d3e71be1eb02f26f30b93}{LoadInsInvoice\_covid}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//Nap\ chi\ phi\ theo\ bang\ ke\ moi}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ae198921c74a83f23302811404157c9c0}{LoadData\_v3}}(std::vector<long>\ invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a742793a1d5cc15421738accd2beb1a55}{LoadInsData\_v3}}(std::vector<double>\&\ values,\ std::vector<long>\ invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a1a3b8975fd42680db8b953d04802b324}{LoadServData\_v3}}(std::vector<double>\&\ values,\ std::vector<long>\ invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a3982c00a455b8fc26e12e34f6e2ee13d}{LoadHitechData\_v3}}(std::vector<double>\&\ values,\ \textcolor{keywordtype}{long}\ nCardIdx,\ \textcolor{keywordtype}{int}\ nIndex,\ std::vector<long>\ invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_abfa841fcd28a89f78173e06a52682b3e}{LoadHitechAllInOne\_v3}}(std::vector<double>\&\ values,\ \textcolor{keywordtype}{long}\ nCardIdx,\ \textcolor{keywordtype}{int}\ nIndex,\ std::vector<long>\ invoices,\ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}),\ \textcolor{keywordtype}{bool}\ bPrinter\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ bInPackage=\textcolor{keyword}{false});}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a92fd5b5400edf858d45c9d24674f5317}{PrintDischargePayment}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ \textcolor{keywordtype}{bool}\ bExam=\textcolor{keyword}{false});}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//Ham\ in\ phieu\ thanh\ toan\ BHYT}}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a92bb6de116d0d70a131330a31f04c37c}{PrintInsDischargePayment}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ \textcolor{keywordtype}{bool}\ bExam=\textcolor{keyword}{false});}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_afbab340c8690630c51c2f3e3393201a2}{PrintInsuranceDischargePayment}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_acf170ec04d0f72a4ba39405962635a88}{PrintInsuranceDischargePayment\_V3}}();}
+\DoxyCodeLine{00150\ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//Hàm\ in\ bảng\ kê\ chi\ tiết\ phí}}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ab4374ce259ce9f60ad35d453396fc76e}{PrintGeneralExaminationCost}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{true});}
+\DoxyCodeLine{00153\ \ \ \ \ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a150d75a9187a20f4168d3de4d083ed7f}{PrintSummaryInsuranceDischargePayment}}();}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//Thêm\ phơi\ bệnh\ nhân\ covid}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a937b4ab89dc4a5eab89a05602670f441}{PrintSummaryInsuranceDischargePayment\_covid}}();}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//Thêm\ phần\ in\ phiếu\ yêu\ cầu\ thanh\ toán\ dịch\ vụ\ kết\ nối\ với\ bank}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_af4bcaef9bb4b0c107ab16775b9163e17}{PrintInvoice\_bank}}(\textcolor{keywordtype}{long}\ nInvoiceNo,\ \textcolor{keywordtype}{bool}\ bPreview,\ \textcolor{keywordtype}{bool}\ bDirect,\ \textcolor{keywordtype}{int}\ nPrintCount);}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_aed26f68c0dc2e1bee8c9e49248404b26}{PrintServiceDischargePayment}}();}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a736cab5875cdc7120727788ddb8f69a2}{PrintPolicyDischargePayment}}();}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_ae2d05a61cb256fedcd5944bc3a1575e2}{LoadList}}(CGuiListCtrl*\ pList);}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//Load\ du\ lieu\ vien\ phi\ vao\ gridlistview}}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a9709f18838b72704057bd3904f717089}{LoadList\_v3}}(CGridListView*\ pList);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a4d36ec7ff40086e71ec7c3375ab4501a}{OnRecalcKDrug}}(\textcolor{keywordtype}{int}\ nInList,\ \textcolor{keywordtype}{double}\ nCost,\ \textcolor{keywordtype}{double}\&\ nDiffCost,\ \textcolor{keywordtype}{double}\&\ nCoPayment,\ \textcolor{keywordtype}{int}\ nDisRate);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_fee_manager_a6fc6435adefadd2656693de65bab4d64}{AddItem}}(CString\ szObjectType,\ \mbox{\hyperlink{struct_c_h_m_s_fee_manager_1_1_c_fee_item}{CFeeItem}}\ item);}
+\DoxyCodeLine{00167\ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

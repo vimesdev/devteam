@@ -1,0 +1,98 @@
+\doxysection{HMSReport\+Form\+Dialog.\+h}
+\hypertarget{_h_m_s_report_form_dialog_8h_source}{}\label{_h_m_s_report_form_dialog_8h_source}\index{Include/HMSReportForms/HMSReportFormDialog.h@{Include/HMSReportForms/HMSReportFormDialog.h}}
+\mbox{\hyperlink{_h_m_s_report_form_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSREPORTFORMDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSREPORTFORMDIALOG\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <atlimage.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Join\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_report_image_8h}{ReportImage.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}DocPane.h"{}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a158008753105a51e8107a6f7e36ae736}{CHMSReportFormDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a1f8eb5807671901a01f7a96aba7b3809}{m\_szModuleID}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_aa00102512aa44bb130e7d207a6053d5b}{m\_szHospitalID}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a42b2e48fa88369346e4e2c621ba52cc5}{m\_nGroupSel}};}
+\DoxyCodeLine{00040\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CGuiView*,\ CGuiView*>\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_ac93cbe4168fb747cbc43ae5c91f59d82}{m\_mStr2Class}};}
+\DoxyCodeLine{00041\ \ \ \ \ CPtrArray\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a94211f0f74459c8bebd4376dcabfd7b7}{m\_arrPane}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a58515be0b4766282d5de4108264a69a2}{CopyPane}}(CPtrArray*\ pSrc,\ CPtrArray*\ pDest);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_ac11e210462ab2e39df439f0b2fdb9edd}{SearchPane}}(CPtrArray*\ pArr,\ CString\ szSearch);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_ab2728528c4464a9262a63dec00816973}{PopulatePane}}();}
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ CDocPane\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a651902001fd586faccf04e38764fdbb0}{m\_wndReportGroup}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a73e7f657058368ceee50affaf94976ea}{m\_wndSearch}};}
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_aaabc266f2fc332730d4085d51a3cd051}{m\_szSearch}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_af3af45b2cce7853adac5371267a0a965}{OnSearchCheckValue}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a93aad18b6f1c1ef46eaadfce34d5b36b}{OnReportGroupSelectChange}}(\textcolor{keywordtype}{int}\ nOld,\ \textcolor{keywordtype}{int}\ nNew);\ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a158008753105a51e8107a6f7e36ae736}{CHMSReportFormDialog}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_af25754a8b19e1bfd2668cf623a81225c}{CHMSReportFormDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a187f6cd49267f049a8ecfdc711c35142}{\string~CHMSReportFormDialog}}();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a4ea397cb975ec80bc6920fe75aa91e58}{OnCreateComponents}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a858380af67ddc3b9ba6cc73c6713f4aa}{OnInitializeComponents}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a01aef17bf448412ca437645edbf5ffbd}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a96652b978a5b5f489aa228fce0be5f2e}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a0b1fe39834333ec716c3e0fdc51a5a0e}{InitReportGroup}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a0df5f6e27b0d17da4c918f395768fb44}{InitReportName}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a1041939c5fa4a9596eb1991fe9fc0c1a}{CreateReceptionReports}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a16ef94501b37f4a01adec4d9cfcf8afe}{CreateVPMReports}}();}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_aef025db6cbb6d3586cdaff8b717e27b1}{CreateExaminationReports}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a808d38623cbfac46c206ee631ccf5c69}{CreateTreatmentReports}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a13896af8132a79171361513de8bfed92}{CreateHospitalFeeReports}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a1bcb5eedaa993019df1e40a5b15901af}{CreatePMSReports}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a974c94cbf83fc40a5adc01c17924ceca}{CreateMAReports}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a22a0e110ed6abfec8d7ef0e8230d52f4}{CreateLIMSReports}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a10f8eacc39b73d535f0699c61a091eec}{CreatePACSReports}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a89be2cb328b92e8fb956393432de6948}{CreateIPAReports}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a6f2712ebb992358dd84dbf8c08380d07}{CreateBBReports}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a5227ac8e5c67df3d28f0f7d8d1316deb}{CreateSSMReports}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a934ab4849eaf59743209b81f743bea1c}{CreatePRReports}}();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a34126c180bbf8412590e48a7fdcb5fd9}{CreateFAMReports}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_aa0e88e88b5509ab82d14c7d12c42421b}{CreateITSReports}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a0687b27a8d4c56e607710ae8061e28e2}{CreateNMReports}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a4c6fe6efc654d253069c09810e0dba39}{CreateTMRReports}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a879f8dfb21c1125980e22dba0cc4e6f9}{CreateSOMReports}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_ab61dda190e55b192c6b00371b68e3b18}{CreateHCReports}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_afe1516e0951fd1547bde015e6a4461de}{CreateIVFReports}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a2408477d116b92e7e01961de5f51b3a0}{CreateGLSReports}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//CRect\ \ \ \ \ \ \ \ \ m\_rcImage;\ \ }}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//CReportImage\ \ m\_wndReportImage;}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//CImage\ \ \ \ \ \ \ \ m\_image;}}
+\DoxyCodeLine{00084\ \ \ \ \ CMap<int,\ int,\ CString,\ CString\&>\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a83fbf253e05471f071a0c3efd719d0a4}{m\_imageNames}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_ae83993bad44367d1fd54c2505104c1d6}{nIndex}};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//typedef\ struct\{}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//\ \ CGuiView*\ pView;}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ \ CString\ szLabel;}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\}\ tagRpt;}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a9c8657d95552e75f54781a31e7989381}{AddNew}}(CDocPane::CDocPaneInfo\ *pDocPaneInfo,\ CString\ szName);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_aadc9bcde32a5ee5d67229fe2bb6f5827}{OnInitReport}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a50a1fd7163a63245e906d594f48d2430}{OnInitMap}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_report_form_dialog_a254871e4ff1fef9697c21c7002330633}{OnPopulateReport}}();}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

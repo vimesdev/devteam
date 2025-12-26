@@ -1,0 +1,165 @@
+\doxysection{FMPolicy\+Posted\+Payment\+List.\+h}
+\hypertarget{_f_m_policy_posted_payment_list_8h_source}{}\label{_f_m_policy_posted_payment_list_8h_source}\index{Include/HMSReportForms/HospitalFee/FMPolicyPostedPaymentList.h@{Include/HMSReportForms/HospitalFee/FMPolicyPostedPaymentList.h}}
+\mbox{\hyperlink{_f_m_policy_posted_payment_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMPolicyPostedPaymentList\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMPolicyPostedPaymentList\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_adba188f394a4b77a497691b7a480264c}{CFMPolicyPostedPaymentList}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_aa64b21807a52850228ee222ea07182db}{m\_mIndex}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a90738bc068af8515c6394fbf55599f95}{m\_nEAmount}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a807451f4d3b7128fc862a462193821a2}{m\_nIAmount}};}
+\DoxyCodeLine{00037\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ad8b39f0a467396ae10e10cd33949dfb0}{m\_szCashIDS}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_af910447e1e176720aab2d819e5cd3969}{m\_wndReportCondition}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_aab482269a1f9f30f713ff561746f42b3}{m\_wndDeptInfo}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a87dc4c9e61bdcaf0cf0094d6355aa95c}{m\_wndPaymentSheet}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_af899ba276c293e6f97d3d6ef50ffbb4c}{m\_wndYearLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ae4ec5459ef2a8e633bed8ea7ef0bc8a8}{m\_wndYear}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a33e075fc5c4f13dfa885626fa49af42a}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a22c999c8dbeefd5d0af3b8c811aef431}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ab48dd11bdfc104b8861e2c528cc2ce5e}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_afa49eeae0292adf3cdbeb5a02f795366}{m\_wndFromDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a696eb688caab4ec2b41970b9fe83a0aa}{m\_wndToDate}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_afb4ffd93940ce6e0875ff77c2426b0a0}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a5b70d474a33b1082090a96d5050fe096}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a8221f7e5eeae7375c56aa14798f2fa5b}{m\_wndClerk}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a30519f383383f191ac96cc022be55a27}{m\_wndObjectLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ae37d22cf0053198c7c5a886cbad052a1}{m\_wndObject}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a2788a7c066f12c5ac28eb9b5aae75317}{m\_wndGroupByLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ad38fa9437a70eb9cf9db3199d5ae322f}{m\_wndGroupBy}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ac965897be37c25a58532696ab75d861d}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a9876da8af5c81411aa2a36c5be6f3497}{m\_wndStatus}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a7b9484830a77de683ecffadc2ad9c5c5}{m\_wndList}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_afac6fa44422c054b9d1585ce4a1c3125}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a6ee2791c73f8c6f359394200204eaac1}{m\_wndMarkAll}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ab23280ec664ebdc27809ba668691ee89}{m\_wndUnMark}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a2d3ae0fb02bd074682d47b4ccfb69a4f}{m\_wndPrint}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ae878d437d384b70104b32f035e6ff6c9}{m\_wndExport}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a4882ff3c3d6f3b67f9be677d99ee9fa8}{m\_wndServicePackage}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_af650f188f9795911629eb7c1525101d0}{m\_wndOtherFee}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a57e0945c9ceaf3182536e01a354a8e32}{m\_wndChichinhsach}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a3701cf6108fe2b615af58ab7d0680267}{m\_nYear}};}
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a32536fdd54dbd42a2e421b4a8204f875}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a5cf84e0410159eb7af0adc0b21399cb0}{m\_szFromDate}};}
+\DoxyCodeLine{00072\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a9383f7bf2e24b12728ed5709e512f608}{m\_szToDate}};}
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_aa957b943d87085b673b1d1674781044a}{m\_szClerkKey}};}
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a0c9c24f06d23f09e676c12a20ee76f9a}{m\_szObjectKey}};}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ae6edb619957105c3c5ab3bf5f936a2bb}{m\_szGroupByKey}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_af71bb690d76a81bf94b207eef8af9f37}{m\_szStatusKey}};}
+\DoxyCodeLine{00077\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_af811f0e584fcb73953bd0187f0d2306c}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00078\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a3b8f994588adfcc66137c7f96a39eee7}{m\_bServicePackage}};}
+\DoxyCodeLine{00079\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a2168f75258815b5e02dc681b494c0ca4}{m\_bOtherFee}};}
+\DoxyCodeLine{00080\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ace8821377152011d41e7bb6711e2867d}{m\_bChichinhsach}};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ade489dbc67960ab1747b416c81ba361b}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a3df8b245af4f71249c581f4cdb19b10d}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a45bad6a9bf045ad5fd00d57dcfe1bac3}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a6c4e481c9b408b575eb04b0f19ae34d0}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_aea6d77a5fde9da61e204979a2da0431d}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_af3c412ffdf5c8be8eb16404267735e30}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a769dac291f309530cbdd8c86ab6bb312}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a9232310ff23bdcf6ae11c7965e9649e4}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ab392374ba8ab7804ce50706645190a0c}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a1627a9ee72f3e71fba4dab2fb7a92bc5}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a89fc12465f07a453a855240d5b7e5a05}{OnObjectSelendok}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectSetfocus();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectKillfocus();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a2f91567afa5f8be9a51180fbd10472ac}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectAddNew();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a1bb83aa538353b2495ce8176d45c49eb}{OnGroupBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a5c6ace6e7ec4721f66c0e4aa2ae896d6}{OnGroupBySelendok}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupBySetfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupByKillfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a16992af997e31aecf24b06378bd43d83}{OnGroupByLoadData}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnGroupByAddNew();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a3c38457db395fba465c6787935af19fb}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a03d9dacd03d4174817179ddd232fc076}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a135ff4bfc9d8980a3e18f1f14d896fa2}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a7ac17cfd5a6b942412a6d966604ed485}{OnListLoadData}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a4d3d4d536d6daacbd590be9cc86633dc}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a30fbd0c168c92fe7163c8d0bd3cef4ae}{OnListDblClick}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a9a131c681f1a3cae604b5993b26c267f}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a9cf02ed4200cd228e82a1bcf385116bc}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a1df290debc330d5b69a1a0d9d94782fc}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a316b2edb9a124ccc25d04cbb85eb1784}{OnExportSelect}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a9ec474e611e322d704926801cf18a5cf}{OnMarkAllSelect}}();}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a4bb93669558aa8978056f5b2d8904ab1}{OnUnMarkSelect}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_aa91e6a8ccd1cc392869eee339aebf046}{OnServicePackageSelect}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ac904f93f8d082aa1f3084e2ce370ded8}{OnOtherFeeSelect}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a04c9d6c2120f29471d3c30e04c70eb3b}{OnChichinhsachSelect}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a934b52106709bfc4c50bf51f2b63902c}{OnPrint1stver}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a4dec10254dd50d508e38429bb51819bf}{OnPrint2ndver}}();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a74c872061042902e216e9c2f87af0ab7}{GetQueryString}}();}
+\DoxyCodeLine{00140\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_aa676ec1f29dc85b6ea40f6afbcb96883}{GetQueryString2}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a1ed173dec3ca498bf114eaef5d0b6dcd}{OnPrintSummaryReceipt}}(\textcolor{keywordtype}{double}\ nTotalAmount);}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a6dc91e7f47531af260e68ca18b01ebd2}{OnPrintFooterUser}}(CReportSection\ *rptFooter);}
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_adba188f394a4b77a497691b7a480264c}{CFMPolicyPostedPaymentList}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a2814162e1d4465e60e531c5b11e2deba}{\string~CFMPolicyPostedPaymentList}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a0d781d06f2ea8720a284643e53ba82a0}{OnCreateComponents}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a43117176a0ee7def1684c585932f9694}{OnInitializeComponents}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a60d1e86e26a0fa360d40cf1fb7d0070b}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a1af30613817b4ab1a5f8e74359605cba}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a5812b836a460beed0532ae0326a66add}{GetDataToScreen}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a02482fc70efe5057dfde4d33de1a0355}{GetScreenToData}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a430369a59266594ce8108aa7f533c5bd}{SetDefaultValues}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a28f4263371bfa1573bad58584901341a}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_addd577fb8a9b3ad22712764b10183eae}{OnAddFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a5f8846ee8b0a0df97279d93901ca0caa}{OnEditFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a4593290d23ca831d9f2e7f3487be5210}{OnDeleteFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_a514dbb292a785e7ff611525c48024099}{OnSaveFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_ad320ab07405e42867e29b23de9038a35}{OnCancelFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_list_acbfab58a761f35f67243f4dc7241ebf7}{OnFMInsurancePostedPaymentVoucherListListLoadData}}();\ }
+\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

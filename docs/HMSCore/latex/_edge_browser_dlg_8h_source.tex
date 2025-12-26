@@ -1,0 +1,114 @@
+\doxysection{Edge\+Browser\+Dlg.\+h}
+\hypertarget{_edge_browser_dlg_8h_source}{}\label{_edge_browser_dlg_8h_source}\index{Include/HMSCore/EdgeBrowserDlg.h@{Include/HMSCore/EdgeBrowserDlg.h}}
+\mbox{\hyperlink{_edge_browser_dlg_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ EdgeBrowserAppDlg.h\ :\ header\ file}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_edge_component_base_8h}{EdgeComponentBase.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\#include\ "{}EdgeBrowserApp.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <dcomp.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <ole2.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <winnt.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifdef\ \_\_windows\_\_}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#undef\ \_\_windows\_\_}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ USE\_WEBVIEW2\_WIN10\ 1}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifdef\ USE\_WEBVIEW2\_WIN10}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <winrt/Windows.UI.Composition.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <winrt/Windows.UI.ViewManagement.h>}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{namespace\ }winrtComp\ =\ winrt::Windows::UI::Composition;}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ CEdgeBrowserDlg\ dialog}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_edge_browser_dlg_af2d2e1cbe2a16032456c454b8d335a3c}{CEdgeBrowserDlg}}\ :\ \textcolor{keyword}{public}\ CDialog}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Construction}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_c_edge_browser_dlg_af2d2e1cbe2a16032456c454b8d335a3c}{CEdgeBrowserDlg}}(CWnd*\ pParent\ =\ \textcolor{keyword}{nullptr});\ \ \ \textcolor{comment}{//\ standard\ constructor}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ Dialog\ Data}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#ifdef\ AFX\_DESIGN\_TIME}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_EDGEBROWSERAPP\_DIALOG\ \};}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_a4aa9eb1ef0b733b05c5ecffa24d586c9}{InitializeWebView}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_af3a8cec3120a8fea76084fee693e6d5a}{CloseWebView}}(\textcolor{keywordtype}{bool}\ cleanupUserDataFolder\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00042\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_edge_browser_dlg_a152bc8591e150bd112f877b23ee35623}{OnCreateEnvironmentCompleted}}(HRESULT\ result,\ ICoreWebView2Environment*\ environment);}
+\DoxyCodeLine{00043\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_edge_browser_dlg_a66874ba1a1ebff88b4bdcce43ad2deaa}{OnCreateCoreWebView2ControllerCompleted}}(HRESULT\ result,\ ICoreWebView2Controller*\ controller);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_aebfa07970f8c8719dd2a139ad2422990}{RunAsync}}(std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{void})>\ callback);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_a0edd6b75a5d2a8dc394fcd06d26cfe18}{ResizeEverything}}();}
+\DoxyCodeLine{00046\ \ \ \ \ HRESULT\ \mbox{\hyperlink{class_c_edge_browser_dlg_a02a1d173934571fb83f0149ee78fea1f}{DCompositionCreateDevice2}}(IUnknown*\ renderingDevice,\ REFIID\ riid,\ \textcolor{keywordtype}{void}**\ ppv);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_a6b2c576458ffa4bf60ee6f1381e578e3}{OnSize}}(UINT\ a,\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ ICoreWebView2Controller*\ \mbox{\hyperlink{class_c_edge_browser_dlg_a660c7cf5c7d5b028d75bdb0a1ff8deb2}{GetWebViewController}}()}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_edge_browser_dlg_aaf4c360fb334190c94b849a2b0feed94}{m\_controller}}.Get();}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ ICoreWebView2*\ \mbox{\hyperlink{class_c_edge_browser_dlg_a3abb2c99c3af6eaa37626fd206a3f321}{GetWebView}}()}
+\DoxyCodeLine{00055\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_edge_browser_dlg_af53c3f102a5f6a08e9d7c281d3db6058}{m\_webView}}.Get();}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ ICoreWebView2Environment*\ \mbox{\hyperlink{class_c_edge_browser_dlg_a414b5a6c40ea164ebccf9bd4104ed9e3}{GetWebViewEnvironment}}()}
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_c_edge_browser_dlg_a6f07e876e6ab9e05dc22317d863d1ae5}{m\_webViewEnvironment}}.Get();}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ HWND\ \mbox{\hyperlink{class_c_edge_browser_dlg_a199050d5c067ef24295568e814d8095b}{GetMainWindow}}()}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>GetSafeHwnd();}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00068\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00069\ \ \ \ \ HICON\ \mbox{\hyperlink{class_c_edge_browser_dlg_a0ab968e15958de617355e3f076cf9fcf}{m\_hIcon}};}
+\DoxyCodeLine{00070\ \ \ \ \ DWORD\ \mbox{\hyperlink{class_c_edge_browser_dlg_ac15d979ed9f75586689ef14abf0cf45c}{m\_creationModeId}}\ =\ 0;}
+\DoxyCodeLine{00071\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2Environment>\ \mbox{\hyperlink{class_c_edge_browser_dlg_a6f07e876e6ab9e05dc22317d863d1ae5}{m\_webViewEnvironment}};}
+\DoxyCodeLine{00072\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2Controller>\ \mbox{\hyperlink{class_c_edge_browser_dlg_aaf4c360fb334190c94b849a2b0feed94}{m\_controller}};}
+\DoxyCodeLine{00073\ \ \ \ \ Microsoft::WRL::ComPtr<ICoreWebView2>\ \mbox{\hyperlink{class_c_edge_browser_dlg_af53c3f102a5f6a08e9d7c281d3db6058}{m\_webView}};}
+\DoxyCodeLine{00074\ \ \ \ \ Microsoft::WRL::ComPtr<IDCompositionDevice>\ \mbox{\hyperlink{class_c_edge_browser_dlg_adc4b0008484629c85626dabf7d0e8d94}{m\_dcompDevice}};}
+\DoxyCodeLine{00075\ \ \ \ \ std::vector<std::unique\_ptr<ComponentBase>>\ \mbox{\hyperlink{class_c_edge_browser_dlg_a7d0cf5b7580d45363d1bc0e5cbd85abc}{m\_components}};}
+\DoxyCodeLine{00076\ \ \ \ \ HWND\ \mbox{\hyperlink{class_c_edge_browser_dlg_a771d1ed9e477e0cdef441f94c5efa916}{m\_mainWindow}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00077\ \ \ \ \ HINSTANCE\ \mbox{\hyperlink{class_c_edge_browser_dlg_a5985941ba86aec3d490869b60de10673}{g\_hInstance}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_c_edge_browser_dlg_a58cb6ee3d38df8a04e3583d270101c12}{s\_maxLoadString}}\ =\ 100;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class\ }ComponentType,\ \textcolor{keyword}{class}...\ Args>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_af810f628296beb2dfb76a3e6c2a3bb98}{NewComponent}}(Args\&\&...\ args);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ ComponentType>\ ComponentType*\ \mbox{\hyperlink{class_c_edge_browser_dlg_a72ab9d7249c3c8af3c2e508e47646909}{GetComponent}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ Generated\ message\ map\ functions}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_edge_browser_dlg_a31bba01f7b9ccf12a4fd7fc7a88583e6}{OnInitDialog}}();}
+\DoxyCodeLine{00085\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_af0575de1fb7a0838292b4f6c0adad57f}{OnSysCommand}}(UINT\ nID,\ LPARAM\ lParam);}
+\DoxyCodeLine{00086\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_acd450a19a14172f962ca15aaf12e48aa}{OnPaint}}();}
+\DoxyCodeLine{00087\ \ \ \ \ afx\_msg\ HCURSOR\ \mbox{\hyperlink{class_c_edge_browser_dlg_a9fa9aabcbeed37fe627740f55349f6a3}{OnQueryDragIcon}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_a7174215183b1d9122373393e404e83a6}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00089\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class\ }ComponentType,\ \textcolor{keyword}{class}...\ Args>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_edge_browser_dlg_af810f628296beb2dfb76a3e6c2a3bb98}{CEdgeBrowserDlg::NewComponent}}(Args\&\&...\ args)}
+\DoxyCodeLine{00093\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_c_edge_browser_dlg_a7d0cf5b7580d45363d1bc0e5cbd85abc}{m\_components}}.emplace\_back(\textcolor{keyword}{new}\ ComponentType(std::forward<Args>(args)...));}
+\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ ComponentType>\ ComponentType*\ \mbox{\hyperlink{class_c_edge_browser_dlg_a72ab9d7249c3c8af3c2e508e47646909}{CEdgeBrowserDlg::GetComponent}}()}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ component\ :\ \mbox{\hyperlink{class_c_edge_browser_dlg_a7d0cf5b7580d45363d1bc0e5cbd85abc}{m\_components}})}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ wanted\ =\ \textcolor{keyword}{dynamic\_cast<}ComponentType*\textcolor{keyword}{>}(component.get()))}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ wanted;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+
+\end{DoxyCode}

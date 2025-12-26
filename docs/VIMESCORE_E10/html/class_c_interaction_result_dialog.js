@@ -1,0 +1,27 @@
+var class_c_interaction_result_dialog =
+[
+    [ "CInteractionResultDialog", "class_c_interaction_result_dialog.html#a8b182463947201d7638641dd8c26f5fc", null ],
+    [ "~CInteractionResultDialog", "class_c_interaction_result_dialog.html#a7c62d658ea23de5274cea4a13de04380", null ],
+    [ "GetDataToScreen", "class_c_interaction_result_dialog.html#a1e5bb2f7d12a7526f891ac3cfbe8d46a", null ],
+    [ "GetScreenToData", "class_c_interaction_result_dialog.html#a1c9e9f55310f9e94cf21b6a07e78b89f", null ],
+    [ "OnAddInteractionResultDialog", "class_c_interaction_result_dialog.html#a9da073ea54b1b3a59d3579327cab5f6d", null ],
+    [ "OnCancelInteractionResultDialog", "class_c_interaction_result_dialog.html#ab1948a110ab9ffa984dc6034a97ae866", null ],
+    [ "OnCreateComponents", "class_c_interaction_result_dialog.html#a74e7dca8e56ad3cf1d724b8fa4e63bc0", null ],
+    [ "OnDeleteInteractionResultDialog", "class_c_interaction_result_dialog.html#ad96220ca5e4f8c7e3f1f52aca61284ac", null ],
+    [ "OnDoDataExchange", "class_c_interaction_result_dialog.html#a84fc968e183f8993bc39a4c4f0e4ce08", null ],
+    [ "OnEditInteractionResultDialog", "class_c_interaction_result_dialog.html#abf3e7bc8b64678963df9fea0e3286c95", null ],
+    [ "OnInitializeComponents", "class_c_interaction_result_dialog.html#a002ea0b355979a1efe646f50b336216d", null ],
+    [ "OnInteractionResultDialogListLoadData", "class_c_interaction_result_dialog.html#a486503aff307b0a1371e9d752e4cb604", null ],
+    [ "OnListDblClick", "class_c_interaction_result_dialog.html#a628045fad2e625629c310fd5b8f670d4", null ],
+    [ "OnListDeleteItem", "class_c_interaction_result_dialog.html#a95ffc5643a3af87a13ff3fb498368f68", null ],
+    [ "OnListLoadData", "class_c_interaction_result_dialog.html#aeef0ca898745454c8b89ccb823f14ebb", null ],
+    [ "OnListSelectChange", "class_c_interaction_result_dialog.html#a3c687e7c1676c875668b38f909c8db26", null ],
+    [ "OnSaveInteractionResultDialog", "class_c_interaction_result_dialog.html#a9b68eca4aec39d6d9eecf23b9fe47260", null ],
+    [ "OnSetWindowEvents", "class_c_interaction_result_dialog.html#ad83297c06794b1606e2ccf49e9a318c5", null ],
+    [ "SetDefaultValues", "class_c_interaction_result_dialog.html#a132e8fa45a381bac15867e4172620d0b", null ],
+    [ "SetMode", "class_c_interaction_result_dialog.html#a3659fcb206d9e871323b6b4033eb1d49", null ],
+    [ "m_nOrderID", "class_c_interaction_result_dialog.html#a23d8770291d6182d1d56066973d7824f", null ],
+    [ "m_szCaseID", "class_c_interaction_result_dialog.html#a3e6fd955c6d4b7ca18720cc409ee9f33", null ],
+    [ "m_wndInteractionResult", "class_c_interaction_result_dialog.html#aa09e057517dfc9b4002179410fca7866", null ],
+    [ "m_wndList", "class_c_interaction_result_dialog.html#a51a74eba2a3b1962c0a8211788776851", null ]
+];

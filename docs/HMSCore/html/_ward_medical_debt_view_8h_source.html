@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/WardMedicalDebtView.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_ward_medical_debt_view_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">WardMedicalDebtView.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_ward_medical_debt_view_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef WARDMEDICALDEBTVIEW_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define WARDMEDICALDEBTVIEW_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright � Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiView.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html">   42</a></span><span class="keyword">class </span><a class="code hl_function" href="class_c_ward_medical_debt_view.html#a20b1b1fc2475277e488c458341cacacb">CWardMedicalDebtView</a> : <span class="keyword">public</span> CGuiView{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a869eb136247c35379dd0d1a5fcb9a315">   45</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a869eb136247c35379dd0d1a5fcb9a315">m_wndFromStorageLabel</a>; </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#aad40349c951ae1b08d0faba59e2ee304">   46</a></span>    CGuiComboBox    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#aad40349c951ae1b08d0faba59e2ee304">m_wndFromStorage</a>; </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#aab94d43b6fa9203d89141a960e4d8549">   47</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#aab94d43b6fa9203d89141a960e4d8549">m_wndToStorageLabel</a>; </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a2dab7517501e04e24fa56a44a8c8c521">   48</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a2dab7517501e04e24fa56a44a8c8c521">m_wndGroupDebtList</a>; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a67f6bc13ea483f6af99e95536046cec5">   49</a></span>    CGuiGroupBox    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a67f6bc13ea483f6af99e95536046cec5">m_wndSearchInformation</a>; </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a9cda1c7e0fdab0eb1b558a36ede4d9dd">   50</a></span>    CGuiComboBox    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a9cda1c7e0fdab0eb1b558a36ede4d9dd">m_wndToStorage</a>; </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a9beddf1e0024340f758d149825463234">   51</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a9beddf1e0024340f758d149825463234">m_wndSurgeryTableLabel</a>; </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a912302280c739a09a6b553919936a4dd">   52</a></span>    CGuiComboBox    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a912302280c739a09a6b553919936a4dd">m_wndSurgeryTable</a>; </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#adf4d86f6f6f70b91ea9c8e4ebdf4d4db">   53</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#adf4d86f6f6f70b91ea9c8e4ebdf4d4db">m_wndSearchLabel</a>; </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ab8f329d6f7bc3a39eb3a112f93de13aa">   54</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#ab8f329d6f7bc3a39eb3a112f93de13aa">m_wndSearch</a>; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ae341caacebd0fe2cfc2b03b0dfeb9993">   55</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#ae341caacebd0fe2cfc2b03b0dfeb9993">m_wndRefresh</a>; </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a279b5d185d1512b70d94c30e7d86cd9b">   56</a></span>    CGuiCheckBox    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a279b5d185d1512b70d94c30e7d86cd9b">m_wndReusableMaterial</a>; </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a19e2abddc506436e84277b2a0c8a96f1">   57</a></span>    CGuiListCtrl    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a19e2abddc506436e84277b2a0c8a96f1">m_wndDebtList</a>; </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a1f7d2d7e7befa2fa4d8a0c8b0d52d61c">   58</a></span>    CString <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a1f7d2d7e7befa2fa4d8a0c8b0d52d61c">m_szFromStorageKey</a>; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a117bded6cb1cadfb81647f2e551cc2c2">   59</a></span>    CString <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a117bded6cb1cadfb81647f2e551cc2c2">m_szToStorageKey</a>; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a880ae6cb6beab6acb8e5ce8ec8b0d8d3">   60</a></span>    CString <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a880ae6cb6beab6acb8e5ce8ec8b0d8d3">m_szSurgeryTableKey</a>; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a187f566d83ef44a35f0edca12d847b97">   61</a></span>    CString <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a187f566d83ef44a35f0edca12d847b97">m_szSearch</a>; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a7d7c3efb7dc2ca07d0be65fec973134e">   62</a></span>    BOOL    <a class="code hl_variable" href="class_c_ward_medical_debt_view.html#a7d7c3efb7dc2ca07d0be65fec973134e">m_bReusableMaterial</a>; </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ad61861aa5950bec0d28582920278e9ec">   63</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ad61861aa5950bec0d28582920278e9ec">OnFromStorageSelectChange</a>(<span class="keywordtype">int</span> nOldItemSel, <span class="keywordtype">int</span> nNewItemSel); </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a1fbdcab77fdb00492cd099f0a7c3013f">   64</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a1fbdcab77fdb00492cd099f0a7c3013f">OnFromStorageSelendok</a>(); </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//void          OnFromStorageSetfocus(); </span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">//void          OnFromStorageKillfocus(); </span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ad1d8e8c33cb8278ebc6a18c7e7a22a6f">   67</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ad1d8e8c33cb8278ebc6a18c7e7a22a6f">OnFromStorageLoadData</a>(); </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">//void          OnFromStorageAddNew(); </span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ad90017a96f92894a36c219c431f09842">   69</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ad90017a96f92894a36c219c431f09842">OnToStorageSelectChange</a>(<span class="keywordtype">int</span> nOldItemSel, <span class="keywordtype">int</span> nNewItemSel); </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a390ce28fca69583b5840388bf3f2968c">   70</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a390ce28fca69583b5840388bf3f2968c">OnToStorageSelendok</a>(); </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">//void          OnToStorageSetfocus(); </span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//void          OnToStorageKillfocus(); </span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a06df9a00e14426dd5a8fbe5da9efe8c4">   73</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a06df9a00e14426dd5a8fbe5da9efe8c4">OnToStorageLoadData</a>(); </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//void          OnToStorageAddNew(); </span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a6ac7abb0135e46a52e85eb9293b69de0">   75</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a6ac7abb0135e46a52e85eb9293b69de0">OnSurgeryTableSelectChange</a>(<span class="keywordtype">int</span> nOldItemSel, <span class="keywordtype">int</span> nNewItemSel); </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#aee6f922a4b1b32300b4339ce4eb2e982">   76</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#aee6f922a4b1b32300b4339ce4eb2e982">OnSurgeryTableSelendok</a>(); </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">//void          OnSurgeryTableSetfocus(); </span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">//void          OnSurgeryTableKillfocus(); </span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#aa880440a5102bb08bc52daa9910ec877">   79</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#aa880440a5102bb08bc52daa9910ec877">OnSurgeryTableLoadData</a>(); </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">//void          OnSurgeryTableAddNew(); </span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">//void          OnSearchChange(); </span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">//void          OnSearchSetfocus(); </span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">//void          OnSearchKillfocus(); </span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a6b13e591536ac4d80ed607309857cbf1">   84</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a6b13e591536ac4d80ed607309857cbf1">OnSearchCheckValue</a>(); </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ab55c894712d11b45db588b190ea1ea47">   85</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ab55c894712d11b45db588b190ea1ea47">OnRefreshSelect</a>(); </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ae008c0a9835b5ce890ff9d3da8a1e3db">   86</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ae008c0a9835b5ce890ff9d3da8a1e3db">OnReusableMaterialSelect</a>(); </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ada00da62037b451b44078303b06e9f4a">   87</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ada00da62037b451b44078303b06e9f4a">OnDebtListLoadData</a>(); </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ac3dd57c5f6fd55fab075bf5e0d018a3a">   88</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ac3dd57c5f6fd55fab075bf5e0d018a3a">OnDebtListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a9254ee024133a772e2c63a416b7299c6">   89</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a9254ee024133a772e2c63a416b7299c6">OnDebtListDblClick</a>(); </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a86b354341bc1659612aabc8e8bc170e3">   90</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a86b354341bc1659612aabc8e8bc170e3">OnDebtListDeleteItem</a>(); </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a20b1b1fc2475277e488c458341cacacb">   91</a></span>    <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a20b1b1fc2475277e488c458341cacacb">CWardMedicalDebtView</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a3192221fab7f42f30985b7adf25b7c61">   92</a></span>    <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a3192221fab7f42f30985b7adf25b7c61">~CWardMedicalDebtView</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a7c3005893243a985a5573f91ff3c54e9">   93</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a7c3005893243a985a5573f91ff3c54e9">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a46790d647cda4920010c8e2c2b9e8da9">   94</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a46790d647cda4920010c8e2c2b9e8da9">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#aa9e214f798bf0f7c058b3cbc07d5f6e7">   95</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#aa9e214f798bf0f7c058b3cbc07d5f6e7">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a8d75fb53cb56a3ce853f956ff392424f">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a8d75fb53cb56a3ce853f956ff392424f">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a4957af28fa1f4643c74e073bb7501a9b">   97</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a4957af28fa1f4643c74e073bb7501a9b">UpdateJson</a>(BOOL bSaveAndValidate);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#abda71ea122b1b4231d503952b785c250">   98</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#abda71ea122b1b4231d503952b785c250">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a598e301cf0bd2b0e65ba90df75cb497d">   99</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a598e301cf0bd2b0e65ba90df75cb497d">GetScreenToData</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ac04587ca588b0b9d489302e0cb355b43">  100</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ac04587ca588b0b9d489302e0cb355b43">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a5c240a8bcda9f187c722f7fd5b9f96fe">  101</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a5c240a8bcda9f187c722f7fd5b9f96fe">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a27cc8613de01ab8d95720a1f5c9da14d">  102</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a27cc8613de01ab8d95720a1f5c9da14d">OnAddWardMedicalDebtView</a>(); </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a144ed648dfa9806743bf7bc69026d202">  103</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a144ed648dfa9806743bf7bc69026d202">OnEditWardMedicalDebtView</a>(); </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a173f7c4f199f5d730fefe47a8d269f0b">  104</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a173f7c4f199f5d730fefe47a8d269f0b">OnDeleteWardMedicalDebtView</a>(); </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a364694ae3ce457a575217d700317a56f">  105</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a364694ae3ce457a575217d700317a56f">OnSaveWardMedicalDebtView</a>(); </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#ac5bbb8ad53041188b4850a0bac1b7151">  106</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#ac5bbb8ad53041188b4850a0bac1b7151">OnCancelWardMedicalDebtView</a>(); </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_c_ward_medical_debt_view.html#a9b102cf09da2f52514b4f41a49b2c585">  107</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_ward_medical_debt_view.html#a9b102cf09da2f52514b4f41a49b2c585">OnWardMedicalDebtViewListLoadData</a>(); </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a06df9a00e14426dd5a8fbe5da9efe8c4"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a06df9a00e14426dd5a8fbe5da9efe8c4">CWardMedicalDebtView::OnToStorageLoadData</a></div><div class="ttdeci">long OnToStorageLoadData()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a117bded6cb1cadfb81647f2e551cc2c2"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a117bded6cb1cadfb81647f2e551cc2c2">CWardMedicalDebtView::m_szToStorageKey</a></div><div class="ttdeci">CString m_szToStorageKey</div><div class="ttdoc">Key kho đích được chọn.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:59</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a144ed648dfa9806743bf7bc69026d202"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a144ed648dfa9806743bf7bc69026d202">CWardMedicalDebtView::OnEditWardMedicalDebtView</a></div><div class="ttdeci">int OnEditWardMedicalDebtView()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a173f7c4f199f5d730fefe47a8d269f0b"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a173f7c4f199f5d730fefe47a8d269f0b">CWardMedicalDebtView::OnDeleteWardMedicalDebtView</a></div><div class="ttdeci">int OnDeleteWardMedicalDebtView()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a187f566d83ef44a35f0edca12d847b97"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a187f566d83ef44a35f0edca12d847b97">CWardMedicalDebtView::m_szSearch</a></div><div class="ttdeci">CString m_szSearch</div><div class="ttdoc">Chuỗi tìm kiếm.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:61</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a19e2abddc506436e84277b2a0c8a96f1"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a19e2abddc506436e84277b2a0c8a96f1">CWardMedicalDebtView::m_wndDebtList</a></div><div class="ttdeci">CGuiListCtrl m_wndDebtList</div><div class="ttdoc">Danh sách công nợ</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:57</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a1f7d2d7e7befa2fa4d8a0c8b0d52d61c"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a1f7d2d7e7befa2fa4d8a0c8b0d52d61c">CWardMedicalDebtView::m_szFromStorageKey</a></div><div class="ttdeci">CString m_szFromStorageKey</div><div class="ttdoc">Key kho nguồn được chọn.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:58</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a1fbdcab77fdb00492cd099f0a7c3013f"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a1fbdcab77fdb00492cd099f0a7c3013f">CWardMedicalDebtView::OnFromStorageSelendok</a></div><div class="ttdeci">void OnFromStorageSelendok()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a20b1b1fc2475277e488c458341cacacb"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a20b1b1fc2475277e488c458341cacacb">CWardMedicalDebtView::CWardMedicalDebtView</a></div><div class="ttdeci">CWardMedicalDebtView()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a279b5d185d1512b70d94c30e7d86cd9b"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a279b5d185d1512b70d94c30e7d86cd9b">CWardMedicalDebtView::m_wndReusableMaterial</a></div><div class="ttdeci">CGuiCheckBox m_wndReusableMaterial</div><div class="ttdoc">Checkbox &quot;Vật tư tái sử dụng&quot;.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:56</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a27cc8613de01ab8d95720a1f5c9da14d"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a27cc8613de01ab8d95720a1f5c9da14d">CWardMedicalDebtView::OnAddWardMedicalDebtView</a></div><div class="ttdeci">int OnAddWardMedicalDebtView()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a2dab7517501e04e24fa56a44a8c8c521"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a2dab7517501e04e24fa56a44a8c8c521">CWardMedicalDebtView::m_wndGroupDebtList</a></div><div class="ttdeci">CGuiGroupBox m_wndGroupDebtList</div><div class="ttdoc">Group box danh sách công nợ</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:48</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a3192221fab7f42f30985b7adf25b7c61"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a3192221fab7f42f30985b7adf25b7c61">CWardMedicalDebtView::~CWardMedicalDebtView</a></div><div class="ttdeci">~CWardMedicalDebtView()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a364694ae3ce457a575217d700317a56f"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a364694ae3ce457a575217d700317a56f">CWardMedicalDebtView::OnSaveWardMedicalDebtView</a></div><div class="ttdeci">int OnSaveWardMedicalDebtView()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a390ce28fca69583b5840388bf3f2968c"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a390ce28fca69583b5840388bf3f2968c">CWardMedicalDebtView::OnToStorageSelendok</a></div><div class="ttdeci">void OnToStorageSelendok()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a46790d647cda4920010c8e2c2b9e8da9"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a46790d647cda4920010c8e2c2b9e8da9">CWardMedicalDebtView::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a4957af28fa1f4643c74e073bb7501a9b"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a4957af28fa1f4643c74e073bb7501a9b">CWardMedicalDebtView::UpdateJson</a></div><div class="ttdeci">void UpdateJson(BOOL bSaveAndValidate)</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a598e301cf0bd2b0e65ba90df75cb497d"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a598e301cf0bd2b0e65ba90df75cb497d">CWardMedicalDebtView::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a5c240a8bcda9f187c722f7fd5b9f96fe"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a5c240a8bcda9f187c722f7fd5b9f96fe">CWardMedicalDebtView::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a67f6bc13ea483f6af99e95536046cec5"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a67f6bc13ea483f6af99e95536046cec5">CWardMedicalDebtView::m_wndSearchInformation</a></div><div class="ttdeci">CGuiGroupBox m_wndSearchInformation</div><div class="ttdoc">Group box thông tin tìm kiếm.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:49</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a6ac7abb0135e46a52e85eb9293b69de0"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a6ac7abb0135e46a52e85eb9293b69de0">CWardMedicalDebtView::OnSurgeryTableSelectChange</a></div><div class="ttdeci">void OnSurgeryTableSelectChange(int nOldItemSel, int nNewItemSel)</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a6b13e591536ac4d80ed607309857cbf1"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a6b13e591536ac4d80ed607309857cbf1">CWardMedicalDebtView::OnSearchCheckValue</a></div><div class="ttdeci">int OnSearchCheckValue()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a7c3005893243a985a5573f91ff3c54e9"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a7c3005893243a985a5573f91ff3c54e9">CWardMedicalDebtView::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a7d7c3efb7dc2ca07d0be65fec973134e"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a7d7c3efb7dc2ca07d0be65fec973134e">CWardMedicalDebtView::m_bReusableMaterial</a></div><div class="ttdeci">BOOL m_bReusableMaterial</div><div class="ttdoc">Cờ vật tư tái sử dụng.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:62</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a869eb136247c35379dd0d1a5fcb9a315"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a869eb136247c35379dd0d1a5fcb9a315">CWardMedicalDebtView::m_wndFromStorageLabel</a></div><div class="ttdeci">CGuiLabel m_wndFromStorageLabel</div><div class="ttdoc">Nhãn &quot;Kho nguồn&quot;.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:45</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a86b354341bc1659612aabc8e8bc170e3"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a86b354341bc1659612aabc8e8bc170e3">CWardMedicalDebtView::OnDebtListDeleteItem</a></div><div class="ttdeci">int OnDebtListDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a880ae6cb6beab6acb8e5ce8ec8b0d8d3"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a880ae6cb6beab6acb8e5ce8ec8b0d8d3">CWardMedicalDebtView::m_szSurgeryTableKey</a></div><div class="ttdeci">CString m_szSurgeryTableKey</div><div class="ttdoc">Key bàn mổ được chọn.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:60</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a8d75fb53cb56a3ce853f956ff392424f"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a8d75fb53cb56a3ce853f956ff392424f">CWardMedicalDebtView::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a912302280c739a09a6b553919936a4dd"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a912302280c739a09a6b553919936a4dd">CWardMedicalDebtView::m_wndSurgeryTable</a></div><div class="ttdeci">CGuiComboBox m_wndSurgeryTable</div><div class="ttdoc">Combo box chọn bàn mổ</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:52</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a9254ee024133a772e2c63a416b7299c6"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a9254ee024133a772e2c63a416b7299c6">CWardMedicalDebtView::OnDebtListDblClick</a></div><div class="ttdeci">void OnDebtListDblClick()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a9b102cf09da2f52514b4f41a49b2c585"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a9b102cf09da2f52514b4f41a49b2c585">CWardMedicalDebtView::OnWardMedicalDebtViewListLoadData</a></div><div class="ttdeci">int OnWardMedicalDebtViewListLoadData()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a9beddf1e0024340f758d149825463234"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a9beddf1e0024340f758d149825463234">CWardMedicalDebtView::m_wndSurgeryTableLabel</a></div><div class="ttdeci">CGuiLabel m_wndSurgeryTableLabel</div><div class="ttdoc">Nhãn &quot;Bàn mổ&quot;.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:51</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_a9cda1c7e0fdab0eb1b558a36ede4d9dd"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#a9cda1c7e0fdab0eb1b558a36ede4d9dd">CWardMedicalDebtView::m_wndToStorage</a></div><div class="ttdeci">CGuiComboBox m_wndToStorage</div><div class="ttdoc">Combo box chọn kho đích.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:50</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_aa880440a5102bb08bc52daa9910ec877"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#aa880440a5102bb08bc52daa9910ec877">CWardMedicalDebtView::OnSurgeryTableLoadData</a></div><div class="ttdeci">long OnSurgeryTableLoadData()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_aa9e214f798bf0f7c058b3cbc07d5f6e7"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#aa9e214f798bf0f7c058b3cbc07d5f6e7">CWardMedicalDebtView::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_aab94d43b6fa9203d89141a960e4d8549"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#aab94d43b6fa9203d89141a960e4d8549">CWardMedicalDebtView::m_wndToStorageLabel</a></div><div class="ttdeci">CGuiLabel m_wndToStorageLabel</div><div class="ttdoc">Nhãn &quot;Kho đích&quot;.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:47</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_aad40349c951ae1b08d0faba59e2ee304"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#aad40349c951ae1b08d0faba59e2ee304">CWardMedicalDebtView::m_wndFromStorage</a></div><div class="ttdeci">CGuiComboBox m_wndFromStorage</div><div class="ttdoc">Combo box chọn kho nguồn.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:46</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ab55c894712d11b45db588b190ea1ea47"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ab55c894712d11b45db588b190ea1ea47">CWardMedicalDebtView::OnRefreshSelect</a></div><div class="ttdeci">void OnRefreshSelect()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ab8f329d6f7bc3a39eb3a112f93de13aa"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ab8f329d6f7bc3a39eb3a112f93de13aa">CWardMedicalDebtView::m_wndSearch</a></div><div class="ttdeci">CGuiTextCtrl m_wndSearch</div><div class="ttdoc">Control nhập từ khóa tìm kiếm.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:54</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_abda71ea122b1b4231d503952b785c250"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#abda71ea122b1b4231d503952b785c250">CWardMedicalDebtView::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ac04587ca588b0b9d489302e0cb355b43"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ac04587ca588b0b9d489302e0cb355b43">CWardMedicalDebtView::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ac3dd57c5f6fd55fab075bf5e0d018a3a"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ac3dd57c5f6fd55fab075bf5e0d018a3a">CWardMedicalDebtView::OnDebtListSelectChange</a></div><div class="ttdeci">void OnDebtListSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ac5bbb8ad53041188b4850a0bac1b7151"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ac5bbb8ad53041188b4850a0bac1b7151">CWardMedicalDebtView::OnCancelWardMedicalDebtView</a></div><div class="ttdeci">int OnCancelWardMedicalDebtView()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ad1d8e8c33cb8278ebc6a18c7e7a22a6f"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ad1d8e8c33cb8278ebc6a18c7e7a22a6f">CWardMedicalDebtView::OnFromStorageLoadData</a></div><div class="ttdeci">long OnFromStorageLoadData()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ad61861aa5950bec0d28582920278e9ec"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ad61861aa5950bec0d28582920278e9ec">CWardMedicalDebtView::OnFromStorageSelectChange</a></div><div class="ttdeci">void OnFromStorageSelectChange(int nOldItemSel, int nNewItemSel)</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ad90017a96f92894a36c219c431f09842"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ad90017a96f92894a36c219c431f09842">CWardMedicalDebtView::OnToStorageSelectChange</a></div><div class="ttdeci">void OnToStorageSelectChange(int nOldItemSel, int nNewItemSel)</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ada00da62037b451b44078303b06e9f4a"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ada00da62037b451b44078303b06e9f4a">CWardMedicalDebtView::OnDebtListLoadData</a></div><div class="ttdeci">long OnDebtListLoadData()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_adf4d86f6f6f70b91ea9c8e4ebdf4d4db"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#adf4d86f6f6f70b91ea9c8e4ebdf4d4db">CWardMedicalDebtView::m_wndSearchLabel</a></div><div class="ttdeci">CGuiLabel m_wndSearchLabel</div><div class="ttdoc">Nhãn &quot;Tìm kiếm&quot;.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:53</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ae008c0a9835b5ce890ff9d3da8a1e3db"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ae008c0a9835b5ce890ff9d3da8a1e3db">CWardMedicalDebtView::OnReusableMaterialSelect</a></div><div class="ttdeci">void OnReusableMaterialSelect()</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_ae341caacebd0fe2cfc2b03b0dfeb9993"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#ae341caacebd0fe2cfc2b03b0dfeb9993">CWardMedicalDebtView::m_wndRefresh</a></div><div class="ttdeci">CGuiButton m_wndRefresh</div><div class="ttdoc">Nút làm mới.</div><div class="ttdef"><b>Definition</b> WardMedicalDebtView.h:55</div></div>
+<div class="ttc" id="aclass_c_ward_medical_debt_view_html_aee6f922a4b1b32300b4339ce4eb2e982"><div class="ttname"><a href="class_c_ward_medical_debt_view.html#aee6f922a4b1b32300b4339ce4eb2e982">CWardMedicalDebtView::OnSurgeryTableSelendok</a></div><div class="ttdeci">void OnSurgeryTableSelendok()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_ward_medical_debt_view_8h.html">WardMedicalDebtView.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

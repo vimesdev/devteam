@@ -1,0 +1,238 @@
+\doxysection{EMRPatient\+Profile.\+h}
+\hypertarget{_e_m_r_patient_profile_8h_source}{}\label{_e_m_r_patient_profile_8h_source}\index{Include/HMSCore/EMRPatientProfile.h@{Include/HMSCore/EMRPatientProfile.h}}
+\mbox{\hyperlink{_e_m_r_patient_profile_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSPatientERM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSPatientERM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ ©\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tree_ctrl_ex_8h}{TreeCtrlEx.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}ReportPrinter.h"{}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a346626653b80e5e60e953a3c2797092f}{CEMRPatientProfile}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00059\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a00cf64bd0addd033ffc1c8f0671a2646}{OnNMCustomdrawGroupTree}}(NMHDR*\ pNMHDR,\ LRESULT*\ pResult);}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a2404d0c2bdbf44c68a4a882e684a417f}{SignatureInfoTree}}\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a8e76926bbe57455414a4a28553b66134}{signature\_id}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_aa954c207d2b7e118bad51b8f33dd8639}{pdfname}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a3b65a61ea3dc83b0947fad560370b970}{type\_id}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a1d75b4f262a16f897bc157e35c78718f}{sign\_date}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_adcc4089014c1d0e011c4ae86a9769c2e}{createdby}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a84d88a7acbc2b55a552b0d86ebc4c558}{description}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a95a9cd943230aee7915528ca84c18c1c}{status}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_aca06925d0f89ffa8514993acfd240e75}{sign\_status}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a64af738ab062182e321ed5d84148b7ae}{nhom\_cls}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_ab4002cf474d452349b08b3a6bf5feeaf}{docno}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a93b8050e834d72742c922dac2dae9d52}{nTotal}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a50d37886ed5f0464434a34702ac67739}{nChuaKy}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a76dc15ea2e526e61e2e395f7d01da74a}{nDaky}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a94fe6f3a10edf97b05dedf495fc0e44b}{nDaHoanThanh}};\ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a2404d0c2bdbf44c68a4a882e684a417f}{SignatureInfoTree}}()}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a76dc15ea2e526e61e2e395f7d01da74a}{nDaky}}\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a50d37886ed5f0464434a34702ac67739}{nChuaKy}}\ =\ 0;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a94fe6f3a10edf97b05dedf495fc0e44b}{nDaHoanThanh}}\ =\ 0;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_info_tree_a93b8050e834d72742c922dac2dae9d52}{nTotal}}\ =\ 0;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_type}{SignatureType}}}
+\DoxyCodeLine{00100\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_type_ad70ca194b60695faf7508e8cf2393496}{type\_id}};\ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ CString\ \mbox{\hyperlink{struct_c_e_m_r_patient_profile_1_1_signature_type_ae95143d98a77feaf8d638183f70ffe79}{description}};\ }
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ CReportPrinter\ *\mbox{\hyperlink{class_c_e_m_r_patient_profile_adfdf24086c259f52b5b8ac77a58092ea}{m\_pPrinter}};\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a1ca13350844b20dfd1f0ad42042f76c1}{m\_wndInformation}};\ }
+\DoxyCodeLine{00108\ \ \ \ \ CGuiTabCtrl\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a4cad15eee538e8ebb5a5f1585aa93627}{m\_wndTreatmentTab}};\ }
+\DoxyCodeLine{00109\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a6f419241c31bc3bccb4dbe375f689c55}{m\_wndTreatmentTracking}};\ }
+\DoxyCodeLine{00110\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a0d9cedf350d028a56319cfb64054a46e}{m\_wndExportEMR}};\ }
+\DoxyCodeLine{00111\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_abd7c376bfd605910540104a0196c0f0f}{m\_wndUpdateEMR}};\ }
+\DoxyCodeLine{00112\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a8b8212590c4e9dc97c1fbb4c56725e6c}{m\_wndElectronicRecord}};\ }
+\DoxyCodeLine{00113\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a6cf1b9d011168918c8050956f6fe269a}{m\_wndDepartmentLabel}};\ }
+\DoxyCodeLine{00114\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a6dade05d29c6234ce32f91c7b1840574}{m\_wndDepartment}};\ }
+\DoxyCodeLine{00115\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a8faf7a2c815f98153fb41e3781879162}{m\_wndList}};\ }
+\DoxyCodeLine{00116\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aaad8da019ab8529758551f3ff574b185}{m\_wndDocumentNoLabel}};\ }
+\DoxyCodeLine{00117\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ac8268a1160e2b0f85a575d1dd66b72ca}{m\_wndDocumentNo}};\ }
+\DoxyCodeLine{00118\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a58333105cc89daaccd79140117dba68b}{m\_wndPatientNameLabel}};\ }
+\DoxyCodeLine{00119\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a262905e5f5d75ddca5987df75ba9d6af}{m\_wndPatientName}};\ }
+\DoxyCodeLine{00120\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ad32e17f8b49f5771b022700fcc48dc16}{m\_wndSexLabel}};\ }
+\DoxyCodeLine{00121\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a62243ae5c1a997c28905efee62da2fab}{m\_wndSex}};\ }
+\DoxyCodeLine{00122\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a0943145a47290b261d67dd40159488ae}{m\_wndAgeLabel}};\ }
+\DoxyCodeLine{00123\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ab6a6feca02912f2e0c2116ea696f76b5}{m\_wndAge}};\ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_c_tree_ctrl_ex}{CTreeCtrlEx}}\ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a2e857a812a5766e5f50e913f421acc31}{m\_wndGroupTree}};\ }
+\DoxyCodeLine{00125\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aeb6e79ff31879fb87de6bb51f03684ba}{m\_wndLoadByStatus}};\ }
+\DoxyCodeLine{00126\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ab4897f15fdfa74fc1e1a030f9674b67b}{m\_wndLoadByPatient}};\ }
+\DoxyCodeLine{00127\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af580520383d8217bf6ae4faff6a290e4}{m\_wndApproval}};\ }
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a26669bc43a2c311adcd77990144afe9d}{m\_wndAdd}};\ }
+\DoxyCodeLine{00130\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a78d461b0949728105357c062b13b7cac}{m\_wndDelete}};\ }
+\DoxyCodeLine{00131\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ac284ff3d035aee42d2622cdec40bae43}{m\_wndSignFile}};\ }
+\DoxyCodeLine{00132\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af182da00b2e357a8c5a3691669d009e5}{m\_wndSetting}};\ }
+\DoxyCodeLine{00133\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a205786548d308b94b431395c16a3ed66}{m\_wndDesc}};\ }
+\DoxyCodeLine{00134\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a0f8b57e6a8b7959dbc8a7679e4565eb2}{m\_szDesc}};\ }
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af35d52e3c80fea4e91bfba5932c85ecb}{m\_szDepartmentKey}};\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aaa547802d6c00e63023c85d91befec80}{m\_nDocumentNo}};\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a79c2db51251d118bf9a48dfc61b2bb6b}{m\_nPatientNo}};\ }
+\DoxyCodeLine{00139\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a3f060c15e9d25fe29ab2d2476e9298d4}{m\_szPatientName}};\ }
+\DoxyCodeLine{00140\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a881635d269937444fc5ededd10648892}{m\_szSex}};\ }
+\DoxyCodeLine{00141\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a79c6826c790b8dceef23afd6c74712c3}{m\_szAge}};\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a25ce62eb89a9499dcc1b97ea047a8c1c}{m\_bIsSave}};\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ae9ee7c6b82d21a149af14ae0cade6996}{m\_nQuanlity}};\ }
+\DoxyCodeLine{00145\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aa0c4bd12294036454b198bf0be4f81b6}{m\_szFromDate}};\ }
+\DoxyCodeLine{00146\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aad97755e7542ff5530e9043a2fcc9898}{m\_szToDate}};\ }
+\DoxyCodeLine{00147\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ae8d8d6e097791fba730206270e7edac2}{m\_bLoadByStatus}};\ }
+\DoxyCodeLine{00148\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a38fc45e0feb375e1d8dc14434020a222}{m\_bLoadByPatient}};\ }
+\DoxyCodeLine{00149\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a951d50f5b3e89477de4fed46650bb28f}{m\_szSignatureID}};\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_abedc1d132045a983eb8fec9e65e07d5b}{m\_bIsOutPatientRecord}};\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ac18fc60795215f1312259a52ba95f3b2}{m\_nOutPatientRecordID}};\ }
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_abe16122dbb37d800f3cac919d5ace69a}{m\_szArrDocno}};\ }
+\DoxyCodeLine{00155\ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af54273c66a73f70832bac5e8d6636cdb}{OnTreatmentTabSelectChange}}(\textcolor{keywordtype}{int}\ nOld,\ \textcolor{keywordtype}{int}\ nNew);\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_abaa91a91c671d32291621a7b56ac5853}{OnTreatmentTrackingSelect}}();\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a64787159758aa2a0efb5d1e41268f03f}{OnExportEMRSelect}}();\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af26403962f4ed516b99457f5c34cb67e}{OnUpdateEMRSelect}}();\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a1d9b46912cd445cde2ba9fb78ac6599f}{OnElectronicRecordSelect}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a4a9c22488f1cbe6ac3492a3cb4d7e8b5}{OnPrescriptionSelect}}();\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a17f65df94e70e853d5e81d81cdbf781a}{OnTreatmentHistorySelect}}();\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af316a7bc9a8dd08a902fffa7ab6e106a}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ae71cfd0f40ef39f0c344d3ff9def3b36}{OnTypySearchSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a53c1482edbe0b3792592f6495e11b5b4}{OnTypySearchSelendok}}();\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypySearchSetfocus();\ }}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypySearchKillfocus();\ }}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a7bae4a619b83176d86e3a778dec45731}{OnTypySearchLoadData}}();\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypySearchAddNew();\ }}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a00da637b24d8735f555158d3f6bc27a0}{OnOutPatientSelect}}();\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a5e914ea7c775bc224ce1303823afb3b4}{OnInPatientSelect}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ac6182c86c4a40dc39fe8d65e3ce83ae9}{OnListLoadData}}();\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ab4591ee97d2b515e0be63588ff9ed272}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a2a3b5adf651bd5770a16cea05c92e4fb}{OnListDblClick}}();\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_abe325991d5ef2a017a3aa40cb4190d62}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a90be07137376de94193cf4fb076bcb75}{OnLoadSelect}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ade15eb40a14910cfcb0314d1ffcf17cd}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a516d23f86a68f364d810dbc8c8f27c5c}{OnDepartmentSelendok}}();\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentSetfocus();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a77ed73a3b16f8eac256cc2a4c920fdd3}{OnDepartmentKillfocus}}();\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a6b3039199aeda71fd5e415909f3c5c39}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentAddNew();\ }}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchChange();\ }}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchSetfocus();\ }}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchKillfocus();\ }}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a95eb048396d159b732379f3696543284}{OnSearchCheckValue}}();\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a71df5db8abbffd67413e2a763aefeff7}{OnIsSaveSelect}}();\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuanlityChange();\ }}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuanlitySetfocus();\ }}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnQuanlityKillfocus();\ }}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a5dbd6a38c16e7be3ae781d46ff207598}{OnQuanlityCheckValue}}();\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_abce7476d8065fd8bf2fc0a835c56f42b}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a1d2bbe8aa2a03a3944ca0989fb9e3252}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a78ac79bce8fe9228caaf81d56b2c550e}{OnGroupTreeLoadData}}();\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a02bf40ce909a9f8f29a3433a3f5740aa}{OnGroupTreeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ac232aacb0d902474539f4a67d10a61cb}{OnGroupTreeDblClick}}();\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af0494ef9bb4923e3df3b54b0ddbe8ca0}{OnGroupTreeDeleteItem}}();\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a75b7f2fd7a9db9c3a8560716f132d226}{OnGroupTreeSelChange}}(HTREEITEM,\ HTREEITEM);}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a3978dd46ca5370b90974aae18c5804e6}{OnLoadByStatusSelect}}();\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aa8a6b105f83043faee30f4f3d13d5ed0}{OnLoadByPatientSelect}}();}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ab4e3fd2a72b530146f1f64938b9f8a9d}{OnApprovalSelect}}();}
+\DoxyCodeLine{00210\ \ \ \ \ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ada71b01fade2a7900ed23b2f70c07cc6}{OnAddSelect}}();\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_afcc314159ef5c7892ed12e19e699833e}{OnSignFileSelect}}();\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a67a65166a8dc3542e5ce16e836c0b98c}{OnSettingSelect}}();}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a921f3d229660bf82fe3e7df40b018a94}{OnDeleteSelect}}();}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescChange();\ }}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescSetfocus();\ }}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDescKillfocus();\ }}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a9a4a8334c97d65016dfeddf226c0b8df}{OnDescCheckValue}}();\ }
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a346626653b80e5e60e953a3c2797092f}{CEMRPatientProfile}}(\textcolor{keywordtype}{long}\ nDocumentNo=0);}
+\DoxyCodeLine{00228\ \ \ \ \ }
+\DoxyCodeLine{00233\ \ \ \ \ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a248826e3567d3bce1512518efcd5d40d}{\string~CEMRPatientProfile}}();}
+\DoxyCodeLine{00234\ \ \ \ \ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a52d2dce933f84c4ffebbab249db0ed0b}{OnCreateComponents}}();}
+\DoxyCodeLine{00240\ \ \ \ \ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a0d1ce16d18beba5badb15253388e81e3}{OnInitializeComponents}}();}
+\DoxyCodeLine{00246\ \ \ \ \ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_add4bba4d8011f6c81111da5cd7f05a40}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00252\ \ \ \ \ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ab1f38424aa09316beec9801293ecacd1}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00259\ \ \ \ \ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a03fb0c4befe6c818f7e458af53b40002}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00266\ \ \ \ \ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a7195e610f2dc86c87f14168febd62ae5}{GetDataToScreen}}();}
+\DoxyCodeLine{00272\ \ \ \ \ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aa1bad9597e95f486e4c4dd742ae24fba}{GetScreenToData}}();}
+\DoxyCodeLine{00278\ \ \ \ \ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_aec5b4e79467900d92b62212131601717}{SetDefaultValues}}();}
+\DoxyCodeLine{00284\ \ \ \ \ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a754ea984d9fb136e9d68f6d00c63a45c}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00292\ \ \ \ \ }
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a1a6ca08d742279f7e86cfad05e7ddae5}{OnAddHMSPatientERM}}();\ }
+\DoxyCodeLine{00299\ \ \ \ \ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a8a3bf80299124b4bb847d2e462912372}{OnEditHMSPatientERM}}();\ }
+\DoxyCodeLine{00306\ \ \ \ \ }
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_adbd6d4b2c9a7c22758f5fedacae05c86}{OnDeleteHMSPatientERM}}();\ }
+\DoxyCodeLine{00313\ \ \ \ \ }
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ab0984b8b4dac16c844321b665659cbce}{OnSaveHMSPatientERM}}();\ }
+\DoxyCodeLine{00320\ \ \ \ \ }
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a06fc820ce9e082eb07a5bd8aacbee3a2}{OnCancelHMSPatientERM}}();\ }
+\DoxyCodeLine{00327\ \ \ \ \ }
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a7b965acc9bfd3f4c19a3d2c5439ad1bc}{OnHMSPatientERMListLoadData}}();\ }
+\DoxyCodeLine{00334\ \ \ \ \ }
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_af84f75dfdbe66a488c27e7d1d02f0baf}{RefeshData}}(\textcolor{keywordtype}{long}\ nDocno,\ \textcolor{keywordtype}{bool}\ bIsOutPatient\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{long}\ nOutPatientRecordID\ =0\ );}
+\DoxyCodeLine{00343\ \ \ \ \ }
+\DoxyCodeLine{00350\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a13f951697e13e85df20d8ced0d5e8b5b}{GetStatusDocument}}(CString\ szSignatrueID);}
+\DoxyCodeLine{00351\ \ \ \ \ }
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_ad19e009fd640224d5df6315677276cc7}{OnResizeLayout}}();}
+\DoxyCodeLine{00357\ \ \ \ \ }
+\DoxyCodeLine{00362\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00363\ \ \ \ \ }
+\DoxyCodeLine{00364\ \ \ \ \ }
+\DoxyCodeLine{00371\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_m_r_patient_profile_a2cc2e2f451630512b2cb585d32253933}{OnSize}}(UINT\ nType,\ \textcolor{keywordtype}{int}\ cx,\ \textcolor{keywordtype}{int}\ cy);}
+\DoxyCodeLine{00372\ \ \ \ \ }
+\DoxyCodeLine{00373\ \ \ \ \ }
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \};}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

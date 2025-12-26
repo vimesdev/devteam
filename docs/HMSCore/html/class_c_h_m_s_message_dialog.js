@@ -1,0 +1,28 @@
+var class_c_h_m_s_message_dialog =
+[
+    [ "CHMSMessageDialog", "class_c_h_m_s_message_dialog.html#a6f55b347ab34a214fa7d33e2069d1d74", null ],
+    [ "~CHMSMessageDialog", "class_c_h_m_s_message_dialog.html#ad324ffd2196f2fd3cfd8ce0fc69c7e47", null ],
+    [ "GetDataToScreen", "class_c_h_m_s_message_dialog.html#a15a607da711ffc2689e99d59300707ae", null ],
+    [ "GetScreenToData", "class_c_h_m_s_message_dialog.html#a31b9a5021ad46b5ab2dccd00a42eb643", null ],
+    [ "OnAddHMSMessageDialog", "class_c_h_m_s_message_dialog.html#a2f779ad693add656d54cb003666a58ee", null ],
+    [ "OnCancelHMSMessageDialog", "class_c_h_m_s_message_dialog.html#a7419876e04e507c6a89950afbbf84bb3", null ],
+    [ "OnCreateComponents", "class_c_h_m_s_message_dialog.html#a9b3c1faf934937fa6edb54d544722e59", null ],
+    [ "OnDeleteHMSMessageDialog", "class_c_h_m_s_message_dialog.html#ac358dd9d04e351b4f3c51f5b4dde8cc2", null ],
+    [ "OnDoDataExchange", "class_c_h_m_s_message_dialog.html#acbacc5051d8d8e0b28dd4a270cc910aa", null ],
+    [ "OnEditHMSMessageDialog", "class_c_h_m_s_message_dialog.html#aad031f990ca495d34fb5b6fd1c7b2a34", null ],
+    [ "OnHMSMessageDialogListLoadData", "class_c_h_m_s_message_dialog.html#a30abf71c931fbb3ed8f35f8c853ee782", null ],
+    [ "OnInitializeComponents", "class_c_h_m_s_message_dialog.html#a9abc4304ca1bd9a666783831503784bf", null ],
+    [ "OnListDblClick", "class_c_h_m_s_message_dialog.html#a89bf739667e0970b60a5a9d089bcdf17", null ],
+    [ "OnListDeleteItem", "class_c_h_m_s_message_dialog.html#a1cffcaec9170bbf9c5c93348d632aea3", null ],
+    [ "OnListLoadData", "class_c_h_m_s_message_dialog.html#a53fe2e7a4df5b371455c616a1579f45d", null ],
+    [ "OnListSelectChange", "class_c_h_m_s_message_dialog.html#a2c1ee1da6aa6f1ce369b02898bfb28c7", null ],
+    [ "OnSaveHMSMessageDialog", "class_c_h_m_s_message_dialog.html#a38b17dbb42a6a05f960191f8e6b54107", null ],
+    [ "OnSeenSelect", "class_c_h_m_s_message_dialog.html#aa2749dd3ae80f7d26ec0393d10f9b683", null ],
+    [ "OnSetWindowEvents", "class_c_h_m_s_message_dialog.html#a306b70e8e3e57badd9f199a6ce52ead3", null ],
+    [ "SetDefaultValues", "class_c_h_m_s_message_dialog.html#aab625dd552fc83d2581b218281976f67", null ],
+    [ "SetMode", "class_c_h_m_s_message_dialog.html#a357ed0f1153f87d94056e5e3268d3107", null ],
+    [ "UpdateJson", "class_c_h_m_s_message_dialog.html#a70b49b5e9d4ccfa6288fd763399c4526", null ],
+    [ "m_szMessage", "class_c_h_m_s_message_dialog.html#aa910716f7396cf93137ce60dd82685bb", null ],
+    [ "m_wndMessage", "class_c_h_m_s_message_dialog.html#aa5fdcc9bf46b166fe376311799acdaaf", null ],
+    [ "m_wndSeen", "class_c_h_m_s_message_dialog.html#a1bb39bceb9204200e7fff7db6d338507", null ]
+];

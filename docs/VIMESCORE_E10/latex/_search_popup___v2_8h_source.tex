@@ -1,0 +1,64 @@
+\doxysection{Search\+Popup\+\_\+\+V2.\+h}
+\hypertarget{_search_popup___v2_8h_source}{}\label{_search_popup___v2_8h_source}\index{Include/VIMESCORE\_E10/SearchPopup\_V2.h@{Include/VIMESCORE\_E10/SearchPopup\_V2.h}}
+\mbox{\hyperlink{_search_popup___v2_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SEARCHPOPUPV2\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SEARCHPOPUPV2\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiPopup.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{class_c_search_popup___v2_a68355b600059586b35ace36be4865b0e}{CSearchPopup\_V2}}\ :\ \textcolor{keyword}{public}\ CGuiPopup}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ CGuiListCtrl\ *\mbox{\hyperlink{class_c_search_popup___v2_a450b9d27c9c1aa92f07faa3e285ea184}{m\_pListCtrl}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_a33ca37495617f22edb83f6870f498fe9}{m\_nSearchCol}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_search_popup___v2_a84bed06be89a9e0c1947c08b69a66623}{m\_wndKeywordLabel}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_search_popup___v2_a36165c8f3b732ea6700fe1b98e9c7766}{m\_wndKeyword}};}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_search_popup___v2_aafd8a87e93b9763670b0af4200c41d03}{m\_szKeyword}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnKeywordChange();\ }}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnKeywordSetfocus();\ }}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnKeywordKillfocus();\ }}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_search_popup___v2_a2309830e8d53b96d9100c892929df143}{OnKeywordCheckValue}}();\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_c_search_popup___v2_a68355b600059586b35ace36be4865b0e}{CSearchPopup\_V2}}(CWnd\ *pParent);}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_c_search_popup___v2_a1abb3fb9431fa4eb10e116ca03544fbd}{\string~CSearchPopup\_V2}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_search_popup___v2_a53ca103d98ed963fd90cfa958f9f94bc}{OnCreateComponents}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_search_popup___v2_adbe420c4efb64c7bfc72decacce2e96c}{OnInitializeComponents}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_search_popup___v2_a061cbbca1ebc386941a315375ee3b57f}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_search_popup___v2_a2fe8abc71c2064d7f273bfebc69d8139}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_search_popup___v2_a44524b2c2308bb35d8d4ba2c2792e9fe}{GetDataToScreen}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_search_popup___v2_a629e1f0abdfc4bcfeb75f64f8ebaa26b}{GetScreenToData}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_search_popup___v2_aa3a8e3aca053c41ab2f3366876c2f5a3}{SetDefaultValues}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_ab71c1217d13d83ffc76e24bca7f6134a}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_acb11b3c30e897a001b6d8cd75ea49ff7}{OnAddSearchPopup}}();\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_a839c5d8fbcc7aba3e1a01570bc70a619}{OnEditSearchPopup}}();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_a736ddb951a58991d8e3a19a0b9a3fa8b}{OnDeleteSearchPopup}}();\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_a64a78f09df1ad4255b7c94cf935e382f}{OnSaveSearchPopup}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_a3b7106df1333d0d9374063b9d23cdbcb}{OnCancelSearchPopup}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_search_popup___v2_a865f086df8104dbcb8c35eaf3b0faec9}{OnSearchPopupListLoadData}}();\ }
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

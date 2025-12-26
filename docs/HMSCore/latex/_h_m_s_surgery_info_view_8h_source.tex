@@ -1,0 +1,255 @@
+\doxysection{HMSSurgery\+Info\+View.\+h}
+\hypertarget{_h_m_s_surgery_info_view_8h_source}{}\label{_h_m_s_surgery_info_view_8h_source}\index{Include/HMSCore/HMSSurgeryInfoView.h@{Include/HMSCore/HMSSurgeryInfoView.h}}
+\mbox{\hyperlink{_h_m_s_surgery_info_view_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSSurgeryInfoView\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSSurgeryInfoView\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_m_s_surgery_charge_view_8h}{HMSSurgeryChargeView.h}}"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_m_s_surgery_schedule_mat_view_8h}{HMSSurgeryScheduleMatView.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_h_m_s_surgery_extra_info_view_8h}{HMSSurgeryExtraInfoView.h}}"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8e912826e32deb9caa005a6d3ff709b6}{CHMSSurgeryInfoView}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_extra_info_view}{CHMSSurgeryExtraInfoView}}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aad2c20c5938fb641075f6967722e451d}{m\_wndExtraSurgery}};}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_charge_view}{CHMSSurgeryChargeView}}\ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a7b0657a4201fddc9e4bbca60db9aa02b}{m\_wndSurgeryCharge}};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_schedule_mat_view}{CHMSSurgeryScheduleMatView}}\ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a29acd9f1a60b9dae3fb7833b49dcc168}{m\_wndMat}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a202e578947a3851ff41b6a893c4e03cb}{m\_bLogPaidOpt}};}
+\DoxyCodeLine{00041\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af83a915af4e7cc34f0fa27384882eaa1}{m\_bAllList}};}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ CWnd*\ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa00d2da14cb5781668fe152bfb1238d2}{m\_wndOrderList}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_afcc601014bf6e02bf4d413f9660e364c}{m\_nOrderID}};}
+\DoxyCodeLine{00046\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a6478cbd201167eac18daa0d9d66af00c}{m\_szDoctor}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa17984577d3ad9a29da391750b42c2c2}{m\_nRefIdx}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8d59fb008ce7bd4fb502f206638c6bdc}{m\_bPrimary}};}
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a286750ff1dfcbe431255666c5a525a48}{m\_szCreatedBy}};}
+\DoxyCodeLine{00050\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a4fd045f9ba2e609719bdf602dcc006bc}{m\_szDepartmentID}};}
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af77c3aea4a9565e62c749984405af482}{m\_szStatus}};}
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9ed9e15f593db864e84274623596f03b}{m\_szDeptType}};}
+\DoxyCodeLine{00053\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ab5720b167a62711d068ae05421b62981}{m\_szPayment}};}
+\DoxyCodeLine{00054\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_abf622efe7248b9be83f634eb7cda2f46}{m\_szAdmitDate}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a484867bc97f587adfbbddb558b26b38c}{m\_nQuantity}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a76ed316a566f9a2b7e604d379e393e93}{m\_nChargePercentDef}};}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9a1cf9f026000a44b1c9a9fa0b0b047f}{m\_wndDiagnosticLabel}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a6529ea6fb9f6953b0f48e09767fb2907}{m\_wndDiagnostic}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a1e2dcc96f775a8097a3387719f2cdbf7}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a65b9e6f17b9475fe0f673c03a6fc05dc}{m\_wndType}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a117dfd70ba5ed7b354742b79279e2dc6}{m\_wndOrderDateLabel}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ace496f3387703baff93399de78badb4e}{m\_wndOrderDate}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a6bda73c4c685e5df5506498285590f9e}{m\_wndSurgeryShiftLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a63ba4ec226830a44c7c5a6b2cdb280b4}{m\_wndSurgeryShift}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9ae1f331869dbafc7240bcdad09814de}{m\_wndNameLabel}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a7b355ad17c8990b55b27400cf2675a21}{m\_wndAll}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a6f212bf36532a11cb4944a61523c456f}{m\_wndName}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a1fe429051ed3d8cbb047fb44d9ba2e5f}{m\_wndReferenceLabel}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ac0aa454ec3e00cdccffb651d0dd723d8}{m\_wndReference}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a2764def44e6906a3859a68cd9b590e0b}{m\_wndUnitPriceLabel}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ac83ed7607e03e605e2e217ac48dd7c5e}{m\_wndUnitPrice}};}
+\DoxyCodeLine{00075\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8be5fc05935bc236070175400082b0a7}{m\_wndReasonLabel}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa4943809247abeac092d431822626ad4}{m\_wndReason}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa153ea8286fcd38c777e7ceb318b7a28}{m\_wndPerformDeptLabel}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a97dc4a10dc5e2e3d2bdbd7e2fa632c55}{m\_wndPerformDept}};}
+\DoxyCodeLine{00079\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a60532e8a4beccbe8df8027248dcba10a}{m\_wndPerformDateLabel}};}
+\DoxyCodeLine{00080\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a82752ea3baccd571815f7336596b3f3d}{m\_wndPerformDate}};}
+\DoxyCodeLine{00081\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a5ea3edeb0f1f57b50930fe433e6a202f}{m\_wndPerformPlaceLabel}};}
+\DoxyCodeLine{00082\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a07bdf30ad4a3409a3f146196a4ccc645}{m\_wndPerformPlace}};}
+\DoxyCodeLine{00083\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a36353f6cd0fd187f7c55e31be0f0d914}{m\_wndPractitionerLabel}};}
+\DoxyCodeLine{00084\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_afb25060d23704c9e284dfbab945e859b}{m\_wndPractitioner}};}
+\DoxyCodeLine{00085\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa702381cad2519fd7c4d0a7ba49eb380}{m\_wndAnesthetistLabel}};}
+\DoxyCodeLine{00086\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ad280524f54926778c349fddef23524b0}{m\_wndAnesthetist}};}
+\DoxyCodeLine{00087\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a84b0d990d7076104e9108cba74f9d9df}{m\_wndAssistantLabel}};}
+\DoxyCodeLine{00088\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9358b007aefbff6b01e82d31bcd99299}{m\_wndAssistant}};}
+\DoxyCodeLine{00089\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a1252936912e0f2e58c4472cbfec67886}{m\_wndAssistant2Label}};}
+\DoxyCodeLine{00090\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_add27e7016c45e3dab8efdd16a346c1c8}{m\_wndAssistant2}};}
+\DoxyCodeLine{00091\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aba8e23f6101cdbec995acda24cf00a91}{m\_wndDemonstratorLabel}};}
+\DoxyCodeLine{00092\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9b98e528bcea9003623e63829d775044}{m\_wndDemonstrator}};}
+\DoxyCodeLine{00093\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a3c2b7ee165f54d1ce4f56cf78009c444}{m\_wndAmountLabel}};}
+\DoxyCodeLine{00094\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_affbee4cd3d346da731fffd70475d46c3}{m\_wndAmount}};}
+\DoxyCodeLine{00095\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a5689a58c17d17190c63d2e2c2aef4761}{m\_wndInPkgLabel}};}
+\DoxyCodeLine{00096\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa05795d98ee0e3e218adddace872f02c}{m\_wndChargeAmount}};}
+\DoxyCodeLine{00097\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a36603ad5fee3644f738b01a9a5fed182}{m\_wndChargePercent}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a2a0d9c167e4e6637bccfd8c8acfe041a}{m\_wndNote}};}
+\DoxyCodeLine{00100\ \ \ \ \ CGuiTabCtrl\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a590009cee1ab122abaf6d67ff7081e18}{m\_wndTab}};}
+\DoxyCodeLine{00101\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a0b5625a8fd2e115efac7e316632c4c2d}{m\_wndScheduleOpt}};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aff66e6fd71f12d98d61cc662d7dc3d34}{m\_szDiagnostic}};}
+\DoxyCodeLine{00104\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a574905bbb38c3656a1477f3c238d1109}{m\_szTypeKey}};}
+\DoxyCodeLine{00105\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a6a1c8850bc6db9ed78b120215b1bb959}{m\_szOrderDate}};}
+\DoxyCodeLine{00106\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a1f9fcd0503406c858f55ae88d0be5743}{m\_szSurgeryShiftKey}};}
+\DoxyCodeLine{00107\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_abd2a3adfdddb4ab349b81e1f937b429d}{m\_szNameKey}};}
+\DoxyCodeLine{00108\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a0051474c06b4476c7b3be23858ec2871}{m\_szReference}};}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a7a420c044c50b232cd3aeb8a43f5e477}{m\_nUnitPrice}};}
+\DoxyCodeLine{00110\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af44e901c6e320f3ae3e4e3cd8a68df5b}{m\_szReason}};}
+\DoxyCodeLine{00111\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8d32ac9f82764f418f5fcc48c71c4267}{m\_szPerformDeptKey}};}
+\DoxyCodeLine{00112\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ae0645f664c1a51b2de48d785b421a2f6}{m\_szPerformDate}};}
+\DoxyCodeLine{00113\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ab4f2803a8e00df31839bf83377f8f810}{m\_szPerformPlaceKey}};}
+\DoxyCodeLine{00114\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a166e83a8e6efe39ac20d2027e18b4788}{m\_szPractitionerKey}};}
+\DoxyCodeLine{00115\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa2bc9cff3ea837777fe34790f868604a}{m\_szAnesthetistKey}};}
+\DoxyCodeLine{00116\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8e577e7b713645ba1f8691d7b9aef732}{m\_szAssistantKey}};}
+\DoxyCodeLine{00117\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_acd0fc450048f4d771a1ddb1801888f04}{m\_szAssistant2Key}};}
+\DoxyCodeLine{00118\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aeb7ea53c183ef5dc699973f5d5ae3d01}{m\_szDemonstratorKey}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8b1d179709efbd9fd3dd4e6e43e54e22}{m\_nAmount}};}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a69be57e416504750c7fab24ad44d430d}{m\_nChargeAmount}};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ab3b4273acf7ee633fb64adcc50b16654}{m\_nChargePercent}};}
+\DoxyCodeLine{00122\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a43c3c1e2d8ce3b2adb232b705f496ce7}{m\_szNote}};}
+\DoxyCodeLine{00123\ \textcolor{comment}{//\ \ double\ \ m\_nUnitPrice;}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9ae7b8ceb85a8a1fdae205b11e5cc134}{m\_hms\_operationTbl}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticChange();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticSetfocus();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDiagnosticKillfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a52df43c2510bb5845cf3ccead98a67a3}{OnDiagnosticCheckValue}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a034e63e3b9f150757319871cac809be1}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a1e79c1f84f1d32c41c5c5306e31b2bee}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9d648998ede48ff0b45bfef4b8a073a5}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeAddNew();\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateChange();\ }}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateSetfocus();\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderDateKillfocus();\ }}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aee493e68afbee4ba425ada77adfae211}{OnOrderDateCheckValue}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ae87120be61a54a67ed77a5569b54ed86}{OnSurgeryShiftSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_adc0b38f4f48defa9b14283d3102969a8}{OnSurgeryShiftSelendok}}();\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryShiftSetfocus();\ }}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryShiftKillfocus();\ }}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a13a9b4cd20426307593b9bcf4da3d29a}{OnSurgeryShiftLoadData}}();\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSurgeryShiftAddNew();\ }}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aeffdbce5071df419eb4f7d9cdb242e8b}{OnNameSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a1e8bba3835bf116d7f36164dd439c7da}{OnNameSelendok}}();\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aff55b8c8bc8e72a1f51e3f7695b86f9d}{OnNameLoadData}}();\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameAddNew();\ }}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReferenceChange();\ }}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReferenceSetfocus();\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReferenceKillfocus();\ }}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ae2293705ce118185e8461159dbac8762}{OnReferenceCheckValue}}();\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitPriceChange();\ }}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitPriceSetfocus();\ }}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUnitPriceKillfocus();\ }}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a0ab0dc4bb2a4b7789c2c84288a1ad7ba}{OnUnitPriceCheckValue}}();\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReasonChange();\ }}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReasonSetfocus();\ }}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReasonKillfocus();\ }}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af7b58da98332e8e3d483d59fcb3972aa}{OnReasonCheckValue}}();\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a796e5a980f978a085e77ca171780f746}{OnPerformDeptSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a9e1796164b0ef125571dfc3c0e6ec8cf}{OnPerformDeptSelendok}}();\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptSetfocus();\ }}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptKillfocus();\ }}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_adfa58bc4eeac0f28248c601c61c2832a}{OnPerformDeptLoadData}}();\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDeptAddNew();\ }}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDateChange();\ }}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDateSetfocus();\ }}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformDateKillfocus();\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a222ac5f23bdffa2f2fc747e2df3645b2}{OnPerformDateCheckValue}}();\ }
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_acc4b79f490d00974e76673431cd85349}{OnPerformPlaceSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aee9cc89062fe8ad232f902e15ecf43a2}{OnPerformPlaceSelendok}}();\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformPlaceSetfocus();\ }}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformPlaceKillfocus();\ }}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ac6eb65e6c33fc511e8c62ecacbd60745}{OnPerformPlaceLoadData}}();\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPerformPlaceAddNew();\ }}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ab8e6b4fa90ecaacb4f98ad4ee24070b4}{OnScheduleOptClick}}();}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a461c53ae7ea5edcafe72c59c711a8ff2}{OnPractitionerSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a544d46b7e0d2134f2efcd52a7b3a5e76}{OnPractitionerSelendok}}();\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPractitionerSetfocus();\ }}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPractitionerKillfocus();\ }}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8a4b948f415c6f9848a1c172b2d88ba1}{OnPractitionerLoadData}}();\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPractitionerAddNew();\ }}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a4da8d8ef8cf82ea7ffb4a15e8e241999}{OnAnesthetistSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ae16a4d1840e87d7d775d14a7739c9d22}{OnAnesthetistSelendok}}();\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthetistSetfocus();\ }}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthetistKillfocus();\ }}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a73700a16bd0d022dccc83ec2e0f864bc}{OnAnesthetistLoadData}}();\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAnesthetistAddNew();\ }}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a036706b073d913630f264253c6adc96d}{OnAssistantSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a5789053a068dbbd03cffaba60728f02b}{OnAssistantSelendok}}();\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistantSetfocus();\ }}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistantKillfocus();\ }}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a65f571aa90de32b1f0da9473e410bd52}{OnAssistantLoadData}}();\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistantAddNew();\ }}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af66410f7a8bc38fd6d1a28bdb6f12f2b}{OnAssistant2SelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a3900f658cdcfaf9c5ca2968f8300901d}{OnAssistant2Selendok}}();\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistant2Setfocus();\ }}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistant2Killfocus();\ }}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a3256c421f4c044058ec8544776c92a99}{OnAssistant2LoadData}}();\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAssistant2AddNew();\ }}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDemonstratorChange();\ }}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDemonstratorSetfocus();\ }}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDemonstratorKillfocus();\ }}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af3de72324373120977313aa2b06eab9c}{OnDemonstratorCheckValue}}();\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a2328a7e6fe4ad12eef3495b52ac4fe3b}{OnDemonstratorLoadData}}();\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAmountChange();\ }}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAmountSetfocus();\ }}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnAmountKillfocus();\ }}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a745bc9a8fde3508ba46cc96a02ad9beb}{OnAmountCheckValue}}();\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNoteChange();\ }}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNoteSetfocus();\ }}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNoteKillfocus();\ }}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_abf1d60fde401e2ef76257c65007b2546}{OnNoteCheckValue}}();\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aad8ca41e0b79a0dabef0faaf37732c05}{OnTabSelectChange}}(\textcolor{keywordtype}{int}\ nOld,\ \textcolor{keywordtype}{int}\ nNew);\ }
+\DoxyCodeLine{00223\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a8e912826e32deb9caa005a6d3ff709b6}{CHMSSurgeryInfoView}}();}
+\DoxyCodeLine{00224\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aac36a8b9296ba37d9ce0dd448147ccd3}{\string~CHMSSurgeryInfoView}}();}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ad09d26cfc46471d7fcd39f69abbfd32d}{OnCreateComponents}}();}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af180e09cc3c37c2c7f061aa189849c88}{OnInitializeComponents}}();}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_abf8300d4b14010e31d1dce676308b8c9}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aff5380a04653fd163325063df3bfe74f}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a0119f85ff17a0918037437f745ed6743}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a516ad57bc8a2392a0f405da531b2a7a0}{GetDataToScreen}}();}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a1f42c13c166ac2f845f1afa1b7a03199}{GetScreenToData}}();}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a34e7f6e4cb9bcddf40e0c10354f8493e}{SetDefaultValues}}();}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a647aa6c7995a8d95629c2af4da5b0739}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a0d47eb807630a96043f546c0e572711b}{OnAddHMSSurgeryInfoView}}();\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a0a0a033c751da232f79371ef65cf69ad}{OnEditHMSSurgeryInfoView}}();\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa8053967e6c11a36aa7d653143fe797e}{OnDeleteHMSSurgeryInfoView}}();\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa3bbf583f63c5890885e0cea4166c0ab}{OnSaveHMSSurgeryInfoView}}();\ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa4e08d038ead6473e4068c405f48bc76}{OnCancelHMSSurgeryInfoView}}();\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a860d6ecc3603cb59536b7e6ad0683b7b}{OnHMSSurgeryInfoViewListLoadData}}();\ }
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a30b71f23064faac73cf9ca31f5183356}{GetCurrentStatus}}();}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a937d79d2a82c8e03006b2e228ac97b94}{Load}}(\textcolor{keywordtype}{long}\ nOrderID);}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a08cfb9c7a173fba08ca77bd93a24bed9}{OnAddOptUser}}(CString\ szGroup,\ CString\&\ szKey);}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a60beeac09d38c5b23261eb56056d696f}{OnAddOptName}}();}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_a34aebc4894c4a54e8fc9d7160f643328}{OnAllSelect}}();}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_af8fd3ac8ac3d49de24abaed125a3b307}{CalcAmount}}();}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_ae480d04f2fb0a1db29960ec4632e1876}{CalcChargeAmount}}();}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_surgery_info_view_aa94d97bf9f138233aff399ad5eb9b1a7}{OnChargePercentSelect}}();}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \};}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

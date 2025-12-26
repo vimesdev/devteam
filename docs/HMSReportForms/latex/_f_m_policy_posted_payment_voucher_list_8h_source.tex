@@ -1,0 +1,189 @@
+\doxysection{FMPolicy\+Posted\+Payment\+Voucher\+List.\+h}
+\hypertarget{_f_m_policy_posted_payment_voucher_list_8h_source}{}\label{_f_m_policy_posted_payment_voucher_list_8h_source}\index{Include/HMSReportForms/HospitalFee/FMPolicyPostedPaymentVoucherList.h@{Include/HMSReportForms/HospitalFee/FMPolicyPostedPaymentVoucherList.h}}
+\mbox{\hyperlink{_f_m_policy_posted_payment_voucher_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMPolicyPostedPaymentVoucherList\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMPolicyPostedPaymentVoucherList\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8dc874b5e5f2190479beb0080d83e372}{CFMPolicyPostedPaymentVoucherList}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a0df12e94f6f743b2d7d7ab6c1c116485}{m\_mIndex}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a61b6945611b54626384ddf261da5b37f}{m\_nEAmount}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a76cece492085bbc9e3b8861ad187b526}{m\_nIAmount}};}
+\DoxyCodeLine{00037\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_acdf6eee0db3901261b465d9f1c6730fe}{m\_szCashIDS}};}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ab6c7fd82fd32a857dc1ec6f2038ea6a5}{m\_wndReportCondition}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_afb0c5c42d60af96666ca85e2120fc022}{m\_wndDeptInfo}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ad3f29b76f1277e9e9ca8088a61f702e9}{m\_wndPaymentSheet}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a11118c6892c7d4e3b91f474e03ea9823}{m\_wndYearLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ae5906b147ee4906710270237d227fe15}{m\_wndYear}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a3fa40034c7c043b6f5ed0c0722f48b45}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a36cb8906b2bcbf66cd23c0bda33ce5ad}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a053f8f0b25242289137bf4e8a9c9362c}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a2365e8882c81bf32389f79fb95789630}{m\_wndFromDate}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a0042d7606fc2501bc7300e17992c8f7e}{m\_wndToDate}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_acb1cb02e16090b29602a5b38461ebda4}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a58f59af15681840367b770b82efaf19b}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a7fd40f4580fcea20f82b00ce82069e80}{m\_wndClerk}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a08346bdfae3b56734f45e3650bd2c536}{m\_wndObjectLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_adaf32c0c66dc7feb74ddb4b4d395af19}{m\_wndObject}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a6bc8be9947cfd4de8db63c7f46a0752b}{m\_wndOrderByLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a616548616fb78961e6c395cb32c0bc02}{m\_wndOrderBy}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_af40f308c8ec6f48f228b01d2ef0d9ee3}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a3e31208617e74189100c8a085228b3ef}{m\_wndStatus}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a1b431e807e04f95c0d8e3cadf3f004a5}{m\_wndList}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a79952ab2c69b88d2f72d6ce3297658a1}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a77522dafe0ff962daeeef5eae818a70d}{m\_wndMarkAll}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_afa24930bca93bdbdada6dddb28a4487c}{m\_wndUnMark}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ade6cb6212d0544616baf7c71ca276da3}{m\_wndPrint}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_aebc16fbd77ec8a7ca6229b31800cb4e5}{m\_wndExport}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ab2c6e5b0e3f537933b64d373000c54ee}{m\_wndInpatient}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a98722fe8a1366d8a8ba5c20b48bad5c1}{m\_wndOutpatient}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ae191b9778e0b60bd096e4cd9eb80ba1c}{m\_wndDeposit}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_af4be58362ea1b6f7aa1a06e05a2472e4}{m\_wndAll}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a6f9f025e051522d0d4a613b2f3b80fba}{m\_wndSOD}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a14216e9d026bf17647984811e42d8c7c}{m\_wndIncomePackage}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_af22af64f5bb705e24bfd4737a8380ff7}{m\_wndOutlayPackage}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a9d4b092b89567a4f177d4040afa916b5}{m\_wndABZone}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a47488609caed3c7bc46359d778a3cc4e}{m\_wndAllIns}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a79e6be2f7be2fea703622972ce723899}{m\_wndTCKT}};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ab5b84a1b5f7d3b43c23310cd2333d321}{m\_nYear}};}
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ad52db2a480d6a2c9d24f3bd1869f05ca}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a30762eeb81c62513ef9258b316437d2e}{m\_szFromDate}};}
+\DoxyCodeLine{00077\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ab7c2e6b228e619587f173c6da2e6028a}{m\_szToDate}};}
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_afde66810a9a874bfc4ea915ea6cf914b}{m\_szClerkKey}};}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a0f7c26efedcbcbcd83ab5deac1d25418}{m\_szObjectKey}};}
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a1844fc637e3fb7d92677357e3d437cc6}{m\_szOrderByKey}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_adeb1c013bfa8b0aaf177979b47a05022}{m\_szStatusKey}};}
+\DoxyCodeLine{00082\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a2916c60a3c47578deb3cbaf60d80c109}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00083\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a2f763f53bacb2504b8f92abcace41a50}{m\_bInpatient}};}
+\DoxyCodeLine{00084\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a2893c0423a9204c3a53494ee45ad3946}{m\_bOutpatient}};}
+\DoxyCodeLine{00085\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a1de0dd5b10bc70ee27141712b55bde24}{m\_bDeposit}};}
+\DoxyCodeLine{00086\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a05393b3ad4fc548d5a918305315d5225}{m\_bSOD}};}
+\DoxyCodeLine{00087\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a94846759c8493eb952dddfe57a99af89}{m\_bIncomePackage}};}
+\DoxyCodeLine{00088\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a7e5d367c1c667984246578db2bfcd581}{m\_bOutlayPackage}};}
+\DoxyCodeLine{00089\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a3b624a39c14a5b26ac345f3218d6341f}{m\_bABZone}};}
+\DoxyCodeLine{00090\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a9b7052c3cb2943590f139f88100eeb1d}{m\_bAllIns}};}
+\DoxyCodeLine{00091\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a4a0a214f87d70db4ebd98dbe7853e5bd}{m\_bTCKT}};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a5febbc9001e8b523e00b27c43d770c29}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a31ee5bcb403e1dca0adea9f38e3853a5}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8f59798b91919ff6c64a956ebf0adae3}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ae4f83efb33124fc13b6e89cc6d3aa371}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_aea7045405b8792576b82dee79a646e1e}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8faa51daba0833e24d91622f6bec9977}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ac32f933ba93ce169cb8c57c6bb840776}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_af2afcfdccaf93f012a8212bf77cfba60}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_adc4b87c871c2e3f8a72e7ad24a582ef1}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a61646ccbf338add5acf352d6411009a8}{OnObjectSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a96bd11f889ef8a102763d518eee40a20}{OnObjectSelendok}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectSetfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectKillfocus();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a73fea8206010c1779497c24517622fe9}{OnObjectLoadData}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectAddNew();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_aa986ec9043ecffa88fe8f8c405712a67}{OnOrderBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a454a775a3ce9e4dc353920ba3c5c761e}{OnOrderBySelendok}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderBySetfocus();\ }}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByKillfocus();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ab5ee26679f4aa3d67c4e5c2d6fed6d99}{OnOrderByLoadData}}();\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByAddNew();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a335fd82429a32fa310471312714b81db}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_acfe9bba2a66bd72d864e06e3573dded6}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_af21eed71a6be26e78c94cc27d5d5644e}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8fc2ee29a5ee1bbabc2b7f083d0f610e}{OnListLoadData}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a96e56e3f5d5bfc263cce93120a055314}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_afd8ab11cbc4a3d7dd2b83fa169555fc2}{OnListDblClick}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_aa5f52265adb78b215c9a942a3188177f}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a94e42c5a3eda382bcddc1c163e37bec7}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a911f33f4d61021aefefb44de2655028d}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_adf73a8d1978eb5e7466c279ea67a2200}{OnExportSelect}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8d9164d5d40fbfa1b5be9f65232d8fed}{OnMarkAllSelect}}();}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a999916a125413409ad598768a2ecebc9}{OnUnMarkSelect}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a564227287d04d830df43f10c0272080f}{OnSODSelect}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a748a0d33a3e5c4e17e6e67eabe173a87}{OnIncomePackageSelect}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_af18c8577041cad621c5c0510d59fe595}{OnOutlayPackageSelect}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a1fc6be6a8d8787518a94b428f96ee117}{OnABZoneSelect}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_aa12a387348ce0216ad110a870b7939db}{OnAllInsSelect}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a065f09b6b71a7740b24637e5d0523b33}{OnTCKTSelect}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a3f5924ca16f07490eebf18749509ea79}{OnPrint1stver}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ae8c23ddf4e780e07b44ea45c62c2135f}{OnPrint2ndver}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a672960f52293e7e75f62a81bfb84a3be}{OnPrint3rdver}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_abc3ffc97972668b66900b37c2f03a27f}{OnPrint3rdver\_2}}();}
+\DoxyCodeLine{00155\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ac57573fabaec79bc8e3ddb7a1b79be8c}{GetQueryString}}();}
+\DoxyCodeLine{00156\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a3da5b2263199dd0d5b3cbcb4ac16dd67}{GetQueryString2}}();}
+\DoxyCodeLine{00157\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ade9e7dbe949e6d923c0008e0b0db2d97}{GetQueryString3}}();}
+\DoxyCodeLine{00158\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8db63a690b8bc60ed567cc297b4a89b0}{GetQueryString3\_2}}();}
+\DoxyCodeLine{00159\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a7a7f9b58858e7922bc2fbe4ae9e126e1}{GetQueryString\_check}}();}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8cd6e74345efb743f83eeaf0277d2dd0}{OnPrintSummaryReceipt}}(\textcolor{keywordtype}{double}\ nTotalAmount);}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a245fa09267cfe0bfc8c6955d981a886e}{OnPrintFooterUser}}(CReportSection\ *rptFooter);}
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8dc874b5e5f2190479beb0080d83e372}{CFMPolicyPostedPaymentVoucherList}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_aa0149b8f12ce6ee9dc60b4ba3d9d69fc}{\string~CFMPolicyPostedPaymentVoucherList}}();}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_aa3ee6b0cc6d91a1c712c212cf590035b}{OnCreateComponents}}();}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a69c030c735062cd69115cea65b112e51}{OnInitializeComponents}}();}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a3012ad9e534869edcdd5b18429ed7d1b}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ac91eafc830a5a40da552ea42c525e766}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_adb0cf842878a4e3e6bff3e5566b1ebfe}{GetDataToScreen}}();}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a17a1955c7e9c564219dd3cbadc9a459c}{GetScreenToData}}();}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a7b923f2a4ffd259b7aac234331406ee3}{SetDefaultValues}}();}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a8730beab74e617bb1f29da6e6ea92bff}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_abc904a6f0864b79521dfa05b30d30ee1}{OnAddFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a7c8568a4c87515715e9557435ff0cf74}{OnEditFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a7fe7a89d4ae68aeb57f2b201ca75b0ab}{OnDeleteFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a4a765470fde1be54eed3d679c084aa0c}{OnSaveFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_af3c6f98123cfc969d356772242202703}{OnCancelFMInsurancePostedPaymentVoucherList}}();\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ad3fc52c395ee66a96287092a30a5309f}{OnFMInsurancePostedPaymentVoucherListListLoadData}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a47bc0979de75f81df4b90a3dc4e8bac6}{OnListCheckAllIns}}();}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a28f276559600a96d0ec54afb1989ea30}{OnListUnCheckAllIns}}();}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_ae11228ee8bf072ce301f61a5337d15fc}{OnListCheckAllSolder}}();}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_abc42641206fba86b6aae394c530212e5}{OnListUnCheckAllSolder}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_abd08a24a7cefb06b8185b8b430db8c06}{OnListCheckAllInsSolder}}();}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a6aedfd28fc4f83eca3324b42a3868b5f}{OnListUnCheckAllInsSolder}}();}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_policy_posted_payment_voucher_list_a95edd62ac37c5e1d731b67d3901c7715}{PrintFinancialDocument}}();}
+\DoxyCodeLine{00185\ \};}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

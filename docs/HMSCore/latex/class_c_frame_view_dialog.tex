@@ -1,0 +1,164 @@
+\doxysection{CFrame\+View\+Dialog Class Tham chiếu}
+\hypertarget{class_c_frame_view_dialog}{}\label{class_c_frame_view_dialog}\index{CFrameViewDialog@{CFrameViewDialog}}
+
+
+Lớp mini frame dialog để hiển thị CGui\+View trong mini frame window.  
+
+
+
+
+{\ttfamily \#include $<$Dialog\+View.\+h$>$}
+
+Sơ đồ kế thừa cho CFrame\+View\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_frame_view_dialog}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Các hàm thành viên Public}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_frame_view_dialog_ac9779734f9a246a531b5bff13fea6091}{CFrame\+View\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Constructor mặc định. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_frame_view_dialog_af8967b557596156cf021732ddcc7a765}{\texorpdfstring{$\sim$}{\string~}\+CFrame\+View\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{class_c_frame_view_dialog_a3b0c114de292e400a90e2f8a06a4ce08}{Create\+And\+Show}} (CGui\+View \texorpdfstring{$\ast$}{*}p\+View)
+\begin{DoxyCompactList}\small\item\em Tạo và hiển thị mini frame với view. \end{DoxyCompactList}\item 
+afx\+\_\+msg int \mbox{\hyperlink{class_c_frame_view_dialog_ac3afd805ad759d8313f7f240ce8a0d75}{On\+Create}} (LPCREATESTRUCT lp\+Create\+Struct)
+\begin{DoxyCompactList}\small\item\em Khai báo message map cho MFC. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_frame_view_dialog_a3cb9526bbea09a26c9192f415a60989f}{On\+Size}} (UINT n\+Type, int cx, int cy)
+\begin{DoxyCompactList}\small\item\em Xử lý khi mini frame thay đổi kích thước. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{class_c_frame_view_dialog_ac6ffa54faa393248473e7d7af700143e}{On\+Nc\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Xử lý khi non-\/client area bị hủy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{các thuộc tính Protected}
+\begin{DoxyCompactItemize}
+\item 
+CGui\+View \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_frame_view_dialog_ad495a0f76f3f0efbd7b6fb29cc281454}{m\+\_\+p\+View}}
+\begin{DoxyCompactList}\small\item\em Con trỏ đến view được chứa trong mini frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Mô tả chi tiết}
+Lớp mini frame dialog để hiển thị CGui\+View trong mini frame window. 
+
+Class này kế thừa từ CGui\+Mini\+Frame, cung cấp mini frame\+:
+\begin{DoxyItemize}
+\item Tạo và hiển thị mini frame với CGui\+View
+\item Tự động resize view khi frame thay đổi kích thước
+\item Quản lý lifecycle của view 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_c_frame_view_dialog_doc-constructors}
+\doxysubsection{Thông tin về Constructor và Destructor}
+\Hypertarget{class_c_frame_view_dialog_ac9779734f9a246a531b5bff13fea6091}\index{CFrameViewDialog@{CFrameViewDialog}!CFrameViewDialog@{CFrameViewDialog}}
+\index{CFrameViewDialog@{CFrameViewDialog}!CFrameViewDialog@{CFrameViewDialog}}
+\doxysubsubsection{\texorpdfstring{CFrameViewDialog()}{CFrameViewDialog()}}
+{\footnotesize\ttfamily \label{class_c_frame_view_dialog_ac9779734f9a246a531b5bff13fea6091} 
+CFrame\+View\+Dialog\+::\+CFrame\+View\+Dialog (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor mặc định. 
+
+Khởi tạo mini frame với m\+\_\+p\+View = NULL. \Hypertarget{class_c_frame_view_dialog_af8967b557596156cf021732ddcc7a765}\index{CFrameViewDialog@{CFrameViewDialog}!````~CFrameViewDialog@{\texorpdfstring{$\sim$}{\string~}CFrameViewDialog}}
+\index{````~CFrameViewDialog@{\texorpdfstring{$\sim$}{\string~}CFrameViewDialog}!CFrameViewDialog@{CFrameViewDialog}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CFrameViewDialog()}{\string~CFrameViewDialog()}}
+{\footnotesize\ttfamily \label{class_c_frame_view_dialog_af8967b557596156cf021732ddcc7a765} 
+CFrame\+View\+Dialog\+::\texorpdfstring{$\sim$}{\string~}\+CFrame\+View\+Dialog (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Giải phóng tài nguyên. View sẽ được giải phóng bởi caller. 
+
+\label{doc-func-members}
+\Hypertarget{class_c_frame_view_dialog_doc-func-members}
+\doxysubsection{Thông tin về hàm thành viên}
+\Hypertarget{class_c_frame_view_dialog_a3b0c114de292e400a90e2f8a06a4ce08}\index{CFrameViewDialog@{CFrameViewDialog}!CreateAndShow@{CreateAndShow}}
+\index{CreateAndShow@{CreateAndShow}!CFrameViewDialog@{CFrameViewDialog}}
+\doxysubsubsection{\texorpdfstring{CreateAndShow()}{CreateAndShow()}}
+{\footnotesize\ttfamily \label{class_c_frame_view_dialog_a3b0c114de292e400a90e2f8a06a4ce08} 
+BOOL CFrame\+View\+Dialog\+::\+Create\+And\+Show (\begin{DoxyParamCaption}\item[{CGui\+View \texorpdfstring{$\ast$}{*}}]{p\+View}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tạo và hiển thị mini frame với view. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em p\+View} & Con trỏ đến CGui\+View cần hiển thị \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+TRUE nếu thành công, FALSE nếu thất bại
+\end{DoxyReturn}
+Tạo mini frame với kích thước mặc định (1024x720) và hiển thị view bên trong. Sau khi tạo, frame sẽ được hiển thị và active. \Hypertarget{class_c_frame_view_dialog_ac3afd805ad759d8313f7f240ce8a0d75}\index{CFrameViewDialog@{CFrameViewDialog}!OnCreate@{OnCreate}}
+\index{OnCreate@{OnCreate}!CFrameViewDialog@{CFrameViewDialog}}
+\doxysubsubsection{\texorpdfstring{OnCreate()}{OnCreate()}}
+{\footnotesize\ttfamily \label{class_c_frame_view_dialog_ac3afd805ad759d8313f7f240ce8a0d75} 
+afx\+\_\+msg int CFrame\+View\+Dialog\+::\+On\+Create (\begin{DoxyParamCaption}\item[{LPCREATESTRUCT}]{lp\+Create\+Struct}{}\end{DoxyParamCaption})}
+
+
+
+Khai báo message map cho MFC. 
+
+Khai báo để MFC có thể ánh xạ các message Windows đến các hàm xử lý tương ứng.
+
+Xử lý khi mini frame được tạo 
+\begin{DoxyParams}{Các tham số}
+{\em lp\+Create\+Struct} & Con trỏ đến CREATESTRUCT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Giá trị trả về}
+0 nếu thành công, -\/1 nếu thất bại
+\end{DoxyReturn}
+Tạo view bên trong mini frame sau khi frame được tạo. \Hypertarget{class_c_frame_view_dialog_ac6ffa54faa393248473e7d7af700143e}\index{CFrameViewDialog@{CFrameViewDialog}!OnNcDestroy@{OnNcDestroy}}
+\index{OnNcDestroy@{OnNcDestroy}!CFrameViewDialog@{CFrameViewDialog}}
+\doxysubsubsection{\texorpdfstring{OnNcDestroy()}{OnNcDestroy()}}
+{\footnotesize\ttfamily \label{class_c_frame_view_dialog_ac6ffa54faa393248473e7d7af700143e} 
+afx\+\_\+msg void CFrame\+View\+Dialog\+::\+On\+Nc\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Xử lý khi non-\/client area bị hủy. 
+
+Dọn dẹp tài nguyên khi mini frame bị đóng. \Hypertarget{class_c_frame_view_dialog_a3cb9526bbea09a26c9192f415a60989f}\index{CFrameViewDialog@{CFrameViewDialog}!OnSize@{OnSize}}
+\index{OnSize@{OnSize}!CFrameViewDialog@{CFrameViewDialog}}
+\doxysubsubsection{\texorpdfstring{OnSize()}{OnSize()}}
+{\footnotesize\ttfamily \label{class_c_frame_view_dialog_a3cb9526bbea09a26c9192f415a60989f} 
+afx\+\_\+msg void CFrame\+View\+Dialog\+::\+On\+Size (\begin{DoxyParamCaption}\item[{UINT}]{n\+Type}{, }\item[{int}]{cx}{, }\item[{int}]{cy}{}\end{DoxyParamCaption})}
+
+
+
+Xử lý khi mini frame thay đổi kích thước. 
+
+
+\begin{DoxyParams}{Các tham số}
+{\em n\+Type} & Loại thay đổi kích thước \\
+\hline
+{\em cx} & Chiều rộng mới \\
+\hline
+{\em cy} & Chiều cao mới\\
+\hline
+\end{DoxyParams}
+Tự động resize view để khớp với kích thước mini frame. 
+
+\label{doc-variable-members}
+\Hypertarget{class_c_frame_view_dialog_doc-variable-members}
+\doxysubsection{Thông tin về Member Data}
+\Hypertarget{class_c_frame_view_dialog_ad495a0f76f3f0efbd7b6fb29cc281454}\index{CFrameViewDialog@{CFrameViewDialog}!m\_pView@{m\_pView}}
+\index{m\_pView@{m\_pView}!CFrameViewDialog@{CFrameViewDialog}}
+\doxysubsubsection{\texorpdfstring{m\_pView}{m\_pView}}
+{\footnotesize\ttfamily \label{class_c_frame_view_dialog_ad495a0f76f3f0efbd7b6fb29cc281454} 
+CGui\+View\texorpdfstring{$\ast$}{*} CFrame\+View\+Dialog\+::m\+\_\+p\+View\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Con trỏ đến view được chứa trong mini frame. 
+
+
+
+Thông tin cho class được biên soạn từ các file sau đây\+:\begin{DoxyCompactItemize}
+\item 
+Include/\+HMSCore/\mbox{\hyperlink{_dialog_view_8h}{Dialog\+View.\+h}}\end{DoxyCompactItemize}

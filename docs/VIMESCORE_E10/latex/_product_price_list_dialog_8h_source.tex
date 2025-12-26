@@ -1,0 +1,142 @@
+\doxysection{Product\+Price\+List\+Dialog.\+h}
+\hypertarget{_product_price_list_dialog_8h_source}{}\label{_product_price_list_dialog_8h_source}\index{Include/VIMESCORE\_E10/ProductPriceListDialog.h@{Include/VIMESCORE\_E10/ProductPriceListDialog.h}}
+\mbox{\hyperlink{_product_price_list_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PRODUCTPRICELISTDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PRODUCTPRICELISTDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_product_price_list_dialog_aa2e1e589051f7444234b0494840fc8af}{CProductPriceListDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a7c8c4682cf12d46bdccb0f0a0b9843f8}{m\_bIsServicePriceManager}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a27ceeeddfde6812732448ffcfec0b208}{m\_nProductPriceID}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_acf01967980241450e3d41d8a57a313ab}{m\_nProductID}};}
+\DoxyCodeLine{00037\ \ \ \ \ CWnd\ \ \ \ *\mbox{\hyperlink{class_c_product_price_list_dialog_a5c9158dd177f9d899fbeb99404ddc33f}{m\_pWnd}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_product_price_list_dialog_a78f858fc9354892f73551961b1a25a92}{m\_szProductPriceStr}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a1ef413a7487f48ec603b8738c84be09a}{m\_wndNewPrice}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ac23ab905b5db53973dd7a9bbfb922301}{m\_wndManufactureLabel}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a2bb174656dd4b3d04f761ed413813847}{m\_wndManufacture}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_af42edc449a9f4732a82d5febed9dada6}{m\_wndVendorLabel}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a1e9bc5c83862e8d2377becd9f4b9d9ea}{m\_wndVendor}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a41b92f8eef1f8131acff46d58acb04ef}{m\_wndPurchasePriceLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a08f337e6527702ed33f9b81b481c4323}{m\_wndPurchasePrice}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_abfc942401cc3ed344d41131e17118d59}{m\_wndApplyDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a8c64f72d218f11e7a5d3017e898c8b68}{m\_wndApplyDate}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a9259047aad4ea728f2b6c6f56d9f081e}{m\_wndSalePriceLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a8f2695e0e5861721091c3663595a967b}{m\_wndSalePrice}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a7df269884df55b7ccb093abc1fe7011c}{m\_wndSalePrice2Label}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a91842754fb9d2ed2de7d8e2e9b5a5c7a}{m\_wndSalePrice2}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a649def55417b2fccb77ebd892cb88332}{m\_wndSalePrice3Label}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a25167a3a8c625880bae4e348e8114728}{m\_wndSalePrice3}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a3bc84c6314b287c7acef25562f67140b}{m\_wndSalePrice4Label}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_affd0eb11b3e8202a907e552567222e8d}{m\_wndSalePrice4}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ac0a55922da931c38653183a404194b3b}{m\_wndIsPaid1}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ad5b63591de4d23ef2c0d8a5eb8bb005e}{m\_wndIsPaid2}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a990c418c9d7b6a3bd9e0e2ef16f3cc51}{m\_wndIsPaid3}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a141327c0a4feb871d983abf935055683}{m\_wndIsPaid4}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a9f6dd18100ac7f3545e2e5f945ac9a32}{m\_wndSave}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a33491fb6cc5f86d9db244d583c313f06}{m\_wndClose}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_af86eb6d82fad0ab1afc6b758f1978680}{m\_wndApplyPaymentLevel}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_product_price_list_dialog_ac515a1bc23440b8775c90df0833cbe87}{m\_szManufactureKey}};}
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_product_price_list_dialog_ae81bd394d9a02d940fa784e9fcfd0487}{m\_szVendorKey}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a51e038f956364c66f67c7acfd793bd5b}{m\_nPurchasePrice}};}
+\DoxyCodeLine{00067\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_product_price_list_dialog_a74e14e2b517d1d4f03dcd075e04f5e34}{m\_szApplyDate}};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a06efa1218e63c8845f5298e5d5dcae62}{m\_nSalePrice}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_aacc52b84125d1269c1d053241681931b}{m\_nSalePrice2}};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a20c248e350ca920c9432af7fa663d0a2}{m\_nSalePrice3}};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ac9e44b6ce4767441070e6e244266e2a7}{m\_nSalePrice4}};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ab92084ea735682530b5d3415b97cda00}{m\_nInsPrice}};}
+\DoxyCodeLine{00073\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ac866ad11f6ea812ff600f0f74bcdd99e}{m\_bIsPaid1}};}
+\DoxyCodeLine{00074\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a8255a40efc12206adb59494561932e7c}{m\_bIsPaid2}};}
+\DoxyCodeLine{00075\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_aa8321bcaef64f83ef6b59effafbc6717}{m\_bIsPaid3}};}
+\DoxyCodeLine{00076\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_acdc898cb06fe1210c14e03711c236e3d}{m\_bIsPaid4}};}
+\DoxyCodeLine{00077\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a4cf263c656065045aaa16b8f032bdcef}{m\_bApplyPaymentLevel}};}
+\DoxyCodeLine{00078\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_product_price_list_dialog_a8ab76de6b6722ec817d1d8513dc8ec67}{m\_m\_product\_priceTbl}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_af0967d35e46ee03bf7fc43396434b059}{OnManufactureSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_abc68cf11b48afedc2c88b99f46ba662e}{OnManufactureSelendok}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnManufactureSetfocus();\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnManufactureKillfocus();\ }}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ae5b0dc1a575cc8a2da61aa47c4f86394}{OnManufactureLoadData}}();\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnManufactureAddNew();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_af886300989a86408acd15cbf5f261a9c}{OnVendorSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a08640859a8e18597832d490598ac8c3d}{OnVendorSelendok}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVendorSetfocus();\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVendorKillfocus();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ab0886b570ea26a7526c29110f48743e3}{OnVendorLoadData}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnVendorAddNew();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPurchasePriceChange();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPurchasePriceSetfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPurchasePriceKillfocus();\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a2f014263615506b1607401a3998f0985}{OnPurchasePriceCheckValue}}();\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnApplyDateChange();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnApplyDateSetfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnApplyDateKillfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a55d143e89638447870c53dc6e1131f63}{OnApplyDateCheckValue}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePriceChange();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePriceSetfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePriceKillfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a3a5cefdcedc1fa9a255fa659cccf7b7f}{OnSalePriceCheckValue}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice2Change();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice2Setfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice2Killfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ae97ed17e54c6196c9a78b29cb2929036}{OnSalePrice2CheckValue}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice3Change();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice3Setfocus();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice3Killfocus();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a37a0c656b48475ba41ec444d1a8dac35}{OnSalePrice3CheckValue}}();\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice4Change();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice4Setfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSalePrice4Killfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a6e0dc8013b282e452235d9b021ffb687}{OnSalePrice4CheckValue}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_afd2e4a7538523d9a4dfad2db257d89d4}{OnIsPaid1Select}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_af4da1598cedd85b357af264f0140a958}{OnIsPaid2Select}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a9470eefad37eee4f67c417442aab68e6}{OnIsPaid3Select}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ae3ccced4b724b3b7ad976a6966de1285}{OnIsPaid4Select}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_aeb286640cd756b9a6a9c3798df41fc30}{OnApplyPaymentLevelSelect}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_ab765dd37b24302496db2fede31c6bce8}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a6edeb007341541663cf701ccc2cd6240}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_aa2e1e589051f7444234b0494840fc8af}{CProductPriceListDialog}}(CWnd\ *pParent,\ \textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_c_product_price_list_dialog_a1a70012e332db4f248186db8cb3de4c5}{\string~CProductPriceListDialog}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_product_price_list_dialog_a0597025dd9257fffb634515ce30ab63c}{OnCreateComponents}}();}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_product_price_list_dialog_acc43f267e81e070a72491f03e7682e0c}{OnInitializeComponents}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_product_price_list_dialog_a28df4e29202ced69c4dadd3aa55b17ed}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_product_price_list_dialog_ae9b5ff76b40cd03793865c02ee03d611}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_product_price_list_dialog_aeef06186bdee98cf7ab93569ec767c8a}{GetDataToScreen}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_product_price_list_dialog_aa3917f64f76fcfb5e909ab2f88d4ee7d}{GetScreenToData}}();}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_product_price_list_dialog_abf0cf8b5009757bc5cfbf2e1148731bd}{SetDefaultValues}}();}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_product_price_list_dialog_a97d1aa6b6d4f395685ac081b5aee49a7}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_product_price_list_dialog_a13f774c174de67ee82f8cfb148aa2dd4}{OnAddProductPriceListDialog}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_product_price_list_dialog_a3668f005aea68f1c7f9921e3ed143821}{OnEditProductPriceListDialog}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_product_price_list_dialog_ac495bac9ff962f182ad713f329e328e2}{OnDeleteProductPriceListDialog}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_product_price_list_dialog_a73028bc4fa5e9fd2c9d797ed44ee92da}{OnSaveProductPriceListDialog}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_product_price_list_dialog_aa76606a614801441f13fc31e33ce30c1}{OnCancelProductPriceListDialog}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_product_price_list_dialog_a29346c78edf287f7620609546701f204}{OnProductPriceListDialogListLoadData}}();\ }
+\DoxyCodeLine{00138\ \};}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

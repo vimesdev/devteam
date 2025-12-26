@@ -1,0 +1,59 @@
+\doxysection{ATM.\+h}
+\hypertarget{_a_t_m_8h_source}{}\label{_a_t_m_8h_source}\index{Include/HMSCore/ATM.h@{Include/HMSCore/ATM.h}}
+\mbox{\hyperlink{_a_t_m_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ATM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ATM\_H}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_t_m_card_reader}{ATMCardReader}};}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{extern}\ AFX\_EXT\_CLASS\ UINT\ \mbox{\hyperlink{_a_t_m_8h_a948845f3798e866fddb161848e629812}{WM\_ON\_CARD\_CONNECTED}};}
+\DoxyCodeLine{00006\ \textcolor{keyword}{extern}\ AFX\_EXT\_CLASS\ UINT\ \mbox{\hyperlink{_a_t_m_8h_a815ff1eda53017997670e58c5cbe9e26}{WM\_ON\_CARD\_DISCONNECT}};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{extern}\ AFX\_EXT\_CLASS\ UINT\ \mbox{\hyperlink{_a_t_m_8h_a7c91c987bd68646d48560726f906748f}{WM\_ON\_REFRESH\_DATA}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_a_t_m_runner_a656b28ca51414b05c96993c2389b93ad}{ATMRunner}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ HANDLE\ \ \mbox{\hyperlink{class_a_t_m_runner_aba40062cb4a3fc5b4994c596fcadf766}{m\_hThread}};}
+\DoxyCodeLine{00011\ \ \ \ \ HANDLE\ \ \mbox{\hyperlink{class_a_t_m_runner_a2013526c9a662b28113054c7a0218641}{m\_hStop}};}
+\DoxyCodeLine{00012\ \ \ \ \ DWORD\ \ \ \mbox{\hyperlink{class_a_t_m_runner_ae2eeffdf99843e840a22ac124974d265}{m\_trdID}};}
+\DoxyCodeLine{00013\ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ DWORD\ WINAPI\ \mbox{\hyperlink{class_a_t_m_runner_ac6aaeddca70c8c8b39ecdd3edcc89420}{sThreadProc}}(LPVOID\ lpParameter);}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_a_t_m_runner_a656b28ca51414b05c96993c2389b93ad}{ATMRunner}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_a_t_m_runner_afa4f9fcf2d4de0555bcafa0f19045acc}{\string~ATMRunner}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ DWORD\ \mbox{\hyperlink{class_a_t_m_runner_a8940e89f8e89045a66124bd7f9b15465}{ThreadMain}}()\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ DWORD\ \ \ \mbox{\hyperlink{class_a_t_m_runner_adde3c77f12f3f31f7a75cfaf8312f547}{getID}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_a_t_m_runner_ae2eeffdf99843e840a22ac124974d265}{m\_trdID}};\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_runner_aaf8edc711c988f80edb1fb2c41f2f06a}{Run}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_runner_a208e5a9530e4a45ff2f195d3babc8a66}{Stop}}();}
+\DoxyCodeLine{00023\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_a_t_m_runner_a615af855408644cb830160570d889659}{WaitForStop}}(DWORD\ ms);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_runner_a16217c96e64cd1f6ffdb71e74a6961e5}{postMessage}}(UINT\ Msg,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_a_t_m_a8de72cd8ff2fff9e805758147e42de8a}{ATM}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_a_t_m_runner_a656b28ca51414b05c96993c2389b93ad}{ATMRunner}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_a_t_m_aa356e6981f9bb29794dab1b4da4887e4}{m\_running}};}
+\DoxyCodeLine{00033\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_a_t_m_aae3453b11f52a19d5ccea8dde5a61ead}{m\_cardActive}};}
+\DoxyCodeLine{00034\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_a_t_m_a46e1ecafa7c7bf6cc45d7cad2a27a3ea}{m\_readerName}};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_a_t_m_card_reader}{ATMCardReader}}*\ \ \mbox{\hyperlink{class_a_t_m_ac52ff396dec932d869d2eda82ec287da}{m\_atmCardReader}};}
+\DoxyCodeLine{00036\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \mbox{\hyperlink{class_a_t_m_a1434bbba00b77e613a08c1f2a2294f75}{m\_pParentWnd}};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_a_t_m_a8de72cd8ff2fff9e805758147e42de8a}{ATM}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_a_t_m_a5e11077812cb935af83419d359fa2aa4}{\string~ATM}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_a_t_m_a0328c61a5eda384830d7d6ec4ba77eec}{Init}}(CWnd*\ pParent);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_a725fffc4b35c9fdf8e51330c45dc4d6f}{Config}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \mbox{\hyperlink{class_a_t_m_a688bcda90796bb7777ccf69aae2b9c5f}{Register}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_a3487579816e127f31fccbc3088d860e3}{UnRegister}}();}
+\DoxyCodeLine{00043\ \ \ \ \ CString\ \mbox{\hyperlink{class_a_t_m_a76607c88c2c189ca9bc68fdcae53fc7d}{GetActiveCardId}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ DWORD\ \mbox{\hyperlink{class_a_t_m_ac937f293ad4912624283db28a5038df5}{ThreadMain}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_aedb0c78d029a35d954be1d1a889a78c3}{SendMessage}}(CString\ szCardId);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_a2fa1952180f8479f26a9e90a2d4df908}{Disconnect}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_a_t_m_a25c25f06c4f221a59ca3fb328937a2bd}{OnTimer}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_a_t_m_card_reader}{ATMCardReader}}*\ \mbox{\hyperlink{class_a_t_m_a84ffa1e278fc589f894f70decd5be8b9}{GetCardReader}}()\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_a_t_m_ac52ff396dec932d869d2eda82ec287da}{m\_atmCardReader}};\ \}}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

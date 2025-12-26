@@ -1,0 +1,1769 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="class_c_web_view2_view" kind="class" language="C++" prot="public">
+    <compoundname>CWebView2View</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">CView</basecompoundref>
+    <includes refid="_web_view2_view_8h" local="no">WebView2View.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_web_view2_view_1a63f94e35cbb24cc928e5da9f0340e16e" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long CWebView2View::m_Id</definition>
+        <argsstring></argsstring>
+        <name>m_Id</name>
+        <qualifiedname>CWebView2View::m_Id</qualifiedname>
+        <briefdescription>
+<para>ID duy nhất của view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="37" column="6" bodyfile="Include/HMSCore/WebView2View.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a35fd301e2be8c19a4540a3c151162686" prot="private" static="no" mutable="no">
+        <type>wil::com_ptr&lt; ICoreWebView2Controller &gt;</type>
+        <definition>wil::com_ptr&lt;ICoreWebView2Controller&gt; CWebView2View::m_webViewController</definition>
+        <argsstring></argsstring>
+        <name>m_webViewController</name>
+        <qualifiedname>CWebView2View::m_webViewController</qualifiedname>
+        <briefdescription>
+<para>WebView2 controller để điều khiển WebView. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="40" column="14" bodyfile="Include/HMSCore/WebView2View.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a0e84286a701ae99eed74ef8bab7bf45a" prot="private" static="no" mutable="no">
+        <type>wil::com_ptr&lt; ICoreWebView2 &gt;</type>
+        <definition>wil::com_ptr&lt;ICoreWebView2&gt; CWebView2View::m_webView</definition>
+        <argsstring></argsstring>
+        <name>m_webView</name>
+        <qualifiedname>CWebView2View::m_webView</qualifiedname>
+        <briefdescription>
+<para>WebView2 core object để hiển thị web content. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="41" column="14" bodyfile="Include/HMSCore/WebView2View.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1ac39c85fab5eadab0dcbacd93fff55e96" prot="private" static="no" mutable="no">
+        <type>std::wstring</type>
+        <definition>std::wstring CWebView2View::m_initialUri</definition>
+        <argsstring></argsstring>
+        <name>m_initialUri</name>
+        <qualifiedname>CWebView2View::m_initialUri</qualifiedname>
+        <briefdescription>
+<para>URI ban đầu để load khi khởi tạo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="42" column="14" bodyfile="Include/HMSCore/WebView2View.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a639228ae23fba6709d01dc63b655d4e3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CWebView2View::m_isWebViewReady</definition>
+        <argsstring></argsstring>
+        <name>m_isWebViewReady</name>
+        <qualifiedname>CWebView2View::m_isWebViewReady</qualifiedname>
+        <briefdescription>
+<para>Cờ xác định WebView đã sẵn sàng chưa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="43" column="6" bodyfile="Include/HMSCore/WebView2View.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1abe260e6fb4c142294f155570e6c38cb3" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; CWebView2View::m_onWebViewFirstInitialized</definition>
+        <argsstring></argsstring>
+        <name>m_onWebViewFirstInitialized</name>
+        <qualifiedname>CWebView2View::m_onWebViewFirstInitialized</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Callback được gọi khi WebView được khởi tạo lần đầu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="45" column="15" bodyfile="Include/HMSCore/WebView2View.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a8b58f50ffde68f0b2ce2cdab13df0952" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken CWebView2View::m_WebMessageReceivedToken</definition>
+        <argsstring></argsstring>
+        <name>m_WebMessageReceivedToken</name>
+        <qualifiedname>CWebView2View::m_WebMessageReceivedToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Token đăng ký event nhận message từ web. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="48" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a3552f5150f2366097c0007d5aa96cfec" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken CWebView2View::m_NavigationStartingToken</definition>
+        <argsstring></argsstring>
+        <name>m_NavigationStartingToken</name>
+        <qualifiedname>CWebView2View::m_NavigationStartingToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Token đăng ký event bắt đầu navigation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="49" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a08254859ecf8f4746f03a0d1bc42b130" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken CWebView2View::m_NavigationCompletedToken</definition>
+        <argsstring></argsstring>
+        <name>m_NavigationCompletedToken</name>
+        <qualifiedname>CWebView2View::m_NavigationCompletedToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Token đăng ký event hoàn thành navigation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="50" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a284edeed3eb43b3df15f7901369b4130" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken CWebView2View::m_ProcessFailedToken</definition>
+        <argsstring></argsstring>
+        <name>m_ProcessFailedToken</name>
+        <qualifiedname>CWebView2View::m_ProcessFailedToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Token đăng ký event process failed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="51" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a68ac50346c42c0491aabb2135d64a434" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken CWebView2View::m_DevToolsSecurityToken</definition>
+        <argsstring></argsstring>
+        <name>m_DevToolsSecurityToken</name>
+        <qualifiedname>CWebView2View::m_DevToolsSecurityToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Token đăng ký event DevTools security. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="52" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a2f3b95234196ab416d0ad28ab9b1a0a9" prot="private" static="no" mutable="no">
+        <type>EventRegistrationToken</type>
+        <definition>EventRegistrationToken CWebView2View::m_DevToolsLogToken</definition>
+        <argsstring></argsstring>
+        <name>m_DevToolsLogToken</name>
+        <qualifiedname>CWebView2View::m_DevToolsLogToken</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Token đăng ký event DevTools log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="53" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a44689b5fe752fafdd3ab4edfee065929" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2WebMessageReceivedEventHandler &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2WebMessageReceivedEventHandler&gt; CWebView2View::m_MessageBroker</definition>
+        <argsstring></argsstring>
+        <name>m_MessageBroker</name>
+        <qualifiedname>CWebView2View::m_MessageBroker</qualifiedname>
+        <briefdescription>
+<para>Event handler cho web message received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="56" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a34c8f6f0c2b98122cff074a20d9c5cf0" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2NavigationStartingEventHandler &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2NavigationStartingEventHandler&gt; CWebView2View::m_NavigationStartingBroker</definition>
+        <argsstring></argsstring>
+        <name>m_NavigationStartingBroker</name>
+        <qualifiedname>CWebView2View::m_NavigationStartingBroker</qualifiedname>
+        <briefdescription>
+<para>Event handler cho navigation starting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="57" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a5d0ad016ae0f4f4cc10fdec29b5ceb22" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2NavigationCompletedEventHandler &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2NavigationCompletedEventHandler&gt; CWebView2View::m_NavigationCompletedBroker</definition>
+        <argsstring></argsstring>
+        <name>m_NavigationCompletedBroker</name>
+        <qualifiedname>CWebView2View::m_NavigationCompletedBroker</qualifiedname>
+        <briefdescription>
+<para>Event handler cho navigation completed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="58" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a647df5e9c9929b32078336ac2812d7a7" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2ProcessFailedEventHandler &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2ProcessFailedEventHandler&gt; CWebView2View::m_ProcessFailedBroker</definition>
+        <argsstring></argsstring>
+        <name>m_ProcessFailedBroker</name>
+        <qualifiedname>CWebView2View::m_ProcessFailedBroker</qualifiedname>
+        <briefdescription>
+<para>Event handler cho process failed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="59" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1af8b62fe6dbd9c59ab92ea96aca87d7f0" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2DevToolsProtocolEventReceivedEventHandler &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2DevToolsProtocolEventReceivedEventHandler&gt; CWebView2View::m_devToolsSecurityBroker</definition>
+        <argsstring></argsstring>
+        <name>m_devToolsSecurityBroker</name>
+        <qualifiedname>CWebView2View::m_devToolsSecurityBroker</qualifiedname>
+        <briefdescription>
+<para>Event handler cho DevTools security. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="60" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1a1bfc92bbc4ed9977a46ad4f2fcae34cc" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2DevToolsProtocolEventReceivedEventHandler &gt;</type>
+        <definition>Microsoft::WRL::ComPtr&lt;ICoreWebView2DevToolsProtocolEventReceivedEventHandler&gt; CWebView2View::m_devToolsLogBroker</definition>
+        <argsstring></argsstring>
+        <name>m_devToolsLogBroker</name>
+        <qualifiedname>CWebView2View::m_devToolsLogBroker</qualifiedname>
+        <briefdescription>
+<para>Event handler cho DevTools log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="61" column="24" bodyfile="Include/HMSCore/WebView2View.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_web_view2_view_1ad0efa6e32d08934909e269196199366a" prot="private" static="no" mutable="no">
+        <type>Microsoft::WRL::Wrappers::Event</type>
+        <definition>Microsoft::WRL::Wrappers::Event CWebView2View::NavigationCompletedEvent</definition>
+        <argsstring></argsstring>
+        <name>NavigationCompletedEvent</name>
+        <qualifiedname>CWebView2View::NavigationCompletedEvent</qualifiedname>
+        <briefdescription>
+<para>Event wrapper cho navigation completed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="63" column="33" bodyfile="Include/HMSCore/WebView2View.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_c_web_view2_view_1a0a16e898210d209520ebf8b5f92c4fd1" prot="public" static="no" mutable="no">
+        <type>CStatic</type>
+        <definition>CStatic CWebView2View::m_Label_View</definition>
+        <argsstring></argsstring>
+        <name>m_Label_View</name>
+        <qualifiedname>CWebView2View::m_Label_View</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="365" column="9" bodyfile="Include/HMSCore/WebView2View.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_web_view2_view_1a37932b296ece8ce68d6eecf24f72325e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::Init</definition>
+        <argsstring>(std::wstring initialUri=L&quot;https://www.bing.com/&quot;, std::function&lt; void()&gt; webviewCreatedCallback=nullptr)</argsstring>
+        <name>Init</name>
+        <qualifiedname>CWebView2View::Init</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>initialUri</declname>
+          <defval>L&quot;https://www.bing.com/&quot;</defval>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>webviewCreatedCallback</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Khởi tạo WebView2. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialUri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URI ban đầu để load (mặc định &quot;https://www.bing.com/&quot;) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>webviewCreatedCallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback được gọi khi WebView được tạo (mặc định nullptr)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Khởi tạo WebView2 environment và controller, sau đó load URI ban đầu. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="71" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a308f89e0a32b06550803787768be2a97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CWebView2View::InitWebView</definition>
+        <argsstring>()</argsstring>
+        <name>InitWebView</name>
+        <qualifiedname>CWebView2View::InitWebView</qualifiedname>
+        <briefdescription>
+<para>Khởi tạo WebView2. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true nếu thành công, false nếu thất bại</para>
+</simplesect>
+Tạo WebView2 controller và đăng ký các event handlers. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="78" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ac4718481ed0d99b50b328a4bee865f26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::SetEventsAndBrokers</definition>
+        <argsstring>()</argsstring>
+        <name>SetEventsAndBrokers</name>
+        <qualifiedname>CWebView2View::SetEventsAndBrokers</qualifiedname>
+        <briefdescription>
+<para>Thiết lập các event và broker. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Đăng ký các event handlers cho WebView2 (message received, navigation, process failed, etc.). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="85" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a7e9d01135aab5154f4427f6998f9974f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::OnCreateEnvironmentCompleted</definition>
+        <argsstring>(HRESULT result, ICoreWebView2Environment *env)</argsstring>
+        <name>OnCreateEnvironmentCompleted</name>
+        <qualifiedname>CWebView2View::OnCreateEnvironmentCompleted</qualifiedname>
+        <param>
+          <type>HRESULT</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>ICoreWebView2Environment *</type>
+          <declname>env</declname>
+        </param>
+        <briefdescription>
+<para>Xử lý khi tạo environment hoàn thành. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HRESULT kết quả </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>env</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Con trỏ đến ICoreWebView2Environment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Callback được gọi khi WebView2 environment được tạo xong. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="94" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a6de1c0f7e92d7f1ca6b566eb86b303b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::OnCreateControllerCompleted</definition>
+        <argsstring>(HRESULT result, ICoreWebView2Controller *controller)</argsstring>
+        <name>OnCreateControllerCompleted</name>
+        <qualifiedname>CWebView2View::OnCreateControllerCompleted</qualifiedname>
+        <param>
+          <type>HRESULT</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>ICoreWebView2Controller *</type>
+          <declname>controller</declname>
+        </param>
+        <briefdescription>
+<para>Xử lý khi tạo controller hoàn thành. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HRESULT kết quả </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controller</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Con trỏ đến ICoreWebView2Controller </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Callback được gọi khi WebView2 controller được tạo xong. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="103" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ada273c6359428b54cd8f2f2ecff85a4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::RunAsync</definition>
+        <argsstring>(std::function&lt; void(void)&gt; callback)</argsstring>
+        <name>RunAsync</name>
+        <qualifiedname>CWebView2View::RunAsync</qualifiedname>
+        <param>
+          <type>std::function&lt; void(void)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Chạy callback bất đồng bộ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback function cần chạy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Post message để chạy callback trên UI thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="110" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a453587d7f4794240d53540d32c483bc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg LRESULT</type>
+        <definition>afx_msg LRESULT CWebView2View::OnRunAsync</definition>
+        <argsstring>(WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>OnRunAsync</name>
+        <qualifiedname>CWebView2View::OnRunAsync</qualifiedname>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+<para>Xử lý message chạy async. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tham số wParam </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tham số lParam (chứa callback function) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Kết quả xử lý message</para>
+</simplesect>
+Thực thi callback function được truyền qua message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="119" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_web_view2_view_1a9d19014fc4ff8d8335b51077661c8fe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CWebView2View::CWebView2View</definition>
+        <argsstring>(LPCTSTR lpszUrl=NULL)</argsstring>
+        <name>CWebView2View</name>
+        <qualifiedname>CWebView2View::CWebView2View</qualifiedname>
+        <param>
+          <type>LPCTSTR</type>
+          <declname>lpszUrl</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Constructor với URL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lpszUrl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL ban đầu để load (mặc định NULL)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Khởi tạo view với URL được chỉ định. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a1ccba81dd200d7a45455bbfe2dde5116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CWebView2View::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>CWebView2View::Initialize</qualifiedname>
+        <briefdescription>
+<para>Khởi tạo WebView từ DLL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true nếu thành công, false nếu thất bại</para>
+</simplesect>
+Load WebView2 DLL và khởi tạo environment. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="141" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a696f28f217326ba6e161352bb160c366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CWebView2View::IsInited</definition>
+        <argsstring>()</argsstring>
+        <name>IsInited</name>
+        <qualifiedname>CWebView2View::IsInited</qualifiedname>
+        <briefdescription>
+<para>Kiểm tra WebView đã được khởi tạo chưa. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true nếu đã khởi tạo, false nếu chưa</para>
+</simplesect>
+Kiểm tra m_isWebViewReady để xác định WebView đã sẵn sàng chưa. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="148" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a81786d2a9f0bfe47450dd50d89132586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <qualifiedname>CWebView2View::Cleanup</qualifiedname>
+        <briefdescription>
+<para>Giải phóng WebView và DLL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cleanup WebView2 controller và environment, giải phóng tài nguyên. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="154" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1abc4adb69e4c742f562a47f7bbf327243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::Browser</definition>
+        <argsstring>(HWND hWnd, std::wstring url, int nShow=SW_SHOW)</argsstring>
+        <name>Browser</name>
+        <qualifiedname>CWebView2View::Browser</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>hWnd</declname>
+        </param>
+        <param>
+          <type>std::wstring</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nShow</declname>
+          <defval>SW_SHOW</defval>
+        </param>
+        <briefdescription>
+<para>Mở browser với URL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle của cửa sổ cha </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL cần load </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cách hiển thị cửa sổ (mặc định SW_SHOW) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Tạo và hiển thị browser window với URL được chỉ định. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="164" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ace54359d7f18fd8384f4dddf9e7dd011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::CreateWebView</definition>
+        <argsstring>(HWND m_hWnd, CRect rect, std::wstring userDataFolder)</argsstring>
+        <name>CreateWebView</name>
+        <qualifiedname>CWebView2View::CreateWebView</qualifiedname>
+        <param>
+          <type>HWND</type>
+          <declname>m_hWnd</declname>
+        </param>
+        <param>
+          <type>CRect</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>std::wstring</type>
+          <declname>userDataFolder</declname>
+        </param>
+        <briefdescription>
+<para>Tạo WebView. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m_hWnd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle của cửa sổ cha </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vùng hiển thị WebView </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userDataFolder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thư mục lưu user data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Tạo WebView2 controller và gắn vào cửa sổ cha với vùng hiển thị được chỉ định. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="174" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a4cf65a427a4999c248e3a69fa4c68579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::Navigate</definition>
+        <argsstring>(std::wstring url)</argsstring>
+        <name>Navigate</name>
+        <qualifiedname>CWebView2View::Navigate</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Navigate đến URL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL cần navigate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Load URL trong WebView. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="182" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ad4bee7586e39c7814ecd984f5a278ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::NavigateToString</definition>
+        <argsstring>(std::wstring content)</argsstring>
+        <name>NavigateToString</name>
+        <qualifiedname>CWebView2View::NavigateToString</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Navigate đến HTML content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HTML content dạng string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Load HTML content trực tiếp vào WebView. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="190" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a77f0f98d54671c6903bfc2882dfe3e67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::GoRoute</definition>
+        <argsstring>(std::wstring url)</argsstring>
+        <name>GoRoute</name>
+        <qualifiedname>CWebView2View::GoRoute</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Điều hướng đến route. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL route </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Navigate đến route URL (có thể xử lý routing đặc biệt). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="198" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a29897e36d082f9fa627942d304ed0fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::ExecuteScriptWithResult</definition>
+        <argsstring>(std::wstring script, std::function&lt; void(const std::wstring &amp;)&gt; callback)</argsstring>
+        <name>ExecuteScriptWithResult</name>
+        <qualifiedname>CWebView2View::ExecuteScriptWithResult</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>script</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(const std::wstring &amp;)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Thực thi JavaScript và nhận kết quả </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>script</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JavaScript code cần thực thi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback function nhận kết quả (chuỗi JSON)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Thực thi JavaScript trong WebView và trả về kết quả qua callback. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="206" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a4da8b855dfa27a28f568fd88251f0794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::SendStringWebMessage</definition>
+        <argsstring>(std::wstring message)</argsstring>
+        <name>SendStringWebMessage</name>
+        <qualifiedname>CWebView2View::SendStringWebMessage</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Gửi message string đến web content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chuỗi message cần gửi</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Gửi message từ native code đến JavaScript trong WebView. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="214" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a361b98eb90657ad501ca065707082825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::AddInitializeScript</definition>
+        <argsstring>(std::wstring script, Microsoft::WRL::ComPtr&lt; ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler &gt; handler=nullptr)</argsstring>
+        <name>AddInitializeScript</name>
+        <qualifiedname>CWebView2View::AddInitializeScript</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>script</declname>
+        </param>
+        <param>
+          <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2AddScriptToExecuteOnDocumentCreatedCompletedHandler &gt;</type>
+          <declname>handler</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Thêm script khởi tạo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>script</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JavaScript code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Completion handler (mặc định nullptr) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Thêm script được thực thi khi document được tạo. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="223" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1adffd88831640a668c79babdaaf822579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HRESULT</type>
+        <definition>HRESULT CWebView2View::InjectScript</definition>
+        <argsstring>(std::wstring script, Microsoft::WRL::ComPtr&lt; ICoreWebView2ExecuteScriptCompletedHandler &gt; handler=nullptr)</argsstring>
+        <name>InjectScript</name>
+        <qualifiedname>CWebView2View::InjectScript</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>script</declname>
+        </param>
+        <param>
+          <type>Microsoft::WRL::ComPtr&lt; ICoreWebView2ExecuteScriptCompletedHandler &gt;</type>
+          <declname>handler</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Inject script vào web page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>script</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JavaScript code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Completion handler (mặc định nullptr) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>HRESULT kết quả thao tác</para>
+</simplesect>
+Inject và thực thi JavaScript trong web page hiện tại. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="232" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1af68d028c52a6cca5adda492f8e42f314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CWebView2View::Login</definition>
+        <argsstring>(LPCTSTR lpszMod=nullptr)</argsstring>
+        <name>Login</name>
+        <qualifiedname>CWebView2View::Login</qualifiedname>
+        <param>
+          <type>LPCTSTR</type>
+          <declname>lpszMod</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Đăng nhập. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lpszMod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Module name (mặc định nullptr) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true nếu thành công, false nếu thất bại</para>
+</simplesect>
+Thực hiện đăng nhập vào hệ thống. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="240" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a70034237b8f39460f506e9915a087538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CWebView2View::IsLoging</definition>
+        <argsstring>()</argsstring>
+        <name>IsLoging</name>
+        <qualifiedname>CWebView2View::IsLoging</qualifiedname>
+        <briefdescription>
+<para>Kiểm tra đang đăng nhập. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true nếu đang đăng nhập, false nếu không</para>
+</simplesect>
+Kiểm tra trạng thái đăng nhập hiện tại. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="247" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a5845c46a98c704deb6f8af6cf415e896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::Resize</definition>
+        <argsstring>(CRect rect)</argsstring>
+        <name>Resize</name>
+        <qualifiedname>CWebView2View::Resize</qualifiedname>
+        <param>
+          <type>CRect</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Resize WebView với CRect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vùng hiển thị mới</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Thay đổi kích thước WebView controller. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="254" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ad4128ad94a24bae52fa476b41ddd97ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::Resize</definition>
+        <argsstring>(RECT bounds=RECT())</argsstring>
+        <name>Resize</name>
+        <qualifiedname>CWebView2View::Resize</qualifiedname>
+        <param>
+          <type>RECT</type>
+          <declname>bounds</declname>
+          <defval>RECT()</defval>
+        </param>
+        <briefdescription>
+<para>Resize WebView với RECT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bounds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vùng hiển thị mới (mặc định RECT rỗng)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Thay đổi kích thước WebView controller. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="261" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ab768a5823343588fd8fa13b04433636b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::Show</definition>
+        <argsstring>(BOOL bShow)</argsstring>
+        <name>Show</name>
+        <qualifiedname>CWebView2View::Show</qualifiedname>
+        <param>
+          <type>BOOL</type>
+          <declname>bShow</declname>
+        </param>
+        <briefdescription>
+<para>Hiển thị/ẩn WebView. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bShow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TRUE để hiển thị, FALSE để ẩn</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Thay đổi trạng thái hiển thị của WebView. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="268" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a4032f07c06a249da31b1355a8061fa49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::ClearCache</definition>
+        <argsstring>()</argsstring>
+        <name>ClearCache</name>
+        <qualifiedname>CWebView2View::ClearCache</qualifiedname>
+        <briefdescription>
+<para>Xóa cache. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Xóa cache của WebView2. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="274" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1abbbebe7d7130c9d557e3d9a43c67ebc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CWebView2View::SetHighDPIAwareness</definition>
+        <argsstring>()</argsstring>
+        <name>SetHighDPIAwareness</name>
+        <qualifiedname>CWebView2View::SetHighDPIAwareness</qualifiedname>
+        <briefdescription>
+<para>Thiết lập High DPI awareness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Thiết lập High DPI awareness cho WebView2. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="280" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a7177b07534b79ade8b65c7697bb8623c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>virtual BOOL CWebView2View::PreCreateWindow</definition>
+        <argsstring>(CREATESTRUCT &amp;cs)</argsstring>
+        <name>PreCreateWindow</name>
+        <qualifiedname>CWebView2View::PreCreateWindow</qualifiedname>
+        <param>
+          <type>CREATESTRUCT &amp;</type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="340" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a64fd99c92156716a36f8def1c88e82f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CWebView2View::OnDraw</definition>
+        <argsstring>(CDC *)</argsstring>
+        <name>OnDraw</name>
+        <qualifiedname>CWebView2View::OnDraw</qualifiedname>
+        <param>
+          <type>CDC *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="341" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1abccb1728c217230b3197e423266eeca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CWebView2View::OnInitialUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>OnInitialUpdate</name>
+        <qualifiedname>CWebView2View::OnInitialUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="343" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a99b719c25fca66e9fd914d11e15b0984" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual CWebView2View::~CWebView2View</definition>
+        <argsstring>()</argsstring>
+        <name>~CWebView2View</name>
+        <qualifiedname>CWebView2View::~CWebView2View</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="350" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a5362435dafe2f3b8d8e3eac743d33c6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>afx_msg void CWebView2View::OnSize</definition>
+        <argsstring>(UINT nType, int cx, int cy)</argsstring>
+        <name>OnSize</name>
+        <qualifiedname>CWebView2View::OnSize</qualifiedname>
+        <param>
+          <type>UINT</type>
+          <declname>nType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="366" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ad0192479e4a7956c8e93489def7f90de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>afx_msg void CWebView2View::OnShowWindow</definition>
+        <argsstring>(BOOL bShow, UINT nStatus)</argsstring>
+        <name>OnShowWindow</name>
+        <qualifiedname>CWebView2View::OnShowWindow</qualifiedname>
+        <param>
+          <type>BOOL</type>
+          <declname>bShow</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>nStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="367" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a5984aeb3a21f7aecc3e3b07a97e5a2d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>LRESULT</type>
+        <definition>virtual LRESULT CWebView2View::WindowProc</definition>
+        <argsstring>(UINT message, WPARAM wParam, LPARAM lParam)</argsstring>
+        <name>WindowProc</name>
+        <qualifiedname>CWebView2View::WindowProc</qualifiedname>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>WPARAM</type>
+          <declname>wParam</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="368" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a2ab4a8e2176f28b7748b847b8122b76b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CWebView2View::OnActivateView</definition>
+        <argsstring>(BOOL bActivate, CView *pActivateView, CView *pDeactiveView)</argsstring>
+        <name>OnActivateView</name>
+        <qualifiedname>CWebView2View::OnActivateView</qualifiedname>
+        <param>
+          <type>BOOL</type>
+          <declname>bActivate</declname>
+        </param>
+        <param>
+          <type>CView *</type>
+          <declname>pActivateView</declname>
+        </param>
+        <param>
+          <type>CView *</type>
+          <declname>pDeactiveView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="370" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a9fc0ad4eabaf3e1d743baf113e1b85e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CWebView2View::PostNcDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>PostNcDestroy</name>
+        <qualifiedname>CWebView2View::PostNcDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="371" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ac7be093b880a4cbdd8977b954feb95a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>afx_msg void CWebView2View::OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>CWebView2View::OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="372" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_c_web_view2_view_1aef4156e296350e1a7d936c68afa65b80" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>static BOOL CWebView2View::InitInstance</definition>
+        <argsstring>(HINSTANCE hInstance)</argsstring>
+        <name>InitInstance</name>
+        <qualifiedname>CWebView2View::InitInstance</qualifiedname>
+        <param>
+          <type>HINSTANCE</type>
+          <declname>hInstance</declname>
+        </param>
+        <briefdescription>
+<para>Khởi tạo instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hInstance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Handle của instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE nếu thành công, FALSE nếu thất bại</para>
+</simplesect>
+Khởi tạo WebView2 environment cho toàn bộ ứng dụng. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="289" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ae0b0ce143d54737e4ed264544441f1c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>static std::wstring CWebView2View::s2ws</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>s2ws</name>
+        <qualifiedname>CWebView2View::s2ws</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Chuyển đổi string sang wstring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chuỗi string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Chuỗi wstring</para>
+</simplesect>
+Utility function để chuyển đổi từ std::string sang std::wstring. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="297" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ad8194c8da0bc8da9ac4f22bf81f8789b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string CWebView2View::ws2s</definition>
+        <argsstring>(const std::wstring &amp;wstr)</argsstring>
+        <name>ws2s</name>
+        <qualifiedname>CWebView2View::ws2s</qualifiedname>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>wstr</declname>
+        </param>
+        <briefdescription>
+<para>Chuyển đổi wstring sang string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wstr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chuỗi wstring </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Chuỗi string</para>
+</simplesect>
+Utility function để chuyển đổi từ std::wstring sang std::string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="305" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ac8376d5ac85d2af8736d1a39c20afa8c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CWebView2View::CheckFailure</definition>
+        <argsstring>(HRESULT hr, LPCWSTR errorMessage)</argsstring>
+        <name>CheckFailure</name>
+        <qualifiedname>CWebView2View::CheckFailure</qualifiedname>
+        <param>
+          <type>HRESULT</type>
+          <declname>hr</declname>
+        </param>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>errorMessage</declname>
+        </param>
+        <briefdescription>
+<para>Kiểm tra lỗi HRESULT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HRESULT cần kiểm tra </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thông báo lỗi</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Kiểm tra HRESULT và throw exception nếu có lỗi. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="313" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a1c36bad4303098234f7dbb2a724289a7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>static std::wstring CWebView2View::GetAppDataDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>GetAppDataDirectory</name>
+        <qualifiedname>CWebView2View::GetAppDataDirectory</qualifiedname>
+        <briefdescription>
+<para>Lấy thư mục AppData. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Đường dẫn thư mục AppData</para>
+</simplesect>
+Lấy đường dẫn thư mục AppData của người dùng. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="320" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a356c8502d79af1cbfa698c6af528dc4a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>static std::wstring CWebView2View::GetFullPathFor</definition>
+        <argsstring>(LPCWSTR relativePath)</argsstring>
+        <name>GetFullPathFor</name>
+        <qualifiedname>CWebView2View::GetFullPathFor</qualifiedname>
+        <param>
+          <type>LPCWSTR</type>
+          <declname>relativePath</declname>
+        </param>
+        <briefdescription>
+<para>Lấy đường dẫn đầy đủ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>relativePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Đường dẫn tương đối </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Đường dẫn đầy đủ</para>
+</simplesect>
+Chuyển đổi đường dẫn tương đối thành đường dẫn đầy đủ. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="328" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a67b2aee2a86f0ffbeefa28c1945376b1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>static std::wstring CWebView2View::GetFilePathAsURI</definition>
+        <argsstring>(std::wstring fullPath)</argsstring>
+        <name>GetFilePathAsURI</name>
+        <qualifiedname>CWebView2View::GetFilePathAsURI</qualifiedname>
+        <param>
+          <type>std::wstring</type>
+          <declname>fullPath</declname>
+        </param>
+        <briefdescription>
+<para>Chuyển đổi file path sang URI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fullPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Đường dẫn file đầy đủ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>URI string</para>
+</simplesect>
+Chuyển đổi đường dẫn file thành URI để load trong WebView. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="336" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_c_web_view2_view_1a2820acd53c5242df89410e7723478ef4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CWebView2View::DoDataExchange</definition>
+        <argsstring>(CDataExchange *pDX)</argsstring>
+        <name>DoDataExchange</name>
+        <qualifiedname>CWebView2View::DoDataExchange</qualifiedname>
+        <param>
+          <type>CDataExchange *</type>
+          <declname>pDX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="345" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1ae5214d64e01d5eb42a4f27699ca86423" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>afx_msg void CWebView2View::OnFilePrintPreview</definition>
+        <argsstring>()</argsstring>
+        <name>OnFilePrintPreview</name>
+        <qualifiedname>CWebView2View::OnFilePrintPreview</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="360" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1a65523fd6d2401502bf7c415c8e3eac53" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>afx_msg void CWebView2View::OnRButtonUp</definition>
+        <argsstring>(UINT nFlags, CPoint point)</argsstring>
+        <name>OnRButtonUp</name>
+        <qualifiedname>CWebView2View::OnRButtonUp</qualifiedname>
+        <param>
+          <type>UINT</type>
+          <declname>nFlags</declname>
+        </param>
+        <param>
+          <type>CPoint</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="361" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_web_view2_view_1af3c5f911010a26961c492c1db836eaa5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>afx_msg void CWebView2View::OnContextMenu</definition>
+        <argsstring>(CWnd *pWnd, CPoint point)</argsstring>
+        <name>OnContextMenu</name>
+        <qualifiedname>CWebView2View::OnContextMenu</qualifiedname>
+        <param>
+          <type>CWnd *</type>
+          <declname>pWnd</declname>
+        </param>
+        <param>
+          <type>CPoint</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Include/HMSCore/WebView2View.h" line="362" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Lớp view tích hợp Microsoft WebView2 để hiển thị web content trong ứng dụng. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Class này kế thừa từ CView, cung cấp WebView2 integration:<itemizedlist>
+<listitem><para>Hiển thị web content sử dụng Microsoft Edge WebView2</para>
+</listitem><listitem><para>Navigate đến URL hoặc HTML content</para>
+</listitem><listitem><para>Execute JavaScript và nhận kết quả</para>
+</listitem><listitem><para>Gửi/nhận messages giữa ứng dụng và web content</para>
+</listitem><listitem><para>Hỗ trợ navigation events và process failure handling</para>
+</listitem><listitem><para>Inject script vào web page</para>
+</listitem><listitem><para>Login và authentication</para>
+</listitem><listitem><para>Clear cache và quản lý cookies</para>
+</listitem><listitem><para>High DPI awareness</para>
+</listitem><listitem><para>Static methods để khởi tạo environment và utility functions </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CView</label>
+      </node>
+      <node id="1">
+        <label>CWebView2View</label>
+        <link refid="class_c_web_view2_view"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CView</label>
+      </node>
+      <node id="1">
+        <label>CWebView2View</label>
+        <link refid="class_c_web_view2_view"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Include/HMSCore/WebView2View.h" line="35" column="1" bodyfile="Include/HMSCore/WebView2View.h" bodystart="36" bodyend="373"/>
+    <listofallmembers>
+      <member refid="class_c_web_view2_view_1a361b98eb90657ad501ca065707082825" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>AddInitializeScript</name></member>
+      <member refid="class_c_web_view2_view_1abc4adb69e4c742f562a47f7bbf327243" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Browser</name></member>
+      <member refid="class_c_web_view2_view_1ac8376d5ac85d2af8736d1a39c20afa8c" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>CheckFailure</name></member>
+      <member refid="class_c_web_view2_view_1a81786d2a9f0bfe47450dd50d89132586" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Cleanup</name></member>
+      <member refid="class_c_web_view2_view_1a4032f07c06a249da31b1355a8061fa49" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>ClearCache</name></member>
+      <member refid="class_c_web_view2_view_1ace54359d7f18fd8384f4dddf9e7dd011" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>CreateWebView</name></member>
+      <member refid="class_c_web_view2_view_1a9d19014fc4ff8d8335b51077661c8fe2" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>CWebView2View</name></member>
+      <member refid="class_c_web_view2_view_1a2820acd53c5242df89410e7723478ef4" prot="protected" virt="virtual"><scope>CWebView2View</scope><name>DoDataExchange</name></member>
+      <member refid="class_c_web_view2_view_1a29897e36d082f9fa627942d304ed0fdf" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>ExecuteScriptWithResult</name></member>
+      <member refid="class_c_web_view2_view_1a1c36bad4303098234f7dbb2a724289a7" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>GetAppDataDirectory</name></member>
+      <member refid="class_c_web_view2_view_1a67b2aee2a86f0ffbeefa28c1945376b1" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>GetFilePathAsURI</name></member>
+      <member refid="class_c_web_view2_view_1a356c8502d79af1cbfa698c6af528dc4a" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>GetFullPathFor</name></member>
+      <member refid="class_c_web_view2_view_1a77f0f98d54671c6903bfc2882dfe3e67" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>GoRoute</name></member>
+      <member refid="class_c_web_view2_view_1a37932b296ece8ce68d6eecf24f72325e" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>Init</name></member>
+      <member refid="class_c_web_view2_view_1a1ccba81dd200d7a45455bbfe2dde5116" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Initialize</name></member>
+      <member refid="class_c_web_view2_view_1aef4156e296350e1a7d936c68afa65b80" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>InitInstance</name></member>
+      <member refid="class_c_web_view2_view_1a308f89e0a32b06550803787768be2a97" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>InitWebView</name></member>
+      <member refid="class_c_web_view2_view_1adffd88831640a668c79babdaaf822579" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>InjectScript</name></member>
+      <member refid="class_c_web_view2_view_1a696f28f217326ba6e161352bb160c366" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>IsInited</name></member>
+      <member refid="class_c_web_view2_view_1a70034237b8f39460f506e9915a087538" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>IsLoging</name></member>
+      <member refid="class_c_web_view2_view_1af68d028c52a6cca5adda492f8e42f314" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Login</name></member>
+      <member refid="class_c_web_view2_view_1a1bfc92bbc4ed9977a46ad4f2fcae34cc" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_devToolsLogBroker</name></member>
+      <member refid="class_c_web_view2_view_1a2f3b95234196ab416d0ad28ab9b1a0a9" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_DevToolsLogToken</name></member>
+      <member refid="class_c_web_view2_view_1af8b62fe6dbd9c59ab92ea96aca87d7f0" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_devToolsSecurityBroker</name></member>
+      <member refid="class_c_web_view2_view_1a68ac50346c42c0491aabb2135d64a434" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_DevToolsSecurityToken</name></member>
+      <member refid="class_c_web_view2_view_1a63f94e35cbb24cc928e5da9f0340e16e" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_Id</name></member>
+      <member refid="class_c_web_view2_view_1ac39c85fab5eadab0dcbacd93fff55e96" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_initialUri</name></member>
+      <member refid="class_c_web_view2_view_1a639228ae23fba6709d01dc63b655d4e3" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_isWebViewReady</name></member>
+      <member refid="class_c_web_view2_view_1a0a16e898210d209520ebf8b5f92c4fd1" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>m_Label_View</name></member>
+      <member refid="class_c_web_view2_view_1a44689b5fe752fafdd3ab4edfee065929" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_MessageBroker</name></member>
+      <member refid="class_c_web_view2_view_1a5d0ad016ae0f4f4cc10fdec29b5ceb22" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_NavigationCompletedBroker</name></member>
+      <member refid="class_c_web_view2_view_1a08254859ecf8f4746f03a0d1bc42b130" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_NavigationCompletedToken</name></member>
+      <member refid="class_c_web_view2_view_1a34c8f6f0c2b98122cff074a20d9c5cf0" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_NavigationStartingBroker</name></member>
+      <member refid="class_c_web_view2_view_1a3552f5150f2366097c0007d5aa96cfec" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_NavigationStartingToken</name></member>
+      <member refid="class_c_web_view2_view_1abe260e6fb4c142294f155570e6c38cb3" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_onWebViewFirstInitialized</name></member>
+      <member refid="class_c_web_view2_view_1a647df5e9c9929b32078336ac2812d7a7" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_ProcessFailedBroker</name></member>
+      <member refid="class_c_web_view2_view_1a284edeed3eb43b3df15f7901369b4130" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_ProcessFailedToken</name></member>
+      <member refid="class_c_web_view2_view_1a8b58f50ffde68f0b2ce2cdab13df0952" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_WebMessageReceivedToken</name></member>
+      <member refid="class_c_web_view2_view_1a0e84286a701ae99eed74ef8bab7bf45a" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_webView</name></member>
+      <member refid="class_c_web_view2_view_1a35fd301e2be8c19a4540a3c151162686" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>m_webViewController</name></member>
+      <member refid="class_c_web_view2_view_1a4cf65a427a4999c248e3a69fa4c68579" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Navigate</name></member>
+      <member refid="class_c_web_view2_view_1ad4bee7586e39c7814ecd984f5a278ea4" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>NavigateToString</name></member>
+      <member refid="class_c_web_view2_view_1ad0efa6e32d08934909e269196199366a" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>NavigationCompletedEvent</name></member>
+      <member refid="class_c_web_view2_view_1a2ab4a8e2176f28b7748b847b8122b76b" prot="public" virt="virtual"><scope>CWebView2View</scope><name>OnActivateView</name></member>
+      <member refid="class_c_web_view2_view_1af3c5f911010a26961c492c1db836eaa5" prot="protected" virt="non-virtual"><scope>CWebView2View</scope><name>OnContextMenu</name></member>
+      <member refid="class_c_web_view2_view_1a6de1c0f7e92d7f1ca6b566eb86b303b2" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>OnCreateControllerCompleted</name></member>
+      <member refid="class_c_web_view2_view_1a7e9d01135aab5154f4427f6998f9974f" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>OnCreateEnvironmentCompleted</name></member>
+      <member refid="class_c_web_view2_view_1ac7be093b880a4cbdd8977b954feb95a6" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>OnDestroy</name></member>
+      <member refid="class_c_web_view2_view_1a64fd99c92156716a36f8def1c88e82f0" prot="public" virt="virtual"><scope>CWebView2View</scope><name>OnDraw</name></member>
+      <member refid="class_c_web_view2_view_1ae5214d64e01d5eb42a4f27699ca86423" prot="protected" virt="non-virtual"><scope>CWebView2View</scope><name>OnFilePrintPreview</name></member>
+      <member refid="class_c_web_view2_view_1abccb1728c217230b3197e423266eeca0" prot="public" virt="virtual"><scope>CWebView2View</scope><name>OnInitialUpdate</name></member>
+      <member refid="class_c_web_view2_view_1a65523fd6d2401502bf7c415c8e3eac53" prot="protected" virt="non-virtual"><scope>CWebView2View</scope><name>OnRButtonUp</name></member>
+      <member refid="class_c_web_view2_view_1a453587d7f4794240d53540d32c483bc0" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>OnRunAsync</name></member>
+      <member refid="class_c_web_view2_view_1ad0192479e4a7956c8e93489def7f90de" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>OnShowWindow</name></member>
+      <member refid="class_c_web_view2_view_1a5362435dafe2f3b8d8e3eac743d33c6c" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>OnSize</name></member>
+      <member refid="class_c_web_view2_view_1a9fc0ad4eabaf3e1d743baf113e1b85e1" prot="public" virt="virtual"><scope>CWebView2View</scope><name>PostNcDestroy</name></member>
+      <member refid="class_c_web_view2_view_1a7177b07534b79ade8b65c7697bb8623c" prot="public" virt="virtual"><scope>CWebView2View</scope><name>PreCreateWindow</name></member>
+      <member refid="class_c_web_view2_view_1a5845c46a98c704deb6f8af6cf415e896" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Resize</name></member>
+      <member refid="class_c_web_view2_view_1ad4128ad94a24bae52fa476b41ddd97ae" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Resize</name></member>
+      <member refid="class_c_web_view2_view_1ada273c6359428b54cd8f2f2ecff85a4b" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>RunAsync</name></member>
+      <member refid="class_c_web_view2_view_1ae0b0ce143d54737e4ed264544441f1c9" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>s2ws</name></member>
+      <member refid="class_c_web_view2_view_1a4da8b855dfa27a28f568fd88251f0794" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>SendStringWebMessage</name></member>
+      <member refid="class_c_web_view2_view_1ac4718481ed0d99b50b328a4bee865f26" prot="private" virt="non-virtual"><scope>CWebView2View</scope><name>SetEventsAndBrokers</name></member>
+      <member refid="class_c_web_view2_view_1abbbebe7d7130c9d557e3d9a43c67ebc3" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>SetHighDPIAwareness</name></member>
+      <member refid="class_c_web_view2_view_1ab768a5823343588fd8fa13b04433636b" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>Show</name></member>
+      <member refid="class_c_web_view2_view_1a5984aeb3a21f7aecc3e3b07a97e5a2d4" prot="public" virt="virtual"><scope>CWebView2View</scope><name>WindowProc</name></member>
+      <member refid="class_c_web_view2_view_1ad8194c8da0bc8da9ac4f22bf81f8789b" prot="public" virt="non-virtual"><scope>CWebView2View</scope><name>ws2s</name></member>
+      <member refid="class_c_web_view2_view_1a99b719c25fca66e9fd914d11e15b0984" prot="public" virt="virtual"><scope>CWebView2View</scope><name>~CWebView2View</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

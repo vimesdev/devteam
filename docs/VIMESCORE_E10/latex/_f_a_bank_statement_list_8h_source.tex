@@ -1,0 +1,113 @@
+\doxysection{FABank\+Statement\+List.\+h}
+\hypertarget{_f_a_bank_statement_list_8h_source}{}\label{_f_a_bank_statement_list_8h_source}\index{Include/VIMESCORE\_E10/FABankStatementList.h@{Include/VIMESCORE\_E10/FABankStatementList.h}}
+\mbox{\hyperlink{_f_a_bank_statement_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FABankStatementDLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FABankStatementDLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright(C)\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2010.\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hay\ Hoang\ Van,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2010.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_m_f_c_pane_8h}{MFCPane.h}}"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{//BAR:\ bank\ receipt}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//BAP:\ bank\ payment}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//BAM:\ bank\ movement}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aaad31311d92cd39880762f20271e6b7d}{CFABankStatementList}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a0f50c9cb5c963f5bc45caca2c64b372c}{m\_nInvoiceID}};}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ab2056738dd0df2e17d615af93bd753e0}{m\_szDocType}};}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ad69389e951c4318ffa472b841e1eb3b9}{m\_wndSearchInformation}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aaabb6c7957a803ed6415f87abb907f30}{m\_wndInvoiceList}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aefb3c449fdb93e26aea6d72bafd1d6bf}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aa38c177d6ea86001e8a660e14f273319}{m\_wndFromDate}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a39a3625225acc2fb1c0b08062d239bf5}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_abdc6f65235b8cf8a5b9181b8f9306d6e}{m\_wndToDate}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ab1f83de5036a287b33f9a708bb372cd6}{m\_wndObjectTypeLabel}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a578bc6e27e77d0cf024aafa90d15dd84}{m\_wndObjectType}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_abda9e310253b16befd5abed082c4665b}{m\_wndInvoiceNoLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a918cd8e750d7fa846e3d700a169eae43}{m\_wndInvoiceNo}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a20924a2f1ca256a4f1e6c703c7897e74}{m\_wndReload}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGridListCtrl\ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a0bb78d8b517db6ccedb4794f97a77b52}{m\_wndList}};}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a6a0f90087f7729a1bd189a0d61fda43d}{m\_wndView}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a1305cfe759464124e237b4b566f4ffb4}{m\_wndAdd}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ae66c2ef25ed0d357dc2142eabcacf4a8}{m\_wndEdit}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a174e466c725794356c03328454c5777c}{m\_wndDelete}};}
+\DoxyCodeLine{00059\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a5473c5da279381d79a9ee71940264a9a}{m\_szFromDate}};}
+\DoxyCodeLine{00060\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_af47ec6ef467df233c4a0e2c7aa739cff}{m\_szToDate}};}
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a11d27ad240263c152758578ce8654512}{m\_szObjectTypeKey}};}
+\DoxyCodeLine{00062\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ac6189641007b2048b00cea33440a660f}{m\_szInvoiceNo}};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a39b34ef85edb10b3bccf65ba174356f1}{OnFromDateCheckValue}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a4edea90b18b77e08b6761aec9ef2a50b}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ac862875bbde2f083828932bed02852a9}{OnObjectTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a27dfaffd306604494de76f552847cd35}{OnObjectTypeSelendok}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectTypeSetfocus();\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnObjectTypeKillfocus();\ }}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a097921ed0ec057374f5c31e3c04042f8}{OnObjectTypeLoadData}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a178e4cc1ee9fa6f4f2b73bc922e93d9f}{OnObjectTypeAddNew}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoChange();\ }}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoSetfocus();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnInvoiceNoKillfocus();\ }}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a543caa91f754caa4b8e45641eb01c3d5}{OnInvoiceNoCheckValue}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a33b99117f4efd0dc0f3de02d2af09d72}{OnReloadSelect}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a622e5062ba09f2d8306f2fa5169156bf}{OnListLoadData}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a86f5dcb125c38cd5ecdc7cf6ab6d3b7c}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a1aca9595aecc11b0fecb27ffe1b4a409}{OnListDblClick}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ad2f9ad1b3748ec30f0fffa3c34d213fb}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_adc0daa6db5d262fdd9a75747f239a2e9}{OnViewSelect}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a1aad30b3d354aaeffc5631420e3ab647}{OnAddSelect}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_acb52caef3d5e18e2b4d0964ece3e57ea}{OnEditSelect}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a4ac0869568634221605871c2fdb2496c}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aaad31311d92cd39880762f20271e6b7d}{CFABankStatementList}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a5798d775e47bdca5e9ad5c5b5001bc04}{\string~CFABankStatementList}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a293985e1c80786144319046a473a88ab}{OnCreateComponents}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ab7ed801fe573ba7c740cf30808780df8}{OnInitializeComponents}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aaa97bdf0f4cd4aa3c5166ca56967e813}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a4c41750dd2dc081a4d770046b049cbb2}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_afb6f31a8cc6b4c321beea0ff78a75305}{GetDataToScreen}}();}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aa72a1cc8c784cfa8248f4c31d46d4b17}{GetScreenToData}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_addf6f304f7e38d8755c77c528e259c6b}{SetDefaultValues}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ac36f6e4a930d3cacdcb7fb965e89362b}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_af83b18b12690b9396b78da607c4be4ed}{OnAddFABankStatementList}}();\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a64dbb8412eaaea9a57a536c7e138ba0c}{OnEditFABankStatementList}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a7a0a629655ea06ddc9238ecf7eb6185f}{OnDeleteFABankStatementList}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_aca4a4e8032c71ee1713e404fc9689b69}{OnSaveFABankStatementList}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_af569777922c78ab49877b3e4a218dd49}{OnCancelFABankStatementList}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_a_bank_statement_list_ab52ab3da784fdf7045f4fca5abe9c779}{OnFABankStatementListListLoadData}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a49792855dbf519cf832cccc62ceb33b1}{SetDocType}}(CString\ szType);}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a752b136976fb9977d81646a25c644e07}{Refresh}}();}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_f_a_bank_statement_list_a27a47e53ef1a25491c417f382f765c48}{Print}}();}
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

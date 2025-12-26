@@ -1,0 +1,189 @@
+\doxysection{HMSSignature\+Transfer.\+h}
+\hypertarget{_h_m_s_signature_transfer_8h_source}{}\label{_h_m_s_signature_transfer_8h_source}\index{Include/HMSCore/HMSSignatureTransfer.h@{Include/HMSCore/HMSSignatureTransfer.h}}
+\mbox{\hyperlink{_h_m_s_signature_transfer_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSSignatureTRANSFER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSSignatureTRANSFER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ Â©\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}ReportPrinter.h"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a7a94d963aaf04a3485611c000095bb24}{CHMSSignatureTransfer}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a23bfb6a2d045001a7629fa09f2442295}{m\_wndgrpPeriot}};}
+\DoxyCodeLine{00050\ \ \ \ \ CReportPrinter*\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aa992d7f651c6a95dd5b1ae20891693cf}{m\_pPrinter}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a1d2922dac66a4c58c60474303bf52837}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a4c8c5c9e11fa1ea5a118fb964b516c02}{m\_wndFromDate}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_acae6ea2c04a5ab2df20efa4b21a931a8}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a0bdd1a26d0593cd2a711f0a7eca1b67d}{m\_wndToDate}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ac6ffa37e674a4ba491c478aa57f7eb27}{m\_wndTypeLabel}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a4b08526b23e09d6c1328fedeb033fff6}{m\_wndType}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ac53d31094a9609733f59233969ea8600}{m\_wndPatientNameLabel}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a985f073ac151fc364e1c437966292e58}{m\_wndPatientName}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a5882dfbb218a0037a699ce8c6fee9a74}{m\_wndDocumentNoLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ad838f750b5091b42ac8b91c3672e77ad}{m\_wndDocumentNo}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a74abe1291bf07457316641b797f998cc}{m\_wndSignUp}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a46878575bcd4412747cb19a87d92da9c}{m\_wndLoad}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ad503911ace789719e53c5cf2f7a26688}{m\_wndList}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a2fba8bca017401056ec5031ea1227f91}{m\_wndDepartmentLabel}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a338190c66935c68e27a4b9ec458d019e}{m\_wndDepartment}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ae86085313a26e5ed6b13a3b0dea5f743}{m\_wndSignCountLabel}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a54311ff114fde367c3e1a67f0d9f7b6d}{m\_wndSignCount}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a62e8b93d98ce8bc8ac56ba5013e222bf}{m\_wndOpen}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ab8e30c584f5e157137e03657d031fe8d}{m\_wndApproval}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ab12086449002fa540c216d4b3e2d3b8b}{m\_wndCancel}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a87dc4f23b9daf6ce39654e8f53d2c5df}{m\_wndAll}};}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a092e8c78b0c5532e31daf69a3695f1fa}{m\_wndSign}};}
+\DoxyCodeLine{00076\ \ \ \ \ CGuiButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a5432bda4e0fc1931dde9e2707cfc21c9}{m\_wndSignBatch}};}
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a8dc6a48b06b071348136ce44887c3dfc}{m\_wndSendBatch}};}
+\DoxyCodeLine{00078\ \ \ \ \ CGuiButton\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a82490e575c299fe86155fde37eb680ad}{m\_wndEMRPreview}};}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ad01e35f0dea29abf3b26b08734e026f0}{m\_szFromDate}};}
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_affda320c75b173016e15a65aeb19bd87}{m\_szToDate}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a9c5924a2427c7e35eccb429a42e08d30}{m\_szTypeKey}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a844700330b9ff27fee7b5fb529646c8e}{m\_szPatientName}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aaa68d0d1abae7d3b1f68d27a1e37161b}{m\_szRptName}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a14f34a6c3668e56fc37f4ae28e7d7508}{m\_nDocumentNo}};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a1f80cb72c768c2741b4be2479875f4d9}{m\_nOrderID}};}
+\DoxyCodeLine{00086\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a59c8510dfeefbafb60754ebe27f5a09b}{m\_szSignatureID}};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//CString\ \ \ m\_szStatusKey;}}
+\DoxyCodeLine{00088\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a9544334c41539f9ee39082d70cfa70ba}{m\_szDepartmentKey}};}
+\DoxyCodeLine{00089\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a796f6559b2679fd917f2c9d229be87d9}{m\_szSignCountKey}};}
+\DoxyCodeLine{00090\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a8da6161448a8ab036861bb0630d376ae}{m\_szFormID}};}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a919289e4828a7836d4d6271b3286e1fa}{m\_nState}};}
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ad1de60220dc22bb2e8a1542b4d5dbfac}{m\_nScale}};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a3fd1d4e738fbc830dde187293e66ca68}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a8c95b973ae4f707aef37dae30a9b9862}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_afc65356e8ad8e5ed436893ba4cc48a25}{OnTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_adf6a988f10faf67f8535dedf0b01c5b7}{OnTypeSelendok}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeSetfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeKillfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aec6d7063367dd25426732d1464693633}{OnTypeLoadData}}();\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTypeAddNew();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameChange();\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameSetfocus();\ }}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPatientNameKillfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a3a4a71e9c0ed8b0c44ba5771761a4e13}{OnPatientNameCheckValue}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoChange();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoSetfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocumentNoKillfocus();\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a8bcc7ae48ec7f976edce81a6f596c162}{OnDocumentNoCheckValue}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a1e39d35953d31fca4c6d900d62d1f9c7}{OnSignUpSelect}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a76d3549795df9e64af63dc2f0e98a37e}{OnLoadSelect}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a41bcd994c84bb8bc1cacb843ec5117cc}{OnListLoadData}}();\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ae3b42d4390b67967754fb713c0d64eef}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a3039da7063c61d0759ddc7e5cc028f71}{OnListDblClick}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aaf83532fc4008c404c85807e8405ff8a}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a92259169cdef6b8fee4ffda43fd6e68a}{OnListSignaturePDFItem}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a5f4100a32bdcbea36add3aa68d546f41}{OnListSignatureXMLItem}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a4929dce8f684c34812e093c2bdf2f257}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a2602f07b11f575e0b884e45b01de27f0}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ac6e867e6c429f3df665dd8f29d65a088}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aaa00c5fa32363d4ce24aacfeabcf6b8e}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ad3b7c53b063fa9d48dbda9d9b0b8b298}{OnDepartmentSelendok}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentSetfocus();\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentKillfocus();\ }}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a5edd360f07a670703d03f1b2c95969eb}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentAddNew();}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a4c22abc7b768525b1cc8bb2a60f7c257}{OnSignCountSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a615a3fbfc40e01455678bbb9cbd56496}{OnSignCountSelendok}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnSignCountSetfocus();}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnSignCountKillfocus();}}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a0656a698ed945c35a518a9ad79b2d4f2}{OnSignCountLoadData}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnSignCountAddNew();}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a27fb59324c894c073e8e4c157e904e19}{OnListViewRecordPatient}}();}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_adea059889784a482e1a8c4dd8074ffd3}{OnCreateXML}}(\textcolor{keywordtype}{long}\ nDocno,\ \textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{int}\ nType,\ CString\ szName);}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a96fd1990f6d736f617904ccf28dfd73e}{OnSignatureXML}}(\textcolor{keywordtype}{long}\ nDocno,\ \textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{int}\ nType,\ CString\ szName);}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_acebd8288db533c9fda20307070b3e9d6}{OnPostXML}}(\textcolor{keywordtype}{long}\ nDocno,\ \textcolor{keywordtype}{long}\ nOrderID,\ \textcolor{keywordtype}{int}\ nType,\ CString\ szName);}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a1c6fb46c88f62ee43c7c0d51949f2fff}{OnOpenSelect}}();\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_adb6be46f97a9df5692348e43cba6aaff}{OnApprovalSelect}}();\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a4681dcd88c6eac6da2db17413d5fe45e}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_acddc57225e4ae2715238c7500180f3dd}{OnAllSelect}}();}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a1d79d9546f32a28164f471556054d5bb}{OnSignSelect}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aa012f0df23bddb7ad40c72aa34d51bcc}{OnSignBatchSelect}}();\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a33338c6747de0d17a3c366a4676f820e}{OnSendBatchSelect}}();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ad04ea73f103ec556b999e4ad6c297b5d}{OnEMRPreviewSelect}}();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a58ebcb8f06e175155e87f1fa548bc3db}{OnClearMarkedSelect}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a7a94d963aaf04a3485611c000095bb24}{CHMSSignatureTransfer}}();}
+\DoxyCodeLine{00161\ \ \ \ \ }
+\DoxyCodeLine{00166\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ac711b7bf54d5241c28f4014cd8c47306}{\string~CHMSSignatureTransfer}}();}
+\DoxyCodeLine{00167\ \ \ \ \ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a1840405d7fdbe7507a3ce3042955ed4a}{OnCreateComponents}}();}
+\DoxyCodeLine{00173\ \ \ \ \ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_afdb9e5bf72b5600b055e700199158335}{OnInitializeComponents}}();}
+\DoxyCodeLine{00179\ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_afc0d83c61a6e09daba595d2df59dfdac}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00185\ \ \ \ \ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a6127f59f87d4b5470fac53ddd1e55dac}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00192\ \ \ \ \ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_af95951c4dc73321d39bfc000d59fcff1}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00199\ \ \ \ \ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a40428f1b0a74e8e9d721e24e83e57e19}{GetDataToScreen}}();}
+\DoxyCodeLine{00205\ \ \ \ \ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a6946464d5591097b2bd3b45e4bacb40c}{GetScreenToData}}();}
+\DoxyCodeLine{00211\ \ \ \ \ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_adab55098a98ec20128a45a4156800736}{SetDefaultValues}}();}
+\DoxyCodeLine{00217\ \ \ \ \ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a4ad8437e01c6500316cfce12beae6e70}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00225\ \ \ \ \ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a46d463e9149bdd906f7e64d348d6df13}{OnAddHMSSignatureTransfer}}();\ }
+\DoxyCodeLine{00232\ \ \ \ \ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aae2c74be9cfd1175422b335a1415da1c}{OnEditHMSSignatureTransfer}}();\ }
+\DoxyCodeLine{00239\ \ \ \ \ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a6d8cab5cdd2935785a51cab7affe4257}{OnDeleteHMSSignatureTransfer}}();\ }
+\DoxyCodeLine{00246\ \ \ \ \ }
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_aa9ee2b06339092b59a66ccd71e716a1c}{OnSaveHMSSignatureTransfer}}();\ }
+\DoxyCodeLine{00253\ \ \ \ \ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a6847e1663cb2f6bbe04bdab90f659961}{OnCancelHMSSignatureTransfer}}();\ }
+\DoxyCodeLine{00260\ \ \ \ \ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_adb211ec5471403459ba661e6406f3f62}{OnHMSSignatureTransferListLoadData}}();\ }
+\DoxyCodeLine{00267\ \ \ \ \ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a51d7af44bbbd7ee52ffb36a66c6c7f34}{OnResizeLayout}}();}
+\DoxyCodeLine{00273\ \ \ \ \ }
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_ae00f9765ea2afa6c3ecef8302c484daa}{OnCommand}}(WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00282\ \ \ \ \ }
+\DoxyCodeLine{00287\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00288\ \ \ \ \ }
+\DoxyCodeLine{00289\ \ \ \ \ }
+\DoxyCodeLine{00296\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_signature_transfer_a07003cecf4af4d02ef76e65417d1b175}{OnSize}}(UINT\ nType,\ \textcolor{keywordtype}{int}\ cx,\ \textcolor{keywordtype}{int}\ cy);}
+\DoxyCodeLine{00297\ \};}
+\DoxyCodeLine{00298\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

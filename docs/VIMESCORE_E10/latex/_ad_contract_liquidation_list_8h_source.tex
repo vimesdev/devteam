@@ -1,0 +1,113 @@
+\doxysection{Ad\+Contract\+Liquidation\+List.\+h}
+\hypertarget{_ad_contract_liquidation_list_8h_source}{}\label{_ad_contract_liquidation_list_8h_source}\index{Include/VIMESCORE\_E10/AdContractLiquidationList.h@{Include/VIMESCORE\_E10/AdContractLiquidationList.h}}
+\mbox{\hyperlink{_ad_contract_liquidation_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ADCONTRACTLIQUIDATIONLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ADCONTRACTLIQUIDATIONLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ ©\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_af874002fddbc4ab781d5e1894f293378}{CAdContractLiquidationList}}\ :\ \textcolor{keyword}{public}\ CGuiView\{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a431144d0783bc1825417af9d9e0a9538}{m\_nContractId}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ae8c4d46253549ce82884ff8f28b4b4a6}{m\_nOrderId}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_afa742b42df8ac0bf0dbbb1fcd345c410}{m\_bComInit}};}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_abbaebd42713a558f1124678bc5a2e981}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00037\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a0bcb5c70bdac39efeb80217ee70b907f}{m\_wndFromDate}};}
+\DoxyCodeLine{00038\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a19cf7df598383123c57be2328f1e443e}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00039\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_adfec701cfb6f37c2bc9d823ae1624ac2}{m\_wndContractInformation}};}
+\DoxyCodeLine{00040\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a94a0e988453fec64b1d5c7d042aca73b}{m\_wndToDate}};}
+\DoxyCodeLine{00041\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aac712e623207266a13275eb98dc24d71}{m\_wndSearchLabel}};}
+\DoxyCodeLine{00042\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aa3405f9b42048b9c0defb7e365115acd}{m\_wndSearch}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a59d191c723831e2f758af44724c888a2}{m\_wndRefresh}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ab5e28dc6f87346a7b5c50cfd8306bc89}{m\_wndAll}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a981d1c9a2f6dbe2241761d18c3fa21e1}{m\_wndOpen}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a580ef1859f5cc063ad4dfae7fdeedc90}{m\_wndCreated}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a44df55617edd9a135e9a99f5db4a9fa7}{m\_wndApproved}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ab4894892ded676dfb713f4d608860acb}{m\_wndCreate}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aca3d0066d355cddb39890f48d76fa2b1}{m\_wndDelete}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a7a963222e49663d3dd8912272aac4a96}{m\_wndApproval}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aaa88cf5c5e60af8b353c3426929b0dcb}{m\_wndPrint}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a078db81da7a8276ab95d706d3a66dd4c}{m\_wndList}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a9c1dd769168ec4cf7439cdc0a135413a}{m\_wndInvoices}};}
+\DoxyCodeLine{00054\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ad47590fcfe5a41516c7100691cb9f02f}{m\_szFromDate}};}
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a87b9b3af2cea5f8e430ddb830a8ab68f}{m\_szToDate}};}
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a31031000359a67f1f45fd3d23cc5506e}{m\_szSearch}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a10924ce88d8f87d1c4e307f86a596507}{m\_nAll}};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_afe808a6dfb740bd93cad3c8f73e7ae1b}{m\_nOpen}};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a98471296c25c45e7e7ba730c5baccd27}{m\_nCreated}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a0b1b83dfa58362151de954cc8c9b7d77}{m\_nApproved}};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a32e124ef0d0c7c241c1bdd079fcfb513}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ace2051c3cee8f84a8b5f448b0340e921}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchChange();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchSetfocus();\ }}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnSearchKillfocus();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a0297bea81cf8d8de3572fd510cb06e63}{OnSearchCheckValue}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a9cca874b25c590ef0f9cc4f01797df3e}{OnRefreshSelect}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aa9ae74336790bada6137a579a0527b5e}{OnAllSelect}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aff0a86c3811e0333e2a9b85956cd9dc5}{OnOpenSelect}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a1ff7ab22e1adf6fc83316eeafeea7878}{OnCreatedSelect}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ab388e68f73050726832ccd179bc2cf0e}{OnApprovedSelect}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_abef7b9f0c1b6c58af91566df2e36f991}{OnCreateSelect}}();\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a651d8a0c213ea622a8fdbeb065599726}{OnDeleteSelect}}();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a7812e39c0606e949ec3279edc43acb0d}{OnApprovalSelect}}();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_abd44bde74c5f49a1b518c9ad6a8d8432}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ad811a47a63e0c599b1c2c49c611bee58}{OnListLoadData}}();\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_adbc91991bee7ac30ab18add0469695ce}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a8c972e7fd2de6ad62f00052104802bbb}{OnListDblClick}}();\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_afe8ae4df9a9b1baba98bec3713987d09}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aab24cefd14cf20ad19e663316c4053e6}{OnInvoicesLoadData}}();\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_abf2e05ed75539fcfd39ef1a9cdd86b36}{OnInvoicesSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a039e51dcb43de15e0a2ac1071f92b192}{OnInvoicesDblClick}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a3998b7e9fcd7af0636a3927de41e399d}{OnInvoicesDeleteItem}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_af874002fddbc4ab781d5e1894f293378}{CAdContractLiquidationList}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_afd098bcd2308d21a5d1618ecc12ad970}{\string~CAdContractLiquidationList}}();}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a554f6f8acd37ac9754188639a1283f5d}{OnCreateComponents}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ac01c805a27e56386c0fba992a52428fa}{OnInitializeComponents}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a88ec22d45e6ddf2d952df36f65280527}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aed7e3f672d33d764be2248a2fabe5b8b}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aef146333d249af9614f847d85b5ae5ef}{UpdateJson}}(BOOL\ bSaveAndValidate);}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a7a22e69081d733e735cd7028b8f4bcf0}{GetDataToScreen}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a2bb5e10f9c743418a4e6b00da7dca397}{GetScreenToData}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a0a3e3d94411669ab72e50f291d6b5c88}{SetDefaultValues}}();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a508f734f4c1c11b1ac0e6c5a59f44655}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a84253bd38548e280e284d4f2037a3e93}{OnAddAdContractLiquidationList}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a2e7e556d6e5751c4723209996bf4cf57}{OnEditAdContractLiquidationList}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_aa06b164478739284251d2dcfa737706f}{OnDeleteAdContractLiquidationList}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a3aa8705270f4eed6579b956dfc335486}{OnSaveAdContractLiquidationList}}();\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_ab609190df961f0dbcdd51d72c0b8ec3c}{OnCancelAdContractLiquidationList}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a7ce17f0c18cbb7e6a798575a780c215f}{OnAdContractLiquidationListListLoadData}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ad_contract_liquidation_list_a739c4961e2ce23ee598201ea0b3fdcda}{OnResizeLayout}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

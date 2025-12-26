@@ -1,0 +1,134 @@
+\doxysection{TMOperation\+Minutes.\+h}
+\hypertarget{_t_m_operation_minutes_8h_source}{}\label{_t_m_operation_minutes_8h_source}\index{Include/HMSCore/TMOperationMinutes.h@{Include/HMSCore/TMOperationMinutes.h}}
+\mbox{\hyperlink{_t_m_operation_minutes_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TMOPERATIONMINUTES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TMOPERATIONMINUTES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a7622ee5a110abf6495aa231eeaf322fe}{CTMOperationMinutes}}\ :\ \textcolor{keyword}{public}\ CGuiDialog}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a20a285c8a0e9095ccf47cd5fa219071a}{m\_nOperationIdx}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_af8986ec61e31902dba62edb1c7b1de30}{m\_szID}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a4784027d2ffb2f63d0765164e14e9fa4}{m\_bSigned}};\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_aab513626216d98537acac52e3147138f}{m\_wndOperationMinutes}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a3e7c80a386a618fa709d1cf33077a51b}{m\_wndDocNoLabel}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a868a44c22ae0ee2e044320be8705a415}{m\_wndDocNo}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a041f72e347ceb420dd329e0e4b40cd1e}{m\_wndNameLabel}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_af31684b50d9f1fc7ee997b00f0dbff45}{m\_wndName}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a62f1781ccf2e274f0c77c44fa21baf06}{m\_wndPostOperationalLabel}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_abb08183d96e08b04c5b86218bb797607}{m\_wndPostOperational}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a63a840f9a9588114f5282d3b60e06397}{m\_wndOperationLabel}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_ac37d55a8961b28d3fd4e32b0adc0838e}{m\_wndOperation}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_ae5e66609381802d3bafe12ea9c39658f}{m\_wndUseMaterialLabel}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a84162cbeeda8cfccc9195820b93a3962}{m\_wndUseMaterial}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a3aed536159bb0c275f869d271f25ecc1}{m\_wndProcessLabel}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a83355c589ffc37aa622cee79b707fc4a}{m\_wndSequence}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_afebbf639993b436097cd746a19035100}{m\_wndProcess}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ CGuiTextCtrl\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a455f64874075b7231504bec729342717}{m\_wndProcessEx}};\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_aa399e50ed6c4b403d1b8ead68140cc7b}{m\_wndAddSequence}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a39b490cf1d74b45d86b6bb38add2f38f}{m\_wndAddImage}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiPictureCtrl\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a6fb9e108f313a16d693dc5ddf363f864}{m\_wndImage}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_ab37cd68961bf2ef2782d3e7edaa7309b}{m\_wndUpdate}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_ae360d15e65ed9f3334ee877b32a6085b}{m\_wndSave}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a4d0987ee4043b59804ff895e99966115}{m\_wndCancel}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a2e7d8d0fff3047bc5c6409b85f461cf3}{m\_wndPrint}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a6ac2737137b611e19b30b8cca9845055}{m\_wndClose}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a5641ef531901e2fa95e17a80a91d3a51}{m\_nDocNo}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a2b82659698d6a812e61e743ef9f5023c}{m\_szName}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a27ef5c7d0938cf6447ffbb8e2dfa61b7}{m\_szItemID}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_af26105adee496665addcb88e7003a572}{m\_szOperation}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_ad82a115466a16a9d7f47a38b65fa0e74}{m\_szUseMaterial}};\ }
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_ab6d552139c0d3aacec37ea9e1e320270}{m\_szSequenceKey}};\ }
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_ad20474a57ec59da9e699e6c47132e113}{m\_szProcess}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_abd277861398e90fb75990b6daf704cbe}{m\_szProcessEx}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a60b4f6b98f82fa8c0b668d96b1399c2c}{m\_szCreatedBy}};\ }
+\DoxyCodeLine{00088\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_t_m_operation_minutes_ae29377c92022dceb829fa5598603fe17}{m\_szPostOperational}};\ }
+\DoxyCodeLine{00089\ \ \ \ \ CDbfMap\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a5e0e2c0c0aba041df0f65f34f78e8185}{m\_hms\_operationTbl}};\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocNoChange();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocNoSetfocus();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDocNoKillfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_aeb70ea65360cff53bff135cd6a6d6fa9}{OnDocNoCheckValue}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameChange();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameSetfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnNameKillfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a1bf00dc4375f872a16163454030b5057}{OnNameCheckValue}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationChange();\ }}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationSetfocus();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOperationKillfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a4af52a56e3e7accb09bc19e7a23cead3}{OnOperationCheckValue}}();\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUseMaterialChange();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUseMaterialSetfocus();\ }}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnUseMaterialKillfocus();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_aa8119e471a24189cefc04c0bdc6ea073}{OnUseMaterialCheckValue}}();\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a0319a2bea6a0415fbbb49e89b9f793bb}{OnSequenceSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_ac6c1e22ee4435127a76f816a675aa56f}{OnSequenceSelendok}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnSequenceSetfocus();}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnSequenceKillfocus();}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a1e939579dae3fff6ed4878ca4926f843}{OnSequenceLoadData}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ void\ \ \ \ \ \ \ \ \ OnSequenceAddNew();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProcessChange();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProcessSetfocus();\ }}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnProcessKillfocus();\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a34b5c23d3878b84d44c39e6d86cdf509}{OnProcessCheckValue}}();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_af7c6bbcd5f2a79bc4fa94bd84b854b78}{OnProcessExCheckValue}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a89bb4da42b6d74c6017c18be1141392c}{OnAddSequenceSelect}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_aa2991a90c00168e0200f536e660bba47}{OnAddImageSelect}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_ab8350e20e234b89fda84e073b6f79e75}{OnUpdateSelect}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_afd7ec3c9db4442a4c2be64f6890cc77d}{OnSaveSelect}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a34298c31bf68994f5b2d474aa548db6e}{OnCancelSelect}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_ac1e33519ea5b6148ec38bf802c426e68}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a2155d5d23d78e5e14b30270d53586388}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a5f67935d9dc9a6059aee8f8bba1a24f4}{OnAddImage}}(CString\ szFile);}
+\DoxyCodeLine{00129\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a63d549571ed56ce2b14f4f35a1068b1b}{OnEditImage}}(CString\ szFile);}
+\DoxyCodeLine{00130\ \ \ \ \ BOOL\ \mbox{\hyperlink{class_c_t_m_operation_minutes_ad209b126eb6393dad9ba99d043582073}{OnRemoveImage}}(CString\ szFile);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a7622ee5a110abf6495aa231eeaf322fe}{CTMOperationMinutes}}(CWnd\ *pParent,\ \textcolor{keywordtype}{long}\ nOperationIdx);}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_c_t_m_operation_minutes_a23282df30e798b8eb592022e8baeb99d}{\string~CTMOperationMinutes}}();}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_aa9fc1aba804c2ef48e08fcc68b349047}{OnCreateComponents}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a308e48c236fb59ebb2d23e78e10f53fc}{OnInitializeComponents}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a1e7999c6c07b6e3420b7bc8d4336726c}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_ab747d4b16a322e8071361e7657c5c8d5}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a3d82393aeb548037fb51e98e5276ac40}{SetDefaultValues}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a2861e135046464f8b5278c23e4a1fd33}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_a864f43629c091c2eec770ef4d59f74e5}{GetDataToScreen}}();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_t_m_operation_minutes_af91c67bb203ffbd7283203c99fde4fed}{GetScreenToData}}();}
+\DoxyCodeLine{00142\ \};}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

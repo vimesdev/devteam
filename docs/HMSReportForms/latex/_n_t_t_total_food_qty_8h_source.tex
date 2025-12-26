@@ -1,0 +1,98 @@
+\doxysection{NTTTotal\+Food\+Qty.\+h}
+\hypertarget{_n_t_t_total_food_qty_8h_source}{}\label{_n_t_t_total_food_qty_8h_source}\index{Include/HMSReportForms/NT/NTTTotalFoodQty.h@{Include/HMSReportForms/NT/NTTTotalFoodQty.h}}
+\mbox{\hyperlink{_n_t_t_total_food_qty_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NTTTotalFoodQty\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NTTTotalFoodQty\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_n_t_t_total_food_qty_a18c394baff4b1256182898cc2996800a}{CNTTTotalFoodQty}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a44a9d067f1285fa70ff97b62cee392a5}{m\_szProductNameStr}};\textcolor{comment}{//Store\ product\ name\ to\ display\ on\ report}}
+\DoxyCodeLine{00034\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_adbb68eef32a13c0f40b13abed535975c}{m\_szProductIDStr}};\textcolor{comment}{//Store\ product\ id\ for\ dynamic\ alias\ on\ query}}
+\DoxyCodeLine{00035\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a2d39b958697bfe1dd3fa736678a50d5f}{m\_szProductNameStr2}};\textcolor{comment}{//Store\ product\ name\ to\ display\ on\ report}}
+\DoxyCodeLine{00036\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_aa4de83671a1cc3b95bd5d4016538dc2c}{m\_szProductIDStr2}};\textcolor{comment}{//Store\ product\ id\ for\ dynamic\ alias\ on\ query}}
+\DoxyCodeLine{00037\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_addb440230898568a33a64296bf00b2fa}{m\_szProductNameStr3}};\textcolor{comment}{//Store\ product\ name\ to\ display\ on\ report}}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a2ecd50c20dd1a668e515fced1cce997a}{m\_szProductIDStr3}};\textcolor{comment}{//Store\ product\ id\ for\ dynamic\ alias\ on\ query}}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a5966754f66b269a73da05686c436b7b3}{m\_szProductNameStr4}};\textcolor{comment}{//Store\ product\ name\ to\ display\ on\ report}}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a1286b450a265a4a480bb86503064d142}{m\_szProductIDStr4}};\textcolor{comment}{//Store\ product\ id\ for\ dynamic\ alias\ on\ query}}
+\DoxyCodeLine{00041\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_aeb4f875355f64a37ef36b7b89a427cd3}{m\_szProductNameStr5}};\textcolor{comment}{//Store\ product\ name\ to\ display\ on\ report}}
+\DoxyCodeLine{00042\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a28f0a1826349c01c810f71b80c779ca6}{m\_szProductIDStr5}};\textcolor{comment}{//Store\ product\ id\ for\ dynamic\ alias\ on\ query}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a7c1cb3b573314ec6bb7373adfaa06730}{m\_wndReportFilter}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a79badd1bd1ba7fbbdea6c630266cd66c}{m\_wndDateLabel}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_aa596f76df94fde969388f05f1d207ca2}{m\_wndDate}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ae267277ab6bda26e7d3cc5ea3c2d67c1}{m\_wndDepartmentLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ae01d649da7ff868b68a5a37711c90161}{m\_wndDepartment}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a4cd3b832b710fb69aab2373f834fe416}{m\_wndAll}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_afb2d9bd97b235b9213c8d03a6c703516}{m\_wndBreakfast}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ae361b24e721f22ea2214c9cbfcad3965}{m\_wndLunch}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a75d43a655842562696a89bbfd93fe6bf}{m\_wndDinner}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a31ff31c7fff0edfad3d496bf43c08e68}{m\_wndHauCan}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a19f243bf9ca2c5f179b56e497d07b311}{m\_wndExport}};}
+\DoxyCodeLine{00055\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ad33f28f96b660055c554ae981bbae70a}{m\_szDate}};}
+\DoxyCodeLine{00056\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a4dd684089493f6d4fced6fe6f06effa0}{m\_szDepartmentKey}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_aaf9fa0abf03bfe8021534c32281a2195}{m\_nAll}};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ab4feb1c388011c05cd225dda707a38b6}{m\_nBreakfast}};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a5e785a220fc2e09de2bf3cea2a900e8a}{m\_nLunch}};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_abaf59e01d2c4aff47c9bf3fdde81e4df}{m\_nDinner}};}
+\DoxyCodeLine{00061\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a9521026e4da1d485cf79e0df6ba50822}{m\_bHauCan}};}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDateChange();\ }}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDateSetfocus();\ }}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDateKillfocus();\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_abac6e0fa3668f1f1af10b7596d30dfd3}{OnDateCheckValue}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a1c09c5c9ab5b6a2396ad62160fde6f0e}{OnDepartmentSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_acbfd88a1cc3a291505a7e36c6b0cb697}{OnDepartmentSelendok}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentSetfocus();\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentKillfocus();\ }}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_add8691607c2d2ededce7ace1d4897433}{OnDepartmentLoadData}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnDepartmentAddNew();\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a37f274b83f6e280e37607c3f1d3fda8d}{OnAllSelect}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a47dcf52b63fd9b1b6f1c4df9f0664c03}{OnBreakfastSelect}}();\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a2cf33a67ff935fc532e4fb1dccd33cda}{OnLunchSelect}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_acf7b5fe175750d5a3785a752dc2f1bb5}{OnDinnerSelect}}();\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_adf779fc0e002baa404ed244653880c89}{OnExportSelect}}();\ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a18c394baff4b1256182898cc2996800a}{CNTTTotalFoodQty}}(CWnd\ *pParent);}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a3ecc2052224455cbe0fbe27f518d043a}{\string~CNTTTotalFoodQty}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ade5d66ca3837619452cf897a228148c1}{OnCreateComponents}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a492ec09d31e91ee9b41ee08773b8cdec}{OnInitializeComponents}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ad304bed04094edb10dc9ef389c529b58}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_aea6082b6fe1cd9ee5cf77b4f4bb6dd86}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a67a79b1420ded0beb6bbfc1894aceade}{GetDataToScreen}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a906d19685ed0aa1ad79ce4b686212647}{GetScreenToData}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ad15705382d9222da69baf7678f997c3c}{SetDefaultValues}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_af04757ccac8dfc91f4c6f1fc9b6fbfb9}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a200d151f8e00781b66f6a75cf03b1a76}{OnAddNTTTotalFoodQty}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a1d0eb6924c2af71f055924c3cbdf5f3d}{OnEditNTTTotalFoodQty}}();\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a05c65ffa9d9f565af5c0a4af16e33160}{OnDeleteNTTTotalFoodQty}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_a9f3db0741fe89255449de31f1640a25a}{OnSaveNTTTotalFoodQty}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_aa9378d8bfa8c25735cda569e5b027c50}{OnCancelNTTTotalFoodQty}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_aa1b6ad9efe4849e213fad89085cabf6e}{OnNTTTotalFoodQtyListLoadData}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_n_t_t_total_food_qty_ae114aea6637b5b99d77a2b6aaccdf827}{GetQueryStringTotal}}();}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

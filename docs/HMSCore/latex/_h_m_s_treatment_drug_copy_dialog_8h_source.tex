@@ -1,0 +1,88 @@
+\doxysection{HMSTreatment\+Drug\+Copy\+Dialog.\+h}
+\hypertarget{_h_m_s_treatment_drug_copy_dialog_8h_source}{}\label{_h_m_s_treatment_drug_copy_dialog_8h_source}\index{Include/HMSCore/HMSTreatmentDrugCopyDialog.h@{Include/HMSCore/HMSTreatmentDrugCopyDialog.h}}
+\mbox{\hyperlink{_h_m_s_treatment_drug_copy_dialog_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HMSTREATMENTDRUGCOPYDIALOG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HMSTREATMENTDRUGCOPYDIALOG\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListView.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a36dac817650178026ef6d549208eaeee}{CHMSTreatmentDrugCopyDialog}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a1d7c48faead5a589e24d6f202289a14c}{m\_nDocumentNo}};\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a51b2d107274ac40248a27c75342ee3bc}{m\_nTreatIdx}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_ada59cd09ec1a8b9cfb76caefe32b284f}{m\_nOldTreatIdx}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a31ab42d48833d87b87c1ce508873a08d}{m\_szOrderDate}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ CDbfMap\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a83a73b1dfe254e4c2350a9f35d16b406}{m\_hms\_ipharmaorderTbl}};\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a29509c6d5146b79107f635a089d4dbe6}{m\_wndOrderInfo}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a358e7ed6d1f63c217e8d2fcb7272fb0e}{m\_wndDrugInformation}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGridListView\ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a583900afc53f365f008ec20c5502a925}{m\_wndOrderList}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a69518736be90f80ea9ae0e7e16f894b5}{m\_wndList}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a4a95b949451da4da9d62088246783208}{m\_wndApply}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a8ca7996c3e9dfe760c917c53a705d2ba}{m\_wndClose}};\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a4a9412ef9d02d587431fb2a415262061}{m\_wndPeriodLabel}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a08bfa0ae64d42ddd6c169af95a6524ef}{m\_wndPeriod}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a36d1d39859401752db758fffd604153f}{m\_szPeriodKey}};\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a06077e8d6eba70438ded642a9f38c6d6}{OnOrderListLoadData}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a0ec3df01fbb5be2b278290fb30392608}{OnOrderListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a0438570664b295b4d36796a4024c2ca5}{OnOrderListDblClick}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a44f4c70cb3f35f4926647d3b19db4f9b}{OnOrderListDeleteItem}}();\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a6a4b5fbd3fdf51d094b9134039e84aad}{OnListLoadData}}();\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_aa09c5ad34d375dfea92f742b91e98501}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_ae721398c57e36ee733494eb1316b77cf}{OnListDblClick}}();\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_aaeb741d22188a93a949f3600235bce8c}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_aafb2082a67b44c22f401eaf1f24e8ce9}{OnApplySelect}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_acb33737a92545b6c6fcf454067c34461}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a951d2304c2c2cc3930013ee92b733129}{OnPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a9c05e781f91b495b4e05bda8de49b3c8}{OnPeriodSelendok}}();\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPeriodSetfocus();\ }}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPeriodKillfocus();\ }}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_aa0d0fb031ddd4b50da5772c1a8c0c9e0}{OnPeriodLoadData}}();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnPeriodAddNew();\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a36dac817650178026ef6d549208eaeee}{CHMSTreatmentDrugCopyDialog}}(CWnd\ *pParent);}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a813f2ae642cb1cbc86ff54c4c4ca3314}{\string~CHMSTreatmentDrugCopyDialog}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a8ed188ff38b92ebf3115a60bdd79479b}{OnCreateComponents}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_abda66da088985fd669a9ed6adffe6310}{OnInitializeComponents}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_ab6c6ecfa06cfa41da7fdb1affbdd4c47}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a52e80592e6c044b291ed1a50b197b69c}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a0b3ae2200aa6ea488ee685a976d7f3ea}{GetDataToScreen}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_aa46f7d0ebd2ce3fade07056517d8fcec}{GetScreenToData}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a95869d5253b519613ed45fd1742495fe}{SetDefaultValues}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a69c147014f5e692e6cee5b4c9cb05cf3}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a4f34aeb1b74ff81e2ce159a1a8ac9e4e}{OnAddHMSTreatmentDrugCopyDialog}}();\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a9810e27a36a739e451c58360bbeb54f0}{OnEditHMSTreatmentDrugCopyDialog}}();\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_aec86ebb4036bcb3208ffa86f64455372}{OnDeleteHMSTreatmentDrugCopyDialog}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_a656ec575b32ac9c6459f608bba752543}{OnSaveHMSTreatmentDrugCopyDialog}}();\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_ac4aa4c5c8cba2403e55a814fbd90749d}{OnCancelHMSTreatmentDrugCopyDialog}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_h_m_s_treatment_drug_copy_dialog_af9ddc780c8dd94f1b37854f38af7b3ac}{OnHMSTreatmentDrugCopyDialogListLoadData}}();\ }
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

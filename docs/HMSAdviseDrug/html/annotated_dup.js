@@ -1,0 +1,25 @@
+var annotated_dup =
+[
+    [ "CColistin_calculator", "class_c_colistin__calculator.html", "class_c_colistin__calculator" ],
+    [ "CHMSAdviseChatMessage", "class_c_h_m_s_advise_chat_message.html", "class_c_h_m_s_advise_chat_message" ],
+    [ "CHMSAdviseColistin", "class_c_h_m_s_advise_colistin.html", "class_c_h_m_s_advise_colistin" ],
+    [ "CHMSAdviseColistinApproveDialog", "class_c_h_m_s_advise_colistin_approve_dialog.html", "class_c_h_m_s_advise_colistin_approve_dialog" ],
+    [ "CHMSAdviseDrugApp", "class_c_h_m_s_advise_drug_app.html", "class_c_h_m_s_advise_drug_app" ],
+    [ "CHMSAdviseOrder", "class_c_h_m_s_advise_order.html", "class_c_h_m_s_advise_order" ],
+    [ "CHMSAdviseOrderDialog", "class_c_h_m_s_advise_order_dialog.html", "class_c_h_m_s_advise_order_dialog" ],
+    [ "CHMSExmImportExcelDialog", "class_c_h_m_s_exm_import_excel_dialog.html", "class_c_h_m_s_exm_import_excel_dialog" ],
+    [ "CHMSGetDiagnosticByDocno", "class_c_h_m_s_get_diagnostic_by_docno.html", "class_c_h_m_s_get_diagnostic_by_docno" ],
+    [ "CHMSParaclinicResultDialog", "class_c_h_m_s_paraclinic_result_dialog.html", "class_c_h_m_s_paraclinic_result_dialog" ],
+    [ "CHTMLForms", "class_c_h_t_m_l_forms.html", "class_c_h_t_m_l_forms" ],
+    [ "CImageViewer", "class_c_image_viewer.html", "class_c_image_viewer" ],
+    [ "CImportInsuranceListDialog", "class_c_import_insurance_list_dialog.html", "class_c_import_insurance_list_dialog" ],
+    [ "CLayoutUtils", "class_c_layout_utils.html", "class_c_layout_utils" ],
+    [ "CProductImportAll", "class_c_product_import_all.html", "class_c_product_import_all" ],
+    [ "CProductSyncCategoryDialog", "class_c_product_sync_category_dialog.html", "class_c_product_sync_category_dialog" ],
+    [ "CProductSyncImportDialog", "class_c_product_sync_import_dialog.html", "class_c_product_sync_import_dialog" ],
+    [ "CPRRecordSummary", "class_c_p_r_record_summary.html", "class_c_p_r_record_summary" ],
+    [ "OptionItem", "class_option_item.html", "class_option_item" ],
+    [ "OptionList", "class_option_list.html", "class_option_list" ],
+    [ "tagHTMFormData", "structtag_h_t_m_form_data.html", "structtag_h_t_m_form_data" ],
+    [ "tagMapColumn", "structtag_map_column.html", "structtag_map_column" ]
+];

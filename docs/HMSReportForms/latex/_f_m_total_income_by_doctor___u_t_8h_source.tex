@@ -1,0 +1,194 @@
+\doxysection{FMTotal\+Income\+By\+Doctor\+\_\+\+UT.\+h}
+\hypertarget{_f_m_total_income_by_doctor___u_t_8h_source}{}\label{_f_m_total_income_by_doctor___u_t_8h_source}\index{Include/HMSReportForms/HospitalFee/FMTotalIncomeByDoctor\_UT.h@{Include/HMSReportForms/HospitalFee/FMTotalIncomeByDoctor\_UT.h}}
+\mbox{\hyperlink{_f_m_total_income_by_doctor___u_t_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FMTotalInComeByDoctorUT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FMTotalInComeByDoctorUT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ �\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a61963517f5a3d57e4157bd92702235b4}{CFMTotalInComeByDoctorUT}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ CMap<CString,\ LPCTSTR,\ CString,\ LPCTSTR>\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ad345344699d98b46c4820f83abc7f378}{m\_mIndex}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a7edc9186c43276d4c8b252883d9b9f32}{m\_nTotal}}[18],\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ad67f3c141c4dca3b5587477f8f16160a}{m\_nDaySum}}[18],\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a8fd481f2a6f908f445849a8b6873d5cd}{m\_nDeptSum}}[18];}
+\DoxyCodeLine{00037\ \ \ \ \ CStringArray\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a39608c69f68e12419f1c5bbeba8c2fc3}{m\_arr\_data\_name}};}
+\DoxyCodeLine{00038\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ae58093405b6139c416a36c9afac314d8}{m\_szPrevDate}},\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aece08f095026339e3839aa505a382d53}{m\_szPrevDept}};}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a030cd8772f45496ab760bfe1a976efa8}{m\_szCashIDS}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ab1ff9ab632b22bf7fafd5af75eb7c435}{m\_wndReportCondition}};}
+\DoxyCodeLine{00043\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a8ccadade28f6d13c292f96024af9bdb1}{m\_wndYearLabel}};}
+\DoxyCodeLine{00044\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ae15600158685fb61e54e225a5dfbc55f}{m\_wndYear}};}
+\DoxyCodeLine{00045\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ac983782b2c4743b85acf605ae6a51a9a}{m\_wndReportPeriodLabel}};}
+\DoxyCodeLine{00046\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ac2af3b19bf99d1ec120795a58f6bf760}{m\_wndReportPeriod}};}
+\DoxyCodeLine{00047\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aa9ac0bbef9bed9c0a2daf04321e5c6ed}{m\_wndFromDateLabel}};}
+\DoxyCodeLine{00048\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a6e273573ffc048d354b3ed16e0803305}{m\_wndFromDate}};}
+\DoxyCodeLine{00049\ \ \ \ \ CGuiDateTimeCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a1be7ecec128469bb564e2232c9cc897c}{m\_wndToDate}};}
+\DoxyCodeLine{00050\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a5f54a4f334a7b23102000e1a3cf2afb8}{m\_wndToDateLabel}};}
+\DoxyCodeLine{00051\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a3b960c25fd36a1e1e4e14a6a2ad75973}{m\_wndClerkLabel}};}
+\DoxyCodeLine{00052\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a9fb832378d8fcf65d14c99063f138fa2}{m\_wndDoctorLabel}};}
+\DoxyCodeLine{00053\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a30121144c35229a50ae0ffdd5bcba0fc}{m\_wndDoctor}};}
+\DoxyCodeLine{00054\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_af3cb6f51eae89d755d0b27391281a9d1}{m\_wndRoomLabel}};}
+\DoxyCodeLine{00055\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a045c0bbd23a256977b690a9f5c3f65ec}{m\_wndRoom}};}
+\DoxyCodeLine{00056\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a518676a36c54b8534aa376e809b57977}{m\_wndClerk}};}
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a7ca57082a394f90cf19858408223cf90}{m\_wndOrderByLabel}};}
+\DoxyCodeLine{00058\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a61c1edc32b9cecf31fab64c56b6f56b8}{m\_wndOrderBy}};}
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_afff81f164bd12959f51f62a254e49636}{m\_wndDeptLabel}};}
+\DoxyCodeLine{00060\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aaff40259a7f0257525abe4faa4bbc7d6}{m\_wndDept}};}
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a60063274a77e579bce7c7db48c92d56a}{m\_wndStatusLabel}};}
+\DoxyCodeLine{00062\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_adfa98c51629980876b4370149e68cfc2}{m\_wndStatus}};}
+\DoxyCodeLine{00063\ \ \ \ \ CGuiListCtrl\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_afa1d0d0905d4e24367ae14174562a9b3}{m\_wndList}};}
+\DoxyCodeLine{00064\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a2286bc00f3ba9ad7f07fb04e2f023abe}{m\_wndWithoutGeneral}};}
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a06b477890b9cf00ab35841113046bdc3}{m\_wndMarkAll}};}
+\DoxyCodeLine{00066\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a3e87c72c7502359f0888957f788af2f6}{m\_wndUnMark}};}
+\DoxyCodeLine{00067\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aac14a621717a004a0aa7b1252559634a}{m\_wndPrint}};}
+\DoxyCodeLine{00068\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a1506a7d2944934c642b6c0556cb0573a}{m\_wndExport}};}
+\DoxyCodeLine{00069\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a2f9a52a6ebed3b75b0682e79fa49eddc}{m\_wndInpatient}};}
+\DoxyCodeLine{00070\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a0e85ac916de70209f19ba802e7134595}{m\_wndOutpatient}};}
+\DoxyCodeLine{00071\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a6c3fa39f0fb767f263f987e2a5b52551}{m\_wndDeposit}};}
+\DoxyCodeLine{00072\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_af15fab493907eb5b8f57e804825d1e78}{m\_wndAll}};}
+\DoxyCodeLine{00073\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a2ce7030128883c4ce817f88706a53084}{m\_wndSOD}};}
+\DoxyCodeLine{00074\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a9145e5b3c8ce8d95b9dd9ed1c54c157c}{m\_wndSoldier}};}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aeb08912555eb7b9fde8d9acdf4e27f7b}{m\_nYear}};}
+\DoxyCodeLine{00077\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a4951c4948f49787709ca872a3c89365a}{m\_szReportPeriodKey}};}
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a45384c59695a84a24d265d35100a2258}{m\_szFromDate}};}
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a3c1ef0c85d4a9b0a060e08e6b04384f6}{m\_szToDate}};}
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a60713c0febde2ab40f82208edc0c14a2}{m\_szClerkKey}};}
+\DoxyCodeLine{00081\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aa9b79f4cd2638b6a58e0b7507eed577e}{m\_szDoctorKey}};}
+\DoxyCodeLine{00082\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a6df285e916caa3f2870078ca28d9dc7b}{m\_szOrderByKey}};}
+\DoxyCodeLine{00083\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_abd3226d3b89e28718908a16229b3dafa}{m\_szStatusKey}};}
+\DoxyCodeLine{00084\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a842ac0f48195cbde301636c61f194869}{m\_szDeptKey}};}
+\DoxyCodeLine{00085\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a101f5f153fb731098ceb08088758f2e6}{m\_szRoomKey}};}
+\DoxyCodeLine{00086\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a0a747e647842edbb901d5cb8652c00d7}{m\_bWithoutGeneral}};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aaf972089d153963d77507d3e90ae5258}{m\_nPatientType}};}
+\DoxyCodeLine{00088\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a217081d8d6d861ce48f289f790b5419c}{m\_bSOD}};}
+\DoxyCodeLine{00089\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ad29729e11a3584a698afaca6aae1ad71}{m\_bSoldier}};}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearChange();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearSetfocus();\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnYearKillfocus();\ }}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a758209720141f3239b5a603db5ca986d}{OnYearCheckValue}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a76e3be8b3bcb8bb0beca337cb7d36d03}{OnReportPeriodSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ac10424e0434ad9750426c81bf605b0aa}{OnReportPeriodSelendok}}();\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodSetfocus();\ }}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodKillfocus();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aef6a09e77a556f26a6db328ad6a07655}{OnReportPeriodLoadData}}();\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnReportPeriodAddNew();\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aba131f748673fffc82033437b79d5277}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_af61d15c13c6a2e7f48489f24b431ccfe}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a2c0d7a81a955e29f1410c82e1d3858c2}{OnClerkSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a39575167de41945de8ececf6c90462d5}{OnClerkSelendok}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkSetfocus();\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkKillfocus();\ }}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ab9ca23250c94a4d499d27b9b826d80c5}{OnClerkLoadData}}();\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a2f7282ff43e9276a6e977fa81deed079}{OnDoctorLoadData}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aba288d405e6af54fc572b4401be7db68}{OnRoomLoadData}}();}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnClerkAddNew();\ }}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_acaaf68643f93637b7996b31a9d7071bd}{OnOrderBySelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ab8d7a2bf0c0c558f596a5240bb9aabab}{OnOrderBySelendok}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderBySetfocus();\ }}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByKillfocus();\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a3bb61df59111db87d629c32201dcad8c}{OnOrderByLoadData}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnOrderByAddNew();\ }}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aa62a91e97ced66cc3b0d1134681df20f}{OnDeptLoadData}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ab0ab0d1f161cfd13fa869eeb5112484b}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a48d1339f9e0210ea4aea9d1cf5dd832e}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a0fb2d9124e94d1dc0755b22a98630165}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusAddNew();\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a601bcd45791802a5c7b80f2a1fd7149f}{OnListLoadData}}();\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ae6087d41f6f7dd12c40a0dbda03d574d}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a8f481a2f506531fbd9856d7a3eb2926d}{OnListDblClick}}();\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a475b3c51e598c416bb34d155ebddfc35}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ad0182f76e613425ff5b95b040004f850}{OnWithoutGeneralSelect}}();\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a3bd955968ddcbd661e60d71eed375c4f}{OnMarkAllSelect}}();\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ab2f5c49b3c17cc7c1bc5cb34ef25417a}{OnUnMarkSelect}}();\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a53f40fd78e68934cb2d3849b7bf4168e}{OnPrintSelect}}();\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a7c634d7654c9194e5db0bd12c40a8d72}{OnExportSelect}}();\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ad552808c903b8c7754e19d46008ac915}{OnExportDetail}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a195d8b9b5461c1484e66c2b293fe8b89}{OnExportTotal}}();}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a34da25bdebaa5681020699cf49d36af0}{OnInpatientSelect}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a7ff021e8a2167856ea65b510695e2a08}{OnOutpatientSelect}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a828eb926b8181874db29b589190c769b}{OnDepositSelect}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a042306e418bcd7541691f955a6df6c51}{OnAllSelect}}();\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ae7faa271920395f8b571bbcb0555fc87}{OnSODSelect}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a1751f388eb230a175ff6d71afc42e0fb}{OnSoldierSelect}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ae7571843dbb474cc3426e1368f48690f}{OnPrint1stver}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a3539e79356cf4d1d659b487cf449d8ab}{OnPrint2ndver}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a625a9b486c759b5e278899f2db2cefe4}{OnPrint2ndver\_}}();}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a91290cbec3e7813c887826f13d6a80e6}{OnCheckBeforePrint}}(CReport*\ rpt,\ CRecord\&\ rs);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a0e81061745df789c9770264880a2a4c9}{OnPrintOther}}(CReport*\ rpt);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ IsNewGroup(CReport*\ rpt,\ CRecord*\ rs,\ bool\&\ bNewDate,\ bool\&\ bNewDept,\ CReportSection*\&\ rpDateGroup,\ CReportSection*\&\ rpDeptGroup);}}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a5fbc3bdde356be8965fc0a2c90ef497c}{IsNewGroup}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept,\ CReportSection**\ ppDateGroup,\ CReportSection**\ ppDeptGroup);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aa6f77a57c250323f252b8717e3ef6ce8}{IsNewGroup}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a956d452ebffdbab0969c315d289ce1b9}{OnPrintGroupSummary}}(CReport*\ rpt,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept,\ CReportSection*\ pDateGroup,\ CReportSection*\ pDeptGroup);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a2b6f2fe41f62b902c89eb325f14ba137}{OnPrintGroupSummary}}(CReport*\ rpt,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a97c5564f89076a6c71c267d7a2b4e60c}{OnPrintGroupDescr}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept);}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ac754fb9b57966b7a546c4e29f14718d3}{OnPrintGroupDescr}}(CReport*\ rpt,\ CRecord*\ rs,\ \textcolor{keywordtype}{bool}\ bNewDate,\ \textcolor{keywordtype}{bool}\ bNewDept,\ CReportSection**\ ppDateGroup,\ CReportSection**\ ppDeptGroup);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a6a3ef7610a04cf0f4edbcf545a414451}{OnPrintDetail}}(CReport*\ rpt,\ CRecord*\ rs);}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ab019eaadde451b52cd9d0f21db27c2b2}{OnPrintDetail}}(CReport*\ rpt,\ CReportSection*\ pDetail,\ CRecord*\ rs);}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a6fb4a3a0e21e44910cfdbeae37afaa5e}{OnCalcData}}(CRecord*\ rs,\ \textcolor{keywordtype}{bool}\&\ bNewDate,\ \textcolor{keywordtype}{bool}\&\ bNewDept);}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_af88b98ab504b0407ddd8d9f14a2b5cf7}{ResetVar}}();}
+\DoxyCodeLine{00162\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a03b6dd29c2135dc2636fce3bf22775ba}{GetQueryStringDetail}}();}
+\DoxyCodeLine{00163\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aa89fa60232c99555ead657a9ddba8d92}{GetQueryStringTotal}}();}
+\DoxyCodeLine{00164\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a533f45aba792026a5443654e0c80cc31}{GetQueryString2}}();}
+\DoxyCodeLine{00165\ \ \ \ \ CString\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ac004e2bb4b4fdeefe35ae035f5f16c2d}{GetQueryString}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a61963517f5a3d57e4157bd92702235b4}{CFMTotalInComeByDoctorUT}}(CWnd\ *pWnd);}
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a5955dced11cb89159de35d1c73f4a44e}{\string~CFMTotalInComeByDoctorUT}}();}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a2c3755e39255c6b2be8bba316a727233}{OnCreateComponents}}();}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a7efd48b80ba5fe0a898dfbe654a9ac69}{OnInitializeComponents}}();}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a616b986ae36aa0db6a48669eac046c52}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a42e6276daa3e2d48b01d31a6490a7c2e}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a4c93a521a8484f231a00a695b9c8f5fc}{GetDataToScreen}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ab7f55368deb365507df8dfcb57040a70}{GetScreenToData}}();}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ac67d5b85c7dddbc92c63761a4c5794b3}{SetDefaultValues}}();}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a0a215e8f91b87c6ecb73c32aa93594f5}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a9c6a27493ae18a816f62ad86831daef2}{OnAddFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a1f0748d0679f7f749ddcebb7d9336091}{OnEditFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a20f73c042d23a6d38b230ee1b2633ea7}{OnDeleteFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_add02c396ebdac686c522489dc7a7eb65}{OnSaveFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a5be38ebc2c1ddf15a76051ecd6b6bbc2}{OnCancelFMInsuranceReceiptSummary}}();\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a6d7acad66282e2b25d3f75458f8d09b7}{OnFMInsuranceReceiptSummaryListLoadData}}();\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a9c1220c957027f97df5398b98b37cbd4}{OnRound}}(\textcolor{keywordtype}{double}\ nToRound);}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_af075a7f82d9508bba9cbf6ae107e4bbf}{OnListCheckAllTYC}}();}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a671160f45843245b2ba16830405097cc}{OnListCheckAllPTTYC}}();}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ae6e7b2766032727826de600b0c3b26f2}{OnListCheckAllBHAB}}();}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_ac0fb2e14322db906215b783fe0f02b7a}{OnListCheckAllDVAB}}();}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_aa5897a8405d51cc2de68c92f3396c768}{OnListCheckAllQUANAB}}();}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_f_m_total_in_come_by_doctor_u_t_a31b83b2a7f6721fd15835d6bf0229b3e}{OnListSearchItem}}();}
+\DoxyCodeLine{00190\ \};}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

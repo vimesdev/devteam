@@ -1,0 +1,74 @@
+\doxysection{Report\+Utils.\+h}
+\hypertarget{_report_utils_8h_source}{}\label{_report_utils_8h_source}\index{Include/HMSExt/ReportUtils.h@{Include/HMSExt/ReportUtils.h}}
+\mbox{\hyperlink{_report_utils_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REPORTUTILS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REPORTUTILS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ReportDocument.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Excel.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_report_utils_a3c06bcdbaddd82dc20e940c6533d623b}{CReportUtils}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_c_report_utils_a3c06bcdbaddd82dc20e940c6533d623b}{CReportUtils}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_c_report_utils_ac85c7a59e6e9eeb37d44ad978f7b8b44}{\string~CReportUtils}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_a56f406e492ee6a9f37564cb8c4c64c9b}{PrintDefault}}(CReport\ *\ pRpt);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_a3f21d7df8c158cbe336d2e8937946388}{PrintSection}}(}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ CReport*\ pRpt,\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ erptSection\ rpt\_section,\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ JSONVALUE\ jv,\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nSection\_idx=0);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_a4e5fdf95ccbd95df39a85a3df8d3abe5}{PrintJson}}(CReportSection*\ pSection,\ JSONVALUE\ jv);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_report_utils_ad4f4b3d64fc733a4571f6a74cf22fc3e}{Export}}(}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ CExcel*\ pXcel,\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ CString\ szQuery,\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ CString\ szFileName,\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ JSONVALUE\ jFormat,\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nFirst\_row\ =\ 0);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_a57372e93fdc2c8a09fc338009f5ed63a}{LoadReportDate}}(}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nYear,\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nMonth,\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ CString\&\ szFromDate,\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ CString\&\ szToDate);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_report_utils_ad507f55eed12bbc73c68f3510b59df7a}{LoadReportPeriod}}(}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ CWnd*\ pWnd,\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ CString\ szKey,\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_report_utils_aa42aa2b95e27ecdf58cf9018e9be31d9}{LoadExamRoomList}}(}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ CGuiComboBox\ *pWnd,\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ CString\ szKey,\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ CString\ szFilter=\_T(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{00039\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_report_utils_a5abc688c2640af146db00d70ce849be5}{GetCheckList}}(CGuiListCtrl*\ pList,\ \textcolor{keywordtype}{int}\ nCol=0);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_c_report_utils_a3bf6b814d3d255d2ca662078b886f76e}{LogInteraction\_drug\_icd}}(}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ nDocumentNo,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ nOrderID,\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ CString\ szUser,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ CString\ szDrugName,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ CString\ szICD10,\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ CString\ szChoice,\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ CString\ szDescision,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ CString\ szType);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_report_utils_a4c48d5e712f159e6d08b2ca7b501a222}{CheckAllergy}}(\textcolor{keywordtype}{long}\ nDoc\_no,\ CGuiDialog*\ pDlg\ =\ NULL);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_a2e4c2216129b1d1d475415b51730ef4e}{PrintOnExport}}(}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ CWnd*\ pWnd,\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ (*)(CWnd*),\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ CString\ szFileName,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nRowData\ =\ 6,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{true});}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_af61cb3731e61be6ac15f5016b3a5c5f2}{PrintOnExport}}(CString\ szFilePath,\ \textcolor{keywordtype}{int}\ nRowData\ =\ 6,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{true});}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_report_utils_a17f497cee8f6d394ef4dd5571d0f6080}{CreatePopupMenu}}(CWnd*\ pWnd,\ CString\ szMenuStr);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_aa5ebbb6591de76f97545855ae72e0844}{PrintFunctionalFoodConsultancy}}(\textcolor{keywordtype}{long}\ nDoc\_no,\ \textcolor{keywordtype}{long}\ nOrder\_id,\ \textcolor{keywordtype}{bool}\ bPreview=\textcolor{keyword}{true});}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_c_report_utils_a1da90560dc96b0cdec3fb5c2a548599a}{CheckReportVersion}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*Word\ automation\ helper*/}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_aa886253dd5e81b256a50299726e70742}{ExportWord}}(}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ CRecord\&\ rs,\ CString\ szFilePath,\ CString\ szRepeatingSectionTag=\_T(\textcolor{stringliteral}{"{}"{}}),\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ BOOL\ bUseOpenedFile=FALSE,\ BOOL\ bVisible=TRUE);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_report_utils_aa4f8634e500979695843283870f843e9}{MoneyToStringEx}}(\textcolor{keywordtype}{double}\ dAmount);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_report_utils_a1f11f78199b909642c4c6b9803435744}{MoneyToString\_V1}}(CString\&\ szAmount);}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

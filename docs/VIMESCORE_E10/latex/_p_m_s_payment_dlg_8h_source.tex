@@ -1,0 +1,69 @@
+\doxysection{PMSPayment\+Dlg.\+h}
+\hypertarget{_p_m_s_payment_dlg_8h_source}{}\label{_p_m_s_payment_dlg_8h_source}\index{Include/VIMESCORE\_E10/PMSPaymentDlg.h@{Include/VIMESCORE\_E10/PMSPaymentDlg.h}}
+\mbox{\hyperlink{_p_m_s_payment_dlg_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PMSPAYMENTDLG\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PMSPAYMENTDLG\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GuiDialog.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_p_m_s_payment_dlg_a6483fbfcf5f61c59888d395b28a225ee}{CPMSPaymentDlg}}\ :\ \textcolor{keyword}{public}\ CGuiDialog\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_abee3b7113148680040cfe07e7305279a}{m\_wndPaymentInformations}};}
+\DoxyCodeLine{00010\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_ad959df6f0d9964459afb5d83f16a6d50}{m\_wndTotalAmountLabel}};}
+\DoxyCodeLine{00011\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a75262fb7447564d397cb52a28bd836b6}{m\_wndTotalAmount}};}
+\DoxyCodeLine{00012\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a7ed73d0a3bf06446232bf2835f4c01fd}{m\_wndTotalPaymentLabel}};}
+\DoxyCodeLine{00013\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a57c21056774c5f516fafabcc419725f4}{m\_wndTotalPayment}};}
+\DoxyCodeLine{00014\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a3636bf6160c47312224d6303b805b4ba}{m\_wndRemainAmountLabel}};}
+\DoxyCodeLine{00015\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_aee8ffd979209154f6d245e69e6b012a0}{m\_wndRemainAmount}};}
+\DoxyCodeLine{00016\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a5b138c0baca61a8cfddae52ce1a2efe8}{m\_wndPayableLabel}};}
+\DoxyCodeLine{00017\ \ \ \ \ CGuiNumberCtrl\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a148cfc01e28985f073a63e5e7ba3faff}{m\_wndPayable}};}
+\DoxyCodeLine{00018\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a8755684b72870edfc3ccedf0dd403572}{m\_wndPayment}};}
+\DoxyCodeLine{00019\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a11104b54e0d64aefa83aa29eabf61f56}{m\_wndClose}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a5df612f0ed303fd7c6128072a43b1c6f}{m\_nSubTotal}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_ae938be4bdb273604d8a1831d0b5bd1f2}{m\_nTotalAmount}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a449e8aee8986e635bc1f1c7ada382c73}{m\_nTotalPayment}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_ada60f4b80ec675877dacd3424a348e6c}{m\_nPaymentAmount}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a248253d89a199037da2943d446fc79c6}{m\_nRemainAmount}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a00df05702a3a83561923f03914e8415d}{m\_nPayable}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a6e6ab6662bd2e983d92bacb0d094d660}{m\_szInvoiceNo}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a0e947b9721a26d625f242644fe36bbfc}{m\_nOrderID}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnTotalAmountChange();\ }}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnTotalAmountSetfocus();\ }}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnTotalAmountKillfocus();\ }}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_ab6cb8610f972e511132cb6e300088a1a}{OnTotalAmountCheckValue}}();\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnTotalPaymentChange();\ }}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnTotalPaymentSetfocus();\ }}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a1f19bbd852fac72617933be53e1fb6ce}{OnTotalPaymentKillfocus}}();\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a3022807928c5f0d7d3a3d975f027b53d}{OnTotalPaymentCheckValue}}();\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnRemainAmountChange();\ }}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnRemainAmountSetfocus();\ }}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnRemainAmountKillfocus();\ }}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_aa990f70eb5da559477fcb254d097d165}{OnRemainAmountCheckValue}}();\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnPayableChange();\ }}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnPayableSetfocus();\ }}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//int\ \ \ \ \ \ \ \ \ \ \ OnPayableKillfocus();\ }}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a70da36cf252d3620ce17407ed8b3e4d7}{OnPayableCheckValue}}();\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_aeaae86307ee0c2d9affa02d78055ab70}{OnPaymentSelect}}();\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a464f3721f97f3126cde75781b62ae9a8}{OnCloseSelect}}();\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a6483fbfcf5f61c59888d395b28a225ee}{CPMSPaymentDlg}}(CWnd\ *pParent);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a84ef6f9f217b04e2dfdcac3336397739}{\string~CPMSPaymentDlg}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_ae354cdb80cb17792f5991b047c49f7a7}{OnCreateComponents}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a42b2d4675dbe9f5542f0d2fd1266bc38}{OnInitializeComponents}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_afc5429f98889a6f3c08a6bfff36ae3a4}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a076e3686717535371c803ae0d443e31f}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a2919a12bad483318556b9275c896b092}{GetDataToScreen}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a3831c435c7dcd0733440551c86144e4c}{GetScreenToData}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a25a754b048f5406d4a407d938cb58ba1}{SetDefaultValues}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_afcbc72dae2361e5cbea8c743e79a32c6}{OnAddPMSPaymentDlg}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_afaea37b0f318f76e7cd93f9f1ed1f6fe}{OnEditPMSPaymentDlg}}();\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_ab8539410fa61e6c828952bfa7c31eaaf}{OnDeletePMSPaymentDlg}}();\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a40ba20e0b864f869609970d7bb5d60e6}{OnSavePMSPaymentDlg}}();\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_p_m_s_payment_dlg_a2db76e9d2cc1cd8ae7a2f3d29a176f7a}{OnCancelPMSPaymentDlg}}();\ }
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

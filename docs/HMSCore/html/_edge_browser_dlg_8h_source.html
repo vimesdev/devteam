@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/EdgeBrowserDlg.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_edge_browser_dlg_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EdgeBrowserDlg.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_edge_browser_dlg_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// EdgeBrowserAppDlg.h : header file</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_edge_component_base_8h.html">EdgeComponentBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//#include &quot;EdgeBrowserApp.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;dcomp.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;ole2.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;winnt.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifdef __windows__</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#undef __windows__</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_edge_browser_dlg_8h.html#a981fc68460c4e85608c4402c2c3c50e0">   21</a></span><span class="preprocessor">#define USE_WEBVIEW2_WIN10 1</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifdef USE_WEBVIEW2_WIN10</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;winrt/Windows.UI.Composition.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;winrt/Windows.UI.ViewManagement.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span>winrtComp = winrt::Windows::UI::Composition;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// CEdgeBrowserDlg dialog</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html">   30</a></span><span class="keyword">class </span><a class="code hl_function" href="class_c_edge_browser_dlg.html#af2d2e1cbe2a16032456c454b8d335a3c">CEdgeBrowserDlg</a> : <span class="keyword">public</span> CDialog</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Construction</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#af2d2e1cbe2a16032456c454b8d335a3c">   34</a></span>    <a class="code hl_function" href="class_c_edge_browser_dlg.html#af2d2e1cbe2a16032456c454b8d335a3c">CEdgeBrowserDlg</a>(CWnd* pParent = <span class="keyword">nullptr</span>);   <span class="comment">// standard constructor</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Dialog Data</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifdef AFX_DESIGN_TIME</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">enum</span> { IDD = IDD_EDGEBROWSERAPP_DIALOG };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a4aa9eb1ef0b733b05c5ecffa24d586c9">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#a4aa9eb1ef0b733b05c5ecffa24d586c9">InitializeWebView</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#af3a8cec3120a8fea76084fee693e6d5a">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#af3a8cec3120a8fea76084fee693e6d5a">CloseWebView</a>(<span class="keywordtype">bool</span> cleanupUserDataFolder = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a152bc8591e150bd112f877b23ee35623">   42</a></span>    HRESULT <a class="code hl_function" href="class_c_edge_browser_dlg.html#a152bc8591e150bd112f877b23ee35623">OnCreateEnvironmentCompleted</a>(HRESULT result, ICoreWebView2Environment* environment);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a66874ba1a1ebff88b4bdcce43ad2deaa">   43</a></span>    HRESULT <a class="code hl_function" href="class_c_edge_browser_dlg.html#a66874ba1a1ebff88b4bdcce43ad2deaa">OnCreateCoreWebView2ControllerCompleted</a>(HRESULT result, ICoreWebView2Controller* controller);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#aebfa07970f8c8719dd2a139ad2422990">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#aebfa07970f8c8719dd2a139ad2422990">RunAsync</a>(std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">void</span>)&gt; callback);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a0edd6b75a5d2a8dc394fcd06d26cfe18">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#a0edd6b75a5d2a8dc394fcd06d26cfe18">ResizeEverything</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a02a1d173934571fb83f0149ee78fea1f">   46</a></span>    HRESULT <a class="code hl_function" href="class_c_edge_browser_dlg.html#a02a1d173934571fb83f0149ee78fea1f">DCompositionCreateDevice2</a>(IUnknown* renderingDevice, REFIID riid, <span class="keywordtype">void</span>** ppv);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a6b2c576458ffa4bf60ee6f1381e578e3">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#a6b2c576458ffa4bf60ee6f1381e578e3">OnSize</a>(UINT a, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> c);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a660c7cf5c7d5b028d75bdb0a1ff8deb2">   50</a></span>    ICoreWebView2Controller* <a class="code hl_function" href="class_c_edge_browser_dlg.html#a660c7cf5c7d5b028d75bdb0a1ff8deb2">GetWebViewController</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_edge_browser_dlg.html#aaf4c360fb334190c94b849a2b0feed94">m_controller</a>.Get();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a3abb2c99c3af6eaa37626fd206a3f321">   54</a></span>    ICoreWebView2* <a class="code hl_function" href="class_c_edge_browser_dlg.html#a3abb2c99c3af6eaa37626fd206a3f321">GetWebView</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_edge_browser_dlg.html#af53c3f102a5f6a08e9d7c281d3db6058">m_webView</a>.Get();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a414b5a6c40ea164ebccf9bd4104ed9e3">   58</a></span>    ICoreWebView2Environment* <a class="code hl_function" href="class_c_edge_browser_dlg.html#a414b5a6c40ea164ebccf9bd4104ed9e3">GetWebViewEnvironment</a>()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a6f07e876e6ab9e05dc22317d863d1ae5">m_webViewEnvironment</a>.Get();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a199050d5c067ef24295568e814d8095b">   62</a></span>    HWND <a class="code hl_function" href="class_c_edge_browser_dlg.html#a199050d5c067ef24295568e814d8095b">GetMainWindow</a>()</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> this-&gt;GetSafeHwnd();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// Implementation</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a0ab968e15958de617355e3f076cf9fcf">   69</a></span>    HICON <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a0ab968e15958de617355e3f076cf9fcf">m_hIcon</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#ac15d979ed9f75586689ef14abf0cf45c">   70</a></span>    DWORD <a class="code hl_variable" href="class_c_edge_browser_dlg.html#ac15d979ed9f75586689ef14abf0cf45c">m_creationModeId</a> = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a6f07e876e6ab9e05dc22317d863d1ae5">   71</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2Environment&gt; <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a6f07e876e6ab9e05dc22317d863d1ae5">m_webViewEnvironment</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#aaf4c360fb334190c94b849a2b0feed94">   72</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2Controller&gt; <a class="code hl_variable" href="class_c_edge_browser_dlg.html#aaf4c360fb334190c94b849a2b0feed94">m_controller</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#af53c3f102a5f6a08e9d7c281d3db6058">   73</a></span>    Microsoft::WRL::ComPtr&lt;ICoreWebView2&gt; <a class="code hl_variable" href="class_c_edge_browser_dlg.html#af53c3f102a5f6a08e9d7c281d3db6058">m_webView</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#adc4b0008484629c85626dabf7d0e8d94">   74</a></span>    Microsoft::WRL::ComPtr&lt;IDCompositionDevice&gt; <a class="code hl_variable" href="class_c_edge_browser_dlg.html#adc4b0008484629c85626dabf7d0e8d94">m_dcompDevice</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a7d0cf5b7580d45363d1bc0e5cbd85abc">   75</a></span>    std::vector&lt;std::unique_ptr&lt;ComponentBase&gt;&gt; <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a7d0cf5b7580d45363d1bc0e5cbd85abc">m_components</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a771d1ed9e477e0cdef441f94c5efa916">   76</a></span>    HWND <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a771d1ed9e477e0cdef441f94c5efa916">m_mainWindow</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a5985941ba86aec3d490869b60de10673">   77</a></span>    HINSTANCE <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a5985941ba86aec3d490869b60de10673">g_hInstance</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a58cb6ee3d38df8a04e3583d270101c12">   78</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a58cb6ee3d38df8a04e3583d270101c12">s_maxLoadString</a> = 100;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">template</span> &lt;<span class="keyword">class </span>ComponentType, <span class="keyword">class</span>... Args&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#af810f628296beb2dfb76a3e6c2a3bb98">NewComponent</a>(Args&amp;&amp;... args);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> ComponentType&gt; ComponentType* <a class="code hl_function" href="class_c_edge_browser_dlg.html#a72ab9d7249c3c8af3c2e508e47646909">GetComponent</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Generated message map functions</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a31bba01f7b9ccf12a4fd7fc7a88583e6">   84</a></span>    <span class="keyword">virtual</span> BOOL <a class="code hl_function" href="class_c_edge_browser_dlg.html#a31bba01f7b9ccf12a4fd7fc7a88583e6">OnInitDialog</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#af0575de1fb7a0838292b4f6c0adad57f">   85</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#af0575de1fb7a0838292b4f6c0adad57f">OnSysCommand</a>(UINT nID, LPARAM lParam);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#acd450a19a14172f962ca15aaf12e48aa">   86</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#acd450a19a14172f962ca15aaf12e48aa">OnPaint</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a9fa9aabcbeed37fe627740f55349f6a3">   87</a></span>    afx_msg HCURSOR <a class="code hl_function" href="class_c_edge_browser_dlg.html#a9fa9aabcbeed37fe627740f55349f6a3">OnQueryDragIcon</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a7174215183b1d9122373393e404e83a6">   88</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#a7174215183b1d9122373393e404e83a6">DoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    DECLARE_MESSAGE_MAP()</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#af810f628296beb2dfb76a3e6c2a3bb98">   92</a></span><span class="keyword">template</span> &lt;<span class="keyword">class </span>ComponentType, <span class="keyword">class</span>... Args&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_edge_browser_dlg.html#af810f628296beb2dfb76a3e6c2a3bb98">CEdgeBrowserDlg::NewComponent</a>(Args&amp;&amp;... args)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a7d0cf5b7580d45363d1bc0e5cbd85abc">m_components</a>.emplace_back(<span class="keyword">new</span> ComponentType(std::forward&lt;Args&gt;(args)...));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_c_edge_browser_dlg.html#a72ab9d7249c3c8af3c2e508e47646909">   97</a></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> ComponentType&gt; ComponentType* <a class="code hl_function" href="class_c_edge_browser_dlg.html#a72ab9d7249c3c8af3c2e508e47646909">CEdgeBrowserDlg::GetComponent</a>()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; component : <a class="code hl_variable" href="class_c_edge_browser_dlg.html#a7d0cf5b7580d45363d1bc0e5cbd85abc">m_components</a>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> wanted = <span class="keyword">dynamic_cast&lt;</span>ComponentType*<span class="keyword">&gt;</span>(component.get()))</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">return</span> wanted;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="ttc" id="a_edge_component_base_8h_html"><div class="ttname"><a href="_edge_component_base_8h.html">EdgeComponentBase.h</a></div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a02a1d173934571fb83f0149ee78fea1f"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a02a1d173934571fb83f0149ee78fea1f">CEdgeBrowserDlg::DCompositionCreateDevice2</a></div><div class="ttdeci">HRESULT DCompositionCreateDevice2(IUnknown *renderingDevice, REFIID riid, void **ppv)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a0ab968e15958de617355e3f076cf9fcf"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a0ab968e15958de617355e3f076cf9fcf">CEdgeBrowserDlg::m_hIcon</a></div><div class="ttdeci">HICON m_hIcon</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:69</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a0edd6b75a5d2a8dc394fcd06d26cfe18"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a0edd6b75a5d2a8dc394fcd06d26cfe18">CEdgeBrowserDlg::ResizeEverything</a></div><div class="ttdeci">void ResizeEverything()</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a152bc8591e150bd112f877b23ee35623"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a152bc8591e150bd112f877b23ee35623">CEdgeBrowserDlg::OnCreateEnvironmentCompleted</a></div><div class="ttdeci">HRESULT OnCreateEnvironmentCompleted(HRESULT result, ICoreWebView2Environment *environment)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a199050d5c067ef24295568e814d8095b"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a199050d5c067ef24295568e814d8095b">CEdgeBrowserDlg::GetMainWindow</a></div><div class="ttdeci">HWND GetMainWindow()</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:62</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a31bba01f7b9ccf12a4fd7fc7a88583e6"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a31bba01f7b9ccf12a4fd7fc7a88583e6">CEdgeBrowserDlg::OnInitDialog</a></div><div class="ttdeci">virtual BOOL OnInitDialog()</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a3abb2c99c3af6eaa37626fd206a3f321"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a3abb2c99c3af6eaa37626fd206a3f321">CEdgeBrowserDlg::GetWebView</a></div><div class="ttdeci">ICoreWebView2 * GetWebView()</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:54</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a414b5a6c40ea164ebccf9bd4104ed9e3"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a414b5a6c40ea164ebccf9bd4104ed9e3">CEdgeBrowserDlg::GetWebViewEnvironment</a></div><div class="ttdeci">ICoreWebView2Environment * GetWebViewEnvironment()</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:58</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a4aa9eb1ef0b733b05c5ecffa24d586c9"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a4aa9eb1ef0b733b05c5ecffa24d586c9">CEdgeBrowserDlg::InitializeWebView</a></div><div class="ttdeci">void InitializeWebView()</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a58cb6ee3d38df8a04e3583d270101c12"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a58cb6ee3d38df8a04e3583d270101c12">CEdgeBrowserDlg::s_maxLoadString</a></div><div class="ttdeci">static constexpr size_t s_maxLoadString</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:78</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a5985941ba86aec3d490869b60de10673"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a5985941ba86aec3d490869b60de10673">CEdgeBrowserDlg::g_hInstance</a></div><div class="ttdeci">HINSTANCE g_hInstance</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:77</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a660c7cf5c7d5b028d75bdb0a1ff8deb2"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a660c7cf5c7d5b028d75bdb0a1ff8deb2">CEdgeBrowserDlg::GetWebViewController</a></div><div class="ttdeci">ICoreWebView2Controller * GetWebViewController()</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:50</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a66874ba1a1ebff88b4bdcce43ad2deaa"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a66874ba1a1ebff88b4bdcce43ad2deaa">CEdgeBrowserDlg::OnCreateCoreWebView2ControllerCompleted</a></div><div class="ttdeci">HRESULT OnCreateCoreWebView2ControllerCompleted(HRESULT result, ICoreWebView2Controller *controller)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a6b2c576458ffa4bf60ee6f1381e578e3"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a6b2c576458ffa4bf60ee6f1381e578e3">CEdgeBrowserDlg::OnSize</a></div><div class="ttdeci">void OnSize(UINT a, int b, int c)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a6f07e876e6ab9e05dc22317d863d1ae5"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a6f07e876e6ab9e05dc22317d863d1ae5">CEdgeBrowserDlg::m_webViewEnvironment</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2Environment &gt; m_webViewEnvironment</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:71</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a7174215183b1d9122373393e404e83a6"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a7174215183b1d9122373393e404e83a6">CEdgeBrowserDlg::DoDataExchange</a></div><div class="ttdeci">void DoDataExchange(CDataExchange *pDX)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a72ab9d7249c3c8af3c2e508e47646909"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a72ab9d7249c3c8af3c2e508e47646909">CEdgeBrowserDlg::GetComponent</a></div><div class="ttdeci">ComponentType * GetComponent()</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:97</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a771d1ed9e477e0cdef441f94c5efa916"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a771d1ed9e477e0cdef441f94c5efa916">CEdgeBrowserDlg::m_mainWindow</a></div><div class="ttdeci">HWND m_mainWindow</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:76</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a7d0cf5b7580d45363d1bc0e5cbd85abc"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a7d0cf5b7580d45363d1bc0e5cbd85abc">CEdgeBrowserDlg::m_components</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; ComponentBase &gt; &gt; m_components</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:75</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_a9fa9aabcbeed37fe627740f55349f6a3"><div class="ttname"><a href="class_c_edge_browser_dlg.html#a9fa9aabcbeed37fe627740f55349f6a3">CEdgeBrowserDlg::OnQueryDragIcon</a></div><div class="ttdeci">afx_msg HCURSOR OnQueryDragIcon()</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_aaf4c360fb334190c94b849a2b0feed94"><div class="ttname"><a href="class_c_edge_browser_dlg.html#aaf4c360fb334190c94b849a2b0feed94">CEdgeBrowserDlg::m_controller</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2Controller &gt; m_controller</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:72</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_ac15d979ed9f75586689ef14abf0cf45c"><div class="ttname"><a href="class_c_edge_browser_dlg.html#ac15d979ed9f75586689ef14abf0cf45c">CEdgeBrowserDlg::m_creationModeId</a></div><div class="ttdeci">DWORD m_creationModeId</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:70</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_acd450a19a14172f962ca15aaf12e48aa"><div class="ttname"><a href="class_c_edge_browser_dlg.html#acd450a19a14172f962ca15aaf12e48aa">CEdgeBrowserDlg::OnPaint</a></div><div class="ttdeci">afx_msg void OnPaint()</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_adc4b0008484629c85626dabf7d0e8d94"><div class="ttname"><a href="class_c_edge_browser_dlg.html#adc4b0008484629c85626dabf7d0e8d94">CEdgeBrowserDlg::m_dcompDevice</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; IDCompositionDevice &gt; m_dcompDevice</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:74</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_aebfa07970f8c8719dd2a139ad2422990"><div class="ttname"><a href="class_c_edge_browser_dlg.html#aebfa07970f8c8719dd2a139ad2422990">CEdgeBrowserDlg::RunAsync</a></div><div class="ttdeci">void RunAsync(std::function&lt; void(void)&gt; callback)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_af0575de1fb7a0838292b4f6c0adad57f"><div class="ttname"><a href="class_c_edge_browser_dlg.html#af0575de1fb7a0838292b4f6c0adad57f">CEdgeBrowserDlg::OnSysCommand</a></div><div class="ttdeci">afx_msg void OnSysCommand(UINT nID, LPARAM lParam)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_af2d2e1cbe2a16032456c454b8d335a3c"><div class="ttname"><a href="class_c_edge_browser_dlg.html#af2d2e1cbe2a16032456c454b8d335a3c">CEdgeBrowserDlg::CEdgeBrowserDlg</a></div><div class="ttdeci">CEdgeBrowserDlg(CWnd *pParent=nullptr)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_af3a8cec3120a8fea76084fee693e6d5a"><div class="ttname"><a href="class_c_edge_browser_dlg.html#af3a8cec3120a8fea76084fee693e6d5a">CEdgeBrowserDlg::CloseWebView</a></div><div class="ttdeci">void CloseWebView(bool cleanupUserDataFolder=false)</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_af53c3f102a5f6a08e9d7c281d3db6058"><div class="ttname"><a href="class_c_edge_browser_dlg.html#af53c3f102a5f6a08e9d7c281d3db6058">CEdgeBrowserDlg::m_webView</a></div><div class="ttdeci">Microsoft::WRL::ComPtr&lt; ICoreWebView2 &gt; m_webView</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:73</div></div>
+<div class="ttc" id="aclass_c_edge_browser_dlg_html_af810f628296beb2dfb76a3e6c2a3bb98"><div class="ttname"><a href="class_c_edge_browser_dlg.html#af810f628296beb2dfb76a3e6c2a3bb98">CEdgeBrowserDlg::NewComponent</a></div><div class="ttdeci">void NewComponent(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> EdgeBrowserDlg.h:92</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_edge_browser_dlg_8h.html">EdgeBrowserDlg.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

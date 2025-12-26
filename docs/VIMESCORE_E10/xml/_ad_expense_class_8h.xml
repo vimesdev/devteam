@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="vi">
+  <compounddef id="_ad_expense_class_8h" kind="file" language="C++">
+    <compoundname>AdExpenseClass.h</compoundname>
+    <includes local="yes">GuiUtils.h</includes>
+    <includes local="yes">GuiView.h</includes>
+    <includes local="yes">DbField.h</includes>
+    <includes refid="_ad_expense_popup_8h" local="yes">AdExpensePopup.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Include/VIMESCORE_E10/AdExpenseClass.h</label>
+        <link refid="_ad_expense_class_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>AdExpensePopup.h</label>
+        <link refid="_ad_expense_popup_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DbField.h</label>
+      </node>
+      <node id="6">
+        <label>GuiPopup.h</label>
+      </node>
+      <node id="2">
+        <label>GuiUtils.h</label>
+      </node>
+      <node id="3">
+        <label>GuiView.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_c_ad_expense_class" prot="public">CAdExpenseClass</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ADEXPENSECLASS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADEXPENSECLASS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>©<sp/>Viet<sp/>Nam<sp/>Medical<sp/>Software<sp/>Joint<sp/>Stock<sp/>Company.<sp/>2005-2012.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>program<sp/>is<sp/>protected<sp/>by<sp/>Viet<sp/>nam<sp/>and<sp/>international<sp/>treaties.<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Unauthorized<sp/>reproduction<sp/>or<sp/>distribution<sp/>of<sp/>this<sp/>program,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>or<sp/>any<sp/>portion<sp/>of<sp/>it,<sp/>may<sp/>result<sp/>in<sp/>severe<sp/>civil<sp/>and<sp/>criminal<sp/>penalties,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>will<sp/>be<sp/>prosecuted<sp/>to<sp/>the<sp/>maximum<sp/>extent<sp/>possible<sp/>under<sp/>the<sp/>law.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>is<sp/>a<sp/>part<sp/>of<sp/>the<sp/>GUI(Graphical<sp/>User<sp/>Interface)<sp/>class<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>(c)<sp/>2006-2008<sp/>Hoang<sp/>Van<sp/>Hay,<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>CONTACT<sp/>INFORMATION:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>or<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Ban<sp/>quyen<sp/>cua<sp/>Cong<sp/>Ty<sp/>Co<sp/>Phan<sp/>Phan<sp/>Mem<sp/>Y<sp/>Te<sp/>Viet<sp/>Nam<sp/>2005-2012.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Do<sp/>Cuc<sp/>Ban<sp/>Quyen,<sp/>Bo<sp/>VHTT<sp/>nuoc<sp/>Cong<sp/>hoa<sp/>xa<sp/>hoi<sp/>chu<sp/>nghia<sp/>Viet<sp/>Nam<sp/>cap.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Chuong<sp/>trinh<sp/>phan<sp/>mem<sp/>nay<sp/>duoc<sp/>Luat<sp/>phap<sp/>Viet<sp/>Nam<sp/>va<sp/>quoc<sp/>te<sp/>bao<sp/>ho.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>San<sp/>xuat,<sp/>su<sp/>dung<sp/>hoac<sp/>phan<sp/>phoi<sp/>trai<sp/>phep<sp/>toan<sp/>bo<sp/>hoac<sp/>mot<sp/>phan<sp/>cua<sp/>phan<sp/>men<sp/>nay<sp/>se</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>chiu<sp/>cac<sp/>hinh<sp/>phat<sp/>va<sp/>hinh<sp/>su<sp/>hoac<sp/>dan<sp/>su,<sp/>co<sp/>the<sp/>len<sp/>den<sp/>muc<sp/>toi<sp/>da<sp/>dung<sp/>theo<sp/>Luat<sp/>qui<sp/>dinh.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>File<sp/>nay<sp/>la<sp/>mot<sp/>phan<sp/>cua<sp/>thu<sp/>vien<sp/>lap<sp/>trinh(GUI).<sp/>Ban<sp/>quyen<sp/>cua<sp/>Hoang<sp/>Van<sp/>Hay.<sp/>2006-2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THONG<sp/>TIN<sp/>LIEN<sp/>HE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Email<sp/><sp/>:<sp/>hayhv@vimes.com.vn<sp/>hoac<sp/>hayhv@yahoo.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Website:<sp/>http://www.vimes.com.vn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GuiView.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DbField.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ad_expense_popup_8h" kindref="compound">AdExpensePopup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_c_ad_expense_class" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AFX_EXT_CLASS<sp/><ref refid="class_c_ad_expense_class_1af0555f196de08cb86ce0f76593f82f3e" kindref="member">CAdExpenseClass</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CGuiView{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_c_ad_expense_class_1a92f0907ecde4ca201be8bf0c0a2279a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_popup" kindref="compound">CAdExpensePopup</ref><sp/><ref refid="class_c_ad_expense_class_1a92f0907ecde4ca201be8bf0c0a2279a7" kindref="member">m_wndPopup</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_c_ad_expense_class_1a1ea7fc65995c82e66cf44c2e59c78dea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CStringArray<sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a1ea7fc65995c82e66cf44c2e59c78dea" kindref="member">m_arFilters</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_c_ad_expense_class_1a9b228394254d71952c8d9b8585639185" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a9b228394254d71952c8d9b8585639185" kindref="member">m_szID</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_c_ad_expense_class_1af7e11023ae8baf65b7d29356762f6b99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1af7e11023ae8baf65b7d29356762f6b99" kindref="member">m_nSearchID</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="class_c_ad_expense_class_1a92a02faf84319e331a564661000515dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiGroupBox<sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a92a02faf84319e331a564661000515dd" kindref="member">m_wndExpenseInformation</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_c_ad_expense_class_1a23729a95a6cd1356b4ffd94ec5e70e1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a23729a95a6cd1356b4ffd94ec5e70e1e" kindref="member">m_wndSearchLabel</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_c_ad_expense_class_1acbc1c0502a2e3e55b0dd89efbf0a4a21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiTextCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1acbc1c0502a2e3e55b0dd89efbf0a4a21" kindref="member">m_wndSearch</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_c_ad_expense_class_1a518c6c5473df6a8d336f0e5222812a3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a518c6c5473df6a8d336f0e5222812a3b" kindref="member">m_wndTypeOfFilter</ref>;</highlight></codeline>
+<codeline lineno="42" refid="class_c_ad_expense_class_1a2df92d73bbb58f9154f35e17b4718bf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiListCtrl<sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a2df92d73bbb58f9154f35e17b4718bf7" kindref="member">m_wndList</ref>;</highlight></codeline>
+<codeline lineno="43" refid="class_c_ad_expense_class_1aaab191d7616439b9b89b50fb3675df39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1aaab191d7616439b9b89b50fb3675df39" kindref="member">m_wndAdd</ref>;</highlight></codeline>
+<codeline lineno="44" refid="class_c_ad_expense_class_1a2fa7e582029efa89370fc7bf44b0f080" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a2fa7e582029efa89370fc7bf44b0f080" kindref="member">m_wndEdit</ref>;</highlight></codeline>
+<codeline lineno="45" refid="class_c_ad_expense_class_1ad507bae2561fc1f10a63443d9812e5bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiButton<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1ad507bae2561fc1f10a63443d9812e5bd" kindref="member">m_wndDelete</ref>;</highlight></codeline>
+<codeline lineno="46" refid="class_c_ad_expense_class_1acc68220ce511c2eb2a31bab1e46a341e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGuiLabel<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1acc68220ce511c2eb2a31bab1e46a341e" kindref="member">m_wndTypeOfFilterDesc</ref>;</highlight></codeline>
+<codeline lineno="47" refid="class_c_ad_expense_class_1a5aeb4df1c8ff992bb2959a5b74f54fbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CString<sp/><ref refid="class_c_ad_expense_class_1a5aeb4df1c8ff992bb2959a5b74f54fbc" kindref="member">m_szSearch</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchChange();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchSetfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnSearchKillfocus();<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_c_ad_expense_class_1a292062b3a3b1ef3510548196bb19f4db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a292062b3a3b1ef3510548196bb19f4db" kindref="member">OnSearchCheckValue</ref>();<sp/></highlight></codeline>
+<codeline lineno="52" refid="class_c_ad_expense_class_1ae3808fb0f1589794429086a432e739fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1ae3808fb0f1589794429086a432e739fb" kindref="member">OnTypeOfFilterSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="53" refid="class_c_ad_expense_class_1a01272371db22623f23619236ce46e0e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a01272371db22623f23619236ce46e0e6" kindref="member">OnListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="54" refid="class_c_ad_expense_class_1a21d625c9bc0431dbd1b7964543642855" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a21d625c9bc0431dbd1b7964543642855" kindref="member">OnListSelectChange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nOldItem,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nNewItem);<sp/></highlight></codeline>
+<codeline lineno="55" refid="class_c_ad_expense_class_1a9f26311096fe3902e0024f04935d1dcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a9f26311096fe3902e0024f04935d1dcc" kindref="member">OnListDblClick</ref>();<sp/></highlight></codeline>
+<codeline lineno="56" refid="class_c_ad_expense_class_1a0d1ba2691c4e4ada7ca2a57e0fcc0ef5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a0d1ba2691c4e4ada7ca2a57e0fcc0ef5" kindref="member">OnListDeleteItem</ref>();<sp/></highlight></codeline>
+<codeline lineno="57" refid="class_c_ad_expense_class_1ae353c95ac5b1e20645e8a3a82d2009f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1ae353c95ac5b1e20645e8a3a82d2009f2" kindref="member">OnAddSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="58" refid="class_c_ad_expense_class_1a938033d33704d5db494822c5fd5acc8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1a938033d33704d5db494822c5fd5acc8c" kindref="member">OnEditSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="59" refid="class_c_ad_expense_class_1ae8e370f19dddf02559e61e87ef5ceef9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1ae8e370f19dddf02559e61e87ef5ceef9" kindref="member">OnDeleteSelect</ref>();<sp/></highlight></codeline>
+<codeline lineno="60" refid="class_c_ad_expense_class_1af0555f196de08cb86ce0f76593f82f3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1af0555f196de08cb86ce0f76593f82f3e" kindref="member">CAdExpenseClass</ref>();</highlight></codeline>
+<codeline lineno="61" refid="class_c_ad_expense_class_1ab0267faf534c8cdc65bd3680ca925284" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_ad_expense_class_1ab0267faf534c8cdc65bd3680ca925284" kindref="member">~CAdExpenseClass</ref>();</highlight></codeline>
+<codeline lineno="62" refid="class_c_ad_expense_class_1ae918945f19117b4af4d7766f23018f53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1ae918945f19117b4af4d7766f23018f53" kindref="member">OnCreateComponents</ref>();</highlight></codeline>
+<codeline lineno="63" refid="class_c_ad_expense_class_1ad20208c53fbf55822781b3f225306398" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1ad20208c53fbf55822781b3f225306398" kindref="member">OnInitializeComponents</ref>();</highlight></codeline>
+<codeline lineno="64" refid="class_c_ad_expense_class_1ac56c435c48ea13f549f65534980c696c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1ac56c435c48ea13f549f65534980c696c" kindref="member">OnSetWindowEvents</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_c_ad_expense_class_1a4d99eb549338896b914db852712f871d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1a4d99eb549338896b914db852712f871d" kindref="member">OnDoDataExchange</ref>(CDataExchange*<sp/>pDX);</highlight></codeline>
+<codeline lineno="66" refid="class_c_ad_expense_class_1accf6c3d736ee0811c6f3ec5c42341aeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1accf6c3d736ee0811c6f3ec5c42341aeb" kindref="member">GetDataToScreen</ref>();</highlight></codeline>
+<codeline lineno="67" refid="class_c_ad_expense_class_1a42a6b34e80cf60bd73e25ceee0dfb8d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1a42a6b34e80cf60bd73e25ceee0dfb8d2" kindref="member">GetScreenToData</ref>();</highlight></codeline>
+<codeline lineno="68" refid="class_c_ad_expense_class_1ad211bb107d6f68f32b533210239b8d67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1ad211bb107d6f68f32b533210239b8d67" kindref="member">SetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="69" refid="class_c_ad_expense_class_1a8366ffb4126b72db1a9eb28d0af6a7aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1a8366ffb4126b72db1a9eb28d0af6a7aa" kindref="member">SetMode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nMode);</highlight></codeline>
+<codeline lineno="70" refid="class_c_ad_expense_class_1a7f26ddb65ec9414d94488cd836e1f1ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1a7f26ddb65ec9414d94488cd836e1f1ad" kindref="member">OnAddAdExpenseClass</ref>();<sp/></highlight></codeline>
+<codeline lineno="71" refid="class_c_ad_expense_class_1a39f39109073fd2d7c80b9a914697bda7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1a39f39109073fd2d7c80b9a914697bda7" kindref="member">OnEditAdExpenseClass</ref>();<sp/></highlight></codeline>
+<codeline lineno="72" refid="class_c_ad_expense_class_1a065d8261eace24812f4f30760fbf6e52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1a065d8261eace24812f4f30760fbf6e52" kindref="member">OnDeleteAdExpenseClass</ref>();<sp/></highlight></codeline>
+<codeline lineno="73" refid="class_c_ad_expense_class_1aa658911867fb95c8c1f1e9a2bff6414a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1aa658911867fb95c8c1f1e9a2bff6414a" kindref="member">OnSaveAdExpenseClass</ref>();<sp/></highlight></codeline>
+<codeline lineno="74" refid="class_c_ad_expense_class_1ae752193b0ad115216b9fab1a2b4c8e6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1ae752193b0ad115216b9fab1a2b4c8e6b" kindref="member">OnCancelAdExpenseClass</ref>();<sp/></highlight></codeline>
+<codeline lineno="75" refid="class_c_ad_expense_class_1af89e26031c66acab9f1bb61ef86c3c7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_ad_expense_class_1af89e26031c66acab9f1bb61ef86c3c7b" kindref="member">OnAdExpenseClassListLoadData</ref>();<sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Include/VIMESCORE_E10/AdExpenseClass.h"/>
+  </compounddef>
+</doxygen>

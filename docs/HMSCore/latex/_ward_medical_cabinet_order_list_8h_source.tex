@@ -1,0 +1,140 @@
+\doxysection{Ward\+Medical\+Cabinet\+Order\+List.\+h}
+\hypertarget{_ward_medical_cabinet_order_list_8h_source}{}\label{_ward_medical_cabinet_order_list_8h_source}\index{Include/HMSCore/WardMedicalCabinetOrderList.h@{Include/HMSCore/WardMedicalCabinetOrderList.h}}
+\mbox{\hyperlink{_ward_medical_cabinet_order_list_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MedicalCabinetOrderList\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MedicalCabinetOrderList\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ Copyright\ {\ucr}\ Viet\ Nam\ Medical\ Software\ Joint\ Stock\ Company.\ 2005-\/2012.\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ All\ rights\ reserved.\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ program\ is\ protected\ by\ Viet\ nam\ and\ international\ treaties.\ \ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ Unauthorized\ reproduction\ or\ distribution\ of\ this\ program,\ }}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ or\ any\ portion\ of\ it,\ may\ result\ in\ severe\ civil\ and\ criminal\ penalties,\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ and\ will\ be\ prosecuted\ to\ the\ maximum\ extent\ possible\ under\ the\ law.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ This\ file\ is\ a\ part\ of\ the\ GUI(Graphical\ User\ Interface)\ class\ library.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ (c)\ 2006-\/2008\ Hoang\ Van\ Hay,\ All\ rights\ reserved.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ CONTACT\ INFORMATION:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ or\ hayhv@yahoo.com}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ Ban\ quyen\ cua\ Cong\ Ty\ Co\ Phan\ Phan\ Mem\ Y\ Te\ Viet\ Nam\ 2005-\/2012.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ Do\ Cuc\ Ban\ Quyen,\ Bo\ VHTT\ nuoc\ Cong\ hoa\ xa\ hoi\ chu\ nghia\ Viet\ Nam\ cap.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Chuong\ trinh\ phan\ mem\ nay\ duoc\ Luat\ phap\ Viet\ Nam\ va\ quoc\ te\ bao\ ho.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ San\ xuat,\ su\ dung\ hoac\ phan\ phoi\ trai\ phep\ toan\ bo\ hoac\ mot\ phan\ cua\ phan\ men\ nay\ se}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ chiu\ cac\ hinh\ phat\ va\ hinh\ su\ hoac\ dan\ su,\ co\ the\ len\ den\ muc\ toi\ da\ dung\ theo\ Luat\ qui\ dinh.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ File\ nay\ la\ mot\ phan\ cua\ thu\ vien\ lap\ trinh(GUI).\ Ban\ quyen\ cua\ Hoang\ Van\ Hay.\ 2006-\/2008}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ THONG\ TIN\ LIEN\ HE:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ Email\ \ :\ hayhv@vimes.com.vn\ hoac\ hayhv@yahoo.com}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ Website:\ http://www.vimes.com.vn}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}GuiUtils.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}GuiView.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}DbField.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GridListCtrl.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }AFX\_EXT\_CLASS\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a28049709d6f56290b104d70e09f5c96c}{CWardMedicalCabinetOrderList}}\ :\ \textcolor{keyword}{public}\ CGuiView}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ CWnd*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a349c5eb7fcc6ddb7fe4cdb9377fa2dad}{m\_wndOrder}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aa4f1d3695ef4bfb92c3bd22ca3086f18}{m\_bImportType}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a302714eb777db22a7d0b3ec75ee1ca78}{m\_nID}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a0a412726b32afe63399f8fc4c9500419}{m\_szOrderCategory}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a3dd5373c78b874c6bdfbf1243bd14094}{m\_wndOrderList}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ac21dd5f67422d4fa19b0d4592f963846}{m\_wndSearchInformation}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ CGuiGroupBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a37ff88d339cae18d0028bfd88ae71a0a}{m\_wndStatusSheetGroup}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aae2702d59a83f1a79fb6d72755e4768a}{m\_wndFromDateLabel}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_adb70f5071918ae443d108a94b4706f71}{m\_wndFromDate}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a7a91ed64da0594ab2785ef3d9feb3558}{m\_wndToDateLabel}};\ }
+\DoxyCodeLine{00058\ \ \ \ \ CGuiDateCtrl\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a8e9acf402550fb9d352df8f03785ae6c}{m\_wndToDate}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ac0963210fb2abc69a4427b7bc076421a}{m\_wndStatusLabel}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a86ae67210d0d5b780b783a85cc9cfdab}{m\_wndStatus}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a5a3318ffb4414d6fc8b4c345489890b1}{m\_wndFromStorageLabel}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aa6afd9d7aefd61a7d19fbd49935b1ac6}{m\_wndFromStorage}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a065a1decdb50b5ec8ecc4caad3fc2775}{m\_wndToStorageLabel}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a09a2d73d42821a993b6d9727be136fd4}{m\_wndToStorage}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ CGuiButton\ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_abac42d3c69eea48f226ba87a79c44993}{m\_wndRefresh}};\ }
+\DoxyCodeLine{00066\ \ \ \ \ CGuiLabel\ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a203f231f522fbdc33f68333853e2a4d0}{m\_wndTransactionTyleLabel}};\ }
+\DoxyCodeLine{00067\ \ \ \ \ CGuiComboBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aa0738b64d52e0431793a38f214632f77}{m\_wndTransactionType}};\ }
+\DoxyCodeLine{00068\ \ \ \ \ CGridListCtrl\ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aa92d0bfcd67d24b43b178c541685604f}{m\_wndList}};\ }
+\DoxyCodeLine{00069\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a43ba54b84b0507daf21226c23e64376f}{m\_wndAllOrders}};\ }
+\DoxyCodeLine{00070\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a98846ff7d43b0e0ab0356afb43ed7a69}{m\_wndOpening}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a0108c6653033503637d46be73e6efcab}{m\_wndApproved}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ CGuiRadioButton\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_afb0f3745d4e78493ba6c2296f0a12225}{m\_wndSending}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ CGuiCheckBox\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a019fe82aa74fbb2c27564ef72c3c7fcd}{m\_wndHaveLine}};\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a9eb1ae9d997c2dbeefd4087eaf6bf76e}{m\_szFromDate}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ac0135ef3546572441c4077e659f34400}{m\_szToDate}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a6d2eb93fa80bb945394bc91521ffaccb}{m\_szStatusKey}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ab92ff9790c8505c3e09f4f5903cb56bb}{m\_szFromStorageKey}};\ }
+\DoxyCodeLine{00079\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ae1fe12a5e9577dfc70f80e795e8b8252}{m\_szToStorageKey}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ CString\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a78cacc99c9f00ee08432260b4596fb87}{m\_szTransactionTypeKey}};\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ad9206a43e1b78d3cb1d500f307475bd0}{m\_nStatus}};\ }
+\DoxyCodeLine{00082\ \ \ \ \ BOOL\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a15446f14bc96f6ed726463c0727d8bb3}{m\_bHaveLine}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateChange();\ }}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateSetfocus();\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromDateKillfocus();\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_acc698afb1b189f4b22ca27f0ed8759b1}{OnFromDateCheckValue}}();\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateChange();\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateSetfocus();\ }}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToDateKillfocus();\ }}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aee73f2ab35d4c39f3cb8462d3aba8dfd}{OnToDateCheckValue}}();\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a77699707515150fa8f4fc54cdc606464}{OnTransactionTypeSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a46bdff0ed4b919daf0485162f292f533}{OnTransactionTypeSelendok}}();\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeSetfocus();\ }}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeKillfocus();\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a1e852fcbd6fc5436dd8998aa0b16672b}{OnTransactionTypeLoadData}}();\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnTransactionTypeAddNew();\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a5af74d503aedfa3f067c70c8c7ac64e7}{OnStatusSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a647d92c97e05e669869155c96f220d01}{OnStatusSelendok}}();\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusSetfocus();\ }}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnStatusKillfocus();\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_abf43abbbc42c61b26ebd1a5c83390081}{OnStatusLoadData}}();\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a3ee7a807aaff9261cd0e9a2d0bbce65d}{OnStatusAddNew}}();\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a3d51085ffdbd11ecc99448e42273fccc}{OnFromStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a1b6347d9dda16c150b1095552f8524dd}{OnFromStorageSelendok}}();\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageSetfocus();\ }}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnFromStorageKillfocus();\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a9e2297cf209bdeb2d674fd8f61e9d8a7}{OnFromStorageLoadData}}();\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ac056d545245d137a37cc2420cb64d4e3}{OnFromStorageAddNew}}();\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a00ae6583428ee9642d539211b1c45a9b}{OnToStorageSelectChange}}(\textcolor{keywordtype}{int}\ nOldItemSel,\ \textcolor{keywordtype}{int}\ nNewItemSel);\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ae2729f6295365240086c773f67bda3f2}{OnToStorageSelendok}}();\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToStorageSetfocus();\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//void\ \ \ \ \ \ \ \ \ \ OnToStorageKillfocus();\ }}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aa562de32091db162361b0e8285950b53}{OnToStorageLoadData}}();\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a72aa1def0c35e52399d6b7d786c456af}{OnToStorageAddNew}}();\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_abd99efe9d46ab60210e0ce9813efb572}{OnRefreshSelect}}();\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{long}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a2e4183fa3acdae5186ee6b0c766557df}{OnListLoadData}}();\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ae460e19d01f9ed02126675ccbe1dd9ac}{OnListSelectChange}}(\textcolor{keywordtype}{int}\ nOldItem,\ \textcolor{keywordtype}{int}\ nNewItem);\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a32651455325194e709dfe692752a0f24}{OnListDblClick}}();\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a382510e577d94d82d5d23386b9665ea5}{OnListDeleteItem}}();\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a743c32fd4725e1c3da90db704db14cd0}{OnViewSelect}}();\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a269cfaebe7627f78677c9f8e8aea3342}{OnAllOrdersSelect}}();\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a00e562361559197d267980c063fc5f42}{OnOpeningSelect}}();\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_abda5b9fbd14865fe9a7133c7a626d3bb}{OnApprovedSelect}}();\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a6cd25df575f628683959eeb7ec9387fb}{OnSendingSelect}}();}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a85988156829f6cf774f325231ad57130}{OnHaveLineSelect}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a28049709d6f56290b104d70e09f5c96c}{CWardMedicalCabinetOrderList}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a2e293e2ac0a94bd29a16343e4133eb95}{\string~CWardMedicalCabinetOrderList}}();}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a1f45893a6ce063cbb3e8dc1720d86d40}{OnCreateComponents}}();}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a444f5b41171e866aaf17de061e12949a}{OnInitializeComponents}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a5447e30355568b8f699fff9e8f3c96a0}{OnSetWindowEvents}}();}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a4ffef68f6c2d93b4b9bbf541e627dc2f}{OnDoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ac85deb9769db6d7a0b87d69e3bf4d656}{GetDataToScreen}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_aebaa3f60195a8436db21254406ed64d7}{GetScreenToData}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ac97390f231cc15c9a7759e5f6f12339e}{SetDefaultValues}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a49c11a2458be8700ef705bbf5dd77e3b}{SetMode}}(\textcolor{keywordtype}{int}\ nMode);}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a1dbf773e73832b86358896d260695105}{OnAddWardMedicalCabinetOrderList}}();\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a16683362bd458b5e5a68fb10aace96d0}{OnEditWardMedicalCabinetOrderList}}();\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a2499ca3e7252b0b456f39c4e3406c380}{OnDeleteWardMedicalCabinetOrderList}}();\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a50250a5f7e6c307f73f5a75941a84f80}{OnSaveWardMedicalCabinetOrderList}}();\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a9ff5ed8517973e019e44ebedfb1d6cb5}{OnCancelWardMedicalCabinetOrderList}}();\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_ac5df79ab9155b803637430866d2dc2bf}{OnWardMedicalCabinetOrderListListLoadData}}();\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a0bdf8bf192cf40c26b2341fd028833a5}{SetImportForm}}(\textcolor{keywordtype}{bool}\ bFlag);}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a94a6983ca9e7759031af26a003b28b49}{Refresh}}();}
+\DoxyCodeLine{00146\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_ward_medical_cabinet_order_list_a9e104facb6337291a2b6b44f43512fbc}{OnSetFocus}}(CWnd*\ pOldWnd);}
+\DoxyCodeLine{00147\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00148\ \};}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

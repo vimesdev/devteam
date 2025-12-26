@@ -1,0 +1,229 @@
+\doxysection{Comm\+Defs.\+h}
+\hypertarget{_comm_defs_8h_source}{}\label{_comm_defs_8h_source}\index{Include/HMSCore/CommDefs.h@{Include/HMSCore/CommDefs.h}}
+\mbox{\hyperlink{_comm_defs_8h}{Tới Thông tin của file này.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COMMPORTDEF\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COMMPORTDEF\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ PORT\_MAX\_READ\_BUFFER\ \ \ \ \ \ \ \ 8192}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ PORT\_MAX\_WRITE\_BUFFER\ \ \ \ \ \ \ 8192}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PORT\_READ\_BUFFER\ \ \ \ \ \ \ \ \ \ \ \ 1024}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PORT\_WRITE\_BUFFER\ \ \ \ \ \ \ \ \ \ \ 1024}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ READ\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 500}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ WRITE\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 500}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CHECK\_WRITE\_QUEUE\ \ \ \ \ \ \ \ \ \ \ 50}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ WAIT\_AFTER\_WRITE\ \ \ \ \ \ \ \ \ \ \ \ 50}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ EVENT\_COMEVENT\ \ 0}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ EVENT\_READ\ \ \ \ \ \ 1}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ EVENT\_WRITE\ \ \ \ \ 2}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ EVENT\_COUNT\ \ \ \ \ 3}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ COM\_ERROR\ \ \ \ \ \ \ -\/1}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ COM\_OK\ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ MAX\_READSIZE\ 80L}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Handshaking}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \ \ \mbox{\hyperlink{_comm_defs_8h_a64bfcaaf8f1e910cbcfc016919720240}{eHanshaking}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_a64bfcaaf8f1e910cbcfc016919720240a387d7c5ec75d824aab2af86379d31307}{EHandshakeUnknown}}\ \ \ \ \ \ \ =\ -\/1,\ \ \ \textcolor{comment}{//\ Unknown}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_a64bfcaaf8f1e910cbcfc016919720240a12b2abdfc05e18bd9ad622476a2a3c0a}{EHandshakeOff}}\ \ \ \ \ \ \ \ \ \ \ =\ \ 0,\ \ \ \textcolor{comment}{//\ No\ handshaking}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_a64bfcaaf8f1e910cbcfc016919720240a1742b2017f786fc3e46f2259c47125b9}{EHandshakeHardware}}\ \ \ \ \ \ =\ \ 1,\ \ \ \textcolor{comment}{//\ Hardware\ handshaking\ (RTS/CTS)}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_a64bfcaaf8f1e910cbcfc016919720240a537c6380665f21d0edf891c632029197}{EHandshakeSoftware}}\ \ \ \ \ \ =\ \ 2\ \ \ \ \textcolor{comment}{//\ Software\ handshaking\ (XON/XOFF)}}
+\DoxyCodeLine{00031\ \}\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{_comm_defs_8h_a12082af1734cbb93cea9918bb1a44063}{EHandshake}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ Enumeration\ type\ for\ ComNotify}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_comm_defs_8h_abfb80eb1f0c87c3b01ef15be485de626}{COM\_EVENTS}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_abfb80eb1f0c87c3b01ef15be485de626a0dc52f55f182e5badb02156bfdab919b}{COM\_CONNECT}},}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_abfb80eb1f0c87c3b01ef15be485de626aad931116eca3ae6420ddc139f2b646b9}{COM\_DATA\_RECEIVED}},}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_abfb80eb1f0c87c3b01ef15be485de626a65f65eba80413de2e1fbc6746cac28f4}{COM\_NO\_DATA}},}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_abfb80eb1f0c87c3b01ef15be485de626ace566a89475c5b9fe852e5941639c645}{COM\_SEND\_STARTED}},}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{_comm_defs_8h_abfb80eb1f0c87c3b01ef15be485de626a1aa763ada8a9eaafb08690fa3cf0c383}{COM\_SEND\_DONE}}}
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ -\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/\ DEFINITIONS\ -\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ SIZE\_INQ\ \ \ \ \ 1152}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ SIZE\_OUTQ\ \ \ \ 2048}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ MAX\_READSIZE\ 80L}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ Set\ these\ values\ to\ make\ auto\ detection\ work}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ MIN\_AD\_TOTAL\ 15}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ MIN\_AD\_MIX\ \ \ 6}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Values\ for\ nBestGuess}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ AD\_DONT\_KNOW\ 0}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ AD\_8N1\ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ AD\_7O1\ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ AD\_7E1\ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ Flag\ values\ in\ afHandshake}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ HANDSHAKE\_RCV\_X\ \ \ \ \ 0x0001}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ HANDSHAKE\_RCV\_DTR\ \ \ 0x0002}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ HANDSHAKE\_RCV\_RTS\ \ \ 0x0004}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ HANDSHAKE\_SND\_X\ \ \ \ \ 0x0008}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ HANDSHAKE\_SND\_CTS\ \ \ 0x0010}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ HANDSHAKE\_SND\_DSR\ \ \ 0x0020}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ HANDSHAKE\_SND\_DCD\ \ \ 0x0040}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ MDMSTAT\_CTS\ 0x10}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ MDMSTAT\_DSR\ 0x20}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ MDMSTAT\_DCD\ 0x80}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ STDCOM\ struct\ s\_stdcom\ *}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ System\ value\ item\ IDs}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_BAUD\ \ \ \ \ \ \ \ \ \ 0x1011}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_DATABITS\ \ \ \ \ \ 0x1012}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_STOPBITS\ \ \ \ \ \ 0x1013}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_PARITY\ \ \ \ \ \ \ \ 0x1014}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_HANDSHAKING\ \ \ 0x1015}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_XON\ \ \ \ \ \ \ \ \ \ \ 0x1016}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_XOFF\ \ \ \ \ \ \ \ \ \ 0x1017}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_BREAK\ \ \ \ \ \ \ \ \ 0x1018}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ SFID\_COMSTD\_AUTODETECT\ \ \ \ 0x1019}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ Identifiers\ for\ events\ in\ ahEvents}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ EVENT\_COMEVENT\ \ 0}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ EVENT\_READ\ \ \ \ \ \ 1}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ EVENT\_WRITE\ \ \ \ \ 2}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ EVENT\_COUNT\ \ \ \ \ 3}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ -\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=\ CONSTANTS\ =-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/=-\/}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ COM\_VERSION\ 20}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{comment}{//\ Function\ return\ codes}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ COM\_OK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ COM\_INVALID\_HANDLE\ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ COM\_NOT\_ENOUGH\_MEMORY\ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ COM\_PORT\_NOT\_OPEN\ \ \ \ \ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ COM\_PORT\_IN\_USE\ \ \ \ \ \ \ \ \ \ \ \ \ 6}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ COM\_PORT\_INVALID\_NAME\ \ \ \ \ \ \ 7}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ COM\_CANCELLED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 8}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ COM\_SEND\_QUEUE\_STUCK\ \ \ \ \ \ \ \ 12}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ COM\_DEVICE\_INVALID\ \ \ \ \ \ \ \ \ \ 13}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ COM\_DEVICE\_VERSION\_ERROR\ \ \ \ 15}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ COM\_DEVICE\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ COM\_DEVICE\_LIBERROR\ \ \ \ \ \ \ \ \ 14}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ COM\_DEVICE\_INVALID\_SETTING\ \ 17}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ COM\_BUSY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 18}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ COM\_NOT\_SUPPORTED\ \ \ \ \ \ \ \ \ \ \ 19}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ COM\_FAILED\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 21}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ COM\_NOT\_FOUND\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 22}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ COM\_CANT\_OVERRIDE\ \ \ \ \ \ \ \ \ \ \ 25}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{comment}{//\ bits\ in\ fsStatus\ value}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ COMSB\_WAIT\_XON\ \ \ 0x01}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ COMSB\_WAIT\_CTS\ \ \ 0x02}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ COMSB\_WAIT\_DSR\ \ \ 0x04}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ COMSB\_WAIT\_DCD\ \ \ 0x08}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ COMSB\_WAIT\_BUSY\ \ 0x40\ \ \ }\textcolor{comment}{/*\ flow\ controlled\ off\ for\ some\ other\ reason\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ COMSB\_RESERVED\ \ \ 0x80\ \ \ }\textcolor{comment}{/*\ reserved\ for\ use\ by\ textsend\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{comment}{//\ Bit\ definition\ of\ common\ fields}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ COM\_BAUD\ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ COM\_DATABITS\ \ \ \ 0x02}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ COM\_STOPBITS\ \ \ \ 0x04}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ COM\_PARITY\ \ \ \ \ \ 0x08}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ COM\_AUTO\ \ \ \ \ \ \ \ 0x10}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{comment}{//\ Common\ field\ constants}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ COM\_PARITY\_MIN\ \ \ 0}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ COM\_PARITY\_NONE\ \ 0}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ COM\_PARITY\_ODD\ \ \ 1}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ COM\_PARITY\_EVEN\ \ 2}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ COM\_PARITY\_MARK\ \ 3}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ COM\_PARITY\_SPACE\ 4}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ COM\_PARITY\_MAX\ \ \ 4}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ COM\_STOPBITS\_1\ \ \ 0}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ COM\_STOPBITS\_1\_5\ 1}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#define\ COM\_STOPBITS\_2\ \ \ 2}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{comment}{/*\ Values\ for\ usReason\ arg.\ to\ caller\ supplied\ status\ functions\ */}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ COMSEND\_LOCAL\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0\ \ }\textcolor{comment}{/*\ so\ callers\ can\ call\ their\ own}}
+\DoxyCodeLine{00150\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ handler\ function\ without\ confusion\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#define\ COMSEND\_FIRSTCALL\ \ \ \ \ \ \ \ \ \ 1\ \ }\textcolor{comment}{/*\ Handler\ is\ being\ registered\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ COMSEND\_LASTCALL\ \ \ \ \ \ \ \ \ \ \ 2\ \ }\textcolor{comment}{/*\ Handler\ is\ being\ replaced\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ COMSEND\_DATA\_WAITING\ \ \ \ \ \ \ 3\ \ }\textcolor{comment}{/*\ Unbuffered\ data\ is\ pending\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ COMSEND\_NORMAL\ \ \ \ \ \ \ \ \ \ \ \ \ 4\ \ }\textcolor{comment}{/*\ Routine\ call,\ all\ data\ is\ buffered\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{comment}{/*\ Return\ values\ from\ caller\ supplied\ status\ functions\ */}}
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#define\ COMSEND\_OK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ COMSEND\_GIVEUP\ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ COMSEND\_CLEAR\_DATA\ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ COMSEND\_FORCE\_CONTINUATION\ 3}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \textcolor{comment}{//\ Options\ for\ ComOverride()}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ COM\_OVERRIDE\_8BIT\ \ \ \ \ 0x0001\ \ \ \ }\textcolor{comment}{//\ forces\ 8-\/bit\ (no\ parity)\ mode}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ COM\_OVERRIDE\_RCVALL\ \ \ 0x0002\ \ \ \ }\textcolor{comment}{//\ suspends\ any\ features\ that\ would}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ prevent\ any\ character\ from}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ being\ received\ (XON/XOFF\ etc.)}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ COM\_OVERRIDE\_SNDALL\ \ \ 0x0004\ \ \ \ }\textcolor{comment}{//\ ditto\ for\ sending}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ COM\_MAX\_DEVICE\_NAME\ 40}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#define\ COM\_MAX\_PORT\_NAME\ \ \ 120}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#if\ defined(DEBUG\_THREAD)}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\ \ \ \ \#define\ DEBUGSTR}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_THREAD(s,a1,a2,a3,a4,a5)\ DbgOutStr(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_THREAD(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#if\ defined(DEBUG\_READ)}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\ \ \ \ \#define\ DEBUGSTR}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_READ(s,a1,a2,a3,a4,a5)\ DbgOutStr(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_READ(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#if\ defined(DEBUG\_WRITE)}}
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\ \ \ \ \#define\ DEBUGSTR}}
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_WRITE(s,a1,a2,a3,a4,a5)\ DbgOutStr(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_WRITE(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\#if\ defined(DEBUG\_EVENTS)}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\ \ \ \ \#define\ DEBUGSTR}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_EVENTS(s,a1,a2,a3,a4,a5)\ DbgOutStr(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_EVENTS(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#if\ defined(DEBUG\_AD)}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\ \ \ \ \#define\ DEBUGSTR}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_AD(s,a1,a2,a3,a4,a5)\ DbgOutStr(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\ \ \ \ \#define\ DBG\_AD(s,a1,a2,a3,a4,a5)}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ DIM(a)\ (sizeof(a)\ /\ sizeof(a[0]))}}
+\DoxyCodeLine{00213\ \textcolor{preprocessor}{\#define\ IN\_RANGE(n,\ lo,\ hi)\ ((lo)\ <=\ (n)\ \&\&\ (n)\ <=\ (hi))}}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ bitset(t,\ b)\ ((t)\ |=\ (b))}}
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ bitclear(t,\ b)\ ((t)\ \&=\ (\string~(b)))}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ bittest(t,\ b)\ ((t)\ \&\ (b))}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ startinterval()\ \ \ \ \ GetTickCount()}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ interval(X)\ \ \ \ \ \ \ \ \ ((GetTickCount()-\/(DWORD)X)/100L)}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

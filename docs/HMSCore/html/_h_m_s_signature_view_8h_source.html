@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HMS EMR - HMSCore Documentation: Include/HMSCore/HMSSignatureView.h File nguồn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">HMS EMR - HMSCore Documentation
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Được biên soạn bởi Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Tìm kiếm',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_h_m_s_signature_view_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">HMSSignatureView.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_h_m_s_signature_view_8h.html">Tới Thông tin của file này.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef HMSSIGNATUREVIEW_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define HMSSIGNATUREVIEW_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//  Copyright © Viet Nam Medical Software Joint Stock Company. 2005-2012.           </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  All rights reserved. </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//  This program is protected by Viet nam and international treaties.  </span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//  Unauthorized reproduction or distribution of this program, </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//  or any portion of it, may result in severe civil and criminal penalties, </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  and will be prosecuted to the maximum extent possible under the law.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  This file is a part of the GUI(Graphical User Interface) class library.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//  (c) 2006-2008 Hoang Van Hay, All rights reserved.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//  CONTACT INFORMATION:</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//  Email  : hayhv@vimes.com.vn or hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//  Ban quyen cua Cong Ty Co Phan Phan Mem Y Te Viet Nam 2005-2012.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//  Do Cuc Ban Quyen, Bo VHTT nuoc Cong hoa xa hoi chu nghia Viet Nam cap.</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//  Chuong trinh phan mem nay duoc Luat phap Viet Nam va quoc te bao ho.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//  San xuat, su dung hoac phan phoi trai phep toan bo hoac mot phan cua phan men nay se</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//  chiu cac hinh phat va hinh su hoac dan su, co the len den muc toi da dung theo Luat qui dinh.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//  File nay la mot phan cua thu vien lap trinh(GUI). Ban quyen cua Hoang Van Hay. 2006-2008</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//  THONG TIN LIEN HE:</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//  Email  : hayhv@vimes.com.vn hoac hayhv@yahoo.com</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//  Website: http://www.vimes.com.vn</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;GuiUtils.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;GuiView.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;DbField.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html">   44</a></span><span class="keyword">class </span>AFX_EXT_CLASS <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a7c441ab80411e726283a83b03dbb7f88">CHMSSignatureView</a> : <span class="keyword">public</span> CGuiView{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a2be96c319f22545bbd770e6d8f139d67">   51</a></span>    <span class="keywordtype">long</span>    <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a2be96c319f22545bbd770e6d8f139d67">m_nDocumentNo</a>; </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#af8457a4a5cc636202570e97ebd3870ab">   52</a></span>    <span class="keywordtype">int</span>     <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#af8457a4a5cc636202570e97ebd3870ab">m_nViewType</a>; </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a7da42f90a276853ef135b72cf52bc692">   54</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a7da42f90a276853ef135b72cf52bc692">m_wndCategoryLabel</a>; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aeec61694b6775e6fed813eae180bcd36">   55</a></span>    CGuiComboBox    <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#aeec61694b6775e6fed813eae180bcd36">m_wndCategory</a>; </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ad04b894f97cddf925b649e99350f2315">   56</a></span>    CGuiLabel       <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#ad04b894f97cddf925b649e99350f2315">m_wndSearchLabel</a>; </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a2e389451eaec80308e7c0cab1f701839">   57</a></span>    CGuiTextCtrl    <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a2e389451eaec80308e7c0cab1f701839">m_wndSearch</a>; </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ac30f767b1d2b2a13f5a3b45aad824d2e">   58</a></span>    CGuiCheckBox    <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#ac30f767b1d2b2a13f5a3b45aad824d2e">m_wndSummaryShow</a>; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#acbd30f981576ff9f4acae4d9032b15fb">   59</a></span>    CGridListView   <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#acbd30f981576ff9f4acae4d9032b15fb">m_wndList</a>; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a1a7d4c6738004dc2785ba597344e8401">   60</a></span>    CGuiRadioButton <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a1a7d4c6738004dc2785ba597344e8401">m_wndAll</a>; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aedf178898a9144e1ba63cfea3aeca14b">   61</a></span>    CGuiRadioButton <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#aedf178898a9144e1ba63cfea3aeca14b">m_wndUnsign</a>; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a4b3db2af05d826f2dc8de67917566b5c">   62</a></span>    CGuiRadioButton <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a4b3db2af05d826f2dc8de67917566b5c">m_wndSigned</a>; </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ad445f4e3afae6ac3c6e799c9f560e9be">   63</a></span>    CGuiRadioButton <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#ad445f4e3afae6ac3c6e799c9f560e9be">m_wndFinish</a>; </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#af04e0b552670dd36606d93c8289490e6">   64</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#af04e0b552670dd36606d93c8289490e6">m_wndAdd</a>; </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a4b277a5379953d3ba417c03caadb0c8d">   65</a></span>    CGuiButton      <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a4b277a5379953d3ba417c03caadb0c8d">m_wndSetting</a>; </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a736eafa0c12e742a37236f49fe457a6a">   66</a></span>    CGridListView   <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a736eafa0c12e742a37236f49fe457a6a">m_wndSummary</a>; </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a531893b721066b916a40eaaab7441033">   68</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a531893b721066b916a40eaaab7441033">m_szCategoryKey</a>; </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aac5adab9da296d92476c9595877f4863">   69</a></span>    CString <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#aac5adab9da296d92476c9595877f4863">m_szSearch</a>; </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a5ec533d4e59f6abe0e10dccca1ca65e7">   70</a></span>    BOOL    <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a5ec533d4e59f6abe0e10dccca1ca65e7">m_bSummaryShow</a>; </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a7ca2bc0b13859bd51c7ba5ea2b9aed8a">   71</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_c_h_m_s_signature_view.html#a7ca2bc0b13859bd51c7ba5ea2b9aed8a">m_nSigned</a>; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a961095e2c4a4c3b7d74cea2525097e79">   78</a></span>    <span class="keywordtype">void</span>    <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a961095e2c4a4c3b7d74cea2525097e79">SetViewType</a>(<span class="keywordtype">int</span> nType);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a973ab8b4e4bc59b7b802d149db8c48ae">   80</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a973ab8b4e4bc59b7b802d149db8c48ae">OnCategorySelectChange</a>(<span class="keywordtype">int</span> nOldItemSel, <span class="keywordtype">int</span> nNewItemSel); </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a61b3951fa8b7fb9870a29b8f20711f0f">   81</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a61b3951fa8b7fb9870a29b8f20711f0f">OnCategorySelendok</a>(); </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">//void          OnCategorySetfocus(); </span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">//void          OnCategoryKillfocus(); </span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aa1503cca6e83a4d8a9329ae9084b5f1c">   84</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#aa1503cca6e83a4d8a9329ae9084b5f1c">OnCategoryLoadData</a>(); </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">//void          OnCategoryAddNew(); </span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">//void          OnSearchChange(); </span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">//void          OnSearchSetfocus(); </span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//void          OnSearchKillfocus(); </span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aa4c49b9eed0edbd2a127f6c5177d35b6">   89</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_signature_view.html#aa4c49b9eed0edbd2a127f6c5177d35b6">OnSearchCheckValue</a>(); </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aceb0265be536983b796285f932b487ef">   90</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#aceb0265be536983b796285f932b487ef">OnSummaryShowSelect</a>(); </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ac3bb8d131494c03ce85c495902ae5ae2">   91</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#ac3bb8d131494c03ce85c495902ae5ae2">OnListLoadData</a>(); </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a31741564c5dad37fd20ad345192af554">   92</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a31741564c5dad37fd20ad345192af554">OnListSelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aee36ac7ff62d196c11791333c061c1e4">   93</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#aee36ac7ff62d196c11791333c061c1e4">OnListDblClick</a>(); </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a13c36a9c87dad3ff0edc856a477c2163">   94</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a13c36a9c87dad3ff0edc856a477c2163">OnListDeleteItem</a>(); </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a94264002380cba04bee7507a63b6cff4">   95</a></span>    <span class="keywordtype">long</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a94264002380cba04bee7507a63b6cff4">OnSummaryLoadData</a>(); </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aad5b4d0073d140006ded4080bf92a99b">   96</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#aad5b4d0073d140006ded4080bf92a99b">OnSummarySelectChange</a>(<span class="keywordtype">int</span> nOldItem, <span class="keywordtype">int</span> nNewItem); </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a1d4efc14b8e73aa2a573544b7d9ad970">   97</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a1d4efc14b8e73aa2a573544b7d9ad970">OnSummaryDblClick</a>(); </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#af3f5165d202912419f14569e21a98812">   98</a></span>    <span class="keywordtype">int</span>         <a class="code hl_function" href="class_c_h_m_s_signature_view.html#af3f5165d202912419f14569e21a98812">OnSummaryDeleteItem</a>(); </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a621f331467df1c844a863c3b19a21b0a">   99</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a621f331467df1c844a863c3b19a21b0a">OnAllSelect</a>(); </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#acca743b90ebee63a57e7a968f2b35c0d">  100</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#acca743b90ebee63a57e7a968f2b35c0d">OnUnsignSelect</a>(); </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a0654576794fbd6942c76047c2fa3740c">  101</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a0654576794fbd6942c76047c2fa3740c">OnSignedSelect</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#acfffc064ba196c4b43bd25b6d9eaf656">  102</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#acfffc064ba196c4b43bd25b6d9eaf656">OnFinishSelect</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a7e727f08fd236319c8667cda4fe0afb4">  103</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a7e727f08fd236319c8667cda4fe0afb4">OnAddSelect</a>(); </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a2823478af097378c06e229fb2e3f3257">  104</a></span>    <span class="keywordtype">void</span>            <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a2823478af097378c06e229fb2e3f3257">OnSettingSelect</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a7c441ab80411e726283a83b03dbb7f88">  109</a></span>    <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a7c441ab80411e726283a83b03dbb7f88">CHMSSignatureView</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a7a726dff1f4b661ba9bd75099bd7c6db">  115</a></span>    <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a7a726dff1f4b661ba9bd75099bd7c6db">~CHMSSignatureView</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a4121f5489f9d08e65005c340bc3e3975">  121</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a4121f5489f9d08e65005c340bc3e3975">OnCreateComponents</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ae82d331ffe795574b7a869692a7cfef6">  127</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#ae82d331ffe795574b7a869692a7cfef6">OnInitializeComponents</a>();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aa388f2c17fb1eec6a095b236dd44eb56">  133</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#aa388f2c17fb1eec6a095b236dd44eb56">OnSetWindowEvents</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a1150aea8ddde5391215093cd91cb7cda">  140</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a1150aea8ddde5391215093cd91cb7cda">OnDoDataExchange</a>(CDataExchange* pDX);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ae91a9f1228d403e5279dc51824128d82">  147</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#ae91a9f1228d403e5279dc51824128d82">UpdateJson</a>(BOOL bSaveAndValidate);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a52909fe19a0726b38b3ad292acf15948">  153</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a52909fe19a0726b38b3ad292acf15948">GetDataToScreen</a>();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a86db9a7798d2ad0996f635c9f69421cd">  159</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a86db9a7798d2ad0996f635c9f69421cd">GetScreenToData</a>();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ad2fe5bf5a8dc553aa50b0d70cdf4ce37">  165</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#ad2fe5bf5a8dc553aa50b0d70cdf4ce37">SetDefaultValues</a>();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#abc4d5971ceaa3366a8d7265de4bfb130">  173</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#abc4d5971ceaa3366a8d7265de4bfb130">SetMode</a>(<span class="keywordtype">int</span> nMode);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a8ee94e6bc394ddf00a68f78d3d3a8934">  180</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a8ee94e6bc394ddf00a68f78d3d3a8934">OnAddHMSSignatureView</a>(); </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ae3f4a5dc834f4fadb12e488928cc5ee7">  187</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#ae3f4a5dc834f4fadb12e488928cc5ee7">OnEditHMSSignatureView</a>(); </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a8503bb5936bd6d5909d4b64a1d14b89f">  194</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a8503bb5936bd6d5909d4b64a1d14b89f">OnDeleteHMSSignatureView</a>(); </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a1e5997f00900f2d2533164f7315a9267">  201</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a1e5997f00900f2d2533164f7315a9267">OnSaveHMSSignatureView</a>(); </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#abe5733cba412441a4069eb6a66f6469b">  208</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#abe5733cba412441a4069eb6a66f6469b">OnCancelHMSSignatureView</a>(); </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a82d654b92f4afd4cef50d5ebc94bb90e">  215</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a82d654b92f4afd4cef50d5ebc94bb90e">OnSettingHMSSignatureView</a>(); </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a5d760aab4d2b6d50753d820039192f2e">  223</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a5d760aab4d2b6d50753d820039192f2e">Refresh</a>(<span class="keywordtype">long</span> nDocumentNo = 0); </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#aa4b19228985eeaff35f8f022b8073bb9">  230</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#aa4b19228985eeaff35f8f022b8073bb9">OnAddDocument</a>();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a2def43f7766aab03aafead33f07500d1">  237</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a2def43f7766aab03aafead33f07500d1">OnDeleteDocument</a>();</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a200dec1582446e09cecb5513f74638bf">  244</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a200dec1582446e09cecb5513f74638bf">OnSendDocument</a>();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a168e1d7ba1bda439b1791355ecb72bca">  252</a></span>    CString <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a168e1d7ba1bda439b1791355ecb72bca">GetDocumentStatus</a>(CString szSignatrueID);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a9ccbadd8da1294daff0c879dcc27ca4b">  258</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a9ccbadd8da1294daff0c879dcc27ca4b">OnResizeLayout</a>();</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    DECLARE_MESSAGE_MAP()</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#a57e29e0df2cd1c8e433389ada4cdef0b">  273</a></span>    afx_msg <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_h_m_s_signature_view.html#a57e29e0df2cd1c8e433389ada4cdef0b">OnSize</a>(UINT nType, <span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>protected:</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="class_c_h_m_s_signature_view.html#ac13c583554ec22856be05fd9f07991e0">  282</a></span>    virtual BOOL <a class="code hl_function" href="class_c_h_m_s_signature_view.html#ac13c583554ec22856be05fd9f07991e0">OnCommand</a>(WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>};</div>
+</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a0654576794fbd6942c76047c2fa3740c"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a0654576794fbd6942c76047c2fa3740c">CHMSSignatureView::OnSignedSelect</a></div><div class="ttdeci">void OnSignedSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a1150aea8ddde5391215093cd91cb7cda"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a1150aea8ddde5391215093cd91cb7cda">CHMSSignatureView::OnDoDataExchange</a></div><div class="ttdeci">void OnDoDataExchange(CDataExchange *pDX)</div><div class="ttdoc">Trao đổi dữ liệu giữa các điều khiển và biến thành viên.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a13c36a9c87dad3ff0edc856a477c2163"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a13c36a9c87dad3ff0edc856a477c2163">CHMSSignatureView::OnListDeleteItem</a></div><div class="ttdeci">int OnListDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a168e1d7ba1bda439b1791355ecb72bca"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a168e1d7ba1bda439b1791355ecb72bca">CHMSSignatureView::GetDocumentStatus</a></div><div class="ttdeci">CString GetDocumentStatus(CString szSignatrueID)</div><div class="ttdoc">Lấy trạng thái tài liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a1a7d4c6738004dc2785ba597344e8401"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a1a7d4c6738004dc2785ba597344e8401">CHMSSignatureView::m_wndAll</a></div><div class="ttdeci">CGuiRadioButton m_wndAll</div><div class="ttdoc">Radio button &quot;Tất cả&quot;.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:60</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a1d4efc14b8e73aa2a573544b7d9ad970"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a1d4efc14b8e73aa2a573544b7d9ad970">CHMSSignatureView::OnSummaryDblClick</a></div><div class="ttdeci">void OnSummaryDblClick()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a1e5997f00900f2d2533164f7315a9267"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a1e5997f00900f2d2533164f7315a9267">CHMSSignatureView::OnSaveHMSSignatureView</a></div><div class="ttdeci">int OnSaveHMSSignatureView()</div><div class="ttdoc">Xử lý lưu tài liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a200dec1582446e09cecb5513f74638bf"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a200dec1582446e09cecb5513f74638bf">CHMSSignatureView::OnSendDocument</a></div><div class="ttdeci">int OnSendDocument()</div><div class="ttdoc">Gửi tài liệu để ký số</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a2823478af097378c06e229fb2e3f3257"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a2823478af097378c06e229fb2e3f3257">CHMSSignatureView::OnSettingSelect</a></div><div class="ttdeci">void OnSettingSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a2be96c319f22545bbd770e6d8f139d67"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a2be96c319f22545bbd770e6d8f139d67">CHMSSignatureView::m_nDocumentNo</a></div><div class="ttdeci">long m_nDocumentNo</div><div class="ttdoc">Loại view: 0-&gt; Dùng cho bác sĩ, 1-&gt; Dùng cho trưởng khoa, giám đốc ký</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:51</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a2def43f7766aab03aafead33f07500d1"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a2def43f7766aab03aafead33f07500d1">CHMSSignatureView::OnDeleteDocument</a></div><div class="ttdeci">int OnDeleteDocument()</div><div class="ttdoc">Xóa tài liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a2e389451eaec80308e7c0cab1f701839"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a2e389451eaec80308e7c0cab1f701839">CHMSSignatureView::m_wndSearch</a></div><div class="ttdeci">CGuiTextCtrl m_wndSearch</div><div class="ttdoc">Control tìm kiếm.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:57</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a31741564c5dad37fd20ad345192af554"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a31741564c5dad37fd20ad345192af554">CHMSSignatureView::OnListSelectChange</a></div><div class="ttdeci">void OnListSelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a4121f5489f9d08e65005c340bc3e3975"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a4121f5489f9d08e65005c340bc3e3975">CHMSSignatureView::OnCreateComponents</a></div><div class="ttdeci">void OnCreateComponents()</div><div class="ttdoc">Tạo các thành phần giao diện.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a4b277a5379953d3ba417c03caadb0c8d"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a4b277a5379953d3ba417c03caadb0c8d">CHMSSignatureView::m_wndSetting</a></div><div class="ttdeci">CGuiButton m_wndSetting</div><div class="ttdoc">Nút cài đặt.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:65</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a4b3db2af05d826f2dc8de67917566b5c"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a4b3db2af05d826f2dc8de67917566b5c">CHMSSignatureView::m_wndSigned</a></div><div class="ttdeci">CGuiRadioButton m_wndSigned</div><div class="ttdoc">Radio button &quot;Đã ký&quot;.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:62</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a52909fe19a0726b38b3ad292acf15948"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a52909fe19a0726b38b3ad292acf15948">CHMSSignatureView::GetDataToScreen</a></div><div class="ttdeci">void GetDataToScreen()</div><div class="ttdoc">Lấy dữ liệu từ biến thành viên và hiển thị lên màn hình.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a531893b721066b916a40eaaab7441033"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a531893b721066b916a40eaaab7441033">CHMSSignatureView::m_szCategoryKey</a></div><div class="ttdeci">CString m_szCategoryKey</div><div class="ttdoc">Key của danh mục được chọn.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:68</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a57e29e0df2cd1c8e433389ada4cdef0b"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a57e29e0df2cd1c8e433389ada4cdef0b">CHMSSignatureView::OnSize</a></div><div class="ttdeci">afx_msg void OnSize(UINT nType, int cx, int cy)</div><div class="ttdoc">Khai báo message map cho MFC.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a5d760aab4d2b6d50753d820039192f2e"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a5d760aab4d2b6d50753d820039192f2e">CHMSSignatureView::Refresh</a></div><div class="ttdeci">int Refresh(long nDocumentNo=0)</div><div class="ttdoc">Làm mới dữ liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a5ec533d4e59f6abe0e10dccca1ca65e7"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a5ec533d4e59f6abe0e10dccca1ca65e7">CHMSSignatureView::m_bSummaryShow</a></div><div class="ttdeci">BOOL m_bSummaryShow</div><div class="ttdoc">Cờ hiển thị tổng hợp.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:70</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a61b3951fa8b7fb9870a29b8f20711f0f"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a61b3951fa8b7fb9870a29b8f20711f0f">CHMSSignatureView::OnCategorySelendok</a></div><div class="ttdeci">void OnCategorySelendok()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a621f331467df1c844a863c3b19a21b0a"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a621f331467df1c844a863c3b19a21b0a">CHMSSignatureView::OnAllSelect</a></div><div class="ttdeci">void OnAllSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a736eafa0c12e742a37236f49fe457a6a"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a736eafa0c12e742a37236f49fe457a6a">CHMSSignatureView::m_wndSummary</a></div><div class="ttdeci">CGridListView m_wndSummary</div><div class="ttdoc">Danh sách tổng hợp.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:66</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a7a726dff1f4b661ba9bd75099bd7c6db"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a7a726dff1f4b661ba9bd75099bd7c6db">CHMSSignatureView::~CHMSSignatureView</a></div><div class="ttdeci">~CHMSSignatureView()</div><div class="ttdoc">Destructor.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a7c441ab80411e726283a83b03dbb7f88"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a7c441ab80411e726283a83b03dbb7f88">CHMSSignatureView::CHMSSignatureView</a></div><div class="ttdeci">CHMSSignatureView()</div><div class="ttdoc">Constructor mặc định.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a7ca2bc0b13859bd51c7ba5ea2b9aed8a"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a7ca2bc0b13859bd51c7ba5ea2b9aed8a">CHMSSignatureView::m_nSigned</a></div><div class="ttdeci">int m_nSigned</div><div class="ttdoc">Cờ lọc đã ký (1: đã ký, 0: chưa ký, -1: tất cả).</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:71</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a7da42f90a276853ef135b72cf52bc692"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a7da42f90a276853ef135b72cf52bc692">CHMSSignatureView::m_wndCategoryLabel</a></div><div class="ttdeci">CGuiLabel m_wndCategoryLabel</div><div class="ttdoc">Nhãn &quot;Danh mục&quot;.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:54</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a7e727f08fd236319c8667cda4fe0afb4"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a7e727f08fd236319c8667cda4fe0afb4">CHMSSignatureView::OnAddSelect</a></div><div class="ttdeci">void OnAddSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a82d654b92f4afd4cef50d5ebc94bb90e"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a82d654b92f4afd4cef50d5ebc94bb90e">CHMSSignatureView::OnSettingHMSSignatureView</a></div><div class="ttdeci">int OnSettingHMSSignatureView()</div><div class="ttdoc">Xử lý cài đặt.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a8503bb5936bd6d5909d4b64a1d14b89f"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a8503bb5936bd6d5909d4b64a1d14b89f">CHMSSignatureView::OnDeleteHMSSignatureView</a></div><div class="ttdeci">int OnDeleteHMSSignatureView()</div><div class="ttdoc">Xử lý xóa tài liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a86db9a7798d2ad0996f635c9f69421cd"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a86db9a7798d2ad0996f635c9f69421cd">CHMSSignatureView::GetScreenToData</a></div><div class="ttdeci">void GetScreenToData()</div><div class="ttdoc">Lấy dữ liệu từ màn hình và lưu vào biến thành viên.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a8ee94e6bc394ddf00a68f78d3d3a8934"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a8ee94e6bc394ddf00a68f78d3d3a8934">CHMSSignatureView::OnAddHMSSignatureView</a></div><div class="ttdeci">int OnAddHMSSignatureView()</div><div class="ttdoc">Xử lý thêm tài liệu mới.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a94264002380cba04bee7507a63b6cff4"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a94264002380cba04bee7507a63b6cff4">CHMSSignatureView::OnSummaryLoadData</a></div><div class="ttdeci">long OnSummaryLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a961095e2c4a4c3b7d74cea2525097e79"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a961095e2c4a4c3b7d74cea2525097e79">CHMSSignatureView::SetViewType</a></div><div class="ttdeci">void SetViewType(int nType)</div><div class="ttdoc">Thiết lập loại view.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a973ab8b4e4bc59b7b802d149db8c48ae"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a973ab8b4e4bc59b7b802d149db8c48ae">CHMSSignatureView::OnCategorySelectChange</a></div><div class="ttdeci">void OnCategorySelectChange(int nOldItemSel, int nNewItemSel)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_a9ccbadd8da1294daff0c879dcc27ca4b"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#a9ccbadd8da1294daff0c879dcc27ca4b">CHMSSignatureView::OnResizeLayout</a></div><div class="ttdeci">void OnResizeLayout()</div><div class="ttdoc">Tính toán lại layout khi resize.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aa1503cca6e83a4d8a9329ae9084b5f1c"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aa1503cca6e83a4d8a9329ae9084b5f1c">CHMSSignatureView::OnCategoryLoadData</a></div><div class="ttdeci">long OnCategoryLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aa388f2c17fb1eec6a095b236dd44eb56"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aa388f2c17fb1eec6a095b236dd44eb56">CHMSSignatureView::OnSetWindowEvents</a></div><div class="ttdeci">void OnSetWindowEvents()</div><div class="ttdoc">Thiết lập các sự kiện cho cửa sổ</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aa4b19228985eeaff35f8f022b8073bb9"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aa4b19228985eeaff35f8f022b8073bb9">CHMSSignatureView::OnAddDocument</a></div><div class="ttdeci">int OnAddDocument()</div><div class="ttdoc">Thêm tài liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aa4c49b9eed0edbd2a127f6c5177d35b6"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aa4c49b9eed0edbd2a127f6c5177d35b6">CHMSSignatureView::OnSearchCheckValue</a></div><div class="ttdeci">int OnSearchCheckValue()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aac5adab9da296d92476c9595877f4863"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aac5adab9da296d92476c9595877f4863">CHMSSignatureView::m_szSearch</a></div><div class="ttdeci">CString m_szSearch</div><div class="ttdoc">Chuỗi tìm kiếm.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:69</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aad5b4d0073d140006ded4080bf92a99b"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aad5b4d0073d140006ded4080bf92a99b">CHMSSignatureView::OnSummarySelectChange</a></div><div class="ttdeci">void OnSummarySelectChange(int nOldItem, int nNewItem)</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_abc4d5971ceaa3366a8d7265de4bfb130"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#abc4d5971ceaa3366a8d7265de4bfb130">CHMSSignatureView::SetMode</a></div><div class="ttdeci">int SetMode(int nMode)</div><div class="ttdoc">Đặt chế độ làm việc cho view.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_abe5733cba412441a4069eb6a66f6469b"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#abe5733cba412441a4069eb6a66f6469b">CHMSSignatureView::OnCancelHMSSignatureView</a></div><div class="ttdeci">int OnCancelHMSSignatureView()</div><div class="ttdoc">Xử lý hủy bỏ thao tác.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ac13c583554ec22856be05fd9f07991e0"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ac13c583554ec22856be05fd9f07991e0">CHMSSignatureView::OnCommand</a></div><div class="ttdeci">virtual BOOL OnCommand(WPARAM wParam, LPARAM lParam)</div><div class="ttdoc">Xử lý command message.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ac30f767b1d2b2a13f5a3b45aad824d2e"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ac30f767b1d2b2a13f5a3b45aad824d2e">CHMSSignatureView::m_wndSummaryShow</a></div><div class="ttdeci">CGuiCheckBox m_wndSummaryShow</div><div class="ttdoc">Checkbox &quot;Hiển thị tổng hợp&quot;.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:58</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ac3bb8d131494c03ce85c495902ae5ae2"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ac3bb8d131494c03ce85c495902ae5ae2">CHMSSignatureView::OnListLoadData</a></div><div class="ttdeci">long OnListLoadData()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_acbd30f981576ff9f4acae4d9032b15fb"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#acbd30f981576ff9f4acae4d9032b15fb">CHMSSignatureView::m_wndList</a></div><div class="ttdeci">CGridListView m_wndList</div><div class="ttdoc">Danh sách tài liệu cần ký số</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:59</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_acca743b90ebee63a57e7a968f2b35c0d"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#acca743b90ebee63a57e7a968f2b35c0d">CHMSSignatureView::OnUnsignSelect</a></div><div class="ttdeci">void OnUnsignSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aceb0265be536983b796285f932b487ef"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aceb0265be536983b796285f932b487ef">CHMSSignatureView::OnSummaryShowSelect</a></div><div class="ttdeci">void OnSummaryShowSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_acfffc064ba196c4b43bd25b6d9eaf656"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#acfffc064ba196c4b43bd25b6d9eaf656">CHMSSignatureView::OnFinishSelect</a></div><div class="ttdeci">void OnFinishSelect()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ad04b894f97cddf925b649e99350f2315"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ad04b894f97cddf925b649e99350f2315">CHMSSignatureView::m_wndSearchLabel</a></div><div class="ttdeci">CGuiLabel m_wndSearchLabel</div><div class="ttdoc">Nhãn &quot;Tìm kiếm&quot;.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:56</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ad2fe5bf5a8dc553aa50b0d70cdf4ce37"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ad2fe5bf5a8dc553aa50b0d70cdf4ce37">CHMSSignatureView::SetDefaultValues</a></div><div class="ttdeci">void SetDefaultValues()</div><div class="ttdoc">Đặt các giá trị mặc định cho các điều khiển.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ad445f4e3afae6ac3c6e799c9f560e9be"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ad445f4e3afae6ac3c6e799c9f560e9be">CHMSSignatureView::m_wndFinish</a></div><div class="ttdeci">CGuiRadioButton m_wndFinish</div><div class="ttdoc">Radio button &quot;Hoàn thành&quot;.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:63</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ae3f4a5dc834f4fadb12e488928cc5ee7"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ae3f4a5dc834f4fadb12e488928cc5ee7">CHMSSignatureView::OnEditHMSSignatureView</a></div><div class="ttdeci">int OnEditHMSSignatureView()</div><div class="ttdoc">Xử lý chỉnh sửa tài liệu.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ae82d331ffe795574b7a869692a7cfef6"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ae82d331ffe795574b7a869692a7cfef6">CHMSSignatureView::OnInitializeComponents</a></div><div class="ttdeci">void OnInitializeComponents()</div><div class="ttdoc">Khởi tạo các thành phần.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_ae91a9f1228d403e5279dc51824128d82"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#ae91a9f1228d403e5279dc51824128d82">CHMSSignatureView::UpdateJson</a></div><div class="ttdeci">void UpdateJson(BOOL bSaveAndValidate)</div><div class="ttdoc">Cập nhật dữ liệu JSON.</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aedf178898a9144e1ba63cfea3aeca14b"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aedf178898a9144e1ba63cfea3aeca14b">CHMSSignatureView::m_wndUnsign</a></div><div class="ttdeci">CGuiRadioButton m_wndUnsign</div><div class="ttdoc">Radio button &quot;Chưa ký&quot;.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:61</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aee36ac7ff62d196c11791333c061c1e4"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aee36ac7ff62d196c11791333c061c1e4">CHMSSignatureView::OnListDblClick</a></div><div class="ttdeci">void OnListDblClick()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_aeec61694b6775e6fed813eae180bcd36"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#aeec61694b6775e6fed813eae180bcd36">CHMSSignatureView::m_wndCategory</a></div><div class="ttdeci">CGuiComboBox m_wndCategory</div><div class="ttdoc">Combo box chọn danh mục tài liệu.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:55</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_af04e0b552670dd36606d93c8289490e6"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#af04e0b552670dd36606d93c8289490e6">CHMSSignatureView::m_wndAdd</a></div><div class="ttdeci">CGuiButton m_wndAdd</div><div class="ttdoc">Nút thêm tài liệu.</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:64</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_af3f5165d202912419f14569e21a98812"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#af3f5165d202912419f14569e21a98812">CHMSSignatureView::OnSummaryDeleteItem</a></div><div class="ttdeci">int OnSummaryDeleteItem()</div></div>
+<div class="ttc" id="aclass_c_h_m_s_signature_view_html_af8457a4a5cc636202570e97ebd3870ab"><div class="ttname"><a href="class_c_h_m_s_signature_view.html#af8457a4a5cc636202570e97ebd3870ab">CHMSSignatureView::m_nViewType</a></div><div class="ttdeci">int m_nViewType</div><div class="ttdoc">Loại view (0: bác sĩ, 1: trưởng khoa/giám đốc).</div><div class="ttdef"><b>Definition</b> HMSSignatureView.h:52</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li><li class="navelem"><a href="dir_2f608ce7047d4fd891bc86a1eddc6677.html">HMSCore</a></li><li class="navelem"><a href="_h_m_s_signature_view_8h.html">HMSSignatureView.h</a></li>
+    <li class="footer">Được biên soạn bởi <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
